@@ -224,3 +224,5 @@ data/raw/**
 data/processed/**
 !data/processed/paper1_panels/.gitkeep
 data/external/**
+
+pyCausalFS/

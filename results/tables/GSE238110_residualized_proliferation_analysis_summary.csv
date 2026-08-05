@@ -1,0 +1,13 @@
+analysis,endpoint,score_type,n_tested,n_nominal_p05,n_fdr10,median_c_index,median_abs_raw_corr_with_proliferation
+module,DFI,original,13,13,13,0.6192987668994205,0.3588699959310087
+module,DFI,residual_after_proliferation,13,13,13,0.5990937453573021,0.3588699959310087
+module,DFI,residual_after_proliferation_and_weight,13,12,13,0.587226359738208,0.3588699959310087
+candidate_gene,DFI,original,26,26,26,0.5954910117367405,0.28307853673515954
+candidate_gene,DFI,residual_after_proliferation,26,23,26,0.5768830782944585,0.28307853673515954
+candidate_gene,DFI,residual_after_proliferation_and_weight,26,22,25,0.5735349432031897,0.28307853673515954
+module,OS,original,13,13,13,0.6036619493083873,0.3588699959310087
+module,OS,residual_after_proliferation,13,11,11,0.5902294714959623,0.3588699959310087
+module,OS,residual_after_proliferation_and_weight,13,11,11,0.5828807651779201,0.3588699959310087
+candidate_gene,OS,original,26,24,25,0.5986647477412649,0.28307853673515954
+candidate_gene,OS,residual_after_proliferation,26,20,24,0.5778364116094987,0.28307853673515954
+candidate_gene,OS,residual_after_proliferation_and_weight,26,20,23,0.5759098646348383,0.28307853673515954

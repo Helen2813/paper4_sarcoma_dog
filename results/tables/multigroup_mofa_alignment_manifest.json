@@ -1,0 +1,123 @@
+{
+  "script_version": "36-align-frozen-modules-to-mofa-v2",
+  "created_utc": "2026-08-06T02:30:54.064011+00:00",
+  "outcome_loaded": false,
+  "mofa_manifest_sha256": "cf5bf87ac49b8d5fe937d50a1460a21809dfc4bd887aafdce3e01b63a5ab5473",
+  "matched_random_sets_per_test": 2000,
+  "primary_activity_threshold_percent": 1.0,
+  "guardrails": [
+    "No clinical endpoint or outcome label was loaded.",
+    "MOFA models were read only after the unsupervised freeze manifest existed.",
+    "Frozen module weights and risk orientation were not changed.",
+    "No rank was selected using an outcome.",
+    "The feature space is frozen-program enriched; this is a targeted representation audit, not independent rediscovery."
+  ],
+  "inputs": {
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multigroup_mofa_model_index.csv": {
+      "sha256": "4c94075f44fed12b0b5c4abe4ed02024491c8bdaad07fbab0dce639894c51dd3",
+      "size_bytes": 5930
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multigroup_mofa_factor_activity.csv": {
+      "sha256": "e6e2bc825318bd41fc7c90a42b7590d68bf0cb2475e861ed7d97bef4061f702d",
+      "size_bytes": 54133
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multigroup_mofa_model_summary.csv": {
+      "sha256": "b6db9e5f4e5fac545c30b0803860f1b70d637e6889a2051ec619df51041d76ea",
+      "size_bytes": 7269
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multigroup_mofa_unsupervised_freeze_manifest.json": {
+      "sha256": "cf5bf87ac49b8d5fe937d50a1460a21809dfc4bd887aafdce3e01b63a5ab5473",
+      "size_bytes": 21872
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\GSE238110_frozen_transfer_gene_weights_strict.csv": {
+      "sha256": "4f065aa4c4edf117a0c74015840d2b4b2347929f172cd517e1818ba0f6163b91",
+      "size_bytes": 50062
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multistudy_factor_model_config.json": {
+      "sha256": "798aa82464f6015e81ea8f340889413c15a4f8fe715902db3b07d9c031771a58",
+      "size_bytes": 3715
+    }
+  },
+  "outputs": {
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multigroup_mofa_frozen_module_factor_alignment.csv": {
+      "sha256": "de7e775ae0dbdf0654c955ffb66d8ed4442e8aaea364b392ccbfaa8719746965",
+      "size_bytes": 41041
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multigroup_mofa_frozen_module_subspace_capture.csv": {
+      "sha256": "95ccec76f487ab56ee6a31722ab7521de79a962d64c80ebce8b67c443ac1bd84",
+      "size_bytes": 45250
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multigroup_mofa_module_capture_random_controls.csv": {
+      "sha256": "ef5410ad7a46b7abf51ff86e01872581d537a0a84a7bcfe345fe466f7d97c7f2",
+      "size_bytes": 33296
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multigroup_mofa_module_capture_rank_summary.csv": {
+      "sha256": "0c6d9893f422a803bf36d1498ee014421722405828ce63cc7a17fcd2c82a9c75",
+      "size_bytes": 10030
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multigroup_mofa_module_cross_set_sensitivity.csv": {
+      "sha256": "61840f58d74f40a30ea896be4d2558e116d476922ffbb6a7704163366ab22ded",
+      "size_bytes": 21194
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multigroup_mofa_stacked_pca_module_capture.csv": {
+      "sha256": "e8900a7e806fc62d3a0fdf341ed85bb7f959acfa24dce5df8f92a49fa553beca",
+      "size_bytes": 2025
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multigroup_mofa_module_capture_vs_pca.csv": {
+      "sha256": "2a5bd0bdca63cbdfe04394c6bdc13c7868cae87eb0972294788637985011e83e",
+      "size_bytes": 3426
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multigroup_mofa_factor_activity_patterns.csv": {
+      "sha256": "1656a6a88bb413e91dc9c72c52336a1326b75dfdc94471f94dfb66aa1540da14",
+      "size_bytes": 10225
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multigroup_mofa_module_representation_interpretation.csv": {
+      "sha256": "f1a637977c067e7488e7cf8ded4a13e86415ad64e8c803bc1b492a4a096dffef",
+      "size_bytes": 1099
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multigroup_mofa_alignment_README.txt": {
+      "sha256": "4b7e8bf2b3034e34f8930ebcecfc57ceba3eeaf8ad0c792d409643d5e84344e6",
+      "size_bytes": 1848
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\multigroup_mofa_alignment\\MOFA_four_cohort_core_plus_frozen_ubiquitous_all_groups_capture.png": {
+      "sha256": "6de93ece44cc1c81f17a793c21f358b722a5953f0a31105754f146be45b72b8f",
+      "size_bytes": 88725
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\multigroup_mofa_alignment\\MOFA_four_cohort_core_plus_frozen_ubiquitous_all_groups_capture.pdf": {
+      "sha256": "e02c27e12f9d1e66655784ee1b0288ce7da461de1dfc4d76cf51eb092d518971",
+      "size_bytes": 16193
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\multigroup_mofa_alignment\\MOFA_four_cohort_core_plus_frozen_shared_non_ffpe_only_capture.png": {
+      "sha256": "e5e84d16414d35fb9bffd6dcd04fa41981c6227bdbbf4fade519f45694dd3034",
+      "size_bytes": 88022
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\multigroup_mofa_alignment\\MOFA_four_cohort_core_plus_frozen_shared_non_ffpe_only_capture.pdf": {
+      "sha256": "1c702345cdaed4726aea454fd0a5494d9d51a4cf41c61f018259bae74bf4ab6a",
+      "size_bytes": 15474
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\multigroup_mofa_alignment\\MOFA_four_cohort_detection_aware_ubiquitous_all_groups_capture.png": {
+      "sha256": "b83d35b9777ced52155836ffe26f7432ac1ab7cd8c3132ba4e3577dd95708cb3",
+      "size_bytes": 89031
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\multigroup_mofa_alignment\\MOFA_four_cohort_detection_aware_ubiquitous_all_groups_capture.pdf": {
+      "sha256": "378056dfc2756e0cab359aaf270284fe561eeef49116f2b52fa146c384e41e4e",
+      "size_bytes": 17329
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\multigroup_mofa_alignment\\MOFA_four_cohort_detection_aware_shared_non_ffpe_only_capture.png": {
+      "sha256": "d76a9a229b7ffd9630b4d3f93adf44e41238a69ab32391c62a19d37d02a8b903",
+      "size_bytes": 88276
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\multigroup_mofa_alignment\\MOFA_four_cohort_detection_aware_shared_non_ffpe_only_capture.pdf": {
+      "sha256": "fb2f1c2a3ddf4a51ed438ca410da1c256a60d01c8e98ee650344157667db36ef",
+      "size_bytes": 16918
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\multigroup_mofa_alignment\\MOFA_three_cohort_no_ffpe_ubiquitous_all_groups_capture.png": {
+      "sha256": "b2e017164ee3a5749d059f9311db182615370c5d716648a99dcade6d342be0c6",
+      "size_bytes": 89101
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\multigroup_mofa_alignment\\MOFA_three_cohort_no_ffpe_ubiquitous_all_groups_capture.pdf": {
+      "sha256": "2db939678b6be657cf17218f9f59cee8428277a9ba613e6ec0c467275a8e7c97",
+      "size_bytes": 16192
+    }
+  }
+}

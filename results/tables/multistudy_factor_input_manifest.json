@@ -1,0 +1,122 @@
+{
+  "script_version": "34-prepare-multistudy-factor-inputs-v1",
+  "created_utc": "2026-08-06T01:33:22.578987+00:00",
+  "outcome_loaded": false,
+  "strict_ortholog_status": "strict_symbol_concordant_one_to_one",
+  "inputs": {
+    "GSE238110_DOG2_expression_log2cpm_matched_allgenes.csv": {
+      "sha256": "6deae6ee8a2663fc4f7be1bb560831c465b295e5b0282bd495934222bbe16997",
+      "size_bytes": 63143134
+    },
+    "TARGET_OS_expression_log2_gene_symbol.csv": {
+      "sha256": "0cde0d000cafa4acb40f42f90bcf6b8e82ece92e5da8db1839bf99007eb5e52f",
+      "size_bytes": 66594174
+    },
+    "GSE21257_expression_gene_symbol.csv": {
+      "sha256": "16917b376ec94aa3196d92e39fb7aa8c6a52baa7077bc063691209a1ee68f073",
+      "size_bytes": 15939530
+    },
+    "GSE39055_expression_gene_symbol.csv": {
+      "sha256": "83ac70f82531ea99f8d7c2f3c8ffc301bcf603d5a443a54abe261f3ed0945eff",
+      "size_bytes": 9284958
+    },
+    "GSE238110_RNA_master_candidate_evidence_table_with_ortholog_qc.csv": {
+      "sha256": "26673d73d3e2b3769ae0eaf776d5f9fe239c594bf8c0f71e01b6ff50d1017586",
+      "size_bytes": 3115402
+    },
+    "GSE238110_frozen_transfer_gene_weights_strict.csv": {
+      "sha256": "4f065aa4c4edf117a0c74015840d2b4b2347929f172cd517e1818ba0f6163b91",
+      "size_bytes": 50062
+    },
+    "GSE39055_gene_probe_selection_comparison.csv": {
+      "sha256": "ade10b84086b292e10535a21e45e559513c1ed686f808bd50558b8566d4bea53",
+      "size_bytes": 6906992
+    }
+  },
+  "outputs": {
+    "results\\tables\\multistudy_factor_strict_ortholog_universe.csv": {
+      "sha256": "c9a283d24cff541d6725e840ef593bfa654da47e06dd46fb61154c49ac541d8e",
+      "size_bytes": 944259
+    },
+    "results\\tables\\multistudy_factor_input_set_summary.csv": {
+      "sha256": "ac9a59ba561063445a57590ae336622b3fe0e068ba79808f7fb20128a9789c8e",
+      "size_bytes": 355
+    },
+    "results\\tables\\multistudy_factor_frozen_module_coverage.csv": {
+      "sha256": "ad1e38bdbc9b7da26506ed7f27ea64d91d06c32985157b9616cb43007181bae4",
+      "size_bytes": 3994
+    },
+    "results\\tables\\multistudy_factor_pca_rank_diagnostics.csv": {
+      "sha256": "e61bc6921b29067f283b6728f2e2a575a4bec18dfdd47f9d424251e1e6520f0e",
+      "size_bytes": 22901
+    },
+    "results\\tables\\multistudy_factor_pairwise_shift_diagnostics.csv": {
+      "sha256": "b917da989316bf535cec1478770ec32ccab46ded3f60c3a4b60d39d4d007662a",
+      "size_bytes": 1945
+    },
+    "results\\tables\\multistudy_factor_model_config.json": {
+      "sha256": "798aa82464f6015e81ea8f340889413c15a4f8fe715902db3b07d9c031771a58",
+      "size_bytes": 3715
+    },
+    "results\\tables\\multistudy_factor_input_README.txt": {
+      "sha256": "2eb428e5d46c7d620cf15709c4557ee49fb9304d4fe0e5e6f98e4ac35cbaf320",
+      "size_bytes": 1633
+    },
+    "data\\processed\\multistudy_factor\\four_cohort_core_plus_frozen\\DOG2_rank_gaussian_z.csv": {
+      "sha256": "b24a495d53b29a2a40add180e3d1baedf65ab4d01ce1d02e5456b745b51042d4",
+      "size_bytes": 2644244
+    },
+    "data\\processed\\multistudy_factor\\four_cohort_core_plus_frozen\\TARGET_OS_rank_gaussian_z.csv": {
+      "sha256": "f107a744d15961ceb99816b0d3c6b58752fc74a4794d85808325071afea1fa4d",
+      "size_bytes": 1252337
+    },
+    "data\\processed\\multistudy_factor\\four_cohort_core_plus_frozen\\GSE21257_rank_gaussian_z.csv": {
+      "sha256": "00269823f9417de428c9465271f207ab35d53c2b2e59f6c9171793a9b8aa94a0",
+      "size_bytes": 759278
+    },
+    "data\\processed\\multistudy_factor\\four_cohort_core_plus_frozen\\GSE39055_rank_gaussian_z.csv": {
+      "sha256": "d1342bd4bc8043683518d5dfd462ba92c93b2b25353f532f1398f578e406edb8",
+      "size_bytes": 529234
+    },
+    "data\\processed\\multistudy_factor\\four_cohort_detection_aware\\DOG2_rank_gaussian_z.csv": {
+      "sha256": "06c13b3163d7bb1a971cb38bec433bab0558249a7d4e7d38cafd9fc6604c9267",
+      "size_bytes": 1605182
+    },
+    "data\\processed\\multistudy_factor\\four_cohort_detection_aware\\TARGET_OS_rank_gaussian_z.csv": {
+      "sha256": "25da61161035065c7e5541fe9805d496a8581a297f9b1051e42477af7d5a6678",
+      "size_bytes": 760351
+    },
+    "data\\processed\\multistudy_factor\\four_cohort_detection_aware\\GSE21257_rank_gaussian_z.csv": {
+      "sha256": "2ca02f540b630785b37bcd3e390302d55c0a87cbe66c26739a5ce99276a3a5b4",
+      "size_bytes": 461004
+    },
+    "data\\processed\\multistudy_factor\\four_cohort_detection_aware\\GSE39055_rank_gaussian_z.csv": {
+      "sha256": "de03d1474e12df16133f0c41ceb454d30191d96f2450c814c70c4c541858e854",
+      "size_bytes": 321355
+    },
+    "data\\processed\\multistudy_factor\\three_cohort_no_ffpe\\DOG2_rank_gaussian_z.csv": {
+      "sha256": "9082768a84959cc03f25a08318f3a2967122898ba5f0114d46cc51e852f77a6a",
+      "size_bytes": 2647891
+    },
+    "data\\processed\\multistudy_factor\\three_cohort_no_ffpe\\TARGET_OS_rank_gaussian_z.csv": {
+      "sha256": "7710cb440e2f263e2d31211bf03e72e21ece5c5c2aa4245b1303b014dd40f158",
+      "size_bytes": 1254040
+    },
+    "data\\processed\\multistudy_factor\\three_cohort_no_ffpe\\GSE21257_rank_gaussian_z.csv": {
+      "sha256": "82a542066187485994658011ed33a89dc422d2bc6b71c5ea858aa5e8720970b8",
+      "size_bytes": 760369
+    },
+    "data\\processed\\multistudy_factor\\four_cohort_core_plus_frozen\\gene_metadata.csv": {
+      "sha256": "bc2be5b1d21f3c7425ac206b14cb67f44b97f2e164895187cdd9fa9bfa195f0b",
+      "size_bytes": 254363
+    },
+    "data\\processed\\multistudy_factor\\four_cohort_detection_aware\\gene_metadata.csv": {
+      "sha256": "dcd9df767581cd2c395b30e39e26e6f0d2072c2d2b7aba0f1bd3c9955af91492",
+      "size_bytes": 154185
+    },
+    "data\\processed\\multistudy_factor\\three_cohort_no_ffpe\\gene_metadata.csv": {
+      "sha256": "2b24114791cf22412fb04c17cbc29851bee0ac2bbdc8302e67c24dffbcf55054",
+      "size_bytes": 248847
+    }
+  }
+}

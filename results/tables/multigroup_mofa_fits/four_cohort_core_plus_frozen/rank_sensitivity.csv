@@ -1,0 +1,7 @@
+analysis_set,comparison_type,initial_factors_a,initial_factors_b,n_common_genes,n_factors_a,n_factors_b,subspace_similarity,shared_covariance_rv
+four_cohort_core_plus_frozen,shared_two_or_more_groups,8,12,722,6,8,0.9955939821127275,0.8816066902801256
+four_cohort_core_plus_frozen,ubiquitous_all_groups,8,12,722,3,4,0.9463979893956239,0.8504987400079917
+four_cohort_core_plus_frozen,shared_two_or_more_groups,8,16,722,6,11,0.9924207661800758,0.8269091806707932
+four_cohort_core_plus_frozen,ubiquitous_all_groups,8,16,722,3,3,0.9091440146339972,0.8883769813030338
+four_cohort_core_plus_frozen,shared_two_or_more_groups,12,16,722,8,11,0.9923231845984501,0.9016289638849349
+four_cohort_core_plus_frozen,ubiquitous_all_groups,12,16,722,4,3,0.9478972567077367,0.8414905787911965

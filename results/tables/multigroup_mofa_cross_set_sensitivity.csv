@@ -1,0 +1,10 @@
+initial_factors,analysis_set_a,analysis_set_b,n_common_genes,n_shared_factors_a,n_shared_factors_b,shared_subspace_similarity,shared_covariance_rv
+8,four_cohort_core_plus_frozen,four_cohort_detection_aware,417,6,6,0.9828390399244232,0.9732875954678692
+8,four_cohort_core_plus_frozen,three_cohort_no_ffpe,585,6,6,0.9928755824021623,0.9834459005858611
+8,four_cohort_detection_aware,three_cohort_no_ffpe,333,6,6,0.9785661139975285,0.9698394930023522
+12,four_cohort_core_plus_frozen,four_cohort_detection_aware,417,8,7,0.920320983136129,0.8493173044271722
+12,four_cohort_core_plus_frozen,three_cohort_no_ffpe,585,8,9,0.9873132556994489,0.9335488949484356
+12,four_cohort_detection_aware,three_cohort_no_ffpe,333,7,9,0.9623497936275138,0.8427748968076226
+16,four_cohort_core_plus_frozen,four_cohort_detection_aware,417,11,8,0.9821490205184833,0.8762555701122691
+16,four_cohort_core_plus_frozen,three_cohort_no_ffpe,585,11,10,0.9740959234755688,0.9318792805303188
+16,four_cohort_detection_aware,three_cohort_no_ffpe,333,8,10,0.9614436220787956,0.8786610771474715

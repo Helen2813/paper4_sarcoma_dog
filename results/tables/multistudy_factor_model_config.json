@@ -1,0 +1,76 @@
+{
+  "script_version": "34-prepare-multistudy-factor-inputs-v1",
+  "created_utc": "2026-08-06T01:33:22.578987+00:00",
+  "analysis_sets": {
+    "four_cohort_core_plus_frozen": {
+      "directory": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor\\four_cohort_core_plus_frozen",
+      "cohorts": [
+        "DOG2",
+        "TARGET_OS",
+        "GSE21257",
+        "GSE39055"
+      ],
+      "gene_metadata": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor\\four_cohort_core_plus_frozen\\gene_metadata.csv",
+      "matrices": {
+        "DOG2": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor\\four_cohort_core_plus_frozen\\DOG2_rank_gaussian_z.csv",
+        "TARGET_OS": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor\\four_cohort_core_plus_frozen\\TARGET_OS_rank_gaussian_z.csv",
+        "GSE21257": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor\\four_cohort_core_plus_frozen\\GSE21257_rank_gaussian_z.csv",
+        "GSE39055": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor\\four_cohort_core_plus_frozen\\GSE39055_rank_gaussian_z.csv"
+      }
+    },
+    "four_cohort_detection_aware": {
+      "directory": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor\\four_cohort_detection_aware",
+      "cohorts": [
+        "DOG2",
+        "TARGET_OS",
+        "GSE21257",
+        "GSE39055"
+      ],
+      "gene_metadata": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor\\four_cohort_detection_aware\\gene_metadata.csv",
+      "matrices": {
+        "DOG2": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor\\four_cohort_detection_aware\\DOG2_rank_gaussian_z.csv",
+        "TARGET_OS": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor\\four_cohort_detection_aware\\TARGET_OS_rank_gaussian_z.csv",
+        "GSE21257": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor\\four_cohort_detection_aware\\GSE21257_rank_gaussian_z.csv",
+        "GSE39055": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor\\four_cohort_detection_aware\\GSE39055_rank_gaussian_z.csv"
+      }
+    },
+    "three_cohort_no_ffpe": {
+      "directory": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor\\three_cohort_no_ffpe",
+      "cohorts": [
+        "DOG2",
+        "TARGET_OS",
+        "GSE21257"
+      ],
+      "gene_metadata": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor\\three_cohort_no_ffpe\\gene_metadata.csv",
+      "matrices": {
+        "DOG2": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor\\three_cohort_no_ffpe\\DOG2_rank_gaussian_z.csv",
+        "TARGET_OS": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor\\three_cohort_no_ffpe\\TARGET_OS_rank_gaussian_z.csv",
+        "GSE21257": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor\\three_cohort_no_ffpe\\GSE21257_rank_gaussian_z.csv"
+      }
+    }
+  },
+  "suggested_vimsfa_grids": [
+    {
+      "name": "compact",
+      "K_common": 4,
+      "J_specific": 2
+    },
+    {
+      "name": "medium",
+      "K_common": 6,
+      "J_specific": 3
+    },
+    {
+      "name": "expanded",
+      "K_common": 8,
+      "J_specific": 4
+    }
+  ],
+  "primary_modules": [
+    "M34",
+    "M11",
+    "M24",
+    "M40"
+  ],
+  "outcome_loaded": false
+}

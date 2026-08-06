@@ -1,0 +1,4 @@
+analysis_set,cohorts,n_cohorts,requested_n_genes,selected_n_genes,gse39055_detection_required,selection_used_frozen_membership
+four_cohort_variable_only_1500,DOG2;TARGET_OS;GSE21257;GSE39055,4,1500,1500,False,False
+four_cohort_detection_aware_variable_only_700,DOG2;TARGET_OS;GSE21257;GSE39055,4,700,700,True,False
+three_cohort_no_ffpe_variable_only_1500,DOG2;TARGET_OS;GSE21257,3,1500,1500,False,False

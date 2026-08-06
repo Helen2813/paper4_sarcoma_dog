@@ -1,0 +1,118 @@
+{
+  "script_version": "37-prepare-variable-only-mofa-inputs-v1",
+  "created_utc": "2026-08-06T02:42:03.943597+00:00",
+  "outcome_loaded": false,
+  "selection_used_frozen_membership": false,
+  "inputs": {
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\GSE238110_DOG2_expression_log2cpm_matched_allgenes.csv": {
+      "sha256": "6deae6ee8a2663fc4f7be1bb560831c465b295e5b0282bd495934222bbe16997",
+      "size_bytes": 63143134
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\human_validation\\TARGET_OS_expression_log2_gene_symbol.csv": {
+      "sha256": "0cde0d000cafa4acb40f42f90bcf6b8e82ece92e5da8db1839bf99007eb5e52f",
+      "size_bytes": 66594174
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\human_validation\\GSE21257_expression_gene_symbol.csv": {
+      "sha256": "16917b376ec94aa3196d92e39fb7aa8c6a52baa7077bc063691209a1ee68f073",
+      "size_bytes": 15939530
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\human_validation\\GSE39055_expression_gene_symbol.csv": {
+      "sha256": "83ac70f82531ea99f8d7c2f3c8ffc301bcf603d5a443a54abe261f3ed0945eff",
+      "size_bytes": 9284958
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multistudy_factor_strict_ortholog_universe.csv": {
+      "sha256": "c9a283d24cff541d6725e840ef593bfa654da47e06dd46fb61154c49ac541d8e",
+      "size_bytes": 944259
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\GSE238110_frozen_transfer_gene_weights_strict.csv": {
+      "sha256": "4f065aa4c4edf117a0c74015840d2b4b2347929f172cd517e1818ba0f6163b91",
+      "size_bytes": 50062
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multistudy_factor_input_manifest.json": {
+      "sha256": "32c75cea94450db7c8867a924787b33f03092649f1dcc4093fc8b2b2141ab0f2",
+      "size_bytes": 5922
+    }
+  },
+  "outputs": {
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multistudy_factor_variable_only_gene_selection.csv": {
+      "sha256": "193fc347b63eee6ccbe628b33b63952a67e041aee5476a59ea51e37a2f38f66d",
+      "size_bytes": 1443098
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multistudy_factor_variable_only_set_summary.csv": {
+      "sha256": "17499bc1e5524270bb642034090f201accc5a4fe02afa5a5d405cbf512d778fb",
+      "size_bytes": 407
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multistudy_factor_variable_only_module_coverage.csv": {
+      "sha256": "93ad264389328fc59f27797708e3e21be205fc641685526678e26961cf3ac05b",
+      "size_bytes": 3446
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multistudy_factor_variable_only_pairwise_shift.csv": {
+      "sha256": "eb8180366d5a4b021dd760b2c7e3db8d1d6e9b20d84afeb31d9e375ce2b11bf9",
+      "size_bytes": 2132
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multistudy_factor_variable_only_model_config.json": {
+      "sha256": "90bf6575a2a435fccf31dfe143b7c66b98aeb21d3000f78977f0129781df68bf",
+      "size_bytes": 3943
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multistudy_factor_variable_only_README.txt": {
+      "sha256": "e100cf3cb9e6edbfae4c8a27c640ddba6a3a933e1cdb4a3bc1d0ad66f5d66d07",
+      "size_bytes": 1124
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor_variable_only\\four_cohort_variable_only_1500\\gene_metadata.csv": {
+      "sha256": "aec306a88ea40465a82a57b90595142b5daa0e510e901cb676954ce25fea962d",
+      "size_bytes": 576313
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor_variable_only\\four_cohort_variable_only_1500\\DOG2_rank_gaussian_z.csv": {
+      "sha256": "0311c568eab4055d5f5a28ad262c2489ccbdfedf896feed22c4a2b704649bc78",
+      "size_bytes": 5490335
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor_variable_only\\four_cohort_variable_only_1500\\TARGET_OS_rank_gaussian_z.csv": {
+      "sha256": "ae484c95ee3fd37ac567c532734fbb43fd90b6c63de694715823e605abb6cc82",
+      "size_bytes": 2600073
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor_variable_only\\four_cohort_variable_only_1500\\GSE21257_rank_gaussian_z.csv": {
+      "sha256": "47b0f10e5a31a025fd6c557460a3f7ed6edb50a143d67d699965568b12a77084",
+      "size_bytes": 1577053
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor_variable_only\\four_cohort_variable_only_1500\\GSE39055_rank_gaussian_z.csv": {
+      "sha256": "931ecea3caced6c099a6644bf41ca6e31adbb05cdbcc88b6d252c7e2d1163474",
+      "size_bytes": 1099292
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor_variable_only\\four_cohort_detection_aware_variable_only_700\\gene_metadata.csv": {
+      "sha256": "9dbf7ebc7e8abb967092bfe07752dd39babe6c9ffad75cc44eceb0677548cb3f",
+      "size_bytes": 278837
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor_variable_only\\four_cohort_detection_aware_variable_only_700\\DOG2_rank_gaussian_z.csv": {
+      "sha256": "86a46ad7c4144051c9d502508056a82c739ae4414c06000a518116760ee3b33e",
+      "size_bytes": 2563654
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor_variable_only\\four_cohort_detection_aware_variable_only_700\\TARGET_OS_rank_gaussian_z.csv": {
+      "sha256": "70d9f8b94976eeb7ec61122fc5dad321c73feb058e47b5383df9c1c76e9bafd5",
+      "size_bytes": 1214254
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor_variable_only\\four_cohort_detection_aware_variable_only_700\\GSE21257_rank_gaussian_z.csv": {
+      "sha256": "01ea178d03cc9168a5f606f8725bb80c88bf396b1636e844ca81f7713711d1e4",
+      "size_bytes": 736349
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor_variable_only\\four_cohort_detection_aware_variable_only_700\\GSE39055_rank_gaussian_z.csv": {
+      "sha256": "7a6a50a17b3bd61974e7e7e9f3ea20f4a0ef001d7bd04f8c6ca4c208eefa61f5",
+      "size_bytes": 513296
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor_variable_only\\three_cohort_no_ffpe_variable_only_1500\\gene_metadata.csv": {
+      "sha256": "00ae48790916c41ecf7b688478a390f0c0cbb4d86e6b810d7a42c95349b600cb",
+      "size_bytes": 589184
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor_variable_only\\three_cohort_no_ffpe_variable_only_1500\\DOG2_rank_gaussian_z.csv": {
+      "sha256": "2148d80b478d649939ce0641af8c4db1bb449b8eff08ef85f88e0323d39bc884",
+      "size_bytes": 5490301
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor_variable_only\\three_cohort_no_ffpe_variable_only_1500\\TARGET_OS_rank_gaussian_z.csv": {
+      "sha256": "1d0ac36475eaec0b383881d57a97efddcb5711477fdc9112920a8ad63c3aa9fa",
+      "size_bytes": 2600060
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\multistudy_factor_variable_only\\three_cohort_no_ffpe_variable_only_1500\\GSE21257_rank_gaussian_z.csv": {
+      "sha256": "b2d77d880978a3f09ec708292fce4ec62fa8d74fed519c68411970e274d3e357",
+      "size_bytes": 1576936
+    }
+  }
+}

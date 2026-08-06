@@ -1,0 +1,19 @@
+Recommended AI/ML novelty claims
+================================
+
+Preferred abstract-level claim
+------------------------------
+We used outcome-blind multi-group MOFA2 to distinguish ubiquitous, partially
+shared, and assay-sensitive latent transcriptional representations across canine
+and human osteosarcoma cohorts. Variable-only models selected without frozen-
+program membership independently recovered M34- and M40-like latent
+representations, while demonstrating that latent recurrence, network
+preservation, and prognostic transport were separable properties.
+
+Claims to avoid
+---------------
+- The modules were independently validated in new patients.
+- MOFA causally identified prognostic programs.
+- MOFA outperformed PCA.
+- All four canine programs were conserved in humans.
+- GSE39055 proved a biological reversal of M40.

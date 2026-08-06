@@ -1,0 +1,4 @@
+analysis_set,cohorts,n_cohorts,n_selected_genes,n_background_genes,n_forced_primary_frozen_genes,gse39055_detection_required
+four_cohort_core_plus_frozen,DOG2;TARGET_OS;GSE21257;GSE39055,4,722,500,222,False
+four_cohort_detection_aware,DOG2;TARGET_OS;GSE21257;GSE39055,4,438,350,88,True
+three_cohort_no_ffpe,DOG2;TARGET_OS;GSE21257,3,723,500,223,False

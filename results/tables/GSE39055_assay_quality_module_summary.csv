@@ -1,0 +1,5 @@
+module_label,locked_hr_per_sd,locked_direction_concordant_with_canine,n_diagnostic_score_strategies,n_direction_concordant_strategies,fraction_direction_concordant_strategies,minimum_score_correlation_with_locked,median_score_correlation_with_locked,best_detected_50_coverage_fraction,best_detected_80_coverage_fraction,diagnostic_interpretation
+M34,0.8064440624284793,False,5,0,0.0,0.6312140794452568,0.7099453728171538,0.35185185185185186,0.1111111111111111,Assay-rule sensitivity is material or coverage is limited; interpret GSE39055 cautiously.
+M11,1.2131747420362171,True,4,4,1.0,0.6772477684664935,0.8289336676433875,0.7142857142857143,0.14285714285714285,Assay-rule sensitivity is material or coverage is limited; interpret GSE39055 cautiously.
+M24,0.88617265418597,False,2,0,0.0,1.0,1.0,0.14285714285714285,0.0,Discordant direction persists across detection-aware rules despite high score concordance.
+M40,0.7834323625032519,False,5,3,0.6,0.2588139729078906,0.6928754996763874,0.36036036036036034,0.14414414414414414,Assay-rule sensitivity is material or coverage is limited; interpret GSE39055 cautiously.

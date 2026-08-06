@@ -1,0 +1,5 @@
+module_label,core_ubiquitous_median_capture,core_non_ffpe_partial_median_capture,detection_aware_ubiquitous_median_capture,no_ffpe_ubiquitous_median_capture,mofa_representation_class,interpretation_note
+M34,0.5993621652754275,0.07358070848909147,0.46327445941813444,0.6019499649205723,strong_shared_latent_representation,This classification summarizes factor-subspace alignment only and does not use or modify outcome results.
+M11,0.007481873290303906,0.03686076079045409,0.020284308597000308,0.07931300629545349,limited_shared_latent_capture,This classification summarizes factor-subspace alignment only and does not use or modify outcome results.
+M24,0.003204944873528217,0.03691685760547054,,0.04234829650424714,limited_shared_latent_capture,This classification summarizes factor-subspace alignment only and does not use or modify outcome results.
+M40,0.011093827699720176,0.6095698992284119,0.46300259079987394,0.6587492570943695,shared_non_ffpe_representation_attenuated_by_gse39055,This classification summarizes factor-subspace alignment only and does not use or modify outcome results.

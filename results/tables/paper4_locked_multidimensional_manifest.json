@@ -1,0 +1,88 @@
+{
+  "script_version": "40-lock-multidimensional-transport-evidence-v1",
+  "created_utc": "2026-08-06T04:08:36.003321+00:00",
+  "new_model_fitting": false,
+  "guardrails": [
+    "No new outcome or factor model was fitted.",
+    "Variable-only feature selection did not use frozen-module membership.",
+    "Independent latent recurrence is not external patient-cohort validation.",
+    "Heatmap scores are descriptive only.",
+    "No causal claim is made."
+  ],
+  "inputs": {
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\paper4_assay_aware_locked_module_evidence_summary.csv": {
+      "sha256": "ac94646a377b59c713a60ec6399e93f4a011387cf939f24882e2f803a657536e",
+      "size_bytes": 2553
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\paper4_projectwide_primary_multiplicity.csv": {
+      "sha256": "a1bf689c3adc955d7602482c8248e0bf60c631e2f339e061698812f7decb25a6",
+      "size_bytes": 1629
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\paper4_gse39055_assay_stability_classification.csv": {
+      "sha256": "f9ef30be60e2e1fb50457f2390d621611a76f7285a11d906bfb8ea06d11ef348",
+      "size_bytes": 1383
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\cross_cohort_conservative_preservation_classification.csv": {
+      "sha256": "184fd8eade2b83039c776aa0a6dcae422897907469b571f3ae65b69be7f5f25e",
+      "size_bytes": 4174
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multigroup_mofa_module_representation_interpretation.csv": {
+      "sha256": "f1a637977c067e7488e7cf8ded4a13e86415ad64e8c803bc1b492a4a096dffef",
+      "size_bytes": 1099
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multigroup_mofa_variable_only_representation_interpretation.csv": {
+      "sha256": "87332474693418716790ef8254d2efa9ae0d30aea2e368ba2d8c39b505bd0af9",
+      "size_bytes": 1466
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multigroup_mofa_variable_only_module_capture_rank_summary.csv": {
+      "sha256": "922dc9eb45ef096f827d7e0ef8f850cbd1821c0fcd1797fbe76b4a3c381ba37e",
+      "size_bytes": 9967
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multigroup_mofa_variable_only_module_factor_rank_summary.csv": {
+      "sha256": "5c6ed749b6691fdde04c56cea9ba05ff25de48ce8c363aff51b4741339e8d834",
+      "size_bytes": 1200
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multigroup_mofa_alignment_manifest.json": {
+      "sha256": "6c41a95ebf19b1db4dfcc186ab0235429e75c3131bf807f9fde9bc2699639e66",
+      "size_bytes": 7461
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\multigroup_mofa_variable_only_alignment_manifest.json": {
+      "sha256": "be60f367df4519490b2a9e0608e41da3c99b002ca6287c279d01c3880dd2276c",
+      "size_bytes": 5936
+    }
+  },
+  "outputs": {
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\paper4_locked_ai_representation_evidence.csv": {
+      "sha256": "e1f4c93374284ac72e11e5e82d9587d48e5c77ad8ddf5466f33c0858ad588cbb",
+      "size_bytes": 1076
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\paper4_locked_multidimensional_transport_evidence.csv": {
+      "sha256": "d6f00375286e78e184a99c0774290a91cd502771595beb815907cb57f6bbcbf5",
+      "size_bytes": 3652
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\paper4_locked_multidimensional_transport_typology.csv": {
+      "sha256": "fbd8035dfa7c12160d2fd5b41f5d6a4db0ac0d2f0deba0ea074aede18879b98b",
+      "size_bytes": 1164
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\paper4_locked_multidimensional_results_sentences.txt": {
+      "sha256": "6f04e36b5e00ab726fde887dcbb6b7e2af57712e77fd585d01df6f45de358256",
+      "size_bytes": 2036
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\paper4_locked_ai_novelty_claims.txt": {
+      "sha256": "0527f4713c0b678cf236995585f7aaf7457035cea089eb77aca630b909ca5aa6",
+      "size_bytes": 854
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\paper4_locked_multidimensional_README.txt": {
+      "sha256": "02f2781e18275b0ad28752c4061c707dc96a31cb2f396392575a5cfa40c5c465",
+      "size_bytes": 463
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\paper4_multidimensional_transport_heatmap.png": {
+      "sha256": "bc20ba840187a689cc92c58edaf12b1143b4e9e8d516a90559f06623e727a9a9",
+      "size_bytes": 108775
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\paper4_multidimensional_transport_heatmap.pdf": {
+      "sha256": "9800e9fe444ce4a2a06ff8d3ad126314bd8c725370865cddd6d11b371982efbf",
+      "size_bytes": 19459
+    }
+  }
+}

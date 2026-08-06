@@ -1,0 +1,107 @@
+{
+  "script_version": "32-patkar-tme-convergence-v1",
+  "created_utc": "2026-08-06T01:04:18.895052+00:00",
+  "patkar_table_s10_path": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\raw\\canine_clinical_DOG2\\ccr-24-1854_supplementary_table_s10_suppts10.xlsx",
+  "patkar_table_s10_sha256": "bf2c74479f93bcb29cf6398da0533a536dd3a520c04577447a407fec6c030561",
+  "primary_modules": [
+    "M34",
+    "M11",
+    "M24",
+    "M40"
+  ],
+  "subtype_order": [
+    "ID",
+    "IE",
+    "IE-ECM"
+  ],
+  "permutations_per_omnibus_test": 10000,
+  "interpretation": "Orthogonal-method convergence within overlapping DOG2 samples; not independent external validation.",
+  "inputs": {
+    "GSE238110_DOG2_expression_log2cpm_matched_allgenes.csv": {
+      "sha256": "6deae6ee8a2663fc4f7be1bb560831c465b295e5b0282bd495934222bbe16997",
+      "size_bytes": 63143134
+    },
+    "GSE238110_DOG2_clinical_matched_indexed.csv": {
+      "sha256": "c5026685cace935304ff332b7d1f9bc5d1e969c808df7a56fcfc6df58e2707b2",
+      "size_bytes": 33260
+    },
+    "GSE238110_frozen_transfer_gene_weights_strict.csv": {
+      "sha256": "4f065aa4c4edf117a0c74015840d2b4b2347929f172cd517e1818ba0f6163b91",
+      "size_bytes": 50062
+    },
+    "GSE238110_frozen_transfer_program_freeze.json": {
+      "sha256": "c0eb0a1e10666cc6e72f08842fa36d48a4a9c49966d19f90acc09bd684748e2c",
+      "size_bytes": 2588
+    }
+  },
+  "outputs": {
+    "Patkar_TME_frozen_program_scores.csv": {
+      "sha256": "fbe48f101dcc2b45308605a99c397d2473209e9929b608fc0804b6ec7fa1a4f9",
+      "size_bytes": 53245
+    },
+    "Patkar_TME_module_omnibus_associations.csv": {
+      "sha256": "b642a8000e16ddc03a969f1afcf74600ea5ddf767edc97f94223b0b3a758248b",
+      "size_bytes": 1427
+    },
+    "Patkar_TME_module_pairwise_associations.csv": {
+      "sha256": "5129dfe44bc5ed49af8a752389df18bca1d5e16717300d2050af217d43af57b8",
+      "size_bytes": 4638
+    },
+    "Patkar_TME_targeted_convergence_tests.csv": {
+      "sha256": "7c0ca1e73da863efbf22c8069f242bfdab018f2f04bb90bb9d65a37a79a9b8fe",
+      "size_bytes": 1477
+    },
+    "Patkar_TME_subtype_score_summary.csv": {
+      "sha256": "e79c04327b5c75449c598326329ba6d5979acd693864258fa0c239f8f5e22af4",
+      "size_bytes": 4204
+    },
+    "Patkar_TME_sample_matching_audit.csv": {
+      "sha256": "d975255e70086c88ebc2b9e74664eaa811d104a4f8ea792f91083ed24d9bebe3",
+      "size_bytes": 754912
+    },
+    "Patkar_TME_convergence_README.txt": {
+      "sha256": "e468f917c68819801efacd1bb39e72e3aead3ad3983096379050c95c83c9ced5",
+      "size_bytes": 1297
+    },
+    "Patkar_TME_M34_boxplot.png": {
+      "sha256": "051c3cb41cd2b4ccd4459403710e0c0d37c11251d2f74d3a04d2fef9b81739b4",
+      "size_bytes": 177825
+    },
+    "Patkar_TME_M34_boxplot.pdf": {
+      "sha256": "c04c5afd71ea08035623b794e7d36620178a8b6a015d803481e484363992614e",
+      "size_bytes": 18731
+    },
+    "Patkar_TME_M11_boxplot.png": {
+      "sha256": "c07e1dbfcce4e4e4ce03174d0f47e3361e26fa8a85274ac7054b4ab0339a19ca",
+      "size_bytes": 183380
+    },
+    "Patkar_TME_M11_boxplot.pdf": {
+      "sha256": "78c4ecaef4f5097ac69fd4021f1ff5fe9c3b0f98d248b9dec30ce932cf0105d6",
+      "size_bytes": 18562
+    },
+    "Patkar_TME_M24_boxplot.png": {
+      "sha256": "a86f48a9c0c72f4b89c1d993caf4ab8092cdc2e499831c7cfaf85bd31bda04f2",
+      "size_bytes": 194563
+    },
+    "Patkar_TME_M24_boxplot.pdf": {
+      "sha256": "e98f9ee701438b8b7612f1e6230e34e34eb2a8f3a243b6bc5f9a2920d2d9a19e",
+      "size_bytes": 18772
+    },
+    "Patkar_TME_M40_boxplot.png": {
+      "sha256": "432f5099c374daadb30700c7a3b23201d7a6379193f437b637a47a098af84e0d",
+      "size_bytes": 192958
+    },
+    "Patkar_TME_M40_boxplot.pdf": {
+      "sha256": "5082aae2d63daf39187642362257769e735f88d56cb2d142c66c3eb277fd608c",
+      "size_bytes": 18298
+    },
+    "Patkar_TME_module_median_heatmap.png": {
+      "sha256": "aad0a440c236f86b8d0136ba9890e0cb0906004be61676edfe9d469fd5e7044d",
+      "size_bytes": 85071
+    },
+    "Patkar_TME_module_median_heatmap.pdf": {
+      "sha256": "ddf207aa63b68642e81025e40bbc0732fc903bab883b24f4057cc20bb4f0bbc2",
+      "size_bytes": 17651
+    }
+  }
+}

@@ -1,0 +1,30 @@
+Assay-aware locked cross-species evidence statements
+===================================================
+
+Multiplicity statement
+----------------------
+Across all 12 frozen primary human outcome tests, only the GSE21257 M34 metastasis association remained significant after project-wide Benjamini-Hochberg correction.
+
+M34
+---
+M34 retained strong representation and outcome support in TARGET-OS and GSE21257. It was the only program with project-wide FDR-controlled human outcome support, through the GSE21257 metastasis analysis. Its opposite GSE39055 RFS direction persisted across detection-aware scoring rules, but stringent probe filtering retained only limited module coverage; the third cohort should therefore be presented as assay-limited heterogeneity rather than definitive biological reversal.
+
+M11
+---
+M11 retained the canine risk direction in all three human settings and under every estimable GSE39055 assay rule. A detection-aware GSE39055 sensitivity score was nominally associated with RFS, but this alternative assay rule was not a primary test. M11 remains a secondary directional-consistency finding.
+
+M24
+---
+M24 showed endpoint-specific support in GSE21257 and discordant directions in the locked TARGET-OS and GSE39055 analyses. However, only one of seven frozen genes passed the principal GSE39055 detection filter, so the third-cohort direction is not considered a stable assay-quality-tested result.
+
+M40
+---
+M40 retained conservative transcriptional-structure preservation across all three human cohorts. Its locked GSE39055 RFS direction was opposite to the canine direction, but detection-aware scores changed direction across probe-quality rules. M40 therefore supports separation of representation preservation from stable prognostic transport, but not a definitive biological reversal in GSE39055.
+
+Biological convergence
+-----------------------
+Within DOG2, the frozen risk-oriented M34 score showed strong same-cohort orthogonal-method convergence with the Patkar tumor-microenvironment taxonomy: scores were highest in immune-desert tumors and markedly lower in immune-enriched tumors. M40 also differed strongly across TME subtypes, with higher scores in immune-desert tumors, whereas M24 showed no clear TME-subtype association.
+
+Primary conceptual conclusion
+-----------------------------
+Cross-species transcriptional representation and prognostic transport are separable quantities. M34 showed the strongest outcome evidence but third-cohort assay-limited heterogeneity. M40 preserved transcriptional structure while its third-cohort outcome direction was unstable across assay-quality rules. Thus, preserved representation did not guarantee a stable transported prognostic effect.

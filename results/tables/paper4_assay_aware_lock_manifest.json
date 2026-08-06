@@ -1,0 +1,85 @@
+{
+  "script_version": "33-projectwide-multiplicity-assay-aware-lock-v1",
+  "created_utc": "2026-08-06T01:19:18.205205+00:00",
+  "primary_test_count": 12,
+  "multiplicity_method": "Benjamini-Hochberg across all 12 frozen primary human outcome tests",
+  "guardrails": [
+    "No new feature selection or outcome model fitting.",
+    "No frozen score reversal.",
+    "No replacement of scripts 23 or 26 primary analyses.",
+    "Detection-aware analyses modify interpretation, not primary results.",
+    "Patkar convergence uses overlapping DOG2 data and is not external validation."
+  ],
+  "inputs": {
+    "TARGET_OS_primary_frozen_program_validation.csv": {
+      "sha256": "1bc7d5881bae8f9bd63088c37aad57c6294d47f97d71baa06e7f9aa12fec04fe",
+      "size_bytes": 1843
+    },
+    "GSE21257_metastasis_primary_frozen_program_validation.csv": {
+      "sha256": "66f8f57539d9fd9d666dd4fd27ffa017d0884fd694b68e0ec7fa5243842a2ac8",
+      "size_bytes": 1754
+    },
+    "GSE39055_RFS_primary_frozen_program_validation.csv": {
+      "sha256": "1945cca593030f57cbaf6eef3006391b4fc3ad2ff334d99e34cc81436533951e",
+      "size_bytes": 2216
+    },
+    "GSE39055_assay_quality_module_summary.csv": {
+      "sha256": "0fdc2fb790819356e2d460dc508b7aa1db31d31443bd73a4eca38d04eeb26a41",
+      "size_bytes": 1121
+    },
+    "GSE39055_detection_aware_RFS_sensitivity.csv": {
+      "sha256": "4bf8dea35f0469e90272352765cd6476ef9fcf3bd669e95fd17f82deb2dbe478",
+      "size_bytes": 3031
+    },
+    "cross_cohort_conservative_preservation_classification.csv": {
+      "sha256": "184fd8eade2b83039c776aa0a6dcae422897907469b571f3ae65b69be7f5f25e",
+      "size_bytes": 4174
+    },
+    "paper4_locked_module_evidence_summary.csv": {
+      "sha256": "e967de4bd35cedc562ec7b3776d7081fcb4924d95450a243c4b4f1b8586746c9",
+      "size_bytes": 2583
+    },
+    "Patkar_TME_module_omnibus_associations.csv": {
+      "sha256": "b642a8000e16ddc03a969f1afcf74600ea5ddf767edc97f94223b0b3a758248b",
+      "size_bytes": 1427
+    },
+    "Patkar_TME_targeted_convergence_tests.csv": {
+      "sha256": "7c0ca1e73da863efbf22c8069f242bfdab018f2f04bb90bb9d65a37a79a9b8fe",
+      "size_bytes": 1477
+    },
+    "Patkar_TME_subtype_score_summary.csv": {
+      "sha256": "e79c04327b5c75449c598326329ba6d5979acd693864258fa0c239f8f5e22af4",
+      "size_bytes": 4204
+    }
+  },
+  "outputs": {
+    "paper4_projectwide_primary_multiplicity.csv": {
+      "sha256": "a1bf689c3adc955d7602482c8248e0bf60c631e2f339e061698812f7decb25a6",
+      "size_bytes": 1629
+    },
+    "paper4_gse39055_assay_stability_classification.csv": {
+      "sha256": "f9ef30be60e2e1fb50457f2390d621611a76f7285a11d906bfb8ea06d11ef348",
+      "size_bytes": 1383
+    },
+    "paper4_representation_outcome_decoupling_typology.csv": {
+      "sha256": "53d49a96a70747f3b2d856cb69c916ac20d37456b2443acf8c119576648be06a",
+      "size_bytes": 2053
+    },
+    "paper4_assay_aware_locked_module_evidence_summary.csv": {
+      "sha256": "ac94646a377b59c713a60ec6399e93f4a011387cf939f24882e2f803a657536e",
+      "size_bytes": 2553
+    },
+    "paper4_assay_aware_locked_module_interpretation.csv": {
+      "sha256": "18ec6d57986cf83f24e3e2fc9455261842f775f494671065be1dda934bdf6c33",
+      "size_bytes": 1877
+    },
+    "paper4_assay_aware_locked_results_sentences.txt": {
+      "sha256": "371a5d043559d4d38f32b3833ca396f69381d50e83ad2eacf4b088365f5b7163",
+      "size_bytes": 2751
+    },
+    "paper4_assay_aware_lock_README.txt": {
+      "sha256": "c328713b399c913321efbb782e0084fe94f2a31f0f20b4750227ae35b6dc846c",
+      "size_bytes": 1377
+    }
+  }
+}

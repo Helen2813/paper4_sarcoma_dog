@@ -1,0 +1,26 @@
+Locked multidimensional transport results
+========================================
+
+Primary conceptual result
+-------------------------
+Outcome-blind multi-group MOFA2 identified stable latent transcriptional representations across canine and human osteosarcoma cohorts. Variable-only models confirmed that the principal M34- and M40-like representations were not artifacts of forced frozen-gene inclusion. Latent recurrence, network preservation, assay stability, and prognostic transport nevertheless separated into distinct module-specific patterns.
+
+M34
+---
+M34 independently recurred as an ubiquitous latent transcriptional representation in a variable-only ortholog space selected without frozen-module membership. Nevertheless, prognostic transport remained endpoint- and platform-dependent: GSE21257 provided the only project-wide FDR-controlled human outcome result, TARGET-OS showed nominal directional concordance, and GSE39055 retained an assay-limited discordant RFS direction.
+
+M11
+---
+M11 retained the canine risk direction across human outcome settings and every estimable GSE39055 assay rule, yet it did not emerge as a dominant independently learned latent representation. Its statistically unusual best-factor alignments were small in absolute magnitude.
+
+M24
+---
+M24 lacked sufficient natural gene coverage for a reliable variable-only latent-recurrence test and showed limited structure and outcome transport outside GSE21257.
+
+M40
+---
+M40 independently recurred across DOG2, TARGET-OS, and GSE21257, was attenuated in unfiltered GSE39055, and re-emerged after detection-aware filtering. Its GSE39055 outcome direction remained assay-rule sensitive, showing that recoverable shared representation did not imply stable prognostic transport.
+
+Terminology guardrail
+---------------------
+Independent latent recurrence means independent of frozen-module feature selection and clinical outcomes within the same expression cohorts. It does not mean independent external patient-cohort validation.

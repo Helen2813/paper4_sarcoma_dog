@@ -1,0 +1,62 @@
+{
+  "script_version": "24-external-validation-robustness-audit-v1",
+  "created_utc": "2026-08-05T19:49:30.753155+00:00",
+  "random_seed": 20260805,
+  "bootstrap_logistic": 5000,
+  "auc_permutations": 10000,
+  "primary_modules": [
+    "M34",
+    "M11",
+    "M24",
+    "M40"
+  ],
+  "input_files": {
+    "TARGET_OS_clinical_standardized.csv": {
+      "sha256": "c89d6718bac4b9d2b3e880302cb5f48501814ee5a57fb609a174bdd505476793"
+    },
+    "TARGET_OS_frozen_transfer_scores.csv": {
+      "sha256": "21c96bd5cac16b51ed4ddaedbe03486827656d3d56a0f2d0c5786e3a732b1c5f"
+    },
+    "GSE21257_clinical_standardized.csv": {
+      "sha256": "e55bdc137e56997f5453475bcd9693d0381d606f9dfbb01a8ca673f990a00ad9"
+    },
+    "GSE21257_frozen_transfer_scores.csv": {
+      "sha256": "e8dbb5861550d84525da24c8a9d82f525c2d0b7445c36c5c5ba417eb4c431c8c"
+    },
+    "TARGET_OS_primary_frozen_program_validation.csv": {
+      "sha256": "1bc7d5881bae8f9bd63088c37aad57c6294d47f97d71baa06e7f9aa12fec04fe"
+    },
+    "GSE21257_metastasis_primary_frozen_program_validation.csv": {
+      "sha256": "66f8f57539d9fd9d666dd4fd27ffa017d0884fd694b68e0ec7fa5243842a2ac8"
+    },
+    "human_external_validation_random_gene_set_controls.csv": {
+      "sha256": "80246ff94c05c2f3026447e1e7ec99342d6e9ff9795e2aa02e5437502ef5d658"
+    }
+  },
+  "output_files": {
+    "GSE21257_primary_robust_logistic_effects.csv": {
+      "sha256": "d39a1bb3d13470ad8a03d0f6088771d4bf77bb19bfc6a995b0da1a1bcd5f9844"
+    },
+    "TARGET_OS_primary_adjustment_robustness.csv": {
+      "sha256": "989048ee0d3987f4999ecef5d840fdba5ba2535c2102e0e7fa8d167df580617f"
+    },
+    "GSE21257_primary_adjustment_robustness.csv": {
+      "sha256": "8fa0152456d6c015ab9fe4cf3c2cdced8d24b4100a1366c43911294f34f8067f"
+    },
+    "TARGET_OS_primary_leave_one_out_stability.csv": {
+      "sha256": "b9305ff7ae4419beb9fcf78da11ed9e50007a4b6bcf97541ef896fe6acfac284"
+    },
+    "GSE21257_primary_leave_one_out_stability.csv": {
+      "sha256": "25bcae9d8ddca315c8a7d4cc0dcabc5ab9f2ccb0abe26a46e6861da5e26ab275"
+    },
+    "human_external_validation_random_control_empirical_fdr.csv": {
+      "sha256": "4a6e54d67ac02eefde71f3960e38cfe4b45fe2ccd60484fc27116484ce9495a7"
+    },
+    "human_external_validation_robust_evidence_summary.csv": {
+      "sha256": "3420c827b16e1cadad3877edd06c2d843534cf0a517024fa6a83d81e4427103c"
+    },
+    "human_external_validation_robustness_README.txt": {
+      "sha256": "2e9848fbba1f47c8b86b9c974309b85fec7cd85e59b25a1007939970dc91f46f"
+    }
+  }
+}

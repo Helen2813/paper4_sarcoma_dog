@@ -1,0 +1,126 @@
+{
+  "script_version": "25-gse39055-preparation-v1",
+  "created_utc": "2026-08-05T20:05:18.740519+00:00",
+  "frozen_program_freeze_sha256": "c0eb0a1e10666cc6e72f08842fa36d48a4a9c49966d19f90acc09bd684748e2c",
+  "frozen_program_definition": {
+    "frozen_after_script": "20_proliferation_overlap_crossfit_sensitivity.py",
+    "primary_clean_modules": [
+      "M34",
+      "M11",
+      "M24"
+    ],
+    "primary_proliferation_axis_modules": [
+      "M40"
+    ],
+    "secondary_sensitivity_modules": [
+      "M28",
+      "M38",
+      "M25",
+      "M17"
+    ],
+    "primary_canine_endpoint": "DFI",
+    "secondary_canine_endpoint": "OS_concordance",
+    "primary_human_score": "strict_one_to_one_signed_mean_z",
+    "secondary_human_score": "strict_one_to_one_canine_pca_weighted_z",
+    "m40_residual_role": "mechanistic_sensitivity",
+    "ortholog_qc_input_file": "GSE238110_RNA_master_candidate_evidence_table_with_ortholog_qc.csv",
+    "ortholog_qc_input_sha256": "26673d73d3e2b3769ae0eaf776d5f9fe239c594bf8c0f71e01b6ff50d1017586",
+    "files": {
+      "GSE238110_repeated_cv_program_scores_by_repeat.csv": {
+        "sha256": "90e1ba5ecdef36d1fc813ead372b6fad70bfe6e7f57dc7578e353939b3a09c75",
+        "size_bytes": 495510
+      },
+      "GSE238110_repeated_cv_program_model_contrasts.csv": {
+        "sha256": "c4dd9f810ae1df0f3662754cb05349023bfb71a9ad1a5f3497401d8c0bbd5382",
+        "size_bytes": 82109
+      },
+      "GSE238110_repeated_cv_program_model_contrast_summary.csv": {
+        "sha256": "2aec5db69a38b9dab0e8769334c977a86f0f505fcd16e6402b2bbe9f1e9832de",
+        "size_bytes": 51043
+      },
+      "GSE238110_frozen_canine_transfer_program_manifest.csv": {
+        "sha256": "fcd34b985ea99986f39dfc43ce8e4018db2fde9ecc8a225bb40ac93006d5372c",
+        "size_bytes": 14880
+      },
+      "GSE238110_frozen_transfer_gene_weights_strict.csv": {
+        "sha256": "4f065aa4c4edf117a0c74015840d2b4b2347929f172cd517e1818ba0f6163b91",
+        "size_bytes": 50062
+      },
+      "GSE238110_frozen_transfer_gene_weights_broad.csv": {
+        "sha256": "ee5f661677b173507e04856f848b6757ede2750dd69b9bb0d88a9f6a2a77bd4c",
+        "size_bytes": 60534
+      },
+      "GSE238110_frozen_transfer_programs_strict.gmt": {
+        "sha256": "1d96f03c085aa5f4d2f81916a11b018919390be4f50894307726a1bb06ece738",
+        "size_bytes": 2652
+      },
+      "GSE238110_frozen_transfer_programs_broad.gmt": {
+        "sha256": "aa57acfd1cd67be7aeabd35763e47c76039b2211694db1d02ac053dc13a27129",
+        "size_bytes": 3058
+      },
+      "GSE238110_frozen_transfer_scoring_specification.csv": {
+        "sha256": "562aab92caa949691f43b0285cf2585c98008e78c62d2c15477a6d156d7f47a7",
+        "size_bytes": 14951
+      },
+      "GSE238110_frozen_transfer_programs_README.txt": {
+        "sha256": "20d51001ad6da75a56c26d4efb22a029e8f423a507707ec31f2c7dc596d5dda9",
+        "size_bytes": 1427
+      }
+    }
+  },
+  "source": {
+    "accession": "GSE39055",
+    "source": "NCBI GEO via GEOparse",
+    "platform": "GPL14951",
+    "sample_type": "diagnostic osteosarcoma biopsy"
+  },
+  "cohort_dimensions": {
+    "expression": [
+      37,
+      20793
+    ],
+    "clinical": [
+      37,
+      14
+    ],
+    "scores": [
+      37,
+      68
+    ]
+  },
+  "outcome_guardrail": "Recurrence and follow-up fields were parsed after expression harmonization rules were fixed. Outcomes were not used to select probes, genes, weights, score direction, or validation tier.",
+  "files": {
+    "GSE39055_expression_gene_symbol.csv": {
+      "sha256": "83ac70f82531ea99f8d7c2f3c8ffc301bcf603d5a443a54abe261f3ed0945eff",
+      "size_bytes": 9284958
+    },
+    "GSE39055_clinical_standardized.csv": {
+      "sha256": "e6fc6f1a983bcd85d8eb5aefeaa46af9fe8f8ce405e5982f0bb39df456665304",
+      "size_bytes": 92970
+    },
+    "GSE39055_frozen_transfer_scores.csv": {
+      "sha256": "b28eca9fbef93ce82bbc33bd7f7780060031e6381a8df9ecc544cd82d94fe359",
+      "size_bytes": 51525
+    },
+    "GSE39055_frozen_transfer_score_coverage.csv": {
+      "sha256": "1945407e793a0c3d3213a55bc0e8cf7526dbfb8b9d65e716818b5f5748ec50e7",
+      "size_bytes": 6359
+    },
+    "GSE39055_probe_to_gene_symbol_selected.csv": {
+      "sha256": "00a773be24c545aaed9f22fa2e35594e946925026e5cb37c64a572b53288df99",
+      "size_bytes": 828204
+    },
+    "GSE39055_GEO_phenotype_raw.csv": {
+      "sha256": "3e1e8714429eed0e3572b7b76e39f9b5353b05074f3ebf297d67f30a3ab40071",
+      "size_bytes": 49761
+    },
+    "GSE39055_preparation_summary.csv": {
+      "sha256": "0a10c02a2f458982a0734c7e884f4b6042975fc484108f47d71aa8b97e597f95",
+      "size_bytes": 186
+    },
+    "GSE39055_preparation_README.txt": {
+      "sha256": "1452e8bde47f29dfcc26e5aeed2217a0176ce556ffa00a5ffb6e19b4998b4e0f",
+      "size_bytes": 856
+    }
+  }
+}

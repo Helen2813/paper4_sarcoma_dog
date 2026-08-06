@@ -1,0 +1,34 @@
+{
+  "script_version": "30-paper4-locked-figures-tables-v1",
+  "created_utc": "2026-08-06T00:27:02.944725+00:00",
+  "source_files": [
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\paper4_locked_human_outcome_evidence.csv",
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\paper4_locked_structure_evidence.csv",
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\paper4_locked_module_evidence_summary.csv",
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\paper4_locked_module_interpretation.csv"
+  ],
+  "generated_files": [
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\paper4_locked\\Paper4_TARGET_OS_forest.png",
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\paper4_locked\\Paper4_TARGET_OS_forest.pdf",
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\paper4_locked\\Paper4_GSE21257_forest.png",
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\paper4_locked\\Paper4_GSE21257_forest.pdf",
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\paper4_locked\\Paper4_GSE39055_forest.png",
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\paper4_locked\\Paper4_GSE39055_forest.pdf",
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\paper4_locked\\Paper4_fixed_direction_discrimination.png",
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\paper4_locked\\Paper4_fixed_direction_discrimination.pdf",
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\paper4_locked\\Paper4_structure_edge_spearman.png",
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\paper4_locked\\Paper4_structure_edge_spearman.pdf",
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\paper4_locked\\Paper4_structure_loading_spearman.png",
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\paper4_locked\\Paper4_structure_loading_spearman.pdf",
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\paper4_locked\\Paper4_structure_split_half.png",
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\paper4_locked\\Paper4_structure_split_half.pdf",
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\paper4_locked\\Paper4_locked_evidence_matrix.png",
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\paper4_locked\\Paper4_locked_evidence_matrix.pdf",
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\Paper4_locked_main_results_table.csv",
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\Paper4_locked_main_results_table.tex",
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\Paper4_locked_structure_table.csv",
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\Paper4_locked_figure_captions.txt",
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\Paper4_locked_figure_table_README.txt"
+  ],
+  "interpretation_guardrail": "No formal pooling across overall survival, five-year metastasis, and recurrence-free survival."
+}

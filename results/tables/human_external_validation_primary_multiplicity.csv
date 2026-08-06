@@ -1,0 +1,9 @@
+cohort,endpoint,module_label,score_name,primary_p,q_global_eight_tests,direction_consistent
+TARGET_OS,overall_survival,M34,M34__strict__signed_mean_z,0.046044962679533286,0.08416231565705702,False
+TARGET_OS,overall_survival,M11,M11__strict__signed_mean_z,0.4312225236881939,0.4312225236881939,False
+TARGET_OS,overall_survival,M24,M24__strict__signed_mean_z,0.34452959793369897,0.4312225236881939,False
+TARGET_OS,overall_survival,M40,M40__strict__signed_mean_z,0.41161580153614474,0.4312225236881939,False
+GSE21257,metastasis_within_5y,M34,M34__strict__signed_mean_z,0.0008709092010055146,0.006967273608044117,False
+GSE21257,metastasis_within_5y,M11,M11__strict__signed_mean_z,0.02666508076339848,0.0819068905896218,False
+GSE21257,metastasis_within_5y,M24,M24__strict__signed_mean_z,0.030715083971108177,0.0819068905896218,False
+GSE21257,metastasis_within_5y,M40,M40__strict__signed_mean_z,0.05260144728566064,0.08416231565705702,False

@@ -1,0 +1,2 @@
+cohort,n_expression_samples,n_expression_genes,n_clinical_rows,n_rfs_complete,n_recurrence_events,n_censored_without_recurrence,n_frozen_score_columns
+GSE39055,37,20793,37,37,18,19,67

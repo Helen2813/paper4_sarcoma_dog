@@ -1,0 +1,3 @@
+cohort,n_expression_samples,n_expression_genes,n_clinical_rows,n_os_complete,n_metastasis_labels,n_frozen_score_columns
+TARGET_OS,88,56621,88,86,,70
+GSE21257,53,24996,53,53,53.0,61

@@ -1,0 +1,64 @@
+{
+  "script_version": "26-gse39055-rfs-validation-v1",
+  "created_utc": "2026-08-05T20:23:18.349618+00:00",
+  "preparation_manifest_sha256": "463f731a075399e88c635dbb527b15a39e349ff4ec2df2a8fb48b210dbe3f90f",
+  "preparation_script_version": "25-gse39055-preparation-v1",
+  "analysis_design": {
+    "primary_modules": [
+      "M34",
+      "M11",
+      "M24",
+      "M40"
+    ],
+    "primary_score": "strict one-to-one signed-mean z-score",
+    "primary_endpoint": "recurrence-free survival",
+    "primary_time_rule": "exclude nonpositive recorded times",
+    "zero_time_sensitivity": "replace nonpositive time with 0.033333 months",
+    "bootstrap_repetitions": 5000,
+    "permutation_repetitions": 10000,
+    "random_gene_set_repetitions": 2000,
+    "multiplicity": "BH across the four frozen primary modules"
+  },
+  "files": {
+    "GSE39055_RFS_primary_frozen_program_validation.csv": {
+      "sha256": "1945cca593030f57cbaf6eef3006391b4fc3ad2ff334d99e34cc81436533951e",
+      "size_bytes": 2216
+    },
+    "GSE39055_RFS_primary_multiplicity.csv": {
+      "sha256": "66dc8e035dc52a60659348fe9c6fca999ec57e3d14e95d09ce8385d27318bc92",
+      "size_bytes": 423
+    },
+    "GSE39055_RFS_adjustment_robustness.csv": {
+      "sha256": "746e15d82a3b529a9bbb0c435dcaf97ddb30a3edff72c24934bc8a9f6ce626f4",
+      "size_bytes": 8403
+    },
+    "GSE39055_RFS_score_variant_sensitivity.csv": {
+      "sha256": "af0df2d0b1088ed3a255acaa76203f43caf732b8cbe9547ab0306076ad674469",
+      "size_bytes": 9795
+    },
+    "GSE39055_RFS_leave_one_out_stability.csv": {
+      "sha256": "294015c8df103c6e280b02b5cefbcd72bbe1237a9ff9e156aeb1ffb198459d47",
+      "size_bytes": 651
+    },
+    "GSE39055_RFS_random_gene_set_controls.csv": {
+      "sha256": "2031aa3de080aa1b0b785ed4e1a86ab01a90f8660236dd09ea3111307ffe9b72",
+      "size_bytes": 858
+    },
+    "GSE39055_RFS_random_gene_set_distribution.csv": {
+      "sha256": "855203a55f412afaf3eba1ee7ba808f75bc847cfaa70d58ea2bbc009579241d3",
+      "size_bytes": 249348
+    },
+    "GSE39055_zero_time_endpoint_audit.csv": {
+      "sha256": "5bce5fe93c71ddd7062f70986ce2623be62974cfa2360b463a3a1f75ebd8281b",
+      "size_bytes": 6046
+    },
+    "human_external_validation_three_cohort_synthesis.csv": {
+      "sha256": "d40b6c6446a24173c671ca9d9a32416478a0e620f762dd29c1a1fe2d60771fbd",
+      "size_bytes": 3036
+    },
+    "GSE39055_RFS_validation_README.txt": {
+      "sha256": "5e387589e1043a47d2c3e52ed270525cbb81b99a1569eb773319ae5ee7fa1301",
+      "size_bytes": 1132
+    }
+  }
+}

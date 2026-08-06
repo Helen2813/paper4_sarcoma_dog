@@ -1,0 +1,74 @@
+{
+  "script_version": "29-lock-cross-species-evidence-v1",
+  "created_utc": "2026-08-06T00:09:01.525028+00:00",
+  "analysis_status": "locked_descriptive_synthesis",
+  "primary_modules": [
+    "M34",
+    "M11",
+    "M24",
+    "M40"
+  ],
+  "human_settings": [
+    "TARGET_OS",
+    "GSE21257",
+    "GSE39055"
+  ],
+  "guardrails": [
+    "No formal meta-analysis across non-identical endpoints.",
+    "No post hoc reversal of frozen score direction.",
+    "No change to frozen module membership, weights, or validation tier.",
+    "Script 28 conservative structure classes supersede script 27 classes for manuscript claims."
+  ],
+  "inputs": {
+    "TARGET_OS_primary_frozen_program_validation.csv": {
+      "sha256": "1bc7d5881bae8f9bd63088c37aad57c6294d47f97d71baa06e7f9aa12fec04fe",
+      "size_bytes": 1843
+    },
+    "GSE21257_metastasis_primary_frozen_program_validation.csv": {
+      "sha256": "66f8f57539d9fd9d666dd4fd27ffa017d0884fd694b68e0ec7fa5243842a2ac8",
+      "size_bytes": 1754
+    },
+    "GSE21257_primary_robust_logistic_effects.csv": {
+      "sha256": "d39a1bb3d13470ad8a03d0f6088771d4bf77bb19bfc6a995b0da1a1bcd5f9844",
+      "size_bytes": 1057
+    },
+    "GSE39055_RFS_primary_frozen_program_validation.csv": {
+      "sha256": "1945cca593030f57cbaf6eef3006391b4fc3ad2ff334d99e34cc81436533951e",
+      "size_bytes": 2216
+    },
+    "cross_cohort_conservative_preservation_classification.csv": {
+      "sha256": "184fd8eade2b83039c776aa0a6dcae422897907469b571f3ae65b69be7f5f25e",
+      "size_bytes": 4174
+    },
+    "GSE238110_frozen_canine_transfer_program_manifest.csv": {
+      "sha256": "fcd34b985ea99986f39dfc43ce8e4018db2fde9ecc8a225bb40ac93006d5372c",
+      "size_bytes": 14880
+    }
+  },
+  "outputs": {
+    "paper4_locked_human_outcome_evidence.csv": {
+      "sha256": "88891d1525e0a205826d53c152e7d3f5d35a9332d0c20bc7375bd8adf3aa82e7",
+      "size_bytes": 3033
+    },
+    "paper4_locked_structure_evidence.csv": {
+      "sha256": "d381c72dc04e2591db194db928cac4ab9ad8ec47e739dce6af6d47edb322afe1",
+      "size_bytes": 4059
+    },
+    "paper4_locked_module_evidence_summary.csv": {
+      "sha256": "e967de4bd35cedc562ec7b3776d7081fcb4924d95450a243c4b4f1b8586746c9",
+      "size_bytes": 2583
+    },
+    "paper4_locked_module_interpretation.csv": {
+      "sha256": "d675cbd0c3e5238ff08302dd3546b74b2504367b1a3a7ac4b94c20c28906c8a3",
+      "size_bytes": 1233
+    },
+    "paper4_locked_results_sentences.txt": {
+      "sha256": "a19d89440f6bacff9bf5029bff381ce3b6fb65ae0da805b43506d31228bd6c1d",
+      "size_bytes": 2085
+    },
+    "paper4_analysis_freeze_README.txt": {
+      "sha256": "1029ec781fd7d7998f26ac1de01ff9c44de96e7f331e85280813a25186f88ba6",
+      "size_bytes": 1126
+    }
+  }
+}

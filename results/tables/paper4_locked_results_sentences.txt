@@ -1,0 +1,28 @@
+Locked cross-species evidence statements
+=======================================
+
+These statements summarize distinct endpoints and are not a formal meta-analysis.
+
+M34
+---
+M34 showed strong representation and outcome transfer in TARGET-OS and GSE21257, but attenuated representation and an opposite recurrence-free-survival direction in GSE39055. It should be described as a replicated but cohort- and endpoint-heterogeneous cross-species program, not as a universal prognostic biomarker.
+
+M11
+---
+M11 retained the same risk direction in all three human settings, but statistical and structural support was limited or incomplete outside GSE21257. It should be treated as a secondary directional-consistency finding.
+
+M24
+---
+M24 did not show sufficiently consistent structural and outcome evidence to support a general cross-species prognostic claim.
+
+M40
+---
+M40 retained strong cross-cohort transcriptional structure in all three human settings, while its frozen prognostic direction was concordant in TARGET-OS and GSE21257 but discordant in GSE39055. This is direct evidence that representation preservation does not guarantee prognostic transport.
+
+Primary manuscript-level conclusion
+-----------------------------------
+Frozen canine transcriptional programs showed heterogeneous human transfer. M34 combined strong representation and outcome support in TARGET-OS and GSE21257 with attenuated representation and opposite RFS direction in GSE39055. M40 retained strong transcriptional structure across all three human cohorts despite discordant RFS direction in GSE39055, demonstrating that cross-cohort representation preservation does not guarantee prognostic transport. M11 showed the most consistent direction of association but only limited or partial structural and statistical support. M24 did not support a general conserved prognostic claim.
+
+Guardrail
+---------
+Overall survival, five-year metastasis, and recurrence-free survival are not pooled into one effect estimate. Frozen score directions are not reversed after viewing human outcomes.

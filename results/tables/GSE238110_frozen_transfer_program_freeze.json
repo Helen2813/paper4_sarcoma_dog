@@ -1,0 +1,66 @@
+{
+  "frozen_after_script": "20_proliferation_overlap_crossfit_sensitivity.py",
+  "primary_clean_modules": [
+    "M34",
+    "M11",
+    "M24"
+  ],
+  "primary_proliferation_axis_modules": [
+    "M40"
+  ],
+  "secondary_sensitivity_modules": [
+    "M28",
+    "M38",
+    "M25",
+    "M17"
+  ],
+  "primary_canine_endpoint": "DFI",
+  "secondary_canine_endpoint": "OS_concordance",
+  "primary_human_score": "strict_one_to_one_signed_mean_z",
+  "secondary_human_score": "strict_one_to_one_canine_pca_weighted_z",
+  "m40_residual_role": "mechanistic_sensitivity",
+  "ortholog_qc_input_file": "GSE238110_RNA_master_candidate_evidence_table_with_ortholog_qc.csv",
+  "ortholog_qc_input_sha256": "26673d73d3e2b3769ae0eaf776d5f9fe239c594bf8c0f71e01b6ff50d1017586",
+  "files": {
+    "GSE238110_repeated_cv_program_scores_by_repeat.csv": {
+      "sha256": "90e1ba5ecdef36d1fc813ead372b6fad70bfe6e7f57dc7578e353939b3a09c75",
+      "size_bytes": 495510
+    },
+    "GSE238110_repeated_cv_program_model_contrasts.csv": {
+      "sha256": "c4dd9f810ae1df0f3662754cb05349023bfb71a9ad1a5f3497401d8c0bbd5382",
+      "size_bytes": 82109
+    },
+    "GSE238110_repeated_cv_program_model_contrast_summary.csv": {
+      "sha256": "2aec5db69a38b9dab0e8769334c977a86f0f505fcd16e6402b2bbe9f1e9832de",
+      "size_bytes": 51043
+    },
+    "GSE238110_frozen_canine_transfer_program_manifest.csv": {
+      "sha256": "fcd34b985ea99986f39dfc43ce8e4018db2fde9ecc8a225bb40ac93006d5372c",
+      "size_bytes": 14880
+    },
+    "GSE238110_frozen_transfer_gene_weights_strict.csv": {
+      "sha256": "4f065aa4c4edf117a0c74015840d2b4b2347929f172cd517e1818ba0f6163b91",
+      "size_bytes": 50062
+    },
+    "GSE238110_frozen_transfer_gene_weights_broad.csv": {
+      "sha256": "ee5f661677b173507e04856f848b6757ede2750dd69b9bb0d88a9f6a2a77bd4c",
+      "size_bytes": 60534
+    },
+    "GSE238110_frozen_transfer_programs_strict.gmt": {
+      "sha256": "1d96f03c085aa5f4d2f81916a11b018919390be4f50894307726a1bb06ece738",
+      "size_bytes": 2652
+    },
+    "GSE238110_frozen_transfer_programs_broad.gmt": {
+      "sha256": "aa57acfd1cd67be7aeabd35763e47c76039b2211694db1d02ac053dc13a27129",
+      "size_bytes": 3058
+    },
+    "GSE238110_frozen_transfer_scoring_specification.csv": {
+      "sha256": "562aab92caa949691f43b0285cf2585c98008e78c62d2c15477a6d156d7f47a7",
+      "size_bytes": 14951
+    },
+    "GSE238110_frozen_transfer_programs_README.txt": {
+      "sha256": "20d51001ad6da75a56c26d4efb22a029e8f423a507707ec31f2c7dc596d5dda9",
+      "size_bytes": 1427
+    }
+  }
+}

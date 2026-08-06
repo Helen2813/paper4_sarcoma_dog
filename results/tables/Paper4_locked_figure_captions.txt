@@ -1,0 +1,19 @@
+Suggested figure captions
+
+Figure: TARGET-OS frozen-program effects
+Hazard ratios per one-standard-deviation increase in each frozen strict canine-to-human program score for overall survival in TARGET-OS. The canine risk orientation was preserved without human outcome-based score reversal. Horizontal intervals show 95% confidence intervals. The vertical line marks a hazard ratio of one.
+
+Figure: GSE21257 frozen-program effects
+Odds ratios per one-standard-deviation increase in each frozen strict program score for metastasis within five years in GSE21257. The canine risk orientation was preserved. Horizontal intervals show bootstrap 95% confidence intervals. The vertical line marks an odds ratio of one.
+
+Figure: GSE39055 frozen-program effects
+Hazard ratios per one-standard-deviation increase in each frozen strict program score for recurrence-free survival in GSE39055. The primary analysis excluded one nonpositive follow-up time; the prespecified one-day replacement sensitivity produced materially unchanged estimates. The vertical line marks a hazard ratio of one.
+
+Figure: Fixed-direction human discrimination
+Discrimination of the frozen canine-oriented program scores in three human osteosarcoma settings. TARGET-OS and GSE39055 are summarized by fixed-direction Harrell C-index, whereas GSE21257 is summarized by AUC for five-year metastasis. The horizontal line marks chance-level discrimination. These endpoint-specific metrics are displayed for triangulation and are not pooled.
+
+Figure: Conservative representation preservation
+Canine-to-human preservation of within-module correlation structure, PC1-loading structure, and non-overlapping split-half coherence. Values are shown separately because transcriptional representation preservation and outcome association are distinct scientific quantities.
+
+Figure: Locked evidence matrix
+Final locked evidence hierarchy for the four primary frozen canine programs. Each cell reports the conservative representation-preservation class from script 28 and the endpoint-specific outcome-support class. Overall survival, five-year metastasis, and recurrence-free survival were not combined in a formal meta-analysis.

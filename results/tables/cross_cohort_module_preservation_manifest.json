@@ -1,0 +1,50 @@
+{
+  "script_version": "27-cross-cohort-module-preservation-v1",
+  "created_utc": "2026-08-05T23:49:31.543879+00:00",
+  "frozen_weights_sha256": "4f065aa4c4edf117a0c74015840d2b4b2347929f172cd517e1818ba0f6163b91",
+  "freeze_json_sha256": "c0eb0a1e10666cc6e72f08842fa36d48a4a9c49966d19f90acc09bd684748e2c",
+  "primary_modules": [
+    "M34",
+    "M11",
+    "M24",
+    "M40"
+  ],
+  "cohorts": [
+    "CANINE_DOG2",
+    "TARGET_OS",
+    "GSE21257",
+    "GSE39055"
+  ],
+  "random_sets_per_cohort_module": 500,
+  "gene_subset_repeats": 500,
+  "files": {
+    "cross_cohort_module_representation_preservation.csv": {
+      "sha256": "430428f52a2a66f8b87ee9258cbc331fba2456266fece84fa01b8cccbea0b983",
+      "size_bytes": 7808
+    },
+    "cross_cohort_module_gene_loading_concordance.csv": {
+      "sha256": "eb41dc78d5a175f982f90c5d1f0deb41ce64247dbf6d41e24d01eddc3f7c7174",
+      "size_bytes": 80614
+    },
+    "cross_cohort_module_gene_subset_reliability.csv": {
+      "sha256": "9de3a89515672f200b8811288c82af6a5d6af962de1148635b9496445fb6b9b0",
+      "size_bytes": 2983449
+    },
+    "cross_cohort_module_structure_random_controls.csv": {
+      "sha256": "6b6e49fa6c27f56804b65ac2ea5d4282d4028a3c0aed52b876cfe9b36f6202aa",
+      "size_bytes": 2636
+    },
+    "cross_cohort_module_structure_random_distribution.csv": {
+      "sha256": "169600d8a9895283a5ba6cbe032d6f60f3ed499e8fdf022f8113c3340cbba931",
+      "size_bytes": 474634
+    },
+    "cross_cohort_module_preservation_outcome_synthesis.csv": {
+      "sha256": "0da091252528976a82d7c13d000a541752af577911b28b3b35fe851a3463b742",
+      "size_bytes": 10210
+    },
+    "cross_cohort_module_preservation_README.txt": {
+      "sha256": "6960fa2e7f8474a35de1ac2909973b024619e2d7d459f624ee0382954d7c2b0f",
+      "size_bytes": 1269
+    }
+  }
+}

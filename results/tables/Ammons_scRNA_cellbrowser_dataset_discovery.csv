@@ -1,0 +1,6 @@
+dataset_name,short_label,sample_count,base_url,metadata_url,expression_url,expression_basename,is_downloadable_leaf
+canine-os-atlas/all,All Cells,32613,https://cells.ucsc.edu/canine-os-atlas/all/,https://cells.ucsc.edu/canine-os-atlas/all/meta.tsv,https://cells.ucsc.edu/canine-os-atlas/all/exprMatrix.tsv.gz,exprMatrix.tsv.gz,True
+canine-os-atlas/dc,Dendritic Cells,1067,https://cells.ucsc.edu/canine-os-atlas/dc/,https://cells.ucsc.edu/canine-os-atlas/dc/meta.tsv,https://cells.ucsc.edu/canine-os-atlas/dc/exprMatrix.tsv.gz,exprMatrix.tsv.gz,True
+canine-os-atlas/mac-oc,Macrophages and Osteoclasts,8821,https://cells.ucsc.edu/canine-os-atlas/mac-oc/,https://cells.ucsc.edu/canine-os-atlas/mac-oc/meta.tsv,https://cells.ucsc.edu/canine-os-atlas/mac-oc/exprMatrix.tsv.gz,exprMatrix.tsv.gz,True
+canine-os-atlas/t-cell,T Cells,5466,https://cells.ucsc.edu/canine-os-atlas/t-cell/,https://cells.ucsc.edu/canine-os-atlas/t-cell/meta.tsv,https://cells.ucsc.edu/canine-os-atlas/t-cell/exprMatrix.tsv.gz,exprMatrix.tsv.gz,True
+canine-os-atlas/tumor,Tumor Cells and Fibroblasts,12756,https://cells.ucsc.edu/canine-os-atlas/tumor/,https://cells.ucsc.edu/canine-os-atlas/tumor/meta.tsv,https://cells.ucsc.edu/canine-os-atlas/tumor/exprMatrix.tsv.gz,exprMatrix.tsv.gz,True

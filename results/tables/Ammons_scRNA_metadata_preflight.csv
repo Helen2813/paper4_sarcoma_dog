@@ -1,0 +1,12 @@
+column,n_nonmissing,n_unique,example_values,is_cell_id_candidate,is_celltype_candidate,is_dog_candidate
+barcode,32613,32613,AAACCCAAGTCGTTAC-1_1; AAACCCACATACAGCT-1_1; AAACCCAGTAACCCGC-1_1; AAACGAAAGCTCCGAC-1_1; AAACGAAAGTCAGCGA-1_1,True,False,False
+orig.ident,32613,8,run_count_no_tx_tumor_6; run_count_tumor_no_tx_1_1; run_count_tumor_no_tx_1_2; run_count_tumor_no_tx_2_1; run_count_tumor_no_tx_2_2,False,False,True
+nCount_RNA,32613,17801,15123; 3432; 2324; 511; 3253,False,False,False
+nFeature_RNA,32613,4715,2731; 1268; 958; 347; 1085,False,False,False
+percent.mt,32613,31002,6.04377438338954; 1.54428904428904; 2.06540447504303; 2.93542074363992; 2.33630494927759,False,False,False
+Phase,32613,3,G1; G2M; S,False,False,False
+clusterID,32613,27,5; 4; 11; 16; 6,False,False,False
+name,32613,6,N5; N1; N2; N3; N4,False,False,False
+celltype.l1,32613,20,TAM; T cell; Endothelial cell; Osteoblast; T_cycling,False,True,False
+celltype.l2,32613,33,TAM_INT; CD8 T cell; Endothelial cell; Osteoblast_3; TAM_ACT,False,True,False
+celltype.l3,32613,41,TAM_INT; CD8_eff; CD8_ex; Endothelial cell; Osteoblast_3,False,True,False

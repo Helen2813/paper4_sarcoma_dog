@@ -1,0 +1,78 @@
+{
+  "script_version": "41-download-preflight-ammons-single-cell-v2",
+  "created_utc": "2026-08-06T04:22:02.353587+00:00",
+  "source": {
+    "collection": "canine-os-atlas",
+    "collection_json": "https://cells.ucsc.edu/canine-os-atlas/dataset.json",
+    "resolved_dataset_name": "canine-os-atlas/all",
+    "resolved_dataset_label": "All Cells",
+    "resolved_base_url": "https://cells.ucsc.edu/canine-os-atlas/all/",
+    "geo_accession": "GSE252470"
+  },
+  "outcome_loaded": false,
+  "diagnostics": {
+    "n_cells_metadata": 32613,
+    "n_metadata_columns": 11,
+    "cell_id_column": "barcode",
+    "celltype_columns": [
+      "celltype.l1",
+      "celltype.l2",
+      "celltype.l3"
+    ],
+    "dog_columns": [
+      "orig.ident"
+    ],
+    "resolved_dataset_name": "canine-os-atlas/all",
+    "resolved_dataset_label": "All Cells",
+    "expression_gene_column": "symbol",
+    "n_expression_cells": 32613,
+    "n_cell_ids_intersection": 32613,
+    "metadata_cell_match_fraction": 1.0,
+    "expression_cell_match_fraction": 1.0,
+    "n_expression_gene_rows": 16499
+  },
+  "inputs": {
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\GSE238110_frozen_transfer_gene_weights_strict.csv": {
+      "sha256": "4f065aa4c4edf117a0c74015840d2b4b2347929f172cd517e1818ba0f6163b91",
+      "size_bytes": 50062
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\raw\\single_cell\\Ammons_GSE252470\\meta.tsv": {
+      "sha256": "f95e7d2bf7613287fd6ad00cc074747003d619512f88ae319102ed4eb8fe90b7",
+      "size_bytes": 3786846
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\raw\\single_cell\\Ammons_GSE252470\\exprMatrix.tsv.gz": {
+      "sha256": "42ca31c20c7593389265ef6a7f69c0ffd30cd5589b1927c68e2bde574b9735c2",
+      "size_bytes": 591133564
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\raw\\single_cell\\Ammons_GSE252470\\resolved_leaf_dataset.json": {
+      "sha256": "ea314361863cfa16bf69dbda6e96b02fd744d4af65759fe0e4fcb8a7e3bcea5a",
+      "size_bytes": 17119
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\raw\\single_cell\\Ammons_GSE252470\\resolved_leaf_desc.json": {
+      "sha256": "c2f926f10e198b3c6fb199224871e31d97b41f7ff9341c961e707291b1d7f5cd",
+      "size_bytes": 408
+    }
+  },
+  "outputs": {
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\Ammons_scRNA_cellbrowser_dataset_discovery.csv": {
+      "sha256": "042f65abf10bd6c4ceb1ce0bc6f47ca7661bad1114fcbbc6c7a271b31d3b1b3d",
+      "size_bytes": 1267
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\Ammons_scRNA_metadata_preflight.csv": {
+      "sha256": "b241e5075c9bb7183d272aae9dd42922ac9ba7960796b04c272ef1bfc1bb42f0",
+      "size_bytes": 1130
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\Ammons_scRNA_frozen_module_gene_coverage.csv": {
+      "sha256": "859d00427e3eb75efd2737436ac2f0bcb2b517cf9d45018c34bd87dd2391ac24",
+      "size_bytes": 2168
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\Ammons_scRNA_celltype_counts.csv": {
+      "sha256": "6920e32b75bf90c38e912675f8d0293cb80f8578b54120a1b072e0bc2f067ecf",
+      "size_bytes": 4592
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\Ammons_scRNA_preflight_README.txt": {
+      "sha256": "3897b7c65e98aa392d473a8bd164116faf0d130fdbeb6af1da9dababd406dce9",
+      "size_bytes": 1185
+    }
+  }
+}

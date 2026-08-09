@@ -1,0 +1,5 @@
+module_label,n_frozen_genes,n_detected_genes,coverage_fraction,n_positive_detected,n_negative_detected,signed_score_estimable,positive_component_estimable,negative_component_estimable,component_guardrail
+M34,162,155,0.9567901234567902,2,153,True,True,True,M34 positive component is descriptive because only two positive-loading genes are available.
+M40,111,107,0.963963963963964,89,18,True,True,True,
+M11,7,6,0.8571428571428571,6,0,True,True,False,
+M24,7,6,0.8571428571428571,6,0,True,True,False,

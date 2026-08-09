@@ -1,0 +1,5 @@
+contrast_name,n_replicate_units,n_positive_differences,n_negative_differences,n_zero_differences,all_same_nonzero_sign,reported_exact_sign_flip_p,minimum_attainable_two_sided_p,reported_p_equals_minimum,mean_paired_difference,median_paired_difference,bootstrap_ci_low,bootstrap_ci_high,primary_bh_q
+M34 signed risk: osteoblast lineage versus immune,8,8,0,0,True,0.0078125,0.0078125,True,0.2449234053492546,0.2501430287957191,0.2246881073340773,0.2653596004471182,0.0078125
+M34 negative-loading expression: immune versus osteoblast lineage,8,8,0,0,True,0.0078125,0.0078125,True,0.2438983730971813,0.2491250336170196,0.2227316632401198,0.2649801956489682,0.0078125
+M40 signed risk: cycling versus non-cycling osteoblast,8,8,0,0,True,0.0078125,0.0078125,True,0.3865375593304634,0.3658322542905807,0.329151769913733,0.4502170160412788,0.0078125
+M40 positive-loading expression: cycling versus non-cycling osteoblast,8,8,0,0,True,0.0078125,0.0078125,True,0.4360172189772129,0.4115606248378753,0.369096259959042,0.5107822120189667,0.0078125

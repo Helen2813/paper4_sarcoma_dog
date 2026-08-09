@@ -1,0 +1,164 @@
+{
+  "script_version": "42-score-ammons-single-cell-localization-v1",
+  "created_utc": "2026-08-06T15:22:20.663000+00:00",
+  "outcome_loaded": false,
+  "biological_replicate": "orig.ident",
+  "cell_id_column": "barcode",
+  "annotation_levels": [
+    "celltype.l1",
+    "celltype.l2",
+    "celltype.l3"
+  ],
+  "scoring": {
+    "gene_transform": "rank-Gaussian across all cells",
+    "signed_score": "sum(risk-oriented loading * transformed expression) / sum(abs(loading))",
+    "positive_component": "positive-loading weighted mean",
+    "negative_component": "absolute negative-loading weighted mean expression"
+  },
+  "targeted_tests": [
+    {
+      "contrast_name": "M34 signed risk: osteoblast lineage versus immune",
+      "score_column": "M34_signed_risk_score_mean",
+      "n_paired_dogs": 8,
+      "mean_paired_difference": 0.2449234053492546,
+      "exact_sign_flip_p": 0.0078125,
+      "primary_bh_q": 0.0078125
+    },
+    {
+      "contrast_name": "M34 negative-loading expression: immune versus osteoblast lineage",
+      "score_column": "M34_negative_component_expression_mean",
+      "n_paired_dogs": 8,
+      "mean_paired_difference": 0.24389837309718132,
+      "exact_sign_flip_p": 0.0078125,
+      "primary_bh_q": 0.0078125
+    },
+    {
+      "contrast_name": "M40 signed risk: cycling versus non-cycling osteoblast",
+      "score_column": "M40_signed_risk_score_mean",
+      "n_paired_dogs": 8,
+      "mean_paired_difference": 0.3865375593304634,
+      "exact_sign_flip_p": 0.0078125,
+      "primary_bh_q": 0.0078125
+    },
+    {
+      "contrast_name": "M40 positive-loading expression: cycling versus non-cycling osteoblast",
+      "score_column": "M40_positive_component_expression_mean",
+      "n_paired_dogs": 8,
+      "mean_paired_difference": 0.4360172189772129,
+      "exact_sign_flip_p": 0.0078125,
+      "primary_bh_q": 0.0078125
+    }
+  ],
+  "guardrails": [
+    "No clinical outcome or endpoint was loaded.",
+    "Frozen program loadings and signs were not changed.",
+    "Individual cells were not used as biological replicates.",
+    "Primary inference used paired dog-level pseudobulk contrasts.",
+    "M34 positive component is descriptive because only two positive-loading genes were detected.",
+    "Single-cell localization does not establish causality or external outcome validation."
+  ],
+  "inputs": {
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\raw\\single_cell\\Ammons_GSE252470\\meta.tsv": {
+      "sha256": "f95e7d2bf7613287fd6ad00cc074747003d619512f88ae319102ed4eb8fe90b7",
+      "size_bytes": 3786846
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\raw\\single_cell\\Ammons_GSE252470\\exprMatrix.tsv.gz": {
+      "sha256": "42ca31c20c7593389265ef6a7f69c0ffd30cd5589b1927c68e2bde574b9735c2",
+      "size_bytes": 591133564
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\Ammons_scRNA_preflight_manifest.json": {
+      "sha256": "0b71df86e7a63945f48e32ebba64252a9335e776c0bf55f2900db4204c38e163",
+      "size_bytes": 3505
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\GSE238110_frozen_transfer_gene_weights_strict.csv": {
+      "sha256": "4f065aa4c4edf117a0c74015840d2b4b2347929f172cd517e1818ba0f6163b91",
+      "size_bytes": 50062
+    }
+  },
+  "outputs": {
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\single_cell\\Ammons_GSE252470\\Ammons_primary_frozen_gene_expression_rank_gaussian.npz": {
+      "sha256": "480072bf2318f0292ffade3749f93c9fb79a742013a3fc15f02d1b7f219235fd",
+      "size_bytes": 5401257
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\single_cell\\Ammons_GSE252470\\Ammons_primary_frozen_gene_expression_metadata.json": {
+      "sha256": "d96ced7fccb25888aa403a726061938583ebf50cca55fc07b3b7e48349920362",
+      "size_bytes": 5084
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\data\\processed\\single_cell\\Ammons_GSE252470\\Ammons_frozen_program_cell_scores.csv.gz": {
+      "sha256": "69a3e094cd2d058d422842d860549e585c8e1a650d3961d40e63468ce27928fc",
+      "size_bytes": 1510845
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\Ammons_scRNA_dog_celltype_pseudobulk_scores.csv": {
+      "sha256": "53f917ddd151c65d21da54b0668e68cc31b7bdb03b25fe13217384f31dbe6195",
+      "size_bytes": 186462
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\Ammons_scRNA_celltype_score_summary.csv": {
+      "sha256": "bb9722efe5fd8461f5d4fb5837659d4fe9d8a79a470243c73a096fc2c6fddf1f",
+      "size_bytes": 148830
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\Ammons_scRNA_dog_compartment_scores.csv": {
+      "sha256": "f9a7cc1ab8807db12f791543a4f0ec9b39da7066d670df01789676c9506a0041",
+      "size_bytes": 13234
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\Ammons_scRNA_targeted_localization_tests.csv": {
+      "sha256": "5f75eac6ccc4f12b710c02f4220e78ee13e5692a7c694097b4fbb0e9049f2203",
+      "size_bytes": 1802
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\Ammons_scRNA_gene_celltype_localization.csv": {
+      "sha256": "44ff18ea215ed9175077c86d361baa0126471f2cd1c8d4d7393ac67c74859aa1",
+      "size_bytes": 594519
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\Ammons_scRNA_celltype_rank_stability.csv": {
+      "sha256": "07f8337eeaa33e59bef505b9e931fc6645464313f084e03d35de5ce507d7c70e",
+      "size_bytes": 67028
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\Ammons_scRNA_score_gene_coverage.csv": {
+      "sha256": "13ae84b614bc12dd08ef47485a5cf70ff56c74df6c43ca91d7806ee3a283cf49",
+      "size_bytes": 502
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\tables\\Ammons_scRNA_localization_README.txt": {
+      "sha256": "d257d05b67e7ba75d5fe2479faed73892ace84449b16d8c42195004424e5de3f",
+      "size_bytes": 5840
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\single_cell_localization\\Ammons_scRNA_l1_program_localization_heatmap.png": {
+      "sha256": "ac5d5ec3338d3c93fa6f4ae9a87fbc646b572eaa2ab0ef4982dbcdbb3d1c7460",
+      "size_bytes": 323154
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\single_cell_localization\\Ammons_scRNA_l1_program_localization_heatmap.pdf": {
+      "sha256": "1251c2e8143e70fd584d7b7221b0a1122c0a81bf1cd3b6d516abbd0bca149039",
+      "size_bytes": 24224
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\single_cell_localization\\Ammons_M34_signed_osteoblast_vs_immune.png": {
+      "sha256": "4fb5156a24fceae72255144285025f081190d63270b0ce6f200f95542fcc75f4",
+      "size_bytes": 240094
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\single_cell_localization\\Ammons_M34_signed_osteoblast_vs_immune.pdf": {
+      "sha256": "37dd3783d93572625cdbb6d92b998b4131bac266c3a9fd5a90762afd90edcde4",
+      "size_bytes": 14606
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\single_cell_localization\\Ammons_M34_negative_immune_vs_osteoblast.png": {
+      "sha256": "752348d43dd0f00435be6638a39fc315f16146e8ae0e10ceb1bf15faa54c56e6",
+      "size_bytes": 258446
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\single_cell_localization\\Ammons_M34_negative_immune_vs_osteoblast.pdf": {
+      "sha256": "0077ae4d422d00e8e7bbcc37b5217e015f9e074c1c26cf6abb1ec4a9ec43f2fa",
+      "size_bytes": 15179
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\single_cell_localization\\Ammons_M40_signed_cycling_vs_osteoblast.png": {
+      "sha256": "b6e3265550a900b0a83613c1c11e55f1d36bf36fa7c3a158a5e296ddc6525c4c",
+      "size_bytes": 226111
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\single_cell_localization\\Ammons_M40_signed_cycling_vs_osteoblast.pdf": {
+      "sha256": "c2911733bf4fc223a7c49220c3078b64258a8bb7b9e35543e7bfcae938fb026b",
+      "size_bytes": 15045
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\single_cell_localization\\Ammons_M40_positive_cycling_vs_osteoblast.png": {
+      "sha256": "1976c839624f8cdcabbd8c2335c7fb732557311bc94dfa5742fe8867582d4c5f",
+      "size_bytes": 236643
+    },
+    "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\results\\figures\\single_cell_localization\\Ammons_M40_positive_cycling_vs_osteoblast.pdf": {
+      "sha256": "28a9cd0122f9f47d9df3219aea8e25ee81d8a42b8f70cb76af68dd49c3a1d93f",
+      "size_bytes": 15543
+    }
+  }
+}

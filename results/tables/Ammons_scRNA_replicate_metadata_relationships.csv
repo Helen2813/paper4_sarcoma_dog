@@ -1,0 +1,4 @@
+candidate_column,n_orig_ident,n_candidate_values,max_candidate_values_per_orig_ident,max_orig_ident_per_candidate_value,relationship,possible_six_dog_mapping
+name,8,6,1,2,orig_ident_nested_within_candidate,True
+Phase,8,3,3,8,many_to_many,False
+celltype.l1,8,20,20,8,many_to_many,False

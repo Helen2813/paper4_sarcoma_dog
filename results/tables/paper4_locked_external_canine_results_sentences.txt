@@ -1,0 +1,27 @@
+Locked GSE239948 external canine representation results
+=======================================================
+
+Cohort-independence audit
+-------------------------
+The DOG2 and GSE239948 matrices contained 0 exact normalized sample-identifier overlaps and 0 conservative expression-fingerprint overlap flags.
+This audit supports independent-cohort wording only as a technical duplicate screen and does not prove donor independence when the studies use unrelated identifier systems.
+
+Primary results
+---------------
+In the independent canine cohort, M34 retained 154 of 162 frozen genes and showed edge rho=0.706, loading rho=0.789, and split-half reliability=0.976. Both direct preservation tests passed FDR and the observed edge preservation exceeded matched random panels.
+M40 retained 106 of 111 frozen genes and showed exceptionally high edge rho=0.934, loading rho=0.919, and split-half reliability=0.982. This provides independent representation replication of the cycling program but does not resolve its heterogeneous outcome transport.
+M11 and M24 retained six genes each and produced internally reliable scores, but neither showed FDR-supported edge or loading preservation or specificity relative to matched random panels.
+
+Manuscript guardrails
+---------------------
+GSE239948 provides representation validation, not outcome validation.
+Near-unity leave-one-gene-out correlations for M34 and M40 are partly mechanical because each reduced score retains nearly all genes.
+Failure to reach significance for six-gene M11 and M24 modules does not establish absence of preservation.
+Therapy heterogeneity in GSE239948 may contribute to expression distribution differences and should be acknowledged.
+
+Locked interpretation
+---------------------
+M34: M34 showed strong representation preservation in an independently screened external canine cohort, with high edge concordance, frozen-loading concordance, split-half reliability, and specificity relative to matched random panels. This supports the reproducibility of the canine immune-depletion/exclusion program representation, but it is not an outcome-validation result.
+M11: M11 produced a reliable six-gene score in GSE239948 but did not show significant canine-to-canine edge or loading preservation and was not specific relative to matched random panels. Score reliability must therefore not be interpreted as independent representation preservation.
+M24: M24 retained six of seven genes and moderate split-half reliability, but edge and loading tests were not significant and matched random panels did not support specificity. The result provides no clear independent canine preservation evidence, with inference limited by the small six-gene representation.
+M40: M40 showed exceptionally strong representation preservation in an independently screened external canine cohort across edge, loading, split-half, and random-panel criteria. This strengthens interpretation of M40 as a reproducible canine cycling program while leaving its heterogeneous human prognostic transport unchanged.

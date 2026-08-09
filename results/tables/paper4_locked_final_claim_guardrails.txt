@@ -1,0 +1,13 @@
+Paper 4 final claim guardrails
+==============================
+
+1. Do not call M34 or M40 universal prognostic biomarkers.
+2. Do not describe GSE239948 as an outcome-validation cohort.
+3. Do not claim donor independence from expression fingerprinting alone.
+4. Do not state that blind clustering reconstructed the full M34 module.
+5. Do not upgrade M11 or M24 to strong preservation based only on WGCNA Zsummary.
+6. Do not interpret WGCNA Zsummary as a module-size-independent significance test.
+7. Do not pool TARGET-OS, GSE21257, and GSE39055 into one meta-analytic effect.
+8. Do not present M40 as a chemotherapy-benefit or pathological-response biomarker.
+9. Keep the project-wide 12-test multiplicity result unchanged.
+10. No additional outcome-driven feature selection, score reversal, or assay-rule optimization.

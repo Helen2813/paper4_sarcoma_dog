@@ -1,0 +1,22 @@
+Locked six-dog single-cell localization results
+================================================
+
+Replicate correction
+--------------------
+The Cell Browser dataset contained eight Cell Ranger libraries but six biological dogs. Dogs 1 and 2 each contributed two technical replicate libraries, which were combined using the metadata name column before biological inference.
+
+M34
+---
+Across six biological dogs, the M34 signed risk-oriented score was consistently higher in osteoblast-lineage than immune compartments, while the negative-loading component was consistently higher in immune than osteoblast-lineage cells. Because 153 of 155 detected M34 genes have negative loadings, M34 is best interpreted as an inverse immune-lineage or immune-depletion/exclusion axis.
+
+M40
+---
+Across six biological dogs, M40 signed and positive-loading scores were consistently higher in cycling than non-cycling osteoblasts. Together with high scores in cycling T-cell and osteoclast populations, M40 is a broad cycling/proliferation axis with clear tumor-lineage enrichment rather than an osteoblast-specific program.
+
+Statistical interpretation
+--------------------------
+All four prespecified contrasts retained the same direction in all six biological dogs. The exact two-sided sign-flip P value was 0.03125, the minimum attainable value for six paired dogs.
+
+Supersession rule
+-----------------
+The six-dog analysis supersedes the earlier eight-orig.ident P=0.0078125 analysis.

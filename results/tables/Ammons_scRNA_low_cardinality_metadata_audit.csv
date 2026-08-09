@@ -1,0 +1,5 @@
+column,n_unique,n_nonmissing,example_values,possible_biological_unit
+orig.ident,8,32613,run_count_no_tx_tumor_6;run_count_tumor_no_tx_1_1;run_count_tumor_no_tx_1_2;run_count_tumor_no_tx_2_1;run_count_tumor_no_tx_2_2;run_count_tumor_no_tx_4;run_count_tumor_no_tx_5;run_count_tumor_no_tx_7,True
+Phase,3,32613,G1;G2M;S,False
+name,6,32613,N5;N1;N2;N3;N4;N6,False
+celltype.l1,20,32613,TAM;T cell;Endothelial cell;Osteoblast;T_cycling;Hypoxic_osteoblast;Cycling_OC;Osteoblast_cycling;B cell;Neutrophil;IFN-TAM;CD320_OC;Fibroblast;T_IFN;IFN-osteoblast;DC;NK;Mature_OC;Mast cell;TIM,False

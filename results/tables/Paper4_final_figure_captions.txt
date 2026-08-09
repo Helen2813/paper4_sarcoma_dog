@@ -1,0 +1,26 @@
+Figure 1. Locked study design.
+Canine DOG² discovery was frozen before human outcome analysis. Human validation, independent canine representation validation, assay-quality diagnostics, latent-factor analyses, and biological localization were treated as distinct evidence layers. No human result was used to revise module membership, score direction, or validation tier.
+
+Figure 2. TARGET-OS overall-survival associations.
+Hazard ratios per 1-SD increase in the frozen strict one-to-one signed-mean scores are shown with 95% confidence intervals. M34 showed a nominal directionally concordant association with overall survival (HR=1.47, 95% CI 1.01-2.14, p=0.046). Human endpoints were not pooled.
+
+Figure 3. GSE21257 five-year metastasis discrimination.
+Frozen zero-shot scores were evaluated without human refitting. M34 showed the strongest discrimination (AUC=0.779, 95% CI 0.647-0.895). This was the only frozen primary human outcome test that remained significant after project-wide Benjamini-Hochberg correction across all 12 primary tests.
+
+Figure 4. GSE39055 recurrence-free-survival associations.
+Locked strict scores are displayed with the original canine risk direction. M34, M24, and M40 did not show concordant locked RFS directions; interpretation of the FFPE cohort is constrained by assay-quality sensitivity. Alternative detection-aware rules are sensitivity analyses and do not replace the locked primary models.
+
+Figure 5. Independent canine direct representation preservation.
+DOG²-to-GSE239948 edge and PC1-loading Spearman correlations are shown for the four primary frozen programs. M34 and M40 displayed strong concordance, whereas the six-gene M11 and M24 external mappings did not show clear direct preservation.
+
+Figure 6. Standard WGCNA preservation benchmark.
+WGCNA modulePreservation Zsummary statistics in GSE239948 are shown using DOG² as the reference network. M34 (Zsummary=23.78) and M40 (Zsummary=35.62) showed strong preservation. M11 and M24 are interpreted cautiously because only six shared genes were available and Zsummary is module-size dependent.
+
+Figure 7. Blind de novo rediscovery in GSE239948.
+Frozen memberships were withheld until after outcome-blind de novo clustering. M34 and M40 exceeded the best-of-many-module variance-matched random-panel null (BH q=0.001 and 0.001, respectively). M34 is interpreted as statistically supported partial core recovery rather than exact reconstruction of the full frozen module.
+
+Figure 8. Representation-outcome decoupling.
+Each human module-cohort pair is positioned according to conservative molecular-representation evidence and preservation of the frozen canine prognostic direction. GSE39055 assay-sensitive or non-estimable directions are displayed separately rather than treated as definitive biological reversals. The figure emphasizes that molecular representation and prognostic transport are separable quantities.
+
+Figure 9. Final locked evidence matrix.
+Human outcome support, conservative structural preservation, and three independent canine representation analyses are summarized without pooling distinct clinical endpoints. M34 represents the strongest translational program, whereas M40 provides the strongest molecular-architecture reproducibility with assay- and context-sensitive clinical transport.

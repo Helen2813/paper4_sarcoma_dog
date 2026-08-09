@@ -1,0 +1,5 @@
+analysis,n_percent_necrosis,n_good_response,n_poor_response,m40_locked_spearman_rho,m40_locked_continuous_p,m40_locked_auc,m40_locked_binary_p,m40_primary_exploratory_support,n_m40_assay_strategies_estimable,fraction_m40_strategies_positive_rho,fraction_m40_strategies_auc_above_0_5,m40_assay_rule_response_class,m40_residual_spearman_rho,human_proliferation_spearman_rho,loo_rho_min,loo_rho_median,loo_rho_max,interpretation_guardrail
+GSE39055_pathological_necrosis_response,37,13,24,0.22484269796187661,0.17796440711857628,0.5288461538461539,0.7856428714257149,no_nominal_exploratory_support,6,1.0,0.8333333333333334,stable_higher_score_higher_necrosis,"strategy
+M40_residual_to_disjoint_proliferation    0.236983
+M40_residual_to_disjoint_proliferation    0.209845
+Name: spearman_rho, dtype: float64",0.04213568823637072,0.17531294555775195,0.21949539811439028,0.31007132243947555,Association with subsequent pathological necrosis is not evidence of chemotherapy benefit because no untreated comparator is available. Detection-aware score strategies are sensitivity analyses and cannot replace the frozen primary score.

@@ -1,0 +1,88 @@
+{
+  "script_version": "48-gse39055-pathological-necrosis-response-v1",
+  "created_utc": "2026-08-06T19:12:35.540530+00:00",
+  "primary_exploratory_module": "M40",
+  "continuous_endpoint": "percent_necrosis_numeric",
+  "binary_endpoint": "good_necrosis_response_ge90",
+  "good_response_threshold_percent": 90.0,
+  "permutations": 5000,
+  "bootstrap_repetitions": 2000,
+  "guardrails": [
+    "No score direction or module definition is changed.",
+    "Detection-aware strategies are outcome-blind sensitivities.",
+    "No untreated comparator is available.",
+    "Chemotherapy benefit is not estimated."
+  ],
+  "inputs": {
+    "GSE39055_clinical_standardized.csv": {
+      "sha256": "e6fc6f1a983bcd85d8eb5aefeaa46af9fe8f8ce405e5982f0bb39df456665304",
+      "size_bytes": 92970
+    },
+    "GSE39055_frozen_transfer_scores.csv": {
+      "sha256": "b28eca9fbef93ce82bbc33bd7f7780060031e6381a8df9ecc544cd82d94fe359",
+      "size_bytes": 51525
+    },
+    "GSE39055_detection_aware_frozen_scores.csv": {
+      "sha256": "c22737ca9301bbc3f774e36336e9f39d87f75e9c8014b15e47702c75a02169bc",
+      "size_bytes": 12506
+    },
+    "GSE39055_detection_aware_module_coverage.csv": {
+      "sha256": "b54c838913171e8c9c3d586100cb1593a24d0987dab0c8024092716249695ca0",
+      "size_bytes": 10820
+    },
+    "GSE39055_assay_quality_diagnostic_manifest.json": {
+      "sha256": "219dc54b1f4a1cc5a18af9ab51c5cab98d6ec65b9c474ff96c46732ae114fd68",
+      "size_bytes": 4680
+    },
+    "GSE238110_frozen_canine_transfer_program_manifest.csv": {
+      "sha256": "fcd34b985ea99986f39dfc43ce8e4018db2fde9ecc8a225bb40ac93006d5372c",
+      "size_bytes": 14880
+    }
+  },
+  "outputs": {
+    "GSE39055_necrosis_primary_exploratory.csv": {
+      "sha256": "99e59a6dd677872f9e659465b48ef8ca704699f3a9158f3cfcad6c08ce5c3db9",
+      "size_bytes": 2569
+    },
+    "GSE39055_necrosis_M40_assay_rule_sensitivity.csv": {
+      "sha256": "453c4be702cb2df84b041e1c9fa8eac065b24e3f62a6db8d84d3225d5d240c8a",
+      "size_bytes": 3805
+    },
+    "GSE39055_necrosis_M40_comparator_sensitivity.csv": {
+      "sha256": "c64740749e35f9416d1de1f106ab42c293dd14204287237d80aff208e8f6ee8d",
+      "size_bytes": 2419
+    },
+    "GSE39055_necrosis_M40_leave_one_out.csv": {
+      "sha256": "92ab0befac94b22032d5c14a5430eeb09492cf6d8581f4817f4b916a98355777",
+      "size_bytes": 1852
+    },
+    "GSE39055_necrosis_M40_score_correlations.csv": {
+      "sha256": "d3fdbbf35ad59e7d8409579eb50a4958e8d3f27d138dd3dde8e3b820a31e1ee1",
+      "size_bytes": 864
+    },
+    "GSE39055_necrosis_analysis_summary.csv": {
+      "sha256": "cf1b8930dc12c2db3fc5da78f33450be85579deef9ce35a2f1e6eea98b8b323c",
+      "size_bytes": 1124
+    },
+    "GSE39055_necrosis_analysis_README.txt": {
+      "sha256": "817ce93d40b7eb3cefb646416c2e397e2c057d01475ca9ab5d2f7f6b976d330f",
+      "size_bytes": 1962
+    },
+    "GSE39055_M40_percent_necrosis_scatter.png": {
+      "sha256": "680eb21d3583fe9e84618dc661795950726ad75e200bc5c1cefb6d0cb54760e0",
+      "size_bytes": 122397
+    },
+    "GSE39055_M40_percent_necrosis_scatter.pdf": {
+      "sha256": "66b89d0266fc0e6593418398940338e2e7a10dd441094bea4062a2f02b16eff2",
+      "size_bytes": 18115
+    },
+    "GSE39055_M40_good_response_boxplot.png": {
+      "sha256": "287d5befcbd042eed4a4b64c53df395d2c3dc1d4ff0c3188759569fcd24effdf",
+      "size_bytes": 90198
+    },
+    "GSE39055_M40_good_response_boxplot.pdf": {
+      "sha256": "e6b5fae7bfbae4741f5c8ea8cc84352170a7791b68bd2176bdc1b974d1cd96b7",
+      "size_bytes": 16684
+    }
+  }
+}

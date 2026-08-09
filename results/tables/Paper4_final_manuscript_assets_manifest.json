@@ -1,0 +1,168 @@
+{
+  "script_version": "52-generate-final-paper4-manuscript-assets-v1",
+  "created_utc": "2026-08-06T20:44:21.124994+00:00",
+  "analysis_type": "locked_asset_generation_only",
+  "new_statistical_tests": false,
+  "outcome_model_fitting": false,
+  "feature_selection": false,
+  "module_redefinition": false,
+  "inputs": {
+    "TARGET_OS_primary_frozen_program_validation.csv": {
+      "sha256": "1bc7d5881bae8f9bd63088c37aad57c6294d47f97d71baa06e7f9aa12fec04fe",
+      "size_bytes": 1843
+    },
+    "GSE21257_metastasis_primary_frozen_program_validation.csv": {
+      "sha256": "66f8f57539d9fd9d666dd4fd27ffa017d0884fd694b68e0ec7fa5243842a2ac8",
+      "size_bytes": 1754
+    },
+    "GSE39055_RFS_primary_frozen_program_validation.csv": {
+      "sha256": "1945cca593030f57cbaf6eef3006391b4fc3ad2ff334d99e34cc81436533951e",
+      "size_bytes": 2216
+    },
+    "paper4_projectwide_primary_multiplicity.csv": {
+      "sha256": "a1bf689c3adc955d7602482c8248e0bf60c631e2f339e061698812f7decb25a6",
+      "size_bytes": 1629
+    },
+    "paper4_representation_outcome_decoupling_typology.csv": {
+      "sha256": "53d49a96a70747f3b2d856cb69c916ac20d37456b2443acf8c119576648be06a",
+      "size_bytes": 2053
+    },
+    "paper4_assay_aware_locked_module_evidence_summary.csv": {
+      "sha256": "ac94646a377b59c713a60ec6399e93f4a011387cf939f24882e2f803a657536e",
+      "size_bytes": 2553
+    },
+    "paper4_locked_external_canine_triangulation.csv": {
+      "sha256": "196dace12b765f7442662a5c6ce3799bee912bce2da0aa52357114c0ed18feb0",
+      "size_bytes": 6170
+    },
+    "paper4_locked_multidimensional_transport_evidence_final.csv": {
+      "sha256": "295daa735f335d06d83dc28e981d5e995711216e687524de3000b65f49296961",
+      "size_bytes": 14576
+    },
+    "paper4_locked_final_module_interpretation.csv": {
+      "sha256": "ccab4f6e11cea26556137e9dc53db79b1790a1a82bae0db04bf454b39fe82cce",
+      "size_bytes": 2355
+    },
+    "paper4_final_analysis_lock_manifest.json": {
+      "sha256": "19e5d7332517811595b09602c65c89d007e6db138f5ea7bc76dd94c641686b46",
+      "size_bytes": 3653
+    },
+    "cross_cohort_conservative_preservation_classification.csv": {
+      "sha256": "184fd8eade2b83039c776aa0a6dcae422897907469b571f3ae65b69be7f5f25e",
+      "size_bytes": 4174
+    }
+  },
+  "outputs": {
+    "Paper4_final_main_results_table.csv": {
+      "sha256": "f2325ad18ca40eec0b905557234a608b2ecacc52f851aaad3465f87201f77503",
+      "size_bytes": 1358
+    },
+    "Paper4_final_main_results_table.tex": {
+      "sha256": "3dde348eafbd77d516f262291005b442b94d448a80ab994c83fc8c23f6a596cb",
+      "size_bytes": 1335
+    },
+    "Paper4_final_human_primary_outcomes_table.csv": {
+      "sha256": "48881f473c4ea9abd39308496e772d777937cd407cc0378e2a98148e731159cf",
+      "size_bytes": 1830
+    },
+    "Paper4_final_external_canine_triangulation_table.csv": {
+      "sha256": "196dace12b765f7442662a5c6ce3799bee912bce2da0aa52357114c0ed18feb0",
+      "size_bytes": 6170
+    },
+    "Paper4_final_representation_outcome_typology_table.csv": {
+      "sha256": "53d49a96a70747f3b2d856cb69c916ac20d37456b2443acf8c119576648be06a",
+      "size_bytes": 2053
+    },
+    "Paper4_final_figure_captions.txt": {
+      "sha256": "577686d8755edac80bd9d0fe8c824d2c3788287e4b110d923ea869a615f90379",
+      "size_bytes": 3339
+    },
+    "Paper4_final_results_section_outline.txt": {
+      "sha256": "09063c0634386747da2c73ea0fe2e2cd95a5e166c1897c59496160a686792e39",
+      "size_bytes": 1856
+    },
+    "Paper4_final_manuscript_assets_README.txt": {
+      "sha256": "175815ea71ed191e5f0dc3a1a4608c2ec38c13ad998d5e7a11c74807ed32e83c",
+      "size_bytes": 1615
+    },
+    "Figure1_study_design.png": {
+      "sha256": "6a87c3a45416ef085b8c96b2aa05fe97de1b5a8d1800b44674411f7c955785d8",
+      "size_bytes": 367907
+    },
+    "Figure1_study_design.pdf": {
+      "sha256": "ad5cfb34182286a98bed314b4e219535a5615034ed697edd9188a9434314952b",
+      "size_bytes": 20193
+    },
+    "Figure2_TARGET_OS_primary_effects.png": {
+      "sha256": "5d607f6b6fedcdfdea39691ad49d8bb10742f7f3d728f998b05cfcf8d6c5f0f4",
+      "size_bytes": 96087
+    },
+    "Figure2_TARGET_OS_primary_effects.pdf": {
+      "sha256": "35aa62b342095eac595bd1af62c7ceb85395765154befa74d1c4e307ed3dee86",
+      "size_bytes": 16048
+    },
+    "Figure3_GSE21257_primary_auc.png": {
+      "sha256": "317b31bda09dfcab2376d3607afb8df18cbdf136f1206cf8e4b10bb3b50d33be",
+      "size_bytes": 99479
+    },
+    "Figure3_GSE21257_primary_auc.pdf": {
+      "sha256": "e34ad419928edd8f774039df8f23ac589fa30bce19d6e0de839e6614e1185a0d",
+      "size_bytes": 15906
+    },
+    "Figure4_GSE39055_primary_effects.png": {
+      "sha256": "7499cf21d010b527d3d16f0c5ba892da2468e6e3c2f290b579aae35b3dd3f8c6",
+      "size_bytes": 99794
+    },
+    "Figure4_GSE39055_primary_effects.pdf": {
+      "sha256": "bde8a4f2a657322c5f0ed8f3613e91c7309b765c99b8e0e42602711c84f0b636",
+      "size_bytes": 15731
+    },
+    "Figure5_external_canine_direct_preservation.png": {
+      "sha256": "1380201f5a4bdb8a1e56ae63acfcd88151603e70b35178b5d04da7376f7dcac1",
+      "size_bytes": 118021
+    },
+    "Figure5_external_canine_direct_preservation.pdf": {
+      "sha256": "ec1e0015081437b5f63ce2bf292c83305573fb4a7dd00a1326dea9dbc0eada3d",
+      "size_bytes": 15518
+    },
+    "Figure6_external_canine_WGCNA_preservation.png": {
+      "sha256": "0280baa925105814b22f65242dcaa91626e92300ebd8b168fd9300490762e65e",
+      "size_bytes": 105498
+    },
+    "Figure6_external_canine_WGCNA_preservation.pdf": {
+      "sha256": "7b84427be0632e5e94ac2075cfa291e72ea8e091469f512dc37e241903c2a160",
+      "size_bytes": 15103
+    },
+    "Figure7_external_canine_blind_rediscovery.png": {
+      "sha256": "4c2cbd62c4ee55dcaab4f2499fd72544294da140b5f9df20e12567c11ab30b86",
+      "size_bytes": 115890
+    },
+    "Figure7_external_canine_blind_rediscovery.pdf": {
+      "sha256": "efc2f24c2fdbc0b3fc1d6d6812f455ff176dd8002806e934e011afc2c05b990e",
+      "size_bytes": 15510
+    },
+    "Figure8_representation_outcome_decoupling.png": {
+      "sha256": "65f42b766690699c895de20e06073b383c766983dbd5b7798b8440ea52498f43",
+      "size_bytes": 228205
+    },
+    "Figure8_representation_outcome_decoupling.pdf": {
+      "sha256": "a21f7ea5b69f5a85d18cfc11c1930c9838f19678506711c1e359c6d0896afa34",
+      "size_bytes": 18444
+    },
+    "Figure9_final_evidence_matrix.png": {
+      "sha256": "ab3658e905a11645a85c3020b8f4e4b326009c16301b151ddc8d27164428e56c",
+      "size_bytes": 318727
+    },
+    "Figure9_final_evidence_matrix.pdf": {
+      "sha256": "2074e323915bb3ebff3c2fff35f936a4f8acee78c2e86c34327abd465ba5c83a",
+      "size_bytes": 19910
+    }
+  },
+  "guardrails": [
+    "Human endpoints remain separate and are not pooled.",
+    "Only script 33 project-wide multiplicity is displayed.",
+    "M34 blind rediscovery is described as partial/core recovery.",
+    "M40 outcome transport remains assay/context sensitive.",
+    "M11 and M24 small-module WGCNA support does not override negative direct/blind evidence."
+  ]
+}

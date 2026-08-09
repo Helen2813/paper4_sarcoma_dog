@@ -1,0 +1,22 @@
+Paper 4 final locked results sentences
+=====================================
+
+Independent canine replication
+------------------------------
+Independent canine validation converged across complementary methods. M34 showed WGCNA Zsummary=23.78, direct edge/loading concordance of 0.706/0.789, and a significant blind de novo best-match test (BH q=0.0010). M40 showed WGCNA Zsummary=35.62, direct edge/loading concordance of 0.934/0.919, and significant blind rediscovery (BH q=0.0010).
+
+M34 wording
+-----------
+M34 should be described as having strong external canine representation replication with statistically supported partial de novo recovery of an M34-related core. The blind analysis does not justify claiming exact reconstruction of the full frozen module boundary.
+
+M40 wording
+-----------
+M40 provides the clearest evidence that molecular architecture and clinical transport are separable: the cycling-related program is highly reproducible across independent canine and human expression settings, while its prognostic association is assay- and context-sensitive.
+
+Small modules
+-------------
+M11 and M24 showed moderate WGCNA Zsummary values, but each contained only six shared genes and neither was supported by the direct custom preservation or blind rediscovery analyses. These WGCNA results are therefore supportive small-module sensitivities rather than independent structural replications.
+
+Pathological response
+---------------------
+The exploratory GSE39055 pathological-necrosis analysis did not provide nominal evidence that M40 is a pathological chemotherapy-response marker. This negative result should be retained as an exploratory limitation rather than optimized further.

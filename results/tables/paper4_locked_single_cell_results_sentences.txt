@@ -1,0 +1,18 @@
+Locked single-cell localization results
+======================================
+
+M34
+---
+M34 is primarily an inverse immune-lineage expression program: its negative-loading component is enriched in IFN-TAM, TAM, DC, and TIM populations, whereas the signed risk-oriented score is higher in osteoblast-lineage compartments. Because only two positive-loading genes are detected, this supports an immune-depletion/exclusion interpretation rather than a balanced tumor-versus-immune program.
+
+M40
+---
+M40 localizes to cycling states across multiple lineages, with the highest scores in cycling osteoclast, cycling T-cell, and cycling osteoblast populations. The paired cycling-versus-non-cycling osteoblast contrast confirms tumor-lineage proliferation localization, but the program should be described as a broad cycling/proliferation axis rather than osteoblast-specific.
+
+Statistical interpretation
+--------------------------
+All four targeted paired contrasts reached the exact two-sided sign-flip floor for eight orig.ident units (P=0.0078125), indicating the same contrast direction in every analyzed unit. These P values quantify directional consistency, not large-sample precision.
+
+Replicate-unit guardrail
+------------------------
+Replicate audit status: candidate_six_dog_mapping_found. Until orig.ident is verified as one independent dog per level, manuscript wording should use 'sample/dog-level pseudobulk' rather than unequivocally 'dog-level'.

@@ -1,0 +1,35 @@
+Paper 4 Results section outline
+==============================
+
+1. Frozen canine programs capture prognostic biology beyond generic proliferation
+- Introduce the frozen hierarchy and repeated cross-fitted canine evidence.
+- Keep M40 separate as a proliferation-dominant deviation axis.
+
+2. Human outcome transport is heterogeneous across endpoints and platforms
+- M34: TARGET-OS HR 1.47 (1.01-2.14), GSE21257 AUC 0.779, GSE39055 RFS HR 0.81.
+- Project-wide FDR-supported human primary tests: 1.
+- State explicitly that OS, five-year metastasis, and RFS are not meta-analyzed.
+
+3. Molecular representation and prognostic transport are separable
+- Use the conservative human preservation analysis and the decoupling typology.
+- Do not post-hoc reverse frozen score directions.
+
+4. Independent canine validation confirms M34 and M40 as reproducible molecular architectures
+- M34: edge rho 0.706, loading rho 0.789, WGCNA Zsummary 23.78, blind F1 0.166.
+- M40: edge rho 0.934, loading rho 0.919, WGCNA Zsummary 35.62, blind F1 0.397.
+- Describe M34 blind rediscovery as recovery of a stable related core, not full-boundary reconstruction.
+
+5. Biological convergence clarifies program meaning
+- M34: immune-exclusion risk interpretation supported by TME and single-cell analyses.
+- M40: cycling/proliferation architecture is highly reproducible, but clinical meaning is assay/context sensitive.
+- Retain the negative pathological-necrosis analysis as an exploratory limitation.
+
+6. Final evidence hierarchy
+- M34: principal translational program.
+- M40: strongest architecture-reproducibility result.
+- M11: directional consistency with small-module representation uncertainty.
+- M24: limited and endpoint-specific transport.
+
+Writing restriction
+-------------------
+Do not add new outcome-driven tuning after the final lock.

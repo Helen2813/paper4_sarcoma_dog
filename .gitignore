@@ -226,3 +226,8 @@ data/processed/**
 data/external/**
 
 pyCausalFS/
+canine/
+cross_species/
+human/
+model_inputs/
+data_manifest/

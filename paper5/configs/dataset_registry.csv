@@ -1,0 +1,7 @@
+dataset_id,accession,species,modality,biological_unit,current_role,preferred_expression_path,search_tokens,orientation_hint,feature_space,precomputed_coverage_path
+GSE238110_DOG2,GSE238110,canine,bulk_rna,tumor,source_anchor,data/processed/GSE238110_DOG2_expression_log2cpm_matched_allgenes.csv,GSE238110;DOG2,samples_by_features,gene_symbol,
+GSE239948_CCOGC,GSE239948,canine,bulk_rna,tumor,external_canine_validation,data/processed/canine_validation_GSE239948_expression_log2_symbol.csv,GSE239948;CCOGC,samples_by_features,gene_symbol,
+TARGET_OS,TARGET-OS,human,bulk_rna,tumor,external_human_validation,,TARGET_OS;TARGET-OS;TARGET,auto,gene_symbol,
+GSE21257,GSE21257,human,bulk_rna,tumor,external_human_validation,,GSE21257,auto,gene_symbol,
+GSE39055,GSE39055,human,expression_array,tumor,external_human_assay_sensitive_validation,,GSE39055,auto,gene_symbol_or_probe,
+GSE252470_AMMONS,GSE252470,canine,single_cell_rna,cell,biological_annotation_only,data/raw/single_cell/Ammons_GSE252470/exprMatrix.tsv.gz,GSE252470;Ammons,features_by_samples,gene_symbol,results/tables/Ammons_scRNA_score_gene_coverage.csv

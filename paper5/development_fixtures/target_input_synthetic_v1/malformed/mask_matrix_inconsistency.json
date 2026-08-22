@@ -1,0 +1,8 @@
+{
+  "case_id": "MASK_MATRIX_INCONSISTENCY",
+  "declared_rna_available": true,
+  "expected_validator_behavior": "FAIL",
+  "intentionally_invalid": true,
+  "matrix_condition": "all RNA values are NaN",
+  "synthetic_sample_id": "SYN_001"
+}

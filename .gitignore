@@ -231,3 +231,6 @@ cross_species/
 human/
 model_inputs/
 data_manifest/
+comparator_envs/
+results/
+simulations/

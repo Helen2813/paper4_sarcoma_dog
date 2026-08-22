@@ -1,0 +1,224 @@
+{
+  "created_at_utc": "2026-08-11T19:22:25.327928+00:00",
+  "fixtures": [
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\stability_gate_addendum\\GATE_N100_NULL\\GATE_N100_NULL__R001__S0600024901.npz",
+      "replicate_index": 1,
+      "scenario_id": "GATE_N100_NULL",
+      "sha256": "402fa0e957f1cc3b8e4a68f9348709020278c22b174e0ea3d5c5680530484146",
+      "simulation_seed": 600024901
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\stability_gate_addendum\\GATE_N100_S025\\GATE_N100_S025__R001__S0521056536.npz",
+      "replicate_index": 1,
+      "scenario_id": "GATE_N100_S025",
+      "sha256": "7ec8ba1501949ba2e5275453850f6d2c12da8fa3c2e35002f90f3d5d41d08a1c",
+      "simulation_seed": 521056536
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\stability_gate_addendum\\GATE_N100_S075\\GATE_N100_S075__R001__S2045624709.npz",
+      "replicate_index": 1,
+      "scenario_id": "GATE_N100_S075",
+      "sha256": "0827d8e8021843cdc3ac29e8064987c6e1dc7cf127af814fbe59e2ffdd3759d0",
+      "simulation_seed": 2045624709
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\stability_gate_addendum\\GATE_N100_S150\\GATE_N100_S150__R001__S0331248492.npz",
+      "replicate_index": 1,
+      "scenario_id": "GATE_N100_S150",
+      "sha256": "1273cd000bbc8c7fb258d2f5c1ff602d99901e12c6e0b40df5b26a3b9efba6f2",
+      "simulation_seed": 331248492
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\stability_gate_addendum\\GATE_N50_NULL\\GATE_N50_NULL__R001__S1169455255.npz",
+      "replicate_index": 1,
+      "scenario_id": "GATE_N50_NULL",
+      "sha256": "7ce3a3efd683698d820406fd25da80b7c98f5624edeecf1fba018d8754ada3f4",
+      "simulation_seed": 1169455255
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\stability_gate_addendum\\GATE_N50_S025\\GATE_N50_S025__R001__S3656556954.npz",
+      "replicate_index": 1,
+      "scenario_id": "GATE_N50_S025",
+      "sha256": "bc6d0b60a1ec4b7df476d9b3dd7d617a766a320c8f440528a35b7e256de40932",
+      "simulation_seed": 3656556954
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\stability_gate_addendum\\GATE_N50_S075\\GATE_N50_S075__R001__S1596438999.npz",
+      "replicate_index": 1,
+      "scenario_id": "GATE_N50_S075",
+      "sha256": "761b84a7ca8777ec282de3ea8dc18a038fd28b0f4affdadb2f3b6142565cb32f",
+      "simulation_seed": 1596438999
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\stability_gate_addendum\\GATE_N50_S150\\GATE_N50_S150__R001__S0349919815.npz",
+      "replicate_index": 1,
+      "scenario_id": "GATE_N50_S150",
+      "sha256": "684008c20b3f3431d2d99893443d83566f32d04b06020edbbf6cfc9134ebf43a",
+      "simulation_seed": 349919815
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\stability_gate_addendum\\GATE_N75_NULL\\GATE_N75_NULL__R001__S1708051993.npz",
+      "replicate_index": 1,
+      "scenario_id": "GATE_N75_NULL",
+      "sha256": "e672bb23e35cf98279acfe56a778fe48d5a834e696061480171d71b47216eb03",
+      "simulation_seed": 1708051993
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\stability_gate_addendum\\GATE_N75_S025\\GATE_N75_S025__R001__S1949594910.npz",
+      "replicate_index": 1,
+      "scenario_id": "GATE_N75_S025",
+      "sha256": "c1e07cf5710fc46f2876ef37e4b945a1c3d4edaa795f9f4332f5de4a9f324e68",
+      "simulation_seed": 1949594910
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\stability_gate_addendum\\GATE_N75_S075\\GATE_N75_S075__R001__S3997872144.npz",
+      "replicate_index": 1,
+      "scenario_id": "GATE_N75_S075",
+      "sha256": "6cd1e78133618682434a43540db4edcbe3d9caf1916ead1de23fff868fba784d",
+      "simulation_seed": 3997872144
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\stability_gate_addendum\\GATE_N75_S150\\GATE_N75_S150__R001__S1387091197.npz",
+      "replicate_index": 1,
+      "scenario_id": "GATE_N75_S150",
+      "sha256": "532320c0f44472d61edcdd29543743d9656397fe745a79e40022c0a159750de4",
+      "simulation_seed": 1387091197
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\stability_gate_addendum\\NONLINEAR_METH_TANH\\NONLINEAR_METH_TANH__R001__S3998439790.npz",
+      "replicate_index": 1,
+      "scenario_id": "NONLINEAR_METH_TANH",
+      "sha256": "fd1c050fc5b27281a9be7da1590fb5e25f3eb8f129876d085c8f980171c6f742",
+      "simulation_seed": 3998439790
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\stability_gate_addendum\\NONLINEAR_VIEW_SPECIFIC\\NONLINEAR_VIEW_SPECIFIC__R001__S1059200607.npz",
+      "replicate_index": 1,
+      "scenario_id": "NONLINEAR_VIEW_SPECIFIC",
+      "sha256": "9719555cbd50ed6643162c951d5022d3886ce46ad9e122c6bf68a96e9c7aa61f",
+      "simulation_seed": 1059200607
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\stability_gate_addendum\\NONLINEAR_WEAK_SMALL_N\\NONLINEAR_WEAK_SMALL_N__R001__S1394517675.npz",
+      "replicate_index": 1,
+      "scenario_id": "NONLINEAR_WEAK_SMALL_N",
+      "sha256": "d4a4fcf819d0158fa0b30d9fbb4990dd8282afdbe694bea14141f2f1158623e1",
+      "simulation_seed": 1394517675
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\core\\S01_BASE\\S01_BASE__R001__S0176451632.npz",
+      "replicate_index": 1,
+      "scenario_id": "S01_BASE",
+      "sha256": "875a7162a317310cc095f908e2e0baec96de7fe575f88a1a01ad58912eb28a50",
+      "simulation_seed": 176451632
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\core\\S02_SMALL_N50\\S02_SMALL_N50__R001__S2358047267.npz",
+      "replicate_index": 1,
+      "scenario_id": "S02_SMALL_N50",
+      "sha256": "4bca78086208d735588b812c9f3c04955dd75c6af2332566967430f8b0056ed7",
+      "simulation_seed": 2358047267
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\core\\S03_LARGER_N100\\S03_LARGER_N100__R001__S3690825579.npz",
+      "replicate_index": 1,
+      "scenario_id": "S03_LARGER_N100",
+      "sha256": "6ec40ef7102a7a27c6925f23ce6c6b013bcc1120ba252b32d92c573650187542",
+      "simulation_seed": 3690825579
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\core\\S04_METH_MISSING10\\S04_METH_MISSING10__R001__S0169958589.npz",
+      "replicate_index": 1,
+      "scenario_id": "S04_METH_MISSING10",
+      "sha256": "b0d9fa45d23d319fbd47b6417d40703d41acff1d5e75ab413d828689cb5ee337",
+      "simulation_seed": 169958589
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\core\\S05_METH_MISSING20\\S05_METH_MISSING20__R001__S1330757412.npz",
+      "replicate_index": 1,
+      "scenario_id": "S05_METH_MISSING20",
+      "sha256": "0ef57c52bd021955ea2071c1cc8900e5847ddaed28ada2cfc31d82cfee97c6dc",
+      "simulation_seed": 1330757412
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\core\\S06_ALL_VIEWS_MISSING10\\S06_ALL_VIEWS_MISSING10__R001__S1956290997.npz",
+      "replicate_index": 1,
+      "scenario_id": "S06_ALL_VIEWS_MISSING10",
+      "sha256": "d0f79c8e68a192b5fa17154bc2c13b0b47397dbbbfaf6a083cdcb96d18736a08",
+      "simulation_seed": 1956290997
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\core\\S07_WEAK_SHARED\\S07_WEAK_SHARED__R001__S0390639849.npz",
+      "replicate_index": 1,
+      "scenario_id": "S07_WEAK_SHARED",
+      "sha256": "b9bd96a72b80743bc42576d6578af42ed6c9ef84e89abe7a4fbc471f50150a40",
+      "simulation_seed": 390639849
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\core\\S08_PRIVATE_DOMINANT\\S08_PRIVATE_DOMINANT__R001__S0333064502.npz",
+      "replicate_index": 1,
+      "scenario_id": "S08_PRIVATE_DOMINANT",
+      "sha256": "a7acc86b05129b862308de9068cbc90db607de21b60090f215bb71180d98bf1b",
+      "simulation_seed": 333064502
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\core\\S09_NOISY_METHYLATION\\S09_NOISY_METHYLATION__R001__S3579601940.npz",
+      "replicate_index": 1,
+      "scenario_id": "S09_NOISY_METHYLATION",
+      "sha256": "986de436f0fb8f4c9aa0eb6f00401e6bfcae1e33ee9a8e79e30b62cbed83a9ec",
+      "simulation_seed": 3579601940
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\core\\S10_METHYLATION_SCALE_DOMINANCE\\S10_METHYLATION_SCALE_DOMINANCE__R001__S0651297601.npz",
+      "replicate_index": 1,
+      "scenario_id": "S10_METHYLATION_SCALE_DOMINANCE",
+      "sha256": "29e80ad92c492aace431d2790ca711e58c80f8f315dae4bb6b1f67b4fa6247e2",
+      "simulation_seed": 651297601
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\core\\S11_PAIR_CORRUPTION10\\S11_PAIR_CORRUPTION10__R001__S3375427427.npz",
+      "replicate_index": 1,
+      "scenario_id": "S11_PAIR_CORRUPTION10",
+      "sha256": "cf1ee8f3e02eaf5df2ab2486cb9e9450bc1257fe553ed590e328679a58aab596",
+      "simulation_seed": 3375427427
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\core\\S12_PAIR_CORRUPTION25\\S12_PAIR_CORRUPTION25__R001__S0756585054.npz",
+      "replicate_index": 1,
+      "scenario_id": "S12_PAIR_CORRUPTION25",
+      "sha256": "b5249408fbf8d5bf832e9df19320ab719f3159bffa43ab15d5211ddc99692b5d",
+      "simulation_seed": 756585054
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\core\\S13_UNINFORMATIVE_CNV\\S13_UNINFORMATIVE_CNV__R001__S0466985647.npz",
+      "replicate_index": 1,
+      "scenario_id": "S13_UNINFORMATIVE_CNV",
+      "sha256": "a689d4a3d8ac06e3fe90f6a81b17636696421cfe599482a2bec82c7c4e19fa69",
+      "simulation_seed": 466985647
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\core\\S14_BALANCED_FEATURE_COUNTS\\S14_BALANCED_FEATURE_COUNTS__R001__S3554179157.npz",
+      "replicate_index": 1,
+      "scenario_id": "S14_BALANCED_FEATURE_COUNTS",
+      "sha256": "54707b49790db75717241ea1e8fd595232d828f0681071b00abc119cca4e78bd",
+      "simulation_seed": 3554179157
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\core\\S15_EXTREME_METHYLATION_DIMENSION\\S15_EXTREME_METHYLATION_DIMENSION__R001__S0202612288.npz",
+      "replicate_index": 1,
+      "scenario_id": "S15_EXTREME_METHYLATION_DIMENSION",
+      "sha256": "a7622a004e2d0e323058cff9e8d0af980642a841da0a083c7d2f6991f43f4743",
+      "simulation_seed": 202612288
+    },
+    {
+      "path": "paper5\\simulations\\sable_mo_v1\\core\\S16_COMBINED_STRESS\\S16_COMBINED_STRESS__R001__S3910193754.npz",
+      "replicate_index": 1,
+      "scenario_id": "S16_COMBINED_STRESS",
+      "sha256": "d1ccca5e2078fd9bc4fea6b03b997425f68718d42f1aa38d0b739b3e972d0795",
+      "simulation_seed": 3910193754
+    }
+  ],
+  "generator_version": "sable-mo-simulation-generator-v1",
+  "reference_rule": "Lowest materialized replicate_index per scenario."
+}

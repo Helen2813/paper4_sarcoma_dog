@@ -1,0 +1,81 @@
+{
+  "biological_annotation_access": false,
+  "final_full_data_method_freeze": {
+    "biological_or_outcome_results_may_not_change_method": true,
+    "full_data_refit": "Use the frozen method family, simulation-selected neural profile, primary feature budget, and all 78 cases without outcomes.",
+    "minimum_single_method_selection_frequency": 0.4,
+    "primary_rule": "Choose the model_id selected most frequently by inner-CV one-SE selection across all outer splits.",
+    "tie_breaker": "Lower complexity_rank, then lexicographically smaller model_id.",
+    "uncertainty_rule": "If no model reaches 40% selection frequency, do not claim a unique winner. Freeze the two most frequently selected non-failed methods as co-primary representations and report method uncertainty."
+  },
+  "fixed_model_benchmark": {
+    "all_prespecified_models_reported": true,
+    "failed_models_retained_in_audit": true,
+    "poor_models_may_be_summarized_in_supplement": true,
+    "poor_models_may_not_be_silently_omitted": true
+  },
+  "outcome_access": false,
+  "policy_version": "paper5-model-selection-policy-v1",
+  "simulation_profile_selection": {
+    "candidate_architecture_profiles": [
+      "compact",
+      "standard",
+      "expanded"
+    ],
+    "candidate_regularization_profiles": [
+      "weak",
+      "standard",
+      "strong"
+    ],
+    "hard_gate": "simulation_false_shared_discovery_rate <= 0.10 and no latent collapse",
+    "primary_simulation_utility": {
+      "missing_view_reconstruction_score": 0.1,
+      "modality_balance_score": 0.1,
+      "random_adjusted_cross_view_mrr": 0.2,
+      "simulation_private_subspace_recovery": 0.2,
+      "simulation_shared_subspace_recovery": 0.4
+    },
+    "profile_reused_by": [
+      "V0_BALANCED_AE",
+      "V1_SHARED_PRIVATE_AE",
+      "V2_CONTRASTIVE_SPAE",
+      "V3_DROPOUT_SPAE",
+      "V5_SABLE_VAE"
+    ],
+    "profile_selected_for": "V4_SABLE_MO",
+    "selection_rule": "Among eligible profiles, choose the lowest-complexity profile within one standard error of the highest mean simulation utility.",
+    "target_data_may_not_change_profile": true
+  },
+  "target_nested_selection": {
+    "component_formulas": {
+      "heldout_reconstruction_score": "clip(1 - mean_view_normalized_MSE, 0, 1)",
+      "missing_view_reconstruction_score": "mean_view clip(missing_view_R2, 0, 1)",
+      "modality_balance_score": "normalized entropy of view contribution energy",
+      "random_adjusted_cross_view_mrr": "clip((MRR - H_n/n) / (1 - H_n/n), 0, 1)"
+    },
+    "eligible_model_source": "model_family_registry.csv rows with eligible_for_nested_selection=true",
+    "failure_gates_applied_before_selection": true,
+    "inner_design": "4-fold CV within each outer-training split",
+    "inner_model_seeds": [
+      1103,
+      2207
+    ],
+    "neural_early_stopping_rule": "Each inner model-selection split has a deterministic fit, early-stop, and validation partition. The validation partition is never used for early stopping. After selecting an epoch on the early-stop subset, refit on fit plus early-stop samples for that fixed epoch before scoring the inner validation subset.",
+    "one_standard_error_rule": "Choose the lowest-complexity eligible model whose mean inner-CV utility is at least best_mean - standard_error_of_best.",
+    "outer_design": "5 repeats of 5-fold CV",
+    "outer_model_seeds": [
+      1103,
+      2207,
+      3301
+    ],
+    "outer_test_evaluation": "Each outer-training split has a deterministic fit and early-stop partition. Select the epoch without outer-test access, refit on all outer-training samples for that fixed epoch, then evaluate once on the untouched outer test fold.",
+    "outer_test_samples_used_for_selection": false,
+    "primary_utility_components": {
+      "heldout_reconstruction_score": 0.3,
+      "missing_view_reconstruction_score": 0.25,
+      "modality_balance_score": 0.15,
+      "random_adjusted_cross_view_mrr": 0.3
+    },
+    "tie_breaker": "Lower complexity_rank, then lexicographically smaller model_id."
+  }
+}

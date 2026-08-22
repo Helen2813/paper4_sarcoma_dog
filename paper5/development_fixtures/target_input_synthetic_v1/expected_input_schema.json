@@ -1,0 +1,72 @@
+{
+  "availability": {
+    "columns": [
+      "rna_available",
+      "methylation_available",
+      "cnv_available"
+    ],
+    "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\view_availability.csv",
+    "valid_sample_requires_at_least_one_available_view": true
+  },
+  "development_only_seed_registry": {
+    "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\development_seed_registry.csv",
+    "scientific_fit_seed": false
+  },
+  "development_only_split_registry": {
+    "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\development_folds.csv",
+    "scientific_split": false
+  },
+  "explicitly_not_frozen_here": [
+    "final representation method",
+    "latent dimension",
+    "selected-method output schema",
+    "TARGET scientific nested-CV splits",
+    "TARGET scientific fit seeds",
+    "feature budgets",
+    "clinical/outcome columns",
+    "biology/program-score columns",
+    "final-gate thresholds"
+  ],
+  "fixture_version": "paper5-target-input-synthetic-fixture-v1",
+  "pairing": {
+    "correct_map": "paper5\\development_fixtures\\target_input_synthetic_v1\\pairing_map_correct.csv",
+    "corrupted_map": "paper5\\development_fixtures\\target_input_synthetic_v1\\pairing_map_corrupted.csv"
+  },
+  "purpose": "Development/unit testing of future TARGET input alignment, missing-view handling, pairing checks, split plumbing, and output-schema plumbing without reading any real TARGET value.",
+  "sample_axis": {
+    "id_column": "synthetic_sample_id",
+    "n_samples": 24,
+    "row_order_contract": "all three aligned matrices follow sample_manifest.csv sample_index order"
+  },
+  "synthetic_only": true,
+  "views": {
+    "cnv": {
+      "dtype": "float32",
+      "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\cnv.npy",
+      "shape": [
+        24,
+        30
+      ],
+      "unavailable_view_encoding": "all NaN row"
+    },
+    "methylation": {
+      "dtype": "float32",
+      "feature_level_missingness_in_available_rows": true,
+      "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\methylation.npy",
+      "shape": [
+        24,
+        50
+      ],
+      "unavailable_view_encoding": "all NaN row"
+    },
+    "rna": {
+      "dtype": "float32",
+      "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\rna.npy",
+      "shape": [
+        24,
+        40
+      ],
+      "unavailable_view_encoding": "all NaN row"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "atomic_temp_filename": "short .tmp_<random>.json basename within the target directory",
+  "completed_v2_shards_reused": true,
+  "created_at_utc": "2026-08-13T00:12:07.084379+00:00",
+  "hotfix_id": "05d2v2-windows-path-length-io-hotfix-v1",
+  "legacy_existing_shard_paths_preserved": true,
+  "model_or_metric_changes": false,
+  "new_shard_paths": "compact deterministic SHA256-derived filenames",
+  "profile_changes": false,
+  "reason": "Windows MAX_PATH was exceeded only by the temporary atomic JSON filename after 90 completed v2 PASS shards. The final scientific shard contents and model calculations were unaffected.",
+  "scientific_protocol_changed": false,
+  "script_version": "05d2v2-screen-neural-profiles-gpu-syncfree-v2-no-cli",
+  "seed_changes": false,
+  "selection_rule_changes": false,
+  "stability_changes": false
+}

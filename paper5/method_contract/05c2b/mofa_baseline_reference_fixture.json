@@ -1,0 +1,47 @@
+{
+  "elbo_final": -3222.2720065392605,
+  "feature_counts": {
+    "CNV": 20,
+    "METHYLATION": 32,
+    "RNA": 24
+  },
+  "fixture_id": "05c2b-installed-mofapy2-reference-v1",
+  "model_trained_flag": true,
+  "n_elbo_records": 71,
+  "n_retained_factors": 3,
+  "n_samples": 32,
+  "projection_effective_rank": 1.996911181928763,
+  "rank": 3,
+  "reconstruction_mse": {
+    "CNV": 0.34144235854371185,
+    "METHYLATION": 0.32966041042519373,
+    "RNA": 0.38323999282420224
+  },
+  "seed": 17071,
+  "status": "PASS",
+  "tau_shapes": {
+    "CNV": [
+      20
+    ],
+    "METHYLATION": [
+      32
+    ],
+    "RNA": [
+      24
+    ]
+  },
+  "weights_shapes": {
+    "CNV": [
+      20,
+      3
+    ],
+    "METHYLATION": [
+      32,
+      3
+    ],
+    "RNA": [
+      24,
+      3
+    ]
+  }
+}

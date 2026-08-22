@@ -1,0 +1,36 @@
+{
+  "created_at_utc": "2026-08-21T21:38:31+00:00",
+  "explicit_nonblind_disclosure": "05a2 is frozen after 05d4 confirmatory-ablation results and the derived 05d4a audit were available. The amendment is prospective specifically with respect to the unmaterialized final-gate simulation bank, future TARGET representation benchmarking, pairing-permutation results, biological interpretation, and outcomes.",
+  "hashes": {
+    "05a1_addendum": "3aadb87386f796663e68b97fb608cb864c197013fe52c70ac5b37bed06e7a3e8",
+    "05a1_lock": "61969f36872e3e508a239d5e6903ae3395fd36ec74ee7aa4e31740a514c119e3",
+    "05a_contract": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+    "05a_lock": "cc62dcc75c5f06e0c2c7220d1419392f8838b9eccad4ae916831689255dfc9f0",
+    "05b_v2_lock": "1198da23059876a439183b35c8d095f8731bcddd98aa0964da2486995aefd524",
+    "05d3_lock": "e91353d9e399842cbf2eae2e2d254c10229692fa00141f0fe7039a0888c9461f",
+    "05d4_lock": "fdeeaf06846a3f45b451766056f355897c4f2cc375d6702bc4a99fa854aa26df",
+    "05d4a_lock": "4b29413eadc046ea51169be25de0b660ff020c64dbada2130c0140cf49cee86b",
+    "05d4b_audit": "201a3d7f6113b09f34d0b68cd86b8eb0f56942bda4ad70eab504cafa861a21f6",
+    "05d4b_lock": "a4e4de85e86fa768c3dd8503c77159c392538a34266987ad2c31bcb5ad3ba7a3",
+    "05d4b_requirements": "539303519b657c53e0fcbc60d0408c82be34073ef84c14f756323bad13bfe66f",
+    "05d4b_selector_membership": "9390d17188afb775f835c8acac8650107c0d5ba46abced39251eccdf80072c06"
+  },
+  "physical_absence_checks": {
+    "final_gate_materialized_files": 0,
+    "future_result_roots_with_files": 0
+  },
+  "scientific_timing": {
+    "05d4_confirmatory_ablation_results_exist_and_were_available": true,
+    "05d4a_read_only_ablation_audit_exists": true,
+    "05d4b_final_gate_design_audit_exists": true,
+    "05d5_results_used_to_define_05a2": false,
+    "05d5_status_at_amendment": "IN_PROGRESS",
+    "TARGET_pairing_permutation_results_viewed": false,
+    "TARGET_representation_results_viewed": false,
+    "biological_alignment_results_viewed": false,
+    "final_gate_datasets_materialized": false,
+    "final_gate_results_viewed": false,
+    "outcomes_viewed": false
+  },
+  "snapshot_version": "paper5-05a2-precondition-snapshot-v1"
+}

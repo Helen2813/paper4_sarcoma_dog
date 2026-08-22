@@ -1,0 +1,92 @@
+{
+  "created_at_utc": "2026-08-12T15:03:29.483692+00:00",
+  "cuda_devices": [
+    {
+      "compute_capability": [
+        8,
+        9
+      ],
+      "index": 0,
+      "multi_processor_count": 58,
+      "name": "NVIDIA GeForce RTX 4080 Laptop GPU",
+      "total_memory_bytes": 12878086144
+    }
+  ],
+  "environment_variables": {
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8"
+  },
+  "nvidia_smi": {
+    "available": true,
+    "error": null,
+    "rows": [
+      {
+        "driver_version": "610.88",
+        "memory_total_mib": 12282.0,
+        "name": "NVIDIA GeForce RTX 4080 Laptop GPU"
+      }
+    ]
+  },
+  "packages": {
+    "numpy": {
+      "installed": true,
+      "version": "2.2.6"
+    },
+    "pandas": {
+      "installed": true,
+      "version": "2.3.3"
+    },
+    "scikit-learn": {
+      "installed": true,
+      "version": "1.7.2"
+    },
+    "scipy": {
+      "installed": true,
+      "version": "1.15.3"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.12.1+cu130"
+    }
+  },
+  "platform": {
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "release": "10",
+    "system": "Windows",
+    "version": "10.0.26200"
+  },
+  "python": {
+    "executable": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\venv\\Scripts\\python.exe",
+    "version": "3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]"
+  },
+  "runtime_policy": {
+    "allow_tf32_cudnn": false,
+    "allow_tf32_matmul": false,
+    "automatic_mixed_precision": false,
+    "cublas_workspace_config": ":4096:8",
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "dataloader_workers_primary": 0,
+    "deterministic_algorithms": true,
+    "deterministic_warn_only": false,
+    "device_policy": "CUDA required for confirmatory neural benchmark",
+    "dtype": "float32",
+    "float32_matmul_precision": "highest",
+    "gradient_scaler": false,
+    "torch_compile": false
+  },
+  "torch": {
+    "cuda_available": true,
+    "cuda_build_version": "13.0",
+    "cuda_device_count": 1,
+    "cudnn_available": true,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "cudnn_version": 92000,
+    "deterministic_algorithms_enabled": true,
+    "deterministic_warn_only": false,
+    "float32_matmul_precision": "highest",
+    "git_version": "7269437d655783a26cba32aa88195b741ff496aa",
+    "version": "2.12.1+cu130"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "cuda_build": "13.0",
+  "device": "cuda:0",
+  "epochs": 12,
+  "exact_gpu_dual_pca_component_match": true,
+  "exact_gpu_dual_pca_score_match": true,
+  "exact_shared_score_match": true,
+  "exact_state_dict_match": true,
+  "final_objective_a": 1.9062378406524658,
+  "final_objective_b": 1.9062378406524658,
+  "fixture_id": "05d2-v4-cuda-profile-screen-v1",
+  "profile_id": "ARCH_COMPACT__REG_WEAK",
+  "seed": 20260821,
+  "status": "PASS",
+  "torch_version": "2.12.1+cu130"
+}

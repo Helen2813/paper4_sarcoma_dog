@@ -1,0 +1,25 @@
+wilson_interpretation_for_design_audit,n,D01_limit,max_passing_false_acceptances,max_passing_observed_rate,true_false_acceptance_rate,probability_D01_pass
+"two-sided 95%, z=1.959963984540054, no continuity correction",200,0.1,11,0.055,0,1
+"two-sided 95%, z=1.959963984540054, no continuity correction",200,0.1,11,0.055,0.01,0.999998921175
+"two-sided 95%, z=1.959963984540054, no continuity correction",200,0.1,11,0.055,0.02,0.999213836189
+"two-sided 95%, z=1.959963984540054, no continuity correction",200,0.1,11,0.055,0.04,0.892509310065
+"two-sided 95%, z=1.959963984540054, no continuity correction",200,0.1,11,0.055,0.06,0.458043379516
+"two-sided 95%, z=1.959963984540054, no continuity correction",200,0.1,11,0.055,0.08,0.116822950637
+"two-sided 95%, z=1.959963984540054, no continuity correction",200,0.1,11,0.055,0.1,0.0167895331703
+"two-sided 95%, z=1.959963984540054, no continuity correction",200,0.1,11,0.055,0.12,0.00154379618729
+"two-sided 95%, z=1.959963984540054, no continuity correction",800,0.1,63,0.07875,0,1
+"two-sided 95%, z=1.959963984540054, no continuity correction",800,0.1,63,0.07875,0.01,1
+"two-sided 95%, z=1.959963984540054, no continuity correction",800,0.1,63,0.07875,0.02,1
+"two-sided 95%, z=1.959963984540054, no continuity correction",800,0.1,63,0.07875,0.04,0.99999978858
+"two-sided 95%, z=1.959963984540054, no continuity correction",800,0.1,63,0.07875,0.06,0.98697653255
+"two-sided 95%, z=1.959963984540054, no continuity correction",800,0.1,63,0.07875,0.08,0.481285129154
+"two-sided 95%, z=1.959963984540054, no continuity correction",800,0.1,63,0.07875,0.1,0.0231051729155
+"two-sided 95%, z=1.959963984540054, no continuity correction",800,0.1,63,0.07875,0.12,9.76688348723e-05
+"two-sided 95%, z=1.959963984540054, no continuity correction",1000,0.1,81,0.081,0,1
+"two-sided 95%, z=1.959963984540054, no continuity correction",1000,0.1,81,0.081,0.01,1
+"two-sided 95%, z=1.959963984540054, no continuity correction",1000,0.1,81,0.081,0.02,1
+"two-sided 95%, z=1.959963984540054, no continuity correction",1000,0.1,81,0.081,0.04,0.999999998422
+"two-sided 95%, z=1.959963984540054, no continuity correction",1000,0.1,81,0.081,0.06,0.996942677567
+"two-sided 95%, z=1.959963984540054, no continuity correction",1000,0.1,81,0.081,0.08,0.575593482312
+"two-sided 95%, z=1.959963984540054, no continuity correction",1000,0.1,81,0.081,0.1,0.0230966739194
+"two-sided 95%, z=1.959963984540054, no continuity correction",1000,0.1,81,0.081,0.12,4.14270657073e-05

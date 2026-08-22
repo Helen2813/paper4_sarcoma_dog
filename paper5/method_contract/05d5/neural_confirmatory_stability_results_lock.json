@@ -1,0 +1,85 @@
+{
+  "contract_version": "paper5-neural-confirmatory-stability-v1",
+  "created_at_utc": "2026-08-22T03:57:25.137364+00:00",
+  "epoch_registry": {
+    "path": "paper5\\method_contract\\05d5\\confirmatory_stability_epoch_registry.csv",
+    "sha256": "989ad4f8b7d0a21b5a4e1ef39e74c7d6f41de9c49139e5a9f7b8df2b4ddfbf44",
+    "size_bytes": 100776
+  },
+  "generated_files": {
+    "paper5\\method_contract\\05d5\\confirmatory_stability_epoch_registry.csv": {
+      "sha256": "989ad4f8b7d0a21b5a4e1ef39e74c7d6f41de9c49139e5a9f7b8df2b4ddfbf44",
+      "size_bytes": 100776
+    },
+    "paper5\\method_contract\\05d5\\neural_confirmatory_stability_README.txt": {
+      "sha256": "19efd4b83b7791aa4cda450d211925589933a389e13fc360d902aff3cfffa391",
+      "size_bytes": 1982
+    },
+    "paper5\\method_contract\\05d5\\neural_confirmatory_stability_execution_protocol.json": {
+      "sha256": "addd64e65611ebaae057d405a01cb63292b6f755dba9620d5a84a74d543dcbee",
+      "size_bytes": 10490
+    },
+    "paper5\\method_contract\\05d5\\neural_confirmatory_stability_reference_fixture.json": {
+      "sha256": "648a5f55eba01287e91c5cf38502447c98ca0b677669b6e972fdaac82d55776b",
+      "size_bytes": 900
+    },
+    "paper5\\method_contract\\05d5\\neural_confirmatory_stability_results_manifest.json": {
+      "sha256": "9b34dde9cd9de3c706b8c22ee4067892ec5057d88b3b7422edb5c5171cf89bc6",
+      "size_bytes": 8164
+    },
+    "paper5\\method_contract\\05d5\\neural_confirmatory_stability_shard_manifest.csv": {
+      "sha256": "177350c02d9d19dd4f7f8f7066297f0502a28f6a44f34b6f22e21badd2d15353",
+      "size_bytes": 190666
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_stability\\neural_confirmatory_stability_dataset_summary.csv.gz": {
+      "sha256": "b1d9aaf7f96306af3b0dd7d405b1bf6eba7630913b403b61304ddade7c4b9928",
+      "size_bytes": 50573
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_stability\\neural_confirmatory_stability_factor_audit.csv.gz": {
+      "sha256": "35e6ec0b5304b0159b58753c3dd9d51c701e76d4faef95762a54f66d74607b15",
+      "size_bytes": 153363
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_stability\\neural_confirmatory_stability_fit_audit.csv.gz": {
+      "sha256": "94c1f084681406052c15e6f97cec2d53674ac2d4a329b523f1716c1d3b5c6e1e",
+      "size_bytes": 289751
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_stability\\neural_confirmatory_stability_overall_summary.csv": {
+      "sha256": "e2ef55e95ef3bc1d5e8435b644b29f3965fb21107d7f4edaeaf5c40f802e398f",
+      "size_bytes": 3093
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_stability\\neural_confirmatory_stability_preprocessing_audit.csv.gz": {
+      "sha256": "266b4a964bd9d10cd6fea22c027798266beb29a61af1dcf3a56ace77ea546903",
+      "size_bytes": 293133
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_stability\\neural_confirmatory_stability_scenario_summary.csv": {
+      "sha256": "b6d0c990a648cbfbcd093d07f6ab5f284bb93f35f50f2d3242832d9270a2340d",
+      "size_bytes": 13281
+    }
+  },
+  "profile_id": "ARCH_COMPACT__REG_WEAK",
+  "result_manifest": {
+    "path": "paper5\\method_contract\\05d5\\neural_confirmatory_stability_results_manifest.json",
+    "sha256": "9b34dde9cd9de3c706b8c22ee4067892ec5057d88b3b7422edb5c5171cf89bc6"
+  },
+  "rewrite_policy": "This zero-argument stage never rewrites frozen 05d5 results. Any scientifically justified change requires a new versioned confirmatory stability stage rather than silent replacement.",
+  "scientific_state": {
+    "TARGET_model_fitting_performed": false,
+    "biological_annotations_used_for_model_or_profile_selection": false,
+    "clinical_labels_loaded": false,
+    "confirmatory_V4_stability_performed": true,
+    "confirmatory_neural_ablation_performed": true,
+    "confirmatory_replicates_11_to_20_accessed": true,
+    "final_gate_calibration_data_used": false,
+    "neural_profile_frozen": true,
+    "outcomes_loaded": false,
+    "representation_method_selected": false
+  },
+  "script_version": "05d5-evaluate-sable-mo-confirmatory-stability-gpu-v1-no-cli",
+  "shard_manifest": {
+    "n_rows": 360,
+    "path": "paper5\\method_contract\\05d5\\neural_confirmatory_stability_shard_manifest.csv",
+    "sha256": "177350c02d9d19dd4f7f8f7066297f0502a28f6a44f34b6f22e21badd2d15353"
+  },
+  "status": "FROZEN_NEURAL_CONFIRMATORY_STABILITY_RESULTS_BEFORE_05E",
+  "variant_id": "V4_SABLE_MO"
+}

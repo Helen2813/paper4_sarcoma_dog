@@ -1,0 +1,53 @@
+{
+  "contract_version": "paper5-mofa-oos-projection-protocol-v1",
+  "created_at_utc": "2026-08-11T23:43:18.174094+00:00",
+  "fit_seed_registry": {
+    "n_rows": 17280,
+    "path": "paper5\\method_contract\\05c2a\\mofa_simulation_fit_seed_registry.csv",
+    "sha256": "19a52d69eecbe0b84b338725dfac3c40c7c9641e7de5ef1deaa615e88c8399ae"
+  },
+  "generated_files": {
+    "paper5\\method_contract\\05c2a\\mofa_gaussian_projection_reference_fixture.json": {
+      "sha256": "6c1a6ded71f268ecfec5e0c8ceb9e93e8bb0b9a1f779d3b68c9fa015590e989a",
+      "size_bytes": 737
+    },
+    "paper5\\method_contract\\05c2a\\mofa_out_of_sample_projection_README.txt": {
+      "sha256": "947ca32ac21a029abfac0702872b2cce1ff3c657d2d0547f22976cd00d29529a",
+      "size_bytes": 1644
+    },
+    "paper5\\method_contract\\05c2a\\mofa_out_of_sample_projection_protocol.json": {
+      "sha256": "826ee4c64deae4f623889c3388cf2b0f46b4fe0ffa1a2c2e97319beca95f80eb",
+      "size_bytes": 10093
+    },
+    "paper5\\method_contract\\05c2a\\mofa_projection_environment_snapshot.json": {
+      "sha256": "d7130a34600bc3608faf414677ba0faf297a224b2ce02b4174271d1721b8f9ea",
+      "size_bytes": 2556
+    },
+    "paper5\\method_contract\\05c2a\\mofa_simulation_fit_seed_registry.csv": {
+      "sha256": "19a52d69eecbe0b84b338725dfac3c40c7c9641e7de5ef1deaa615e88c8399ae",
+      "size_bytes": 1276974
+    }
+  },
+  "paired_split_registry": {
+    "path": "paper5\\results\\simulation_benchmark\\05c1_linear_baselines\\linear_simulation_split_registry.csv.gz",
+    "sha256": "c683436960893ce89254ecf8d79bc8ed64930ba44222425858968da753e60279"
+  },
+  "protocol": {
+    "path": "paper5\\method_contract\\05c2a\\mofa_out_of_sample_projection_protocol.json",
+    "sha256": "826ee4c64deae4f623889c3388cf2b0f46b4fe0ffa1a2c2e97319beca95f80eb"
+  },
+  "rewrite_policy": "This zero-argument stage never rewrites a frozen protocol. Any scientifically justified change requires a new versioned stage.",
+  "scientific_state": {
+    "MOFA_model_fitting_performed": false,
+    "TARGET_model_fitting_performed": false,
+    "architecture_selected": false,
+    "biological_annotations_loaded": false,
+    "clinical_labels_loaded": false,
+    "final_gate_calibration_data_used": false,
+    "neural_model_fitting_performed": false,
+    "outcomes_loaded": false,
+    "stability_gate_thresholds_retuned": false
+  },
+  "script_version": "05c2a-freeze-mofa-out-of-sample-projection-protocol-v1-no-cli",
+  "status": "FROZEN_MOFA_OOS_PROJECTION_PROTOCOL_BEFORE_MOFA_FITTING"
+}

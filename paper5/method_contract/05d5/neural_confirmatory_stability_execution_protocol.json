@@ -1,0 +1,186 @@
+{
+  "aggregation": {
+    "dataset": "one full-data reference + 20 frozen 80% resamples",
+    "factor_level_false_discovery_primary": "mean only across PASS datasets eligible for factor-level primary interpretation",
+    "inferential_p_values": false,
+    "overall_subspace_metrics": "equal mean across 36 scenario means; SE unit is 36 scenario means",
+    "representation_method_selection": false,
+    "scenario": "equal descriptive aggregation across the 10 confirmatory replicate datasets"
+  },
+  "contract_version": "paper5-neural-confirmatory-stability-v1",
+  "created_at_utc": "2026-08-21T15:25:49.733611+00:00",
+  "frozen_sources": {
+    "05d1_confirmatory_stability_registry": {
+      "path": "paper5\\method_contract\\05d1\\neural_confirmatory_stability_resample_registry.csv",
+      "sha256": "82cea9378300c45d6bbd10653fd5421d8ea39f35c00404b739c9294f38e70a6c",
+      "size_bytes": 810613
+    },
+    "05d2v2_V4_implementation": {
+      "path": "paper5\\scripts\\05d2v2_screen_neural_profiles_gpu_syncfree_pathfix.py",
+      "sha256": "05ae6923ce588c137bc6f4aa934262181dd99f4ebe6bec3250e4b7cd54ed1ff3",
+      "size_bytes": 234747
+    },
+    "05d3_selected_profile": {
+      "path": "paper5\\method_contract\\05d3\\selected_neural_profile.json",
+      "sha256": "83ccee90a20b2fc51cec13de3f831835c85bbffc549a53d3cc6867c7bbfd1f0d",
+      "size_bytes": 10830
+    },
+    "05d4_V4_dataset_summary": {
+      "path": "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation\\neural_confirmatory_dataset_variant_metrics.csv.gz",
+      "sha256": "9249e41112eb4401e5e0e34ab8c7b3ede2440b5b018cba8e14ab93ed10c43a3f",
+      "size_bytes": 539393
+    },
+    "05d4_V4_fold_seed_metrics": {
+      "path": "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation\\neural_confirmatory_fold_seed_metrics.csv.gz",
+      "sha256": "cd41f7a7817d7be50bb81e7dbaff17a734cd8d0d8df5a19b69852d5e0799c2fb",
+      "size_bytes": 4290814
+    },
+    "05d4_result_manifest": {
+      "path": "paper5\\method_contract\\05d4\\neural_confirmatory_ablation_results_manifest.json",
+      "sha256": "a5faaf5ce6111acd51db9b575d6943d2ee11fdddd281772c86bf5a237effb11a",
+      "size_bytes": 8166
+    }
+  },
+  "gpu_execution": {
+    "CPU_allowed": [
+      "file I/O",
+      "pandas audit tables and aggregation",
+      "fold/resample-local feature eligibility and ranking",
+      "training-subset median imputation",
+      "hashing/provenance"
+    ],
+    "TF32": false,
+    "automatic_mixed_precision": false,
+    "deterministic_algorithms": true,
+    "device": "cuda:0",
+    "dual_PCA_dtype": "float64",
+    "neural_dtype": "float32",
+    "quiet_cpu_fallback": false,
+    "torch_compile": false
+  },
+  "guardrails": [
+    "Only confirmatory simulation replicate indices 11-20 are used.",
+    "Only frozen V4 SABLE-MO is stability-resampled in 05d5.",
+    "The 05d3-selected profile is not retuned.",
+    "The 05a stability thresholds are not retuned.",
+    "05d4 V4-minus-V3 is not treated as the stability-gate effect.",
+    "Failed 05d5 datasets remain visible and are never silently omitted.",
+    "TARGET matrices, outcomes, clinical labels, biological program annotations, and final-gate calibration data are not used.",
+    "05d5 does not select the final representation method; that remains reserved for 05e."
+  ],
+  "implementation_source": {
+    "path": "paper5\\scripts\\05d5_evaluate_sable_mo_stability_gpu.py",
+    "sha256": "d3c685393fcd4111fb3fb6b3d138d597b3ec3bc3cb55713266ba95db1cd06dfd"
+  },
+  "next_required_stage_if_all_datasets_pass": "05e_compare_ablate_and_freeze_method.py",
+  "resumability": {
+    "compact_SHA256_derived_filenames": true,
+    "existing_shards_verified_by": [
+      "script version",
+      "prospective 05d5 protocol SHA256",
+      "simulation input SHA256",
+      "frozen profile ID",
+      "scenario/replicate/simulation seed",
+      "05d5 selected epoch"
+    ],
+    "n_shards": 360,
+    "unit": "one confirmatory simulation dataset"
+  },
+  "scientific_state_before_fit": {
+    "TARGET_model_fitting_performed": false,
+    "biological_annotations_used_for_model_or_profile_selection": false,
+    "clinical_labels_loaded": false,
+    "confirmatory_V4_stability_performed": false,
+    "confirmatory_neural_ablation_performed": true,
+    "final_gate_calibration_data_used": false,
+    "neural_profile_frozen": true,
+    "outcomes_loaded": false,
+    "representation_method_selected": false
+  },
+  "scope": {
+    "confirmatory_datasets": 360,
+    "confirmatory_replicate_indices": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "profile_id": "ARCH_COMPACT__REG_WEAK",
+    "reference_full_data_fits": 360,
+    "scenarios": 36,
+    "stability_resample_fits": 7200,
+    "stability_resamples_per_dataset": 20,
+    "total_neural_optimization_runs": 7560,
+    "variant": "V4_SABLE_MO"
+  },
+  "script_version": "05d5-evaluate-sable-mo-confirmatory-stability-gpu-v1-no-cli",
+  "selected_epoch_bridge": {
+    "05d4_performance_metrics_used": false,
+    "05d5_stability_metrics_used": false,
+    "TARGET_or_outcomes_used": false,
+    "bounded_by_frozen_profile_maximum_epochs": true,
+    "dataset_specific": true,
+    "input": "the ten 05d4 V4 selected_epoch diagnostics per dataset only",
+    "reason": "05d1 froze one full-data reference + 20 stability resample fits per confirmatory dataset, but did not explicitly define how the ten 05d4 V4 fold/seed-selected epoch counts transfer to one fixed full-data stability epoch count. This execution-level bridge is frozen before any 05d5 stability result exists.",
+    "registry": {
+      "path": "paper5\\method_contract\\05d5\\confirmatory_stability_epoch_registry.csv",
+      "sha256": "989ad4f8b7d0a21b5a4e1ef39e74c7d6f41de9c49139e5a9f7b8df2b4ddfbf44",
+      "size_bytes": 100776
+    },
+    "rule": "arithmetic mean across 5 folds x 2 frozen seeds, then nearest integer half-up via floor(mean+0.5)"
+  },
+  "stability_contract": {
+    "alignment": "standardize shared scores -> orthogonal Procrustes -> Hungarian factor matching -> absolute correlation",
+    "biological_truth_match_absolute_correlation": 0.5,
+    "factor_level_primary_eligibility": "factor-level-identifiable datasets OR true biological null datasets",
+    "false_biological_discovery_denominator": "stable nontechnical factors",
+    "neural_refit_within_each_resample": true,
+    "post_fit_resampling_component": true,
+    "preprocessing_refit_within_each_resample": true,
+    "reference_seed_source": "paper5\\method_contract\\05d1\\neural_confirmatory_stability_resample_registry.csv",
+    "resample_fit_seed_source": "paper5\\method_contract\\05d1\\neural_confirmatory_stability_resample_registry.csv",
+    "resamples_per_dataset": 20,
+    "rotational_nonnull_factor_results": "descriptive_only_not_primary",
+    "subsample_fraction": 0.8,
+    "subsample_seed_source": "paper5\\method_contract\\05d1\\neural_confirmatory_stability_resample_registry.csv",
+    "technical_factors_counted_as_false_biological": false,
+    "technical_truth_match_absolute_correlation": 0.5,
+    "thresholds": {
+      "minimum_factor_variance": 0.0001,
+      "minimum_loading_energy_fraction_per_supported_modality": 0.15,
+      "minimum_supported_modalities": 2,
+      "primary_inclusion_frequency": 0.8,
+      "primary_median_factor_correlation": 0.7,
+      "primary_q10_factor_correlation": 0.4,
+      "sensitivity_high_median_factor_correlation": 0.8,
+      "sensitivity_low_median_factor_correlation": 0.6
+    },
+    "training_component": false
+  },
+  "upstream_hashes": {
+    "paper5\\method_contract\\05a\\ai_method_contract.json": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+    "paper5\\method_contract\\05b_v2\\architecture_screening_data_manifest.csv": "f3980e88aff408b65cbfce96aca50bad4fc08ecece2bc42bbc04f365c35d9c87",
+    "paper5\\method_contract\\05d0\\neural_environment_contract.json": "a5647e7cae4548bb1992385600dd6906cbcca4138636d1a7adb0692d680d3f92",
+    "paper5\\method_contract\\05d0\\neural_environment_lock.json": "e1420d82a1de564efa3b141aa0eb5249b502232ece61c9aaeacdc1f152b71914",
+    "paper5\\method_contract\\05d1\\neural_architecture_regularization_profile_grid.csv": "118b2fd4c16751f0b83ac3053f726f9421db26949ab98a8a531ff584c194ee32",
+    "paper5\\method_contract\\05d1\\neural_confirmatory_stability_resample_registry.csv": "82cea9378300c45d6bbd10653fd5421d8ea39f35c00404b739c9294f38e70a6c",
+    "paper5\\method_contract\\05d1\\neural_loss_and_architecture_contract.json": "b90ded1d011ee3210154c2102389df0b4e0c8fcf668b70d7e2b8e14184e3f6b1",
+    "paper5\\method_contract\\05d1\\neural_simulation_dataset_role_registry.csv": "5dace3ec427e5b6765b1972ff7be817e8ad933ed03688d711c9fe64c61b85d71",
+    "paper5\\method_contract\\05d1\\neural_simulation_evaluation_protocol.json": "3cc4660551ca8d5731c2043096a68a0a675505b1a2a2a7d6971b41b526c4dd03",
+    "paper5\\method_contract\\05d1\\neural_simulation_protocol_lock.json": "b3f7d0c6528edaac8d91289332eb0fdf4a53cf1cc9d2c35b052d3987e3002066",
+    "paper5\\method_contract\\05d2_v2\\neural_profile_screen_results_lock.json": "1b5ef05f7d71393785a98d386c5b517e0dc51af9083a0643dd9e89488bb3d797",
+    "paper5\\method_contract\\05d3\\selected_neural_profile.json": "83ccee90a20b2fc51cec13de3f831835c85bbffc549a53d3cc6867c7bbfd1f0d",
+    "paper5\\method_contract\\05d3\\selected_neural_profile_lock.json": "e91353d9e399842cbf2eae2e2d254c10229692fa00141f0fe7039a0888c9461f",
+    "paper5\\method_contract\\05d4\\neural_confirmatory_ablation_results_lock.json": "fdeeaf06846a3f45b451766056f355897c4f2cc375d6702bc4a99fa854aa26df",
+    "paper5\\method_contract\\05d4\\neural_confirmatory_ablation_results_manifest.json": "a5faaf5ce6111acd51db9b575d6943d2ee11fdddd281772c86bf5a237effb11a",
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation\\neural_confirmatory_dataset_variant_metrics.csv.gz": "9249e41112eb4401e5e0e34ab8c7b3ede2440b5b018cba8e14ab93ed10c43a3f",
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation\\neural_confirmatory_fold_seed_metrics.csv.gz": "cd41f7a7817d7be50bb81e7dbaff17a734cd8d0d8df5a19b69852d5e0799c2fb",
+    "paper5\\scripts\\05d2v2_screen_neural_profiles_gpu_syncfree_pathfix.py": "05ae6923ce588c137bc6f4aa934262181dd99f4ebe6bec3250e4b7cd54ed1ff3"
+  }
+}

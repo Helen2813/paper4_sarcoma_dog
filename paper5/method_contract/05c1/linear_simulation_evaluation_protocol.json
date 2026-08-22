@@ -1,0 +1,111 @@
+{
+  "PCA": {
+    "primary_rank": 10,
+    "rank_sensitivities": [
+      5,
+      10,
+      15
+    ],
+    "sign_rule": "largest absolute loading in each component is positive",
+    "solver": "deterministic dual PCA from the training sample Gram matrix"
+  },
+  "block_scaled_PCA": {
+    "block_scaling": "Each fold-local standardized view is divided by the square root of its total training variance before concatenation.",
+    "cross_view_alignment": "Training-only orthogonal Procrustes alignment of view-contribution embeddings before held-out retrieval.",
+    "equal_total_view_variance": true,
+    "naive_unscaled_concatenation_allowed": false,
+    "view_contribution_embedding": "Each view contributes X_view_scaled @ V_view.T in the common block-PCA coordinate system."
+  },
+  "contract_version": "paper5-linear-simulation-baseline-benchmark-v1",
+  "created_at_utc": "2026-08-11T23:20:08.691703+00:00",
+  "failure_gate_policy": {
+    "G09_false_shared_gate_is_diagnostic_for_ungated_PCA": true,
+    "architecture_selection_performed_here": false,
+    "failures_are_reported_not_hidden": true,
+    "linear_baselines_are_not_silently_omitted": true
+  },
+  "fold_local_preprocessing": {
+    "centering": "training-fold mean after median imputation",
+    "complete_truth_used_for_preprocessing": false,
+    "feature_selection_after_zscore": false,
+    "heldout_samples_used_for_preprocessing": false,
+    "imputation": "training-fold feature median; all-NaN features are excluded",
+    "maximum_feature_missing_fraction": 0.2,
+    "minimum_finite_training_values": 3,
+    "minimum_preimputation_variance": 1e-10,
+    "scaling": "training-fold sample standard deviation after median imputation"
+  },
+  "heldout_design": {
+    "description": "Five-fold deterministic held-out evaluation; every sample is held out exactly once per simulation dataset.",
+    "every_sample_held_out_once": true,
+    "folds": 5,
+    "split_seed_rule": "SHA256-derived deterministic seed from script version, scenario ID, replicate index, and simulation seed",
+    "stratification": "none; simulations contain no outcome labels"
+  },
+  "primary_metrics": {
+    "cross_view_retrieval": "true-source same-patient MRR, top-1 accuracy, and similarity margin",
+    "heldout_reconstruction": "MSE relative to the training-mean null on complete simulation truth",
+    "missing_view_reconstruction": "held-out R2 for reconstructing an omitted standardized view from the other block contributions",
+    "modality_balance": "normalized entropy of per-view loading energy",
+    "private_subspace_recovery": "mean canonical correlation between view-specific estimated contributions and true private score subspaces",
+    "shared_subspace_recovery": "mean canonical correlation between estimated and true biological shared score subspaces",
+    "technical_contamination": "canonical correlation with known technical latent truth"
+  },
+  "rewrite_policy": "This zero-argument script never rewrites a frozen 05c1 lock. Any scientifically justified change requires a new versioned stage.",
+  "scientific_state": {
+    "MOFA_model_fitting_performed": false,
+    "TARGET_model_fitting_performed": false,
+    "architecture_selected": false,
+    "biological_annotations_loaded": false,
+    "clinical_labels_loaded": false,
+    "neural_model_fitting_performed": false,
+    "outcomes_loaded": false,
+    "stability_gate_thresholds_retuned": false
+  },
+  "scope": {
+    "base_model_ids": [
+      "PCA_RNA",
+      "PCA_METHYLATION",
+      "PCA_CNV",
+      "BLOCK_PCA"
+    ],
+    "latent_rank_grid": [
+      5,
+      10,
+      15
+    ],
+    "model_families": [
+      "modality_specific_PCA",
+      "block_scaled_PCA"
+    ],
+    "n_datasets": 720,
+    "primary_linear_rank": 10,
+    "simulation_stage": "architecture_screening"
+  },
+  "script_version": "05c1-fit-linear-simulation-baselines-v1-no-cli",
+  "simulation_truth_evaluation": {
+    "factor_level_and_subspace_level_metrics_separate": true,
+    "factor_truth_match_absolute_correlation": 0.5,
+    "full_data_fit_allowed_for_truth_recovery": true,
+    "full_data_truth_recovery_not_used_as_heldout_reconstruction": true,
+    "heldout_reconstruction_uses_complete_known_simulation_truth": true,
+    "integrated_sample_anchor": "RNA row_source",
+    "pair_corruption_truth": "Cross-view retrieval is scored against row_source arrays, not nominal row index. Nominal-index retrieval is retained only as a diagnostic.",
+    "rotationally_ambiguous_factor_claims_allowed": false
+  },
+  "upstream_hashes": {
+    "paper5\\data_manifest\\TARGET_OS_technical_metadata\\TARGET_OS_technical_metadata_preflight_lock.json": "d40906a27d1120a128fd3a8efc489dd7d0ca97bf9631a48f9c7f3263d460b8bb",
+    "paper5\\data_manifest\\TARGET_OS_technical_metadata\\TARGET_OS_technical_metadata_preflight_manifest.json": "73232610dcd3f0e2c9a45d7c3a66c0eaac138766a9cf339ed03cd67d282ef532",
+    "paper5\\method_contract\\05a1\\simulation_and_technical_confound_addendum.json": "3aadb87386f796663e68b97fb608cb864c197013fe52c70ac5b37bed06e7a3e8",
+    "paper5\\method_contract\\05a1\\simulation_and_technical_confound_addendum_lock.json": "61969f36872e3e508a239d5e6903ae3395fd36ec74ee7aa4e31740a514c119e3",
+    "paper5\\method_contract\\05a\\ai_method_contract.json": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+    "paper5\\method_contract\\05a\\ai_method_contract_lock.json": "cc62dcc75c5f06e0c2c7220d1419392f8838b9eccad4ae916831689255dfc9f0",
+    "paper5\\method_contract\\05a\\failure_gate_registry.csv": "32b9bd92db7b6455744a4aba03c6cdd1e9966b1b8e408e7451147d407fd06083",
+    "paper5\\method_contract\\05a\\metric_registry.csv": "b0e70d2ccb8821ef44ef4d0baec5848edc4a156f139004317ff26e7bb518ee9b",
+    "paper5\\method_contract\\05a\\model_family_registry.csv": "b0a70a5f5df4b30a6aa2d4069e15d1d1b9fe3b770f8c5ef16248301acabf1a39",
+    "paper5\\method_contract\\05a\\model_selection_policy.json": "8d8b39d3d424e695324085ee533f13a555dada9b65acbc6718d7809ce07d0b44",
+    "paper5\\method_contract\\05a\\sable_mo_architecture_profiles.csv": "e5be64ebd2986a06f80288d78d10dcc739f05f157333ad6fc183a8d271aa9f5a",
+    "paper5\\method_contract\\05b_v2\\architecture_screening_data_manifest.csv": "f3980e88aff408b65cbfce96aca50bad4fc08ecece2bc42bbc04f365c35d9c87",
+    "paper5\\method_contract\\05b_v2\\simulation_generation_v2_lock.json": "1198da23059876a439183b35c8d095f8731bcddd98aa0964da2486995aefd524"
+  }
+}

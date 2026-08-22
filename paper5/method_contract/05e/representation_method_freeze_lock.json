@@ -1,0 +1,78 @@
+{
+  "contract_version": "paper5-primary-proposed-representation-method-freeze-v1",
+  "created_at_utc": "2026-08-22T17:42:07+00:00",
+  "freeze": {
+    "path": "paper5/method_contract/05e/representation_method_freeze.json",
+    "sha256": "df01013be4d87fe7b67ea31a5d038ace8642ecb8cfc56d13b1bfa6414cb2d60f",
+    "size_bytes": 16963
+  },
+  "generated_files": {
+    "paper5/method_contract/05e/05e_README.txt": {
+      "path": "paper5/method_contract/05e/05e_README.txt",
+      "sha256": "b78e32bc5a6a5b73fd6fe68d5ff34f9372252ec9c14d4a2f32c5b017c6e9ea4c",
+      "size_bytes": 1955
+    },
+    "paper5/method_contract/05e/confirmatory_method_context_summary.csv": {
+      "path": "paper5/method_contract/05e/confirmatory_method_context_summary.csv",
+      "sha256": "36409b375e8ce79f0ef095bd93b84c1a798d619e79c28adabee9b63bc5bad56f",
+      "size_bytes": 6137
+    },
+    "paper5/method_contract/05e/neural_confirmatory_component_evidence.csv": {
+      "path": "paper5/method_contract/05e/neural_confirmatory_component_evidence.csv",
+      "sha256": "acc05e435c1e63cd900be4816950d62525ae8b4a5785fae0874b677c661d0267",
+      "size_bytes": 12632
+    },
+    "paper5/method_contract/05e/representation_method_freeze.json": {
+      "path": "paper5/method_contract/05e/representation_method_freeze.json",
+      "sha256": "df01013be4d87fe7b67ea31a5d038ace8642ecb8cfc56d13b1bfa6414cb2d60f",
+      "size_bytes": 16963
+    },
+    "paper5/method_contract/05e/sable_mo_confirmatory_stability_evidence.csv": {
+      "path": "paper5/method_contract/05e/sable_mo_confirmatory_stability_evidence.csv",
+      "sha256": "89e3bdacd7d927d667c38e778ec9aba6186b9ccdf015f9c91ac64e2d187a97eb",
+      "size_bytes": 880
+    }
+  },
+  "primary_proposed_method_id": "V4_SABLE_MO",
+  "rewrite_policy": "05e is immutable after creation. Any scientifically justified change requires a new versioned amendment. Do not rewrite 05e in response to final-gate, TARGET, biology, outcome, or secondary-comparator results.",
+  "script_source": {
+    "path": "paper5/scripts/05e_compare_ablate_and_freeze_method.py",
+    "sha256": "db2415ec671f716f6cd24dfec1a8fbdca843fc795b1b319eb4696249d4db5141",
+    "size_bytes": 70609
+  },
+  "script_version": "05e-compare-ablate-and-freeze-method-v1-no-cli",
+  "selected_profile_id": "ARCH_COMPACT__REG_WEAK",
+  "status": "FROZEN_PRIMARY_PROPOSED_REPRESENTATION_METHOD_BEFORE_FINAL_GATE_AND_TARGET",
+  "upstream_hashes": {
+    "paper5/method_contract/05a/ai_method_contract.json": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+    "paper5/method_contract/05a/ai_method_contract_lock.json": "cc62dcc75c5f06e0c2c7220d1419392f8838b9eccad4ae916831689255dfc9f0",
+    "paper5/method_contract/05a/model_family_registry.csv": "b0a70a5f5df4b30a6aa2d4069e15d1d1b9fe3b770f8c5ef16248301acabf1a39",
+    "paper5/method_contract/05a/model_selection_policy.json": "8d8b39d3d424e695324085ee533f13a555dada9b65acbc6718d7809ce07d0b44",
+    "paper5/method_contract/05a2/final_gate_failure_consequence_policy.json": "192692eda095f4ff0426c9029f8ce7d2ad45f5a2faee55a4b2e3352b08ff0f82",
+    "paper5/method_contract/05a2/inference_final_gate_implementation_amendment.json": "06b34c4e763a4dd150807afb4777ef4bcbb17abd7dc075b95baf438c9faad445",
+    "paper5/method_contract/05a2/inference_final_gate_implementation_amendment_lock.json": "052544f9230c961ac8d4e6b6cc8f763653fffc6b531468af1f21fa4c28da0932",
+    "paper5/method_contract/05c1/linear_baseline_results_manifest.json": "2c9797be68e881b81c75c5de7183715b62dfc333c39fb616d28d68b88dade135",
+    "paper5/method_contract/05c1/linear_simulation_baseline_lock.json": "b95dcf6e69fbf3b397f1fc344d31365449f0b880dd9cbe4f673bdd2c0b0ae5fa",
+    "paper5/method_contract/05c2b/mofa_baseline_results_manifest.json": "b56dc9a9d4c82f64cdef6192748ce01433a4eb8bba8cf22f1fe71a9d65d8722c",
+    "paper5/method_contract/05c2b/mofa_simulation_baseline_lock.json": "674c727a0a20c93a7c876b8c20d78e463adbee301300edea0a64c4f27383fd95",
+    "paper5/method_contract/05cmp1/secondary_comparator_implementation_contract.json": "418259cedd36cbd1913a4ff1ae9874a3decfddbb7a75e9b3bca2e9623f0aca95",
+    "paper5/method_contract/05cmp1/secondary_comparator_implementation_contract_lock.json": "37e0db502a88f7beab52f1457cb0c5367091314faa6b86c7796810d883f31648",
+    "paper5/method_contract/05d1/neural_simulation_evaluation_protocol.json": "3cc4660551ca8d5731c2043096a68a0a675505b1a2a2a7d6971b41b526c4dd03",
+    "paper5/method_contract/05d1/neural_simulation_protocol_lock.json": "b3f7d0c6528edaac8d91289332eb0fdf4a53cf1cc9d2c35b052d3987e3002066",
+    "paper5/method_contract/05d3/selected_neural_profile.json": "83ccee90a20b2fc51cec13de3f831835c85bbffc549a53d3cc6867c7bbfd1f0d",
+    "paper5/method_contract/05d3/selected_neural_profile_lock.json": "e91353d9e399842cbf2eae2e2d254c10229692fa00141f0fe7039a0888c9461f",
+    "paper5/method_contract/05d4/neural_confirmatory_ablation_results_lock.json": "fdeeaf06846a3f45b451766056f355897c4f2cc375d6702bc4a99fa854aa26df",
+    "paper5/method_contract/05d4/neural_confirmatory_ablation_results_manifest.json": "a5faaf5ce6111acd51db9b575d6943d2ee11fdddd281772c86bf5a237effb11a",
+    "paper5/method_contract/05d4a/05d4a_execution_record.json": "b3337cf29cc205c7a7c1d9df849c5bf511cea46fa2a4cbace86ef2c4874a49b9",
+    "paper5/method_contract/05d4a/05d4a_results_lock.json": "4b29413eadc046ea51169be25de0b660ff020c64dbada2130c0140cf49cee86b",
+    "paper5/method_contract/05d5/neural_confirmatory_stability_results_lock.json": "810f2fce90cfe39e3247ea8ab24d1de82bd691e7c052a58fa96dc21f8a0ac005",
+    "paper5/method_contract/05d5/neural_confirmatory_stability_results_manifest.json": "9b34dde9cd9de3c706b8c22ee4067892ec5057d88b3b7422edb5c5171cf89bc6",
+    "paper5/results/simulation_benchmark/05c1_linear_baselines/linear_dataset_metrics.csv.gz": "0d94815d50daaaf9baa55343682c43371561f137b4f5bca2cfe420eff51eebe2",
+    "paper5/results/simulation_benchmark/05c2_mofa/mofa_dataset_metrics.csv.gz": "d37231a9ee46e551329025a5aaa4be5e83ae947763a5b489fb8bc05a06ebc241",
+    "paper5/results/simulation_benchmark/05d_neural/confirmatory_ablation/neural_confirmatory_dataset_variant_metrics.csv.gz": "9249e41112eb4401e5e0e34ab8c7b3ede2440b5b018cba8e14ab93ed10c43a3f",
+    "paper5/results/simulation_benchmark/05d_neural/confirmatory_ablation/neural_confirmatory_variant_summary.csv": "d07a2681fa0894d51d671447109e28d2395437fb9a4c1b2a8d387e5572e8b105",
+    "paper5/results/simulation_benchmark/05d_neural/confirmatory_ablation_audit/05d4a_headline_contrast_summary.csv": "41969d5796b74500365e01a9d4fb9db5d467ce6ac855bf4b90d76755c61bc0e1",
+    "paper5/results/simulation_benchmark/05d_neural/confirmatory_stability/neural_confirmatory_stability_dataset_summary.csv.gz": "b1d9aaf7f96306af3b0dd7d405b1bf6eba7630913b403b61304ddade7c4b9928",
+    "paper5/results/simulation_benchmark/05d_neural/confirmatory_stability/neural_confirmatory_stability_overall_summary.csv": "e2ef55e95ef3bc1d5e8435b644b29f3965fb21107d7f4edaeaf5c40f802e398f"
+  }
+}

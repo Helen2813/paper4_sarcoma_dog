@@ -1,0 +1,62 @@
+{
+  "fixture_version": "paper5-target-input-synthetic-fixture-v1",
+  "generator_latents_are_test_truth_not_scientific_representation": true,
+  "generator_private_latent_dim_per_view": 2,
+  "generator_shared_latent_dim": 4,
+  "malformed_cases": {
+    "all_views_missing_fixture": "paper5\\development_fixtures\\target_input_synthetic_v1\\malformed\\all_views_missing_sample.csv",
+    "duplicate_sample_id_fixture": "paper5\\development_fixtures\\target_input_synthetic_v1\\malformed\\duplicate_sample_ids.csv",
+    "mask_matrix_inconsistency_fixture": "paper5\\development_fixtures\\target_input_synthetic_v1\\malformed\\mask_matrix_inconsistency.json",
+    "pairing_duplicate_target_fixture": "paper5\\development_fixtures\\target_input_synthetic_v1\\malformed\\pairing_duplicate_target.csv"
+  },
+  "pairing_truth": {
+    "pairing_corruption": {
+      "cnv_swapped_anchor_index_pairs": [
+        [
+          8,
+          9
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "methylation_rotated_anchor_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "n_corrupted_anchor_rows": 10
+    }
+  },
+  "rng_seed": 20260821,
+  "synthetic_only": true,
+  "validation": {
+    "corrupted_pairing_anchor_rows": 10,
+    "matrix_shapes": {
+      "cnv": [
+        24,
+        30
+      ],
+      "methylation": [
+        24,
+        50
+      ],
+      "rna": [
+        24,
+        40
+      ]
+    },
+    "methylation_feature_level_nan_count_in_available_rows": 5,
+    "n_missing_view_rows": {
+      "cnv": 7,
+      "methylation": 8,
+      "rna": 6
+    },
+    "n_samples": 24,
+    "valid_fixture_pass": true
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "created_at_utc": "2026-08-21T21:55:40+00:00",
+  "development_boundaries": {
+    "allowed_uses": [
+      "input-loader development",
+      "shape/schema validation",
+      "view-availability validation",
+      "pairing validation",
+      "missing-view code-path testing",
+      "feature-level missing-value handling",
+      "development-only split/seed plumbing",
+      "negative/failure-path tests"
+    ],
+    "forbidden_interpretations": [
+      "scientific performance estimate",
+      "TARGET performance proxy",
+      "representation-method selection",
+      "latent-dimension selection",
+      "threshold selection",
+      "biology or outcome analysis"
+    ]
+  },
+  "fixture_files": {
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\cnv.npy": {
+      "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\cnv.npy",
+      "sha256": "266fd02b86ec51d87f14e519f2177a1ff98575e313e33f57e08c1fb36aab8d29",
+      "size_bytes": 3008
+    },
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\cnv_features.csv": {
+      "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\cnv_features.csv",
+      "sha256": "4e10bf43d3c2ebc55ab93cdd7295775ce3be23757b00534302aa34d9b5468dbf",
+      "size_bytes": 785
+    },
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\development_folds.csv": {
+      "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\development_folds.csv",
+      "sha256": "05bdd3a85b2b3309c158e0615f37ec43c0aaf6ae777510d27c04e33c32f52c7e",
+      "size_bytes": 5551
+    },
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\development_seed_registry.csv": {
+      "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\development_seed_registry.csv",
+      "sha256": "37fa6cd7369a531f079ecbee62dc3f80751fbb72228920282183587825479bf5",
+      "size_bytes": 199
+    },
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\expected_input_schema.json": {
+      "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\expected_input_schema.json",
+      "sha256": "9ca0c908397e7759396a94ffba1690e1d4f6643552441bbed720e97ecc0662d9",
+      "size_bytes": 2506
+    },
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\malformed\\all_views_missing_sample.csv": {
+      "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\malformed\\all_views_missing_sample.csv",
+      "sha256": "aa195c2b23896aa6a0727f8ccb483e49d8730f056b3b2ce018c5c0ac92711e23",
+      "size_bytes": 1142
+    },
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\malformed\\duplicate_sample_ids.csv": {
+      "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\malformed\\duplicate_sample_ids.csv",
+      "sha256": "e9184c23e25ab56ea1c3cda4dcda056c1a6078275ab9e5f60210fb94cce0519d",
+      "size_bytes": 287
+    },
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\malformed\\mask_matrix_inconsistency.json": {
+      "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\malformed\\mask_matrix_inconsistency.json",
+      "sha256": "3a96ea4e34260b88efedf42ea50d46aa4d25f6ebb0f4194cc3c71f2ecfd05984",
+      "size_bytes": 245
+    },
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\malformed\\pairing_duplicate_target.csv": {
+      "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\malformed\\pairing_duplicate_target.csv",
+      "sha256": "fd7d5bec93c3af0481b1a9a93f95e81f04d1b7d8961bf61392bc6f2f5db01fb5",
+      "size_bytes": 1073
+    },
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\methylation.npy": {
+      "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\methylation.npy",
+      "sha256": "7da1a6e68bbd3609dd0c0e3eb896aad1295a89f8d89b1ede0bebed3e4a2b7d61",
+      "size_bytes": 4928
+    },
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\methylation_features.csv": {
+      "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\methylation_features.csv",
+      "sha256": "843d4b84cf1629825998353fb01beaeafa33f5158b899700ea1be3bb03162831",
+      "size_bytes": 1735
+    },
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\pairing_map_correct.csv": {
+      "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\pairing_map_correct.csv",
+      "sha256": "5e270965e7cd36c075c32b854f08eb2881f206e5b4b94725a297c74d6c5d9797",
+      "size_bytes": 1042
+    },
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\pairing_map_corrupted.csv": {
+      "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\pairing_map_corrupted.csv",
+      "sha256": "a703a82cc3bb924ded132f697303ebb0dc5c203ad5cc87615b0fb6195fdc5e65",
+      "size_bytes": 1202
+    },
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\rna.npy": {
+      "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\rna.npy",
+      "sha256": "05b15c86877eb1d200ddb9aa2aa8e7dc032ef38afddeb28a76b46e16c81f44da",
+      "size_bytes": 3968
+    },
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\rna_features.csv": {
+      "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\rna_features.csv",
+      "sha256": "417fa2f8142c8556a3fa28905577f9e586e1c60b6738c7476f9572ad62721213",
+      "size_bytes": 1035
+    },
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\sample_manifest.csv": {
+      "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\sample_manifest.csv",
+      "sha256": "6d5dc85606047abcb10b436b6fbc8066f73233f6628eb024ad189695785c5509",
+      "size_bytes": 913
+    },
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\synthetic_generator_truth.json": {
+      "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\synthetic_generator_truth.json",
+      "sha256": "03c7446d6f34ea470b0b03712cbdf86d03b75f47e048ffe957d77d963d010d3f",
+      "size_bytes": 1719
+    },
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\view_availability.csv": {
+      "path": "paper5\\development_fixtures\\target_input_synthetic_v1\\view_availability.csv",
+      "sha256": "88d3a9d688e7c97f810c9db410919b95b2708a03a8d12ce0bf58b2dc74aa4eaa",
+      "size_bytes": 1108
+    }
+  },
+  "fixture_version": "paper5-target-input-synthetic-fixture-v1",
+  "generator_constants": {
+    "generator_private_latent_dim": 2,
+    "generator_shared_latent_dim": 4,
+    "n_cnv": 30,
+    "n_methylation": 50,
+    "n_rna": 40,
+    "n_samples": 24,
+    "rng_seed": 20260821
+  },
+  "post_05e_rule": "After 05e selects/freezes the primary representation method, create a separate versioned synthetic selected-method output fixture if needed. Do not retroactively rewrite 05dev0.",
+  "prospective_anchor": {
+    "05a2_amendment_sha256": "06b34c4e763a4dd150807afb4777ef4bcbb17abd7dc075b95baf438c9faad445",
+    "05a2_lock_sha256": "052544f9230c961ac8d4e6b6cc8f763653fffc6b531468af1f21fa4c28da0932"
+  },
+  "purpose": "Freeze synthetic, method-agnostic TARGET INPUT fixtures before downstream TARGET code is written, so loaders/validators/pairing/split plumbing can be developed without touching real TARGET values.",
+  "scientific_state": {
+    "TARGET_outcomes_accessed": false,
+    "biological_annotations_accessed": false,
+    "final_representation_method_selected_by_fixture": false,
+    "latent_output_schema_frozen_by_fixture": false,
+    "real_TARGET_values_accessed": false,
+    "scientific_TARGET_seeds_defined_by_fixture": false,
+    "scientific_TARGET_splits_defined_by_fixture": false
+  },
+  "script_version": "05dev0-freeze-target-input-synthetic-fixtures-v1-no-cli",
+  "status": "FROZEN_SYNTHETIC_TARGET_INPUT_FIXTURES_BEFORE_TARGET_CODE"
+}

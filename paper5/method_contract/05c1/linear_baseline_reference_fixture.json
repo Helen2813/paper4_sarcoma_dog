@@ -1,0 +1,20 @@
+{
+  "block_pca_rank5": {
+    "heldout_normalized_reconstruction_error": 0.2856137291599051,
+    "modality_contribution_entropy": 0.9932022333329137,
+    "random_adjusted_cross_view_mrr": 0.4657801818045226
+  },
+  "block_scales": {
+    "CNV": 7.0710678118654755,
+    "METHYLATION": 9.486832980505138,
+    "RNA": 7.745966692414834
+  },
+  "feature_counts": {
+    "CNV": 50,
+    "METHYLATION": 90,
+    "RNA": 60
+  },
+  "fixture_id": "05c1-linear-reference-v1",
+  "n_samples": 40,
+  "status": "PASS"
+}

@@ -1,0 +1,106 @@
+{
+  "contract_version": "paper5-mofa-simulation-baseline-benchmark-v1",
+  "created_at_utc": "2026-08-12T09:21:18.495338+00:00",
+  "generated_files": {
+    "paper5\\method_contract\\05c2b\\mofa_baseline_environment_snapshot.json": {
+      "sha256": "e1ab4c7d2fb7f771839870db53808965853fd25d94a7fb2d5597690d26aac986",
+      "size_bytes": 904
+    },
+    "paper5\\method_contract\\05c2b\\mofa_baseline_reference_fixture.json": {
+      "sha256": "4d187bc916ede8f6d78527a90c9a35229e6707e61504c8730adae863a94541d6",
+      "size_bytes": 819
+    },
+    "paper5\\method_contract\\05c2b\\mofa_baseline_results_manifest.json": {
+      "sha256": "b56dc9a9d4c82f64cdef6192748ce01433a4eb8bba8cf22f1fe71a9d65d8722c",
+      "size_bytes": 5937
+    },
+    "paper5\\method_contract\\05c2b\\mofa_baseline_shard_manifest.csv": {
+      "sha256": "92223ff30f776c47fc60dc8069bf004cb5f4ec0043e90a3d9922eb6d765c6efc",
+      "size_bytes": 1624346
+    },
+    "paper5\\method_contract\\05c2b\\mofa_simulation_baseline_README.txt": {
+      "sha256": "0059129698485a225cb96c8186fdb69d34e3eaa5f9b092d9a8bc883fce493a53",
+      "size_bytes": 1440
+    },
+    "paper5\\method_contract\\05c2b\\mofa_simulation_evaluation_protocol.json": {
+      "sha256": "358f72f05cd695704edeb4d2e768d1215da96cfa5b795fd966df4410df61b278",
+      "size_bytes": 7114
+    },
+    "paper5\\results\\simulation_benchmark\\05c2_mofa\\mofa_dataset_metrics.csv.gz": {
+      "sha256": "d37231a9ee46e551329025a5aaa4be5e83ae947763a5b489fb8bc05a06ebc241",
+      "size_bytes": 708464
+    },
+    "paper5\\results\\simulation_benchmark\\05c2_mofa\\mofa_factor_truth_match_audit.csv.gz": {
+      "sha256": "9926a24d0646d9d891432c1adac72723eb8610134116f49902d21827868a2d71",
+      "size_bytes": 2139312
+    },
+    "paper5\\results\\simulation_benchmark\\05c2_mofa\\mofa_failure_gate_audit.csv.gz": {
+      "sha256": "976c091d92863e3ee22f40267213d2298f4021abb910e3381b7086b03e16a2f5",
+      "size_bytes": 122695
+    },
+    "paper5\\results\\simulation_benchmark\\05c2_mofa\\mofa_fit_audit.csv.gz": {
+      "sha256": "2591c9b0816a4536a10ce16d6f2663a8720a0f39253f29f86878d9bcdf4a8d33",
+      "size_bytes": 959894
+    },
+    "paper5\\results\\simulation_benchmark\\05c2_mofa\\mofa_fold_metrics.csv.gz": {
+      "sha256": "029cbef1c8161ed6e9acfec33da732dfdd6ea2ca3a682d99a72d8e35bc2a0fda",
+      "size_bytes": 1879256
+    },
+    "paper5\\results\\simulation_benchmark\\05c2_mofa\\mofa_preprocessing_audit.csv.gz": {
+      "sha256": "976542293e522b5b85a78cb3c38e35e55f24fd16cbffad5273b4f32aa688e056",
+      "size_bytes": 576504
+    },
+    "paper5\\results\\simulation_benchmark\\05c2_mofa\\mofa_scenario_summary.csv": {
+      "sha256": "7a79ef8af9606399ec3bc3f8b359423c032b8fd248a717574802504e3a634d12",
+      "size_bytes": 120163
+    },
+    "paper5\\results\\simulation_benchmark\\05c2_mofa\\mofa_vs_block_pca_same_rank_dataset_comparison.csv.gz": {
+      "sha256": "f7b654b82c5c2254c6546dc6f53fe89f359c692b613638d9abe35881eba42cab",
+      "size_bytes": 331844
+    },
+    "paper5\\results\\simulation_benchmark\\05c2_mofa\\mofa_vs_block_pca_same_rank_scenario_summary.csv": {
+      "sha256": "c988a6444c3ad808dbee1eb753b32e8798b73132e7902f16b9744c7bbaefdade",
+      "size_bytes": 47975
+    }
+  },
+  "result_manifest": {
+    "path": "paper5\\method_contract\\05c2b\\mofa_baseline_results_manifest.json",
+    "sha256": "b56dc9a9d4c82f64cdef6192748ce01433a4eb8bba8cf22f1fe71a9d65d8722c"
+  },
+  "rewrite_policy": "This zero-argument script never rewrites a frozen 05c2b result. Any scientifically justified change requires a new versioned stage.",
+  "scientific_state": {
+    "MOFA_simulation_model_fitting_performed": true,
+    "TARGET_model_fitting_performed": false,
+    "architecture_selected": false,
+    "biological_annotations_loaded": false,
+    "clinical_labels_loaded": false,
+    "final_gate_calibration_data_used": false,
+    "neural_model_fitting_performed": false,
+    "outcomes_loaded": false,
+    "stability_gate_thresholds_retuned": false
+  },
+  "scope": {
+    "n_dataset_rank_all_fold_pass": 2880,
+    "n_dataset_rank_rows": 2880,
+    "n_datasets": 720,
+    "n_fit_audit_rows": 17280,
+    "n_fit_fail": 0,
+    "n_fit_pass": 17280,
+    "n_fold_rows": 14400,
+    "n_full_truth_fit_pass": 2880,
+    "n_scenarios": 36,
+    "ranks": [
+      5,
+      10,
+      15,
+      20
+    ]
+  },
+  "script_version": "05c2b-fit-mofa-simulation-baselines-v1-no-cli",
+  "shard_manifest": {
+    "n_rows": 2880,
+    "path": "paper5\\method_contract\\05c2b\\mofa_baseline_shard_manifest.csv",
+    "sha256": "92223ff30f776c47fc60dc8069bf004cb5f4ec0043e90a3d9922eb6d765c6efc"
+  },
+  "status": "FROZEN_MOFA_BASELINE_RESULTS_BEFORE_NEURAL_FITTING_AND_ARCHITECTURE_SELECTION"
+}

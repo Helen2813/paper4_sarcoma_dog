@@ -1,0 +1,147 @@
+{
+  "addendum_version": "sable-mo-prospective-simulation-technical-addendum-v3-no-cli",
+  "amendment_scope": {
+    "base_05a_is_modified": false,
+    "reason": "Methodological additions were frozen after a disclosed data-only 05b v1 pilot materialization but before any simulation model, TARGET representation model, biological analysis, or outcome analysis was fitted. The v1 pilot is excluded from confirmatory evaluation.",
+    "sections_extended": [
+      "simulation scenario taxonomy",
+      "factor-level and subspace-level truth recovery",
+      "stability-gate operating characteristics",
+      "technical batch-confound stress tests",
+      "TARGET technical metadata preflight",
+      "external method benchmark hierarchy",
+      "novelty positioning guardrails"
+    ]
+  },
+  "architecture_screening": {
+    "addendum_scenarios": 20,
+    "base_05a_scenarios": 16,
+    "combined_replicates": 720,
+    "combined_scenarios": 36,
+    "materialization_timing": "05b v1 pilot materialized before 05a1 and excluded; all confirmatory v2 datasets are generated after the 05a1 freeze",
+    "replicate_registry": "paper5\\method_contract\\05a1\\combined_architecture_screening_replicates.csv",
+    "replicates_per_addendum_scenario": 20,
+    "scenario_file": "paper5\\method_contract\\05a1\\combined_architecture_screening_scenarios.csv",
+    "stability_resamples_per_dataset": 20
+  },
+  "base_05a_reference": {
+    "base_contract_status": "FROZEN_BEFORE_MODEL_FITTING",
+    "contract_path": "paper5\\method_contract\\05a\\ai_method_contract.json",
+    "contract_sha256": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+    "lock_path": "paper5\\method_contract\\05a\\ai_method_contract_lock.json",
+    "lock_sha256": "cc62dcc75c5f06e0c2c7220d1419392f8838b9eccad4ae916831689255dfc9f0"
+  },
+  "created_at_utc": "2026-08-11T20:35:13.885598+00:00",
+  "external_benchmark_amendment": "paper5\\method_contract\\05a1\\external_method_benchmark_addendum.json",
+  "final_gate_calibration": {
+    "confidence_intervals": "Wilson 95% intervals for binomial operating properties and bootstrap percentile intervals for continuous metrics",
+    "execution_timing": "only after the model architecture is frozen from the broad simulation benchmark",
+    "n_planned_datasets": 3100,
+    "n_scenarios": 24,
+    "non_null_replicates": 100,
+    "null_and_batch_replicates": 200,
+    "replicate_registry": "paper5\\method_contract\\05a1\\final_gate_calibration_replicates.csv",
+    "scenario_file": "paper5\\method_contract\\05a1\\final_gate_calibration_scenarios.csv",
+    "stability_resamples_per_dataset": 100,
+    "threshold_retuning_after_results": false
+  },
+  "generated_artifacts": [
+    "paper5\\method_contract\\05a1\\architecture_screening_addendum_scenarios.csv",
+    "paper5\\method_contract\\05a1\\architecture_screening_addendum_replicates.csv",
+    "paper5\\method_contract\\05a1\\final_gate_calibration_scenarios.csv",
+    "paper5\\method_contract\\05a1\\final_gate_calibration_replicates.csv",
+    "paper5\\method_contract\\05a1\\combined_architecture_screening_scenarios.csv",
+    "paper5\\method_contract\\05a1\\combined_architecture_screening_replicates.csv",
+    "paper5\\method_contract\\05a1\\simulation_truth_taxonomy.csv",
+    "paper5\\method_contract\\05a1\\stability_gate_operating_metric_registry.csv",
+    "paper5\\method_contract\\05a1\\stability_gate_decision_registry.csv",
+    "paper5\\method_contract\\05a1\\target_technical_covariate_registry.csv",
+    "paper5\\method_contract\\05a1\\target_technical_metadata_preflight_contract.json",
+    "paper5\\method_contract\\05a1\\external_method_benchmark_addendum.json",
+    "paper5\\method_contract\\05a1\\novelty_positioning_contract.json",
+    "paper5\\method_contract\\05a1\\addendum_environment_snapshot.json",
+    "paper5\\method_contract\\05a1\\pre_addendum_05b_pilot_materialization_disclosure.json"
+  ],
+  "generator_requirement": {
+    "current_05b_v1_full_generation_allowed": false,
+    "next_required_generator": "05b_generate_small_n_multiomics_simulations.py v2 reading both 05a and 05a1 registries and writing to a new v2 root",
+    "preexisting_05b_v1_pilot_allowed_for_primary_results": false,
+    "required_v2_output_root": "paper5/simulations/sable_mo_v2",
+    "required_version": "sable-mo-simulation-generator-v2"
+  },
+  "guardrails": [
+    "05a remains immutable and is referenced by hash.",
+    "Any pre-addendum 05b v1 data-only materialization is disclosed and excluded from confirmatory analysis.",
+    "No simulation model was fitted before this addendum was frozen.",
+    "No TARGET representation model was fitted before this addendum was frozen.",
+    "No outcome, clinical label, or biological annotation is used in model selection.",
+    "A stable factor is not automatically interpreted as biological.",
+    "Factor-level failure under rotational ambiguity does not imply subspace failure.",
+    "Technical batch factors must be flagged rather than promoted as biology.",
+    "Primary stability thresholds cannot be retuned after simulation results are viewed.",
+    "Final gate calibration is performed only for the architecture frozen after broad screening.",
+    "MLOmics Top features are forbidden because they use label-based ANOVA selection.",
+    "No first-method claim is allowed without a final systematic novelty search."
+  ],
+  "method": {
+    "name": "SABLE-MO",
+    "name_status": "provisional"
+  },
+  "novelty_positioning_contract": "paper5\\method_contract\\05a1\\novelty_positioning_contract.json",
+  "operating_targets": {
+    "batch_null_false_acceptance_max": 0.1,
+    "null_familywise_false_acceptance_max": 0.1,
+    "rotational_n62_signal1_subspace_tpr_min": 0.8,
+    "standard_n62_signal1_fnr_max": 0.2,
+    "standard_n62_signal1_tpr_min": 0.8,
+    "view_support_classification_accuracy_min": 0.8
+  },
+  "pre_addendum_05b_pilot": {
+    "disclosure_file": "paper5\\method_contract\\05a1\\pre_addendum_05b_pilot_materialization_disclosure.json",
+    "eligible_for_confirmatory_analysis": false,
+    "interpretation": "Simulation arrays were materialized before the expanded 05a1 design was frozen, but no simulation model, TARGET representation model, biological analysis, or outcome analysis had been fitted. The v1 datasets are therefore retained as an auditable developmental pilot and excluded from confirmatory evaluation.",
+    "n_locked_manifest_datasets": 620,
+    "n_unlocked_extra_files": 2,
+    "present": true
+  },
+  "scientific_state": {
+    "biological_annotations_loaded": false,
+    "clinical_labels_loaded": false,
+    "outcome_loaded": false,
+    "prospective_before_model_fitting": true,
+    "prospective_before_simulation_materialization": false,
+    "simulation_data_materialized_before_addendum": true,
+    "simulation_model_fitting_performed": false,
+    "simulation_results_viewed": false,
+    "target_model_fitting_performed": false,
+    "target_representation_results_viewed": false
+  },
+  "script_version": "05a1-freeze-simulation-technical-confound-addendum-v3-no-cli",
+  "status": "FROZEN_BEFORE_MODEL_FITTING_AFTER_DISCLOSED_PILOT_MATERIALIZATION",
+  "technical_confound": {
+    "batch_truth_match_absolute_correlation": 0.5,
+    "candidate_covariate_registry": "paper5\\method_contract\\05a1\\target_technical_covariate_registry.csv",
+    "real_data_preflight_contract": "paper5\\method_contract\\05a1\\target_technical_metadata_preflight_contract.json",
+    "simulation_truth_available": true,
+    "stable_factor_assumed_biological": false,
+    "technical_association_thresholds": {
+      "absolute_spearman_rho": 0.3,
+      "bh_q_value": 0.05,
+      "eta_squared": 0.1,
+      "maximum_categorical_levels": 10,
+      "maximum_missing_fraction": 0.3,
+      "maximum_unique_fraction": 0.5,
+      "minimum_level_size": 5,
+      "permutations": 10000,
+      "standardized_mean_difference": 0.5
+    },
+    "technical_family_is_separate_multiplicity_family": true
+  },
+  "truth_matching": {
+    "factor_alignment": "Hungarian matching followed by sign alignment",
+    "factor_truth_match_absolute_correlation": 0.5,
+    "rotational_rule": "When individual factors are not identifiable but the latent subspace is stable, retain a stable subspace label and forbid individual factor claims.",
+    "subspace_alignment": "principal angles and normalized projection-matrix distance",
+    "view_support_truth": "ALL3, RNA_METH, RNA_CNV, METH_CNV, or private"
+  }
+}

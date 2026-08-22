@@ -1,0 +1,63 @@
+{
+  "audit_version": "sable-mo-05d4a-paired-confirmatory-ablation-audit-v1",
+  "created_at_utc": "2026-08-21T19:51:56+00:00",
+  "execution_record": {
+    "path": "paper5\\method_contract\\05d4a\\05d4a_execution_record.json",
+    "sha256": "b3337cf29cc205c7a7c1d9df849c5bf511cea46fa2a4cbace86ef2c4874a49b9",
+    "size_bytes": 6127
+  },
+  "generated_files": {
+    "paper5\\method_contract\\05d4a\\05d4a_README.txt": {
+      "path": "paper5\\method_contract\\05d4a\\05d4a_README.txt",
+      "sha256": "e750fc483e4517bfec1026efcdf710ff7c193ab58ab80a56798333fd7866416a",
+      "size_bytes": 5134
+    },
+    "paper5\\method_contract\\05d4a\\05d4a_contrast_registry.csv": {
+      "path": "paper5\\method_contract\\05d4a\\05d4a_contrast_registry.csv",
+      "sha256": "2d5b2cdde7219825369f6f8df7e50ced765f5c15ddcb7c005f392da04051c89f",
+      "size_bytes": 2157
+    },
+    "paper5\\method_contract\\05d4a\\05d4a_execution_record.json": {
+      "path": "paper5\\method_contract\\05d4a\\05d4a_execution_record.json",
+      "sha256": "b3337cf29cc205c7a7c1d9df849c5bf511cea46fa2a4cbace86ef2c4874a49b9",
+      "size_bytes": 6127
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation_audit\\05d4a_headline_contrast_summary.csv": {
+      "path": "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation_audit\\05d4a_headline_contrast_summary.csv",
+      "sha256": "41969d5796b74500365e01a9d4fb9db5d467ce6ac855bf4b90d76755c61bc0e1",
+      "size_bytes": 11321
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation_audit\\05d4a_paired_dataset_deltas.csv.gz": {
+      "path": "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation_audit\\05d4a_paired_dataset_deltas.csv.gz",
+      "sha256": "2f91d50a1a1325e991d8c613181214e8c54639b55516f0b9915de57b9c841df4",
+      "size_bytes": 623652
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation_audit\\05d4a_paired_overall_summary.csv": {
+      "path": "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation_audit\\05d4a_paired_overall_summary.csv",
+      "sha256": "1179136bc3de9508eb56f1863cb609413c2f9ccf1d6961efc47cc1f9fd432f64",
+      "size_bytes": 58889
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation_audit\\05d4a_paired_scenario_family_summary.csv": {
+      "path": "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation_audit\\05d4a_paired_scenario_family_summary.csv",
+      "sha256": "1be3d88d164f9d8ea640e41a2cff61842c9514886b737c510ea5bb11d4ce4c52",
+      "size_bytes": 647501
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation_audit\\05d4a_paired_scenario_summary.csv": {
+      "path": "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation_audit\\05d4a_paired_scenario_summary.csv",
+      "sha256": "6c850c1b8b2fa8485c97d31f00f07a9a046c19576b880e74b78242a0ad1cac84",
+      "size_bytes": 2152912
+    }
+  },
+  "rewrite_policy": "05d4a does not rewrite frozen 05d4 results. Existing 05d4a outputs are immutable under this script; a scientifically justified change requires a new versioned audit stage.",
+  "script_version": "05d4a-read-only-paired-ablation-audit-v1-no-cli",
+  "source_05d4": {
+    "dataset_variant_path": "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation\\neural_confirmatory_dataset_variant_metrics.csv.gz",
+    "dataset_variant_sha256": "9249e41112eb4401e5e0e34ab8c7b3ede2440b5b018cba8e14ab93ed10c43a3f",
+    "lock_path": "paper5\\method_contract\\05d4\\neural_confirmatory_ablation_results_lock.json",
+    "lock_sha256": "fdeeaf06846a3f45b451766056f355897c4f2cc375d6702bc4a99fa854aa26df",
+    "profile_id": "ARCH_COMPACT__REG_WEAK",
+    "result_manifest_path": "paper5\\method_contract\\05d4\\neural_confirmatory_ablation_results_manifest.json",
+    "result_manifest_sha256": "a5faaf5ce6111acd51db9b575d6943d2ee11fdddd281772c86bf5a237effb11a"
+  },
+  "status": "DERIVED_READ_ONLY_AUDIT_OF_FROZEN_05D4_RESULTS"
+}

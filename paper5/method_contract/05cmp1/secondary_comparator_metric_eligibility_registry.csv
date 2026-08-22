@@ -1,0 +1,12 @@
+metric,iCluster2b_eligible,MOVE_eligible,interpretation,selection_consequence
+shared_subspace_recovery,YES,YES,simulation truth used only after fit for evaluation,NONE_FOR_05E_OR_FINAL_GATE
+factor_alignment_correlation,YES,YES,simulation truth used only after fit; sign/permutation invariant,NONE_FOR_05E_OR_FINAL_GATE
+scenario_robustness_summary,YES,YES,same frozen scenario groups; descriptive secondary comparator,NONE_FOR_05E_OR_FINAL_GATE
+missing_view_robustness,YES,YES,evaluate frozen missing-view scenarios under the fixed zero adapter,NONE_FOR_05E_OR_FINAL_GATE
+latent_subspace_stability,YES,YES,outcome-blind resampling/seed stability; method-specific implementation,NONE_FOR_05E_OR_FINAL_GATE
+heldout_reconstruction,NO,YES,MOVE-native; iCluster2b not promoted as directly comparable reconstruction endpoint,NONE_FOR_05E_OR_FINAL_GATE
+cross_view_retrieval_MRR,NO,NO,not a native apples-to-apples endpoint for these integrated comparator APIs,NONE_FOR_05E_OR_FINAL_GATE
+private_subspace_recovery,NO,NO,comparators do not define SABLE-MO view-private latent factors,NONE_FOR_05E_OR_FINAL_GATE
+SABLE_stability_gate_PASS_FAIL,NO,NO,SABLE-specific gate is not retrofitted onto external methods,NONE_FOR_05E_OR_FINAL_GATE
+primary_05e_selection_score,NO,NO,secondary comparators are ineligible to influence 05e,NONE_FOR_05E_OR_FINAL_GATE
+final_gate_decision,NO,NO,secondary comparators are ineligible to alter the frozen final gate,NONE_FOR_05E_OR_FINAL_GATE

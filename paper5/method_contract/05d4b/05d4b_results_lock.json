@@ -1,0 +1,98 @@
+{
+  "audit_version": "sable-mo-final-gate-design-audit-v1",
+  "created_at_utc": "2026-08-21T21:07:38+00:00",
+  "generated_files": {
+    "paper5\\method_contract\\05d4b\\05d4b_05a2_amendment_requirements.json": {
+      "path": "paper5\\method_contract\\05d4b\\05d4b_05a2_amendment_requirements.json",
+      "sha256": "539303519b657c53e0fcbc60d0408c82be34073ef84c14f756323bad13bfe66f",
+      "size_bytes": 7114
+    },
+    "paper5\\method_contract\\05d4b\\05d4b_README.txt": {
+      "path": "paper5\\method_contract\\05d4b\\05d4b_README.txt",
+      "sha256": "516206c565a09a910ed249620b0d4a5123d774499d96d7fb73d14f4004448229",
+      "size_bytes": 3093
+    },
+    "paper5\\method_contract\\05d4b\\05d4b_d01_pass_probability_curve.csv": {
+      "path": "paper5\\method_contract\\05d4b\\05d4b_d01_pass_probability_curve.csv",
+      "sha256": "20f7ccb29e5680148ddc12baebb3d345053be35323a76dda056b0ea49cd77d86",
+      "size_bytes": 2485
+    },
+    "paper5\\method_contract\\05d4b\\05d4b_d01_wilson_thresholds.csv": {
+      "path": "paper5\\method_contract\\05d4b\\05d4b_d01_wilson_thresholds.csv",
+      "sha256": "6406de82db106b4d830d39665ff19b2a6b5a796bc8daabe516cfa24c77f9d45d",
+      "size_bytes": 659
+    },
+    "paper5\\method_contract\\05d4b\\05d4b_d02_point_estimate_reference.csv": {
+      "path": "paper5\\method_contract\\05d4b\\05d4b_d02_point_estimate_reference.csv",
+      "sha256": "0214e90165ff8fc1ae7517a175fc1cbc5b8f49071e06efdace37a2b86756f2cf",
+      "size_bytes": 3394
+    },
+    "paper5\\method_contract\\05d4b\\05d4b_final_gate_design_audit.json": {
+      "path": "paper5\\method_contract\\05d4b\\05d4b_final_gate_design_audit.json",
+      "sha256": "201a3d7f6113b09f34d0b68cd86b8eb0f56942bda4ad70eab504cafa861a21f6",
+      "size_bytes": 7917
+    },
+    "paper5\\method_contract\\05d4b\\05d4b_final_gate_selector_membership.csv": {
+      "path": "paper5\\method_contract\\05d4b\\05d4b_final_gate_selector_membership.csv",
+      "sha256": "9390d17188afb775f835c8acac8650107c0d5ba46abced39251eccdf80072c06",
+      "size_bytes": 3963
+    }
+  },
+  "rewrite_policy": "05d4b is an immutable read-only design audit. It does not rewrite 05a/05a1 and does not itself freeze the recommended 05a2 clarifications. Any change requires a new versioned audit or the separately versioned 05a2 amendment.",
+  "scientific_state": {
+    "GPU_computation_performed": false,
+    "TARGET_accessed": false,
+    "biological_annotations_accessed": false,
+    "decision_rule_rewritten": false,
+    "final_gate_simulation_data_accessed": false,
+    "final_gate_simulation_data_materialized": false,
+    "model_fitting_performed": false,
+    "outcomes_accessed": false,
+    "threshold_retuning_performed": false
+  },
+  "script_version": "05d4b-read-only-final-gate-design-audit-v1-no-cli",
+  "source_provenance": {
+    "05a1_addendum": {
+      "path": "paper5\\method_contract\\05a1\\simulation_and_technical_confound_addendum.json",
+      "sha256": "3aadb87386f796663e68b97fb608cb864c197013fe52c70ac5b37bed06e7a3e8"
+    },
+    "05a1_lock": {
+      "path": "paper5\\method_contract\\05a1\\simulation_and_technical_confound_addendum_lock.json",
+      "sha256": "61969f36872e3e508a239d5e6903ae3395fd36ec74ee7aa4e31740a514c119e3"
+    },
+    "05a_contract": {
+      "path": "paper5\\method_contract\\05a\\ai_method_contract.json",
+      "sha256": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2"
+    },
+    "05a_lock": {
+      "path": "paper5\\method_contract\\05a\\ai_method_contract_lock.json",
+      "sha256": "cc62dcc75c5f06e0c2c7220d1419392f8838b9eccad4ae916831689255dfc9f0"
+    },
+    "05b_v2_lock": {
+      "path": "paper5\\method_contract\\05b_v2\\simulation_generation_v2_lock.json",
+      "sha256": "1198da23059876a439183b35c8d095f8731bcddd98aa0964da2486995aefd524"
+    },
+    "05d4a_lock_if_present": {
+      "path": "paper5\\method_contract\\05d4a\\05d4a_results_lock.json",
+      "present": true,
+      "sha256": "4b29413eadc046ea51169be25de0b660ff020c64dbada2130c0140cf49cee86b"
+    },
+    "final_gate_replicates": {
+      "path": "paper5\\method_contract\\05a1\\final_gate_calibration_replicates.csv",
+      "sha256": "a8e1fb8fa70a4585f43c11264b5a39f1459488c1089df2b10789e4670ff874f0"
+    },
+    "final_gate_scenarios": {
+      "path": "paper5\\method_contract\\05a1\\final_gate_calibration_scenarios.csv",
+      "sha256": "8695887dc0b27b69d87fa944ce1068fe149718ddf6c00a7d91e71ee1b1b306c2"
+    },
+    "gate_decisions": {
+      "path": "paper5\\method_contract\\05a1\\stability_gate_decision_registry.csv",
+      "sha256": "8c01e42f1700d92b2b7d56116388949eede9c1f50bc1d470f722ad5e85b73ed8"
+    },
+    "gate_metrics": {
+      "path": "paper5\\method_contract\\05a1\\stability_gate_operating_metric_registry.csv",
+      "sha256": "c186eebbc201e5f9ed3deedebec81d2b9b4a3201dde2274f0b85d18f6872812d"
+    }
+  },
+  "status": "DERIVED_READ_ONLY_FINAL_GATE_DESIGN_AUDIT"
+}

@@ -1,0 +1,6 @@
+family_id,analysis_stage,tests_grouped,adjustment,separate_from
+MF01_REPRESENTATION_PAIRING,representation benchmark,pairing-permutation tests across prespecified integrated models and primary cross-view metrics,Benjamini-Hochberg,"biological, external, and outcome families"
+MF02_PRIMARY_PROGRAM_ALIGNMENT,biological alignment,"all stable frozen factors by M34, M40, M11, and M24 in the primary TARGET representation",Benjamini-Hochberg,external-cohort and outcome families
+MF03_EXTERNAL_COHORT_ALIGNMENT,external validation,stable factor by frozen program tests within each external cohort,Benjamini-Hochberg separately within each prespecified cohort and assay family,primary representation and outcome families
+MF04_SPATIAL_ATAC_EXPLORATORY,spatial and chromatin annotation,spatial-region and ATAC-support tests for frozen stable factors,Benjamini-Hochberg within data type,confirmatory bulk-expression families
+MF05_OUTCOME_TRANSPORT,outcome analysis after representation freeze,frozen stable factors by prespecified endpoint within each cohort,"Benjamini-Hochberg within endpoint family; OS, DFI/metastasis, and RFS are not pooled",all outcome-blind representation families

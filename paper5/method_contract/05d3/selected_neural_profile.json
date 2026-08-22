@@ -1,0 +1,233 @@
+{
+  "contract_version": "paper5-selected-neural-profile-freeze-v1",
+  "created_at_utc": "2026-08-18T22:13:08.656408+00:00",
+  "development_screen_scope": {
+    "candidate_profiles": 9,
+    "dataset_profile_shards": 3240,
+    "development_datasets": 360,
+    "failed_shards": 0,
+    "fit_audit_rows": 74520,
+    "passed_shards": 3240,
+    "preprocessing_audit_rows": 223560,
+    "stability_factor_rows": 32400
+  },
+  "guardrails": [
+    "05d3 performs no neural fitting and no GPU computation.",
+    "The selected profile is read only from the frozen 05d2 v2 result and independently replayed from its frozen selection table.",
+    "All 3,240 05d2 v2 shard files are reverified against the frozen shard manifest before profile freeze.",
+    "Only development simulation replicates 1-10 informed profile selection.",
+    "Confirmatory simulation replicates 11-20 remain untouched at 05d3.",
+    "TARGET matrices, outcomes, and clinical labels remain untouched at 05d3.",
+    "Final gate-calibration simulations must not exist before this freeze.",
+    "The selected architecture and regularization parameters are copied exactly from the frozen 05d1 profile grid.",
+    "The frozen profile must be reused by confirmatory neural variants without profile retuning.",
+    "This neural-profile freeze does not select the final representation method."
+  ],
+  "next_required_stage": "05d4_fit_neural_ablation_benchmark_gpu.py",
+  "profile_application": {
+    "TARGET_may_change_profile": false,
+    "confirmatory_profile_retuning_allowed": false,
+    "confirmatory_replicates_11_to_20_may_change_profile": false,
+    "final_gate_calibration_may_change_profile": false,
+    "outcomes_may_change_profile": false,
+    "reused_without_profile_retuning_by": [
+      "V0_BALANCED_AE",
+      "V1_SHARED_PRIVATE_AE",
+      "V2_CONTRASTIVE_SPAE",
+      "V3_DROPOUT_SPAE",
+      "V5_SABLE_VAE"
+    ],
+    "selected_for": "V4_SABLE_MO"
+  },
+  "provenance": {
+    "05d1_profile_grid": {
+      "path": "paper5\\method_contract\\05d1\\neural_architecture_regularization_profile_grid.csv",
+      "sha256": "118b2fd4c16751f0b83ac3053f726f9421db26949ab98a8a531ff584c194ee32",
+      "size_bytes": 2040
+    },
+    "05d1_selection_contract": {
+      "path": "paper5\\method_contract\\05d1\\neural_profile_selection_contract.json",
+      "sha256": "4dc5ec24f19a7b575515d29628f1f3c2c0d6a69ffa7685ad81e1fafb05f39cd1",
+      "size_bytes": 5480
+    },
+    "05d2_v2_results_lock": {
+      "path": "paper5\\method_contract\\05d2_v2\\neural_profile_screen_results_lock.json",
+      "sha256": "1b5ef05f7d71393785a98d386c5b517e0dc51af9083a0643dd9e89488bb3d797",
+      "size_bytes": 5266
+    },
+    "05d2_v2_results_manifest": {
+      "path": "paper5\\method_contract\\05d2_v2\\neural_profile_screen_results_manifest.json",
+      "sha256": "441e2d33b2353f06047f67a6725bd7a09984f7a67b7c6864e29c5a0928f46bb3",
+      "size_bytes": 8243
+    },
+    "05d2_v2_selection_result": {
+      "path": "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_selection_result.json",
+      "sha256": "381eecd87476970b9e1f07cb70ba84ce8b9d03c1fcd93b220bfe61baedfa45d4",
+      "size_bytes": 1280
+    },
+    "05d2_v2_selection_table": {
+      "path": "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_selection_table.csv",
+      "sha256": "f71483d119f8d1abe764dd226ed814503bed2a19331f3c126130afc48c581d4b",
+      "size_bytes": 1951
+    },
+    "source_files": {
+      "paper5\\method_contract\\05a\\ai_method_contract.json": {
+        "sha256": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+        "size_bytes": 10644
+      },
+      "paper5\\method_contract\\05d1\\neural_architecture_regularization_profile_grid.csv": {
+        "sha256": "118b2fd4c16751f0b83ac3053f726f9421db26949ab98a8a531ff584c194ee32",
+        "size_bytes": 2040
+      },
+      "paper5\\method_contract\\05d1\\neural_confirmatory_ablation_fit_seed_registry.csv": {
+        "sha256": "bdc528af0e3d41e1d2713ad9557f21ca88a3faee5eb3f634d1607a94fe2007cb",
+        "size_bytes": 2142212
+      },
+      "paper5\\method_contract\\05d1\\neural_confirmatory_stability_resample_registry.csv": {
+        "sha256": "82cea9378300c45d6bbd10653fd5421d8ea39f35c00404b739c9294f38e70a6c",
+        "size_bytes": 810613
+      },
+      "paper5\\method_contract\\05d1\\neural_loss_and_architecture_contract.json": {
+        "sha256": "b90ded1d011ee3210154c2102389df0b4e0c8fcf668b70d7e2b8e14184e3f6b1",
+        "size_bytes": 10722
+      },
+      "paper5\\method_contract\\05d1\\neural_profile_selection_contract.json": {
+        "sha256": "4dc5ec24f19a7b575515d29628f1f3c2c0d6a69ffa7685ad81e1fafb05f39cd1",
+        "size_bytes": 5480
+      },
+      "paper5\\method_contract\\05d1\\neural_simulation_protocol_lock.json": {
+        "sha256": "b3f7d0c6528edaac8d91289332eb0fdf4a53cf1cc9d2c35b052d3987e3002066",
+        "size_bytes": 3378
+      },
+      "paper5\\method_contract\\05d2_v2\\neural_profile_screen_results_lock.json": {
+        "sha256": "1b5ef05f7d71393785a98d386c5b517e0dc51af9083a0643dd9e89488bb3d797",
+        "size_bytes": 5266
+      },
+      "paper5\\method_contract\\05d2_v2\\neural_profile_screen_results_manifest.json": {
+        "sha256": "441e2d33b2353f06047f67a6725bd7a09984f7a67b7c6864e29c5a0928f46bb3",
+        "size_bytes": 8243
+      },
+      "paper5\\method_contract\\05d2_v2\\neural_profile_screen_shard_manifest.csv": {
+        "sha256": "91afadb1268443f945cdf60f57c290a36d882c79cfcd35712d490504083151e2",
+        "size_bytes": 1741746
+      },
+      "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_overall_summary.csv": {
+        "sha256": "be6c318a013cb31d2040fd571dbd78759f15235422c01e7ab83c5ef0f28b28f5",
+        "size_bytes": 1806
+      },
+      "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_selection_result.json": {
+        "sha256": "381eecd87476970b9e1f07cb70ba84ce8b9d03c1fcd93b220bfe61baedfa45d4",
+        "size_bytes": 1280
+      },
+      "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_selection_table.csv": {
+        "sha256": "f71483d119f8d1abe764dd226ed814503bed2a19331f3c126130afc48c581d4b",
+        "size_bytes": 1951
+      }
+    }
+  },
+  "scientific_state": {
+    "TARGET_model_fitting_performed": false,
+    "biological_annotations_used_for_profile_selection": false,
+    "clinical_labels_loaded": false,
+    "confirmatory_neural_ablation_performed": false,
+    "confirmatory_replicates_11_to_20_accessed": false,
+    "development_neural_profile_screening_performed": true,
+    "development_neural_profile_selected": true,
+    "final_gate_calibration_data_used": false,
+    "outcomes_loaded": false,
+    "representation_method_selected": false,
+    "selected_neural_profile_frozen": true
+  },
+  "script_version": "05d3-freeze-selected-neural-profile-v1-no-cli",
+  "selected_profile": {
+    "architecture_profile": "compact",
+    "complexity": {
+      "architecture_complexity_rank": 1,
+      "combined_complexity_rank": 2,
+      "regularization_complexity_rank": 1
+    },
+    "parameters": {
+      "contrastive_temperature": 0.2,
+      "contrastive_weight": 0.1,
+      "cross_reconstruction_weight": 0.25,
+      "decoder_hidden_dim": 32,
+      "early_stopping_min_delta": 0.0001,
+      "early_stopping_patience": 30,
+      "encoder_hidden_dim": 32,
+      "learning_rate": 0.001,
+      "maximum_epochs": 400,
+      "modality_dropout_probability": 0.15,
+      "pca_components": {
+        "CNV": 10,
+        "METHYLATION": 10,
+        "RNA": 10
+      },
+      "private_latent_dim_per_view": 2,
+      "private_separation_weight": 0.05,
+      "reconstruction_weight": 1.0,
+      "shared_alignment_weight": 0.5,
+      "shared_latent_dim": 5,
+      "shared_private_orthogonality_weight": 0.05,
+      "weight_decay": 0.0001
+    },
+    "profile_id": "ARCH_COMPACT__REG_WEAK",
+    "regularization_profile": "weak",
+    "source_profile_grid_row": {
+      "arch_activation": "GELU",
+      "arch_cnv_pca_components": "10",
+      "arch_decoder_hidden_dim": "32",
+      "arch_early_stopping_min_delta": "0.0001",
+      "arch_early_stopping_patience": "30",
+      "arch_encoder_hidden_dim": "32",
+      "arch_full_batch_training": "True",
+      "arch_layer_normalization": "True",
+      "arch_maximum_epochs": "400",
+      "arch_methylation_pca_components": "10",
+      "arch_private_latent_dim_per_view": "2",
+      "arch_rna_pca_components": "10",
+      "arch_shared_latent_dim": "5",
+      "architecture_complexity_rank": "1",
+      "architecture_profile": "compact",
+      "combined_complexity_rank": "2",
+      "profile_id": "ARCH_COMPACT__REG_WEAK",
+      "reg_contrastive_temperature": "0.2",
+      "reg_contrastive_weight": "0.1",
+      "reg_cross_reconstruction_weight": "0.25",
+      "reg_learning_rate": "0.001",
+      "reg_modality_dropout_probability": "0.15",
+      "reg_private_separation_weight": "0.05",
+      "reg_reconstruction_weight": "1.0",
+      "reg_shared_alignment_weight": "0.5",
+      "reg_shared_private_orthogonality_weight": "0.05",
+      "reg_weight_decay": "0.0001",
+      "regularization_complexity_rank": "1",
+      "regularization_profile": "weak"
+    }
+  },
+  "selection_evidence": {
+    "best_mean_simulation_utility": 0.674453590656,
+    "best_profile_id": "ARCH_COMPACT__REG_WEAK",
+    "best_standard_error": 0.0271911923123,
+    "frozen_05d2_selection_order": [
+      "hard-gate eligibility",
+      "within one SE of highest eligible mean utility",
+      "lowest combined complexity rank",
+      "lowest architecture complexity rank",
+      "lowest regularization complexity rank",
+      "lexicographically smaller profile_id"
+    ],
+    "independent_rule_replay": "PASS",
+    "n_hard_gate_eligible_profiles": 3,
+    "n_within_one_se_profiles": 1,
+    "one_se_threshold": 0.6472623983436999,
+    "selected_mean_simulation_utility": 0.674453590656,
+    "selected_mean_stability_gated_false_biological_discovery_fraction": 0.0723039215686,
+    "selected_profile_id": "ARCH_COMPACT__REG_WEAK",
+    "selection_rule": "Among hard-gate-eligible profiles, identify the highest mean simulation utility. Profiles with mean utility >= best mean - SE(best) form the one-SE set. Select the lowest combined complexity rank; ties use architecture complexity, regularization complexity, then profile_id lexicographically.",
+    "selection_status": "PROFILE_SELECTED_BY_FROZEN_ONE_SE_RULE",
+    "within_one_se_profile_ids": [
+      "ARCH_COMPACT__REG_WEAK"
+    ]
+  },
+  "status": "FROZEN_OUTCOME_BLIND_NEURAL_PROFILE_BEFORE_CONFIRMATORY_ABLATION"
+}

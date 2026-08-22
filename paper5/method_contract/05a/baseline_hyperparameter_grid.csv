@@ -1,0 +1,17 @@
+model_family,parameter_set_id,latent_rank,ridge_penalty,feature_budget_role,likelihoods,native_missingness,inner_cv_required,notes
+MOFA_plus,MOFA_K5,5,,primary,gaussian;gaussian;gaussian,True,False,ARD and spike-and-slab sparsity enabled.
+MOFA_plus,MOFA_K10,10,,primary,gaussian;gaussian;gaussian,True,False,ARD and spike-and-slab sparsity enabled.
+MOFA_plus,MOFA_K15,15,,primary,gaussian;gaussian;gaussian,True,False,ARD and spike-and-slab sparsity enabled.
+MOFA_plus,MOFA_K20,20,,primary,gaussian;gaussian;gaussian,True,False,ARD and spike-and-slab sparsity enabled.
+ridge_generalized_CCA,RGCCA_K5_L0.1,5,0.1,primary,not_applicable,False,True,Fold-local median imputation and PCA compression are required.
+ridge_generalized_CCA,RGCCA_K5_L1,5,1.0,primary,not_applicable,False,True,Fold-local median imputation and PCA compression are required.
+ridge_generalized_CCA,RGCCA_K5_L10,5,10.0,primary,not_applicable,False,True,Fold-local median imputation and PCA compression are required.
+ridge_generalized_CCA,RGCCA_K5_L100,5,100.0,primary,not_applicable,False,True,Fold-local median imputation and PCA compression are required.
+ridge_generalized_CCA,RGCCA_K10_L0.1,10,0.1,primary,not_applicable,False,True,Fold-local median imputation and PCA compression are required.
+ridge_generalized_CCA,RGCCA_K10_L1,10,1.0,primary,not_applicable,False,True,Fold-local median imputation and PCA compression are required.
+ridge_generalized_CCA,RGCCA_K10_L10,10,10.0,primary,not_applicable,False,True,Fold-local median imputation and PCA compression are required.
+ridge_generalized_CCA,RGCCA_K10_L100,10,100.0,primary,not_applicable,False,True,Fold-local median imputation and PCA compression are required.
+ridge_generalized_CCA,RGCCA_K15_L0.1,15,0.1,primary,not_applicable,False,True,Fold-local median imputation and PCA compression are required.
+ridge_generalized_CCA,RGCCA_K15_L1,15,1.0,primary,not_applicable,False,True,Fold-local median imputation and PCA compression are required.
+ridge_generalized_CCA,RGCCA_K15_L10,15,10.0,primary,not_applicable,False,True,Fold-local median imputation and PCA compression are required.
+ridge_generalized_CCA,RGCCA_K15_L100,15,100.0,primary,not_applicable,False,True,Fold-local median imputation and PCA compression are required.

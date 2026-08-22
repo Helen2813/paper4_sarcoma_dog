@@ -1,0 +1,36 @@
+{
+  "forbidden": [
+    "choosing a fallback based on scientific performance",
+    "changing the primary SABLE-MO method or 05e decision",
+    "using TARGET outcomes or biological annotations to configure a comparator",
+    "modifying published comparator mathematics to make it run",
+    "replacing a failed comparator with a new method not named in 05cmp0 without a new prospective versioned amendment"
+  ],
+  "general_rule": "Comparator availability is determined by a predeclared smoke-test process on 05dev0 synthetic fixtures only. No real TARGET data, confirmatory comparator result, biology, or outcome may be used to choose a fallback.",
+  "implementation_freeze_stage": "A later 05cmp1 stage must record exact package/repository version, environment, commit or release, input adapter, hyperparameter-selection rule, random seeds, supported metrics, and numerical implementation hash before the first scientific comparator run.",
+  "policies": {
+    "MOVE": {
+      "fallback_1": "AUTOENCODIX varix",
+      "if_fallback_unavailable": "Report the external deep comparator as implementation-unavailable; do not search for a new favorable VAE after results.",
+      "if_preferred_unavailable": "Activate AUTOENCODIX varix only after MOVE is formally marked unavailable by the frozen smoke-test rule.",
+      "preferred": "official move-dl release, target 1.5.0 unless a later official release is frozen in 05cmp1 before scientific runs"
+    },
+    "iClusterBayes2": {
+      "cross_family_fallback": "NONE",
+      "if_unavailable": "Report iClusterBayes family as implementation-unavailable; do not substitute a different classical method post hoc.",
+      "preferred": "Bioconductor iClusterPlus >=3.23, function iClusterBayes2",
+      "same_family_fallback": "legacy iClusterBayes from the official iClusterPlus package only if iClusterBayes2 is unavailable under the predeclared smoke-test rule"
+    }
+  },
+  "policy_version": "paper5-secondary-comparator-implementation-failure-policy-v1",
+  "required_smoke_test": [
+    "create an isolated environment using the authors' official installation path",
+    "run an official tutorial or minimal author-provided example if available",
+    "run the Paper 5 05dev0 synthetic valid fixture through the input adapter",
+    "verify that latent output has one row per synthetic sample and finite values for supported cases",
+    "verify deterministic/provenance recording under the frozen comparator seed policy to be defined in 05cmp1",
+    "do not inspect real TARGET values during smoke testing"
+  ],
+  "status": "FROZEN_BEFORE_COMPARATOR_INSTALLATION_AND_SCIENTIFIC_RUN",
+  "unavailable_definition": "A comparator is implementation-unavailable if both (1) the official published/repository installation path and (2) one dependency-pinned compatibility environment fail to complete the reference/synthetic smoke test without altering the published mathematical objective, loss, likelihood, or latent model."
+}

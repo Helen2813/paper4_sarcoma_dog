@@ -1,0 +1,211 @@
+{
+  "RIDGE_GCCA_disclosure": "RIDGE_GCCA remains visible in the frozen 05a registry as a secondary regularized baseline, but no completed scientific simulation-fit branch exists for it in 05c1/05c2b/05d4. Because 05a made it ineligible for nested selection and final freeze, this absence is disclosed rather than silently hidden and does not block the V4 proposed-method freeze.",
+  "TARGET_selection_policy_preserved": {
+    "05e_override": "NONE",
+    "final_full_data_method_freeze": {
+      "biological_or_outcome_results_may_not_change_method": true,
+      "full_data_refit": "Use the frozen method family, simulation-selected neural profile, primary feature budget, and all 78 cases without outcomes.",
+      "minimum_single_method_selection_frequency": 0.4,
+      "primary_rule": "Choose the model_id selected most frequently by inner-CV one-SE selection across all outer splits.",
+      "tie_breaker": "Lower complexity_rank, then lexicographically smaller model_id.",
+      "uncertainty_rule": "If no model reaches 40% selection frequency, do not claim a unique winner. Freeze the two most frequently selected non-failed methods as co-primary representations and report method uncertainty."
+    },
+    "interpretation": "05e freezes the proposed SABLE-MO implementation before final-gate/TARGET work; it does not replace the already-frozen outcome-blind TARGET nested-CV and final full-data method-selection rules.",
+    "source": "paper5/method_contract/05a/model_selection_policy.json",
+    "source_sha256": "8d8b39d3d424e695324085ee533f13a555dada9b65acbc6718d7809ce07d0b44",
+    "target_nested_selection": {
+      "component_formulas": {
+        "heldout_reconstruction_score": "clip(1 - mean_view_normalized_MSE, 0, 1)",
+        "missing_view_reconstruction_score": "mean_view clip(missing_view_R2, 0, 1)",
+        "modality_balance_score": "normalized entropy of view contribution energy",
+        "random_adjusted_cross_view_mrr": "clip((MRR - H_n/n) / (1 - H_n/n), 0, 1)"
+      },
+      "eligible_model_source": "model_family_registry.csv rows with eligible_for_nested_selection=true",
+      "failure_gates_applied_before_selection": true,
+      "inner_design": "4-fold CV within each outer-training split",
+      "inner_model_seeds": [
+        1103,
+        2207
+      ],
+      "neural_early_stopping_rule": "Each inner model-selection split has a deterministic fit, early-stop, and validation partition. The validation partition is never used for early stopping. After selecting an epoch on the early-stop subset, refit on fit plus early-stop samples for that fixed epoch before scoring the inner validation subset.",
+      "one_standard_error_rule": "Choose the lowest-complexity eligible model whose mean inner-CV utility is at least best_mean - standard_error_of_best.",
+      "outer_design": "5 repeats of 5-fold CV",
+      "outer_model_seeds": [
+        1103,
+        2207,
+        3301
+      ],
+      "outer_test_evaluation": "Each outer-training split has a deterministic fit and early-stop partition. Select the epoch without outer-test access, refit on all outer-training samples for that fixed epoch, then evaluate once on the untouched outer test fold.",
+      "outer_test_samples_used_for_selection": false,
+      "primary_utility_components": {
+        "heldout_reconstruction_score": 0.3,
+        "missing_view_reconstruction_score": 0.25,
+        "modality_balance_score": 0.15,
+        "random_adjusted_cross_view_mrr": 0.3
+      },
+      "tie_breaker": "Lower complexity_rank, then lexicographically smaller model_id."
+    }
+  },
+  "claims_not_made_by_05e": [
+    "V4 is the best method across all model families.",
+    "V4 has the highest raw confirmatory simulation utility.",
+    "V4-minus-V3 pre-gate 05d4 metrics estimate the effect of the stability gate.",
+    "V5 may be promoted from its prospectively frozen secondary-exploratory role.",
+    "The final gate has passed.",
+    "The final TARGET representation method has been selected.",
+    "TARGET, biology, or outcomes validate the representation."
+  ],
+  "confirmatory_stability_snapshot": {
+    "aggregate_metrics_are_descriptive_not_new_factor_thresholds": true,
+    "n_confirmatory_datasets": 360,
+    "n_factor_level_primary_eligible_datasets": 340,
+    "n_failed_datasets": 0,
+    "n_latent_collapse": 0,
+    "n_passed_datasets": 360,
+    "overall_mean_stability_subspace_median_canonical_correlation_across_scenarios": 0.691975791716,
+    "overall_mean_stability_subspace_q10_canonical_correlation_across_scenarios": 0.633157094672,
+    "primary_dataset_mean_stability_gated_false_biological_discovery_fraction": 0.0865196078431
+  },
+  "contract_version": "paper5-primary-proposed-representation-method-freeze-v1",
+  "created_at_utc": "2026-08-22T17:42:07+00:00",
+  "evidence_outputs": {
+    "confirmatory_method_context_summary": "paper5/method_contract/05e/confirmatory_method_context_summary.csv",
+    "neural_confirmatory_component_evidence": "paper5/method_contract/05e/neural_confirmatory_component_evidence.csv",
+    "sable_mo_confirmatory_stability_evidence": "paper5/method_contract/05e/sable_mo_confirmatory_stability_evidence.csv"
+  },
+  "final_gate_required_next": {
+    "05a2_status": "FROZEN_BEFORE_FINAL_GATE_MATERIALIZATION",
+    "D01": {
+      "aggregation": "pool all matching dataset-level events; N=1000",
+      "confidence_interval": {
+        "confidence_level": 0.95,
+        "continuity_correction": false,
+        "decision_endpoint": "upper",
+        "equivalent_one_sided_confidence_level": 0.975,
+        "method": "Wilson score",
+        "sidedness": "two-sided",
+        "z": 1.959963984540054
+      },
+      "event": "dataset retains at least one false biological shared factor in a null dataset",
+      "mandatory_secondary_reporting": [
+        "independent-null pooled N=800",
+        "correlated-private stress null N=200",
+        "independent-null n=50,62,75,100 separately, N=200 each",
+        "descriptive logistic trend on raw n scale, OR per +25 samples"
+      ],
+      "pass_rule": "upper two-sided 95% Wilson endpoint <= 0.10",
+      "primary_estimand": "familywise false biological acceptance over the prespecified final-gate null registry",
+      "selector": "true_biological_shared_factors == 0 and true_technical_shared_factors == 0",
+      "threshold": 0.1
+    },
+    "D02": {
+      "aggregation": "total true biological shared factors matched-and-retained / 400 true biological shared-factor opportunities",
+      "confidence_bound_used_for_decision": false,
+      "datasets": 100,
+      "favorable_direction_disclosure": "This selector clarification probably increases TPR by excluding harder mixed-support and sparse/dense loading stress scenarios; it also reduces selected datasets from 400 to 100. The clarification is frozen before final-gate data exist because STANDARD and standard_n62_signal1 were already prospectively named.",
+      "pass_rule": "point estimate >= 0.80",
+      "resolved_scenario": "G07_IND_N62_S1P00",
+      "selector": "scenario_family == 'final_independent_gate_curve' and n_samples == 62 and shared_signal_strength == 1.0 and shared_factor_correlation == 0 and batch_mode == 'none'",
+      "threshold": 0.8,
+      "true_factor_opportunities": 400
+    },
+    "D03": {
+      "aggregation": "FNR = 1 - D02 TPR on the identical pooled denominator",
+      "confidence_bound_used_for_decision": false,
+      "independence_status": "algebraic mirror of D02, not independent evidence",
+      "pass_rule": "point estimate <= 0.20",
+      "resolved_scenario": "G07_IND_N62_S1P00",
+      "selector": "identical to D02",
+      "threshold": 0.2
+    },
+    "failure_policy": "paper5/method_contract/05a2/final_gate_failure_consequence_policy.json",
+    "failure_rule": "A preregistered final-gate failure changes the scientific conclusion, not the criterion. No threshold, architecture, stability rule, eligibility rule, or selector may be retuned in response to final-gate results.",
+    "final_gate_datasets": 3100,
+    "outcomes_used_to_rescue_failed_gate": "FORBIDDEN",
+    "retuning_after_result": "FORBIDDEN",
+    "stability_resamples_per_dataset": 100
+  },
+  "freeze_basis": {
+    "confirmatory_neural_ablation": "05d4 completed all prespecified V0-V5 confirmatory held-out evaluations; 05d4a provides paired, hypothesis-matched component evidence without adding a new decision threshold.",
+    "confirmatory_stability": "05d5 completed the frozen V4 post-fit resampling stability analysis on all 360 confirmatory datasets with zero failed dataset shards and zero latent-collapse datasets.",
+    "cross_family_context": "05c1 BLOCK_PCA/PCA, 05c2b MOFA, and 05d4 neural results are summarized on the same confirmatory dataset bank for context only. No cross-family selection score/rule was prospectively frozen for 05e, so none is invented here.",
+    "profile_selection": "05d2/05d3 selected and froze ARCH_COMPACT__REG_WEAK from development simulations under the pre-existing hard-gate plus one-standard-error profile rule.",
+    "prospective_identity": "05a designated V4_SABLE_MO as the proposed primary method before model fitting and explicitly did not guarantee it would win.",
+    "secondary_external_comparators": "05cmp1 froze iCluster2b and MOVE implementations before 05e; no scientific comparator result exists or influences this freeze."
+  },
+  "guardrails": [
+    "No outcome, clinical label, biological program, TARGET benchmark result, or final-gate result is used by 05e.",
+    "No new cross-family score, threshold, one-SE rule, p-value, or winner rule is invented in 05e.",
+    "V5 remains secondary exploratory and ineligible for primary/final selection.",
+    "V4 05d4 metrics are pre-gate; the stability component is represented only by 05d5 post-fit resampling evidence.",
+    "The 05d5 scenario-average stability metrics are not compared directly to factor-level 0.70/0.40/0.80 retention thresholds.",
+    "The frozen 05a TARGET nested-CV/final-full-data selection policy remains authoritative and unchanged.",
+    "The preregistered 05a2 final gate must be materialized/evaluated next; failure changes the conclusion, not the criterion.",
+    "Scientific secondary comparator runs may begin only after this freeze and remain secondary reporting analyses."
+  ],
+  "method": "SABLE-MO",
+  "next_primary_scientific_stage": "Materialize/evaluate the preregistered final-gate calibration bank under 05a + 05a1 + 05a2, before scientific TARGET representation fitting.",
+  "primary_proposed_representation": {
+    "05a_role": "proposed_primary_method",
+    "freeze_role": "Primary proposed SABLE-MO implementation entering the preregistered final-gate calibration and subsequent outcome-blind TARGET benchmark.",
+    "method_id": "V4_SABLE_MO",
+    "not_a_cross_family_winner_declaration": true,
+    "not_the_final_TARGET_selected_representation": true,
+    "not_yet_final_gate_validated": true,
+    "profile_id": "ARCH_COMPACT__REG_WEAK"
+  },
+  "scientific_state": {
+    "TARGET_final_method_selected": false,
+    "TARGET_pairing_permutation_results_accessed": false,
+    "TARGET_representation_results_accessed": false,
+    "biological_program_annotations_accessed_for_selection": false,
+    "clinical_labels_accessed_for_selection": false,
+    "cross_family_selection_score_created_in_05e": false,
+    "cross_family_winner_declared": false,
+    "final_gate_results_accessed": false,
+    "final_gate_simulation_data_accessed": false,
+    "outcomes_accessed": false,
+    "secondary_comparator_scientific_results_accessed": false
+  },
+  "script_version": "05e-compare-ablate-and-freeze-method-v1-no-cli",
+  "secondary_comparator_boundary": {
+    "05e_influence": "NONE",
+    "implementation_contract": "paper5/method_contract/05cmp1/secondary_comparator_implementation_contract.json",
+    "implementation_contract_sha256": "418259cedd36cbd1913a4ff1ae9874a3decfddbb7a75e9b3bca2e9623f0aca95",
+    "scientific_runs_after_05e": "PERMITTED as secondary post-freeze benchmarking only; they cannot reopen 05e or alter the final gate.",
+    "scientific_runs_before_05e": "FORBIDDEN_AND_NONE_EXIST"
+  },
+  "status": "FROZEN_PRIMARY_PROPOSED_REPRESENTATION_METHOD_BEFORE_FINAL_GATE_AND_TARGET",
+  "upstream_hashes": {
+    "paper5/method_contract/05a/ai_method_contract.json": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+    "paper5/method_contract/05a/ai_method_contract_lock.json": "cc62dcc75c5f06e0c2c7220d1419392f8838b9eccad4ae916831689255dfc9f0",
+    "paper5/method_contract/05a/model_family_registry.csv": "b0a70a5f5df4b30a6aa2d4069e15d1d1b9fe3b770f8c5ef16248301acabf1a39",
+    "paper5/method_contract/05a/model_selection_policy.json": "8d8b39d3d424e695324085ee533f13a555dada9b65acbc6718d7809ce07d0b44",
+    "paper5/method_contract/05a2/final_gate_failure_consequence_policy.json": "192692eda095f4ff0426c9029f8ce7d2ad45f5a2faee55a4b2e3352b08ff0f82",
+    "paper5/method_contract/05a2/inference_final_gate_implementation_amendment.json": "06b34c4e763a4dd150807afb4777ef4bcbb17abd7dc075b95baf438c9faad445",
+    "paper5/method_contract/05a2/inference_final_gate_implementation_amendment_lock.json": "052544f9230c961ac8d4e6b6cc8f763653fffc6b531468af1f21fa4c28da0932",
+    "paper5/method_contract/05c1/linear_baseline_results_manifest.json": "2c9797be68e881b81c75c5de7183715b62dfc333c39fb616d28d68b88dade135",
+    "paper5/method_contract/05c1/linear_simulation_baseline_lock.json": "b95dcf6e69fbf3b397f1fc344d31365449f0b880dd9cbe4f673bdd2c0b0ae5fa",
+    "paper5/method_contract/05c2b/mofa_baseline_results_manifest.json": "b56dc9a9d4c82f64cdef6192748ce01433a4eb8bba8cf22f1fe71a9d65d8722c",
+    "paper5/method_contract/05c2b/mofa_simulation_baseline_lock.json": "674c727a0a20c93a7c876b8c20d78e463adbee301300edea0a64c4f27383fd95",
+    "paper5/method_contract/05cmp1/secondary_comparator_implementation_contract.json": "418259cedd36cbd1913a4ff1ae9874a3decfddbb7a75e9b3bca2e9623f0aca95",
+    "paper5/method_contract/05cmp1/secondary_comparator_implementation_contract_lock.json": "37e0db502a88f7beab52f1457cb0c5367091314faa6b86c7796810d883f31648",
+    "paper5/method_contract/05d1/neural_simulation_evaluation_protocol.json": "3cc4660551ca8d5731c2043096a68a0a675505b1a2a2a7d6971b41b526c4dd03",
+    "paper5/method_contract/05d1/neural_simulation_protocol_lock.json": "b3f7d0c6528edaac8d91289332eb0fdf4a53cf1cc9d2c35b052d3987e3002066",
+    "paper5/method_contract/05d3/selected_neural_profile.json": "83ccee90a20b2fc51cec13de3f831835c85bbffc549a53d3cc6867c7bbfd1f0d",
+    "paper5/method_contract/05d3/selected_neural_profile_lock.json": "e91353d9e399842cbf2eae2e2d254c10229692fa00141f0fe7039a0888c9461f",
+    "paper5/method_contract/05d4/neural_confirmatory_ablation_results_lock.json": "fdeeaf06846a3f45b451766056f355897c4f2cc375d6702bc4a99fa854aa26df",
+    "paper5/method_contract/05d4/neural_confirmatory_ablation_results_manifest.json": "a5faaf5ce6111acd51db9b575d6943d2ee11fdddd281772c86bf5a237effb11a",
+    "paper5/method_contract/05d4a/05d4a_execution_record.json": "b3337cf29cc205c7a7c1d9df849c5bf511cea46fa2a4cbace86ef2c4874a49b9",
+    "paper5/method_contract/05d4a/05d4a_results_lock.json": "4b29413eadc046ea51169be25de0b660ff020c64dbada2130c0140cf49cee86b",
+    "paper5/method_contract/05d5/neural_confirmatory_stability_results_lock.json": "810f2fce90cfe39e3247ea8ab24d1de82bd691e7c052a58fa96dc21f8a0ac005",
+    "paper5/method_contract/05d5/neural_confirmatory_stability_results_manifest.json": "9b34dde9cd9de3c706b8c22ee4067892ec5057d88b3b7422edb5c5171cf89bc6",
+    "paper5/results/simulation_benchmark/05c1_linear_baselines/linear_dataset_metrics.csv.gz": "0d94815d50daaaf9baa55343682c43371561f137b4f5bca2cfe420eff51eebe2",
+    "paper5/results/simulation_benchmark/05c2_mofa/mofa_dataset_metrics.csv.gz": "d37231a9ee46e551329025a5aaa4be5e83ae947763a5b489fb8bc05a06ebc241",
+    "paper5/results/simulation_benchmark/05d_neural/confirmatory_ablation/neural_confirmatory_dataset_variant_metrics.csv.gz": "9249e41112eb4401e5e0e34ab8c7b3ede2440b5b018cba8e14ab93ed10c43a3f",
+    "paper5/results/simulation_benchmark/05d_neural/confirmatory_ablation/neural_confirmatory_variant_summary.csv": "d07a2681fa0894d51d671447109e28d2395437fb9a4c1b2a8d387e5572e8b105",
+    "paper5/results/simulation_benchmark/05d_neural/confirmatory_ablation_audit/05d4a_headline_contrast_summary.csv": "41969d5796b74500365e01a9d4fb9db5d467ce6ac855bf4b90d76755c61bc0e1",
+    "paper5/results/simulation_benchmark/05d_neural/confirmatory_stability/neural_confirmatory_stability_dataset_summary.csv.gz": "b1d9aaf7f96306af3b0dd7d405b1bf6eba7630913b403b61304ddade7c4b9928",
+    "paper5/results/simulation_benchmark/05d_neural/confirmatory_stability/neural_confirmatory_stability_overall_summary.csv": "e2ef55e95ef3bc1d5e8435b644b29f3965fb21107d7f4edaeaf5c40f802e398f"
+  }
+}

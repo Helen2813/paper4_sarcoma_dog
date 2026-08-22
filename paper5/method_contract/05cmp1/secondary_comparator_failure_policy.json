@@ -1,0 +1,11 @@
+{
+  "05e_consequence": "NONE",
+  "AUTOENCODIX_varix_fallback": "Not activated: MOVE passed the frozen synthetic GPU implementation smoke. The deep fallback may not be activated later because of scientific performance or dataset-specific failure.",
+  "failure_reporting": "All failures remain in denominator/manifest and are reported by method and scenario.",
+  "final_gate_consequence": "NONE",
+  "iClusterBayes2_fallback": "Not activated: iCluster2b passed the frozen synthetic implementation smoke. The same-package fallback may not be activated later because of scientific performance or dataset-specific failure.",
+  "nonfinite_output": "Record method-dataset failure; no numerical clipping/rescue unless a new prospective amendment is frozen.",
+  "per_dataset_fit_failure": "Repeat once with the identical frozen numerical configuration and identical seed solely to distinguish transient execution failure from deterministic method failure. If it fails again, record the dataset-method fit as failed. Do not retune, change architecture, alter lambda bounds, drop hard samples, or switch fallback.",
+  "pre_scientific_environment_mismatch": "STOP; do not silently substitute package/runtime versions.",
+  "status": "FROZEN_SECONDARY_COMPARATOR_IMPLEMENTATIONS_BEFORE_05E_AND_SCIENTIFIC_RUNS"
+}

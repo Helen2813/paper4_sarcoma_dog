@@ -1,0 +1,8 @@
+{
+  "created_at_utc": "2026-08-12T15:55:57.593035+00:00",
+  "planned_optimization_runs": 74520,
+  "planned_shards": 3240,
+  "protocol_sha256": "cafca877c125f3c5feeaa19be80ffc22a2166a49a9f4f8fe739cb9e294bebf9a",
+  "script_version": "05d2-screen-neural-profiles-gpu-v1-no-cli",
+  "status": "IN_PROGRESS"
+}

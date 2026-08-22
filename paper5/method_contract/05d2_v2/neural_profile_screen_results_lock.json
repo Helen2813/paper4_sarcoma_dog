@@ -1,0 +1,98 @@
+{
+  "contract_version": "paper5-neural-profile-screen-v2-syncfree",
+  "created_at_utc": "2026-08-18T20:10:14.486334+00:00",
+  "generated_files": {
+    "paper5\\method_contract\\05d2_v2\\neural_profile_screen_README.txt": {
+      "sha256": "3acee9a525e61ac69f43547c49caae1d0ea5c17a6bf3d1eeb10a61d3ec5675a4",
+      "size_bytes": 1501
+    },
+    "paper5\\method_contract\\05d2_v2\\neural_profile_screen_execution_protocol.json": {
+      "sha256": "38d23b7abc06845fafa53086e3695c1488c8ebf5cf24f6dfda4fa2729966b401",
+      "size_bytes": 8619
+    },
+    "paper5\\method_contract\\05d2_v2\\neural_profile_screen_reference_fixture.json": {
+      "sha256": "639e17f6ff249d2b71e8539d710198db6ffa54ae80ec36dd7486f271540f474c",
+      "size_bytes": 490
+    },
+    "paper5\\method_contract\\05d2_v2\\neural_profile_screen_results_manifest.json": {
+      "sha256": "441e2d33b2353f06047f67a6725bd7a09984f7a67b7c6864e29c5a0928f46bb3",
+      "size_bytes": 8243
+    },
+    "paper5\\method_contract\\05d2_v2\\neural_profile_screen_shard_manifest.csv": {
+      "sha256": "91afadb1268443f945cdf60f57c290a36d882c79cfcd35712d490504083151e2",
+      "size_bytes": 1741746
+    },
+    "paper5\\method_contract\\05d2_v2\\runtime_optimization_amendment.json": {
+      "sha256": "ee5891087877c9cc817b02a5c8523193966381bbd5a595c3b6ffe89d298bd9f8",
+      "size_bytes": 1778
+    },
+    "paper5\\method_contract\\05d2_v2\\windows_path_length_io_hotfix.json": {
+      "sha256": "2434159f52c66eec01d6a2954c78d84c6fe26e4c92515d5e2284edcbc6da0849",
+      "size_bytes": 849
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_dataset_metrics.csv.gz": {
+      "sha256": "92bb39f77e9f322216726d24f3fd743b59cc2ec531ff9b5295199014f32e57a4",
+      "size_bytes": 733541
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_fit_audit.csv.gz": {
+      "sha256": "5012e92756c1894650fccbbb10f8d584f84ba85e79a1cd06cb53eb682682b47b",
+      "size_bytes": 2553588
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_overall_summary.csv": {
+      "sha256": "be6c318a013cb31d2040fd571dbd78759f15235422c01e7ab83c5ef0f28b28f5",
+      "size_bytes": 1806
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_preprocessing_audit.csv.gz": {
+      "sha256": "8a3e4acacd7a215f0b6ffd50ce1c2b46497f719be24c5f29c2e44473e5f510cc",
+      "size_bytes": 2684839
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_scenario_summary.csv": {
+      "sha256": "404eb8d2fce623b7397a871246502aa627c4791b9bbb49cbdff6cfecb933080f",
+      "size_bytes": 126457
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_selection_result.json": {
+      "sha256": "381eecd87476970b9e1f07cb70ba84ce8b9d03c1fcd93b220bfe61baedfa45d4",
+      "size_bytes": 1280
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_selection_table.csv": {
+      "sha256": "f71483d119f8d1abe764dd226ed814503bed2a19331f3c126130afc48c581d4b",
+      "size_bytes": 1951
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_stability_dataset_summary.csv.gz": {
+      "sha256": "7c1aceb231c209ab10e4f9146e2ec891feed0a3c42f5be61349df366ddcb27ff",
+      "size_bytes": 207378
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_stability_factor_audit.csv.gz": {
+      "sha256": "b8807e1d6ff0e2763241e067eb0c1aa19fcbfeb4bdc1d6946f4454e3bed6c361",
+      "size_bytes": 2314314
+    }
+  },
+  "result_manifest": {
+    "path": "paper5\\method_contract\\05d2_v2\\neural_profile_screen_results_manifest.json",
+    "sha256": "441e2d33b2353f06047f67a6725bd7a09984f7a67b7c6864e29c5a0928f46bb3"
+  },
+  "rewrite_policy": "This zero-argument stage never rewrites frozen 05d2 results. Any scientifically justified implementation change requires a new versioned prospective execution stage and full neural refitting.",
+  "scientific_state": {
+    "TARGET_model_fitting_performed": false,
+    "biological_annotations_used_for_selection": false,
+    "clinical_labels_loaded": false,
+    "final_gate_calibration_data_used": false,
+    "neural_profile_screening_performed": true,
+    "neural_profile_selected": true,
+    "outcomes_loaded": false,
+    "representation_method_selected": false
+  },
+  "script_version": "05d2v2-screen-neural-profiles-gpu-syncfree-v2-no-cli",
+  "selection_result": {
+    "path": "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_selection_result.json",
+    "selected_profile_id": "ARCH_COMPACT__REG_WEAK",
+    "sha256": "381eecd87476970b9e1f07cb70ba84ce8b9d03c1fcd93b220bfe61baedfa45d4",
+    "status": "PROFILE_SELECTED_BY_FROZEN_ONE_SE_RULE"
+  },
+  "shard_manifest": {
+    "n_rows": 3240,
+    "path": "paper5\\method_contract\\05d2_v2\\neural_profile_screen_shard_manifest.csv",
+    "sha256": "91afadb1268443f945cdf60f57c290a36d882c79cfcd35712d490504083151e2"
+  },
+  "status": "FROZEN_NEURAL_PROFILE_SCREEN_RESULTS_BEFORE_CONFIRMATORY_ABLATION"
+}

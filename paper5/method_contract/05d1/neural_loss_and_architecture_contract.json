@@ -1,0 +1,242 @@
+{
+  "VAE_extension": {
+    "KL_final_weight": 0.01,
+    "KL_warmup": "linear from 0 to 0.01 over the first 0.25 of fixed/training epochs",
+    "prior": "independent standard normal for shared and private latent variables",
+    "profile_tuned_KL_weight": false,
+    "reparameterization": "standard Gaussian reparameterization trick on CUDA",
+    "role": "secondary_exploratory",
+    "variant": "V5_SABLE_VAE"
+  },
+  "ablation_components": {
+    "V0_BALANCED_AE": {
+      "block_balanced_reconstruction": true,
+      "missing_view_reconstruction": false,
+      "modality_dropout": false,
+      "paired_contrastive_alignment": false,
+      "prespecified_component_hypothesis": "Block normalization prevents methylation dominance and improves held-out reconstruction fairness.",
+      "shared_private_decomposition": false,
+      "stability_gate": false,
+      "variational_latent": false
+    },
+    "V1_SHARED_PRIVATE_AE": {
+      "block_balanced_reconstruction": true,
+      "missing_view_reconstruction": false,
+      "modality_dropout": false,
+      "paired_contrastive_alignment": false,
+      "prespecified_component_hypothesis": "Shared/private decomposition separates cross-view structure from assay-specific variation.",
+      "shared_private_decomposition": true,
+      "stability_gate": false,
+      "variational_latent": false
+    },
+    "V2_CONTRASTIVE_SPAE": {
+      "block_balanced_reconstruction": true,
+      "missing_view_reconstruction": false,
+      "modality_dropout": false,
+      "paired_contrastive_alignment": true,
+      "prespecified_component_hypothesis": "Paired contrastive alignment improves same-patient cross-view retrieval.",
+      "shared_private_decomposition": true,
+      "stability_gate": false,
+      "variational_latent": false
+    },
+    "V3_DROPOUT_SPAE": {
+      "block_balanced_reconstruction": true,
+      "missing_view_reconstruction": true,
+      "modality_dropout": true,
+      "paired_contrastive_alignment": true,
+      "prespecified_component_hypothesis": "Modality dropout improves partial-view robustness and RNA-only projection.",
+      "shared_private_decomposition": true,
+      "stability_gate": false,
+      "variational_latent": false
+    },
+    "V4_SABLE_MO": {
+      "block_balanced_reconstruction": true,
+      "missing_view_reconstruction": true,
+      "modality_dropout": true,
+      "paired_contrastive_alignment": true,
+      "prespecified_component_hypothesis": "The stability gate removes attractive but non-reproducible latent factors.",
+      "shared_private_decomposition": true,
+      "stability_gate": true,
+      "variational_latent": false
+    },
+    "V5_SABLE_VAE": {
+      "block_balanced_reconstruction": true,
+      "missing_view_reconstruction": true,
+      "modality_dropout": true,
+      "paired_contrastive_alignment": true,
+      "prespecified_component_hypothesis": "The variational extension tests whether posterior regularization improves generalization despite the small sample size.",
+      "shared_private_decomposition": true,
+      "stability_gate": true,
+      "variational_latent": true
+    }
+  },
+  "block_balanced_reconstruction": {
+    "aggregate": "unweighted mean of normalized view losses",
+    "normalized_view_loss": "view_MSE / max(view_null_MSE, 1e-8)",
+    "null_error": "fit-subset MSE from predicting the zero/mean PCA vector for that view",
+    "null_error_floor": 1e-08,
+    "per_view_MSE": "mean squared error in the fold-local PCA coordinate system"
+  },
+  "contract_version": "paper5-neural-loss-architecture-v1",
+  "cpu_only_allowed_operations": [
+    "file I/O",
+    "pandas audit tables",
+    "fold-local deterministic feature ranking",
+    "training-fold median imputation",
+    "deterministic dual-PCA preprocessing",
+    "hashing and provenance"
+  ],
+  "decoder": {
+    "V0_input": "patient shared embedding",
+    "V1_to_V5_observed_view_input": "concatenate(patient shared embedding, own private embedding)",
+    "body": "Linear(latent_input, hidden_dim) -> LayerNorm -> GELU -> Linear(hidden_dim, PCA_dim)",
+    "missing_view_input": "concatenate(patient shared embedding from available views, zero private vector for the omitted target view)",
+    "per_view": true
+  },
+  "device": "cuda:0",
+  "early_stopping": {
+    "maximum_epochs_source": "05a architecture profile",
+    "metric_validation_reuse": false,
+    "min_delta": 0.0001,
+    "monitor": "deterministic early-stop total objective evaluated with modality dropout disabled; V3-V5 missing-view term is evaluated by systematic leave-one-view-out reconstruction",
+    "patience_source": "05a architecture profile",
+    "refit": "after epoch selection, reinitialize with the same frozen fit seed and refit on fit + early-stop samples for exactly the selected epoch count"
+  },
+  "encoder": {
+    "V0_output": "shared latent head only",
+    "V1_to_V4_output": "separate shared and private latent heads",
+    "V5_output": "shared mean/log-variance and private mean/log-variance heads",
+    "body": "Linear(PCA_dim, hidden_dim) -> LayerNorm -> GELU",
+    "per_view": true
+  },
+  "fold_local_preprocessing": {
+    "PCA": "deterministic training-fold dual PCA with sign orientation",
+    "effective_PCA_components": "min(profile component target, n_training - 1, numerical matrix rank)",
+    "feature_budget_role": "primary",
+    "heldout_preprocessing": false,
+    "imputation": "training-fold feature median",
+    "maximum_feature_missing_fraction": 0.2,
+    "post_zscore_variance_selection": false,
+    "scaling": "training-fold mean and sample standard deviation after imputation",
+    "variance_ranking": "training-fold pre-standardization variance only"
+  },
+  "heavy_computation_device_policy": "All neural forward passes, backward passes, optimizer steps, contrastive similarity matrices, reconstruction losses, and latent projections must execute on CUDA. Quiet CPU fallback is forbidden.",
+  "missing_view_reconstruction_loss": {
+    "applies_to": [
+      "V3_DROPOUT_SPAE",
+      "V4_SABLE_MO",
+      "V5_SABLE_VAE"
+    ],
+    "decoder_private_input": "zero vector for omitted modality",
+    "training_target": "deliberately dropped target modality in PCA space",
+    "weight_source": "05a cross_reconstruction_weight"
+  },
+  "modality_dropout": {
+    "applies_to": [
+      "V3_DROPOUT_SPAE",
+      "V4_SABLE_MO",
+      "V5_SABLE_VAE"
+    ],
+    "randomness": "CUDA torch.Generator seeded by the frozen fit seed and epoch",
+    "rule": "with the frozen profile probability, independently mark a patient for dropout and remove exactly one uniformly sampled modality; never drop all modalities",
+    "unit": "patient x epoch"
+  },
+  "optimizer": {
+    "batching": "full batch",
+    "gradient_clip_global_norm": 5.0,
+    "learning_rate_source": "05a regularization profile",
+    "type": "AdamW",
+    "weight_decay_source": "05a regularization profile"
+  },
+  "paired_contrastive_loss": {
+    "applies_to": [
+      "V2_CONTRASTIVE_SPAE",
+      "V3_DROPOUT_SPAE",
+      "V4_SABLE_MO",
+      "V5_SABLE_VAE"
+    ],
+    "formula": "symmetric full-batch InfoNCE over L2-normalized per-view shared embeddings; same patient is the positive and all other patients in the fit batch are negatives",
+    "temperature_source": "05a regularization profile"
+  },
+  "parameter_initialization": {
+    "layernorm_bias": "zeros",
+    "layernorm_weight": "ones",
+    "linear_bias": "zeros",
+    "linear_weights": "torch.nn.init.xavier_uniform_ using the frozen fit seed",
+    "stochastic_layer_dropout": false
+  },
+  "precision": {
+    "automatic_mixed_precision": false,
+    "dtype": "float32",
+    "tf32": false,
+    "torch_compile": false
+  },
+  "private_separation_loss": {
+    "applies_to": [
+      "V1_SHARED_PRIVATE_AE",
+      "V2_CONTRASTIVE_SPAE",
+      "V3_DROPOUT_SPAE",
+      "V4_SABLE_MO",
+      "V5_SABLE_VAE"
+    ],
+    "formula": "mean squared Frobenius norm of centered cross-view private cross-covariance across available ordered view pairs"
+  },
+  "shared_alignment_loss": {
+    "applies_to": [
+      "V1_SHARED_PRIVATE_AE",
+      "V2_CONTRASTIVE_SPAE",
+      "V3_DROPOUT_SPAE",
+      "V4_SABLE_MO",
+      "V5_SABLE_VAE"
+    ],
+    "formula": "mean squared distance from each available per-view shared embedding to the patient shared mean"
+  },
+  "shared_private_orthogonality_loss": {
+    "applies_to": [
+      "V1_SHARED_PRIVATE_AE",
+      "V2_CONTRASTIVE_SPAE",
+      "V3_DROPOUT_SPAE",
+      "V4_SABLE_MO",
+      "V5_SABLE_VAE"
+    ],
+    "formula": "mean squared Frobenius norm of centered shared-private cross-covariance within each available view"
+  },
+  "shared_representation": {
+    "minimum_available_views": 1,
+    "missing_view_rule": "dropped or unavailable views are excluded from the shared mean",
+    "patient_shared_embedding": "arithmetic mean of available per-view shared embeddings",
+    "per_view_shared_embedding": true
+  },
+  "stability_gate": {
+    "alignment": "orthogonal Procrustes on shared scores, then Hungarian factor matching and sign orientation",
+    "applies_to": [
+      "V4_SABLE_MO",
+      "V5_SABLE_VAE"
+    ],
+    "factor_retention_thresholds": {
+      "minimum_factor_variance": 0.0001,
+      "minimum_loading_energy_fraction_per_supported_modality": 0.15,
+      "minimum_supported_modalities": 2,
+      "primary_inclusion_frequency": 0.8,
+      "primary_median_factor_correlation": 0.7,
+      "primary_q10_factor_correlation": 0.4,
+      "sensitivity_high_median_factor_correlation": 0.8,
+      "sensitivity_low_median_factor_correlation": 0.6
+    },
+    "factor_variance_source": "reference full-data shared scores",
+    "modality_support_energy": "squared L2 norm of the shared-dimension column in each view's first decoder affine layer, normalized across views",
+    "resample_match_threshold": 0.5,
+    "resamples_per_dataset": 20,
+    "resampling_component": true,
+    "rotational_rule": "if factor_level_identifiable=false but subspace_level_identifiable=true, report and gate the shared subspace; individual-factor claims are forbidden",
+    "subsample_fraction": 0.8,
+    "training_component": false
+  },
+  "technical_confound_simulation_status": {
+    "false_biological_acceptance": "stable nontechnical factor that fails biological truth matching",
+    "technical_flag_rule": "stable factor with absolute correlation >= 0.50 to known technical simulation truth is labeled stable_technical_flag",
+    "technical_truth_used_after_stability": true,
+    "technical_truth_used_for_profile_utility": false,
+    "technical_truth_used_for_training": false
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "clinical_covariates_generated": false,
+  "created_at_utc": "2026-08-11T19:22:25.281429+00:00",
+  "generator_version": "sable-mo-simulation-generator-v1",
+  "guardrails": [
+    "No outcome or clinical variable is generated.",
+    "All seeds are deterministic and registry-derived.",
+    "True shared and private scores are retained for simulation-only evaluation.",
+    "Null-shared scenarios contain zero true shared factors.",
+    "Patient-pair corruption is explicitly recorded by row-source maps.",
+    "TARGET-OS outcomes and biological annotations are never accessed."
+  ],
+  "latent_model": {
+    "feature_offset_sd": 0.35,
+    "matrix_equation": "block_scale * (shared_strength * f_view(Z_shared W_shared^T) + private_strength * Z_private W_private^T + feature_offset + noise)",
+    "private_loadings": "View-specific sparse loadings generated independently from shared loadings.",
+    "private_scores": "Independent standardized Gaussian score matrix per view.",
+    "shared_loadings": "View-specific sparse loadings with 10% support per factor and unit root-mean-square loading on the support.",
+    "shared_scores": "Common standardized Gaussian Z_shared in canonical sample order."
+  },
+  "missingness": {
+    "applied_after_pair_corruption": true,
+    "mechanism": "entry-level MCAR with an exact prespecified count",
+    "represented_as": "NaN in observed matrices"
+  },
+  "nonlinear_modes": {
+    "methylation_tanh": "Tanh shared mapping in methylation; identity in RNA and CNV.",
+    "none": "Identity shared mapping in every view.",
+    "view_specific_monotonic": "Standardized linear RNA, tanh methylation, signed-square-root CNV."
+  },
+  "outcomes_generated": false,
+  "pair_corruption": {
+    "RNA_anchor": true,
+    "mechanism": "Independent deterministic derangement of the prespecified row fraction in each non-anchor view.",
+    "non_anchor_views": [
+      "METHYLATION",
+      "CNV"
+    ],
+    "row_source_arrays_saved": true
+  },
+  "script_version": "05b-generate-small-n-multiomics-simulations-v1",
+  "serialization": {
+    "allow_pickle_required": false,
+    "atomic_write": true,
+    "fixed_ZIP_entry_timestamp": "1980-01-01T00:00:00",
+    "format": "deterministic NumPy NPZ",
+    "numeric_dtype": "float32",
+    "sha256_each_dataset": true,
+    "sorted_array_names": true
+  },
+  "views": [
+    "RNA",
+    "METHYLATION",
+    "CNV"
+  ]
+}

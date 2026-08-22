@@ -1,0 +1,3 @@
+seed_role,seed,scientific_fit_seed,notes
+development_fixture_only,1103,False,For deterministic fixture/unit tests only.
+development_fixture_only,2207,False,For deterministic fixture/unit tests only.

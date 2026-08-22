@@ -1,0 +1,71 @@
+{
+  "amendment_path": "paper5\\method_contract\\05a2\\inference_final_gate_implementation_amendment.json",
+  "amendment_sha256": "06b34c4e763a4dd150807afb4777ef4bcbb17abd7dc075b95baf438c9faad445",
+  "amendment_version": "sable-mo-inference-final-gate-clarification-v1",
+  "base_hashes": {
+    "05a1_addendum": "3aadb87386f796663e68b97fb608cb864c197013fe52c70ac5b37bed06e7a3e8",
+    "05a1_lock": "61969f36872e3e508a239d5e6903ae3395fd36ec74ee7aa4e31740a514c119e3",
+    "05a_contract": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+    "05a_lock": "cc62dcc75c5f06e0c2c7220d1419392f8838b9eccad4ae916831689255dfc9f0",
+    "05b_v2_lock": "1198da23059876a439183b35c8d095f8731bcddd98aa0964da2486995aefd524",
+    "05d3_lock": "e91353d9e399842cbf2eae2e2d254c10229692fa00141f0fe7039a0888c9461f",
+    "05d4_lock": "fdeeaf06846a3f45b451766056f355897c4f2cc375d6702bc4a99fa854aa26df",
+    "05d4a_lock": "4b29413eadc046ea51169be25de0b660ff020c64dbada2130c0140cf49cee86b",
+    "05d4b_audit": "201a3d7f6113b09f34d0b68cd86b8eb0f56942bda4ad70eab504cafa861a21f6",
+    "05d4b_lock": "a4e4de85e86fa768c3dd8503c77159c392538a34266987ad2c31bcb5ad3ba7a3",
+    "05d4b_requirements": "539303519b657c53e0fcbc60d0408c82be34073ef84c14f756323bad13bfe66f",
+    "05d4b_selector_membership": "9390d17188afb775f835c8acac8650107c0d5ba46abced39251eccdf80072c06"
+  },
+  "created_at_utc": "2026-08-21T21:38:31+00:00",
+  "generated_files": {
+    "paper5\\method_contract\\05a2\\05a2_README.txt": {
+      "path": "paper5\\method_contract\\05a2\\05a2_README.txt",
+      "sha256": "411dc2f854d36a4f08e57958e5fa277c66987430ad1e48ce2e76239a98aa358c",
+      "size_bytes": 2964
+    },
+    "paper5\\method_contract\\05a2\\amendment_precondition_snapshot.json": {
+      "path": "paper5\\method_contract\\05a2\\amendment_precondition_snapshot.json",
+      "sha256": "bc59154c65c03aa203cb4d5a22aa9b2f0a382d687f86623dc308b3720612a98f",
+      "size_bytes": 2267
+    },
+    "paper5\\method_contract\\05a2\\effective_random_control_registry.csv": {
+      "path": "paper5\\method_contract\\05a2\\effective_random_control_registry.csv",
+      "sha256": "f622e03eee8697dd4865eea46197ce5fd319d4d8358c5c3e75e96ea215272983",
+      "size_bytes": 925
+    },
+    "paper5\\method_contract\\05a2\\effective_stability_gate_decision_registry.csv": {
+      "path": "paper5\\method_contract\\05a2\\effective_stability_gate_decision_registry.csv",
+      "sha256": "fb504724c3cced7190c82936ea334f171fb8b1461882886f4fab9330432950ae",
+      "size_bytes": 4852
+    },
+    "paper5\\method_contract\\05a2\\effective_stability_gate_operating_metric_registry.csv": {
+      "path": "paper5\\method_contract\\05a2\\effective_stability_gate_operating_metric_registry.csv",
+      "sha256": "d72068a01224a2571ef22be08a80249ea5ffd56d0623cf4f7e448da33436ab0d",
+      "size_bytes": 4146
+    },
+    "paper5\\method_contract\\05a2\\final_gate_failure_consequence_policy.json": {
+      "path": "paper5\\method_contract\\05a2\\final_gate_failure_consequence_policy.json",
+      "sha256": "192692eda095f4ff0426c9029f8ce7d2ad45f5a2faee55a4b2e3352b08ff0f82",
+      "size_bytes": 3486
+    },
+    "paper5\\method_contract\\05a2\\final_gate_reporting_registry.csv": {
+      "path": "paper5\\method_contract\\05a2\\final_gate_reporting_registry.csv",
+      "sha256": "fc09105101a36633cd5e0a33481aa9cea4814fc5abe940c85313ca45de51cf99",
+      "size_bytes": 3116
+    },
+    "paper5\\method_contract\\05a2\\final_gate_runtime_pilot_policy.json": {
+      "path": "paper5\\method_contract\\05a2\\final_gate_runtime_pilot_policy.json",
+      "sha256": "05061a5911a76c365eb2a33bac87719466eb3413082419ebde73bfdc10247fcd",
+      "size_bytes": 1426
+    },
+    "paper5\\method_contract\\05a2\\inference_final_gate_implementation_amendment.json": {
+      "path": "paper5\\method_contract\\05a2\\inference_final_gate_implementation_amendment.json",
+      "sha256": "06b34c4e763a4dd150807afb4777ef4bcbb17abd7dc075b95baf438c9faad445",
+      "size_bytes": 6523
+    }
+  },
+  "precondition_snapshot_sha256": "bc59154c65c03aa203cb4d5a22aa9b2f0a382d687f86623dc308b3720612a98f",
+  "rewrite_policy": "This no-argument script never rewrites a frozen 05a2 amendment. Any future scientific change requires a new versioned amendment that preserves 05a2.",
+  "script_version": "05a2-freeze-inference-final-gate-clarification-v1-no-cli",
+  "status": "FROZEN_BEFORE_FINAL_GATE_MATERIALIZATION"
+}

@@ -1,0 +1,35 @@
+{
+  "core_outcomes": [
+    {
+      "condition": "D01 PASS and D02 PASS and D03 PASS",
+      "downstream": "Proceed with the planned outcome-blind TARGET representation benchmark and subsequent frozen stability/biology pipeline, subject to all other frozen gates.",
+      "interpretation": "The frozen gate meets the preregistered core specificity and standard-operating-point sensitivity criteria in the final simulation bank."
+    },
+    {
+      "condition": "D01 FAIL and D02/D03 PASS",
+      "downstream": "Do not retune the gate. TARGET representation analysis may be reported only as outcome-blind descriptive characterization. Do not use biological or outcome results to rescue a validated factor-acceptance claim, and do not make primary factor-level biological/outcome claims.",
+      "interpretation": "The gate can recover true shared signal at the standard operating point but does not achieve the preregistered control of false biological acceptance over the prespecified null registry."
+    },
+    {
+      "condition": "D01 PASS and D02/D03 FAIL",
+      "downstream": "Do not loosen the gate. TARGET representation analysis may be descriptive, but the paper must state the sensitivity limitation and may not claim reliable recovery of true shared factors in the target small-n regime.",
+      "interpretation": "The gate is sufficiently specific under the preregistered null criterion but is too insensitive or too conservative at the exact TARGET-like standard operating point."
+    },
+    {
+      "condition": "D01 FAIL and D02/D03 FAIL",
+      "downstream": "Paper 5 becomes a negative/boundary methods result on the limits of stable multi-omics representation learning. No post-hoc rescue retuning is permitted, and outcomes are not opened for the purpose of rescuing the method.",
+      "interpretation": "The frozen method is not validated for the claimed extreme-small-n factor-acceptance regime."
+    }
+  ],
+  "governing_rule": "A preregistered final-gate failure changes the scientific conclusion, not the criterion. No threshold, architecture, stability rule, eligibility rule, or selector may be retuned in response to final-gate results.",
+  "narrow_gate_failures": {
+    "D04_ROTATIONAL_SUBSPACE": "If failed, do not claim reliable recovery of rotationally ambiguous subspaces; individual-factor claims remain forbidden as already specified.",
+    "D05_VIEW_SUPPORT": "If failed, view-support labels remain exploratory and cannot support primary shared-versus-partial claims.",
+    "D06_BATCH_SPECIFICITY": "If failed, stable factors cannot be assumed biological without external recurrence; technical-confound limitations become a primary conclusion rather than a hidden caveat.",
+    "D07_NO_POSTHOC_RETUNING": "Any alternative threshold explored after results is explicitly exploratory and cannot replace the primary frozen gate."
+  },
+  "outcome_boundary": "Outcomes are not opened to rescue a failed core representation/gate validation. Outcome analysis, if reached, is a minimal downstream validation of a representation already frozen without outcomes.",
+  "policy_version": "sable-mo-final-gate-failure-consequence-policy-v1",
+  "status": "FROZEN_BEFORE_FINAL_GATE_RESULTS",
+  "stress_subgroup_rule": "A favorable pooled D01 result may not suppress poor prespecified subgroup behavior. Per-n and null-mechanism results are mandatory descriptive reporting, but they do not create new post-hoc PASS/FAIL thresholds."
+}

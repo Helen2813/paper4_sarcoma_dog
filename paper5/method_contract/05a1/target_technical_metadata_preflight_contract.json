@@ -1,0 +1,62 @@
+{
+  "batch_adjustment_policy": {
+    "adversarial_batch_removal": "not prespecified",
+    "outcome_access": false,
+    "primary_analysis": "no automatic batch residualization",
+    "sensitivity_analysis": "fold-local residualization may be performed only after the technical audit identifies a usable covariate; parameters are fit on training samples and applied unchanged to held-out samples"
+  },
+  "biological_claim_rule": "Stable factors with a technical flag are retained in the audit but excluded from primary biological claims. Stable factors with unknown technical status require external recurrence evidence and an explicit limitation.",
+  "contract_version": "paper5-target-technical-metadata-preflight-v1",
+  "factor_status_taxonomy": {
+    "stable_ambiguous_specimen_association": "passes stability and associates only with an ambiguous specimen or site variable that may contain biological information",
+    "stable_nontechnical": "passes stability and no usable technical covariate meets the flagging rule",
+    "stable_technical_flag": "passes stability but has technical q<0.05 and exceeds the prespecified effect-size threshold",
+    "stable_technical_status_unknown": "passes stability but no usable sample-level technical metadata are available",
+    "unstable": "fails the upstream factor or subspace stability gate"
+  },
+  "field_usability_rules": {
+    "constant_fields": "document_but_do_not_test",
+    "date_derivation": "calendar-quarter bins only if at least two usable levels and minimum level size is met",
+    "identifier_like_fields": "exclude",
+    "maximum_categorical_levels": 10,
+    "maximum_missing_fraction": 0.3,
+    "maximum_unique_fraction": 0.5,
+    "minimum_level_size": 5,
+    "raw_dates": "forbidden"
+  },
+  "forbidden_input_patterns": [
+    "clinical outcome tables",
+    "survival files",
+    "response files",
+    "metastasis files",
+    "treatment files"
+  ],
+  "guardrails": [
+    "Technical labels are not used to select the model family.",
+    "Clinical and outcome fields remain inaccessible.",
+    "High-cardinality identifiers cannot be used as covariates.",
+    "A reproducible factor is not assumed biological solely because it is stable."
+  ],
+  "permitted_input_patterns": [
+    "gdc_sample_sheet*.tsv",
+    "metadata*.json",
+    "files-table*.tsv",
+    "biospecimen metadata files if available"
+  ],
+  "post_representation_factor_association": {
+    "binary": "standardized mean difference and permutation p-value",
+    "binary_effect_threshold": 0.5,
+    "categorical_effect_threshold": 0.1,
+    "continuous": "absolute Spearman correlation with 10000 label permutations",
+    "continuous_effect_threshold": 0.3,
+    "multicategory": "eta-squared from one-way model and permutation p-value",
+    "multiplicity": "Benjamini-Hochberg within the separate technical-confound family",
+    "q_value_threshold": 0.05
+  },
+  "purpose": "Inventory usable sample-level technical covariates without accessing clinical outcomes or using technical labels for model family selection.",
+  "source_roots": [
+    "paper5\\human\\TARGET_OS",
+    "paper5\\data_manifest"
+  ],
+  "status": "FROZEN_BEFORE_MODEL_FITTING"
+}

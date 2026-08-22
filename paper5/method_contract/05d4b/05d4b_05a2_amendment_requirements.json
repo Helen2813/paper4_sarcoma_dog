@@ -1,0 +1,142 @@
+{
+  "design_resolution_reference": {
+    "minimum_n_for_80_percent_probability_of_D01_pass_when_true_rate_is_0.08": {
+      "max_pass_count": 138,
+      "max_pass_observed_rate": 0.08534322820037106,
+      "n": 1617,
+      "pass_probability": 0.8000348492040797,
+      "wilson_upper_at_boundary": 0.09996308315642544
+    },
+    "note": "This reference is descriptive design calibration only. The audit does not recommend increasing the frozen 3,100-dataset bank at this time."
+  },
+  "forbidden_changes_from_this_audit": [
+    "No final-gate threshold is changed.",
+    "No final-gate dataset count is changed.",
+    "No stability-resample count is changed.",
+    "No architecture/profile is changed.",
+    "No TARGET result is accessed.",
+    "No biological or outcome result is accessed."
+  ],
+  "must_be_frozen_before_final_gate_materialization": true,
+  "recommended_05a2_scope": [
+    {
+      "current": 100,
+      "item": "pairing_permutation_resolution",
+      "reason": "Increase Monte Carlo p-value resolution only. Do not change the pairing null, primary metrics, multiplicity family, model registry, or outcome blinding.",
+      "recommended": 1000
+    },
+    {
+      "current": "selector is frozen, aggregation across matching scenarios is not explicit",
+      "frozen_registry_counts": {
+        "correlated_private_datasets": 200,
+        "correlated_private_scenario_ids": [
+          "G19_CORRELATED_PRIVATE_NULL_N62"
+        ],
+        "independent_null_datasets": 800,
+        "independent_null_scenario_ids": [
+          "G01_IND_N50_S0P00",
+          "G05_IND_N62_S0P00",
+          "G09_IND_N75_S0P00",
+          "G13_IND_N100_S0P00"
+        ],
+        "n_datasets": 1000,
+        "n_scenarios": 5,
+        "scenario_ids": [
+          "G01_IND_N50_S0P00",
+          "G05_IND_N62_S0P00",
+          "G09_IND_N75_S0P00",
+          "G13_IND_N100_S0P00",
+          "G19_CORRELATED_PRIVATE_NULL_N62"
+        ]
+      },
+      "item": "D01_primary_aggregation",
+      "recommended": "pool every dataset satisfying the frozen D01 selector for the primary decision; describe the estimand as familywise false biological acceptance over the prespecified final-gate null registry"
+    },
+    {
+      "current": "Wilson 95% binomial interval",
+      "item": "D01_Wilson_implementation",
+      "recommended": {
+        "confidence_level": 0.95,
+        "continuity_correction": false,
+        "decision_quantity": "upper endpoint",
+        "equivalent_statement": "upper endpoint of a two-sided 95% interval, equivalently a one-sided 97.5% upper bound",
+        "method": "Wilson score interval",
+        "pass_rule": "upper endpoint <= 0.10",
+        "sidedness": "two-sided",
+        "z": 1.959963984540054
+      }
+    },
+    {
+      "item": "D01_mandatory_reporting",
+      "recommended": [
+        "point estimate, numerator/denominator, two-sided 95% Wilson CI, then PASS/FAIL",
+        "primary pooled prespecified D01 null registry (N=1000 datasets)",
+        "ordinary independent nulls pooled (N=800 datasets)",
+        "correlated-private stress null alone (N=200 datasets)",
+        "independent null n=50,62,75,100 separately (N=200 each)",
+        "descriptive logistic trend across the four independent-null n values only; raw n scale, OR per +25 samples, no gate consequence"
+      ]
+    },
+    {
+      "current_matching": {
+        "n_datasets": 400,
+        "n_scenarios": 4,
+        "n_true_factor_opportunities": 1600,
+        "scenario_ids": [
+          "G07_IND_N62_S1P00",
+          "G18_MIXED_SUPPORT_N62_S1P00",
+          "G23_SPARSE_LOADING_N62_S1P00",
+          "G24_DENSE_LOADING_N62_S1P00"
+        ]
+      },
+      "item": "D02_D03_standard_selector",
+      "rationale_disclosure": "The clarification probably makes D02/D03 easier by excluding harder mixed-support and loading-density stress scenarios, but it also reduces the selected dataset count. The clarification is justified by the prospectively frozen STANDARD decision names and standard_n62_signal1 operating-target names, and is made while final-gate datasets do not yet exist.",
+      "recommended_matching": {
+        "n_datasets": 100,
+        "n_scenarios": 1,
+        "n_true_factor_opportunities": 400,
+        "scenario_ids": [
+          "G07_IND_N62_S1P00"
+        ]
+      },
+      "recommended_selector": "scenario_family == 'final_independent_gate_curve' and n_samples == 62 and shared_signal_strength == 1.0 and shared_factor_correlation == 0 and batch_mode == 'none'"
+    },
+    {
+      "current": {
+        "aggregation_unit_explicit": false,
+        "current_selector_dataset_count": 400,
+        "current_selector_true_factor_opportunities": 1600,
+        "metric_formula": "number of true shared factors matched and retained / number of true shared factors",
+        "standard_selector_dataset_count": 100,
+        "standard_selector_true_factor_opportunities": 400
+      },
+      "item": "D02_D03_aggregation_unit",
+      "recommended": "05a2 must state the exact numerator/denominator and cross-dataset aggregation unit for TPR/FNR. The frozen formula is factor-based, but the current registry does not state whether factor events are pooled across datasets or dataset-level TPRs are averaged. Do not leave this choice to the post-result implementation."
+    },
+    {
+      "current": {
+        "algebraic_mirror_of_D02_on_same_selector": true,
+        "confidence_interval_text": "Wilson 95% binomial interval",
+        "metric": "gate_false_negative_rate",
+        "metric_formula": "1 - gate_true_positive_rate",
+        "required_threshold": "point estimate <= 0.20",
+        "selector": "n_samples == 62 and shared_signal_strength == 1.0 and shared_factor_correlation == 0 and batch_mode == 'none'"
+      },
+      "item": "D03_mirror_status",
+      "recommended": "Preserve D03 because it is frozen, but state explicitly whether it is the algebraic mirror of D02 rather than an independent sensitivity criterion."
+    },
+    {
+      "item": "specificity_sensitivity_asymmetry",
+      "recommended": "State prospectively that D01 uses an uncertainty-aware upper Wilson bound, whereas D02/D03 use point-estimate thresholds, reflecting the preregistered priority on control of false biological acceptance. Do not change D02/D03 to CI-bound rules."
+    },
+    {
+      "item": "prewritten_failure_consequence_policy",
+      "recommended": "Freeze scientific consequences for D01/D02/D03 PASS/FAIL before final-gate results. A failed criterion changes the conclusion, not the criterion; no rescue retuning or outcome-guided rescue is permitted."
+    },
+    {
+      "item": "runtime_pilot_numerical_versioning",
+      "recommended": "Pilot shards may become final shards only if the numerical implementation hash is unchanged. Any change to numerical/GPU code path invalidates and recomputes all pilot shards; logging-only changes may retain them only when the numerical hash is unchanged."
+    }
+  ],
+  "status": "DESIGN_AUDIT_RECOMMENDATIONS_NOT_YET_FROZEN"
+}

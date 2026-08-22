@@ -1,0 +1,72 @@
+{
+  "GPU_used": false,
+  "R": {
+    "bioconductor_version": "3.23",
+    "icluster2b_formals": [
+      "xList",
+      "K",
+      "lambda",
+      "method",
+      "chr",
+      "EM.iter",
+      "eps",
+      "eps2"
+    ],
+    "iclusterplus_path": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\comparator_envs\\r_4_6_bioc_3_23\\iClusterPlus",
+    "iclusterplus_tree_file_count": 43,
+    "iclusterplus_tree_sha256": "cad0c995150e778026fb227ac533a974d77106e431c65a3802aeda4254f6fd70",
+    "iclusterplus_tree_total_bytes": 23258345,
+    "iclusterplus_version": "1.47.3",
+    "lib_paths": [
+      "C:/Users/olegk/Desktop/paper4_sarcoma_dog/paper5/comparator_envs/r_4_6_bioc_3_23",
+      "C:/Program Files/R/R-4.6.1/library"
+    ],
+    "probe_command_mode": "temporary_R_script_with_--vanilla",
+    "probe_log": "paper5\\method_contract\\05cmp0c\\icluster2b_cpu_environment_probe.log",
+    "probe_stderr": "",
+    "probe_stdout": "R_VERSION=R version 4.6.1 (2026-06-24 ucrt)\nBIOC_VERSION=3.23\nICLUSTERPLUS_VERSION=1.47.3\nICLUSTERPLUS_PATH=C:/Users/olegk/Desktop/paper4_sarcoma_dog/paper5/comparator_envs/r_4_6_bioc_3_23/iClusterPlus\nR_LIBS_USER=C:/Users/olegk/Desktop/paper4_sarcoma_dog/paper5/comparator_envs/r_4_6_bioc_3_23\nICLUSTER2B_EXISTS=TRUE\nTUNE_ICLUSTER2B_EXISTS=TRUE\nICLUSTER2B_FORMALS=xList,K,lambda,method,chr,EM.iter,eps,eps2\nTUNE_ICLUSTER2B_FORMALS=xList,K,method,min.lambda,max.lambda,lambda.iter,EM.iter,min.shrinkage.rate,eps,eps2\nLIBPATHS=C:/Users/olegk/Desktop/paper4_sarcoma_dog/paper5/comparator_envs/r_4_6_bioc_3_23|C:/Program Files/R/R-4.6.1/library\n",
+    "r_libs_user": "C:/Users/olegk/Desktop/paper4_sarcoma_dog/paper5/comparator_envs/r_4_6_bioc_3_23",
+    "r_version": "R version 4.6.1 (2026-06-24 ucrt)",
+    "rscript_path": "C:\\Program Files\\R\\R-4.6.1\\bin\\Rscript.exe",
+    "rscript_sha256": "d829bcf7e9fa1d7e3e828c565c3cdbb1ed416f551f4fa6fd4dfcdf231e33e5e8",
+    "rscript_size_bytes": 154624,
+    "thread_environment": {
+      "MKL_NUM_THREADS": "set_to_1_for_actual_smoke_fits",
+      "NUMEXPR_NUM_THREADS": "set_to_1_for_actual_smoke_fits",
+      "OMP_NUM_THREADS": "set_to_1_for_actual_smoke_fits",
+      "OPENBLAS_NUM_THREADS": "set_to_1_for_actual_smoke_fits",
+      "VECLIB_MAXIMUM_THREADS": "set_to_1_for_actual_smoke_fits"
+    },
+    "tune_icluster2b_formals": [
+      "xList",
+      "K",
+      "method",
+      "min.lambda",
+      "max.lambda",
+      "lambda.iter",
+      "EM.iter",
+      "min.shrinkage.rate",
+      "eps",
+      "eps2"
+    ]
+  },
+  "created_at_utc": "2026-08-22T17:16:32+00:00",
+  "embedded_R_smoke_script_sha256": "f5d939964e7815f4b623ea551b7fec08bfb0700de5b58ec5bca09195f01cc76b",
+  "expected": {
+    "Bioconductor_version": "3.23",
+    "R_version_prefix": "R version 4.6.1",
+    "iClusterPlus_version": "1.47.3",
+    "isolated_R_library": "paper5\\comparator_envs\\r_4_6_bioc_3_23",
+    "official_Bioconductor_source_release_version": "1.48.0",
+    "platform_binary_policy": "Bioconductor 3.23 publishes iClusterPlus 1.48.0 as the source release, while the official Windows x86_64 binary for R 4.6 is 1.47.3. This smoke test prospectively uses the official platform-native Windows binary; no source compilation or performance-based version choice is permitted here."
+  },
+  "platform": {
+    "machine": "AMD64",
+    "release": "10",
+    "system": "Windows",
+    "version": "10.0.26200"
+  },
+  "python_executable": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\venv\\Scripts\\python.exe",
+  "python_version": "3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]",
+  "script_version": "05cmp0c-smoke-test-icluster2b-cpu-v4-cache-safe-windows-binary-no-cli"
+}

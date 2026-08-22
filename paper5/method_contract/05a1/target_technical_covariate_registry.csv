@@ -1,0 +1,12 @@
+covariate_id,candidate_alias_regex,data_type,primary_status,allowed_for_model_selection,allowed_for_factor_flagging,notes
+sequencing_or_processing_center,center|sequencing_center|processing_center|tissue_source_site,categorical,candidate,False,True,Tissue source site is retained as an ambiguous technical/site covariate and interpreted cautiously.
+platform,platform|instrument_model|array_platform,categorical,candidate,False,True,Use only if at least two non-sparse levels exist.
+workflow_type,workflow_type|workflow|pipeline|analysis_workflow,categorical,candidate,False,True,Constant-within-view fields are documented but not tested.
+experimental_strategy,experimental_strategy|assay_type|data_type,categorical,descriptive_only_if_constant,False,True,Do not confuse modality identity with a sample-level batch.
+array_plate_or_chip,plate|chip|sentrix|slide|array_id|batch_id,categorical,candidate,False,True,Reject identifier-like fields with excessive cardinality.
+preservation_method,preservation_method|preservation|freezing_method,categorical,candidate,False,True,Use only as a technical specimen-handling covariate.
+analyte_type,analyte_type|analyte|molecule_type,categorical,candidate,False,True,Constant fields remain descriptive only.
+specimen_or_portion_type,specimen_type|portion_type|sample_type|tissue_type,categorical,candidate_ambiguous,False,True,May contain biological content; technical flagging must be reported as ambiguous rather than automatically corrected.
+submission_or_creation_time_bin,created_datetime|updated_datetime|submission_date|created_date,ordered_categorical,candidate_derived,False,True,Dates may be binned by calendar quarter only; raw unique timestamps are forbidden.
+file_case_sample_aliquot_uuid,uuid|file_id|case_id|sample_id|aliquot_id|submitter_id,identifier,forbidden,False,False,Identifiers may be used only for linkage and integrity checks.
+clinical_or_outcome_field,survival|death|event|metast|recurr|response|therapy|treatment|age|sex|race|stage|grade|histology|prognos,clinical_or_outcome,forbidden_before_representation_freeze,False,False,Never loaded in the technical metadata preflight.

@@ -1,0 +1,39 @@
+{
+  "checks": {
+    "V0_BALANCED_AE": {
+      "epochs": 7,
+      "exact_final_objective_match": true,
+      "exact_patient_shared_score_match": true,
+      "exact_state_dict_match": true,
+      "final_objective": 1.3499130010604858,
+      "seed": 20260824
+    },
+    "V4_SABLE_MO": {
+      "epochs": 7,
+      "exact_final_objective_match": true,
+      "exact_patient_shared_score_match": true,
+      "exact_state_dict_match": true,
+      "final_objective": 2.2254858016967773,
+      "seed": 20260828
+    },
+    "V5_SABLE_VAE": {
+      "epochs": 7,
+      "exact_final_objective_match": true,
+      "exact_patient_shared_score_match": true,
+      "exact_state_dict_match": true,
+      "final_objective": 3.053769111633301,
+      "seed": 20260829
+    }
+  },
+  "cuda_build": "13.0",
+  "device": "cuda:0",
+  "fixture_id": "paper5-05d4-v0-v5-cuda-confirmatory-fixture-v1",
+  "profile_id": "ARCH_COMPACT__REG_WEAK",
+  "status": "PASS",
+  "torch_version": "2.12.1+cu130",
+  "variants_checked": [
+    "V0_BALANCED_AE",
+    "V4_SABLE_MO",
+    "V5_SABLE_VAE"
+  ]
+}

@@ -1,0 +1,3 @@
+method_name,view_order,input_orientation,latent_dimension,input_dtype,feature_selection,standardization,feature_missing_after_standardization,whole_view_missing,missingness_indicator_added,sample_repair_or_repairing,outcome_or_truth_access
+iCluster2b,RNA|METHYLATION|CNV,samples_x_features_per_view,5,float64/R double,same frozen outcome-blind Paper5 feature-budget/preprocessing inputs,fit-split observed-entry center/scale only,0.0,all-zero standardized row,NO,FORBIDDEN,FORBIDDEN
+MOVE,RNA|METHYLATION|CNV,samples_x_features_per_view,5,float32,same frozen outcome-blind Paper5 feature-budget/preprocessing inputs,fit-split observed-entry center/scale only,0.0,all-zero standardized row,NO,FORBIDDEN,FORBIDDEN

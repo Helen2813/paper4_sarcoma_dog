@@ -1,0 +1,94 @@
+{
+  "contract": {
+    "path": "paper5\\method_contract\\05d3\\selected_neural_profile.json",
+    "sha256": "83ccee90a20b2fc51cec13de3f831835c85bbffc549a53d3cc6867c7bbfd1f0d",
+    "size_bytes": 10830
+  },
+  "contract_version": "paper5-selected-neural-profile-freeze-v1",
+  "created_at_utc": "2026-08-18T22:13:08.772893+00:00",
+  "frozen_source_files": {
+    "paper5\\method_contract\\05a\\ai_method_contract.json": {
+      "sha256": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+      "size_bytes": 10644
+    },
+    "paper5\\method_contract\\05d1\\neural_architecture_regularization_profile_grid.csv": {
+      "sha256": "118b2fd4c16751f0b83ac3053f726f9421db26949ab98a8a531ff584c194ee32",
+      "size_bytes": 2040
+    },
+    "paper5\\method_contract\\05d1\\neural_confirmatory_ablation_fit_seed_registry.csv": {
+      "sha256": "bdc528af0e3d41e1d2713ad9557f21ca88a3faee5eb3f634d1607a94fe2007cb",
+      "size_bytes": 2142212
+    },
+    "paper5\\method_contract\\05d1\\neural_confirmatory_stability_resample_registry.csv": {
+      "sha256": "82cea9378300c45d6bbd10653fd5421d8ea39f35c00404b739c9294f38e70a6c",
+      "size_bytes": 810613
+    },
+    "paper5\\method_contract\\05d1\\neural_loss_and_architecture_contract.json": {
+      "sha256": "b90ded1d011ee3210154c2102389df0b4e0c8fcf668b70d7e2b8e14184e3f6b1",
+      "size_bytes": 10722
+    },
+    "paper5\\method_contract\\05d1\\neural_profile_selection_contract.json": {
+      "sha256": "4dc5ec24f19a7b575515d29628f1f3c2c0d6a69ffa7685ad81e1fafb05f39cd1",
+      "size_bytes": 5480
+    },
+    "paper5\\method_contract\\05d1\\neural_simulation_protocol_lock.json": {
+      "sha256": "b3f7d0c6528edaac8d91289332eb0fdf4a53cf1cc9d2c35b052d3987e3002066",
+      "size_bytes": 3378
+    },
+    "paper5\\method_contract\\05d2_v2\\neural_profile_screen_results_lock.json": {
+      "sha256": "1b5ef05f7d71393785a98d386c5b517e0dc51af9083a0643dd9e89488bb3d797",
+      "size_bytes": 5266
+    },
+    "paper5\\method_contract\\05d2_v2\\neural_profile_screen_results_manifest.json": {
+      "sha256": "441e2d33b2353f06047f67a6725bd7a09984f7a67b7c6864e29c5a0928f46bb3",
+      "size_bytes": 8243
+    },
+    "paper5\\method_contract\\05d2_v2\\neural_profile_screen_shard_manifest.csv": {
+      "sha256": "91afadb1268443f945cdf60f57c290a36d882c79cfcd35712d490504083151e2",
+      "size_bytes": 1741746
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_overall_summary.csv": {
+      "sha256": "be6c318a013cb31d2040fd571dbd78759f15235422c01e7ab83c5ef0f28b28f5",
+      "size_bytes": 1806
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_selection_result.json": {
+      "sha256": "381eecd87476970b9e1f07cb70ba84ce8b9d03c1fcd93b220bfe61baedfa45d4",
+      "size_bytes": 1280
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_selection_table.csv": {
+      "sha256": "f71483d119f8d1abe764dd226ed814503bed2a19331f3c126130afc48c581d4b",
+      "size_bytes": 1951
+    }
+  },
+  "generated_files": {
+    "paper5\\method_contract\\05d3\\selected_neural_profile.csv": {
+      "sha256": "aeeb840f525cf4bd0e9d5946c90dbfbfc735b0950fa4f7adb10c81f2e43550d9",
+      "size_bytes": 885
+    },
+    "paper5\\method_contract\\05d3\\selected_neural_profile.json": {
+      "sha256": "83ccee90a20b2fc51cec13de3f831835c85bbffc549a53d3cc6867c7bbfd1f0d",
+      "size_bytes": 10830
+    },
+    "paper5\\method_contract\\05d3\\selected_neural_profile_README.txt": {
+      "sha256": "3ab70c687fb2688f8a8da7da146ce5cfd414fab39dded51b9b58a019c88ea3bc",
+      "size_bytes": 1585
+    }
+  },
+  "next_required_stage": "05d4_fit_neural_ablation_benchmark_gpu.py",
+  "rewrite_policy": "This zero-argument stage never rewrites a frozen 05d3 profile. Any change to the selected profile or its source evidence requires a new versioned prospective branch before confirmatory neural fitting.",
+  "scientific_state": {
+    "TARGET_model_fitting_performed": false,
+    "confirmatory_neural_ablation_performed": false,
+    "final_gate_calibration_data_used": false,
+    "representation_method_selected": false,
+    "selected_neural_profile_frozen": true
+  },
+  "script_version": "05d3-freeze-selected-neural-profile-v1-no-cli",
+  "selected_profile_id": "ARCH_COMPACT__REG_WEAK",
+  "selected_profile_table": {
+    "path": "paper5\\method_contract\\05d3\\selected_neural_profile.csv",
+    "sha256": "aeeb840f525cf4bd0e9d5946c90dbfbfc735b0950fa4f7adb10c81f2e43550d9",
+    "size_bytes": 885
+  },
+  "status": "FROZEN_OUTCOME_BLIND_NEURAL_PROFILE_BEFORE_CONFIRMATORY_ABLATION"
+}

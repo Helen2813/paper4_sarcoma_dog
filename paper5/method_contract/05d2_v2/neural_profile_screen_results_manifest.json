@@ -1,0 +1,135 @@
+{
+  "contract_version": "paper5-neural-profile-screen-v2-syncfree",
+  "created_at_utc": "2026-08-18T20:10:14.097120+00:00",
+  "execution_protocol": {
+    "path": "paper5\\method_contract\\05d2_v2\\neural_profile_screen_execution_protocol.json",
+    "sha256": "38d23b7abc06845fafa53086e3695c1488c8ebf5cf24f6dfda4fa2729966b401"
+  },
+  "guardrails": [
+    "Interrupted 05d2 v1 shards were preserved for audit but excluded from all v2 aggregation and selection.",
+    "Completed 05d2 v2 shards from before the Windows path-length I/O hotfix were reused without recomputation.",
+    "The Windows path-length hotfix changed filesystem naming only and did not change scientific calculations.",
+    "Only development simulation replicates 1-10 were used.",
+    "Confirmatory replicates 11-20 were not accessed.",
+    "TARGET-OS matrices were not accessed.",
+    "Outcomes and clinical labels were not accessed.",
+    "Heavy neural computation executed on frozen cuda:0.",
+    "Quiet CPU fallback was forbidden.",
+    "All data-dependent preprocessing was local to the applicable fit subset.",
+    "Validation fold 1 was never used for early stopping or preprocessing.",
+    "All candidate profiles and failed shards remain visible.",
+    "Final gate-calibration simulations were not accessed.",
+    "The selected neural profile does not constitute final representation-method selection."
+  ],
+  "outputs": {
+    "paper5\\method_contract\\05d2_v2\\neural_profile_screen_README.txt": {
+      "sha256": "3acee9a525e61ac69f43547c49caae1d0ea5c17a6bf3d1eeb10a61d3ec5675a4",
+      "size_bytes": 1501
+    },
+    "paper5\\method_contract\\05d2_v2\\neural_profile_screen_execution_protocol.json": {
+      "sha256": "38d23b7abc06845fafa53086e3695c1488c8ebf5cf24f6dfda4fa2729966b401",
+      "size_bytes": 8619
+    },
+    "paper5\\method_contract\\05d2_v2\\neural_profile_screen_reference_fixture.json": {
+      "sha256": "639e17f6ff249d2b71e8539d710198db6ffa54ae80ec36dd7486f271540f474c",
+      "size_bytes": 490
+    },
+    "paper5\\method_contract\\05d2_v2\\neural_profile_screen_shard_manifest.csv": {
+      "sha256": "91afadb1268443f945cdf60f57c290a36d882c79cfcd35712d490504083151e2",
+      "size_bytes": 1741746
+    },
+    "paper5\\method_contract\\05d2_v2\\runtime_optimization_amendment.json": {
+      "sha256": "ee5891087877c9cc817b02a5c8523193966381bbd5a595c3b6ffe89d298bd9f8",
+      "size_bytes": 1778
+    },
+    "paper5\\method_contract\\05d2_v2\\windows_path_length_io_hotfix.json": {
+      "sha256": "2434159f52c66eec01d6a2954c78d84c6fe26e4c92515d5e2284edcbc6da0849",
+      "size_bytes": 849
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_dataset_metrics.csv.gz": {
+      "sha256": "92bb39f77e9f322216726d24f3fd743b59cc2ec531ff9b5295199014f32e57a4",
+      "size_bytes": 733541
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_fit_audit.csv.gz": {
+      "sha256": "5012e92756c1894650fccbbb10f8d584f84ba85e79a1cd06cb53eb682682b47b",
+      "size_bytes": 2553588
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_overall_summary.csv": {
+      "sha256": "be6c318a013cb31d2040fd571dbd78759f15235422c01e7ab83c5ef0f28b28f5",
+      "size_bytes": 1806
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_preprocessing_audit.csv.gz": {
+      "sha256": "8a3e4acacd7a215f0b6ffd50ce1c2b46497f719be24c5f29c2e44473e5f510cc",
+      "size_bytes": 2684839
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_scenario_summary.csv": {
+      "sha256": "404eb8d2fce623b7397a871246502aa627c4791b9bbb49cbdff6cfecb933080f",
+      "size_bytes": 126457
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_selection_result.json": {
+      "sha256": "381eecd87476970b9e1f07cb70ba84ce8b9d03c1fcd93b220bfe61baedfa45d4",
+      "size_bytes": 1280
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_selection_table.csv": {
+      "sha256": "f71483d119f8d1abe764dd226ed814503bed2a19331f3c126130afc48c581d4b",
+      "size_bytes": 1951
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_stability_dataset_summary.csv.gz": {
+      "sha256": "7c1aceb231c209ab10e4f9146e2ec891feed0a3c42f5be61349df366ddcb27ff",
+      "size_bytes": 207378
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_stability_factor_audit.csv.gz": {
+      "sha256": "b8807e1d6ff0e2763241e067eb0c1aa19fcbfeb4bdc1d6946f4454e3bed6c361",
+      "size_bytes": 2314314
+    }
+  },
+  "scientific_state": {
+    "TARGET_model_fitting_performed": false,
+    "biological_annotations_used_for_selection": false,
+    "clinical_labels_loaded": false,
+    "final_gate_calibration_data_used": false,
+    "neural_profile_screening_performed": true,
+    "neural_profile_selected": true,
+    "outcomes_loaded": false,
+    "representation_method_selected": false
+  },
+  "scope": {
+    "candidate_profiles": 9,
+    "dataset_profile_shards": 3240,
+    "development_datasets": 360,
+    "failed_shards": 0,
+    "fit_audit_rows": 74520,
+    "passed_shards": 3240,
+    "preprocessing_audit_rows": 223560,
+    "selected_profile_id": "ARCH_COMPACT__REG_WEAK",
+    "stability_factor_rows": 32400
+  },
+  "script_version": "05d2v2-screen-neural-profiles-gpu-syncfree-v2-no-cli",
+  "selection_result": {
+    "path": "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_selection_result.json",
+    "selected_profile_id": "ARCH_COMPACT__REG_WEAK",
+    "sha256": "381eecd87476970b9e1f07cb70ba84ce8b9d03c1fcd93b220bfe61baedfa45d4",
+    "status": "PROFILE_SELECTED_BY_FROZEN_ONE_SE_RULE"
+  },
+  "shard_manifest": {
+    "n_rows": 3240,
+    "path": "paper5\\method_contract\\05d2_v2\\neural_profile_screen_shard_manifest.csv",
+    "sha256": "91afadb1268443f945cdf60f57c290a36d882c79cfcd35712d490504083151e2"
+  },
+  "upstream_hashes": {
+    "paper5\\method_contract\\05a\\ai_method_contract.json": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+    "paper5\\method_contract\\05b_v2\\architecture_screening_data_manifest.csv": "f3980e88aff408b65cbfce96aca50bad4fc08ecece2bc42bbc04f365c35d9c87",
+    "paper5\\method_contract\\05d0\\neural_environment_contract.json": "a5647e7cae4548bb1992385600dd6906cbcca4138636d1a7adb0692d680d3f92",
+    "paper5\\method_contract\\05d0\\neural_environment_lock.json": "e1420d82a1de564efa3b141aa0eb5249b502232ece61c9aaeacdc1f152b71914",
+    "paper5\\method_contract\\05d1\\neural_architecture_regularization_profile_grid.csv": "118b2fd4c16751f0b83ac3053f726f9421db26949ab98a8a531ff584c194ee32",
+    "paper5\\method_contract\\05d1\\neural_loss_and_architecture_contract.json": "b90ded1d011ee3210154c2102389df0b4e0c8fcf668b70d7e2b8e14184e3f6b1",
+    "paper5\\method_contract\\05d1\\neural_profile_development_partition_registry.csv": "1b423af3f6152c1e4b3c14f6d787e08196a7ed0d01cb579864c8b0698960d175",
+    "paper5\\method_contract\\05d1\\neural_profile_screen_fit_seed_registry.csv": "b3d263f5c946c06d9ffa333c12b5f58a266250a86547b17a4f801ddf9693d381",
+    "paper5\\method_contract\\05d1\\neural_profile_selection_contract.json": "4dc5ec24f19a7b575515d29628f1f3c2c0d6a69ffa7685ad81e1fafb05f39cd1",
+    "paper5\\method_contract\\05d1\\neural_profile_stability_resample_registry.csv": "3591f454e474533fb4bc7d5f1d9585026c0a63f15d86e2291bc3cd455ee053d5",
+    "paper5\\method_contract\\05d1\\neural_simulation_dataset_role_registry.csv": "5dace3ec427e5b6765b1972ff7be817e8ad933ed03688d711c9fe64c61b85d71",
+    "paper5\\method_contract\\05d1\\neural_simulation_evaluation_protocol.json": "3cc4660551ca8d5731c2043096a68a0a675505b1a2a2a7d6971b41b526c4dd03",
+    "paper5\\method_contract\\05d1\\neural_simulation_protocol_lock.json": "b3f7d0c6528edaac8d91289332eb0fdf4a53cf1cc9d2c35b052d3987e3002066",
+    "paper5\\scripts\\05c1_fit_linear_simulation_baselines.py": "c2c91b4ad274f78ccc369e6fca765102285cf3d9c8191f3c33f4a450b7426367"
+  }
+}

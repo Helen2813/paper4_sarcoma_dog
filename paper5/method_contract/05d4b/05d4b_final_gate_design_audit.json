@@ -1,0 +1,184 @@
+{
+  "audit_version": "sable-mo-final-gate-design-audit-v1",
+  "created_at_utc": "2026-08-21T21:07:38+00:00",
+  "frozen_scope": {
+    "final_gate_datasets": 3100,
+    "final_gate_scenarios": 24,
+    "pairing_permutations_current": 100,
+    "stability_resamples_per_dataset": 100
+  },
+  "guardrails": [
+    "This audit does not materialize or read any final-gate simulation dataset.",
+    "This audit does not choose a favorable implementation after results.",
+    "The two-sided Wilson calculation is a prospective reference calculation until separately frozen by 05a2.",
+    "The audit does not change 3,100 datasets, 100 stability resamples, 0.70/0.40/0.80 factor thresholds, architecture, or profile.",
+    "Any 05a2 amendment must be frozen before final-gate materialization."
+  ],
+  "metric_and_decision_semantics": {
+    "D01": {
+      "confidence_interval_text": "Wilson 95% binomial interval",
+      "familywise_event_definition_explicit": true,
+      "implementation_ambiguity_present": true,
+      "metric": "gate_familywise_false_acceptance",
+      "metric_formula": "probability of retaining at least one false biological shared factor in a null dataset",
+      "required_threshold": "upper operating estimate <= 0.10",
+      "selector": "true_biological_shared_factors == 0 and true_technical_shared_factors == 0",
+      "wilson_sidedness_and_continuity_correction_explicit": false
+    },
+    "D02": {
+      "aggregation_unit_ambiguity_present": true,
+      "aggregation_unit_explicit": false,
+      "confidence_interval_text": "Wilson 95% binomial interval",
+      "formula_is_factor_based": true,
+      "metric": "gate_true_positive_rate",
+      "metric_formula": "number of true shared factors matched and retained / number of true shared factors",
+      "required_threshold": "point estimate >= 0.80",
+      "selector": "n_samples == 62 and shared_signal_strength == 1.0 and shared_factor_correlation == 0 and batch_mode == 'none'"
+    },
+    "D03": {
+      "algebraic_mirror_of_D02_on_same_selector": true,
+      "confidence_interval_text": "Wilson 95% binomial interval",
+      "metric": "gate_false_negative_rate",
+      "metric_formula": "1 - gate_true_positive_rate",
+      "required_threshold": "point estimate <= 0.20",
+      "selector": "n_samples == 62 and shared_signal_strength == 1.0 and shared_factor_correlation == 0 and batch_mode == 'none'"
+    }
+  },
+  "newly_detected_ambiguities": [
+    {
+      "detail": "Frozen text says Wilson 95% binomial interval but does not specify sidedness, z, or continuity correction.",
+      "id": "A01_D01_WILSON_IMPLEMENTATION",
+      "present": true
+    },
+    {
+      "detail": "The frozen STANDARD selector also matches mixed-support, sparse-loading, and dense-loading stress scenarios.",
+      "id": "A02_D02_D03_SELECTOR_SCOPE",
+      "present": true
+    },
+    {
+      "detail": "TPR/FNR formulas are factor-based, but the frozen registry does not specify whether true-factor events are pooled across datasets or dataset-level rates are averaged.",
+      "id": "A03_D02_D03_AGGREGATION_UNIT",
+      "present": true
+    },
+    {
+      "detail": "D03 is algebraically 1-TPR on the same selector and should not be presented as independent evidence if this remains true in the implementation.",
+      "id": "A04_D03_MIRRORS_D02",
+      "present": true
+    }
+  ],
+  "reference_statistical_implementation": {
+    "D01_limit": 0.1,
+    "D01_one_sided_95_Wilson_z_for_ambiguity_comparison": 1.6448536269514722,
+    "D01_two_sided_95_Wilson_z": 1.959963984540054,
+    "D02_point_estimate_min": 0.8,
+    "D03_point_estimate_max": 0.2,
+    "continuity_correction": false,
+    "minimum_n_for_80pct_D01_pass_probability_at_true_rate_0p08": {
+      "max_pass_count": 138,
+      "max_pass_observed_rate": 0.08534322820037106,
+      "n": 1617,
+      "pass_probability": 0.8000348492040797,
+      "wilson_upper_at_boundary": 0.09996308315642544
+    },
+    "role": "design audit only; becomes primary only if separately frozen in 05a2 before final-gate materialization"
+  },
+  "scientific_state": {
+    "GPU_computation_performed": false,
+    "TARGET_accessed": false,
+    "biological_annotations_accessed": false,
+    "decision_rule_rewritten": false,
+    "final_gate_simulation_data_accessed": false,
+    "final_gate_simulation_data_materialized": false,
+    "model_fitting_performed": false,
+    "outcomes_accessed": false,
+    "threshold_retuning_performed": false
+  },
+  "script_version": "05d4b-read-only-final-gate-design-audit-v1-no-cli",
+  "selector_resolution": {
+    "D01": {
+      "correlated_private_datasets": 200,
+      "correlated_private_scenario_ids": [
+        "G19_CORRELATED_PRIVATE_NULL_N62"
+      ],
+      "independent_null_datasets": 800,
+      "independent_null_scenario_ids": [
+        "G01_IND_N50_S0P00",
+        "G05_IND_N62_S0P00",
+        "G09_IND_N75_S0P00",
+        "G13_IND_N100_S0P00"
+      ],
+      "n_datasets": 1000,
+      "n_scenarios": 5,
+      "scenario_ids": [
+        "G01_IND_N50_S0P00",
+        "G05_IND_N62_S0P00",
+        "G09_IND_N75_S0P00",
+        "G13_IND_N100_S0P00",
+        "G19_CORRELATED_PRIVATE_NULL_N62"
+      ]
+    },
+    "D02_D03_current": {
+      "n_datasets": 400,
+      "n_scenarios": 4,
+      "n_true_factor_opportunities": 1600,
+      "scenario_ids": [
+        "G07_IND_N62_S1P00",
+        "G18_MIXED_SUPPORT_N62_S1P00",
+        "G23_SPARSE_LOADING_N62_S1P00",
+        "G24_DENSE_LOADING_N62_S1P00"
+      ]
+    },
+    "D02_D03_standard_candidate": {
+      "n_datasets": 100,
+      "n_scenarios": 1,
+      "n_true_factor_opportunities": 400,
+      "scenario_ids": [
+        "G07_IND_N62_S1P00"
+      ]
+    }
+  },
+  "source_provenance": {
+    "05a1_addendum": {
+      "path": "paper5\\method_contract\\05a1\\simulation_and_technical_confound_addendum.json",
+      "sha256": "3aadb87386f796663e68b97fb608cb864c197013fe52c70ac5b37bed06e7a3e8"
+    },
+    "05a1_lock": {
+      "path": "paper5\\method_contract\\05a1\\simulation_and_technical_confound_addendum_lock.json",
+      "sha256": "61969f36872e3e508a239d5e6903ae3395fd36ec74ee7aa4e31740a514c119e3"
+    },
+    "05a_contract": {
+      "path": "paper5\\method_contract\\05a\\ai_method_contract.json",
+      "sha256": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2"
+    },
+    "05a_lock": {
+      "path": "paper5\\method_contract\\05a\\ai_method_contract_lock.json",
+      "sha256": "cc62dcc75c5f06e0c2c7220d1419392f8838b9eccad4ae916831689255dfc9f0"
+    },
+    "05b_v2_lock": {
+      "path": "paper5\\method_contract\\05b_v2\\simulation_generation_v2_lock.json",
+      "sha256": "1198da23059876a439183b35c8d095f8731bcddd98aa0964da2486995aefd524"
+    },
+    "05d4a_lock_if_present": {
+      "path": "paper5\\method_contract\\05d4a\\05d4a_results_lock.json",
+      "present": true,
+      "sha256": "4b29413eadc046ea51169be25de0b660ff020c64dbada2130c0140cf49cee86b"
+    },
+    "final_gate_replicates": {
+      "path": "paper5\\method_contract\\05a1\\final_gate_calibration_replicates.csv",
+      "sha256": "a8e1fb8fa70a4585f43c11264b5a39f1459488c1089df2b10789e4670ff874f0"
+    },
+    "final_gate_scenarios": {
+      "path": "paper5\\method_contract\\05a1\\final_gate_calibration_scenarios.csv",
+      "sha256": "8695887dc0b27b69d87fa944ce1068fe149718ddf6c00a7d91e71ee1b1b306c2"
+    },
+    "gate_decisions": {
+      "path": "paper5\\method_contract\\05a1\\stability_gate_decision_registry.csv",
+      "sha256": "8c01e42f1700d92b2b7d56116388949eede9c1f50bc1d470f722ad5e85b73ed8"
+    },
+    "gate_metrics": {
+      "path": "paper5\\method_contract\\05a1\\stability_gate_operating_metric_registry.csv",
+      "sha256": "c186eebbc201e5f9ed3deedebec81d2b9b4a3201dde2274f0b85d18f6872812d"
+    }
+  },
+  "status": "DERIVED_READ_ONLY_FINAL_GATE_DESIGN_AUDIT"
+}

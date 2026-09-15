@@ -1,0 +1,54 @@
+{
+  "created_at_utc": "2026-08-22T18:04:54+00:00",
+  "generator_regression": {
+    "frozen_fixture": "paper5/method_contract/05b_v2/simulation_reference_fixture_hashes.json",
+    "frozen_fixture_sha256": "f962316f62c43060427a0a111cda2511a98228f4824cb3051809ed048d1d189b",
+    "generator_script": "paper5/scripts/05b_generate_small_n_multiomics_simulations_v2.py",
+    "generator_script_sha256": "b4adb1fcb32b65a998ee70e1b72d52e13490194c7ad8e5ddd802b95bf05a28db",
+    "generator_script_version": "05b-generate-small-n-multiomics-simulations-v2-no-cli",
+    "generator_version": "sable-mo-simulation-generator-v2",
+    "reference_npz_sha256": "6db4cd6d72881c84d1a943d6c7f500b9ed435078e26e4611446b476ef1c5c50a",
+    "reference_scenario_sha256": "956e5dd7ae92dd4955f7dda5ba0300affef493593183c901fe10a1b9b53cbde9",
+    "status": "PASS"
+  },
+  "physical_state": {
+    "final_gate_data_file_count": 0,
+    "final_gate_data_root_exists": false,
+    "legacy_persistent_materialization_artifacts": 0
+  },
+  "registry": {
+    "materialization_policy": "stream_or_temporary_after_architecture_freeze",
+    "n_datasets": 3100,
+    "n_scenarios": 24,
+    "replicate_registry_sha256": "a8e1fb8fa70a4585f43c11264b5a39f1459488c1089df2b10789e4670ff874f0",
+    "scenario_canonical_hash_registry_sha256": "41acd55364fbe5d3645d0d8fc6cef362572b499f1c0b8f49d15999b7954ba966",
+    "scenario_registry_sha256": "8695887dc0b27b69d87fa944ce1068fe149718ddf6c00a7d91e71ee1b1b306c2",
+    "simulation_stage": "final_gate_calibration",
+    "stability_resamples_per_dataset": 100
+  },
+  "scientific_state": {
+    "TARGET_accessed": false,
+    "biology_accessed": false,
+    "final_gate_datasets_generated": false,
+    "final_gate_model_fitting_performed": false,
+    "final_gate_scientific_metrics_evaluated": false,
+    "outcomes_accessed": false,
+    "threshold_retuning_performed": false
+  },
+  "script_version": "05f0-freeze-final-gate-streaming-execution-plan-v1-no-cli",
+  "status": "PASS_BEFORE_FINAL_GATE_RUNTIME_PILOT",
+  "upstream_hashes": {
+    "paper5/method_contract/05a1/final_gate_calibration_replicates.csv": "a8e1fb8fa70a4585f43c11264b5a39f1459488c1089df2b10789e4670ff874f0",
+    "paper5/method_contract/05a1/final_gate_calibration_scenarios.csv": "8695887dc0b27b69d87fa944ce1068fe149718ddf6c00a7d91e71ee1b1b306c2",
+    "paper5/method_contract/05a1/simulation_and_technical_confound_addendum.json": "3aadb87386f796663e68b97fb608cb864c197013fe52c70ac5b37bed06e7a3e8",
+    "paper5/method_contract/05a1/simulation_and_technical_confound_addendum_lock.json": "61969f36872e3e508a239d5e6903ae3395fd36ec74ee7aa4e31740a514c119e3",
+    "paper5/method_contract/05a2/final_gate_runtime_pilot_policy.json": "05061a5911a76c365eb2a33bac87719466eb3413082419ebde73bfdc10247fcd",
+    "paper5/method_contract/05a2/inference_final_gate_implementation_amendment.json": "06b34c4e763a4dd150807afb4777ef4bcbb17abd7dc075b95baf438c9faad445",
+    "paper5/method_contract/05a2/inference_final_gate_implementation_amendment_lock.json": "052544f9230c961ac8d4e6b6cc8f763653fffc6b531468af1f21fa4c28da0932",
+    "paper5/method_contract/05b_v2/simulation_generation_v2_lock.json": "1198da23059876a439183b35c8d095f8731bcddd98aa0964da2486995aefd524",
+    "paper5/method_contract/05b_v2/simulation_reference_fixture_hashes.json": "f962316f62c43060427a0a111cda2511a98228f4824cb3051809ed048d1d189b",
+    "paper5/method_contract/05e/representation_method_freeze.json": "df01013be4d87fe7b67ea31a5d038ace8642ecb8cfc56d13b1bfa6414cb2d60f",
+    "paper5/method_contract/05e/representation_method_freeze_lock.json": "e0adaccada7f9b04f0e699badfac252a6dc865f24d2ea39a243b07bc3ddbafbf",
+    "paper5/scripts/05b_generate_small_n_multiomics_simulations_v2.py": "b4adb1fcb32b65a998ee70e1b72d52e13490194c7ad8e5ddd802b95bf05a28db"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "automatic_full_run_authorization": false,
+  "contract_version": "paper5-05f1c2-single-process-cuda-stream-runtime-benchmark-v1",
+  "created_at_utc": "2026-08-22T21:43:01+00:00",
+  "result": {
+    "path": "paper5/method_contract/05f1c2/single_process_cuda_stream_runtime_benchmark.json",
+    "sha256": "e921738164d5e84443fe693956f5bce491ba38aa035732e5facd540b2a944f25"
+  },
+  "scientific_metrics_used": false,
+  "script_sha256": "c4d2c50b446832a3fa348857733046b835d3236c0a6b64b19008cc5aa7be6b40",
+  "script_version": "05f1c2-benchmark-single-process-cuda-streams-gpu-v1-no-cli",
+  "status": "RUNTIME_ONLY_CUDA_STREAM_BENCHMARK_COMPLETE"
+}

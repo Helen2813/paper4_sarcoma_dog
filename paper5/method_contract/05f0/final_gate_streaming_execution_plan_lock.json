@@ -1,0 +1,37 @@
+{
+  "contract_version": "paper5-final-gate-streaming-execution-plan-v1",
+  "created_at_utc": "2026-08-22T18:04:54+00:00",
+  "generated_files": {
+    "paper5/method_contract/05f0/05f0_streaming_README.txt": {
+      "path": "paper5/method_contract/05f0/05f0_streaming_README.txt",
+      "sha256": "7b7cf14fd408097b10a6842ad4cb8f88f896ea6407cd0b110af4b141f2848b66",
+      "size_bytes": 2091
+    },
+    "paper5/method_contract/05f0/final_gate_runtime_pilot_registry.csv": {
+      "path": "paper5/method_contract/05f0/final_gate_runtime_pilot_registry.csv",
+      "sha256": "183b9354a40c3dc41ec8da4af4dbc17a8011edb3511944c35606cd709289cbe4",
+      "size_bytes": 938
+    },
+    "paper5/method_contract/05f0/final_gate_streaming_execution_plan.json": {
+      "path": "paper5/method_contract/05f0/final_gate_streaming_execution_plan.json",
+      "sha256": "fb4ce8cd18491d2d6eaf112fcd6c76fa38d84a2ae6c247cda6ee46130ef3b14a",
+      "size_bytes": 5311
+    },
+    "paper5/method_contract/05f0/final_gate_streaming_preflight.json": {
+      "path": "paper5/method_contract/05f0/final_gate_streaming_preflight.json",
+      "sha256": "f8f27b5843e0e4ddf02713feab1852d06684567ade54d8879f5a882786a4c93f",
+      "size_bytes": 3821
+    }
+  },
+  "permanent_final_gate_input_bank": false,
+  "pilot_dataset_count": 3,
+  "pilot_registry_path": "paper5/method_contract/05f0/final_gate_runtime_pilot_registry.csv",
+  "pilot_registry_sha256": "183b9354a40c3dc41ec8da4af4dbc17a8011edb3511944c35606cd709289cbe4",
+  "plan_path": "paper5/method_contract/05f0/final_gate_streaming_execution_plan.json",
+  "plan_sha256": "fb4ce8cd18491d2d6eaf112fcd6c76fa38d84a2ae6c247cda6ee46130ef3b14a",
+  "rewrite_policy": "This zero-argument script never rewrites a frozen 05f0 streaming plan. Any future change requires a new versioned plan preserving this lock and may not be chosen using final-gate scientific results.",
+  "script_path": "paper5/scripts/05f0_freeze_final_gate_streaming_execution_plan.py",
+  "script_sha256": "ce15aac245af6fc4f546398fdb21eb57c93b3801351068603513c86851c25ca9",
+  "script_version": "05f0-freeze-final-gate-streaming-execution-plan-v1-no-cli",
+  "status": "FROZEN_FINAL_GATE_STREAMING_EXECUTION_PLAN_BEFORE_RUNTIME_PILOT"
+}

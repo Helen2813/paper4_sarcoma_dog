@@ -1,0 +1,98 @@
+{
+  "05a2_amendment_hash": "06b34c4e763a4dd150807afb4777ef4bcbb17abd7dc075b95baf438c9faad445",
+  "contract_version": "paper5-final-gate-runtime-pilot-v2",
+  "created_at_utc": "2026-08-22T18:54:07+00:00",
+  "generated_files": {
+    "paper5/method_contract/05f1/05f1_runtime_pilot_README.txt": {
+      "path": "paper5/method_contract/05f1/05f1_runtime_pilot_README.txt",
+      "sha256": "d63867f937228b0cd131078932f75951962af1137f7c3a59ac3978ec64ea2140",
+      "size_bytes": 1991
+    },
+    "paper5/method_contract/05f1/final_gate_fixed_epoch_bridge.json": {
+      "path": "paper5/method_contract/05f1/final_gate_fixed_epoch_bridge.json",
+      "sha256": "6926d1613f03b6eb4b60e83a085621b2778421192dc7960887299df204759e72",
+      "size_bytes": 1307
+    },
+    "paper5/method_contract/05f1/final_gate_numerical_runtime_contract.json": {
+      "path": "paper5/method_contract/05f1/final_gate_numerical_runtime_contract.json",
+      "sha256": "2eeebb73d72d6faf8bf894be1feef526646b4db29522eaadf89816e92584f00b",
+      "size_bytes": 5780
+    },
+    "paper5/method_contract/05f1/final_gate_runtime_pilot_manifest.csv": {
+      "path": "paper5/method_contract/05f1/final_gate_runtime_pilot_manifest.csv",
+      "sha256": "b07942a9acd3cd7a204dd16f8da7929f95886ad5e7eb44572f4dd0de672aac21",
+      "size_bytes": 1077
+    },
+    "paper5/method_contract/05f1/final_gate_runtime_pilot_prelock.json": {
+      "path": "paper5/method_contract/05f1/final_gate_runtime_pilot_prelock.json",
+      "sha256": "8aa67b9e51ce007d79fd4ac70fbc14cf2f7037437ab759013d7f8794d4cef072",
+      "size_bytes": 5645
+    },
+    "paper5/method_contract/05f1/final_gate_runtime_pilot_summary.json": {
+      "path": "paper5/method_contract/05f1/final_gate_runtime_pilot_summary.json",
+      "sha256": "90ec909d03bb3c16d707524903bafd815e4025c08ac962c4c66108beb43147f4",
+      "size_bytes": 1386
+    },
+    "paper5/method_contract/05f1/final_gate_runtime_reference_fixture.json": {
+      "path": "paper5/method_contract/05f1/final_gate_runtime_reference_fixture.json",
+      "sha256": "6d0470a560033d347dd1d3bb9407fb91e60acc8b3517e53de32f5a4d20d6f72f",
+      "size_bytes": 473
+    },
+    "paper5/method_contract/05f1/final_gate_stability_seed_registry.csv.gz": {
+      "path": "paper5/method_contract/05f1/final_gate_stability_seed_registry.csv.gz",
+      "sha256": "fb599c000022ad4d7140341342cee13a0f327079620d323d5595d32e058b02a9",
+      "size_bytes": 5052416
+    }
+  },
+  "invalidation_rule": "Any change to the numerical/GPU code path, dtype, reduction order, preprocessing math, model fitting path, alignment math, or stability computation invalidates all pilot shards; they must be recomputed.",
+  "numerical_implementation_hash": "e16deabe0cb733bf4d6a2dbf8b0a977eb7d5a959d7a6331a69d59dda16144b1a",
+  "pilot_dataset_count": 3,
+  "pilot_manifest": {
+    "path": "paper5/method_contract/05f1/final_gate_runtime_pilot_manifest.csv",
+    "sha256": "b07942a9acd3cd7a204dd16f8da7929f95886ad5e7eb44572f4dd0de672aac21",
+    "size_bytes": 1077
+  },
+  "pilot_optimization_runs": 303,
+  "pilot_shards": {
+    "G01_IND_N50_S0P00|R001|S0269184890": {
+      "path": "paper5/results/simulation_benchmark/05f_final_gate/shards/_compact/shard_22e8b067fb6d2c30b7be035c6bd05b5f.json",
+      "sha256": "f2ef81b7625f12674a824a4735876056d6d3e1845d9083c2d1d82e50bb5e574f",
+      "size_bytes": 911572
+    },
+    "G01_IND_N50_S0P00|R002|S0643022940": {
+      "path": "paper5/results/simulation_benchmark/05f_final_gate/shards/_compact/shard_695e8cf2fd5a7e188750856283fbd092.json",
+      "sha256": "724bdfbad86cc91eaaeda18e2a4c19c6e212d98b67aee78b8ff701145eed999b",
+      "size_bytes": 911598
+    },
+    "G01_IND_N50_S0P00|R003|S2850811377": {
+      "path": "paper5/results/simulation_benchmark/05f_final_gate/shards/_compact/shard_e712e2066f2c18418e584517131590f8.json",
+      "sha256": "27367586a2b26585e88ecd0cf14d55eb82dc7cde2d1f63beba8c0852059532b8",
+      "size_bytes": 911963
+    }
+  },
+  "reuse_rule": "Pilot shards may be retained as final shards only when the numerical implementation hash is unchanged.",
+  "rewrite_policy": "05f1 runtime-pilot outputs are immutable. Pilot shards may enter the full final-gate run only if the numerical implementation hash is exactly unchanged and every shard provenance/hash validation passes.",
+  "runtime_summary": {
+    "path": "paper5/method_contract/05f1/final_gate_runtime_pilot_summary.json",
+    "sha256": "90ec909d03bb3c16d707524903bafd815e4025c08ac962c4c66108beb43147f4",
+    "size_bytes": 1386
+  },
+  "scientific_contract_hash": "bd5830f967d58c9e5afa70d183df1d22b581877b27688d52c50de60edc165fc2",
+  "scientific_state": {
+    "D01_D02_D03_evaluated": false,
+    "TARGET_accessed": false,
+    "biology_annotations_accessed": false,
+    "final_gate_PASS_FAIL_evaluated": false,
+    "final_gate_pilot_datasets_streamed": 3,
+    "final_gate_pilot_model_fits_performed": 303,
+    "outcomes_accessed": false,
+    "per_dataset_scientific_payloads_sealed_in_shards": true,
+    "scientific_metrics_aggregated": false,
+    "scientific_metrics_printed": false,
+    "threshold_retuning_performed": false
+  },
+  "script_path": "paper5/scripts/05f1_run_final_gate_runtime_pilot_gpu_v2.py",
+  "script_sha256": "a5d19d318538741ae61c26c5c3fd6b9a19b22d1517c91c968bfd41f1daad34c6",
+  "script_version": "05f1-run-final-gate-runtime-pilot-gpu-v2-seed-collision-aware-no-cli",
+  "status": "FROZEN_FINAL_GATE_RUNTIME_PILOT_COMPLETE_BEFORE_FULL_RUN"
+}

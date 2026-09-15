@@ -1,0 +1,15 @@
+{
+  "contract_version": "paper5-05f1a-final-gate-runtime-profile-v1",
+  "created_at_utc": "2026-08-22T19:19:17.317513+00:00",
+  "numerical_implementation_hash": "e16deabe0cb733bf4d6a2dbf8b0a977eb7d5a959d7a6331a69d59dda16144b1a",
+  "result": {
+    "path": "paper5\\method_contract\\05f1a\\final_gate_runtime_breakdown.json",
+    "sha256": "f49605ff13dd2ca38bb9e94f46e8c09c091a752f67f7a9f5cf9dd8a79d3668a8",
+    "size_bytes": 4053
+  },
+  "rewrite_policy": "Immutable runtime-only diagnostic; no scientific selection or threshold decision may use this profile.",
+  "scientific_output": false,
+  "script_sha256": "c81d83f1316bba8588e3c9d702926e50d59368cecbaad1f04c1bcd8cb0f3a36a",
+  "script_version": "05f1a-profile-final-gate-runtime-breakdown-gpu-v1-no-cli",
+  "status": "RUNTIME_ONLY_PROFILE_COMPLETE_NO_SCIENTIFIC_OUTPUT"
+}

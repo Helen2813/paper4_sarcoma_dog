@@ -1,0 +1,80 @@
+{
+  "05a2_amendment_hash": "06b34c4e763a4dd150807afb4777ef4bcbb17abd7dc075b95baf438c9faad445",
+  "contract_version": "paper5-05f1d-two-stream-full-path-validation-v1",
+  "created_at_utc": "2026-08-22T21:55:30+00:00",
+  "epoch_bridge": {
+    "changed_from_05f1": false,
+    "path": "paper5/method_contract/05f1/final_gate_fixed_epoch_bridge.json",
+    "sha256": "6926d1613f03b6eb4b60e83a085621b2778421192dc7960887299df204759e72"
+  },
+  "execution_path": {
+    "AMP": false,
+    "TF32": false,
+    "alignment_changed": false,
+    "architecture_changed": false,
+    "canonical_scientific_aggregation": "unchanged runner.evaluate_final_gate_dataset",
+    "cuda_contexts": 1,
+    "fit_seeds_changed": false,
+    "name": "single_process_two_cuda_stream_cached_resample_training_plus_canonical_helper_replay",
+    "optimizer_changed": false,
+    "preprocessing_changed": false,
+    "python_processes": 1,
+    "reference_fit_execution": "original frozen sequential train_fixed_epochs",
+    "resample_fit_execution": "100 independent frozen fixed-epoch fits trained two-at-a-time in CUDA streams; exact CPU state_dict cache replayed through the canonical stability_audit",
+    "selected_epoch_changed": false,
+    "stability_thresholds_changed": false,
+    "stream_width": 2,
+    "torch_compile": false
+  },
+  "numerical_sources": {
+    "05f1_runner": {
+      "path": "paper5/scripts/05f1_run_final_gate_runtime_pilot_gpu_v2.py",
+      "sha256": "a5d19d318538741ae61c26c5c3fd6b9a19b22d1517c91c968bfd41f1daad34c6"
+    },
+    "linear_helper": {
+      "path": "paper5/scripts/05c1_fit_linear_simulation_baselines.py",
+      "sha256": "c2c91b4ad274f78ccc369e6fca765102285cf3d9c8191f3c33f4a450b7426367"
+    },
+    "neural_helper": {
+      "path": "paper5/scripts/05d2v2_screen_neural_profiles_gpu_syncfree_pathfix.py",
+      "sha256": "05ae6923ce588c137bc6f4aa934262181dd99f4ebe6bec3250e4b7cd54ed1ff3"
+    },
+    "two_stream_execution_core_sha256": "262b598d73700bbd5a0c5d537bbd11015dfaa88d04da3a87c4fb389794a229ca"
+  },
+  "pilot_validation_requirement": {
+    "blind_payload_equivalence_against_05f1_required": true,
+    "datasets": 3,
+    "full_run_authorized_by_prelock_alone": false,
+    "optimization_runs": 303,
+    "runtime_fields_stripped_for_equivalence": [
+      "wall_seconds",
+      "created_at_utc"
+    ],
+    "scientific_metrics_may_be_aggregated": false,
+    "scientific_metrics_may_be_printed": false
+  },
+  "runtime_selection_evidence": {
+    "05f1c2_result": {
+      "path": "paper5/method_contract/05f1c2/single_process_cuda_stream_runtime_benchmark.json",
+      "sha256": "e921738164d5e84443fe693956f5bce491ba38aa035732e5facd540b2a944f25"
+    },
+    "05f1c2_script": {
+      "path": "paper5/scripts/05f1c2_benchmark_single_process_cuda_streams_gpu.py",
+      "sha256": "c4d2c50b446832a3fa348857733046b835d3236c0a6b64b19008cc5aa7be6b40"
+    },
+    "candidate_exact_equivalence": true,
+    "candidate_speedup_vs_official_sequential": 1.338665943159903,
+    "selected_stream_width": 2,
+    "selection_used_scientific_metrics": false
+  },
+  "scientific_contract_hash": "bd5830f967d58c9e5afa70d183df1d22b581877b27688d52c50de60edc165fc2",
+  "script_version": "05f1d-validate-two-stream-full-path-gpu-v1-no-cli",
+  "seed_registry": {
+    "changed_from_05f1": false,
+    "path": "paper5/method_contract/05f1/final_gate_stability_seed_registry.csv.gz",
+    "sha256": "fb599c000022ad4d7140341342cee13a0f327079620d323d5595d32e058b02a9"
+  },
+  "selected_epoch": 248,
+  "status": "FROZEN_TWO_STREAM_EXECUTION_PATH_BEFORE_05F1D_PILOT_FITS",
+  "two_stream_numerical_implementation_hash": "3d7a27fcaf8ff33abb50e74277c3c9553c0d341d15f82d972cb611616a77df21"
+}

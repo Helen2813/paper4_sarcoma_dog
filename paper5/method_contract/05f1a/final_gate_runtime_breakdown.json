@@ -1,0 +1,112 @@
+{
+  "categories": [
+    {
+      "calls": 101,
+      "category": "neural_training",
+      "fraction_of_profiled_wall": 0.9933729290502366,
+      "mean_seconds_per_call": 5.064264349505026,
+      "seconds": 511.4906993000077
+    },
+    {
+      "calls": 101,
+      "category": "preprocessing_fit",
+      "fraction_of_profiled_wall": 0.003714369517038611,
+      "mean_seconds_per_call": 0.018936039603990013,
+      "seconds": 1.9125400000029913
+    },
+    {
+      "calls": 101,
+      "category": "preprocessing_transform",
+      "fraction_of_profiled_wall": 0.00045190103943108003,
+      "mean_seconds_per_call": 0.0023038138614096945,
+      "seconds": 0.23268520000237913
+    },
+    {
+      "calls": 101,
+      "category": "encoding",
+      "fraction_of_profiled_wall": 0.00018080318111314404,
+      "mean_seconds_per_call": 0.0009217435643870768,
+      "seconds": 0.09309610000309476
+    },
+    {
+      "calls": 101,
+      "category": "preprocessing_audit",
+      "fraction_of_profiled_wall": 9.16935814566382e-05,
+      "mean_seconds_per_call": 0.0004674584157364374,
+      "seconds": 0.047213299989380175
+    },
+    {
+      "calls": 100,
+      "category": "alignment",
+      "fraction_of_profiled_wall": 7.916306598064457e-05,
+      "mean_seconds_per_call": 0.0004076130000430567,
+      "seconds": 0.04076130000430567
+    },
+    {
+      "calls": 101,
+      "category": "availability",
+      "fraction_of_profiled_wall": 4.820286555113554e-05,
+      "mean_seconds_per_call": 0.0002457405939056494,
+      "seconds": 0.024819799984470592
+    },
+    {
+      "calls": 1,
+      "category": "final_truth_audit",
+      "fraction_of_profiled_wall": 8.360798089982979e-07,
+      "mean_seconds_per_call": 0.0004305000002204906,
+      "seconds": 0.0004305000002204906
+    },
+    {
+      "calls": 1,
+      "category": "reference_truth_audit",
+      "fraction_of_profiled_wall": 2.750032567698012e-07,
+      "mean_seconds_per_call": 0.0001416000013705343,
+      "seconds": 0.0001416000013705343
+    }
+  ],
+  "contract_version": "paper5-05f1a-final-gate-runtime-profile-v1",
+  "created_at_utc": "2026-08-22T19:19:17.313473+00:00",
+  "dominant_category": "neural_training",
+  "guardrails": {
+    "D01_D02_D03_evaluated": false,
+    "TARGET_accessed": false,
+    "final_gate_PASS_FAIL_evaluated": false,
+    "numerical_path_changed": false,
+    "outcomes_accessed": false,
+    "scientific_metrics_aggregated": false,
+    "scientific_metrics_printed": false,
+    "threshold_retuning_performed": false
+  },
+  "numerical_equivalence": {
+    "exact_hash_match_after_runtime_field_stripping": true,
+    "frozen_05f1_payload_hash": "4458831b6dcd4dcef179ea44efc953ebfd518a9f0f44286861aa48db080ae48a",
+    "recomputed_payload_hash": "4458831b6dcd4dcef179ea44efc953ebfd518a9f0f44286861aa48db080ae48a",
+    "runtime_fields_stripped": [
+      "wall_seconds",
+      "created_at_utc"
+    ],
+    "scientific_values_displayed": false
+  },
+  "runtime": {
+    "accounted_category_seconds": 513.8423870999959,
+    "input_generation_and_validation_seconds": 0.007100100001480314,
+    "peak_cuda_memory_allocated_bytes": 71088640,
+    "total_profiled_wall_seconds": 514.9029979999996,
+    "unaccounted_seconds": 1.0606109000036668
+  },
+  "scope": {
+    "dataset_key": "G01_IND_N50_S0P00|R001|S0269184890",
+    "optimization_runs": 101,
+    "registry_row_index": 0,
+    "selected_epoch": 248,
+    "stability_resamples": 100
+  },
+  "script_version": "05f1a-profile-final-gate-runtime-breakdown-gpu-v1-no-cli",
+  "status": "RUNTIME_ONLY_PROFILE_COMPLETE_NO_SCIENTIFIC_OUTPUT",
+  "upstream": {
+    "05f1_pilot_lock_sha256": "1f98e29e48d28743a29ff6df278f8d33ef0fa7bd4357d18e83cc048282a1b953",
+    "05f1_runner_path": "paper5\\scripts\\05f1_run_final_gate_runtime_pilot_gpu_v2.py",
+    "05f1_runner_sha256": "a5d19d318538741ae61c26c5c3fd6b9a19b22d1517c91c968bfd41f1daad34c6",
+    "numerical_implementation_hash": "e16deabe0cb733bf4d6a2dbf8b0a977eb7d5a959d7a6331a69d59dda16144b1a"
+  }
+}

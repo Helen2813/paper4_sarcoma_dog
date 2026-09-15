@@ -1,0 +1,103 @@
+{
+  "contract_version": "paper5-05f2-full-final-gate-streaming-run-v1",
+  "created_at_utc": "2026-08-22T22:43:06+00:00",
+  "execution_choice_hash": "c57cb6038e8b053a499a1fe67f2aba716a1318a3483d029d360b47bea5880a83",
+  "full_run_scientific_aggregation_in_05f2": false,
+  "full_run_scope": {
+    "n_datasets": 3100,
+    "n_scenarios": 24,
+    "optimization_runs_represented": 313100,
+    "pilot_shards_reused": 3,
+    "stability_resamples_per_dataset": 100
+  },
+  "numerical_contract_version": "paper5-final-gate-numerical-path-v2-seed-collision-aware",
+  "resumption_policy": {
+    "completed_dataset_shard_is_atomic_and_reused_on_resume": true,
+    "interrupted_incomplete_dataset_is_recomputed": true,
+    "progress_manifest_is_atomic_and_contiguous_in_frozen_registry_order": true,
+    "scientific_payload_remains_sealed_until_post_run_aggregation_stage": true
+  },
+  "runtime_environment": {
+    "CUDA_build": "13.0",
+    "GPU_model": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "PyTorch_version": "2.12.1+cu130"
+  },
+  "runtime_only_comparison": {
+    "05f1_original_sequential_mean_wall_seconds_per_dataset": 588.4164341333332,
+    "05f1_original_sequential_rough_full_run_days": 21.11216372469135,
+    "05f1d_two_stream_exact_scientific_payload_equivalence": true,
+    "05f1d_two_stream_mean_wall_seconds_per_dataset": 627.3748013666664,
+    "05f1d_two_stream_rough_full_run_days": 22.509975511998444,
+    "decision": "Do not adopt two-stream execution because the completed three-dataset full-path pilot was slower than the already-frozen original sequential path.",
+    "final_gate_PASS_FAIL_used_for_decision": false,
+    "scientific_metrics_used_for_decision": false,
+    "scientific_thresholds_used_for_decision": false
+  },
+  "scientific_state_before_first_new_full_run_fit": {
+    "D01_D02_D03_evaluated_by_05f2": false,
+    "TARGET_accessed_by_05f2": false,
+    "final_gate_PASS_FAIL_evaluated_by_05f2": false,
+    "outcomes_accessed_by_05f2": false,
+    "scientific_metrics_aggregated_by_05f2": false,
+    "scientific_metrics_printed_by_05f2": false,
+    "threshold_retuning_performed_by_05f2": false
+  },
+  "script_path": "paper5/scripts/05f2_run_full_final_gate_gpu_resumable.py",
+  "script_sha256": "8052e6278abef99585e3a90d64480ea7c9a6dc04eb53598bf841f7c9c2431abd",
+  "script_version": "05f2-run-full-final-gate-gpu-resumable-v1-sequential-05f1-path-no-cli",
+  "selected_execution_path": {
+    "epoch_bridge_sha256": "6926d1613f03b6eb4b60e83a085621b2778421192dc7960887299df204759e72",
+    "name": "original_05f1_sequential_final_gate_numerical_path",
+    "numerical_contract_sha256": "2eeebb73d72d6faf8bf894be1feef526646b4db29522eaadf89816e92584f00b",
+    "numerical_implementation_hash": "e16deabe0cb733bf4d6a2dbf8b0a977eb7d5a959d7a6331a69d59dda16144b1a",
+    "reuse_first_three_05f1_pilot_shards": true,
+    "runner_path": "paper5/scripts/05f1_run_final_gate_runtime_pilot_gpu_v2.py",
+    "runner_sha256": "a5d19d318538741ae61c26c5c3fd6b9a19b22d1517c91c968bfd41f1daad34c6",
+    "scientific_contract_hash": "bd5830f967d58c9e5afa70d183df1d22b581877b27688d52c50de60edc165fc2",
+    "seed_registry_sha256": "fb599c000022ad4d7140341342cee13a0f327079620d323d5595d32e058b02a9"
+  },
+  "selection_scope": "runtime_execution_only_no_scientific_metric_used",
+  "status": "FROZEN_RUNTIME_ONLY_SELECTION_OF_ORIGINAL_05F1_SEQUENTIAL_PATH_BEFORE_FULL_RUN",
+  "upstream_records": {
+    "05f1_epoch_bridge": {
+      "path": "paper5/method_contract/05f1/final_gate_fixed_epoch_bridge.json",
+      "sha256": "6926d1613f03b6eb4b60e83a085621b2778421192dc7960887299df204759e72",
+      "size_bytes": 1307
+    },
+    "05f1_numerical_contract": {
+      "path": "paper5/method_contract/05f1/final_gate_numerical_runtime_contract.json",
+      "sha256": "2eeebb73d72d6faf8bf894be1feef526646b4db29522eaadf89816e92584f00b",
+      "size_bytes": 5780
+    },
+    "05f1_prelock": {
+      "path": "paper5/method_contract/05f1/final_gate_runtime_pilot_prelock.json",
+      "sha256": "8aa67b9e51ce007d79fd4ac70fbc14cf2f7037437ab759013d7f8794d4cef072",
+      "size_bytes": 5645
+    },
+    "05f1_runtime_lock": {
+      "path": "paper5/method_contract/05f1/final_gate_runtime_pilot_lock.json",
+      "sha256": "1f98e29e48d28743a29ff6df278f8d33ef0fa7bd4357d18e83cc048282a1b953",
+      "size_bytes": 5518
+    },
+    "05f1_runtime_summary": {
+      "path": "paper5/method_contract/05f1/final_gate_runtime_pilot_summary.json",
+      "sha256": "90ec909d03bb3c16d707524903bafd815e4025c08ac962c4c66108beb43147f4",
+      "size_bytes": 1386
+    },
+    "05f1_seed_registry": {
+      "path": "paper5/method_contract/05f1/final_gate_stability_seed_registry.csv.gz",
+      "sha256": "fb599c000022ad4d7140341342cee13a0f327079620d323d5595d32e058b02a9",
+      "size_bytes": 5052416
+    },
+    "05f1d_runtime_summary": {
+      "path": "paper5/method_contract/05f1d/two_stream_full_path_runtime_summary.json",
+      "sha256": "178403cc81adcb5e7d54708364d112e1aea132d0307a40fa9c65feda547483ed",
+      "size_bytes": 914
+    },
+    "05f1d_validation_lock": {
+      "path": "paper5/method_contract/05f1d/two_stream_full_path_validation_lock.json",
+      "sha256": "81ff89201ef1ab7087a629ebcffbd46349a1ed47183cb60a809860a4d60dc6bf",
+      "size_bytes": 3146
+    }
+  }
+}

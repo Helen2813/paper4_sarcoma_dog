@@ -1,0 +1,217 @@
+{
+  "additional_descriptive_outputs": [
+    "24-scenario operating summary",
+    "pooled stability-gated false discovery proportion",
+    "factor-count bias with fixed-seed bootstrap interval",
+    "private-to-shared leakage rate",
+    "technical-factor detection sensitivity"
+  ],
+  "aggregation_script": {
+    "execution_timing": "only after 05f2 is locked COMPLETE at 3100/3100; source frozen by 05f2b before scientific unblinding",
+    "path": "paper5/scripts/05f3b_aggregate_final_gate_results_cpu_preunblinding_locked.py",
+    "script_modification_after_05f2a": "FORBIDDEN_FOR_PRIMARY_AGGREGATION",
+    "script_version": "05f3b-aggregate-final-gate-results-cpu-v1-poststart-preunblinding-locked-no-cli",
+    "sha256": "fcf1a2e1fec76b0ea15ef93be813851153d763a437c95d46ce1c41d148b9e435"
+  },
+  "continuous_interval_implementation": {
+    "bootstrap_master_seed": 20260822,
+    "bootstrap_replicates": 10000,
+    "interval": "2.5th and 97.5th percentiles of bootstrap means",
+    "resampling_unit": "dataset",
+    "role": "continuous descriptive/narrow-gate confidence intervals only",
+    "statistic": "mean",
+    "use_for_D01_decision": false,
+    "use_for_D02_D03_decisions": false
+  },
+  "core_decisions": {
+    "D01_NULL_SPECIFICITY": {
+      "PASS_rule": "upper endpoint <= 0.10",
+      "confidence_interval": {
+        "confidence_level": 0.95,
+        "continuity_correction": false,
+        "method": "Wilson score interval",
+        "sidedness": "two-sided",
+        "z": 1.959963984540054
+      },
+      "event": "dataset retains at least one stable unmatched nontechnical factor classified as a false biological acceptance",
+      "expected_datasets": 1000,
+      "point_estimate": "event datasets / 1000",
+      "selector": "true_biological_shared_factors == 0 and true_technical_shared_factors == 0",
+      "threshold": 0.1
+    },
+    "D02_STANDARD_SENSITIVITY": {
+      "PASS_rule": "point estimate >= 0.80",
+      "aggregation_unit": "pooled true biological factor opportunities",
+      "confidence_interval_role": "reported but not decision-determining",
+      "expected_datasets": 100,
+      "expected_factor_opportunities": 400,
+      "numerator": "true biological factors whose Hungarian-assigned estimated factor passes the biological truth-match threshold and the frozen stability gate",
+      "scenario_id": "G07_IND_N62_S1P00",
+      "threshold": 0.8
+    },
+    "D03_STANDARD_FNR": {
+      "PASS_rule": "point estimate <= 0.20",
+      "definition": "1 - D02 TPR on the identical 400-factor denominator",
+      "independence_status": "algebraic mirror of D02; not independent evidence",
+      "scenario_id": "G07_IND_N62_S1P00",
+      "threshold": 0.2
+    }
+  },
+  "created_at_utc": "2026-08-23T00:07:02+00:00",
+  "failure_policy": {
+    "TARGET_or_outcome_rescue": false,
+    "criterion_failure_changes_conclusion_not_criterion": true,
+    "post_result_retuning": false,
+    "rule": "Route D01/D02/D03 result through the already-frozen 05a2 core_outcomes table; narrow-gate failures use the already-frozen D04/D05/D06/D07 consequence rules.",
+    "source": "paper5/method_contract/05a2/final_gate_failure_consequence_policy.json",
+    "source_sha256": "192692eda095f4ff0426c9029f8ce7d2ad45f5a2faee55a4b2e3352b08ff0f82"
+  },
+  "guardrails": [
+    "05f2b does not read any final-gate scientific shard.",
+    "05f2b does not compute any scientific metric.",
+    "05f2b does not evaluate any final-gate PASS/FAIL result.",
+    "05f3 may run only after 05f2 is COMPLETE at 3100/3100.",
+    "The exact SHA256-locked 05f3b file must be used for primary aggregation.",
+    "No threshold, selector, denominator, CI decision rule or scenario membership may change after results are opened.",
+    "Any later alternative analysis is separately versioned and explicitly exploratory."
+  ],
+  "mandatory_D01_reporting": {
+    "correlated_private_null": {
+      "formal_gate_consequence": "NONE",
+      "n": 200,
+      "scenario_id": "G19_CORRELATED_PRIVATE_NULL_N62"
+    },
+    "independent_null_by_n": {
+      "datasets_per_n": 200,
+      "formal_gate_consequence": "NONE",
+      "n_values": [
+        50,
+        62,
+        75,
+        100
+      ]
+    },
+    "independent_null_pooled": {
+      "formal_gate_consequence": "NONE",
+      "n": 800
+    },
+    "primary_pooled": {
+      "n": 1000,
+      "statistics": "numerator/denominator; point; two-sided 95% Wilson CI; PASS/FAIL"
+    },
+    "sample_size_trend": {
+      "formal_gate_consequence": "NONE_DESCRIPTIVE_ONLY",
+      "model": "unpenalized logistic regression via deterministic Newton/IRLS",
+      "outcome": "dataset-level false biological acceptance",
+      "pool": "800 independent-null datasets only",
+      "predictor": "n_samples / 25",
+      "reported_effect": "odds ratio per +25 samples with two-sided 95% Wald CI"
+    }
+  },
+  "narrow_decisions": {
+    "D04_ROTATIONAL_SUBSPACE": {
+      "PASS_rule": "point estimate >= 0.80",
+      "confidence_interval": "fixed-seed percentile bootstrap of dataset-level means",
+      "metric": "mean across datasets of reference_shared_subspace_recovery (mean canonical correlation / mean cosine of principal angles)",
+      "scenario_id": "G17_ROTATIONAL_N62_S1P00",
+      "threshold": 0.8
+    },
+    "D05_VIEW_SUPPORT": {
+      "PASS_rule": "point estimate >= 0.80",
+      "confidence_interval": "two-sided 95% Wilson interval",
+      "metric": "exact view-support classification accuracy among biological factors that are both truth-matched and retained by the frozen stability gate",
+      "scenario_id": "G18_MIXED_SUPPORT_N62_S1P00",
+      "threshold": 0.8
+    },
+    "D06_BATCH_SPECIFICITY": {
+      "PASS_rule": "point estimate <= 0.10",
+      "confidence_interval": "two-sided 95% Wilson interval",
+      "metric": "per true technical-factor opportunity, false biological acceptance when the Hungarian-assigned estimated factor is stability-retained but does not satisfy the frozen technical truth-match flag",
+      "scenario_ids": [
+        "G20_BATCH_SHARED_NULL_N62",
+        "G21_BATCH_PARTIAL_NULL_N62"
+      ],
+      "threshold": 0.1
+    },
+    "D07_NO_POSTHOC_RETUNING": {
+      "PASS_rule": "05f3 script hash and frozen 05a2 thresholds/selectors/denominators remain unchanged",
+      "metric": "process integrity"
+    }
+  },
+  "plan_version": "paper5-final-gate-aggregation-plan-poststart-preunblinding-v1",
+  "provenance_classification": {
+    "freeze_is_before_data_generation": false,
+    "freeze_is_before_scientific_unblinding": true,
+    "preexisting_05f3_source_sha256": "443b553e2e9e95a9f4d3ac7de5fe7b4f33479d6552264555e3edc276b077d5c2",
+    "preexisting_strict_05f2a_source_sha256": "ee902b351f9ed6218f34165da9edc70954749759398c551f0859aa6ef035b5bb",
+    "scientific_core_ast_equivalent_to_preexisting_05f3": true,
+    "scientific_core_ast_sha256": "1844483cd7e2924609cd090bc68e0a0d26e9c4bb4ed8ede9f6185a68a2d511da",
+    "scientific_estimands_thresholds_already_frozen_in_05a2": true,
+    "scientific_results_used_to_define_or_modify_aggregation": false
+  },
+  "scientific_timing": {
+    "05f2_completion_lock_present": false,
+    "05f2_progress_manifest_status": "PRESENT",
+    "05f2_progress_rows": 12,
+    "allowed_progress_range_at_05f2b_freeze": [
+      4,
+      3099
+    ],
+    "freeze_timing_classification": "POSTSTART_PREUNBLINDING",
+    "important_limitation": "This is not a before-data-generation aggregation freeze. It is a transparent post-start/pre-unblinding lock. The scientific estimands/thresholds were already frozen in 05a2, and the scientific aggregation core is AST-identical to the pre-existing 05f3 source.",
+    "scientific_PASS_FAIL_evaluated": false,
+    "scientific_metrics_aggregated_by_05f2": false,
+    "scientific_metrics_printed_by_05f2": false,
+    "scientific_shards_opened_or_read_by_05f2b": false,
+    "sealed_shards_already_generated": 12
+  },
+  "script_version": "05f2b-freeze-final-gate-aggregation-poststart-preunblinding-v2-runtime-portable-ast-equivalence-no-cli",
+  "source_records": {
+    "05a2_amendment": {
+      "path": "paper5/method_contract/05a2/inference_final_gate_implementation_amendment.json",
+      "sha256": "06b34c4e763a4dd150807afb4777ef4bcbb17abd7dc075b95baf438c9faad445",
+      "size_bytes": 6523
+    },
+    "05a2_effective_decisions": {
+      "path": "paper5/method_contract/05a2/effective_stability_gate_decision_registry.csv",
+      "sha256": "fb504724c3cced7190c82936ea334f171fb8b1461882886f4fab9330432950ae",
+      "size_bytes": 4852
+    },
+    "05a2_failure_policy": {
+      "path": "paper5/method_contract/05a2/final_gate_failure_consequence_policy.json",
+      "sha256": "192692eda095f4ff0426c9029f8ce7d2ad45f5a2faee55a4b2e3352b08ff0f82",
+      "size_bytes": 3486
+    },
+    "05a2_reporting": {
+      "path": "paper5/method_contract/05a2/final_gate_reporting_registry.csv",
+      "sha256": "fc09105101a36633cd5e0a33481aa9cea4814fc5abe940c85313ca45de51cf99",
+      "size_bytes": 3116
+    },
+    "05f3b_script": {
+      "path": "paper5/scripts/05f3b_aggregate_final_gate_results_cpu_preunblinding_locked.py",
+      "sha256": "fcf1a2e1fec76b0ea15ef93be813851153d763a437c95d46ce1c41d148b9e435",
+      "size_bytes": 61478
+    },
+    "final_gate_replicates": {
+      "path": "paper5/method_contract/05a1/final_gate_calibration_replicates.csv",
+      "sha256": "a8e1fb8fa70a4585f43c11264b5a39f1459488c1089df2b10789e4670ff874f0",
+      "size_bytes": 432129
+    },
+    "final_gate_scenarios": {
+      "path": "paper5/method_contract/05a1/final_gate_calibration_scenarios.csv",
+      "sha256": "8695887dc0b27b69d87fa944ce1068fe149718ddf6c00a7d91e71ee1b1b306c2",
+      "size_bytes": 13650
+    },
+    "preexisting_05f3_script": {
+      "path": "paper5/scripts/05f3_aggregate_final_gate_results_cpu.py",
+      "sha256": "443b553e2e9e95a9f4d3ac7de5fe7b4f33479d6552264555e3edc276b077d5c2",
+      "size_bytes": 60267
+    },
+    "preexisting_strict_05f2a_script": {
+      "path": "paper5/scripts/05f2a_freeze_final_gate_aggregation_plan.py",
+      "sha256": "ee902b351f9ed6218f34165da9edc70954749759398c551f0859aa6ef035b5bb",
+      "size_bytes": 34028
+    }
+  },
+  "status": "FROZEN_FINAL_GATE_AGGREGATION_IMPLEMENTATION_POSTSTART_PREUNBLINDING"
+}

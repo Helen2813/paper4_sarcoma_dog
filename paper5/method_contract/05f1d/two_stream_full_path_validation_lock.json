@@ -1,0 +1,56 @@
+{
+  "05a2_amendment_hash": "06b34c4e763a4dd150807afb4777ef4bcbb17abd7dc075b95baf438c9faad445",
+  "blind_exact_equivalence_all_three": true,
+  "contract_version": "paper5-05f1d-two-stream-full-path-validation-v1",
+  "created_at_utc": "2026-08-22T22:27:00+00:00",
+  "full_run_authorized": true,
+  "full_run_reuse_rule": "05f1d shards may be reused by the full final-gate run only if 05f2 imports this exact 05f1d execution engine, verifies this lock and preserves the exact two_stream_numerical_implementation_hash, scientific contract hash, epoch bridge, seed registry, PyTorch/CUDA runtime and all upstream helper hashes.",
+  "pilot_dataset_count": 3,
+  "pilot_manifest": {
+    "path": "paper5/method_contract/05f1d/two_stream_full_path_pilot_manifest.csv",
+    "sha256": "e9afcb50af6780d29a7da55bc6f255eeb15eb716cbf1561e1225fb6c4ab37210"
+  },
+  "pilot_optimization_runs": 303,
+  "pilot_shards": {
+    "G01_IND_N50_S0P00|R001|S0269184890": {
+      "path": "paper5/results/simulation_benchmark/05f_final_gate/shards/_stream2_validated_pilot/shard_9df863a84a5802af7e5543d5c4dae63f.json",
+      "sha256": "8fc742e5d13751ff678eb2de9240c3f899c9cdd1dd258a8959c7c81740dbe158",
+      "size_bytes": 910773
+    },
+    "G01_IND_N50_S0P00|R002|S0643022940": {
+      "path": "paper5/results/simulation_benchmark/05f_final_gate/shards/_stream2_validated_pilot/shard_3e1948dfd567d2e184114eae0c1025b7.json",
+      "sha256": "4f81fb6aecc1b163457fd47166ddd53d2f95c4ef6eb11446c286637ea8fcb7f7",
+      "size_bytes": 910806
+    },
+    "G01_IND_N50_S0P00|R003|S2850811377": {
+      "path": "paper5/results/simulation_benchmark/05f_final_gate/shards/_stream2_validated_pilot/shard_0cc4131149219b868572dea67310893a.json",
+      "sha256": "6209c041135849521f179dd14c9d3e6ccbecffbfa604ebdd8172348ec58ee1fe",
+      "size_bytes": 911175
+    }
+  },
+  "prelock": {
+    "path": "paper5/method_contract/05f1d/two_stream_execution_prelock.json",
+    "sha256": "f27598128377a04f61971cfe7c435ff3f28d78291978197de28f4bb7013aab46"
+  },
+  "runtime_summary": {
+    "path": "paper5/method_contract/05f1d/two_stream_full_path_runtime_summary.json",
+    "sha256": "178403cc81adcb5e7d54708364d112e1aea132d0307a40fa9c65feda547483ed"
+  },
+  "scientific_contract_hash": "bd5830f967d58c9e5afa70d183df1d22b581877b27688d52c50de60edc165fc2",
+  "scientific_state": {
+    "D01_D02_D03_evaluated": false,
+    "TARGET_accessed": false,
+    "biology_annotations_accessed": false,
+    "final_gate_PASS_FAIL_evaluated": false,
+    "outcomes_accessed": false,
+    "scientific_metrics_aggregated": false,
+    "scientific_metrics_printed": false,
+    "threshold_retuning_performed": false
+  },
+  "script_path": "paper5/scripts/05f1d_validate_two_stream_full_path_gpu.py",
+  "script_sha256": "33a26decba6fe14abbf382f77d7dc96c301e81cd163e6854ecf34478a815d7a9",
+  "script_version": "05f1d-validate-two-stream-full-path-gpu-v1-no-cli",
+  "status": "FROZEN_TWO_STREAM_FULL_PATH_PILOT_VALIDATED_BEFORE_FULL_FINAL_GATE",
+  "stream_width": 2,
+  "two_stream_numerical_implementation_hash": "3d7a27fcaf8ff33abb50e74277c3c9553c0d341d15f82d972cb611616a77df21"
+}

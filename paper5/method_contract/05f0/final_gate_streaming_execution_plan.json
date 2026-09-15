@@ -1,0 +1,82 @@
+{
+  "contract_version": "paper5-final-gate-streaming-execution-plan-v1",
+  "created_at_utc": "2026-08-22T18:04:54+00:00",
+  "execution_policy": {
+    "full_run_registry_order": "exact final_gate_calibration_replicates.csv order",
+    "permanent_input_bank": "FORBIDDEN_BY_EFFECTIVE_05f0_INTERPRETATION_OF_FROZEN_POLICY",
+    "persistent_artifact": "per_dataset_result_and_provenance_shard",
+    "preferred_dataset_generation": "deterministic_in_memory_from_frozen_registry_seed",
+    "resume_unit": "validated result shard keyed by frozen dataset_key",
+    "temporary_npz": "Permitted only as an execution cache after architecture freeze; must not become the frozen scientific input bank and must be removed after a validated result shard is durable."
+  },
+  "frozen_input_registry": {
+    "materialization_policy": "stream_or_temporary_after_architecture_freeze",
+    "n_datasets": 3100,
+    "n_scenarios": 24,
+    "replicates": "paper5/method_contract/05a1/final_gate_calibration_replicates.csv",
+    "scenarios": "paper5/method_contract/05a1/final_gate_calibration_scenarios.csv",
+    "stability_resamples_per_dataset": 100
+  },
+  "full_run": {
+    "D01_D02_D03_rules": "read frozen 05a2 effective registries; unchanged",
+    "planned_optimization_runs": 313100,
+    "threshold_retuning": "FORBIDDEN"
+  },
+  "method": "V4_SABLE_MO",
+  "numerical_versioning": {
+    "numerical_implementation_hash_frozen_here": false,
+    "pilot_invalidation_rule": "Any change to the numerical/GPU code path, dtype, reduction order, preprocessing math, model fitting path, alignment math, or stability computation invalidates all pilot shards; they must be recomputed.",
+    "pilot_reuse_rule": "Pilot shards may be retained as final shards only when the numerical implementation hash is unchanged.",
+    "required_next": "05f1 must compute/freeze the exact numerical implementation hash before its first GPU pilot fit, embed it in every pilot shard, and reuse pilot shards only if unchanged.",
+    "required_shard_provenance": [
+      "scientific_contract_hash",
+      "05a2_amendment_hash",
+      "script_hash",
+      "numerical_implementation_hash",
+      "PyTorch_version",
+      "CUDA_build",
+      "GPU_model"
+    ]
+  },
+  "profile": "ARCH_COMPACT__REG_WEAK",
+  "runtime_pilot": {
+    "allowed_console_output": [
+      "progress",
+      "wall_time",
+      "VRAM",
+      "ETA",
+      "shard_size"
+    ],
+    "dataset_count": 3,
+    "planned_optimization_runs": 303,
+    "reference_fits_per_dataset": 1,
+    "registry_path": "paper5/method_contract/05f0/final_gate_runtime_pilot_registry.csv",
+    "scientific_console_output": "FORBIDDEN",
+    "scientific_decision_during_pilot": "FORBIDDEN",
+    "selection": "first prespecified dataset IDs in frozen replicate-registry order",
+    "stability_resample_fits_per_dataset": 100
+  },
+  "scientific_guardrails": [
+    "No final-gate dataset is generated or fit by 05f0.",
+    "No D01/D02/D03 or subgroup scientific metric is evaluated by 05f0.",
+    "No final-gate threshold, selector, denominator, dataset count, or resample count is changed.",
+    "No TARGET, biological annotation, clinical label, or outcome is accessed.",
+    "The failed prior persistent-materialization script created no final-gate dataset and is superseded by this versioned plan."
+  ],
+  "script_version": "05f0-freeze-final-gate-streaming-execution-plan-v1-no-cli",
+  "status": "FROZEN_FINAL_GATE_STREAMING_EXECUTION_PLAN_BEFORE_RUNTIME_PILOT",
+  "upstream_hashes": {
+    "paper5/method_contract/05a1/final_gate_calibration_replicates.csv": "a8e1fb8fa70a4585f43c11264b5a39f1459488c1089df2b10789e4670ff874f0",
+    "paper5/method_contract/05a1/final_gate_calibration_scenarios.csv": "8695887dc0b27b69d87fa944ce1068fe149718ddf6c00a7d91e71ee1b1b306c2",
+    "paper5/method_contract/05a1/simulation_and_technical_confound_addendum.json": "3aadb87386f796663e68b97fb608cb864c197013fe52c70ac5b37bed06e7a3e8",
+    "paper5/method_contract/05a1/simulation_and_technical_confound_addendum_lock.json": "61969f36872e3e508a239d5e6903ae3395fd36ec74ee7aa4e31740a514c119e3",
+    "paper5/method_contract/05a2/final_gate_runtime_pilot_policy.json": "05061a5911a76c365eb2a33bac87719466eb3413082419ebde73bfdc10247fcd",
+    "paper5/method_contract/05a2/inference_final_gate_implementation_amendment.json": "06b34c4e763a4dd150807afb4777ef4bcbb17abd7dc075b95baf438c9faad445",
+    "paper5/method_contract/05a2/inference_final_gate_implementation_amendment_lock.json": "052544f9230c961ac8d4e6b6cc8f763653fffc6b531468af1f21fa4c28da0932",
+    "paper5/method_contract/05b_v2/simulation_generation_v2_lock.json": "1198da23059876a439183b35c8d095f8731bcddd98aa0964da2486995aefd524",
+    "paper5/method_contract/05b_v2/simulation_reference_fixture_hashes.json": "f962316f62c43060427a0a111cda2511a98228f4824cb3051809ed048d1d189b",
+    "paper5/method_contract/05e/representation_method_freeze.json": "df01013be4d87fe7b67ea31a5d038ace8642ecb8cfc56d13b1bfa6414cb2d60f",
+    "paper5/method_contract/05e/representation_method_freeze_lock.json": "e0adaccada7f9b04f0e699badfac252a6dc865f24d2ea39a243b07bc3ddbafbf",
+    "paper5/scripts/05b_generate_small_n_multiomics_simulations_v2.py": "b4adb1fcb32b65a998ee70e1b72d52e13490194c7ad8e5ddd802b95bf05a28db"
+  }
+}

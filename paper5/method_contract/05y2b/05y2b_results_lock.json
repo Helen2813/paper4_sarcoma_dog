@@ -1,0 +1,56 @@
+{
+  "05y1_contract": {
+    "path": "paper5/method_contract/05y1/correlated_private_failure_diagnostic_contract.json",
+    "sha256": "71ef109768946bbb28be2bd70e6eb7985be22bcda6c4ef8c4611b6f97b82ffa1",
+    "size_bytes": 10722
+  },
+  "05y1_lock": {
+    "path": "paper5/method_contract/05y1/05y1_contract_lock.json",
+    "sha256": "74ebf01097f90aae91528c4b260a33fb89a1f55f891272eb9006d2608b00cee3",
+    "size_bytes": 1171
+  },
+  "failed_05y2_runner": {
+    "path": "paper5/scripts/05y2_run_correlated_private_failure_diagnostics_fast_cpu.py",
+    "sha256": "6685ab1fb52e56c608c41554bf1e88536e7bbdf6681f5fee744747d885062c29",
+    "size_bytes": 34499
+  },
+  "formal_final_gate_consequence": "NONE",
+  "generated_files": {
+    "paper5/method_contract/05y2b/05y2b_README.txt": {
+      "path": "paper5/method_contract/05y2b/05y2b_README.txt",
+      "sha256": "0148ea916758a84cb12e06054027498e141ff56d4c7f4180436413003ea4ddbb",
+      "size_bytes": 717
+    },
+    "paper5/method_contract/05y2b/correlated_private_failure_diagnostic_result.json": {
+      "path": "paper5/method_contract/05y2b/correlated_private_failure_diagnostic_result.json",
+      "sha256": "dd1d255213853424a006b07073982d0951d3339695b1e65977172ab18a04f3ab",
+      "size_bytes": 7194
+    },
+    "paper5/method_contract/05y2b/factor_space_classifier_summary.csv": {
+      "path": "paper5/method_contract/05y2b/factor_space_classifier_summary.csv",
+      "sha256": "62d5514bf19877deb7cc562491935a96b29d52dfae71570a388148ea45a43fe4",
+      "size_bytes": 3623
+    },
+    "paper5/method_contract/05y2b/g19_realized_rho_dataset_diagnostic.csv": {
+      "path": "paper5/method_contract/05y2b/g19_realized_rho_dataset_diagnostic.csv",
+      "sha256": "4645fc1087671083f70c6f9a9c96dc8fb9dd53520c1c6198cb1ff41190b2afcc",
+      "size_bytes": 58206
+    },
+    "paper5/method_contract/05y2b/g19_realized_rho_quintile_failure_rates.csv": {
+      "path": "paper5/method_contract/05y2b/g19_realized_rho_quintile_failure_rates.csv",
+      "sha256": "2bd788afac88e4b9ff2f13f069869baa02078178be138c79c2a2739b02b5c49c",
+      "size_bytes": 529
+    },
+    "paper5/method_contract/05y2b/retention_threshold_frontier.csv": {
+      "path": "paper5/method_contract/05y2b/retention_threshold_frontier.csv",
+      "sha256": "cff9a7d910983b46dc026b70c11df771c9275aa7a794d104c1678dac8ea27bbb",
+      "size_bytes": 471878
+    }
+  },
+  "implementation_recovery": "Fold allocation only: custom allocator -> StratifiedGroupKFold; frozen 05y1 scientific contract unchanged.",
+  "rewrite_policy": "05y2b exploratory diagnostic results are immutable. New discriminators, thresholds, or additional outcome-driven analyses require a new versioned stage.",
+  "script_path": "paper5/scripts/05y2b_run_correlated_private_failure_diagnostics_fast_cpu_v2.py",
+  "script_sha256": "5b30eba4cb5f654aac7ff00031a5deb6453b5b5e2158ac680d41361109faae70",
+  "script_version": "05y2b-run-correlated-private-failure-diagnostics-fast-cpu-v2-fold-recovery-no-cli",
+  "status": "POSTUNBLINDING_EXPLORATORY_FAILURE_DIAGNOSTICS_COMPLETE"
+}

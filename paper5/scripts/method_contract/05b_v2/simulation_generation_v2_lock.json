@@ -1,0 +1,115 @@
+{
+  "contract_version": "paper5-confirmatory-architecture-simulation-materialization-v2",
+  "created_at_utc": "2026-08-11T21:44:27.937373+00:00",
+  "data_manifest": {
+    "n_rows": 720,
+    "path": "paper5\\method_contract\\05b_v2\\architecture_screening_data_manifest.csv",
+    "sha256": "f3980e88aff408b65cbfce96aca50bad4fc08ecece2bc42bbc04f365c35d9c87"
+  },
+  "generated_files": {
+    "paper5\\method_contract\\05b_v2\\architecture_screening_data_manifest.csv": {
+      "sha256": "f3980e88aff408b65cbfce96aca50bad4fc08ecece2bc42bbc04f365c35d9c87",
+      "size_bytes": 507713
+    },
+    "paper5\\method_contract\\05b_v2\\architecture_screening_materialization_summary.csv": {
+      "sha256": "6b39ddd4e30bea532bad0176415a6e74fbc96e742f0feba8d78f8c5b34bf4b96",
+      "size_bytes": 4398
+    },
+    "paper5\\method_contract\\05b_v2\\simulation_environment_snapshot.json": {
+      "sha256": "19d3a7a9eb0d952b51d09088dd22cdb2dfb224265bfe398195d1ea2c47ab9f8c",
+      "size_bytes": 884
+    },
+    "paper5\\method_contract\\05b_v2\\simulation_generation_v2_README.txt": {
+      "sha256": "e4f1c033897f49003b23821e7fce927e026a0c41f0ad4315a1bf8d230b3e88f2",
+      "size_bytes": 1581
+    },
+    "paper5\\method_contract\\05b_v2\\simulation_generator_v2_specification.json": {
+      "sha256": "630203edf5e641ab98c77348c0833c1e39b09365bf36916a0247a03e91c7e093",
+      "size_bytes": 3906
+    },
+    "paper5\\method_contract\\05b_v2\\simulation_reference_fixture_hashes.json": {
+      "sha256": "f962316f62c43060427a0a111cda2511a98228f4824cb3051809ed048d1d189b",
+      "size_bytes": 6845
+    }
+  },
+  "generator_version": "sable-mo-simulation-generator-v2",
+  "guardrails": [
+    "Only architecture-screening simulations were materialized.",
+    "Final stability-gate calibration simulations were not materialized.",
+    "The disclosed v1 pilot was not read as confirmatory input.",
+    "No model fitting, metric estimation or threshold tuning occurred.",
+    "Every dataset is deterministic and hash-locked."
+  ],
+  "n_datasets": 720,
+  "rewrite_policy": "This zero-argument script never rewrites a frozen 05b v2 lock. Any scientifically justified change requires a new versioned generator and preservation of this complete data manifest.",
+  "scientific_state": {
+    "architecture_results_viewed": false,
+    "biological_annotations_loaded": false,
+    "clinical_labels_generated": false,
+    "outcomes_generated": false,
+    "simulation_model_fitting_performed": false,
+    "stability_gate_thresholds_retuned": false,
+    "target_model_fitting_performed": false
+  },
+  "scope": {
+    "architecture_data_root": "paper5\\simulations\\sable_mo_v2\\architecture_screening",
+    "final_gate_calibration_materialized": false,
+    "final_gate_registry_rows": 3100,
+    "n_architecture_scenarios": 36,
+    "n_datasets": 720,
+    "pre_addendum_v1_pilot_used": false,
+    "total_size_bytes": 2291729180
+  },
+  "script_version": "05b-generate-small-n-multiomics-simulations-v2-no-cli",
+  "status": "FROZEN_ARCHITECTURE_SCREENING_INPUTS_BEFORE_MODEL_FITTING",
+  "upstream_locks": {
+    "04d_lock": {
+      "path": "paper5\\data_manifest\\TARGET_OS_technical_metadata\\TARGET_OS_technical_metadata_preflight_lock.json",
+      "sha256": "d40906a27d1120a128fd3a8efc489dd7d0ca97bf9631a48f9c7f3263d460b8bb"
+    },
+    "04d_manifest": {
+      "path": "paper5\\data_manifest\\TARGET_OS_technical_metadata\\TARGET_OS_technical_metadata_preflight_manifest.json",
+      "sha256": "73232610dcd3f0e2c9a45d7c3a66c0eaac138766a9cf339ed03cd67d282ef532"
+    },
+    "04d_source_inventory": {
+      "count_discrepancy_documented": true,
+      "manifest_discovery_count": 17,
+      "n_rows": 16,
+      "path": "paper5\\data_manifest\\TARGET_OS_technical_metadata\\TARGET_OS_technical_metadata_source_inventory.csv",
+      "sha256": "d76131adb2bf7c5024a0cc7312dd65bc2234268db39edd99148bcd11bce06c30"
+    },
+    "05a1_addendum": {
+      "path": "paper5\\method_contract\\05a1\\simulation_and_technical_confound_addendum.json",
+      "sha256": "3aadb87386f796663e68b97fb608cb864c197013fe52c70ac5b37bed06e7a3e8"
+    },
+    "05a1_lock": {
+      "path": "paper5\\method_contract\\05a1\\simulation_and_technical_confound_addendum_lock.json",
+      "sha256": "61969f36872e3e508a239d5e6903ae3395fd36ec74ee7aa4e31740a514c119e3"
+    },
+    "05a1_pilot_disclosure": {
+      "path": "paper5\\method_contract\\05a1\\pre_addendum_05b_pilot_materialization_disclosure.json",
+      "sha256": "ae781114057a1dc0d1cfbf5ae3233dc3691bbb2dff83ef735e53139c045315fa"
+    },
+    "05a_contract": {
+      "path": "paper5\\method_contract\\05a\\ai_method_contract.json",
+      "sha256": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2"
+    },
+    "05a_lock": {
+      "path": "paper5\\method_contract\\05a\\ai_method_contract_lock.json",
+      "sha256": "cc62dcc75c5f06e0c2c7220d1419392f8838b9eccad4ae916831689255dfc9f0"
+    },
+    "combined_replicates": {
+      "path": "paper5\\method_contract\\05a1\\combined_architecture_screening_replicates.csv",
+      "sha256": "789f7bc8afb305ec6b14da147f04beb529df75eaa7d973145c4158534ad78694"
+    },
+    "combined_scenarios": {
+      "path": "paper5\\method_contract\\05a1\\combined_architecture_screening_scenarios.csv",
+      "sha256": "37902e76926cd580297f172bbe4c0c137e9eae3670a9035aa8e5196ac7546d6d"
+    },
+    "truth_taxonomy": {
+      "n_rows": 9,
+      "path": "paper5\\method_contract\\05a1\\simulation_truth_taxonomy.csv",
+      "sha256": "d61e33ed0a797e5fe7cff2d0d0b306c62fc12908739ad1b242020253b4783196"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "allowed_uses": [
+    "generator regression testing",
+    "developmental pipeline smoke testing",
+    "non-confirmatory descriptive QA"
+  ],
+  "eligible_for_final_gate_calibration": false,
+  "eligible_for_primary_model_selection": false,
+  "extra_files": [
+    "paper5\\simulations\\sable_mo_v1\\smoke_test\\GATE_N50_NULL\\GATE_N50_NULL__R001__S1169455255.npz",
+    "paper5\\simulations\\sable_mo_v1\\smoke_test\\S01_BASE\\S01_BASE__R001__S0176451632.npz"
+  ],
+  "forbidden_uses": [
+    "primary architecture selection",
+    "confirmatory method comparison",
+    "final stability-gate operating-characteristic estimation",
+    "headline manuscript performance claims"
+  ],
+  "full_file_hash_audit_performed": true,
+  "interpretation": "Simulation arrays were materialized before the expanded 05a1 design was frozen, but no simulation model, TARGET representation model, biological analysis, or outcome analysis had been fitted. The v1 datasets are therefore retained as an auditable developmental pilot and excluded from confirmatory evaluation.",
+  "lock_path": "paper5\\method_contract\\05b\\simulation_generation_lock.json",
+  "lock_sha256": "d48bb19977095bd8f02d2b39f1f72d49b8215e97b6290c2db9e11e9f6d5dbc43",
+  "locked_total_size_bytes": 1022926400,
+  "manifest_path": "paper5\\method_contract\\05b\\simulation_data_manifest.csv",
+  "manifest_sha256": "fb8e36c5d659baca425f3f65d560ebd06e61635543ff9abb88a805f0f3e36e36",
+  "materialized_before_05a1": true,
+  "model_fitting_performed": false,
+  "n_all_materialized_files": 622,
+  "n_dataset_hashes_recomputed": 620,
+  "n_locked_manifest_datasets": 620,
+  "n_unlocked_extra_files": 2,
+  "outcome_access": false,
+  "prospective_before_model_fitting": true,
+  "prospective_before_simulation_materialization": false,
+  "scenario_family_counts": {
+    "05a_core": 320,
+    "nonlinear_method_stress": 60,
+    "stability_gate_calibration": 240
+  },
+  "stability_gate_thresholds_retuned": false,
+  "status": "VALIDATED_DATA_ONLY_PILOT_MATERIALIZATION"
+}

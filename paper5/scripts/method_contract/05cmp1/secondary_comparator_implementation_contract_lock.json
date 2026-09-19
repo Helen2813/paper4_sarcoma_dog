@@ -1,0 +1,69 @@
+{
+  "contract": {
+    "path": "paper5/method_contract/05cmp1/secondary_comparator_implementation_contract.json",
+    "sha256": "418259cedd36cbd1913a4ff1ae9874a3decfddbb7a75e9b3bca2e9623f0aca95",
+    "size_bytes": 12328
+  },
+  "contract_version": "sable-mo-secondary-comparator-implementation-contract-v1",
+  "created_at_utc": "2026-08-22T17:23:54+00:00",
+  "generated_files": {
+    "paper5/method_contract/05cmp1/05cmp1_README.txt": {
+      "path": "paper5/method_contract/05cmp1/05cmp1_README.txt",
+      "sha256": "ffc4950383c168d13b504fe16319e5f024054d76e2914d3b1011fc6653acbce5",
+      "size_bytes": 2111
+    },
+    "paper5/method_contract/05cmp1/secondary_comparator_failure_policy.json": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_failure_policy.json",
+      "sha256": "2a13658c81da91f96dd4854fe42cb9f667e4ee10fa2ebd696d355d9e22a4f6f7",
+      "size_bytes": 1298
+    },
+    "paper5/method_contract/05cmp1/secondary_comparator_implementation_contract.json": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_implementation_contract.json",
+      "sha256": "418259cedd36cbd1913a4ff1ae9874a3decfddbb7a75e9b3bca2e9623f0aca95",
+      "size_bytes": 12328
+    },
+    "paper5/method_contract/05cmp1/secondary_comparator_implementation_registry.csv": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_implementation_registry.csv",
+      "sha256": "85dbc68289bae71b9cf4f8a01af34b09d50750fde97f0b57ef3b6c57ebf299b0",
+      "size_bytes": 955
+    },
+    "paper5/method_contract/05cmp1/secondary_comparator_metric_eligibility_registry.csv": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_metric_eligibility_registry.csv",
+      "sha256": "8802d8d4bba20cfd4acc3263b12f0a119bcef4e4107164e6f944d0a01d9bef46",
+      "size_bytes": 1474
+    },
+    "paper5/method_contract/05cmp1/secondary_comparator_scientific_adapter_registry.csv": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_scientific_adapter_registry.csv",
+      "sha256": "f30c73d19627d357073786b75f7b8141a757becf9d2413491518948cc099ea48",
+      "size_bytes": 714
+    },
+    "paper5/method_contract/05cmp1/secondary_comparator_seed_registry.csv": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_seed_registry.csv",
+      "sha256": "2c70c516ad07496a71fe513139b357b92f46fd746bea5258f1fb237028c4e87c",
+      "size_bytes": 978
+    }
+  },
+  "rewrite_policy": "05cmp1 is immutable after creation. Any scientifically justified comparator implementation, runtime, adapter, seed, tuning, metric, or failure-policy change requires a new versioned amendment.",
+  "script_source": {
+    "path": "paper5/scripts/05cmp1_freeze_secondary_comparator_implementations.py",
+    "sha256": "0724b5307c6c827ffe2cc2cb61b8cba34aa4b8caa62567ed64f6cf4892695a85",
+    "size_bytes": 35829
+  },
+  "script_version": "05cmp1-freeze-secondary-comparator-implementations-v1-no-cli",
+  "status": "FROZEN_SECONDARY_COMPARATOR_IMPLEMENTATIONS_BEFORE_05E_AND_SCIENTIFIC_RUNS",
+  "upstream_hashes": {
+    "paper5/method_contract/05cmp0/secondary_comparator_selection_contract.json": "fd4f16510ca9b11fb78a6aad65911e526b4b0c0e12abcc5a40a4df2d5a50b699",
+    "paper5/method_contract/05cmp0/secondary_comparator_selection_contract_lock.json": "b0f7eb2de3afa52d8fc54894eb82aef8e8a5d10d64c456f0bdf4f927084b6dfe",
+    "paper5/method_contract/05cmp0a/effective_secondary_comparator_selected_registry.csv": "d4b765a777b08206bddcbb49138b7b430e8609129f93a6ac2af7d5b37185390f",
+    "paper5/method_contract/05cmp0a/secondary_comparator_continuous_data_amendment.json": "ed4c9d821b1633de9528d68d0fe2fbca5b13c2de69d816181bba15a12840042e",
+    "paper5/method_contract/05cmp0a/secondary_comparator_continuous_data_amendment_lock.json": "04e74228ff85eafc6bd65535dd02c95a4efbc7a1a37bddbd9a1f9f82bdba5e5e",
+    "paper5/method_contract/05cmp0b/move_gpu_smoke_environment.json": "5b81bef722f85141b9d6e0ec9d7617fc625e3b13f6180da4e9eddc0ee56feeb6",
+    "paper5/method_contract/05cmp0b/move_gpu_smoke_lock.json": "a425155ddcac7e922c2874cb39eeaf6232e9502e8d6578903b5b78db5aefd68f",
+    "paper5/method_contract/05cmp0b/move_gpu_smoke_result.json": "abe44fd3daaf68393977eacbb22da1c9de40e5d10e5791c0eb2df584e54f0f30",
+    "paper5/method_contract/05cmp0c/icluster2b_cpu_smoke_environment.json": "c2bc881d056ada211929626dac80fd07c345c66b4e36d41ed77ab9c2ac251b76",
+    "paper5/method_contract/05cmp0c/icluster2b_cpu_smoke_lock.json": "c3c2b08c443d973e72fae00e67f5a0577886cbfc25c4935a8c4edb0a5b3cb75f",
+    "paper5/method_contract/05cmp0c/icluster2b_cpu_smoke_result.json": "61a02151a9a9ce4decade7f8b73744ee63b481b7e0ab2ecdd431753755ac503a",
+    "paper5/method_contract/05dev0/target_input_synthetic_fixture_contract.json": "e4387664398891334e8f5c4f7524277dbefa43f7f2cc4a3b07a08477d6ac1df5",
+    "paper5/method_contract/05dev0/target_input_synthetic_fixture_lock.json": "8300b430bdf8ee641443782809816c2691777644a534e9ecbc2669b9f7ed7eb9"
+  }
+}

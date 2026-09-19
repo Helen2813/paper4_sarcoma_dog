@@ -1,0 +1,16 @@
+metric_id,phase,direction,primary_status,formula,aggregation,outcome_used
+heldout_normalized_reconstruction_error,target_outer_cv,lower,primary,Mean across views of held-out MSE divided by the fold-local training-mean reconstruction MSE for that view.,"mean across views, seeds, folds, and repeats",False
+heldout_reconstruction_score,target_inner_and_outer_cv,higher,primary_selection_component,"clip(1 - heldout_normalized_reconstruction_error, 0, 1)",mean across inner folds or outer folds,False
+cross_view_top1_accuracy,target_outer_cv,higher,secondary,Fraction of held-out patients whose true paired sample is the nearest sample in another view by cosine similarity.,mean across ordered view pairs,False
+cross_view_mrr,target_inner_and_outer_cv,higher,primary,Mean reciprocal rank of the true same-patient match across ordered pairs of modalities.,mean across ordered view pairs,False
+random_adjusted_cross_view_mrr,target_inner_and_outer_cv,higher,primary_selection_component,"clip((MRR - H_n/n) / (1 - H_n/n), 0, 1), where H_n/n is the exact random-ranking expectation for n held-out samples.",mean across ordered view pairs,False
+same_patient_similarity_margin,target_outer_cv,higher,secondary,Median cosine similarity for true pairs minus median similarity for non-matching held-out pairs.,median across ordered view pairs,False
+missing_view_r2,target_inner_and_outer_cv,higher,primary,Held-out R2 for reconstructing one omitted view from the remaining view or views in fold-local compressed space.,mean across omitted views,False
+missing_view_reconstruction_score,target_inner_and_outer_cv,higher,primary_selection_component,"mean across views of clip(missing_view_r2, 0, 1)",mean across omitted views,False
+modality_contribution_entropy,target_inner_and_outer_cv,higher,primary,"Entropy of non-negative per-view loading or decoder energy, normalized by log(number_of_views).",median across shared factors,False
+modality_balance_score,target_inner_and_outer_cv,higher,primary_selection_component,"clip(modality_contribution_entropy, 0, 1)",median across shared factors,False
+latent_effective_rank,target_outer_cv,descriptive,failure_diagnostic,exp(entropy of normalized latent singular values squared).,per fit and across seeds,False
+seed_aligned_subspace_similarity,target_outer_cv_and_final_stability,higher,stability,Mean canonical correlation after orthogonal Procrustes alignment of latent spaces fitted with different seeds.,median across seed pairs,False
+simulation_shared_subspace_recovery,simulation,higher,primary_simulation_metric,Mean canonical correlation between estimated and true shared latent subspaces after Procrustes alignment.,mean across simulation replicates and scenarios,False
+simulation_private_subspace_recovery,simulation,higher,secondary_simulation_metric,Mean canonical correlation between estimated and true private subspaces for each view.,mean across views and replicates,False
+simulation_false_shared_discovery_rate,simulation,lower,simulation_failure_gate,Fraction of retained shared factors not matched to a true shared factor above the prespecified correlation threshold.,mean across replicates,False

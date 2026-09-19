@@ -1,0 +1,63 @@
+{
+  "all_generator_candidates": [
+    {
+      "end_line": 1425,
+      "function_name": "generate_private_scores",
+      "path": "paper5/scripts/05b_generate_small_n_multiomics_simulations_v2.py",
+      "sha256": "b4adb1fcb32b65a998ee70e1b72d52e13490194c7ad8e5ddd802b95bf05a28db",
+      "start_line": 1384
+    },
+    {
+      "end_line": 2908,
+      "function_name": "run_reference_fixture",
+      "path": "paper5/scripts/05b_generate_small_n_multiomics_simulations_v2.py",
+      "sha256": "b4adb1fcb32b65a998ee70e1b72d52e13490194c7ad8e5ddd802b95bf05a28db",
+      "start_line": 2765
+    }
+  ],
+  "failure_labels_inspected": false,
+  "g19_nominal_private_correlation_metadata": {
+    "batch_signal_correlation": "0.0",
+    "correlated_private_mode": "correlated_private_scores",
+    "n_private_factors_per_view": "2",
+    "n_samples": "62",
+    "pair_corruption_fraction": "0.0",
+    "private_cross_view_correlation": "0.6",
+    "private_loading_fraction": "0.1",
+    "private_signal_strength": "1.0",
+    "scenario_family": "correlated_private_null",
+    "scenario_id": "G19_CORRELATED_PRIVATE_NULL_N62",
+    "shared_factor_correlation": "0.0"
+  },
+  "generator_candidate_count": 2,
+  "next_step_rule": "Use the exact extracted generator function and its frozen simulation seed path to define a dataset-level realized private cross-view correlation. Freeze the scalar formula before inspecting any 70-vs-130 association. If the generator returns per-view private score matrices, the preferred candidate is the mean same-factor Pearson correlation across all ordered or unordered view pairs, with the exact choice fixed before computation.",
+  "scientific_result_computed": false,
+  "script_version": "05y0d-extract-private-score-generator-contract-v1-no-cli",
+  "selected_generator": {
+    "call_site_count_in_same_file": 1,
+    "end_line": 1425,
+    "function_name": "generate_private_scores",
+    "path": "paper5/scripts/05b_generate_small_n_multiomics_simulations_v2.py",
+    "return_expressions": [
+      "{\n        view: standardize_columns(\n            rng.normal(size=(n, k))\n        )\n        for view in VIEWS\n    }",
+      "{\n            view: np.zeros((n, 0), dtype=DEFAULT_DTYPE)\n            for view in VIEWS\n        }",
+      "output"
+    ],
+    "sha256": "b4adb1fcb32b65a998ee70e1b72d52e13490194c7ad8e5ddd802b95bf05a28db",
+    "start_line": 1384
+  },
+  "sources": {
+    "05y0c_lock": {
+      "path": "paper5/method_contract/05y0c/05y0c_preflight_lock.json",
+      "sha256": "9ae15c9c7e2ad78fc34dc97158666d0522580e928b477458d58c62514e02181d",
+      "size_bytes": 1430
+    },
+    "scenario_registry": {
+      "path": "paper5/method_contract/05a1/final_gate_calibration_scenarios.csv",
+      "sha256": "8695887dc0b27b69d87fa944ce1068fe149718ddf6c00a7d91e71ee1b1b306c2",
+      "size_bytes": 13650
+    }
+  },
+  "status": "READ_ONLY_GENERATOR_SOURCE_EXTRACTION_NO_DIAGNOSTIC_RESULT_COMPUTED",
+  "threshold_frontier_computed": false
+}

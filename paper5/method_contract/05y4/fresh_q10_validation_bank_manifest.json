@@ -1,0 +1,46 @@
+{
+  "05y3_contract": {
+    "path": "paper5/method_contract/05y3/prospective_q10_recalibration_contract.json",
+    "sha256": "485603c89e478ca1f82772e510ea9e02c107747ec6ba7f57d68482781b562c38",
+    "size_bytes": 9264
+  },
+  "05y3_lock": {
+    "path": "paper5/method_contract/05y3/05y3_contract_lock.json",
+    "sha256": "ebae031bbd7b6dba5cae1333aaedaa6e0d2e9fb65c07e7a1bb25dd0813c65eac",
+    "size_bytes": 1351
+  },
+  "fresh_arrays_materialized": false,
+  "fresh_dataset_registry": {
+    "path": "paper5/method_contract/05y4/fresh_q10_validation_dataset_registry.csv",
+    "sha256": "95aad350916d71252239c7649655b6377d33a9d984e626662901b6070a763fba",
+    "size_bytes": 67937
+  },
+  "fresh_stability_registry": {
+    "path": "paper5/method_contract/05y4/fresh_q10_validation_stability_seed_registry.csv",
+    "sha256": "2ece0d23f1a07acfa30debbdc837ce206f93d3617e07992f5c949684012c70e1",
+    "size_bytes": 5873749
+  },
+  "guardrails": [
+    "No fresh model result was computed while freezing this bank.",
+    "Fresh simulation seeds have zero overlap with prior frozen simulation-seed universe.",
+    "Seed registry is immutable before 05y5 model evaluation.",
+    "No candidate threshold may change after this stage."
+  ],
+  "scientific_result_computed": false,
+  "scope": {
+    "fresh_G19_datasets": 200,
+    "fresh_STANDARD_datasets": 200,
+    "permanent_fresh_input_npz_bank": false,
+    "stability_resamples_per_dataset": 100,
+    "stability_rows": 40000,
+    "streaming_input_generation": true,
+    "total_fresh_datasets": 400
+  },
+  "script_version": "05y4-freeze-fresh-q10-validation-seed-bank-v1-no-cli",
+  "seed_overlap_audit": {
+    "path": "paper5/method_contract/05y4/fresh_seed_overlap_audit.json",
+    "sha256": "46d984eb12e9b1c5b72d3dd6f48d9f60f277fddfc3391b6ef56da292e2644698",
+    "size_bytes": 924
+  },
+  "status": "FROZEN_FRESH_Q10_VALIDATION_SEED_BANK_BEFORE_MODEL_EVALUATION"
+}

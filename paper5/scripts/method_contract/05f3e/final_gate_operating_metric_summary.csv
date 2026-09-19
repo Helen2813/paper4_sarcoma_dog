@@ -1,0 +1,11 @@
+metric_id,scope,numerator,denominator,point_estimate,ci95_low,ci95_high,role
+pooled_stability_gated_false_discovery_proportion,all final-gate datasets; stable nontechnical factors,951,4952,0.19204361874,,,descriptive_operating_metric
+factor_count_bias,"all 3,100 datasets",,3100,-0.838387096774,-0.890967741935,-0.787419354839,descriptive_operating_metric
+private_to_shared_leakage_rate,stable factors where private truth audit is available,186,5199,0.0357761107905,0.0310604718686,0.0411772585707,descriptive_operating_metric
+technical_factor_detection_sensitivity,D06 technical-null pool,98,400,0.245,0.20540872953,0.28944254058,technical_audit_metric
+gate_familywise_false_acceptance,D01_NULL_SPECIFICITY,70,1000,0.07,0.0557763641463,0.0875146481513,formal_gate_metric
+gate_true_positive_rate,D02_STANDARD_SENSITIVITY,371,400,0.9275,0.897817506746,0.949049481598,formal_gate_metric
+gate_false_negative_rate,D03_STANDARD_FNR,29,400,0.0725,0.0509505184023,0.102182493254,formal_gate_metric
+subspace_mean_principal_angle_cosine,D04_ROTATIONAL_SUBSPACE,,100,0.828985873985,0.818738161573,0.838781365413,formal_gate_metric
+view_support_classification_accuracy,D05_VIEW_SUPPORT,81,120,0.675,0.586901840859,0.752241450894,formal_gate_metric
+batch_false_biological_acceptance_rate,D06_BATCH_SPECIFICITY,0,400,0,8.67361737988e-19,0.0095122943343,formal_gate_metric

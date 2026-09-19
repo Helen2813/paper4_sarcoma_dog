@@ -1,0 +1,116 @@
+{
+  "helper_adaptation": "Set the frozen sync-free helper module STABILITY_RESAMPLES from its architecture value 20 to the preregistered final-gate value 100 before any pilot fit. The underlying stability_audit training, preprocessing, alignment, threshold and truth-matching implementation is unchanged.",
+  "method_id": "V4_SABLE_MO",
+  "metric_sufficiency_audit": {
+    "additional_neural_optimization_runs": 0,
+    "private_leakage_comparison": "For each retained shared factor, compare its strongest absolute correlation to any view-specific private truth factor against its strongest biological-shared truth correlation.",
+    "reference_score_capture": "Capture the exact NumPy full-data reference shared scores at the inherited reference_factor_truth_status boundary without changing the helper return value or adding a neural fit.",
+    "sealed_secondary_operating_metrics": [
+      "subspace principal-angle/projection diagnostics",
+      "view-support exact/Jaccard audit",
+      "private-to-shared leakage audit",
+      "assigned technical-truth audit"
+    ],
+    "view_support_energy_threshold": 0.15
+  },
+  "numerical_implementation_hash": "e16deabe0cb733bf4d6a2dbf8b0a977eb7d5a959d7a6331a69d59dda16144b1a",
+  "numerical_implementation_version": "paper5-final-gate-numerical-path-v2-seed-collision-aware",
+  "profile": {
+    "contrastive_temperature": 0.2,
+    "contrastive_weight": 0.1,
+    "cross_reconstruction_weight": 0.25,
+    "hidden_dim": 32,
+    "learning_rate": 0.001,
+    "maximum_epochs": 400,
+    "modality_dropout_probability": 0.15,
+    "orthogonality_weight": 0.05,
+    "pca_components": {
+      "CNV": 10,
+      "METHYLATION": 10,
+      "RNA": 10
+    },
+    "private_dim": 2,
+    "private_separation_weight": 0.05,
+    "reconstruction_weight": 1.0,
+    "shared_alignment_weight": 0.5,
+    "shared_dim": 5,
+    "weight_decay": 0.0001
+  },
+  "profile_id": "ARCH_COMPACT__REG_WEAK",
+  "runtime": {
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "TF32": false,
+    "automatic_mixed_precision": false,
+    "deterministic_algorithms": true,
+    "device": "cuda:0",
+    "dual_pca_dtype": "float64",
+    "neural_dtype": "float32",
+    "torch_compile": false
+  },
+  "seed_collision_policy_and_audit": {
+    "global_uniqueness_required": false,
+    "interpretation": "Cross-dataset equality of 32-bit seed integers is expected at this registry size and is provenance-only. Each dataset remains a distinct deterministic simulation, and every dataset's 100 subsample seeds and 100 resample-fit seeds are strictly unique. No seed namespace, hash derivation, RNG implementation, or scientific threshold is changed by this collision-aware validation.",
+    "policy_version": "paper5-final-gate-32bit-seed-collision-policy-v1",
+    "reference_fit_seed": {
+      "birthday_approx_probability_at_least_one_collision": 0.0011177651901073116,
+      "birthday_expected_pair_collisions_under_uniform_32bit_space": 0.0011183903555195757,
+      "max_global_multiplicity": 1,
+      "n_dataset_level_draws": 3100,
+      "n_global_collision_values": 0,
+      "n_global_duplicate_draws_beyond_first": 0,
+      "n_unique_global_values": 3100
+    },
+    "resample_fit_seed": {
+      "birthday_approx_probability_at_least_one_collision": 0.9999861534761366,
+      "birthday_expected_pair_collisions_under_uniform_32bit_space": 11.187476341423457,
+      "global_cross_dataset_collisions_allowed": true,
+      "max_global_multiplicity": 2,
+      "n_draws": 310000,
+      "n_global_collision_values": 16,
+      "n_global_duplicate_draws_beyond_first": 16,
+      "n_unique_global_values": 309984,
+      "within_dataset_collisions_allowed": false
+    },
+    "seed_space_size": 4294967295,
+    "stable_seed_range": "0..(2**32-2) from modulo (2**32-1)",
+    "subsample_seed": {
+      "birthday_approx_probability_at_least_one_collision": 0.9999861534761366,
+      "birthday_expected_pair_collisions_under_uniform_32bit_space": 11.187476341423457,
+      "global_cross_dataset_collisions_allowed": true,
+      "max_global_multiplicity": 2,
+      "n_draws": 310000,
+      "n_global_collision_values": 12,
+      "n_global_duplicate_draws_beyond_first": 12,
+      "n_unique_global_values": 309988,
+      "within_dataset_collisions_allowed": false
+    },
+    "within_dataset_resample_fit_seed_unique_count_required": 100,
+    "within_dataset_subsample_seed_unique_count_required": 100,
+    "within_dataset_uniqueness_required": true
+  },
+  "seed_namespaces": {
+    "fit": "paper5_final_gate_stability_fit_v1",
+    "reference": "paper5_final_gate_stability_reference_v1",
+    "subsample": "paper5_final_gate_stability_subsample_v1"
+  },
+  "seed_registry_sha256": "fb599c000022ad4d7140341342cee13a0f327079620d323d5595d32e058b02a9",
+  "selected_epoch": 248,
+  "source_hashes": {
+    "generator_script": "b4adb1fcb32b65a998ee70e1b72d52e13490194c7ad8e5ddd802b95bf05a28db",
+    "linear_metric_pca_helper": "c2c91b4ad274f78ccc369e6fca765102285cf3d9c8191f3c33f4a450b7426367",
+    "local_final_gate_numeric_functions": "9cd9b209b9cb7d7738ab9b5913c77745baa4f3ef8907193ff8383f58507e5cc4",
+    "neural_syncfree_helper": "05ae6923ce588c137bc6f4aa934262181dd99f4ebe6bec3250e4b7cd54ed1ff3"
+  },
+  "stability_resamples_per_dataset": 100,
+  "stability_subsample_fraction": 0.8,
+  "stability_thresholds": {
+    "minimum_factor_variance": 0.0001,
+    "minimum_loading_energy_fraction_per_supported_modality": 0.15,
+    "minimum_supported_modalities": 2,
+    "primary_inclusion_frequency": 0.8,
+    "primary_median_factor_correlation": 0.7,
+    "primary_q10_factor_correlation": 0.4,
+    "sensitivity_high_median_factor_correlation": 0.8,
+    "sensitivity_low_median_factor_correlation": 0.6
+  }
+}

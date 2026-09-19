@@ -1,0 +1,218 @@
+{
+  "MOVE_scientific_policy": {
+    "AMP": false,
+    "TF32": false,
+    "architecture_selection": {
+      "single_canonical_scientific_fit": "After architecture selection, the seed tagged canonical_fit is the sole latent representation used for factor-level / sample-level scientific comparator outputs. Other seeds are stability diagnostics only.",
+      "stage_1": "Five deterministic sample-ID folds; for each candidate, fit one model per fold with the frozen architecture-selection seed and rank by mean held-out reconstruction SSE computed only over observed standardized entries. Retain candidates within one standard error of the best mean reconstruction SSE.",
+      "stage_2": "For each stage-1-retained candidate, fit the full analysis dataset with the three frozen stability seeds. Compute median pairwise latent-subspace canonical correlation after orthogonal alignment. Select the highest-stability candidate; exact ties prefer fewer hidden parameters, then lexical candidate_id.",
+      "truth_outcome_use": "FORBIDDEN"
+    },
+    "batch_size_rule": "min(16, n_fit_samples), with no batch smaller than the available n_fit_samples",
+    "beta": 0.01,
+    "candidate_hidden_architectures": [
+      {
+        "candidate_id": "MOVE_H64_32",
+        "hidden": [
+          64,
+          32
+        ]
+      },
+      {
+        "candidate_id": "MOVE_H128_64",
+        "hidden": [
+          128,
+          64
+        ]
+      },
+      {
+        "candidate_id": "MOVE_H256_128",
+        "hidden": [
+          256,
+          128
+        ]
+      }
+    ],
+    "continuous_weights": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "distribution": "move-dl",
+    "dropout": 0.1,
+    "dtype": "float32",
+    "epochs": 300,
+    "kld_warmup_steps": [
+      1,
+      75,
+      150,
+      300
+    ],
+    "latent_dim": 5,
+    "learning_rate": 0.001,
+    "method": "MOVE",
+    "optimizer_and_loss": "MOVE 1.5.0 public VAE/training_loop implementation without local numerical modification",
+    "required_CUDA_build": "13.0",
+    "required_runtime": "cuda:0",
+    "required_torch": "2.12.1+cu130",
+    "torch_compile": false,
+    "version": "1.5.0"
+  },
+  "common_scientific_adapter_policy": {
+    "feature_selection": "Use exactly the frozen outcome-blind Paper 5 feature-budget / preprocessing inputs supplied to the primary benchmark for that dataset or split. The comparator wrapper may not perform outcome-guided feature selection.",
+    "information_boundary": "Outcomes, clinical labels, biological annotations, simulation truth, and final-gate labels are forbidden from preprocessing, tuning, architecture selection, fitting, or failure handling.",
+    "latent_dimension": 5,
+    "missing_feature_values": "After standardization, encode remaining missing feature values as 0.0, i.e. the training-set standardized mean.",
+    "sample_pairing": "Preserve the frozen sample-ID order and cross-view pairing exactly; no re-pairing is permitted.",
+    "standardization": "Within any fit/training split, estimate per-feature center and scale from observed entries in that split only. Apply those parameters to held-out rows. Zero-variance features follow the already-frozen Paper 5 preprocessing policy and are not rescued comparator-specifically.",
+    "view_order": [
+      "RNA",
+      "METHYLATION",
+      "CNV"
+    ],
+    "whole_view_missingness": "Encode an unavailable view as an all-zero standardized row for that view. Do not add comparator-specific missingness indicator features."
+  },
+  "contract_version": "sable-mo-secondary-comparator-implementation-contract-v1",
+  "created_at_utc": "2026-08-22T17:23:54+00:00",
+  "iCluster2b_scientific_policy": {
+    "Bioconductor_version": "3.23",
+    "EM_iter": 25,
+    "R_version_prefix": "R version 4.6.1",
+    "chr": null,
+    "eps": 0.0001,
+    "eps2": 1e-06,
+    "lambda_iter": 25,
+    "latent_K": 5,
+    "max_lambda": 500.0,
+    "method": "iCluster2b",
+    "min_lambda": 10.0,
+    "min_shrinkage_rate_per_view": [
+      0.05,
+      0.05,
+      0.05
+    ],
+    "official_Bioconductor_source_release": "1.48.0",
+    "package": "iClusterPlus",
+    "package_version": "1.47.3",
+    "platform_binary": "official Bioconductor 3.23 Windows x86_64 binary for R 4.6",
+    "regularization": "lasso",
+    "scientific_fit_rule": "Run one prospectively seeded tune.iCluster2b call per analysis dataset with K=5 and the fixed documented lasso search settings above; use the lambda values returned by that call. No truth, outcome, biological label, or comparator-performance metric may enter tuning.",
+    "thread_policy": "single-threaded process for numerical reproducibility",
+    "tuning_function": "tune.iCluster2b"
+  },
+  "metric_scope": "Only metrics explicitly marked eligible in the frozen metric registry may be used for cross-method claims. Method-specific endpoints remain descriptive and are not inserted into the 05e primary selection score.",
+  "next_stage": "05e_compare_ablate_and_freeze_method.py",
+  "post_05e_rule": "Only after a frozen successful 05e primary-method decision may scientific secondary-comparator runs begin. Their outputs remain secondary and cannot reopen 05e or the final-gate contract.",
+  "primary_rule": "Secondary external comparators are frozen as reporting/benchmark methods only. They are categorically ineligible to influence 05e primary-method selection, the frozen final-gate calibration, or TARGET outcome access.",
+  "runtime_reproducibility": {
+    "MOVE": {
+      "AMP": false,
+      "TF32": false,
+      "cuda_required": true,
+      "required_CUDA_build": "13.0",
+      "required_move_version": "1.5.0",
+      "required_torch": "2.12.1+cu130",
+      "synthetic_smoke_source_hashes": {
+        "dataloaders": {
+          "path": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\comparator_envs\\move_1_5_0\\Lib\\site-packages\\move\\data\\dataloaders.py",
+          "sha256": "c33791e4a4b468d8081a7aea7975e8f93b33251a64bd3844bb77bd54bd75c982",
+          "size_bytes": 6780
+        },
+        "training_loop": {
+          "path": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\comparator_envs\\move_1_5_0\\Lib\\site-packages\\move\\training\\training_loop.py",
+          "sha256": "6dbd05437950e6a33f612f5bf969bb42fee30302d0a7395c56f558437b24caf6",
+          "size_bytes": 3724
+        },
+        "vae": {
+          "path": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\comparator_envs\\move_1_5_0\\Lib\\site-packages\\move\\models\\vae.py",
+          "sha256": "a73248339aef802a80e484849f0ccf72fc87b147c883c35bdb41561ed9b071a9",
+          "size_bytes": 26970
+        }
+      },
+      "torch_compile": false
+    },
+    "iCluster2b": {
+      "R": {
+        "bioconductor_version": "3.23",
+        "icluster2b_formals": [
+          "xList",
+          "K",
+          "lambda",
+          "method",
+          "chr",
+          "EM.iter",
+          "eps",
+          "eps2"
+        ],
+        "iclusterplus_path": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\comparator_envs\\r_4_6_bioc_3_23\\iClusterPlus",
+        "iclusterplus_tree_file_count": 43,
+        "iclusterplus_tree_sha256": "cad0c995150e778026fb227ac533a974d77106e431c65a3802aeda4254f6fd70",
+        "iclusterplus_tree_total_bytes": 23258345,
+        "iclusterplus_version": "1.47.3",
+        "lib_paths": [
+          "C:/Users/olegk/Desktop/paper4_sarcoma_dog/paper5/comparator_envs/r_4_6_bioc_3_23",
+          "C:/Program Files/R/R-4.6.1/library"
+        ],
+        "probe_command_mode": "temporary_R_script_with_--vanilla",
+        "probe_log": "paper5\\method_contract\\05cmp0c\\icluster2b_cpu_environment_probe.log",
+        "probe_stderr": "",
+        "probe_stdout": "R_VERSION=R version 4.6.1 (2026-06-24 ucrt)\nBIOC_VERSION=3.23\nICLUSTERPLUS_VERSION=1.47.3\nICLUSTERPLUS_PATH=C:/Users/olegk/Desktop/paper4_sarcoma_dog/paper5/comparator_envs/r_4_6_bioc_3_23/iClusterPlus\nR_LIBS_USER=C:/Users/olegk/Desktop/paper4_sarcoma_dog/paper5/comparator_envs/r_4_6_bioc_3_23\nICLUSTER2B_EXISTS=TRUE\nTUNE_ICLUSTER2B_EXISTS=TRUE\nICLUSTER2B_FORMALS=xList,K,lambda,method,chr,EM.iter,eps,eps2\nTUNE_ICLUSTER2B_FORMALS=xList,K,method,min.lambda,max.lambda,lambda.iter,EM.iter,min.shrinkage.rate,eps,eps2\nLIBPATHS=C:/Users/olegk/Desktop/paper4_sarcoma_dog/paper5/comparator_envs/r_4_6_bioc_3_23|C:/Program Files/R/R-4.6.1/library\n",
+        "r_libs_user": "C:/Users/olegk/Desktop/paper4_sarcoma_dog/paper5/comparator_envs/r_4_6_bioc_3_23",
+        "r_version": "R version 4.6.1 (2026-06-24 ucrt)",
+        "rscript_path": "C:\\Program Files\\R\\R-4.6.1\\bin\\Rscript.exe",
+        "rscript_sha256": "d829bcf7e9fa1d7e3e828c565c3cdbb1ed416f551f4fa6fd4dfcdf231e33e5e8",
+        "rscript_size_bytes": 154624,
+        "thread_environment": {
+          "MKL_NUM_THREADS": "set_to_1_for_actual_smoke_fits",
+          "NUMEXPR_NUM_THREADS": "set_to_1_for_actual_smoke_fits",
+          "OMP_NUM_THREADS": "set_to_1_for_actual_smoke_fits",
+          "OPENBLAS_NUM_THREADS": "set_to_1_for_actual_smoke_fits",
+          "VECLIB_MAXIMUM_THREADS": "set_to_1_for_actual_smoke_fits"
+        },
+        "tune_icluster2b_formals": [
+          "xList",
+          "K",
+          "method",
+          "min.lambda",
+          "max.lambda",
+          "lambda.iter",
+          "EM.iter",
+          "min.shrinkage.rate",
+          "eps",
+          "eps2"
+        ]
+      },
+      "package_tree_hash": "cad0c995150e778026fb227ac533a974d77106e431c65a3802aeda4254f6fd70",
+      "single_thread": true
+    }
+  },
+  "scientific_state": {
+    "05cmp0b_MOVE_synthetic_smoke_passed": true,
+    "05cmp0c_iCluster2b_synthetic_smoke_passed": true,
+    "05e_results_accessed": false,
+    "TARGET_outcomes_accessed": false,
+    "biological_annotations_accessed": false,
+    "final_gate_changed_here": false,
+    "primary_method_selected_here": false,
+    "real_TARGET_values_accessed": false,
+    "scientific_secondary_comparator_results_accessed": false
+  },
+  "script_version": "05cmp1-freeze-secondary-comparator-implementations-v1-no-cli",
+  "seed_derivation_rule": "Where a derived seed is required, concatenate the literal fields with '|' in the order stated in the seed registry, compute SHA256 UTF-8, take the first 8 hexadecimal characters as an unsigned integer, then map to 1 + value mod 2147483646. No seed is selected by fit quality or truth/outcome metrics.",
+  "status": "FROZEN_SECONDARY_COMPARATOR_IMPLEMENTATIONS_BEFORE_05E_AND_SCIENTIFIC_RUNS",
+  "upstream_hashes": {
+    "paper5/method_contract/05cmp0/secondary_comparator_selection_contract.json": "fd4f16510ca9b11fb78a6aad65911e526b4b0c0e12abcc5a40a4df2d5a50b699",
+    "paper5/method_contract/05cmp0/secondary_comparator_selection_contract_lock.json": "b0f7eb2de3afa52d8fc54894eb82aef8e8a5d10d64c456f0bdf4f927084b6dfe",
+    "paper5/method_contract/05cmp0a/effective_secondary_comparator_selected_registry.csv": "d4b765a777b08206bddcbb49138b7b430e8609129f93a6ac2af7d5b37185390f",
+    "paper5/method_contract/05cmp0a/secondary_comparator_continuous_data_amendment.json": "ed4c9d821b1633de9528d68d0fe2fbca5b13c2de69d816181bba15a12840042e",
+    "paper5/method_contract/05cmp0a/secondary_comparator_continuous_data_amendment_lock.json": "04e74228ff85eafc6bd65535dd02c95a4efbc7a1a37bddbd9a1f9f82bdba5e5e",
+    "paper5/method_contract/05cmp0b/move_gpu_smoke_environment.json": "5b81bef722f85141b9d6e0ec9d7617fc625e3b13f6180da4e9eddc0ee56feeb6",
+    "paper5/method_contract/05cmp0b/move_gpu_smoke_lock.json": "a425155ddcac7e922c2874cb39eeaf6232e9502e8d6578903b5b78db5aefd68f",
+    "paper5/method_contract/05cmp0b/move_gpu_smoke_result.json": "abe44fd3daaf68393977eacbb22da1c9de40e5d10e5791c0eb2df584e54f0f30",
+    "paper5/method_contract/05cmp0c/icluster2b_cpu_smoke_environment.json": "c2bc881d056ada211929626dac80fd07c345c66b4e36d41ed77ab9c2ac251b76",
+    "paper5/method_contract/05cmp0c/icluster2b_cpu_smoke_lock.json": "c3c2b08c443d973e72fae00e67f5a0577886cbfc25c4935a8c4edb0a5b3cb75f",
+    "paper5/method_contract/05cmp0c/icluster2b_cpu_smoke_result.json": "61a02151a9a9ce4decade7f8b73744ee63b481b7e0ab2ecdd431753755ac503a",
+    "paper5/method_contract/05dev0/target_input_synthetic_fixture_contract.json": "e4387664398891334e8f5c4f7524277dbefa43f7f2cc4a3b07a08477d6ac1df5",
+    "paper5/method_contract/05dev0/target_input_synthetic_fixture_lock.json": "8300b430bdf8ee641443782809816c2691777644a534e9ecbc2669b9f7ed7eb9"
+  }
+}

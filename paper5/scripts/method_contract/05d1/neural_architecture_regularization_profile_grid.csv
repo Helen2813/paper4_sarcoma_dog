@@ -1,0 +1,10 @@
+profile_id,architecture_profile,regularization_profile,architecture_complexity_rank,regularization_complexity_rank,combined_complexity_rank,arch_rna_pca_components,arch_methylation_pca_components,arch_cnv_pca_components,arch_shared_latent_dim,arch_private_latent_dim_per_view,arch_encoder_hidden_dim,arch_decoder_hidden_dim,arch_activation,arch_layer_normalization,arch_full_batch_training,arch_maximum_epochs,arch_early_stopping_patience,arch_early_stopping_min_delta,reg_reconstruction_weight,reg_shared_alignment_weight,reg_contrastive_weight,reg_shared_private_orthogonality_weight,reg_private_separation_weight,reg_cross_reconstruction_weight,reg_modality_dropout_probability,reg_contrastive_temperature,reg_learning_rate,reg_weight_decay
+ARCH_COMPACT__REG_WEAK,compact,weak,1,1,2,10,10,10,5,2,32,32,GELU,True,True,400,30,0.0001,1.0,0.5,0.1,0.05,0.05,0.25,0.15,0.2,0.001,0.0001
+ARCH_COMPACT__REG_STANDARD,compact,standard,1,2,3,10,10,10,5,2,32,32,GELU,True,True,400,30,0.0001,1.0,1.0,0.25,0.1,0.1,0.5,0.25,0.1,0.0005,0.0005
+ARCH_STANDARD__REG_WEAK,standard,weak,2,1,3,20,20,20,10,5,64,64,GELU,True,True,500,40,0.0001,1.0,0.5,0.1,0.05,0.05,0.25,0.15,0.2,0.001,0.0001
+ARCH_COMPACT__REG_STRONG,compact,strong,1,3,4,10,10,10,5,2,32,32,GELU,True,True,400,30,0.0001,1.0,2.0,0.5,0.2,0.2,1.0,0.35,0.07,0.0003,0.001
+ARCH_STANDARD__REG_STANDARD,standard,standard,2,2,4,20,20,20,10,5,64,64,GELU,True,True,500,40,0.0001,1.0,1.0,0.25,0.1,0.1,0.5,0.25,0.1,0.0005,0.0005
+ARCH_EXPANDED__REG_WEAK,expanded,weak,3,1,4,30,30,30,15,5,96,96,GELU,True,True,600,50,0.0001,1.0,0.5,0.1,0.05,0.05,0.25,0.15,0.2,0.001,0.0001
+ARCH_STANDARD__REG_STRONG,standard,strong,2,3,5,20,20,20,10,5,64,64,GELU,True,True,500,40,0.0001,1.0,2.0,0.5,0.2,0.2,1.0,0.35,0.07,0.0003,0.001
+ARCH_EXPANDED__REG_STANDARD,expanded,standard,3,2,5,30,30,30,15,5,96,96,GELU,True,True,600,50,0.0001,1.0,1.0,0.25,0.1,0.1,0.5,0.25,0.1,0.0005,0.0005
+ARCH_EXPANDED__REG_STRONG,expanded,strong,3,3,6,30,30,30,15,5,96,96,GELU,True,True,600,50,0.0001,1.0,2.0,0.5,0.2,0.2,1.0,0.35,0.07,0.0003,0.001

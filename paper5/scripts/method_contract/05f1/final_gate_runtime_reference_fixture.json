@@ -1,0 +1,11 @@
+{
+  "CUDA_build": "13.0",
+  "GPU_model": "NVIDIA GeForce RTX 4080 Laptop GPU",
+  "PyTorch_version": "2.12.1+cu130",
+  "alignment_fixture_status": "PASS",
+  "created_at_utc": "2026-08-22T18:24:41+00:00",
+  "final_gate_scientific_data_used": false,
+  "fixture_version": "paper5-05f1-final-gate-runtime-fixture-v1",
+  "inherited_neural_fixture_status": "PASS",
+  "numerical_implementation_hash": "e16deabe0cb733bf4d6a2dbf8b0a977eb7d5a959d7a6331a69d59dda16144b1a"
+}

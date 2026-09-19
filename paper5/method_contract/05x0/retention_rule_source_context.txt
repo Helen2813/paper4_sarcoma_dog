@@ -1,0 +1,2209 @@
+====================================================================================================
+SOURCE: paper5/scripts/05a_freeze_ai_method_contract.py
+SHA256: 0054799d1d05d74d6718a1cd317e13332ad80c9d35a785770a17898731f04024
+====================================================================================================
+
+--- lines 224-236 ---
+00224:     9973,
+00225:     11027,
+00226: ]
+00227: 
+00228: PAIRING_PERMUTATIONS = 100
+00229: FINAL_STABILITY_RESAMPLES = 100
+00230: FINAL_STABILITY_SUBSAMPLE_FRACTION = 0.80
+00231: 
+00232: FEATURE_BUDGETS = {
+00233:     "RNA": {
+00234:         "sensitivity_low": 2_000,
+00235:         "primary": 5_000,
+00236:         "sensitivity_high": 10_000,
+
+--- lines 252-271 ---
+00252:     "random_adjusted_cross_view_mrr": 0.30,
+00253:     "missing_view_reconstruction_score": 0.25,
+00254:     "modality_balance_score": 0.15,
+00255: }
+00256: 
+00257: STABILITY_THRESHOLDS = {
+00258:     "primary_median_factor_correlation": 0.70,
+00259:     "primary_q10_factor_correlation": 0.40,
+00260:     "primary_inclusion_frequency": 0.80,
+00261:     "minimum_factor_variance": 1e-4,
+00262:     "minimum_supported_modalities": 2,
+00263:     "minimum_loading_energy_fraction_per_supported_modality": 0.15,
+00264:     "sensitivity_low_median_factor_correlation": 0.60,
+00265:     "sensitivity_high_median_factor_correlation": 0.80,
+00266: }
+00267: 
+00268: 
+00269: # ---------------------------------------------------------------------
+00270: # General helpers
+00271: # ---------------------------------------------------------------------
+
+--- lines 1542-1553 ---
+01542:             "eligible_for_final_freeze": True,
+01543:             "complexity_rank": 10,
+01544:             "hyperparameter_source": "simulation_selected",
+01545:             "outcome_access": False,
+01546:             "notes": (
+01547:                 "V3 plus resampling-based factor alignment and stability gate. "
+01548:                 "Proposed method is not guaranteed to win the benchmark."
+01549:             ),
+01550:         },
+01551:         {
+01552:             "model_id": "V5_SABLE_VAE",
+01553:             "family": "SABLE_MO_variational_extension",
+
+--- lines 1576-1587 ---
+01576:             "block_balanced_reconstruction": True,
+01577:             "shared_private_decomposition": False,
+01578:             "paired_contrastive_alignment": False,
+01579:             "modality_dropout": False,
+01580:             "missing_view_reconstruction": False,
+01581:             "stability_gate": False,
+01582:             "variational_latent": False,
+01583:             "prespecified_component_hypothesis": (
+01584:                 "Block normalization prevents methylation dominance and improves "
+01585:                 "held-out reconstruction fairness."
+01586:             ),
+01587:         },
+
+--- lines 1590-1601 ---
+01590:             "block_balanced_reconstruction": True,
+01591:             "shared_private_decomposition": True,
+01592:             "paired_contrastive_alignment": False,
+01593:             "modality_dropout": False,
+01594:             "missing_view_reconstruction": False,
+01595:             "stability_gate": False,
+01596:             "variational_latent": False,
+01597:             "prespecified_component_hypothesis": (
+01598:                 "Shared/private decomposition separates cross-view structure from "
+01599:                 "assay-specific variation."
+01600:             ),
+01601:         },
+
+--- lines 1604-1654 ---
+01604:             "block_balanced_reconstruction": True,
+01605:             "shared_private_decomposition": True,
+01606:             "paired_contrastive_alignment": True,
+01607:             "modality_dropout": False,
+01608:             "missing_view_reconstruction": False,
+01609:             "stability_gate": False,
+01610:             "variational_latent": False,
+01611:             "prespecified_component_hypothesis": (
+01612:                 "Paired contrastive alignment improves same-patient cross-view retrieval."
+01613:             ),
+01614:         },
+01615:         {
+01616:             "variant_id": "V3_DROPOUT_SPAE",
+01617:             "block_balanced_reconstruction": True,
+01618:             "shared_private_decomposition": True,
+01619:             "paired_contrastive_alignment": True,
+01620:             "modality_dropout": True,
+01621:             "missing_view_reconstruction": True,
+01622:             "stability_gate": False,
+01623:             "variational_latent": False,
+01624:             "prespecified_component_hypothesis": (
+01625:                 "Modality dropout improves partial-view robustness and RNA-only projection."
+01626:             ),
+01627:         },
+01628:         {
+01629:             "variant_id": "V4_SABLE_MO",
+01630:             "block_balanced_reconstruction": True,
+01631:             "shared_private_decomposition": True,
+01632:             "paired_contrastive_alignment": True,
+01633:             "modality_dropout": True,
+01634:             "missing_view_reconstruction": True,
+01635:             "stability_gate": True,
+01636:             "variational_latent": False,
+01637:             "prespecified_component_hypothesis": (
+01638:                 "The stability gate removes attractive but non-reproducible latent factors."
+01639:             ),
+01640:         },
+01641:         {
+01642:             "variant_id": "V5_SABLE_VAE",
+01643:             "block_balanced_reconstruction": True,
+01644:             "shared_private_decomposition": True,
+01645:             "paired_contrastive_alignment": True,
+01646:             "modality_dropout": True,
+01647:             "missing_view_reconstruction": True,
+01648:             "stability_gate": True,
+01649:             "variational_latent": True,
+01650:             "prespecified_component_hypothesis": (
+01651:                 "The variational extension tests whether posterior regularization improves "
+01652:                 "generalization despite the small sample size."
+01653:             ),
+01654:         },
+
+--- lines 1688-1699 ---
+01688:                     "feature_budget_role": "primary",
+01689:                     "likelihoods": "not_applicable",
+01690:                     "native_missingness": False,
+01691:                     "inner_cv_required": True,
+01692:                     "notes": (
+01693:                         "Fold-local median imputation and PCA compression are required."
+01694:                     ),
+01695:                 }
+01696:             )
+01697: 
+01698:     return pd.DataFrame(rows)
+01699: 
+
+--- lines 2055-2069 ---
+02055:             "metric_id": "same_patient_similarity_margin",
+02056:             "phase": "target_outer_cv",
+02057:             "direction": "higher",
+02058:             "primary_status": "secondary",
+02059:             "formula": (
+02060:                 "Median cosine similarity for true pairs minus median similarity "
+02061:                 "for non-matching held-out pairs."
+02062:             ),
+02063:             "aggregation": "median across ordered view pairs",
+02064:             "outcome_used": False,
+02065:         },
+02066:         {
+02067:             "metric_id": "missing_view_r2",
+02068:             "phase": "target_inner_and_outer_cv",
+02069:             "direction": "higher",
+
+--- lines 2091-2111 ---
+02091:             "primary_status": "primary",
+02092:             "formula": (
+02093:                 "Entropy of non-negative per-view loading or decoder energy, "
+02094:                 "normalized by log(number_of_views)."
+02095:             ),
+02096:             "aggregation": "median across shared factors",
+02097:             "outcome_used": False,
+02098:         },
+02099:         {
+02100:             "metric_id": "modality_balance_score",
+02101:             "phase": "target_inner_and_outer_cv",
+02102:             "direction": "higher",
+02103:             "primary_status": "primary_selection_component",
+02104:             "formula": "clip(modality_contribution_entropy, 0, 1)",
+02105:             "aggregation": "median across shared factors",
+02106:             "outcome_used": False,
+02107:         },
+02108:         {
+02109:             "metric_id": "latent_effective_rank",
+02110:             "phase": "target_outer_cv",
+02111:             "direction": "descriptive",
+
+--- lines 2116-2168 ---
+02116:             "aggregation": "per fit and across seeds",
+02117:             "outcome_used": False,
+02118:         },
+02119:         {
+02120:             "metric_id": "seed_aligned_subspace_similarity",
+02121:             "phase": "target_outer_cv_and_final_stability",
+02122:             "direction": "higher",
+02123:             "primary_status": "stability",
+02124:             "formula": (
+02125:                 "Mean canonical correlation after orthogonal Procrustes alignment "
+02126:                 "of latent spaces fitted with different seeds."
+02127:             ),
+02128:             "aggregation": "median across seed pairs",
+02129:             "outcome_used": False,
+02130:         },
+02131:         {
+02132:             "metric_id": "simulation_shared_subspace_recovery",
+02133:             "phase": "simulation",
+02134:             "direction": "higher",
+02135:             "primary_status": "primary_simulation_metric",
+02136:             "formula": (
+02137:                 "Mean canonical correlation between estimated and true shared "
+02138:                 "latent subspaces after Procrustes alignment."
+02139:             ),
+02140:             "aggregation": "mean across simulation replicates and scenarios",
+02141:             "outcome_used": False,
+02142:         },
+02143:         {
+02144:             "metric_id": "simulation_private_subspace_recovery",
+02145:             "phase": "simulation",
+02146:             "direction": "higher",
+02147:             "primary_status": "secondary_simulation_metric",
+02148:             "formula": (
+02149:                 "Mean canonical correlation between estimated and true private "
+02150:                 "subspaces for each view."
+02151:             ),
+02152:             "aggregation": "mean across views and replicates",
+02153:             "outcome_used": False,
+02154:         },
+02155:         {
+02156:             "metric_id": "simulation_false_shared_discovery_rate",
+02157:             "phase": "simulation",
+02158:             "direction": "lower",
+02159:             "primary_status": "simulation_failure_gate",
+02160:             "formula": (
+02161:                 "Fraction of retained shared factors not matched to a true shared "
+02162:                 "factor above the prespecified correlation threshold."
+02163:             ),
+02164:             "aggregation": "mean across replicates",
+02165:             "outcome_used": False,
+02166:         },
+02167:     ]
+02168: 
+
+--- lines 2180-2191 ---
+02180:         },
+02181:         {
+02182:             "gate_id": "G02_LATENT_COLLAPSE",
+02183:             "applies_to": "integrated latent models",
+02184:             "threshold": (
+02185:                 "shared latent effective rank < 2 or median shared-dimension "
+02186:                 "variance < 1e-4"
+02187:             ),
+02188:             "assessment_scope": "per fit",
+02189:             "consequence": "model configuration fails that split",
+02190:         },
+02191:         {
+
+--- lines 2203-2221 ---
+02203:             "consequence": "ineligible for final representation freeze",
+02204:         },
+02205:         {
+02206:             "gate_id": "G05_SINGLE_VIEW_DOMINATION",
+02207:             "applies_to": "integrated shared representations",
+02208:             "threshold": "median normalized modality contribution entropy < 0.60",
+02209:             "assessment_scope": "aggregated outer CV",
+02210:             "consequence": "flag severe view domination; fail proposed-method claim",
+02211:         },
+02212:         {
+02213:             "gate_id": "G06_SEED_INSTABILITY",
+02214:             "applies_to": "stochastic models",
+02215:             "threshold": "median seed-aligned subspace similarity < 0.60",
+02216:             "assessment_scope": "aggregated outer CV",
+02217:             "consequence": "ineligible for final representation freeze",
+02218:         },
+02219:         {
+02220:             "gate_id": "G07_PAIRING_NULL_FAILURE",
+02221:             "applies_to": "selected integrated method",
+
+--- lines 2227-2239 ---
+02227:             "consequence": "no paired cross-view structure claim",
+02228:         },
+02229:         {
+02230:             "gate_id": "G08_NO_STABLE_FACTORS",
+02231:             "applies_to": "final selected representation",
+02232:             "threshold": "zero factors pass the primary stability gate",
+02233:             "assessment_scope": "final full-data stability analysis",
+02234:             "consequence": "do not proceed to factor-level biological or outcome claims",
+02235:         },
+02236:         {
+02237:             "gate_id": "G09_SIMULATION_FALSE_SHARED_DISCOVERY",
+02238:             "applies_to": "SABLE-MO architecture-profile selection",
+02239:             "threshold": "mean simulation false shared discovery rate > 0.10",
+
+--- lines 2344-2355 ---
+02344: 
+02345:     return pd.DataFrame(rows)
+02346: 
+02347: 
+02348: # ---------------------------------------------------------------------
+02349: # Selection, stability, and external benchmark contracts
+02350: # ---------------------------------------------------------------------
+02351: 
+02352: 
+02353: def build_selection_policy() -> dict[str, Any]:
+02354:     return {
+02355:         "policy_version": "paper5-model-selection-policy-v1",
+
+--- lines 2841-2865 ---
+02841:             "provisional_name": METHOD_NAME,
+02842:             "name_status": METHOD_NAME_STATUS,
+02843:             "proposed_method_id": "V4_SABLE_MO",
+02844:             "proposed_method_automatically_declared_winner": False,
+02845:             "methodological_question": (
+02846:                 "Can stability-aware, block-balanced, shared/private latent "
+02847:                 "learning improve honest held-out multi-view reconstruction, "
+02848:                 "paired cross-view coherence, missing-view recovery, and factor "
+02849:                 "reproducibility under extreme p >> n?"
+02850:             ),
+02851:             "proposed_components": [
+02852:                 "fold-local pre-standardization feature ranking",
+02853:                 "block-balanced reconstruction",
+02854:                 "shared/private latent decomposition",
+02855:                 "paired contrastive alignment",
+02856:                 "modality dropout",
+02857:                 "missing-view reconstruction",
+02858:                 "resampling-based factor alignment",
+02859:                 "stability-gated factor retention",
+02860:             ],
+02861:         },
+02862:         "paper_scope": {
+02863:             "paper5_primary_scope": (
+02864:                 "Outcome-blind small-n multi-omics representation learning, "
+02865:                 "biological interpretation, and cross-platform recurrence."
+
+--- lines 2914-2928 ---
+02914:                 OUTPUT_NEURAL_ASSIGNMENTS
+02915:             ),
+02916:         },
+02917:         "preprocessing": {
+02918:             "heldout_rule": (
+02919:                 "Missingness filtering, feature ranking, median imputation, "
+02920:                 "scaling, block scaling, and PCA are fitted on training samples only."
+02921:             ),
+02922:             "primary_imputation": "training-fold feature median",
+02923:             "imputation_sensitivity": [
+02924:                 "training-fold KNN k=5",
+02925:                 "training-fold KNN k=10",
+02926:             ],
+02927:             "MOFA_missingness": "native probabilistic handling without imputation",
+02928:             "variance_ranking_scale": {
+
+--- lines 2978-2997 ---
+02978:             "primary_selection_weights": PRIMARY_SELECTION_WEIGHTS,
+02979:             "pairing_permutations": PAIRING_PERMUTATIONS,
+02980:             "all_prespecified_models_reported": True,
+02981:             "silent_omission_of_failed_models_forbidden": True,
+02982:         },
+02983:         "stability_gate": {
+02984:             "final_resamples": FINAL_STABILITY_RESAMPLES,
+02985:             "subsample_fraction": FINAL_STABILITY_SUBSAMPLE_FRACTION,
+02986:             "full_data_seeds": FINAL_FULL_DATA_SEEDS,
+02987:             "factor_alignment": (
+02988:                 "orthogonal Procrustes, Hungarian matching, and sign alignment"
+02989:             ),
+02990:             "thresholds": STABILITY_THRESHOLDS,
+02991:             "stability_evaluated_before_biology_and_outcomes": True,
+02992:         },
+02993:         "random_controls": relative_path(
+02994:             OUTPUT_RANDOM_CONTROLS
+02995:         ),
+02996:         "multiplicity_families": relative_path(
+02997:             OUTPUT_MULTIPLICITY
+
+====================================================================================================
+SOURCE: paper5/scripts/05d5_evaluate_sable_mo_stability_gpu.py
+SHA256: d3c685393fcd4111fb3fb6b3d138d597b3ec3bc3cb55713266ba95db1cd06dfd
+====================================================================================================
+
+--- lines 19-47 ---
+00019: import numpy as np
+00020: import pandas as pd
+00021: import torch
+00022: 
+00023: 
+00024: SCRIPT_VERSION = "05d5-evaluate-sable-mo-confirmatory-stability-gpu-v1-no-cli"
+00025: CONTRACT_VERSION = "paper5-neural-confirmatory-stability-v1"
+00026: 
+00027: SCRIPT_PATH = Path(__file__).resolve()
+00028: PAPER5_ROOT = SCRIPT_PATH.parents[1]
+00029: PROJECT_ROOT = SCRIPT_PATH.parents[2]
+00030: 
+00031: V4_VARIANT = "V4_SABLE_MO"
+00032: CONFIRMATORY_REPLICATES = tuple(range(11, 21))
+00033: EXPECTED_SCENARIOS = 36
+00034: EXPECTED_CONFIRMATORY_DATASETS = 360
+00035: STABILITY_RESAMPLES = 20
+00036: STABILITY_SUBSAMPLE_FRACTION = 0.80
+00037: EXPECTED_STABILITY_REGISTRY_ROWS = EXPECTED_CONFIRMATORY_DATASETS * STABILITY_RESAMPLES
+00038: EXPECTED_REFERENCE_FITS = EXPECTED_CONFIRMATORY_DATASETS
+00039: EXPECTED_STABILITY_OPTIMIZATION_RUNS = EXPECTED_CONFIRMATORY_DATASETS * (1 + STABILITY_RESAMPLES)
+00040: EXPECTED_FIT_AUDIT_ROWS_IF_ALL_PASS = EXPECTED_STABILITY_OPTIMIZATION_RUNS
+00041: EXPECTED_PREPROCESSING_ROWS_IF_ALL_PASS = EXPECTED_CONFIRMATORY_DATASETS * (3 + 3 * STABILITY_RESAMPLES)
+00042: EXPECTED_05D4_V4_FOLD_SEED_ROWS = EXPECTED_CONFIRMATORY_DATASETS * 5 * 2
+00043: EXPECTED_05D4_V4_FOLD_SEED_ROWS_PER_DATASET = 10
+00044: 
+00045: # -----------------------------------------------------------------------------
+00046: # Frozen upstream artifacts
+00047: # -----------------------------------------------------------------------------
+
+--- lines 52-63 ---
+00052: PROTOCOL_05D1 = PAPER5_ROOT / "method_contract" / "05d1" / "neural_simulation_evaluation_protocol.json"
+00053: LOSS_CONTRACT_05D1 = PAPER5_ROOT / "method_contract" / "05d1" / "neural_loss_and_architecture_contract.json"
+00054: LOCK_05D1 = PAPER5_ROOT / "method_contract" / "05d1" / "neural_simulation_protocol_lock.json"
+00055: PROFILE_GRID_05D1 = PAPER5_ROOT / "method_contract" / "05d1" / "neural_architecture_regularization_profile_grid.csv"
+00056: DATASET_ROLES_05D1 = PAPER5_ROOT / "method_contract" / "05d1" / "neural_simulation_dataset_role_registry.csv"
+00057: CONFIRMATORY_STABILITY_05D1 = PAPER5_ROOT / "method_contract" / "05d1" / "neural_confirmatory_stability_resample_registry.csv"
+00058: 
+00059: SIMULATION_MANIFEST = PAPER5_ROOT / "method_contract" / "05b_v2" / "architecture_screening_data_manifest.csv"
+00060: NEURAL_IMPL_SCRIPT = PAPER5_ROOT / "scripts" / "05d2v2_screen_neural_profiles_gpu_syncfree_pathfix.py"
+00061: LOCK_05D2 = PAPER5_ROOT / "method_contract" / "05d2_v2" / "neural_profile_screen_results_lock.json"
+00062: CONTRACT_05D3 = PAPER5_ROOT / "method_contract" / "05d3" / "selected_neural_profile.json"
+00063: LOCK_05D3 = PAPER5_ROOT / "method_contract" / "05d3" / "selected_neural_profile_lock.json"
+
+--- lines 77-105 ---
+00077: # -----------------------------------------------------------------------------
+00078: # Outputs
+00079: # -----------------------------------------------------------------------------
+00080: 
+00081: OUTPUT_CONTRACT_DIR = PAPER5_ROOT / "method_contract" / "05d5"
+00082: OUTPUT_RESULTS_DIR = PAPER5_ROOT / "results" / "simulation_benchmark" / "05d_neural" / "confirmatory_stability"
+00083: OUTPUT_SHARD_DIR = OUTPUT_RESULTS_DIR / "shards" / "_compact"
+00084: 
+00085: OUTPUT_EPOCH_REGISTRY = OUTPUT_CONTRACT_DIR / "confirmatory_stability_epoch_registry.csv"
+00086: OUTPUT_PROTOCOL = OUTPUT_CONTRACT_DIR / "neural_confirmatory_stability_execution_protocol.json"
+00087: OUTPUT_FIXTURE = OUTPUT_CONTRACT_DIR / "neural_confirmatory_stability_reference_fixture.json"
+00088: OUTPUT_SHARD_MANIFEST = OUTPUT_CONTRACT_DIR / "neural_confirmatory_stability_shard_manifest.csv"
+00089: OUTPUT_RESULT_MANIFEST = OUTPUT_CONTRACT_DIR / "neural_confirmatory_stability_results_manifest.json"
+00090: OUTPUT_LOCK = OUTPUT_CONTRACT_DIR / "neural_confirmatory_stability_results_lock.json"
+00091: OUTPUT_README = OUTPUT_CONTRACT_DIR / "neural_confirmatory_stability_README.txt"
+00092: OUTPUT_IN_PROGRESS = OUTPUT_CONTRACT_DIR / ".neural_confirmatory_stability_in_progress.json"
+00093: 
+00094: OUTPUT_DATASET_SUMMARY = OUTPUT_RESULTS_DIR / "neural_confirmatory_stability_dataset_summary.csv.gz"
+00095: OUTPUT_FACTOR_AUDIT = OUTPUT_RESULTS_DIR / "neural_confirmatory_stability_factor_audit.csv.gz"
+00096: OUTPUT_FIT_AUDIT = OUTPUT_RESULTS_DIR / "neural_confirmatory_stability_fit_audit.csv.gz"
+00097: OUTPUT_PREPROCESSING_AUDIT = OUTPUT_RESULTS_DIR / "neural_confirmatory_stability_preprocessing_audit.csv.gz"
+00098: OUTPUT_SCENARIO_SUMMARY = OUTPUT_RESULTS_DIR / "neural_confirmatory_stability_scenario_summary.csv"
+00099: OUTPUT_OVERALL_SUMMARY = OUTPUT_RESULTS_DIR / "neural_confirmatory_stability_overall_summary.csv"
+00100: 
+00101: 
+00102: # -----------------------------------------------------------------------------
+00103: # General helpers
+00104: # -----------------------------------------------------------------------------
+00105: 
+
+--- lines 341-369 ---
+00341: ) -> pd.DataFrame:
+00342:     """
+00343:     05d1 froze one full-data reference fit + 20 resample fits per confirmatory
+00344:     dataset, but did not explicitly state how the ten 05d4 fold/seed-selected
+00345:     epoch counts should be collapsed to the one fixed epoch count needed by the
+00346:     full-data 05d5 stability refits.
+00347: 
+00348:     This execution bridge is frozen *before any 05d5 stability result exists*.
+00349:     It uses only the 05d4 V4 selected_epoch diagnostics, not any utility/truth/
+00350:     stability/outcome metric: per dataset, take the arithmetic mean of the ten
+00351:     frozen fold-seed selected epochs and round to nearest integer, half-up.
+00352:     """
+00353:     required_raw = {
+00354:         "scenario_id",
+00355:         "replicate_index",
+00356:         "simulation_seed",
+00357:         "variant_id",
+00358:         "profile_id",
+00359:         "fold_index",
+00360:         "base_model_seed",
+00361:         "selected_epoch",
+00362:         "shard_status",
+00363:         "stability_gate_applied_in_05d4",
+00364:     }
+00365:     missing = required_raw - set(raw_05d4.columns)
+00366:     if missing:
+00367:         raise RuntimeError("05d4 raw metric table missing: " + ", ".join(sorted(missing)))
+00368: 
+00369:     v4 = raw_05d4[raw_05d4["variant_id"].eq(V4_VARIANT)].copy()
+
+--- lines 373-385 ---
+00373:         )
+00374:     if not v4["shard_status"].eq("PASS").all():
+00375:         raise RuntimeError("05d5 requires all V4 05d4 fold-seed rows to be PASS.")
+00376:     if not v4["profile_id"].eq(profile.profile_id).all():
+00377:         raise RuntimeError("05d4 V4 rows do not all use the frozen 05d3 profile.")
+00378:     if v4["stability_gate_applied_in_05d4"].map(parse_bool).any():
+00379:         raise RuntimeError("05d4 unexpectedly applied the V4 stability gate.")
+00380: 
+00381:     required_dataset = {
+00382:         "scenario_id",
+00383:         "replicate_index",
+00384:         "simulation_seed",
+00385:         "variant_id",
+
+--- lines 473-484 ---
+00473:                 "selected_epoch_max_05d4": epoch_max,
+00474:                 "selected_epoch_for_05d5": selected_epoch,
+00475:                 "rounding_rule": "nearest_integer_half_up=floor(mean+0.5)",
+00476:                 "source": relative_path(METRICS_05D4),
+00477:                 "performance_metrics_used_to_choose_epoch": False,
+00478:                 "stability_results_used_to_choose_epoch": False,
+00479:                 "TARGET_or_outcomes_used_to_choose_epoch": False,
+00480:             }
+00481:         )
+00482: 
+00483:     output = pd.DataFrame(rows).sort_values(
+00484:         ["scenario_id", "replicate_index", "simulation_seed"], kind="mergesort"
+
+--- lines 517-531 ---
+00517:         output[key] = row.to_dict()
+00518:     return output
+00519: 
+00520: 
+00521: # -----------------------------------------------------------------------------
+00522: # Frozen 05d1 confirmatory stability registry
+00523: # -----------------------------------------------------------------------------
+00524: 
+00525: def build_stability_lookup(
+00526:     table: pd.DataFrame,
+00527:     confirmatory_roles: pd.DataFrame,
+00528: ) -> dict[tuple[str, int, int], dict[str, Any]]:
+00529:     required = {
+00530:         "scenario_id",
+00531:         "replicate_index",
+
+--- lines 540-554 ---
+00540:         "resample_fit_seed",
+00541:         "device",
+00542:     }
+00543:     missing = required - set(table.columns)
+00544:     if missing:
+00545:         raise RuntimeError("05d1 confirmatory stability registry missing: " + ", ".join(sorted(missing)))
+00546:     if table.shape[0] != EXPECTED_STABILITY_REGISTRY_ROWS:
+00547:         raise RuntimeError(
+00548:             f"Expected {EXPECTED_STABILITY_REGISTRY_ROWS:,} 05d1 confirmatory stability rows; found {table.shape[0]:,}."
+00549:         )
+00550: 
+00551:     role_lookup = {
+00552:         (
+00553:             clean_text(row["scenario_id"]),
+00554:             int(float(row["replicate_index"])),
+
+--- lines 564-591 ---
+00564:         part = part.copy()
+00565:         part["resample_index"] = pd.to_numeric(part["resample_index"], errors="raise").astype(int)
+00566:         part = part.sort_values("resample_index", kind="mergesort")
+00567: 
+00568:         if key not in role_lookup:
+00569:             raise RuntimeError(f"05d1 stability registry contains non-confirmatory dataset: {key}")
+00570:         if part.shape[0] != STABILITY_RESAMPLES:
+00571:             raise RuntimeError(f"{key}: stability registry does not contain exactly 20 resamples.")
+00572:         if list(part["resample_index"]) != list(range(1, STABILITY_RESAMPLES + 1)):
+00573:             raise RuntimeError(f"{key}: resample indices are not exactly 1..20.")
+00574:         if not part["variant_id"].eq(V4_VARIANT).all():
+00575:             raise RuntimeError(f"{key}: confirmatory stability registry contains a non-V4 variant.")
+00576:         if not part["profile_id"].eq("FROZEN_BY_05D3").all():
+00577:             raise RuntimeError(f"{key}: confirmatory stability registry profile placeholder changed.")
+00578:         if not part["device"].eq("cuda:0").all():
+00579:             raise RuntimeError(f"{key}: confirmatory stability registry device is not cuda:0.")
+00580: 
+00581:         fractions = pd.to_numeric(part["subsample_fraction"], errors="raise").to_numpy(dtype=float)
+00582:         if not np.allclose(fractions, STABILITY_SUBSAMPLE_FRACTION, atol=0.0, rtol=0.0):
+00583:             raise RuntimeError(f"{key}: stability subsample fraction changed from 0.80.")
+00584: 
+00585:         expected_n_subsample = max(2, int(math.floor(role_lookup[key] * STABILITY_SUBSAMPLE_FRACTION)))
+00586:         n_subsamples = set(pd.to_numeric(part["n_subsample"], errors="raise").astype(int))
+00587:         if n_subsamples != {expected_n_subsample}:
+00588:             raise RuntimeError(
+00589:                 f"{key}: n_subsample differs from floor(0.80*n)={expected_n_subsample}."
+00590:             )
+00591: 
+
+--- lines 601-612 ---
+00601:             "reference_fit_seed": int(next(iter(reference_seeds))),
+00602:             "rows": part,
+00603:         }
+00604: 
+00605:     if len(output) != EXPECTED_CONFIRMATORY_DATASETS:
+00606:         raise RuntimeError("05d1 confirmatory stability lookup does not contain 360 dataset groups.")
+00607:     return output
+00608: 
+00609: 
+00610: # -----------------------------------------------------------------------------
+00611: # Upstream verification
+00612: # -----------------------------------------------------------------------------
+
+--- lines 619-630 ---
+00619:         PROTOCOL_05D1,
+00620:         LOSS_CONTRACT_05D1,
+00621:         LOCK_05D1,
+00622:         PROFILE_GRID_05D1,
+00623:         DATASET_ROLES_05D1,
+00624:         CONFIRMATORY_STABILITY_05D1,
+00625:         SIMULATION_MANIFEST,
+00626:         NEURAL_IMPL_SCRIPT,
+00627:         LOCK_05D2,
+00628:         CONTRACT_05D3,
+00629:         LOCK_05D3,
+00630:         RESULT_MANIFEST_05D4,
+
+--- lines 672-698 ---
+00672:     stages = [clean_text(item.get("stage")) for item in protocol_05d1.get("stage_order", [])]
+00673:     if stages != ["05d2", "05d3", "05d4", "05d5", "05e"]:
+00674:         raise RuntimeError(f"Frozen 05d1 stage order changed: {stages}")
+00675: 
+00676:     cscope = protocol_05d1.get("confirmatory_ablation", {})
+00677:     if int(cscope.get("V4_confirmatory_stability_reference_fits", -1)) != EXPECTED_REFERENCE_FITS:
+00678:         raise RuntimeError("05d1 V4 confirmatory stability reference-fit count changed.")
+00679:     if int(cscope.get("V4_confirmatory_stability_resample_fits", -1)) != EXPECTED_STABILITY_REGISTRY_ROWS:
+00680:         raise RuntimeError("05d1 V4 confirmatory stability resample-fit count changed.")
+00681:     if normalized_path_key(cscope.get("stability_resample_registry")) != normalized_path_key(relative_path(CONFIRMATORY_STABILITY_05D1)):
+00682:         raise RuntimeError("05d1 confirmatory stability registry path changed.")
+00683: 
+00684:     stability_contract = loss_contract.get("stability_gate", {})
+00685:     if bool(stability_contract.get("training_component", True)):
+00686:         raise RuntimeError("05d1 stability gate unexpectedly became a training component.")
+00687:     if not bool(stability_contract.get("resampling_component", False)):
+00688:         raise RuntimeError("05d1 stability gate is no longer a resampling component.")
+00689:     if int(stability_contract.get("resamples_per_dataset", -1)) != STABILITY_RESAMPLES:
+00690:         raise RuntimeError("05d1 stability resample count changed.")
+00691:     if float(stability_contract.get("subsample_fraction", float("nan"))) != STABILITY_SUBSAMPLE_FRACTION:
+00692:         raise RuntimeError("05d1 stability subsample fraction changed.")
+00693: 
+00694:     lock_05d2 = load_json(LOCK_05D2)
+00695:     if clean_text(lock_05d2.get("status")) != "FROZEN_NEURAL_PROFILE_SCREEN_RESULTS_BEFORE_CONFIRMATORY_ABLATION":
+00696:         raise RuntimeError("Unexpected 05d2 v2 lock status.")
+00697:     verify_generated_files(lock_05d2, "05d2 v2")
+00698: 
+
+--- lines 736-747 ---
+00736:     result_05d4 = load_json(RESULT_MANIFEST_05D4)
+00737:     state_05d4 = result_05d4.get("scientific_state", {})
+00738:     required_state = {
+00739:         "confirmatory_replicates_11_to_20_accessed": True,
+00740:         "confirmatory_neural_ablation_performed": True,
+00741:         "confirmatory_V4_stability_performed": False,
+00742:         "final_gate_calibration_data_used": False,
+00743:         "representation_method_selected": False,
+00744:         "TARGET_model_fitting_performed": False,
+00745:     }
+00746:     for key, expected in required_state.items():
+00747:         if bool(state_05d4.get(key, False)) != expected:
+
+--- lines 796-837 ---
+00796:     for _, row in confirmatory_roles.iterrows():
+00797:         key = (clean_text(row["scenario_id"]), int(row["replicate_index"]), int(row["simulation_seed"]))
+00798:         if key not in manifest_lookup:
+00799:             raise RuntimeError(f"Confirmatory dataset missing from simulation manifest: {key}")
+00800: 
+00801:     stability_registry = pd.read_csv(CONFIRMATORY_STABILITY_05D1, dtype=str, low_memory=False).fillna("")
+00802:     stability_lookup = build_stability_lookup(stability_registry, confirmatory_roles)
+00803: 
+00804:     raw_05d4 = pd.read_csv(METRICS_05D4, dtype=str, low_memory=False).fillna("")
+00805:     dataset_05d4 = pd.read_csv(DATASET_VARIANT_05D4, dtype=str, low_memory=False).fillna("")
+00806:     epoch_registry = build_epoch_registry(raw_05d4, dataset_05d4, profile)
+00807: 
+00808:     thresholds = load_json(CONTRACT_05A).get("stability_gate", {}).get("thresholds", {})
+00809:     required_thresholds = {
+00810:         "primary_median_factor_correlation",
+00811:         "primary_q10_factor_correlation",
+00812:         "primary_inclusion_frequency",
+00813:         "minimum_factor_variance",
+00814:         "minimum_supported_modalities",
+00815:         "minimum_loading_energy_fraction_per_supported_modality",
+00816:     }
+00817:     if required_thresholds - set(thresholds):
+00818:         raise RuntimeError("05a stability-gate thresholds are incomplete.")
+00819: 
+00820:     upstream_paths = required_paths
+00821:     return {
+00822:         "env_contract": env_contract,
+00823:         "protocol_05d1": protocol_05d1,
+00824:         "loss_contract": loss_contract,
+00825:         "contract_05d3": contract_05d3,
+00826:         "result_05d4": result_05d4,
+00827:         "profile": profile,
+00828:         "confirmatory_roles": confirmatory_roles,
+00829:         "manifest_lookup": manifest_lookup,
+00830:         "stability_lookup": stability_lookup,
+00831:         "stability_thresholds": thresholds,
+00832:         "epoch_registry": epoch_registry,
+00833:         "hashes": {relative_path(path): sha256_file(path) for path in upstream_paths},
+00834:     }
+00835: 
+00836: 
+00837: # -----------------------------------------------------------------------------
+
+--- lines 849-912 ---
+00849:             "clinical_labels_loaded": False,
+00850:             "biological_annotations_used_for_model_or_profile_selection": False,
+00851:             "TARGET_model_fitting_performed": False,
+00852:             "neural_profile_frozen": True,
+00853:             "confirmatory_neural_ablation_performed": True,
+00854:             "confirmatory_V4_stability_performed": False,
+00855:             "final_gate_calibration_data_used": False,
+00856:             "representation_method_selected": False,
+00857:         },
+00858:         "scope": {
+00859:             "variant": V4_VARIANT,
+00860:             "profile_id": profile.profile_id,
+00861:             "confirmatory_replicate_indices": list(CONFIRMATORY_REPLICATES),
+00862:             "confirmatory_datasets": EXPECTED_CONFIRMATORY_DATASETS,
+00863:             "scenarios": EXPECTED_SCENARIOS,
+00864:             "reference_full_data_fits": EXPECTED_REFERENCE_FITS,
+00865:             "stability_resamples_per_dataset": STABILITY_RESAMPLES,
+00866:             "stability_resample_fits": EXPECTED_STABILITY_REGISTRY_ROWS,
+00867:             "total_neural_optimization_runs": EXPECTED_STABILITY_OPTIMIZATION_RUNS,
+00868:         },
+00869:         "frozen_sources": {
+00870:             "05d1_confirmatory_stability_registry": file_record(CONFIRMATORY_STABILITY_05D1),
+00871:             "05d3_selected_profile": file_record(CONTRACT_05D3),
+00872:             "05d4_result_manifest": file_record(RESULT_MANIFEST_05D4),
+00873:             "05d4_V4_fold_seed_metrics": file_record(METRICS_05D4),
+00874:             "05d4_V4_dataset_summary": file_record(DATASET_VARIANT_05D4),
+00875:             "05d2v2_V4_implementation": file_record(NEURAL_IMPL_SCRIPT),
+00876:         },
+00877:         "selected_epoch_bridge": {
+00878:             "registry": file_record(OUTPUT_EPOCH_REGISTRY),
+00879:             "reason": (
+00880:                 "05d1 froze one full-data reference + 20 stability resample fits per confirmatory dataset, "
+00881:                 "but did not explicitly define how the ten 05d4 V4 fold/seed-selected epoch counts transfer "
+00882:                 "to one fixed full-data stability epoch count. This execution-level bridge is frozen before "
+00883:                 "any 05d5 stability result exists."
+00884:             ),
+00885:             "input": "the ten 05d4 V4 selected_epoch diagnostics per dataset only",
+00886:             "rule": "arithmetic mean across 5 folds x 2 frozen seeds, then nearest integer half-up via floor(mean+0.5)",
+00887:             "dataset_specific": True,
+00888:             "bounded_by_frozen_profile_maximum_epochs": True,
+00889:             "05d4_performance_metrics_used": False,
+00890:             "05d5_stability_metrics_used": False,
+00891:             "TARGET_or_outcomes_used": False,
+00892:         },
+00893:         "stability_contract": {
+00894:             "training_component": False,
+00895:             "post_fit_resampling_component": True,
+00896:             "subsample_fraction": STABILITY_SUBSAMPLE_FRACTION,
+00897:             "resamples_per_dataset": STABILITY_RESAMPLES,
+00898:             "reference_seed_source": relative_path(CONFIRMATORY_STABILITY_05D1),
+00899:             "subsample_seed_source": relative_path(CONFIRMATORY_STABILITY_05D1),
+00900:             "resample_fit_seed_source": relative_path(CONFIRMATORY_STABILITY_05D1),
+00901:             "preprocessing_refit_within_each_resample": True,
+00902:             "neural_refit_within_each_resample": True,
+00903:             "alignment": "standardize shared scores -> orthogonal Procrustes -> Hungarian factor matching -> absolute correlation",
+00904:             "thresholds": upstream["stability_thresholds"],
+00905:             "biological_truth_match_absolute_correlation": 0.50,
+00906:             "technical_truth_match_absolute_correlation": 0.50,
+00907:             "technical_factors_counted_as_false_biological": False,
+00908:             "false_biological_discovery_denominator": "stable nontechnical factors",
+00909:             "factor_level_primary_eligibility": "factor-level-identifiable datasets OR true biological null datasets",
+00910:             "rotational_nonnull_factor_results": "descriptive_only_not_primary",
+00911:         },
+00912:         "gpu_execution": {
+
+--- lines 920-931 ---
+00920:             "deterministic_algorithms": True,
+00921:             "CPU_allowed": [
+00922:                 "file I/O",
+00923:                 "pandas audit tables and aggregation",
+00924:                 "fold/resample-local feature eligibility and ranking",
+00925:                 "training-subset median imputation",
+00926:                 "hashing/provenance",
+00927:             ],
+00928:         },
+00929:         "aggregation": {
+00930:             "dataset": "one full-data reference + 20 frozen 80% resamples",
+00931:             "scenario": "equal descriptive aggregation across the 10 confirmatory replicate datasets",
+
+--- lines 947-961 ---
+00947:                 "05d5 selected epoch",
+00948:             ],
+00949:         },
+00950:         "guardrails": [
+00951:             "Only confirmatory simulation replicate indices 11-20 are used.",
+00952:             "Only frozen V4 SABLE-MO is stability-resampled in 05d5.",
+00953:             "The 05d3-selected profile is not retuned.",
+00954:             "The 05a stability thresholds are not retuned.",
+00955:             "05d4 V4-minus-V3 is not treated as the stability-gate effect.",
+00956:             "Failed 05d5 datasets remain visible and are never silently omitted.",
+00957:             "TARGET matrices, outcomes, clinical labels, biological program annotations, and final-gate calibration data are not used.",
+00958:             "05d5 does not select the final representation method; that remains reserved for 05e.",
+00959:         ],
+00960:         "upstream_hashes": upstream["hashes"],
+00961:         "implementation_source": {
+
+--- lines 982-993 ---
+00982:         existing_core = json.dumps(protocol_core(existing), sort_keys=True, separators=(",", ":"))
+00983:         proposed_core = json.dumps(protocol_core(proposed), sort_keys=True, separators=(",", ":"))
+00984:         if existing_core != proposed_core:
+00985:             raise RuntimeError(
+00986:                 "Existing prospective 05d5 execution protocol differs from the current implementation. "
+00987:                 "Refusing to alter a started confirmatory stability analysis."
+00988:             )
+00989:         protocol = existing
+00990:     else:
+00991:         write_json_atomic(proposed, OUTPUT_PROTOCOL)
+00992:         protocol = proposed
+00993:     return protocol, sha256_file(OUTPUT_PROTOCOL)
+
+--- lines 1005-1035 ---
+01005:     rng = np.random.default_rng(20525)
+01006:     reference = rng.normal(size=(48, int(profile.shared_dim))).astype(np.float64)
+01007:     permutation = np.arange(int(profile.shared_dim))[::-1]
+01008:     signs = np.where(np.arange(int(profile.shared_dim)) % 2 == 0, 1.0, -1.0)
+01009:     resample = reference[:, permutation] * signs
+01010:     _, correlations, subspace = neural.align_resample_to_reference(linear, resample, reference)
+01011:     min_corr = float(np.min(correlations))
+01012:     if subspace is None or min_corr < 1.0 - 1e-10 or float(subspace) < 1.0 - 1e-10:
+01013:         raise RuntimeError("05d5 Procrustes/Hungarian stability alignment fixture failed.")
+01014: 
+01015:     return {
+01016:         "fixture_id": "paper5-05d5-v4-confirmatory-stability-fixture-v1",
+01017:         "profile_id": profile.profile_id,
+01018:         "device": "cuda:0",
+01019:         "torch_version": torch.__version__,
+01020:         "cuda_build": torch.version.cuda,
+01021:         "inherited_V4_cuda_fixture": neural_fixture,
+01022:         "alignment_permuted_signed_latent_min_absolute_correlation": min_corr,
+01023:         "alignment_subspace_mean_canonical_correlation": float(subspace),
+01024:         "status": "PASS",
+01025:     }
+01026: 
+01027: 
+01028: # -----------------------------------------------------------------------------
+01029: # Resumable dataset-level stability shards
+01030: # -----------------------------------------------------------------------------
+01031: 
+01032: def shard_path(metadata: dict[str, Any], selected_epoch: int, protocol_hash: str) -> Path:
+01033:     key = (
+01034:         f"{metadata['scenario_id']}|{metadata['replicate_index']}|{metadata['simulation_seed']}|"
+01035:         f"{V4_VARIANT}|{metadata['profile_id']}|{metadata['input_sha256']}|E{selected_epoch}|{protocol_hash}"
+
+--- lines 1069-1127 ---
+01069: ) -> None:
+01070:     for row in rows:
+01071:         row.update(metadata)
+01072:         row.update(
+01073:             {
+01074:                 "execution_stage": "05d5_confirmatory_V4_stability",
+01075:                 "variant_id": V4_VARIANT,
+01076:                 "profile_id": profile.profile_id,
+01077:                 "architecture_profile": profile.architecture_profile,
+01078:                 "regularization_profile": profile.regularization_profile,
+01079:                 "shared_latent_dim": int(profile.shared_dim),
+01080:                 "private_latent_dim_per_view": int(profile.private_dim),
+01081:                 "selected_epoch_for_05d5": int(selected_epoch),
+01082:                 "factor_level_metrics_primary_eligible": bool(primary_eligible),
+01083:             }
+01084:         )
+01085: 
+01086: 
+01087: def evaluate_dataset_stability(
+01088:     neural: Any,
+01089:     linear: Any,
+01090:     arrays: dict[str, np.ndarray],
+01091:     metadata: dict[str, Any],
+01092:     profile: Any,
+01093:     selected_epoch_record: dict[str, Any],
+01094:     stability_group: dict[str, Any],
+01095:     stability_thresholds: dict[str, Any],
+01096: ) -> dict[str, Any]:
+01097:     selected_epoch = int(selected_epoch_record["selected_epoch_for_05d5"])
+01098:     primary_eligible = bool(
+01099:         metadata["factor_level_identifiable"] or metadata["n_true_biological_shared_factors"] == 0
+01100:     )
+01101: 
+01102:     torch.cuda.reset_peak_memory_stats(0)
+01103:     summary, factor_rows, fit_audits, preprocessing_rows = neural.stability_audit(
+01104:         linear=linear,
+01105:         arrays=arrays,
+01106:         profile=profile,
+01107:         selected_epoch=selected_epoch,
+01108:         stability_group=stability_group,
+01109:         stability_thresholds=stability_thresholds,
+01110:     )
+01111: 
+01112:     if len(fit_audits) != 1 + STABILITY_RESAMPLES:
+01113:         raise RuntimeError("Successful 05d5 dataset does not contain exactly 21 stability fit audits.")
+01114:     if len(preprocessing_rows) != 3 + 3 * STABILITY_RESAMPLES:
+01115:         raise RuntimeError("Successful 05d5 dataset does not contain exactly 63 preprocessing rows.")
+01116:     if len(factor_rows) != int(profile.shared_dim):
+01117:         raise RuntimeError("Successful 05d5 factor row count differs from frozen shared latent dimension.")
+01118:     if int(summary.get("n_stability_resamples", -1)) != STABILITY_RESAMPLES:
+01119:         raise RuntimeError("05d5 stability summary does not report 20 resamples.")
+01120:     if int(summary.get("selected_epoch_used_for_stability", -1)) != selected_epoch:
+01121:         raise RuntimeError("05d5 helper did not use the frozen dataset-specific stability epoch.")
+01122: 
+01123:     attach_metadata(fit_audits, metadata, profile, selected_epoch, primary_eligible)
+01124:     attach_metadata(preprocessing_rows, metadata, profile, selected_epoch, primary_eligible)
+01125:     attach_metadata(factor_rows, metadata, profile, selected_epoch, primary_eligible)
+01126:     for row in factor_rows:
+01127:         row["factor_level_interpretation"] = (
+
+--- lines 1144-1157 ---
+01144:         "selected_epoch_for_05d5": selected_epoch,
+01145:         "selected_epoch_mean_05d4": float(selected_epoch_record["selected_epoch_mean_05d4"]),
+01146:         "selected_epoch_sd_05d4": float(selected_epoch_record["selected_epoch_sd_05d4"]),
+01147:         "selected_epoch_min_05d4": int(selected_epoch_record["selected_epoch_min_05d4"]),
+01148:         "selected_epoch_max_05d4": int(selected_epoch_record["selected_epoch_max_05d4"]),
+01149:         "reference_fit_seed": int(stability_group["reference_fit_seed"]),
+01150:         "required_reference_fits": 1,
+01151:         "required_resample_fits": STABILITY_RESAMPLES,
+01152:         "all_required_fits_passed": True,
+01153:         "max_cuda_memory_allocated_bytes": max_memory,
+01154:         **summary,
+01155:         "shard_status": "PASS",
+01156:         "shard_error_type": "",
+01157:         "shard_error_message": "",
+
+--- lines 1176-1187 ---
+01176: 
+01177: def failed_shard_record(
+01178:     metadata: dict[str, Any],
+01179:     profile: Any,
+01180:     selected_epoch_record: dict[str, Any],
+01181:     stability_group: dict[str, Any],
+01182:     error: BaseException,
+01183: ) -> dict[str, Any]:
+01184:     selected_epoch = int(selected_epoch_record["selected_epoch_for_05d5"])
+01185:     primary_eligible = bool(
+01186:         metadata["factor_level_identifiable"] or metadata["n_true_biological_shared_factors"] == 0
+01187:     )
+
+--- lines 1198-1239 ---
+01198:         "selected_epoch_for_05d5": selected_epoch,
+01199:         "selected_epoch_mean_05d4": float(selected_epoch_record["selected_epoch_mean_05d4"]),
+01200:         "selected_epoch_sd_05d4": float(selected_epoch_record["selected_epoch_sd_05d4"]),
+01201:         "selected_epoch_min_05d4": int(selected_epoch_record["selected_epoch_min_05d4"]),
+01202:         "selected_epoch_max_05d4": int(selected_epoch_record["selected_epoch_max_05d4"]),
+01203:         "reference_fit_seed": int(stability_group["reference_fit_seed"]),
+01204:         "all_required_fits_passed": False,
+01205:         "reference_effective_rank": None,
+01206:         "reference_median_shared_variance": None,
+01207:         "latent_collapse": None,
+01208:         "reference_shared_subspace_recovery": None,
+01209:         "reference_technical_subspace_recovery": None,
+01210:         "stability_subspace_median_canonical_correlation": None,
+01211:         "stability_subspace_q10_canonical_correlation": None,
+01212:         "n_stable_factors": None,
+01213:         "n_stable_biological_factors": None,
+01214:         "n_stable_technical_factors": None,
+01215:         "n_stable_unmatched_nontechnical_factors": None,
+01216:         "stability_gated_false_biological_discovery_fraction": None,
+01217:         "n_stability_resamples": None,
+01218:         "selected_epoch_used_for_stability": None,
+01219:         "shard_status": "FAIL",
+01220:         "shard_error_type": type(error).__name__,
+01221:         "shard_error_message": clean_text(str(error))[:2000],
+01222:         "max_cuda_memory_allocated_bytes": int(torch.cuda.max_memory_allocated(0))
+01223:         if torch.cuda.is_available()
+01224:         else None,
+01225:     }
+01226:     audit = {
+01227:         **metadata,
+01228:         "execution_stage": "05d5_confirmatory_V4_stability",
+01229:         "variant_id": V4_VARIANT,
+01230:         "profile_id": profile.profile_id,
+01231:         "selected_epoch_for_05d5": selected_epoch,
+01232:         "factor_level_metrics_primary_eligible": primary_eligible,
+01233:         "fit_stage": "05d5_dataset_stability_failure",
+01234:         "fit_status": "FAIL",
+01235:         "fit_error_type": type(error).__name__,
+01236:         "fit_error_message": clean_text(str(error))[:2000],
+01237:         "fit_traceback_tail": "\n".join(traceback.format_exc().splitlines()[-20:]),
+01238:     }
+01239:     return {
+
+--- lines 1259-1304 ---
+01259:     linear: Any,
+01260:     dataset_path: Path,
+01261:     metadata: dict[str, Any],
+01262:     profile: Any,
+01263:     selected_epoch_record: dict[str, Any],
+01264:     stability_group: dict[str, Any],
+01265:     stability_thresholds: dict[str, Any],
+01266:     protocol_hash: str,
+01267: ) -> tuple[dict[str, Any], str]:
+01268:     selected_epoch = int(selected_epoch_record["selected_epoch_for_05d5"])
+01269:     candidate = shard_path(metadata, selected_epoch, protocol_hash)
+01270:     if candidate.exists():
+01271:         shard = load_json(candidate)
+01272:         validate_existing_shard(shard, metadata, selected_epoch, protocol_hash)
+01273:         return shard, "verified_existing"
+01274: 
+01275:     try:
+01276:         arrays = linear.load_simulation_arrays(dataset_path)
+01277:         shard = evaluate_dataset_stability(
+01278:             neural=neural,
+01279:             linear=linear,
+01280:             arrays=arrays,
+01281:             metadata=metadata,
+01282:             profile=profile,
+01283:             selected_epoch_record=selected_epoch_record,
+01284:             stability_group=stability_group,
+01285:             stability_thresholds=stability_thresholds,
+01286:         )
+01287:         del arrays
+01288:     except (KeyboardInterrupt, SystemExit):
+01289:         raise
+01290:     except Exception as exc:
+01291:         gc.collect()
+01292:         if torch.cuda.is_available():
+01293:             torch.cuda.empty_cache()
+01294:         shard = failed_shard_record(
+01295:             metadata=metadata,
+01296:             profile=profile,
+01297:             selected_epoch_record=selected_epoch_record,
+01298:             stability_group=stability_group,
+01299:             error=exc,
+01300:         )
+01301: 
+01302:     shard["protocol_sha256"] = protocol_hash
+01303:     shard["created_at_utc"] = utc_now_iso()
+01304:     write_json_atomic(shard, candidate)
+
+--- lines 1331-1354 ---
+01331:     )
+01332: 
+01333: 
+01334: SCENARIO_SUBSPACE_METRICS = [
+01335:     "reference_effective_rank",
+01336:     "reference_median_shared_variance",
+01337:     "reference_shared_subspace_recovery",
+01338:     "reference_technical_subspace_recovery",
+01339:     "stability_subspace_median_canonical_correlation",
+01340:     "stability_subspace_q10_canonical_correlation",
+01341: ]
+01342: 
+01343: PRIMARY_FACTOR_METRICS = [
+01344:     "n_stable_factors",
+01345:     "n_stable_biological_factors",
+01346:     "n_stable_technical_factors",
+01347:     "n_stable_unmatched_nontechnical_factors",
+01348:     "stability_gated_false_biological_discovery_fraction",
+01349: ]
+01350: 
+01351: 
+01352: def scenario_summary(dataset_table: pd.DataFrame) -> pd.DataFrame:
+01353:     rows: list[dict[str, Any]] = []
+01354:     group_columns = ["scenario_id", "scenario_origin", "scenario_family", "calibration_role"]
+
+--- lines 1371-1388 ---
+01371: 
+01372:         for metric in SCENARIO_SUBSPACE_METRICS:
+01373:             values = finite_values(passed[metric]) if metric in passed.columns else np.asarray([], dtype=float)
+01374:             row[f"{metric}_n"] = int(values.size)
+01375:             row[f"{metric}_mean"] = float(np.mean(values)) if values.size else None
+01376:             row[f"{metric}_median"] = float(np.median(values)) if values.size else None
+01377: 
+01378:         for metric in PRIMARY_FACTOR_METRICS:
+01379:             values = finite_values(primary[metric]) if metric in primary.columns else np.asarray([], dtype=float)
+01380:             row[f"primary_{metric}_n"] = int(values.size)
+01381:             row[f"primary_{metric}_mean"] = float(np.mean(values)) if values.size else None
+01382:             row[f"primary_{metric}_median"] = float(np.median(values)) if values.size else None
+01383: 
+01384:         rows.append(row)
+01385: 
+01386:     output = pd.DataFrame(rows)
+01387:     if output.shape[0] != EXPECTED_SCENARIOS:
+01388:         raise RuntimeError(f"Expected {EXPECTED_SCENARIOS} scenario summaries; found {output.shape[0]}.")
+
+--- lines 1430-1446 ---
+01430:     # Primary factor-level summaries are intentionally based only on datasets
+01431:     # where factor identities are interpretable (or biological truth is null).
+01432:     for metric in PRIMARY_FACTOR_METRICS:
+01433:         values = finite_values(primary[metric]) if metric in primary.columns else np.asarray([], dtype=float)
+01434:         row[f"primary_dataset_mean_{metric}"] = float(np.mean(values)) if values.size else None
+01435:         row[f"primary_dataset_median_{metric}"] = float(np.median(values)) if values.size else None
+01436:         row[f"primary_dataset_n_{metric}"] = int(values.size)
+01437: 
+01438:     # A scenario-balanced companion for primary FDR is useful descriptively,
+01439:     # but no 05d5 hard-gate or method selection decision is made here.
+01440:     fdr_column = "primary_stability_gated_false_biological_discovery_fraction_mean"
+01441:     fdr_scenario = finite_values(scenario_table[fdr_column]) if fdr_column in scenario_table.columns else np.asarray([], dtype=float)
+01442:     row["scenario_balanced_primary_false_biological_discovery_fraction"] = (
+01443:         float(np.mean(fdr_scenario)) if fdr_scenario.size else None
+01444:     )
+01445:     row["n_scenarios_with_primary_false_discovery_estimate"] = int(fdr_scenario.size)
+01446: 
+
+--- lines 1452-1464 ---
+01452: # -----------------------------------------------------------------------------
+01453: 
+01454: def verify_existing_lock() -> None:
+01455:     lock = load_json(OUTPUT_LOCK)
+01456:     allowed_status = {
+01457:         "FROZEN_NEURAL_CONFIRMATORY_STABILITY_RESULTS_BEFORE_05E",
+01458:         "FROZEN_NEURAL_CONFIRMATORY_STABILITY_RESULTS_WITH_FAILURES",
+01459:     }
+01460:     failures: list[str] = []
+01461:     if clean_text(lock.get("script_version")) != SCRIPT_VERSION:
+01462:         failures.append("script version mismatch")
+01463:     if clean_text(lock.get("status")) not in allowed_status:
+01464:         failures.append("unexpected lock status")
+
+--- lines 1497-1550 ---
+01497: 
+01498:     if failures:
+01499:         raise RuntimeError("Existing 05d5 frozen-result verification failed:\n" + "\n".join(f"- {x}" for x in failures))
+01500: 
+01501:     print("=" * 88)
+01502:     print("Existing Paper 5 V4 confirmatory stability result lock: VERIFIED")
+01503:     print("=" * 88)
+01504:     print(f"Lock: {relative_path(OUTPUT_LOCK)}")
+01505:     print("No files were rewritten.")
+01506:     print("=" * 88)
+01507: 
+01508: 
+01509: def write_readme(profile: Any, n_pass: int, n_fail: int) -> None:
+01510:     lines = [
+01511:         "Paper 5 V4 confirmatory stability benchmark",
+01512:         "=" * 72,
+01513:         "",
+01514:         f"Script version: {SCRIPT_VERSION}",
+01515:         "",
+01516:         "Scope",
+01517:         "-----",
+01518:         "Confirmatory simulation replicate indices 11-20 only.",
+01519:         f"Confirmatory datasets: {EXPECTED_CONFIRMATORY_DATASETS}",
+01520:         f"Variant: {V4_VARIANT}",
+01521:         f"Frozen profile: {profile.profile_id}",
+01522:         f"Reference fits: {EXPECTED_REFERENCE_FITS}",
+01523:         f"Resample fits: {EXPECTED_STABILITY_REGISTRY_ROWS}",
+01524:         f"Total neural optimization runs if all datasets pass: {EXPECTED_STABILITY_OPTIMIZATION_RUNS}",
+01525:         "",
+01526:         "Epoch bridge",
+01527:         "------------",
+01528:         "05d1 did not explicitly specify how the ten 05d4 V4 fold/seed-selected epoch counts",
+01529:         "should transfer to one full-data 05d5 stability epoch count. Before any 05d5 stability",
+01530:         "result is generated, this script freezes a deterministic dataset-specific registry:",
+01531:         "mean of the ten 05d4 selected_epoch diagnostics, rounded nearest integer half-up.",
+01532:         "No 05d4 utility/truth metric, 05d5 stability result, TARGET value, or outcome is used by this rule.",
+01533:         "",
+01534:         "Stability",
+01535:         "---------",
+01536:         "Each dataset receives one frozen-seed full-data V4 reference fit and 20 frozen-seed 80% subsample refits.",
+01537:         "Each resample refits preprocessing and the neural model.",
+01538:         "Shared scores are aligned by orthogonal Procrustes and Hungarian factor matching.",
+01539:         "The already-frozen 05a stability thresholds are applied without retuning.",
+01540:         "",
+01541:         "Interpretation",
+01542:         "--------------",
+01543:         "Factor-level primary summaries are restricted to factor-level-identifiable datasets and true biological nulls.",
+01544:         "Rotational non-null factor-level results remain descriptive; subspace stability remains interpretable.",
+01545:         "This stage does not select the final representation method.",
+01546:         "",
+01547:         "GPU execution",
+01548:         "-------------",
+01549:         "All neural forward/backward/AdamW work runs on frozen cuda:0 in float32.",
+01550:         "Dual-PCA Gram/eigendecomposition/projection runs in float64 on cuda:0.",
+
+--- lines 1567-1578 ---
+01567: # Main
+01568: # -----------------------------------------------------------------------------
+01569: 
+01570: def main() -> None:
+01571:     print("=" * 88)
+01572:     print("Paper 5 - GPU V4 confirmatory stability benchmark")
+01573:     print("=" * 88)
+01574:     print(f"Script version: {SCRIPT_VERSION}")
+01575:     print(f"Project root: {PROJECT_ROOT}")
+01576:     print(f"Results directory: {OUTPUT_RESULTS_DIR}")
+01577:     print()
+01578: 
+
+--- lines 1593-1604 ---
+01593:     # before any 05d5 reference/resample result is generated.
+01594:     initialize_or_verify_epoch_registry(upstream["epoch_registry"])
+01595:     epoch_lookup = build_epoch_lookup(upstream["epoch_registry"])
+01596: 
+01597:     print("05d0 frozen CUDA runtime: PASS")
+01598:     print("05d1 frozen confirmatory stability registry: PASS")
+01599:     print("05d2 v2 frozen V4 implementation/profile-screen results: PASS")
+01600:     print("05d3 frozen selected profile: PASS")
+01601:     print("05d4 frozen confirmatory ablation results: PASS")
+01602:     print(f"Frozen profile: {profile.profile_id}")
+01603:     print(f"PyTorch: {torch.__version__}")
+01604:     print(f"CUDA build: {torch.version.cuda}")
+
+--- lines 1609-1637 ---
+01609:     print("TF32: OFF")
+01610:     print("torch.compile: OFF")
+01611:     print("TARGET/outcomes/final-gate data: FORBIDDEN")
+01612:     print()
+01613: 
+01614:     print("05d4 -> 05d5 selected-epoch bridge: FROZEN BEFORE 05d5 STABILITY FITS")
+01615:     print(f"Epoch registry: {relative_path(OUTPUT_EPOCH_REGISTRY)}")
+01616:     print("Rule: mean of 10 V4 fold-seed selected epochs, nearest integer half-up")
+01617:     print("05d4 performance metrics used by epoch rule: NO")
+01618:     print("05d5 stability results used by epoch rule: NO")
+01619:     print()
+01620: 
+01621:     execution_protocol, protocol_hash = initialize_or_verify_protocol(upstream)
+01622:     del execution_protocol
+01623:     print("Prospective 05d5 confirmatory stability protocol: FROZEN")
+01624:     print(f"Confirmatory datasets: {EXPECTED_CONFIRMATORY_DATASETS}")
+01625:     print(f"Reference fits: {EXPECTED_REFERENCE_FITS}")
+01626:     print(f"Stability resamples per dataset: {STABILITY_RESAMPLES}")
+01627:     print(f"Resample fits: {EXPECTED_STABILITY_REGISTRY_ROWS:,}")
+01628:     print(f"Planned optimization runs: {EXPECTED_STABILITY_OPTIMIZATION_RUNS:,}")
+01629:     print()
+01630: 
+01631:     print("Running deterministic V4 CUDA + stability-alignment fixture...")
+01632:     fixture = run_reference_fixture(neural, linear, profile)
+01633:     write_json_atomic(fixture, OUTPUT_FIXTURE)
+01634:     print("05d5 deterministic V4 CUDA fixture: PASS")
+01635:     print("05d5 Procrustes/Hungarian alignment fixture: PASS")
+01636:     print()
+01637: 
+
+--- lines 1640-1651 ---
+01640:             "script_version": SCRIPT_VERSION,
+01641:             "created_at_utc": utc_now_iso(),
+01642:             "protocol_sha256": protocol_hash,
+01643:             "epoch_registry_sha256": sha256_file(OUTPUT_EPOCH_REGISTRY),
+01644:             "planned_dataset_shards": EXPECTED_CONFIRMATORY_DATASETS,
+01645:             "planned_optimization_runs": EXPECTED_STABILITY_OPTIMIZATION_RUNS,
+01646:             "status": "IN_PROGRESS",
+01647:         },
+01648:         OUTPUT_IN_PROGRESS,
+01649:     )
+01650: 
+01651:     confirmatory = upstream["confirmatory_roles"].copy()
+
+--- lines 1664-1676 ---
+01664:             int(role_row["replicate_index"]),
+01665:             int(role_row["simulation_seed"]),
+01666:         )
+01667:         if key not in upstream["manifest_lookup"]:
+01668:             raise RuntimeError(f"Confirmatory dataset missing from manifest: {key}")
+01669:         if key not in upstream["stability_lookup"]:
+01670:             raise RuntimeError(f"Confirmatory stability group missing: {key}")
+01671:         if key not in epoch_lookup:
+01672:             raise RuntimeError(f"05d5 epoch record missing: {key}")
+01673: 
+01674:         manifest_row = upstream["manifest_lookup"][key]
+01675:         dataset_path = resolve_project_path(manifest_row["path"])
+01676:         require_file(dataset_path)
+
+--- lines 1698-1710 ---
+01698:                 linear=linear,
+01699:                 dataset_path=dataset_path,
+01700:                 metadata=metadata,
+01701:                 profile=profile,
+01702:                 selected_epoch_record=selected_epoch_record,
+01703:                 stability_group=upstream["stability_lookup"][key],
+01704:                 stability_thresholds=upstream["stability_thresholds"],
+01705:                 protocol_hash=protocol_hash,
+01706:             )
+01707: 
+01708:         elapsed = time.perf_counter() - started
+01709:         if generation_status == "generated":
+01710:             generated_count += 1
+
+--- lines 1825-1847 ---
+01825:             "biological_annotations_used_for_model_or_profile_selection": False,
+01826:             "TARGET_model_fitting_performed": False,
+01827:             "neural_profile_frozen": True,
+01828:             "confirmatory_replicates_11_to_20_accessed": True,
+01829:             "confirmatory_neural_ablation_performed": True,
+01830:             "confirmatory_V4_stability_performed": True,
+01831:             "final_gate_calibration_data_used": False,
+01832:             "representation_method_selected": False,
+01833:         },
+01834:         "scope": {
+01835:             "variant_id": V4_VARIANT,
+01836:             "profile_id": profile.profile_id,
+01837:             "confirmatory_datasets": EXPECTED_CONFIRMATORY_DATASETS,
+01838:             "passed_datasets": n_pass,
+01839:             "failed_datasets": n_fail,
+01840:             "reference_fits_planned": EXPECTED_REFERENCE_FITS,
+01841:             "resample_fits_planned": EXPECTED_STABILITY_REGISTRY_ROWS,
+01842:             "fit_audit_rows": int(fit_table.shape[0]),
+01843:             "preprocessing_audit_rows": int(preprocessing_table.shape[0]),
+01844:             "factor_audit_rows": int(factor_table.shape[0]),
+01845:             "scenario_summary_rows": int(scenario_table.shape[0]),
+01846:             "overall_summary_rows": int(overall_table.shape[0]),
+01847:         },
+
+--- lines 1861-1874 ---
+01861:             for path in output_files
+01862:         },
+01863:         "upstream_hashes": upstream["hashes"],
+01864:         "interpretation_guardrails": [
+01865:             "05d5 uses confirmatory simulation replicate indices 11-20 only.",
+01866:             "Only frozen V4 SABLE-MO is stability-resampled.",
+01867:             "The 05d3-selected profile and 05a stability thresholds are not retuned.",
+01868:             "The 05d4-to-05d5 selected-epoch bridge is frozen before any 05d5 stability result and uses selected_epoch diagnostics only.",
+01869:             "Factor-level primary summaries exclude rotational non-null datasets, while subspace metrics remain reportable.",
+01870:             "No TARGET, outcome, clinical, biological-program, or final-gate calibration data are used.",
+01871:             "No final representation method is selected in 05d5.",
+01872:         ],
+01873:         "next_required_stage": "05e_compare_ablate_and_freeze_method.py" if n_fail == 0 else None,
+01874:     }
+
+--- lines 1880-1893 ---
+01880:             "size_bytes": int(path.stat().st_size),
+01881:         }
+01882:         for path in [*output_files, OUTPUT_RESULT_MANIFEST]
+01883:     }
+01884:     lock_status = (
+01885:         "FROZEN_NEURAL_CONFIRMATORY_STABILITY_RESULTS_BEFORE_05E"
+01886:         if n_fail == 0
+01887:         else "FROZEN_NEURAL_CONFIRMATORY_STABILITY_RESULTS_WITH_FAILURES"
+01888:     )
+01889:     lock = {
+01890:         "contract_version": CONTRACT_VERSION,
+01891:         "script_version": SCRIPT_VERSION,
+01892:         "created_at_utc": utc_now_iso(),
+01893:         "status": lock_status,
+
+--- lines 1901-1922 ---
+01901:         "epoch_registry": result_manifest["epoch_registry"],
+01902:         "shard_manifest": result_manifest["shard_manifest"],
+01903:         "generated_files": generated_files,
+01904:         "rewrite_policy": (
+01905:             "This zero-argument stage never rewrites frozen 05d5 results. Any scientifically justified change "
+01906:             "requires a new versioned confirmatory stability stage rather than silent replacement."
+01907:         ),
+01908:     }
+01909:     write_json_atomic(lock, OUTPUT_LOCK)
+01910: 
+01911:     if OUTPUT_IN_PROGRESS.exists():
+01912:         OUTPUT_IN_PROGRESS.unlink()
+01913: 
+01914:     print()
+01915:     print("-" * 88)
+01916:     print("V4 confirmatory stability summary")
+01917:     print("-" * 88)
+01918:     print(f"Dataset shards: {dataset_table.shape[0]:,}")
+01919:     print(f"Passed datasets: {n_pass:,}")
+01920:     print(f"Failed datasets: {n_fail:,}")
+01921:     print(f"Fit-audit rows: {fit_table.shape[0]:,}")
+01922:     print(f"Preprocessing-audit rows: {preprocessing_table.shape[0]:,}")
+
+--- lines 1925-1956 ---
+01925: 
+01926:     display_columns = [
+01927:         "n_passed_datasets",
+01928:         "n_failed_datasets",
+01929:         "n_latent_collapse",
+01930:         "overall_mean_stability_subspace_median_canonical_correlation_across_scenarios",
+01931:         "overall_mean_stability_subspace_q10_canonical_correlation_across_scenarios",
+01932:         "primary_dataset_mean_stability_gated_false_biological_discovery_fraction",
+01933:         "n_factor_level_primary_eligible_datasets",
+01934:     ]
+01935:     available_display = [column for column in display_columns if column in overall_table.columns]
+01936:     print(overall_table[available_display].to_string(index=False))
+01937:     print()
+01938:     print("Representation method selected: NO")
+01939:     print("TARGET accessed: NO")
+01940:     print("Final gate-calibration data accessed: NO")
+01941:     print()
+01942:     print("=" * 88)
+01943:     if n_fail == 0:
+01944:         print("Paper 5 V4 confirmatory stability benchmark: PASS")
+01945:         print("=" * 88)
+01946:         print(f"Results manifest: {relative_path(OUTPUT_RESULT_MANIFEST)}")
+01947:         print(f"Lock: {relative_path(OUTPUT_LOCK)}")
+01948:         print("Next stage: 05e_compare_ablate_and_freeze_method.py")
+01949:     else:
+01950:         print("Paper 5 V4 confirmatory stability benchmark: COMPLETED WITH FAILURES")
+01951:         print("=" * 88)
+01952:         print(f"Results manifest: {relative_path(OUTPUT_RESULT_MANIFEST)}")
+01953:         print(f"Lock: {relative_path(OUTPUT_LOCK)}")
+01954:         print("STOP: review 05d5 failures before 05e.")
+01955:     print("=" * 88)
+01956: 
+
+====================================================================================================
+SOURCE: paper5/scripts/05e_compare_ablate_and_freeze_method.py
+SHA256: db2415ec671f716f6cd24dfec1a8fbdca843fc795b1b319eb4696249d4db5141
+====================================================================================================
+
+--- lines 88-103 ---
+00088: EXECUTION_05D4A = DIR_05D4A / "05d4a_execution_record.json"
+00089: RESULTS_05D4A = PAPER5_ROOT / "results" / "simulation_benchmark" / "05d_neural" / "confirmatory_ablation_audit"
+00090: HEADLINE_05D4A = RESULTS_05D4A / "05d4a_headline_contrast_summary.csv"
+00091: 
+00092: DIR_05D5 = PAPER5_ROOT / "method_contract" / "05d5"
+00093: LOCK_05D5 = DIR_05D5 / "neural_confirmatory_stability_results_lock.json"
+00094: MANIFEST_05D5 = DIR_05D5 / "neural_confirmatory_stability_results_manifest.json"
+00095: RESULTS_05D5 = PAPER5_ROOT / "results" / "simulation_benchmark" / "05d_neural" / "confirmatory_stability"
+00096: OVERALL_05D5 = RESULTS_05D5 / "neural_confirmatory_stability_overall_summary.csv"
+00097: DATASET_05D5 = RESULTS_05D5 / "neural_confirmatory_stability_dataset_summary.csv.gz"
+00098: 
+00099: DIR_05CMP1 = PAPER5_ROOT / "method_contract" / "05cmp1"
+00100: CONTRACT_05CMP1 = DIR_05CMP1 / "secondary_comparator_implementation_contract.json"
+00101: LOCK_05CMP1 = DIR_05CMP1 / "secondary_comparator_implementation_contract_lock.json"
+00102: 
+00103: FINAL_GATE_DATA_ROOT = PAPER5_ROOT / "simulations" / "sable_mo_v2" / "final_gate_calibration"
+
+--- lines 119-130 ---
+00119: # -----------------------------------------------------------------------------
+00120: 
+00121: OUTPUT_DIR = PAPER5_ROOT / "method_contract" / "05e"
+00122: OUTPUT_CONTEXT = OUTPUT_DIR / "confirmatory_method_context_summary.csv"
+00123: OUTPUT_COMPONENT = OUTPUT_DIR / "neural_confirmatory_component_evidence.csv"
+00124: OUTPUT_STABILITY = OUTPUT_DIR / "sable_mo_confirmatory_stability_evidence.csv"
+00125: OUTPUT_FREEZE = OUTPUT_DIR / "representation_method_freeze.json"
+00126: OUTPUT_README = OUTPUT_DIR / "05e_README.txt"
+00127: OUTPUT_LOCK = OUTPUT_DIR / "representation_method_freeze_lock.json"
+00128: 
+00129: COMMON_CONTEXT_METRICS = (
+00130:     "heldout_reconstruction_score",
+
+--- lines 535-547 ---
+00535:     verify_generated_files(lock, "05a2")
+00536: 
+00537:     unchanged = amendment.get("unchanged_scientific_design", {})
+00538:     if int(unchanged.get("final_gate_datasets", -1)) != 3100:
+00539:         raise RuntimeError("05a2 final-gate dataset count changed.")
+00540:     if int(unchanged.get("stability_resamples_per_dataset", -1)) != 100:
+00541:         raise RuntimeError("05a2 final-gate stability resample count changed.")
+00542:     if not bool(unchanged.get("outcome_blinding", False)):
+00543:         raise RuntimeError("05a2 outcome blinding changed.")
+00544: 
+00545:     if not clean_text(failure_policy.get("governing_rule")):
+00546:         raise RuntimeError("05a2 failure policy is unavailable.")
+00547: 
+
+--- lines 581-592 ---
+00581:         "outcomes_loaded",
+00582:         "clinical_labels_loaded",
+00583:         "biological_annotations_loaded",
+00584:         "TARGET_model_fitting_performed",
+00585:         "architecture_selected",
+00586:         "stability_gate_thresholds_retuned",
+00587:         "final_gate_calibration_data_used",
+00588:     ]
+00589:     active = [key for key in forbidden_true if bool(state.get(key, False))]
+00590:     if active:
+00591:         raise RuntimeError(f"{label} scientific-state violation: " + ", ".join(active))
+00592: 
+
+--- lines 688-699 ---
+00688: 
+00689:     state = manifest.get("scientific_state", {})
+00690:     required_state = {
+00691:         "confirmatory_replicates_11_to_20_accessed": True,
+00692:         "confirmatory_neural_ablation_performed": True,
+00693:         "confirmatory_V4_stability_performed": False,
+00694:         "final_gate_calibration_data_used": False,
+00695:         "representation_method_selected": False,
+00696:         "TARGET_model_fitting_performed": False,
+00697:     }
+00698:     for key, expected in required_state.items():
+00699:         if bool(state.get(key, False)) != expected:
+
+--- lines 713-724 ---
+00713:         "variant_id",
+00714:         "profile_id",
+00715:         "all_fold_seed_evaluations_passed",
+00716:         "n_fold_seed_evaluations",
+00717:         "secondary_exploratory_variant",
+00718:         "stability_gate_applied_in_05d4",
+00719:     }
+00720:     required_columns |= {f"{metric}_mean" for metric in COMMON_CONTEXT_METRICS}
+00721:     missing = required_columns - set(table.columns)
+00722:     if missing:
+00723:         raise RuntimeError("05d4 dataset table missing: " + ", ".join(sorted(missing)))
+00724: 
+
+--- lines 736-748 ---
+00736: 
+00737:     for variant in EXPECTED_NEURAL_VARIANTS:
+00738:         validate_model_dataset_geometry(table.rename(columns={"variant_id": "model_id"}), variant)
+00739: 
+00740:     v4 = table[table["variant_id"].eq(PROPOSED_METHOD_ID)]
+00741:     if v4["stability_gate_applied_in_05d4"].map(parse_bool).any():
+00742:         raise RuntimeError("05d4 unexpectedly applied the V4 stability gate.")
+00743:     v5 = table[table["variant_id"].eq(EXPLORATORY_METHOD_ID)]
+00744:     if not v5["secondary_exploratory_variant"].map(parse_bool).all():
+00745:         raise RuntimeError("V5 is not consistently marked secondary exploratory in 05d4.")
+00746: 
+00747:     keys = set(table.loc[table["variant_id"].eq(PROPOSED_METHOD_ID), "_confirmatory_key"].tolist())
+00748:     if len(keys) != EXPECTED_CONFIRMATORY_DATASETS:
+
+--- lines 778-789 ---
+00778:         "GPU_computation_performed",
+00779:         "TARGET_accessed",
+00780:         "outcomes_accessed",
+00781:         "final_gate_data_accessed",
+00782:         "method_selection_performed",
+00783:         "V4_stability_gate_interpreted_from_05d4",
+00784:         "V5_promoted_from_secondary_exploratory",
+00785:     ]
+00786:     active = [key for key in forbidden_true if bool(state.get(key, False))]
+00787:     if active:
+00788:         raise RuntimeError("05d4a scientific-state violation: " + ", ".join(active))
+00789: 
+
+--- lines 826-839 ---
+00826: def verify_05d5() -> dict[str, Any]:
+00827:     for path in [LOCK_05D5, MANIFEST_05D5, OVERALL_05D5, DATASET_05D5]:
+00828:         require_file(path)
+00829:     lock = load_json(LOCK_05D5)
+00830:     manifest = load_json(MANIFEST_05D5)
+00831:     if clean_text(lock.get("status")) != "FROZEN_NEURAL_CONFIRMATORY_STABILITY_RESULTS_BEFORE_05E":
+00832:         raise RuntimeError(
+00833:             "05d5 is not a clean all-PASS confirmatory stability result; review failures before 05e."
+00834:         )
+00835:     verify_generated_files(lock, "05d5")
+00836:     expected_manifest_hash = clean_text(lock.get("result_manifest", {}).get("sha256"))
+00837:     if not expected_manifest_hash or sha256_file(MANIFEST_05D5) != expected_manifest_hash:
+00838:         raise RuntimeError("05d5 result-manifest hash mismatch.")
+00839:     if clean_text(lock.get("profile_id")) != EXPECTED_PROFILE_ID:
+
+--- lines 870-883 ---
+00870:         "n_confirmatory_datasets",
+00871:         "n_passed_datasets",
+00872:         "n_failed_datasets",
+00873:         "n_latent_collapse",
+00874:         "n_factor_level_primary_eligible_datasets",
+00875:         "overall_mean_stability_subspace_median_canonical_correlation_across_scenarios",
+00876:         "overall_mean_stability_subspace_q10_canonical_correlation_across_scenarios",
+00877:         "primary_dataset_mean_stability_gated_false_biological_discovery_fraction",
+00878:     }
+00879:     missing = required_columns - set(overall.columns)
+00880:     if missing:
+00881:         raise RuntimeError("05d5 overall summary missing: " + ", ".join(sorted(missing)))
+00882: 
+00883:     if clean_text(row["variant_id"]) != PROPOSED_METHOD_ID or clean_text(row["profile_id"]) != EXPECTED_PROFILE_ID:
+
+--- lines 889-900 ---
+00889:     if int(float(row["n_passed_datasets"])) != EXPECTED_CONFIRMATORY_DATASETS:
+00890:         raise RuntimeError("05d5 overall PASS count is not 360.")
+00891:     if int(float(row["n_failed_datasets"])) != 0:
+00892:         raise RuntimeError("05d5 overall FAIL count is not zero.")
+00893:     if int(float(row["n_latent_collapse"])) != 0:
+00894:         raise RuntimeError("05d5 reports latent collapse in confirmatory V4 stability.")
+00895: 
+00896:     dataset = pd.read_csv(DATASET_05D5, low_memory=False)
+00897:     dataset = attach_confirmatory_key(dataset)
+00898:     if dataset.shape[0] != EXPECTED_CONFIRMATORY_DATASETS:
+00899:         raise RuntimeError("05d5 dataset table does not contain 360 rows.")
+00900:     if not dataset["shard_status"].astype(str).eq("PASS").all():
+
+--- lines 1167-1213 ---
+01167: 
+01168: def build_component_evidence(headline: pd.DataFrame) -> pd.DataFrame:
+01169:     output = headline.copy()
+01170:     output["method_selection_consequence"] = "NONE"
+01171:     output["cross_family_winner_consequence"] = "NONE"
+01172:     output["V4_minus_V3_as_stability_gate_ablation_permitted"] = False
+01173:     output["05e_interpretation"] = np.where(
+01174:         output["contrast_id"].isin(EXPECTED_PRIMARY_ABLATION_CONTRASTS),
+01175:         "PRIMARY_CONFIRMATORY_ABLATION_EVIDENCE_BY_HYPOTHESIS_MATCHED_ENDPOINT",
+01176:         "SECONDARY_EXPLORATORY_CONTEXT_ONLY",
+01177:     )
+01178:     return output
+01179: 
+01180: 
+01181: def build_stability_evidence(overall: pd.DataFrame) -> pd.DataFrame:
+01182:     row = overall.iloc[0].to_dict()
+01183:     keep = {
+01184:         "variant_id": row.get("variant_id"),
+01185:         "profile_id": row.get("profile_id"),
+01186:         "n_scenarios": row.get("n_scenarios"),
+01187:         "n_confirmatory_datasets": row.get("n_confirmatory_datasets"),
+01188:         "n_passed_datasets": row.get("n_passed_datasets"),
+01189:         "n_failed_datasets": row.get("n_failed_datasets"),
+01190:         "n_latent_collapse": row.get("n_latent_collapse"),
+01191:         "n_factor_level_primary_eligible_datasets": row.get("n_factor_level_primary_eligible_datasets"),
+01192:         "overall_mean_stability_subspace_median_canonical_correlation_across_scenarios": row.get(
+01193:             "overall_mean_stability_subspace_median_canonical_correlation_across_scenarios"
+01194:         ),
+01195:         "overall_mean_stability_subspace_q10_canonical_correlation_across_scenarios": row.get(
+01196:             "overall_mean_stability_subspace_q10_canonical_correlation_across_scenarios"
+01197:         ),
+01198:         "primary_dataset_mean_stability_gated_false_biological_discovery_fraction": row.get(
+01199:             "primary_dataset_mean_stability_gated_false_biological_discovery_fraction"
+01200:         ),
+01201:         "scenario_balanced_primary_false_biological_discovery_fraction": row.get(
+01202:             "scenario_balanced_primary_false_biological_discovery_fraction"
+01203:         ),
+01204:         "formal_final_gate_consequence": "NONE__05D5_IS_CONFIRMATORY_STABILITY_NOT_FINAL_GATE",
+01205:         "aggregate_threshold_comparison_permitted": False,
+01206:         "factor_threshold_note": (
+01207:             "Frozen factor-level stability rules were applied inside 05d5 where defined; "
+01208:             "aggregate scenario means are descriptive and are not reinterpreted as new pass/fail thresholds."
+01209:         ),
+01210:     }
+01211:     return pd.DataFrame([keep])
+01212: 
+01213: 
+
+--- lines 1283-1330 ---
+01283:             ),
+01284:             "confirmatory_neural_ablation": (
+01285:                 "05d4 completed all prespecified V0-V5 confirmatory held-out evaluations; 05d4a provides paired, "
+01286:                 "hypothesis-matched component evidence without adding a new decision threshold."
+01287:             ),
+01288:             "confirmatory_stability": (
+01289:                 "05d5 completed the frozen V4 post-fit resampling stability analysis on all 360 confirmatory datasets "
+01290:                 "with zero failed dataset shards and zero latent-collapse datasets."
+01291:             ),
+01292:             "cross_family_context": (
+01293:                 "05c1 BLOCK_PCA/PCA, 05c2b MOFA, and 05d4 neural results are summarized on the same confirmatory "
+01294:                 "dataset bank for context only. No cross-family selection score/rule was prospectively frozen for 05e, "
+01295:                 "so none is invented here."
+01296:             ),
+01297:             "secondary_external_comparators": (
+01298:                 "05cmp1 froze iCluster2b and MOVE implementations before 05e; no scientific comparator result exists "
+01299:                 "or influences this freeze."
+01300:             ),
+01301:         },
+01302:         "confirmatory_stability_snapshot": {
+01303:             "n_confirmatory_datasets": int(float(overall["n_confirmatory_datasets"])),
+01304:             "n_passed_datasets": int(float(overall["n_passed_datasets"])),
+01305:             "n_failed_datasets": int(float(overall["n_failed_datasets"])),
+01306:             "n_latent_collapse": int(float(overall["n_latent_collapse"])),
+01307:             "n_factor_level_primary_eligible_datasets": int(
+01308:                 float(overall["n_factor_level_primary_eligible_datasets"])
+01309:             ),
+01310:             "overall_mean_stability_subspace_median_canonical_correlation_across_scenarios": float(
+01311:                 overall["overall_mean_stability_subspace_median_canonical_correlation_across_scenarios"]
+01312:             ),
+01313:             "overall_mean_stability_subspace_q10_canonical_correlation_across_scenarios": float(
+01314:                 overall["overall_mean_stability_subspace_q10_canonical_correlation_across_scenarios"]
+01315:             ),
+01316:             "primary_dataset_mean_stability_gated_false_biological_discovery_fraction": float(
+01317:                 overall["primary_dataset_mean_stability_gated_false_biological_discovery_fraction"]
+01318:             ),
+01319:             "aggregate_metrics_are_descriptive_not_new_factor_thresholds": True,
+01320:         },
+01321:         "claims_not_made_by_05e": [
+01322:             "V4 is the best method across all model families.",
+01323:             "V4 has the highest raw confirmatory simulation utility.",
+01324:             "V4-minus-V3 pre-gate 05d4 metrics estimate the effect of the stability gate.",
+01325:             "V5 may be promoted from its prospectively frozen secondary-exploratory role.",
+01326:             "The final gate has passed.",
+01327:             "The final TARGET representation method has been selected.",
+01328:             "TARGET, biology, or outcomes validate the representation.",
+01329:         ],
+01330:         "TARGET_selection_policy_preserved": {
+
+--- lines 1339-1350 ---
+01339:             ),
+01340:         },
+01341:         "final_gate_required_next": {
+01342:             "05a2_status": source_05a2["amendment"]["status"],
+01343:             "final_gate_datasets": 3100,
+01344:             "stability_resamples_per_dataset": 100,
+01345:             "D01": final_gate.get("D01_NULL_SPECIFICITY", {}),
+01346:             "D02": final_gate.get("D02_STANDARD_SENSITIVITY", {}),
+01347:             "D03": final_gate.get("D03_STANDARD_FNR", {}),
+01348:             "failure_policy": relative_path(FAILURE_POLICY_05A2),
+01349:             "failure_rule": clean_text(source_05a2["failure_policy"].get("governing_rule")),
+01350:             "retuning_after_result": "FORBIDDEN",
+
+--- lines 1366-1398 ---
+01366:             "does not block the V4 proposed-method freeze."
+01367:         ),
+01368:         "evidence_outputs": {
+01369:             "confirmatory_method_context_summary": relative_path(OUTPUT_CONTEXT),
+01370:             "neural_confirmatory_component_evidence": relative_path(OUTPUT_COMPONENT),
+01371:             "sable_mo_confirmatory_stability_evidence": relative_path(OUTPUT_STABILITY),
+01372:         },
+01373:         "upstream_hashes": upstream_hashes,
+01374:         "guardrails": [
+01375:             "No outcome, clinical label, biological program, TARGET benchmark result, or final-gate result is used by 05e.",
+01376:             "No new cross-family score, threshold, one-SE rule, p-value, or winner rule is invented in 05e.",
+01377:             "V5 remains secondary exploratory and ineligible for primary/final selection.",
+01378:             "V4 05d4 metrics are pre-gate; the stability component is represented only by 05d5 post-fit resampling evidence.",
+01379:             "The 05d5 scenario-average stability metrics are not compared directly to factor-level 0.70/0.40/0.80 retention thresholds.",
+01380:             "The frozen 05a TARGET nested-CV/final-full-data selection policy remains authoritative and unchanged.",
+01381:             "The preregistered 05a2 final gate must be materialized/evaluated next; failure changes the conclusion, not the criterion.",
+01382:             "Scientific secondary comparator runs may begin only after this freeze and remain secondary reporting analyses.",
+01383:         ],
+01384:         "next_primary_scientific_stage": (
+01385:             "Materialize/evaluate the preregistered final-gate calibration bank under 05a + 05a1 + 05a2, "
+01386:             "before scientific TARGET representation fitting."
+01387:         ),
+01388:     }
+01389: 
+01390: 
+01391: def build_readme(freeze: dict[str, Any]) -> str:
+01392:     s = freeze["confirmatory_stability_snapshot"]
+01393:     lines = [
+01394:         "Paper 5 - 05e primary proposed representation-method freeze",
+01395:         "=" * 78,
+01396:         "",
+01397:         f"Script version: {SCRIPT_VERSION}",
+01398:         f"Status: {STATUS}",
+
+--- lines 1407-1429 ---
+01407:         "What 05e does NOT claim",
+01408:         "-----------------------",
+01409:         "- no cross-family winner is declared;",
+01410:         "- no new cross-family score or threshold is introduced;",
+01411:         "- V5 remains secondary exploratory/ineligible;",
+01412:         "- 05d4 V4-minus-V3 is not a stability-gate ablation;",
+01413:         "- the final gate has not yet passed;",
+01414:         "- the final TARGET-selected representation has not yet been chosen.",
+01415:         "",
+01416:         "Confirmatory V4 stability snapshot",
+01417:         "---------------------------------",
+01418:         f"Datasets: {s['n_confirmatory_datasets']}",
+01419:         f"Passed: {s['n_passed_datasets']}",
+01420:         f"Failed: {s['n_failed_datasets']}",
+01421:         f"Latent collapse: {s['n_latent_collapse']}",
+01422:         f"Factor-level primary-eligible datasets: {s['n_factor_level_primary_eligible_datasets']}",
+01423:         "Aggregate stability metrics are descriptive; they are not reinterpreted as factor-level hard thresholds.",
+01424:         "",
+01425:         "TARGET policy preserved",
+01426:         "-----------------------",
+01427:         "The frozen 05a outcome-blind TARGET nested-CV and final-full-data method-selection rules remain unchanged.",
+01428:         "05e does not pre-select a TARGET winner and does not use TARGET data.",
+01429:         "",
+
+--- lines 1497-1508 ---
+01497:     print("05c2b frozen MOFA simulation baselines: PASS")
+01498:     print("05d1 frozen neural stage order/protocol: PASS")
+01499:     print("05d3 frozen neural profile: PASS")
+01500:     print("05d4 frozen V0-V5 confirmatory ablation: PASS")
+01501:     print("05d4a read-only paired component audit: PASS")
+01502:     print("05d5 frozen V4 confirmatory stability: PASS")
+01503:     print("05cmp1 frozen secondary-comparator implementations: PASS")
+01504:     print("Final-gate materialized files present: 0")
+01505:     print("Future TARGET/outcome/comparator scientific results present: NO")
+01506:     print()
+01507: 
+01508:     # Align every fitted context model to the exact same 360 confirmatory datasets
+
+--- lines 1513-1524 ---
+01513:         mofa=source_05c2b["table"],
+01514:         neural=source_05d4["table"],
+01515:         confirmatory_keys=source_05d4["confirmatory_keys"],
+01516:     )
+01517:     component = build_component_evidence(source_05d4a["table"])
+01518:     stability = build_stability_evidence(source_05d5["overall"])
+01519: 
+01520:     # Explicitly verify 05d5 used exactly the same 360 confirmatory simulation datasets.
+01521:     if set(source_05d5["dataset"]["_confirmatory_key"].tolist()) != source_05d4["confirmatory_keys"]:
+01522:         raise RuntimeError("05d5 confirmatory dataset-key set differs from 05d4 V4.")
+01523: 
+01524:     upstream_hashes = merge_hashes(
+
+--- lines 1535-1546 ---
+01535:     )
+01536: 
+01537:     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+01538:     write_csv_atomic(context, OUTPUT_CONTEXT)
+01539:     write_csv_atomic(component, OUTPUT_COMPONENT)
+01540:     write_csv_atomic(stability, OUTPUT_STABILITY)
+01541: 
+01542:     freeze = build_freeze(
+01543:         source_05a=source_05a,
+01544:         source_05a2=source_05a2,
+01545:         source_05d1=source_05d1,
+01546:         source_05d3=source_05d3,
+
+--- lines 1554-1565 ---
+01554:     write_text_atomic(build_readme(freeze), OUTPUT_README)
+01555: 
+01556:     generated = [
+01557:         OUTPUT_CONTEXT,
+01558:         OUTPUT_COMPONENT,
+01559:         OUTPUT_STABILITY,
+01560:         OUTPUT_FREEZE,
+01561:         OUTPUT_README,
+01562:     ]
+01563:     lock = {
+01564:         "script_version": SCRIPT_VERSION,
+01565:         "contract_version": CONTRACT_VERSION,
+
+--- lines 1579-1590 ---
+01579:             "Do not rewrite 05e in response to final-gate, TARGET, biology, outcome, or secondary-comparator results."
+01580:         ),
+01581:     }
+01582:     write_json_atomic(lock, OUTPUT_LOCK)
+01583: 
+01584:     srow = stability.iloc[0]
+01585:     print("-" * 88)
+01586:     print("05e freeze summary")
+01587:     print("-" * 88)
+01588:     print(f"Frozen primary proposed method: {PROPOSED_METHOD_ID}")
+01589:     print(f"Frozen neural profile: {EXPECTED_PROFILE_ID}")
+01590:     print(f"Confirmatory V4 datasets passed: {int(float(srow['n_passed_datasets']))}/{EXPECTED_CONFIRMATORY_DATASETS}")
+
+--- lines 1601-1612 ---
+01601:     print("=" * 88)
+01602:     print("Paper 5 05e primary proposed representation-method freeze: FROZEN")
+01603:     print("=" * 88)
+01604:     print(f"Context summary: {relative_path(OUTPUT_CONTEXT)}")
+01605:     print(f"Component evidence: {relative_path(OUTPUT_COMPONENT)}")
+01606:     print(f"Stability evidence: {relative_path(OUTPUT_STABILITY)}")
+01607:     print(f"Freeze: {relative_path(OUTPUT_FREEZE)}")
+01608:     print(f"Lock: {relative_path(OUTPUT_LOCK)}")
+01609:     print("Next primary scientific stage: final-gate calibration/materialization under frozen 05a2.")
+01610:     print("Scientific secondary-comparator runs are now permitted only as post-freeze secondary benchmarking.")
+01611:     print("=" * 88)
+01612: 
+
+====================================================================================================
+SOURCE: paper5/scripts/05f2_run_full_final_gate_gpu_resumable.py
+SHA256: 8052e6278abef99585e3a90d64480ea7c9a6dc04eb53598bf841f7c9c2431abd
+====================================================================================================
+
+--- lines 26-38 ---
+00026: SCRIPT_VERSION = "05f2-run-full-final-gate-gpu-resumable-v1-sequential-05f1-path-no-cli"
+00027: CONTRACT_VERSION = "paper5-05f2-full-final-gate-streaming-run-v1"
+00028: 
+00029: EXPECTED_DATASETS = 3_100
+00030: EXPECTED_SCENARIOS = 24
+00031: EXPECTED_STABILITY_RESAMPLES = 100
+00032: EXPECTED_OPTIMIZATION_RUNS = EXPECTED_DATASETS * (1 + EXPECTED_STABILITY_RESAMPLES)
+00033: EXPECTED_REUSED_PILOT_DATASETS = 3
+00034: 
+00035: EXPECTED_05F1_SCRIPT_VERSION = (
+00036:     "05f1-run-final-gate-runtime-pilot-gpu-v2-seed-collision-aware-no-cli"
+00037: )
+00038: EXPECTED_05F1_LOCK_STATUS = "FROZEN_FINAL_GATE_RUNTIME_PILOT_COMPLETE_BEFORE_FULL_RUN"
+
+--- lines 409-420 ---
+00409:             "scientific_payload_remains_sealed_until_post_run_aggregation_stage": True,
+00410:         },
+00411:         "full_run_scope": {
+00412:             "n_scenarios": EXPECTED_SCENARIOS,
+00413:             "n_datasets": EXPECTED_DATASETS,
+00414:             "stability_resamples_per_dataset": EXPECTED_STABILITY_RESAMPLES,
+00415:             "optimization_runs_represented": EXPECTED_OPTIMIZATION_RUNS,
+00416:             "pilot_shards_reused": EXPECTED_REUSED_PILOT_DATASETS,
+00417:         },
+00418:         "numerical_contract_version": clean_text(
+00419:             numerical.get("numerical_implementation_version")
+00420:         ),
+
+--- lines 562-573 ---
+00562:                 "dataset_key": dataset_key,
+00563:                 "scenario_id": clean_text(registry_row["scenario_id"]),
+00564:                 "replicate_index": int(registry_row["replicate_index"]),
+00565:                 "simulation_seed": int(registry_row["simulation_seed"]),
+00566:                 "completion_source": "reused_frozen_05f1_pilot_shard",
+00567:                 "optimization_runs": 1 + EXPECTED_STABILITY_RESAMPLES,
+00568:                 "wall_seconds_full_dataset": float(
+00569:                     pilot_row["wall_seconds_full_dataset"]
+00570:                 ),
+00571:                 "wrapper_wall_seconds": float(
+00572:                     pilot_row["wrapper_wall_seconds"]
+00573:                 ),
+
+--- lines 760-771 ---
+00760:         "updated_at_utc": utc_now_iso(),
+00761:         "status": status,
+00762:         "completed_datasets": completed,
+00763:         "remaining_datasets": remaining,
+00764:         "completion_fraction": completed / EXPECTED_DATASETS,
+00765:         "optimization_runs_represented": completed * (1 + EXPECTED_STABILITY_RESAMPLES),
+00766:         "session_generated_datasets": len(session_generated_times),
+00767:         "session_elapsed_seconds": time.perf_counter() - session_started_at,
+00768:         "current_runtime_mean_seconds_per_new_dataset": (
+00769:             mean_current if math.isfinite(mean_current) else None
+00770:         ),
+00771:         "rough_remaining_eta_seconds": eta_seconds,
+
+--- lines 851-862 ---
+00851:         "completion_source": (
+00852:             "generated_05f2_full_run"
+00853:             if generation_status == "generated"
+00854:             else "verified_existing_orphan_shard"
+00855:         ),
+00856:         "optimization_runs": 1 + EXPECTED_STABILITY_RESAMPLES,
+00857:         "wall_seconds_full_dataset": float(wall_seconds),
+00858:         "wrapper_wall_seconds": float(wrapper_seconds),
+00859:         "peak_cuda_memory_allocated_bytes": int(peak_bytes),
+00860:         "shard_path": relative_path(shard_path),
+00861:         "shard_sha256": sha256_file(shard_path),
+00862:         "shard_size_bytes": int(shard_path.stat().st_size),
+
+--- lines 899-910 ---
+00899:         "script_version": SCRIPT_VERSION,
+00900:         "created_at_utc": utc_now_iso(),
+00901:         "status": "FULL_FINAL_GATE_SHARD_GENERATION_COMPLETE_NO_SCIENTIFIC_AGGREGATION",
+00902:         "n_scenarios": EXPECTED_SCENARIOS,
+00903:         "n_datasets": EXPECTED_DATASETS,
+00904:         "stability_resamples_per_dataset": EXPECTED_STABILITY_RESAMPLES,
+00905:         "optimization_runs_represented": EXPECTED_OPTIMIZATION_RUNS,
+00906:         "reused_frozen_05f1_pilot_datasets": int(
+00907:             progress["completion_source"]
+00908:             .astype(str)
+00909:             .eq("reused_frozen_05f1_pilot_shard")
+00910:             .sum()
+
+--- lines 916-927 ---
+00916:             .eq("reused_frozen_05f1_pilot_shard")
+00917:             .sum()
+00918:         ),
+00919:         "sum_stored_dataset_wall_seconds": float(np.sum(wall)),
+00920:         "mean_stored_dataset_wall_seconds": float(np.mean(wall)),
+00921:         "median_stored_dataset_wall_seconds": float(np.median(wall)),
+00922:         "sum_stored_wrapper_wall_seconds": float(np.sum(wrapper)),
+00923:         "peak_cuda_memory_allocated_bytes": int(np.max(peak)),
+00924:         "total_shard_bytes": int(np.sum(sizes)),
+00925:         "total_shard_gib": float(np.sum(sizes) / (1024**3)),
+00926:         "execution_choice_hash": clean_text(
+00927:             execution_prelock["execution_choice_hash"]
+
+--- lines 1024-1035 ---
+01024:     print("=" * 88)
+01025:     print(f"Script version: {SCRIPT_VERSION}")
+01026:     print(f"Project root: {PROJECT_ROOT}")
+01027:     print(f"Output directory: {OUTPUT_DIR}")
+01028:     print(f"Final-gate datasets: {EXPECTED_DATASETS:,}")
+01029:     print(f"Stability resamples per dataset: {EXPECTED_STABILITY_RESAMPLES}")
+01030:     print(f"Planned optimization runs represented: {EXPECTED_OPTIMIZATION_RUNS:,}")
+01031:     print("Execution path: original frozen 05f1 sequential numerical path")
+01032:     print("Resumable per completed dataset: YES")
+01033:     print("Permanent final-gate input bank: NO")
+01034:     print("Scientific metrics printed during full run: NO")
+01035:     print("Scientific metrics aggregated during full run: NO")
+
+--- lines 1073-1084 ---
+01073:     seed_registry = pd.read_csv(
+01074:         runner.OUTPUT_SEED_REGISTRY,
+01075:         dtype=str,
+01076:         low_memory=False,
+01077:     ).fillna("")
+01078:     if seed_registry.shape[0] != EXPECTED_DATASETS * EXPECTED_STABILITY_RESAMPLES:
+01079:         raise RuntimeError("Frozen final-gate seed registry row count mismatch.")
+01080: 
+01081:     replicates = normalized_replicates(upstream)
+01082:     progress = load_or_initialize_progress(runner, replicates)
+01083:     progress = validate_progress_manifest(progress, replicates)
+01084: 
+
+====================================================================================================
+SOURCE: paper5/scripts/05f3e_aggregate_final_gate_results_cpu_postunblinding_schema_recovery_v3.py
+SHA256: d97d12b54927d8e378e22ef3a229c2e5622398d1a7c7c9e1180631bc85cf7874
+====================================================================================================
+
+--- lines 27-45 ---
+00027: )
+00028: EXPECTED_05A2_STATUS = "FROZEN_BEFORE_FINAL_GATE_MATERIALIZATION"
+00029: 
+00030: EXPECTED_DATASETS = 3_100
+00031: EXPECTED_SCENARIOS = 24
+00032: EXPECTED_STABILITY_RESAMPLES = 100
+00033: 
+00034: D01_LIMIT = 0.10
+00035: D01_WILSON_Z = 1.959963984540054
+00036: D02_TPR_MIN = 0.80
+00037: D03_FNR_MAX = 0.20
+00038: D04_SUBSPACE_MIN = 0.80
+00039: D05_VIEW_SUPPORT_MIN = 0.80
+00040: D06_BATCH_FALSE_ACCEPT_MAX = 0.10
+00041: 
+00042: EXPECTED_D01_DATASETS = 1_000
+00043: EXPECTED_D01_INDEPENDENT_DATASETS = 800
+00044: EXPECTED_D01_CORRELATED_PRIVATE_DATASETS = 200
+00045: EXPECTED_D01_PER_N_DATASETS = 200
+
+--- lines 74-86 ---
+00074: FINAL_GATE_SCENARIOS = DIR_05A1 / "final_gate_calibration_scenarios.csv"
+00075: FINAL_GATE_REPLICATES = DIR_05A1 / "final_gate_calibration_replicates.csv"
+00076: 
+00077: DIR_05A2 = PAPER5_ROOT / "method_contract" / "05a2"
+00078: AMENDMENT_05A2 = DIR_05A2 / "inference_final_gate_implementation_amendment.json"
+00079: EFFECTIVE_METRICS_05A2 = DIR_05A2 / "effective_stability_gate_operating_metric_registry.csv"
+00080: EFFECTIVE_DECISIONS_05A2 = DIR_05A2 / "effective_stability_gate_decision_registry.csv"
+00081: REPORTING_05A2 = DIR_05A2 / "final_gate_reporting_registry.csv"
+00082: FAILURE_POLICY_05A2 = DIR_05A2 / "final_gate_failure_consequence_policy.json"
+00083: LOCK_05A2 = DIR_05A2 / "inference_final_gate_implementation_amendment_lock.json"
+00084: 
+00085: DIR_05F2 = PAPER5_ROOT / "method_contract" / "05f2"
+00086: SCRIPT_05F2 = PAPER5_ROOT / "scripts" / "05f2_run_full_final_gate_gpu_resumable.py"
+
+--- lines 584-596 ---
+00584:         factors = payload.get("factor_rows")
+00585:         if not isinstance(dataset, dict) or not isinstance(factors, list):
+00586:             raise RuntimeError("Final-gate scientific payload schema mismatch.")
+00587:         if clean_text(dataset.get("dataset_key")) != clean_text(row.dataset_key):
+00588:             raise RuntimeError("Final-gate dataset key mismatch between progress and shard.")
+00589:         if int(dataset.get("n_stability_resamples", -1)) != EXPECTED_STABILITY_RESAMPLES:
+00590:             raise RuntimeError("Final-gate shard does not contain 100 stability resamples.")
+00591:         if clean_text(dataset.get("compute_status")) != "COMPLETE":
+00592:             raise RuntimeError("Final-gate dataset scientific payload is not COMPLETE.")
+00593: 
+00594:         scenario_id = clean_text(dataset.get("scenario_id"))
+00595:         if scenario_id not in scenario_lookup:
+00596:             raise RuntimeError(f"Unknown scenario ID in final-gate shard: {scenario_id}")
+
+--- lines 659-670 ---
+00659: def with_numeric_scenario_fields(datasets: pd.DataFrame) -> pd.DataFrame:
+00660:     table = datasets.copy()
+00661:     for column in [
+00662:         "scenario_n_samples",
+00663:         "scenario_shared_signal_strength",
+00664:         "scenario_shared_factor_correlation",
+00665:         "scenario_true_biological_shared_factors",
+00666:         "scenario_true_technical_shared_factors",
+00667:     ]:
+00668:         if column not in table.columns:
+00669:             raise RuntimeError(f"Missing scenario field after merge: {column}")
+00670:         table[column] = pd.to_numeric(table[column], errors="raise")
+
+--- lines 739-750 ---
+00739: 
+00740: 
+00741: def biological_recovery_count(
+00742:     factor_subset: pd.DataFrame,
+00743: ) -> int:
+00744:     stable = factor_subset["passes_stability_gate"].map(parse_bool)
+00745:     matched = factor_subset["biological_truth_match"].map(parse_bool)
+00746:     selected = factor_subset[stable & matched].copy()
+00747: 
+00748:     # Hungarian matching makes biological_truth_factor_index unique within a
+00749:     # dataset among assigned pairs. Cross-check rather than silently assuming.
+00750:     if selected.empty:
+
+--- lines 788-799 ---
+00788:                 raise RuntimeError("Technical Hungarian assignment is not unique.")
+00789:             if assigned.empty:
+00790:                 continue
+00791: 
+00792:             factor = assigned.iloc[0]
+00793:             retained = parse_bool(factor["passes_stability_gate"])
+00794:             flagged = parse_bool(factor["technical_assigned_truth_match"])
+00795: 
+00796:             if retained and flagged:
+00797:                 correctly_flagged += 1
+00798:             elif retained and not flagged:
+00799:                 false_accept += 1
+
+--- lines 912-923 ---
+00912:     d03_pass = bool(fnr <= D03_FNR_MAX)
+00913:     if d02_pass != d03_pass:
+00914:         raise RuntimeError("D02 and algebraic-mirror D03 decisions disagree unexpectedly.")
+00915: 
+00916:     # D04 rotational subspace. The sealed dataset-level
+00917:     # reference_shared_subspace_recovery is the mean canonical correlation,
+00918:     # i.e. mean cosine of principal angles.
+00919:     d04_datasets = datasets[
+00920:         datasets["scenario_id"].eq(ROTATIONAL_SCENARIO_ID)
+00921:     ].copy()
+00922:     if d04_datasets.shape[0] != EXPECTED_D04_DATASETS:
+00923:         raise RuntimeError("D04 rotational selector is not 100 datasets.")
+
+--- lines 939-971 ---
+00939:     d05_factors = factors[
+00940:         factors["scenario_id"].eq(MIXED_SUPPORT_SCENARIO_ID)
+00941:     ].copy()
+00942:     if d05_datasets.shape[0] != EXPECTED_D05_DATASETS:
+00943:         raise RuntimeError("D05 mixed-support selector is not 100 datasets.")
+00944:     d05_stable = d05_factors["passes_stability_gate"].map(parse_bool)
+00945:     d05_match = d05_factors["biological_truth_match"].map(parse_bool)
+00946:     d05_eligible = d05_factors[d05_stable & d05_match].copy()
+00947:     if d05_eligible.empty:
+00948:         d05_num = 0
+00949:         d05_den = 0
+00950:         d05_point = None
+00951:         d05_low = None
+00952:         d05_high = None
+00953:         d05_pass = False
+00954:     else:
+00955:         exact = d05_eligible["view_support_exact"].map(parse_bool)
+00956:         d05_num = int(exact.sum())
+00957:         d05_den = int(exact.shape[0])
+00958:         d05_point = d05_num / d05_den
+00959:         d05_low, d05_high = wilson_interval(d05_num, d05_den)
+00960:         d05_pass = bool(d05_point >= D05_VIEW_SUPPORT_MIN)
+00961: 
+00962:     # D06 technical-null specificity, pooled over the two frozen technical-null
+00963:     # scenarios. Each true technical factor is one opportunity. A false
+00964:     # biological technical acceptance occurs when its Hungarian-assigned estimated
+00965:     # factor is retained by the stability gate but fails the frozen technical
+00966:     # truth-match threshold used to flag it as technical.
+00967:     d06_datasets = datasets[
+00968:         datasets["scenario_id"].isin(BATCH_NULL_SCENARIO_IDS)
+00969:     ].copy()
+00970:     d06_factors = factors[
+00971:         factors["scenario_id"].isin(BATCH_NULL_SCENARIO_IDS)
+
+--- lines 1033-1059 ---
+01033:             "numerator": None,
+01034:             "denominator": int(d04_datasets.shape[0]),
+01035:             "point_estimate": d04_point,
+01036:             "ci95_low": d04_low,
+01037:             "ci95_high": d04_high,
+01038:             "decision_quantity": "mean dataset-level mean canonical correlation",
+01039:             "threshold": D04_SUBSPACE_MIN,
+01040:             "pass_rule": "point_estimate >= 0.80",
+01041:             "PASS": d04_pass,
+01042:             "independence_note": "narrow rotational-subspace gate",
+01043:         },
+01044:         {
+01045:             "decision_id": "D05_VIEW_SUPPORT",
+01046:             "metric": "view_support_classification_accuracy",
+01047:             "numerator": d05_num,
+01048:             "denominator": d05_den,
+01049:             "point_estimate": d05_point,
+01050:             "ci95_low": d05_low,
+01051:             "ci95_high": d05_high,
+01052:             "decision_quantity": "point estimate",
+01053:             "threshold": D05_VIEW_SUPPORT_MIN,
+01054:             "pass_rule": "point_estimate >= 0.80",
+01055:             "PASS": d05_pass,
+01056:             "independence_note": "narrow mixed-support gate",
+01057:         },
+01058:         {
+01059:             "decision_id": "D06_BATCH_SPECIFICITY",
+
+--- lines 1137-1152 ---
+01137:             dset["reference_shared_subspace_recovery"],
+01138:             errors="coerce",
+01139:         ).to_numpy(dtype=float)
+01140:         finite_subspace = subspace[np.isfinite(subspace)]
+01141: 
+01142:         support_stable = fset["passes_stability_gate"].map(parse_bool)
+01143:         support_match = fset["biological_truth_match"].map(parse_bool)
+01144:         support_rows = fset[support_stable & support_match]
+01145:         support_accuracy = (
+01146:             float(support_rows["view_support_exact"].map(parse_bool).mean())
+01147:             if not support_rows.empty
+01148:             else None
+01149:         )
+01150: 
+01151:         rows.append(
+01152:             {
+
+--- lines 1171-1192 ---
+01171:                 ),
+01172:                 "stable_factors_total": stable_total,
+01173:                 "stable_biological_factors": stable_bio,
+01174:                 "stable_technical_factors": stable_tech,
+01175:                 "stable_unmatched_nontechnical_factors": stable_false,
+01176:                 "pooled_stability_gated_FDP": (
+01177:                     stable_false / stable_nontechnical
+01178:                     if stable_nontechnical > 0
+01179:                     else 0.0
+01180:                 ),
+01181:                 "mean_reference_shared_subspace_recovery": (
+01182:                     float(np.mean(finite_subspace))
+01183:                     if finite_subspace.size > 0
+01184:                     else None
+01185:                 ),
+01186:                 "matched_retained_view_support_accuracy": support_accuracy,
+01187:             }
+01188:         )
+01189: 
+01190:     table = pd.DataFrame(rows)
+01191:     if table.shape[0] != EXPECTED_SCENARIOS:
+01192:         raise RuntimeError("Scenario summary does not contain 24 scenarios.")
+
+--- lines 1197-1208 ---
+01197:     datasets: pd.DataFrame,
+01198:     factors: pd.DataFrame,
+01199:     decisions: pd.DataFrame,
+01200:     auxiliary: dict[str, Any],
+01201: ) -> pd.DataFrame:
+01202:     stable = factors["passes_stability_gate"].map(parse_bool)
+01203:     stable_factors = factors[stable].copy()
+01204: 
+01205:     # Pooled FDP across all stable nontechnical biological-claim-eligible retained
+01206:     # factors: stable biological matches plus stable unmatched nontechnical factors.
+01207:     n_stable_bio = int(
+01208:         pd.to_numeric(datasets["n_stable_biological_factors"], errors="raise").sum()
+
+--- lines 1234-1245 ---
+01234:     else:
+01235:         leakage_low = leakage_high = leakage_point = None
+01236: 
+01237:     rows = [
+01238:         {
+01239:             "metric_id": "pooled_stability_gated_false_discovery_proportion",
+01240:             "scope": "all final-gate datasets; stable nontechnical factors",
+01241:             "numerator": n_stable_false,
+01242:             "denominator": nontechnical_den,
+01243:             "point_estimate": (
+01244:                 n_stable_false / nontechnical_den if nontechnical_den > 0 else 0.0
+01245:             ),
+
+--- lines 1339-1350 ---
+01339:     narrow = {
+01340:         row["decision_id"]: bool(row["PASS"])
+01341:         for row in decisions.to_dict(orient="records")
+01342:         if row["decision_id"] in {
+01343:             "D04_ROTATIONAL_SUBSPACE",
+01344:             "D05_VIEW_SUPPORT",
+01345:             "D06_BATCH_SPECIFICITY",
+01346:             "D07_NO_POSTHOC_RETUNING",
+01347:         }
+01348:     }
+01349: 
+01350:     return {
+
+--- lines 1482-1493 ---
+01482:         "created_at_utc": utc_now_iso(),
+01483:         "status": "FROZEN_FINAL_GATE_SCIENTIFIC_RESULTS_NO_RETUNING",
+01484:         "scope": {
+01485:             "n_scenarios": EXPECTED_SCENARIOS,
+01486:             "n_datasets": EXPECTED_DATASETS,
+01487:             "stability_resamples_per_dataset": EXPECTED_STABILITY_RESAMPLES,
+01488:             "method": "V4_SABLE_MO",
+01489:             "profile": "ARCH_COMPACT__REG_WEAK",
+01490:         },
+01491:         "formal_decisions": decisions.to_dict(orient="records"),
+01492:         "mandatory_D01_reporting": mandatory.to_dict(orient="records"),
+01493:         "D01_independent_null_sample_size_trend": auxiliary["d01_trend"],
+

@@ -1,0 +1,30 @@
+{
+  "contract_version": "paper5-05d2-runtime-optimization-amendment-v2",
+  "created_at_utc": "2026-08-12T18:18:28.181674+00:00",
+  "optimization_changes": [
+    "synchronization-free CUDA modality-dropout masking",
+    "fixed-shape masked reconstruction/alignment/covariance/InfoNCE losses",
+    "no per-epoch host scalar transfer in fixed-epoch stability fits",
+    "no redundant per-component or gradient finite host checks",
+    "no device-wide synchronize after each fixed-epoch fit"
+  ],
+  "reason": "05d2 v1 was manually interrupted after its ETA stabilized near 170-180 hours. Only shard PASS status and runtime/ETA were inspected; no utility, truth-recovery, stability, biological, technical, TARGET or outcome metric values were inspected.",
+  "scientific_protocol_changed": false,
+  "script_version": "05d2v2-screen-neural-profiles-gpu-syncfree-v2-no-cli",
+  "unchanged_scientific_elements": [
+    "05d1 development datasets and partitions",
+    "all 9 frozen architecture x regularization profiles",
+    "all frozen fit and resample seeds",
+    "20 stability resamples per dataset-profile",
+    "V4 loss terms and frozen regularization weights",
+    "AdamW learning rates and weight decay",
+    "early-stopping patience/min_delta and selected-epoch refit rule",
+    "stability thresholds and truth-match thresholds",
+    "profile hard gates and one-standard-error selection rule",
+    "CUDA float32 neural precision, TF32 OFF, AMP OFF, torch.compile OFF"
+  ],
+  "v1_partial_shards_directory": "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen\\shards",
+  "v1_partial_shards_found": 39,
+  "v1_partial_shards_reused": false,
+  "v2_results_directory": "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2"
+}

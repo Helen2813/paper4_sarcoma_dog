@@ -1,0 +1,14 @@
+﻿{
+    "status":  "05Y6_ATTEMPT3_STOPPED_BY_MANIFEST_PATH_RESOLUTION",
+    "recorded_at":  "2026-09-19T11:55:42.3135008-04:00",
+    "stage":  "INPUT_FILE_EXISTENCE_VERIFICATION",
+    "exception":  "FileNotFoundError",
+    "requested_path":  "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\paper5\\results\\simulation_benchmark\\05y5_fresh_q10_validation\\shards\\shard_66f58691021c821b5721b95438fcbcaf.json",
+    "actual_existing_path":  "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\results\\simulation_benchmark\\05y5_fresh_q10_validation\\shards\\shard_66f58691021c821b5721b95438fcbcaf.json",
+    "cause":  "Frozen aggregator prepended its paper5 project root to a manifest shard_path that already begins with paper5/results.",
+    "remediation_planned":  "Expose only paper5/paper5/results as a junction to the existing paper5/results tree.",
+    "scientific_thresholds_changed":  false,
+    "scientific_endpoints_changed":  false,
+    "scientific_shards_changed":  false,
+    "frozen_bytecode_changed":  false
+}

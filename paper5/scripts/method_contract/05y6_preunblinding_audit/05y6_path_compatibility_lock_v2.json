@@ -1,0 +1,23 @@
+﻿{
+    "status":  "05Y6_PATH_COMPATIBILITY_V2_BEFORE_ATTEMPT4",
+    "recorded_at":  "2026-09-19T11:57:37.3364495-04:00",
+    "frozen_aggregator":  {
+                              "filename":  "05y6_aggregate_prospective_q10_validation.cpython-310.pyc",
+                              "sha256":  "BAD3EE4833918B578C76DAA013EE8E92DE72F945C0F2B976DB7DC75873CE39E8"
+                          },
+    "manifest_observation":  {
+                                 "total_rows":  400,
+                                 "rows_with_paper5_results_prefix":  400
+                             },
+    "compatibility_layer":  {
+                                "alias_path":  "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\paper5\\results",
+                                "target_path":  "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\results",
+                                "link_type":  "Junction",
+                                "rationale":  "Frozen 05y6 prepends its paper5 root to manifest shard paths that already begin with paper5/results. A narrow results-only junction resolves those unchanged frozen manifest paths without modifying scientific shards, manifest contents, bytecode, thresholds, endpoints, or decision rules."
+                            },
+    "scientific_shards_changed":  false,
+    "manifest_changed":  false,
+    "frozen_bytecode_changed":  false,
+    "thresholds_changed":  false,
+    "endpoints_changed":  false
+}

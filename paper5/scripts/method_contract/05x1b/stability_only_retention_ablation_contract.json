@@ -1,0 +1,147 @@
+{
+  "analysis_role": "POSTUNBLINDING_EXPLORATORY_ABLATION",
+  "contract_version": "paper5-05x1b-postunblinding-exploratory-retention-ablation-v2",
+  "created_at_utc": "2026-09-15T23:29:51+00:00",
+  "expected_full_rule_reference_rates": {
+    "CORRELATED_PRIVATE_N62": {
+      "denominator": 200,
+      "numerator": 70
+    },
+    "INDEPENDENT_NULL_N62": {
+      "denominator": 200,
+      "numerator": 0
+    }
+  },
+  "false_biological_acceptance_definition": "A factor is a false biological acceptance under a candidate rule iff that rule retains it AND technical_truth_match is false AND biological_truth_match is false. A dataset-level event occurs iff at least one such factor exists.",
+  "frozen_rules": [
+    {
+      "formula": "median>=0.70 AND q10>=0.40 AND inclusion>=0.80 AND variance>=0.0001 AND n_supported_modalities>=2",
+      "role": "REFERENCE_ONLY",
+      "rule_id": "FULL_FROZEN_RETENTION"
+    },
+    {
+      "formula": "median>=0.70 AND q10>=0.40 AND inclusion>=0.80 AND variance>=0.0001",
+      "removed_from_full_rule": [
+        "n_supported_modalities>=2"
+      ],
+      "role": "PRIMARY_EXPLORATORY_ABLATION",
+      "rule_id": "NO_MODALITY_SUPPORT"
+    },
+    {
+      "formula": "median>=0.70 AND q10>=0.40 AND inclusion>=0.80",
+      "removed_from_full_rule": [
+        "variance>=0.0001",
+        "n_supported_modalities>=2"
+      ],
+      "role": "SECONDARY_EXPLORATORY_ABLATION",
+      "rule_id": "PURE_FACTOR_REPRODUCIBILITY"
+    }
+  ],
+  "frozen_sources": {
+    "05a1_scenario_registry": {
+      "path": "paper5/method_contract/05a1/final_gate_calibration_scenarios.csv",
+      "sha256": "8695887dc0b27b69d87fa944ce1068fe149718ddf6c00a7d91e71ee1b1b306c2",
+      "size_bytes": 13650
+    },
+    "05a_method_contract": {
+      "path": "paper5/method_contract/05a/ai_method_contract.json",
+      "sha256": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+      "size_bytes": 10644
+    },
+    "05f2_completion_lock": {
+      "path": "paper5/method_contract/05f2/full_run_completion_lock.json",
+      "sha256": "b20146cf70bfd6008cd63c3aabf9c294ea4dba4df8af33427eac4e184764cc3c",
+      "size_bytes": 1890
+    },
+    "05f2_progress_manifest": {
+      "path": "paper5/method_contract/05f2/full_run_progress_manifest.csv",
+      "sha256": "24a5d1e5c0b340254c12ff53dc1cd9209813e1bc98f4dee02c581e59706c2e6e",
+      "size_bytes": 1119616
+    },
+    "05f3e_results_lock": {
+      "path": "paper5/method_contract/05f3e/final_gate_results_lock.json",
+      "sha256": "6d691237662d633a4f8d8294126a33b32c5694372a6e58de71bd45731d67c397",
+      "size_bytes": 3302
+    },
+    "05f4b_asset_lock": {
+      "path": "paper5/method_contract/05f4b/05f4b_manuscript_assets_lock.json",
+      "sha256": "43bee35781ff1d70e1f2b7f8bfd762847becc3893c9a09653eb968a889d0f28f",
+      "size_bytes": 5322
+    },
+    "05x0_preflight_lock": {
+      "path": "paper5/method_contract/05x0/05x0_preflight_lock.json",
+      "sha256": "cd79bf971fb8b9b437f3d3374e8300a0ff6c27357f614ea6266f31df29558aaa",
+      "size_bytes": 2735
+    },
+    "stability_helper": {
+      "path": "paper5/scripts/05d2v2_screen_neural_profiles_gpu_syncfree_pathfix.py",
+      "sha256": "05ae6923ce588c137bc6f4aa934262181dd99f4ebe6bec3250e4b7cd54ed1ff3",
+      "size_bytes": 234747
+    }
+  },
+  "frozen_subbanks": [
+    {
+      "expected_datasets": 200,
+      "role": "PRIMARY_EXPLORATORY_STRESS_MECHANISM",
+      "scenario_id": "G19_CORRELATED_PRIVATE_NULL_N62",
+      "selector_provenance": "Frozen 05f3b D01 correlated-private membership; exact scenario ID.",
+      "subbank_id": "CORRELATED_PRIVATE_N62"
+    },
+    {
+      "expected_datasets": 200,
+      "role": "MATCHED_N_MECHANISM_CONTROL",
+      "scenario_id": "G05_IND_N62_S0P00",
+      "selector_provenance": "Frozen 05f3b independent-null D01 pool, restricted to scenario_n_samples==62.",
+      "subbank_id": "INDEPENDENT_NULL_N62"
+    }
+  ],
+  "frozen_thresholds_from_05a": {
+    "minimum_factor_variance": 0.0001,
+    "minimum_loading_energy_fraction_per_supported_modality": 0.15,
+    "minimum_supported_modalities": 2,
+    "primary_inclusion_frequency": 0.8,
+    "primary_median_factor_correlation": 0.7,
+    "primary_q10_factor_correlation": 0.4
+  },
+  "integrity_checks_before_result_reporting": [
+    "Recompute support count from stored RNA/METHYLATION/CNV loading-energy fractions at 0.15.",
+    "Recompute FULL_FROZEN_RETENTION and reproduce stored passes_stability_gate for every selected factor.",
+    "Recompute factor-level stored false_biological_acceptance for every selected factor.",
+    "Reproduce frozen full-rule subbank rates: correlated-private 70/200; independent n=62 0/200."
+  ],
+  "performance_plan": {
+    "GPU": "NOT_USED",
+    "parallel_file_io_and_hashing": true,
+    "selected_shards": 400,
+    "workers": "min(32, max(4, 2*logical_cpu_count))"
+  },
+  "reporting_plan": {
+    "for_each_subbank_and_rule": [
+      "dataset_level_false_biological_acceptance_numerator",
+      "dataset_level_false_biological_acceptance_denominator",
+      "dataset_level_false_biological_acceptance_rate",
+      "two_sided_95pct_Wilson_interval",
+      "total_retained_factors",
+      "total_false_biological_factors"
+    ],
+    "new_PASS_FAIL_thresholds": "NONE",
+    "p_values": "NONE",
+    "paired_nested_rule_transitions": true
+  },
+  "scientific_boundary": {
+    "GPU_computation_required": false,
+    "TARGET_or_outcomes_accessed": false,
+    "claim_role": "EXPLORATORY_CONTEXT_ONLY",
+    "formal_05f3e_gate_reopened": false,
+    "formal_D01_recomputed_or_reweighted": false,
+    "model_refitting": false,
+    "threshold_retuning": false
+  },
+  "script_version": "05x1b-freeze-stability-only-retention-ablation-contract-v2-no-cli",
+  "status": "FROZEN_POSTUNBLINDING_EXPLORATORY_ABLATION_BEFORE_RESULT_COMPUTATION",
+  "supersedes_failed_pre_result_selector_attempt": {
+    "reason": "05x1 searched for the literal token INDEPENDENT in scenario_id and stopped before creating a contract or computing any ablation result. 05x1b instead uses the exact frozen 05f3b selector fields from the scenario registry.",
+    "scientific_result_was_computed": false,
+    "stage": "05x1"
+  }
+}

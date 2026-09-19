@@ -1,0 +1,23 @@
+﻿{
+    "status":  "05Y6_FROZEN_BYTECODE_PATH_COMPATIBILITY_BEFORE_SUCCESSFUL_AGGREGATION",
+    "recorded_at":  "2026-09-19T11:46:27.0845170-04:00",
+    "prior_execution_attempt":  {
+                                    "outcome":  "FAILED_DURING_INPUT_VERIFICATION",
+                                    "exception":  "FileNotFoundError",
+                                    "missing_path":  "paper5/scripts/method_contract/05y3/prospective_q10_recalibration_contract.json",
+                                    "scientific_rule_changed":  false,
+                                    "bytecode_changed":  false
+                                },
+    "frozen_aggregator":  {
+                              "filename":  "05y6_aggregate_prospective_q10_validation.cpython-310.pyc",
+                              "sha256":  "BAD3EE4833918B578C76DAA013EE8E92DE72F945C0F2B976DB7DC75873CE39E8",
+                              "expected_sha256":  "BAD3EE4833918B578C76DAA013EE8E92DE72F945C0F2B976DB7DC75873CE39E8"
+                          },
+    "compatibility_layer":  {
+                                "rationale":  "Frozen 05y6 resolves paper5 resources relative to paper5/scripts. Directory junctions expose the existing frozen method_contract and results trees at those expected paths without modifying aggregator bytecode, scientific shards, thresholds, endpoints, or decision rules.",
+                                "method_contract_link":  "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\scripts\\method_contract",
+                                "method_contract_target":  "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\method_contract",
+                                "results_link":  "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\scripts\\results",
+                                "results_target":  "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\results"
+                            }
+}

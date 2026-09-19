@@ -1,0 +1,143 @@
+{
+  "GPU_computation": false,
+  "analysis_role": "POSTUNBLINDING_EXPLORATORY_ABLATION",
+  "created_at_utc": "2026-09-15T23:30:19+00:00",
+  "formal_final_gate_consequence": "NONE",
+  "guardrails": [
+    "05x2b cannot replace, reweight, or reinterpret frozen D01.",
+    "No p-values or new PASS/FAIL thresholds are introduced.",
+    "FULL_FROZEN_RETENTION is an integrity reference only.",
+    "NO_MODALITY_SUPPORT removes only the modality-support count constraint.",
+    "PURE_FACTOR_REPRODUCIBILITY keeps only frozen median/q10/inclusion reproducibility thresholds."
+  ],
+  "json_backend": "stdlib-json",
+  "model_refit": false,
+  "paired_transitions": [
+    {
+      "ablation_false_event_but_not_full": 0,
+      "ablation_rule_id": "NO_MODALITY_SUPPORT",
+      "both_full_and_ablation_false_event": 70,
+      "denominator": 200,
+      "full_false_event_but_not_ablation": 0,
+      "neither_false_event": 130,
+      "subbank_id": "CORRELATED_PRIVATE_N62"
+    },
+    {
+      "ablation_false_event_but_not_full": 0,
+      "ablation_rule_id": "PURE_FACTOR_REPRODUCIBILITY",
+      "both_full_and_ablation_false_event": 70,
+      "denominator": 200,
+      "full_false_event_but_not_ablation": 0,
+      "neither_false_event": 130,
+      "subbank_id": "CORRELATED_PRIVATE_N62"
+    },
+    {
+      "ablation_false_event_but_not_full": 0,
+      "ablation_rule_id": "NO_MODALITY_SUPPORT",
+      "both_full_and_ablation_false_event": 0,
+      "denominator": 200,
+      "full_false_event_but_not_ablation": 0,
+      "neither_false_event": 200,
+      "subbank_id": "INDEPENDENT_NULL_N62"
+    },
+    {
+      "ablation_false_event_but_not_full": 0,
+      "ablation_rule_id": "PURE_FACTOR_REPRODUCIBILITY",
+      "both_full_and_ablation_false_event": 0,
+      "denominator": 200,
+      "full_false_event_but_not_ablation": 0,
+      "neither_false_event": 200,
+      "subbank_id": "INDEPENDENT_NULL_N62"
+    }
+  ],
+  "script_version": "05x2b-run-stability-only-retention-ablation-fast-cpu-v2-no-cli",
+  "selected_datasets": 400,
+  "selected_factor_rows": 2000,
+  "status": "POSTUNBLINDING_EXPLORATORY_RETENTION_ABLATION_COMPLETE",
+  "summary": [
+    {
+      "ci95_high": 0.4183653566395992,
+      "ci95_low": 0.28728824127358077,
+      "dataset_false_accept_denominator": 200,
+      "dataset_false_accept_numerator": 70,
+      "dataset_false_accept_rate": 0.35,
+      "rule_id": "FULL_FROZEN_RETENTION",
+      "rule_role": "REFERENCE_ONLY",
+      "scenario_id": "G19_CORRELATED_PRIVATE_NULL_N62",
+      "subbank_id": "CORRELATED_PRIVATE_N62",
+      "subbank_role": "PRIMARY_EXPLORATORY_STRESS_MECHANISM",
+      "total_false_biological_factors": 77,
+      "total_retained_factors": 77
+    },
+    {
+      "ci95_high": 0.4183653566395992,
+      "ci95_low": 0.28728824127358077,
+      "dataset_false_accept_denominator": 200,
+      "dataset_false_accept_numerator": 70,
+      "dataset_false_accept_rate": 0.35,
+      "rule_id": "NO_MODALITY_SUPPORT",
+      "rule_role": "PRIMARY_EXPLORATORY_ABLATION",
+      "scenario_id": "G19_CORRELATED_PRIVATE_NULL_N62",
+      "subbank_id": "CORRELATED_PRIVATE_N62",
+      "subbank_role": "PRIMARY_EXPLORATORY_STRESS_MECHANISM",
+      "total_false_biological_factors": 77,
+      "total_retained_factors": 77
+    },
+    {
+      "ci95_high": 0.4183653566395992,
+      "ci95_low": 0.28728824127358077,
+      "dataset_false_accept_denominator": 200,
+      "dataset_false_accept_numerator": 70,
+      "dataset_false_accept_rate": 0.35,
+      "rule_id": "PURE_FACTOR_REPRODUCIBILITY",
+      "rule_role": "SECONDARY_EXPLORATORY_ABLATION",
+      "scenario_id": "G19_CORRELATED_PRIVATE_NULL_N62",
+      "subbank_id": "CORRELATED_PRIVATE_N62",
+      "subbank_role": "PRIMARY_EXPLORATORY_STRESS_MECHANISM",
+      "total_false_biological_factors": 77,
+      "total_retained_factors": 77
+    },
+    {
+      "ci95_high": 0.018845326377266575,
+      "ci95_low": 1.734723475976807e-18,
+      "dataset_false_accept_denominator": 200,
+      "dataset_false_accept_numerator": 0,
+      "dataset_false_accept_rate": 0.0,
+      "rule_id": "FULL_FROZEN_RETENTION",
+      "rule_role": "REFERENCE_ONLY",
+      "scenario_id": "G05_IND_N62_S0P00",
+      "subbank_id": "INDEPENDENT_NULL_N62",
+      "subbank_role": "MATCHED_N_MECHANISM_CONTROL",
+      "total_false_biological_factors": 0,
+      "total_retained_factors": 0
+    },
+    {
+      "ci95_high": 0.018845326377266575,
+      "ci95_low": 1.734723475976807e-18,
+      "dataset_false_accept_denominator": 200,
+      "dataset_false_accept_numerator": 0,
+      "dataset_false_accept_rate": 0.0,
+      "rule_id": "NO_MODALITY_SUPPORT",
+      "rule_role": "PRIMARY_EXPLORATORY_ABLATION",
+      "scenario_id": "G05_IND_N62_S0P00",
+      "subbank_id": "INDEPENDENT_NULL_N62",
+      "subbank_role": "MATCHED_N_MECHANISM_CONTROL",
+      "total_false_biological_factors": 0,
+      "total_retained_factors": 0
+    },
+    {
+      "ci95_high": 0.018845326377266575,
+      "ci95_low": 1.734723475976807e-18,
+      "dataset_false_accept_denominator": 200,
+      "dataset_false_accept_numerator": 0,
+      "dataset_false_accept_rate": 0.0,
+      "rule_id": "PURE_FACTOR_REPRODUCIBILITY",
+      "rule_role": "SECONDARY_EXPLORATORY_ABLATION",
+      "scenario_id": "G05_IND_N62_S0P00",
+      "subbank_id": "INDEPENDENT_NULL_N62",
+      "subbank_role": "MATCHED_N_MECHANISM_CONTROL",
+      "total_false_biological_factors": 0,
+      "total_retained_factors": 0
+    }
+  ]
+}

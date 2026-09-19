@@ -1,0 +1,68 @@
+{
+  "contract_version": "paper5-neural-simulation-protocol-v1",
+  "created_at_utc": "2026-08-12T15:18:27.935906+00:00",
+  "generated_files": {
+    "paper5\\method_contract\\05d1\\neural_architecture_regularization_profile_grid.csv": {
+      "sha256": "118b2fd4c16751f0b83ac3053f726f9421db26949ab98a8a531ff584c194ee32",
+      "size_bytes": 2040
+    },
+    "paper5\\method_contract\\05d1\\neural_confirmatory_ablation_fit_seed_registry.csv": {
+      "sha256": "bdc528af0e3d41e1d2713ad9557f21ca88a3faee5eb3f634d1607a94fe2007cb",
+      "size_bytes": 2142212
+    },
+    "paper5\\method_contract\\05d1\\neural_confirmatory_stability_resample_registry.csv": {
+      "sha256": "82cea9378300c45d6bbd10653fd5421d8ea39f35c00404b739c9294f38e70a6c",
+      "size_bytes": 810613
+    },
+    "paper5\\method_contract\\05d1\\neural_loss_and_architecture_contract.json": {
+      "sha256": "b90ded1d011ee3210154c2102389df0b4e0c8fcf668b70d7e2b8e14184e3f6b1",
+      "size_bytes": 10722
+    },
+    "paper5\\method_contract\\05d1\\neural_profile_development_partition_registry.csv": {
+      "sha256": "1b423af3f6152c1e4b3c14f6d787e08196a7ed0d01cb579864c8b0698960d175",
+      "size_bytes": 93175
+    },
+    "paper5\\method_contract\\05d1\\neural_profile_screen_fit_seed_registry.csv": {
+      "sha256": "b3d263f5c946c06d9ffa333c12b5f58a266250a86547b17a4f801ddf9693d381",
+      "size_bytes": 342840
+    },
+    "paper5\\method_contract\\05d1\\neural_profile_selection_contract.json": {
+      "sha256": "4dc5ec24f19a7b575515d29628f1f3c2c0d6a69ffa7685ad81e1fafb05f39cd1",
+      "size_bytes": 5480
+    },
+    "paper5\\method_contract\\05d1\\neural_profile_stability_resample_registry.csv": {
+      "sha256": "3591f454e474533fb4bc7d5f1d9585026c0a63f15d86e2291bc3cd455ee053d5",
+      "size_bytes": 7146764
+    },
+    "paper5\\method_contract\\05d1\\neural_simulation_dataset_role_registry.csv": {
+      "sha256": "5dace3ec427e5b6765b1972ff7be817e8ad933ed03688d711c9fe64c61b85d71",
+      "size_bytes": 530132
+    },
+    "paper5\\method_contract\\05d1\\neural_simulation_evaluation_protocol.json": {
+      "sha256": "3cc4660551ca8d5731c2043096a68a0a675505b1a2a2a7d6971b41b526c4dd03",
+      "size_bytes": 9089
+    },
+    "paper5\\method_contract\\05d1\\neural_simulation_protocol_README.txt": {
+      "sha256": "0aa1ce4a246ae63bae0a7916ce746cff35beaf99f7afc28ed7d8f4d850711391",
+      "size_bytes": 1427
+    }
+  },
+  "protocol": {
+    "path": "paper5\\method_contract\\05d1\\neural_simulation_evaluation_protocol.json",
+    "sha256": "3cc4660551ca8d5731c2043096a68a0a675505b1a2a2a7d6971b41b526c4dd03"
+  },
+  "rewrite_policy": "This zero-argument stage never rewrites a frozen neural simulation protocol. Any change requires a new versioned prospective protocol before neural refitting.",
+  "scientific_state": {
+    "TARGET_model_fitting_performed": false,
+    "architecture_selected": false,
+    "biological_annotations_loaded": false,
+    "clinical_labels_loaded": false,
+    "final_gate_calibration_data_used": false,
+    "neural_profile_selected": false,
+    "neural_simulation_model_fitting_performed": false,
+    "outcomes_loaded": false,
+    "stability_gate_thresholds_retuned": false
+  },
+  "script_version": "05d1-freeze-neural-simulation-protocol-v1-no-cli",
+  "status": "FROZEN_NEURAL_SIMULATION_PROTOCOL_BEFORE_NEURAL_MODEL_FITTING"
+}

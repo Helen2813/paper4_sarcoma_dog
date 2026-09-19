@@ -1,0 +1,73 @@
+{
+  "contract_version": "paper5-neural-runtime-environment-v1",
+  "created_at_utc": "2026-08-12T15:03:29.987807+00:00",
+  "determinism_contract": {
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "automatic_mixed_precision_allowed": false,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "deterministic_warn_only": false,
+    "numpy_seed_required": true,
+    "primary_dataloader_workers": 0,
+    "primary_dtype": "float32",
+    "python_random_seed_required": true,
+    "tf32_allowed": false,
+    "torch_compile_allowed": false,
+    "torch_cuda_manual_seed_all_required": true,
+    "torch_manual_seed_required": true,
+    "torch_use_deterministic_algorithms": true
+  },
+  "device_freeze": {
+    "compute_capability": [
+      8,
+      9
+    ],
+    "confirmatory_device": "cuda:0",
+    "gpu_name": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "total_memory_bytes": 12878086144
+  },
+  "next_required_stage": "05d1_freeze_neural_simulation_protocol.py",
+  "runtime_policy": {
+    "allow_tf32_cudnn": false,
+    "allow_tf32_matmul": false,
+    "automatic_mixed_precision": false,
+    "cublas_workspace_config": ":4096:8",
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "dataloader_workers_primary": 0,
+    "deterministic_algorithms": true,
+    "deterministic_warn_only": false,
+    "device_policy": "CUDA required for confirmatory neural benchmark",
+    "dtype": "float32",
+    "float32_matmul_precision": "highest",
+    "gradient_scaler": false,
+    "torch_compile": false
+  },
+  "scientific_state": {
+    "TARGET_model_fitting_performed": false,
+    "architecture_selected": false,
+    "biological_annotations_loaded": false,
+    "clinical_labels_loaded": false,
+    "final_gate_calibration_data_used": false,
+    "neural_simulation_model_fitting_performed": false,
+    "outcomes_loaded": false,
+    "stability_gate_thresholds_retuned": false
+  },
+  "script_version": "05d0-freeze-pytorch-neural-environment-v1-no-cli",
+  "software_freeze": {
+    "cudnn_version": 92000,
+    "python_version": "3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]",
+    "torch_cuda_build_version": "13.0",
+    "torch_version": "2.12.1+cu130"
+  },
+  "upstream_hashes": {
+    "05a1_addendum_sha256": "3aadb87386f796663e68b97fb608cb864c197013fe52c70ac5b37bed06e7a3e8",
+    "05a_contract_sha256": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+    "05b_lock_sha256": "1198da23059876a439183b35c8d095f8731bcddd98aa0964da2486995aefd524",
+    "05c1_result_manifest_sha256": "2c9797be68e881b81c75c5de7183715b62dfc333c39fb616d28d68b88dade135",
+    "05c2a_protocol_sha256": "826ee4c64deae4f623889c3388cf2b0f46b4fe0ffa1a2c2e97319beca95f80eb",
+    "05c2b_failed_fits": 0,
+    "05c2b_result_manifest_sha256": "b56dc9a9d4c82f64cdef6192748ce01433a4eb8bba8cf22f1fe71a9d65d8722c",
+    "05c2b_successful_fits": 17280
+  }
+}

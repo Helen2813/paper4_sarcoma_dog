@@ -1,0 +1,25 @@
+{
+  "generated_files": {
+    "paper5/method_contract/05y0d/05y0d_README.txt": {
+      "path": "paper5/method_contract/05y0d/05y0d_README.txt",
+      "sha256": "266fd51e55bad35cfcabbd788ee282e50725d0230c03431796323554cd20363b",
+      "size_bytes": 571
+    },
+    "paper5/method_contract/05y0d/private_score_generator_contract.json": {
+      "path": "paper5/method_contract/05y0d/private_score_generator_contract.json",
+      "sha256": "46775da058dd5d179a2943f74f152b5dd725078de8cd9514ea01f97851ad7821",
+      "size_bytes": 3012
+    },
+    "paper5/method_contract/05y0d/private_score_generator_source.txt": {
+      "path": "paper5/method_contract/05y0d/private_score_generator_source.txt",
+      "sha256": "8f15de218969a44bfc1325407e4d77e643b436dcc97b825a1eece23a3e8e50dd",
+      "size_bytes": 8261
+    }
+  },
+  "rewrite_policy": "05y0d is source extraction only. Do not add diagnostic association calculations after viewing labels.",
+  "scientific_result_computed": false,
+  "script_path": "paper5/scripts/05y0d_extract_private_score_generator_contract.py",
+  "script_sha256": "801a1fa2884fbc28e1b508dab25dfdc48b484b5dc3bc7e152aaa1b385dc5ca78",
+  "script_version": "05y0d-extract-private-score-generator-contract-v1-no-cli",
+  "status": "READ_ONLY_GENERATOR_SOURCE_EXTRACTION_NO_DIAGNOSTIC_RESULT_COMPUTED"
+}

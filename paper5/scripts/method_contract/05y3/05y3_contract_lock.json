@@ -1,0 +1,26 @@
+{
+  "api_snapshot": {
+    "path": "paper5/method_contract/05y3/fresh_validation_execution_api_snapshot.json",
+    "sha256": "baf62597a57f7f95afb48de0cfcea777af4e644e67009cab667c34e1264b9fbb",
+    "size_bytes": 2827
+  },
+  "contract": {
+    "path": "paper5/method_contract/05y3/prospective_q10_recalibration_contract.json",
+    "sha256": "485603c89e478ca1f82772e510ea9e02c107747ec6ba7f57d68482781b562c38",
+    "size_bytes": 9264
+  },
+  "contract_version": "paper5-05y3-prospective-q10-recalibration-v1",
+  "created_at_utc": "2026-09-16T00:41:43+00:00",
+  "fresh_dataset_generated": false,
+  "readme": {
+    "path": "paper5/method_contract/05y3/05y3_README.txt",
+    "sha256": "6f27632ca0d43d02f568ea48a7087df102841c47be28191ad3946902030df4c6",
+    "size_bytes": 884
+  },
+  "rewrite_policy": "05y3 is immutable once frozen. q10=0.60, endpoints, fresh-bank size, seed algorithm, decision rule, and execution path cannot change after fresh data generation.",
+  "scientific_result_computed": false,
+  "script_path": "paper5/scripts/05y3_freeze_prospective_q10_recalibration_contract.py",
+  "script_sha256": "dce375adc554dc26b5977d32add14191102849b7c354578361d48a85b8e680da",
+  "script_version": "05y3-freeze-prospective-q10-recalibration-contract-v1-no-cli",
+  "status": "FROZEN_PROSPECTIVE_Q10_RECALIBRATION_BEFORE_FRESH_BANK"
+}

@@ -1,0 +1,264 @@
+SOURCE: paper5/scripts/05b_generate_small_n_multiomics_simulations_v2.py
+SHA256: b4adb1fcb32b65a998ee70e1b72d52e13490194c7ad8e5ddd802b95bf05a28db
+FUNCTION: generate_private_scores
+LINES: 1384-1425
+
+=== EXACT FUNCTION SOURCE ===
+01377:         raise ValueError(
+01378:             f"Unsupported shared-strength pattern: {pattern}"
+01379:         )
+01380: 
+01381:     return values
+01382: 
+01383: 
+01384: def generate_private_scores(
+01385:     rng: np.random.Generator,
+01386:     scenario: Scenario,
+01387: ) -> dict[str, np.ndarray]:
+01388:     n = scenario.n_samples
+01389:     k = scenario.n_private_factors_per_view
+01390: 
+01391:     if k == 0:
+01392:         return {
+01393:             view: np.zeros((n, 0), dtype=DEFAULT_DTYPE)
+01394:             for view in VIEWS
+01395:         }
+01396: 
+01397:     rho = scenario.private_cross_view_correlation
+01398:     correlated = (
+01399:         scenario.correlated_private_mode
+01400:         == "correlated_private_scores"
+01401:         and rho > 0
+01402:     )
+01403: 
+01404:     if correlated:
+01405:         common = standardize_columns(
+01406:             rng.normal(size=(n, k))
+01407:         ).astype(np.float64)
+01408:         output: dict[str, np.ndarray] = {}
+01409:         for view in VIEWS:
+01410:             noise = standardize_columns(
+01411:                 rng.normal(size=(n, k))
+01412:             ).astype(np.float64)
+01413:             values = (
+01414:                 math.sqrt(rho) * common
+01415:                 + math.sqrt(1.0 - rho) * noise
+01416:             )
+01417:             output[view] = standardize_columns(values)
+01418:         return output
+01419: 
+01420:     return {
+01421:         view: standardize_columns(
+01422:             rng.normal(size=(n, k))
+01423:         )
+01424:         for view in VIEWS
+01425:     }
+01426: 
+01427: 
+01428: def generate_sparse_loadings(
+01429:     rng: np.random.Generator,
+01430:     n_features: int,
+01431:     n_factors: int,
+01432:     support_fraction: float,
+01433:     factor_support: np.ndarray | None = None,
+
+=== RETURN EXPRESSIONS ===
+- {
+        view: standardize_columns(
+            rng.normal(size=(n, k))
+        )
+        for view in VIEWS
+    }
+- {
+            view: np.zeros((n, 0), dtype=DEFAULT_DTYPE)
+            for view in VIEWS
+        }
+- output
+
+=== CALL SITES ===
+
+--- call near line 1873 ---
+01862:         support_tokens
+01863:     )
+01864: 
+01865:     z_bio = generate_correlated_scores(
+01866:         root_rng,
+01867:         n,
+01868:         scenario.n_shared_factors,
+01869:         scenario.shared_factor_correlation,
+01870:     )
+01871:     shared_strength = factor_strengths(scenario)
+01872: 
+01873:     private_scores = generate_private_scores(
+01874:         root_rng,
+01875:         scenario,
+01876:     )
+01877: 
+01878:     (
+01879:         z_technical,
+01880:         batch_labels,
+01881:         technical_support_mask,
+01882:         actual_batch_signal_correlation,
+01883:     ) = generate_technical_truth(
+01884:         root_rng,
+01885:         scenario,
+01886:         z_bio,
+01887:     )
+01888: 
+01889:     low_quality_samples = np.zeros(n, dtype=np.uint8)
+01890:     if (
+01891:         scenario.missingness_mode == "sample_quality"
+
+=== RNG / CALL-ORDER CONTEXTS ===
+
+--- context near line 1384 ---
+01372:             0.5,
+01373:             k,
+01374:             dtype=DEFAULT_DTYPE,
+01375:         )
+01376:     else:
+01377:         raise ValueError(
+01378:             f"Unsupported shared-strength pattern: {pattern}"
+01379:         )
+01380: 
+01381:     return values
+01382: 
+01383: 
+01384: def generate_private_scores(
+01385:     rng: np.random.Generator,
+01386:     scenario: Scenario,
+01387: ) -> dict[str, np.ndarray]:
+01388:     n = scenario.n_samples
+01389:     k = scenario.n_private_factors_per_view
+01390: 
+01391:     if k == 0:
+01392:         return {
+01393:             view: np.zeros((n, 0), dtype=DEFAULT_DTYPE)
+01394:             for view in VIEWS
+01395:         }
+01396: 
+01397:     rho = scenario.private_cross_view_correlation
+01398:     correlated = (
+01399:         scenario.correlated_private_mode
+01400:         == "correlated_private_scores"
+01401:         and rho > 0
+01402:     )
+01403: 
+01404:     if correlated:
+01405:         common = standardize_columns(
+01406:             rng.normal(size=(n, k))
+01407:         ).astype(np.float64)
+
+--- context near line 1857 ---
+01845: 
+01846: # ---------------------------------------------------------------------
+01847: # Complete dataset generation
+01848: # ---------------------------------------------------------------------
+01849: 
+01850: 
+01851: def generate_dataset(
+01852:     scenario: Scenario,
+01853:     registry_label: str,
+01854:     replicate_index: int,
+01855:     simulation_seed: int,
+01856: ) -> dict[str, np.ndarray]:
+01857:     root_rng = np.random.default_rng(simulation_seed)
+01858:     n = scenario.n_samples
+01859: 
+01860:     support_tokens = support_tokens_for_factors(scenario)
+01861:     bio_support_mask = support_mask_from_tokens(
+01862:         support_tokens
+01863:     )
+01864: 
+01865:     z_bio = generate_correlated_scores(
+01866:         root_rng,
+01867:         n,
+01868:         scenario.n_shared_factors,
+01869:         scenario.shared_factor_correlation,
+01870:     )
+01871:     shared_strength = factor_strengths(scenario)
+01872: 
+01873:     private_scores = generate_private_scores(
+01874:         root_rng,
+01875:         scenario,
+01876:     )
+01877: 
+01878:     (
+01879:         z_technical,
+01880:         batch_labels,
+
+--- context near line 1873 ---
+01861:     bio_support_mask = support_mask_from_tokens(
+01862:         support_tokens
+01863:     )
+01864: 
+01865:     z_bio = generate_correlated_scores(
+01866:         root_rng,
+01867:         n,
+01868:         scenario.n_shared_factors,
+01869:         scenario.shared_factor_correlation,
+01870:     )
+01871:     shared_strength = factor_strengths(scenario)
+01872: 
+01873:     private_scores = generate_private_scores(
+01874:         root_rng,
+01875:         scenario,
+01876:     )
+01877: 
+01878:     (
+01879:         z_technical,
+01880:         batch_labels,
+01881:         technical_support_mask,
+01882:         actual_batch_signal_correlation,
+01883:     ) = generate_technical_truth(
+01884:         root_rng,
+01885:         scenario,
+01886:         z_bio,
+01887:     )
+01888: 
+01889:     low_quality_samples = np.zeros(n, dtype=np.uint8)
+01890:     if (
+01891:         scenario.missingness_mode == "sample_quality"
+01892:         and scenario.low_quality_sample_fraction > 0
+01893:     ):
+01894:         count = max(
+01895:             1,
+01896:             int(round(
+
+--- context near line 2017 ---
+02005:             scenario.primary_truth_target,
+02006:             dtype="U64",
+02007:         ),
+02008:         "actual_batch_signal_correlation": np.asarray(
+02009:             actual_batch_signal_correlation,
+02010:             dtype=np.float32,
+02011:         ),
+02012:     }
+02013: 
+02014:     for view in VIEWS:
+02015:         prefix = VIEW_PREFIX[view]
+02016:         p = scenario.n_features(view)
+02017:         view_rng = np.random.default_rng(
+02018:             stable_seed(
+02019:                 simulation_seed,
+02020:                 scenario.scenario_id,
+02021:                 view,
+02022:             )
+02023:         )
+02024: 
+02025:         bio_support_for_view = (
+02026:             bio_support_mask[:, VIEW_INDEX[view]].astype(bool)
+02027:             if scenario.n_shared_factors > 0
+02028:             else np.zeros((0,), dtype=bool)
+02029:         )
+02030:         technical_support_for_view = (
+02031:             technical_support_mask[:, VIEW_INDEX[view]].astype(bool)
+02032:             if scenario.true_technical_shared_factors > 0
+02033:             else np.zeros((0,), dtype=bool)
+02034:         )
+02035: 
+02036:         w_bio = generate_sparse_loadings(
+02037:             view_rng,
+02038:             p,
+02039:             scenario.n_shared_factors,
+02040:             scenario.shared_loading_fraction,

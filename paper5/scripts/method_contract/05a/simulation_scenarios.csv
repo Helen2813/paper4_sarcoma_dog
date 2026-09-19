@@ -1,0 +1,17 @@
+scenario_id,description,n_samples,n_shared_factors,n_private_factors_per_view,n_features_rna,n_features_methylation,n_features_cnv,shared_signal_strength,private_signal_strength,noise_sd_rna,noise_sd_methylation,noise_sd_cnv,missing_fraction_rna,missing_fraction_methylation,missing_fraction_cnv,pair_corruption_fraction,uninformative_modality,block_scale_rna,block_scale_methylation,block_scale_cnv,replicates
+S01_BASE,"Base small-n, methylation-dominant feature count.",75,5,3,500,4000,500,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,none,1.0,1.0,1.0,20
+S02_SMALL_N50,Smaller sample size.,50,5,3,500,4000,500,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,none,1.0,1.0,1.0,20
+S03_LARGER_N100,Larger small-data benchmark.,100,5,3,500,4000,500,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,none,1.0,1.0,1.0,20
+S04_METH_MISSING10,Ten percent methylation missingness.,75,5,3,500,4000,500,1.0,1.0,1.0,1.0,1.0,0.0,0.1,0.0,0.0,none,1.0,1.0,1.0,20
+S05_METH_MISSING20,Twenty percent methylation missingness.,75,5,3,500,4000,500,1.0,1.0,1.0,1.0,1.0,0.0,0.2,0.0,0.0,none,1.0,1.0,1.0,20
+S06_ALL_VIEWS_MISSING10,Ten percent missingness in every modality.,75,5,3,500,4000,500,1.0,1.0,1.0,1.0,1.0,0.1,0.1,0.1,0.0,none,1.0,1.0,1.0,20
+S07_WEAK_SHARED,Weak shared signal with unchanged private signal.,75,5,3,500,4000,500,0.5,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,none,1.0,1.0,1.0,20
+S08_PRIVATE_DOMINANT,Private factors dominate shared factors.,75,5,3,500,4000,500,0.5,1.5,1.0,1.0,1.0,0.0,0.0,0.0,0.0,none,1.0,1.0,1.0,20
+S09_NOISY_METHYLATION,Methylation view has doubled noise.,75,5,3,500,4000,500,1.0,1.0,1.0,2.0,1.0,0.0,0.0,0.0,0.0,none,1.0,1.0,1.0,20
+S10_METHYLATION_SCALE_DOMINANCE,Methylation values have fourfold block scale.,75,5,3,500,4000,500,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,none,1.0,4.0,1.0,20
+S11_PAIR_CORRUPTION10,Ten percent patient-pair corruption.,75,5,3,500,4000,500,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.1,none,1.0,1.0,1.0,20
+S12_PAIR_CORRUPTION25,Twenty-five percent patient-pair corruption.,75,5,3,500,4000,500,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.25,none,1.0,1.0,1.0,20
+S13_UNINFORMATIVE_CNV,CNV carries noise but no shared or private signal.,75,5,3,500,4000,500,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,CNV,1.0,1.0,1.0,20
+S14_BALANCED_FEATURE_COUNTS,All views have equal feature counts.,75,5,3,1000,1000,1000,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,none,1.0,1.0,1.0,20
+S15_EXTREME_METHYLATION_DIMENSION,Methylation has sixteenfold more features than each other view.,75,5,3,500,8000,500,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,none,1.0,1.0,1.0,20
+S16_COMBINED_STRESS,"Small n, weak shared signal, missingness, noise, scale imbalance, and pairing error.",50,5,3,500,4000,500,0.5,1.5,1.0,2.0,1.0,0.0,0.15,0.0,0.1,none,1.0,4.0,1.0,20

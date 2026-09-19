@@ -1,0 +1,25 @@
+{
+  "generated_files": {
+    "paper5/method_contract/05y0c/05y0c_README.txt": {
+      "path": "paper5/method_contract/05y0c/05y0c_README.txt",
+      "sha256": "5393801e0a79b0e5037a4ecd3d977529783a27bcf0565f31f4dea181d88f6323",
+      "size_bytes": 1108
+    },
+    "paper5/method_contract/05y0c/realized_private_correlation_source_context.txt": {
+      "path": "paper5/method_contract/05y0c/realized_private_correlation_source_context.txt",
+      "sha256": "094c3bfdfed7de2ffff4a8881c080da2acc81a5df1f513e1647888e646a08271",
+      "size_bytes": 65971
+    },
+    "paper5/method_contract/05y0c/realized_private_correlation_source_preflight.json": {
+      "path": "paper5/method_contract/05y0c/realized_private_correlation_source_preflight.json",
+      "sha256": "8eb1fde92ea78d03a216b6170976d26e10cc379663acc2e801188a7ce6c4ff6a",
+      "size_bytes": 9929
+    }
+  },
+  "rewrite_policy": "05y0c is a read-only semantic-source preflight. Do not add diagnostic calculations after inspecting failure labels.",
+  "scientific_result_computed": false,
+  "script_path": "paper5/scripts/05y0c_semantic_realized_private_correlation_source_preflight_v4.py",
+  "script_sha256": "8aa876dbfe0d1ecf969a9cb522828666997b086aebb9f8bbc884df0a98329f40",
+  "script_version": "05y0c-semantic-realized-private-correlation-source-preflight-v4-no-cli",
+  "status": "READ_ONLY_SEMANTIC_SOURCE_PREFLIGHT_NO_DIAGNOSTIC_RESULT_COMPUTED"
+}

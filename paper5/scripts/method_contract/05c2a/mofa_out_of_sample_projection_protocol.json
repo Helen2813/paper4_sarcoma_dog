@@ -1,0 +1,175 @@
+{
+  "contract_version": "paper5-mofa-oos-projection-protocol-v1",
+  "created_at_utc": "2026-08-11T23:43:18.048430+00:00",
+  "failure_policy": {
+    "all_frozen_MOFA_ranks_reported": true,
+    "architecture_selected_here": false,
+    "nonconverged_or_nonfinite_fit_retained_in_audit": true,
+    "silent_omission_forbidden": true
+  },
+  "fold_local_preprocessing": {
+    "centering": "training-fold finite-value feature mean",
+    "complete_simulation_truth_used_for_preprocessing": false,
+    "feature_budget_rule": "Within each training fold, retain eligible features and, only if their count exceeds the frozen primary budget, rank by training-fold pre-standardization variance descending with original feature index as deterministic tie-breaker.",
+    "feature_budgets": {
+      "CNV": 5000,
+      "METHYLATION": 10000,
+      "RNA": 5000
+    },
+    "heldout_data_used_for_preprocessing": false,
+    "imputation": "none; missing values remain NaN for native MOFA Gaussian handling",
+    "maximum_feature_missing_fraction": 0.2,
+    "minimum_finite_training_values": 3,
+    "minimum_prestandardization_variance": 1e-10,
+    "minimum_training_standard_deviation": 1e-08,
+    "mofapy2_internal_centering": false,
+    "mofapy2_internal_group_scaling": false,
+    "mofapy2_internal_view_scaling": false,
+    "post_zscore_variance_ranking_allowed": false,
+    "scaling": "training-fold finite-value sample standard deviation"
+  },
+  "full_data_simulation_truth_evaluation": {
+    "allowed": true,
+    "factor_matching": true,
+    "private_subspace_recovery": "Evaluate view-specific signal capture using fitted factor scores/loadings and the frozen truth-metric definitions; preserve descriptive status where MOFA has no explicit private latent block.",
+    "role": "truth recovery only; never substituted for held-out reconstruction",
+    "rotationally_ambiguous_factor_metrics_primary": false,
+    "shared_subspace_recovery": true,
+    "subspace_metrics_primary_under_rotational_ambiguity": true,
+    "technical_factor_contamination": true,
+    "view_support_recovery": true
+  },
+  "heldout_metrics": {
+    "cross_view_retrieval": "Same true row_source pairing and random-adjusted MRR definitions used in 05c1, using one-view posterior projections.",
+    "heldout_reconstruction": "Same normalized reconstruction-error definition used in 05c1, evaluated against complete known simulation truth.",
+    "latent_effective_rank": "Effective rank of held-out all-view posterior factor scores.",
+    "missing_view_reconstruction": "Same omitted-view R2 and clipped reconstruction-score definitions used in 05c1.",
+    "modality_balance": "Normalized entropy of per-view MOFA loading energy for each factor."
+  },
+  "mofapy2_configuration": {
+    "data_options": {
+      "center_groups": false,
+      "scale_groups": false,
+      "scale_views": false,
+      "use_float32": true
+    },
+    "deterministic_seed_registry": "paper5\\method_contract\\05c2a\\mofa_simulation_fit_seed_registry.csv",
+    "deterministic_seed_registry_sha256": "19a52d69eecbe0b84b338725dfac3c40c7c9641e7de5ef1deaa615e88c8399ae",
+    "factor_dropping_during_training": false,
+    "fixed_rank_model_ids_preserved": true,
+    "likelihoods": {
+      "CNV": "gaussian",
+      "METHYLATION": "gaussian",
+      "RNA": "gaussian"
+    },
+    "model_options": {
+      "ard_factors": false,
+      "ard_weights": true,
+      "spikeslab_factors": false,
+      "spikeslab_weights": true
+    },
+    "mofapy2_version": "0.7.3",
+    "single_group": true,
+    "train_options": {
+      "convergence_mode": "fast",
+      "dropR2": null,
+      "gpu_mode": false,
+      "iter": 1000,
+      "nostop": false,
+      "quiet": true,
+      "weight_views": false
+    }
+  },
+  "next_required_stage": "05c2b_fit_mofa_simulation_baselines.py",
+  "out_of_sample_projection": {
+    "all_view_projection": "Use RNA, methylation, and CNV observed entries to infer z_hat.",
+    "frozen_parameter_estimates": "Use fitted posterior means of MOFA weights W and expected Gaussian noise precisions tau from the training fit. No held-out sample may update W, tau, sparsity parameters, ARD parameters, or preprocessing statistics.",
+    "missing_values": "For each held-out sample and view, only finite observed features contribute to A and b.",
+    "missing_view_projection": "Exclude the omitted view from A and b, infer z_hat from the remaining view or views, then reconstruct the omitted standardized view as z_hat @ W_omitted^T.",
+    "name": "fixed-parameter Gaussian posterior mean projection",
+    "native_mofapy2_transform_claimed": false,
+    "per_sample_equations": {
+      "A": "I_K + sum_m W_m,obs^T diag(tau_m,obs) W_m,obs",
+      "b": "sum_m W_m,obs^T diag(tau_m,obs) x_m,obs",
+      "z_hat": "solve(A, b)"
+    },
+    "prior": "z ~ N(0, I_K)",
+    "raw_X_times_W_projection_allowed": false,
+    "reconstruction": "x_hat_m = z_hat @ W_m^T in the fold-local standardized coordinate system",
+    "single_view_projection_for_retrieval": "Infer z_hat independently from one view at a time using the same frozen W/tau. Because all projections share the fitted factor coordinate system, no test-set alignment or refitting is allowed.",
+    "test_sample_refitting": false,
+    "test_sample_variational_updates": false
+  },
+  "paired_comparison_with_05c1": {
+    "new_random_cv_splits_allowed": false,
+    "reason": "Use identical held-out samples for paired linear-versus-MOFA comparisons.",
+    "reuse_exact_05c1_split_registry": true,
+    "split_registry": "paper5\\results\\simulation_benchmark\\05c1_linear_baselines\\linear_simulation_split_registry.csv.gz",
+    "split_registry_sha256": "c683436960893ce89254ecf8d79bc8ed64930ba44222425858968da753e60279"
+  },
+  "prohibited_operations": [
+    "Using the disclosed sable_mo_v1 pilot for confirmatory MOFA results.",
+    "Accessing final gate-calibration simulations.",
+    "Changing MOFA ranks after viewing results.",
+    "Using held-out samples to rank, impute, center, or scale features.",
+    "Replacing native MOFA missingness with global imputation.",
+    "Computing held-out factors as raw X @ W.",
+    "Refitting or variationally updating the MOFA model on held-out samples.",
+    "Using survival, metastasis, clinical labels, or biological program labels.",
+    "Selecting an architecture in 05c2a."
+  ],
+  "purpose": "Freeze a leakage-safe out-of-sample projection rule for Gaussian MOFA+ before the first MOFA architecture-screening fit.",
+  "reason_for_separate_protocol": "The frozen Paper 5 benchmark requires held-out reconstruction, same-patient cross-view retrieval, and missing-view reconstruction. A raw matrix multiplication of held-out data by fitted MOFA weights is not assumed to reproduce posterior factor expectations. The benchmark therefore freezes a model-based Gaussian posterior projection rule before any MOFA result is generated.",
+  "reference_fixture": "paper5\\method_contract\\05c2a\\mofa_gaussian_projection_reference_fixture.json",
+  "scientific_state": {
+    "MOFA_model_fitting_performed": false,
+    "TARGET_model_fitting_performed": false,
+    "architecture_selected": false,
+    "biological_annotations_loaded": false,
+    "clinical_labels_loaded": false,
+    "final_gate_calibration_data_used": false,
+    "neural_model_fitting_performed": false,
+    "outcomes_loaded": false,
+    "stability_gate_thresholds_retuned": false
+  },
+  "scope": {
+    "architecture_selection_performed_here": false,
+    "full_data_truth_fit_per_dataset_and_rank": true,
+    "heldout_folds_per_dataset": 5,
+    "latent_ranks": [
+      5,
+      10,
+      15,
+      20
+    ],
+    "model_ids": [
+      "MOFA_K5",
+      "MOFA_K10",
+      "MOFA_K15",
+      "MOFA_K20"
+    ],
+    "n_simulation_datasets": 720,
+    "planned_mofa_fits": 17280,
+    "simulation_stage": "architecture_screening"
+  },
+  "script_version": "05c2a-freeze-mofa-out-of-sample-projection-protocol-v1-no-cli",
+  "seed_policy": {
+    "master_seed": 20260815,
+    "one_seed_per_simulation_fit": true,
+    "seed_rule": "SHA256-derived deterministic seed from master seed, fit stage, scenario ID, replicate index, simulation seed, latent rank, and fold index where applicable.",
+    "target_seed_stability_evaluation_unchanged": true
+  },
+  "upstream_hashes": {
+    "paper5\\data_manifest\\TARGET_OS_technical_metadata\\TARGET_OS_technical_metadata_preflight_lock.json": "d40906a27d1120a128fd3a8efc489dd7d0ca97bf9631a48f9c7f3263d460b8bb",
+    "paper5\\data_manifest\\TARGET_OS_technical_metadata\\TARGET_OS_technical_metadata_preflight_manifest.json": "73232610dcd3f0e2c9a45d7c3a66c0eaac138766a9cf339ed03cd67d282ef532",
+    "paper5\\method_contract\\05a1\\simulation_and_technical_confound_addendum.json": "3aadb87386f796663e68b97fb608cb864c197013fe52c70ac5b37bed06e7a3e8",
+    "paper5\\method_contract\\05a1\\simulation_and_technical_confound_addendum_lock.json": "61969f36872e3e508a239d5e6903ae3395fd36ec74ee7aa4e31740a514c119e3",
+    "paper5\\method_contract\\05a\\ai_method_contract.json": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+    "paper5\\method_contract\\05a\\ai_method_contract_lock.json": "cc62dcc75c5f06e0c2c7220d1419392f8838b9eccad4ae916831689255dfc9f0",
+    "paper5\\method_contract\\05b_v2\\architecture_screening_data_manifest.csv": "f3980e88aff408b65cbfce96aca50bad4fc08ecece2bc42bbc04f365c35d9c87",
+    "paper5\\method_contract\\05b_v2\\simulation_generation_v2_lock.json": "1198da23059876a439183b35c8d095f8731bcddd98aa0964da2486995aefd524",
+    "paper5\\method_contract\\05c1\\linear_baseline_results_manifest.json": "2c9797be68e881b81c75c5de7183715b62dfc333c39fb616d28d68b88dade135",
+    "paper5\\method_contract\\05c1\\linear_simulation_baseline_lock.json": "b95dcf6e69fbf3b397f1fc344d31365449f0b880dd9cbe4f673bdd2c0b0ae5fa",
+    "paper5\\results\\simulation_benchmark\\05c1_linear_baselines\\linear_simulation_split_registry.csv.gz": "c683436960893ce89254ecf8d79bc8ed64930ba44222425858968da753e60279"
+  }
+}

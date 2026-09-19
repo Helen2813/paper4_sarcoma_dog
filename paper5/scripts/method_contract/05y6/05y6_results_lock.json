@@ -1,0 +1,37 @@
+{
+  "candidate_confirmed": true,
+  "formal_05f3e_gate_consequence": "NONE",
+  "generated_files": {
+    "method_contract/05y6/05y6_README.txt": {
+      "path": "method_contract/05y6/05y6_README.txt",
+      "sha256": "c2535797b3af2aacb09bd25e8cc4c42a1f72457aa710bc282ee3447afb21c077",
+      "size_bytes": 811
+    },
+    "method_contract/05y6/fresh_g19_paired_specificity.csv": {
+      "path": "method_contract/05y6/fresh_g19_paired_specificity.csv",
+      "sha256": "b7821fde80fd31eedefaf291025a75239f9d04eed8d0eaca9dacde8626f5bd1e",
+      "size_bytes": 17848
+    },
+    "method_contract/05y6/fresh_standard_recovery_by_dataset.csv": {
+      "path": "method_contract/05y6/fresh_standard_recovery_by_dataset.csv",
+      "sha256": "e080dd837d13a3201f64a0883a6f3261715e37a21b8596d633bf1b6c2522088d",
+      "size_bytes": 15484
+    },
+    "method_contract/05y6/prospective_q10_validation_result.json": {
+      "path": "method_contract/05y6/prospective_q10_validation_result.json",
+      "sha256": "daa11e17a0a273d45b33c6c3ab14a2ae1bf6dc559bb722b18816a906e7f86052",
+      "size_bytes": 3700
+    },
+    "method_contract/05y6/prospective_q10_validation_summary.csv": {
+      "path": "method_contract/05y6/prospective_q10_validation_summary.csv",
+      "sha256": "19b6c11fd1dee8c18be4476cd564d2aaa62e038ca9094892d89756f6f27b54b4",
+      "size_bytes": 382
+    }
+  },
+  "rewrite_policy": "05y6 prospective result is immutable. No alternative q10, median, inclusion, or other frontier point may be selected using this fresh validation bank.",
+  "script_path": "scripts/__pycache__/05y6_aggregate_prospective_q10_validation.cpython-310.pyc",
+  "script_sha256": "bad3ee4833918b578c76daa013ee8e92de72f945c0f2b976db7dc75873ce39e8",
+  "script_version": "05y6-aggregate-prospective-q10-validation-v1-no-cli",
+  "status": "PROSPECTIVE_Q10_RECALIBRATION_RESULT_FROZEN",
+  "threshold_retuning_after_fresh_result": false
+}

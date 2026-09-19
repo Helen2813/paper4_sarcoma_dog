@@ -1,0 +1,79 @@
+{
+  "contract_version": "paper5-neural-confirmatory-ablation-benchmark-v1",
+  "created_at_utc": "2026-08-21T14:05:06.982657+00:00",
+  "generated_files": {
+    "paper5\\method_contract\\05d4\\neural_confirmatory_ablation_README.txt": {
+      "sha256": "c63bd7262ed4dc0f630aa809fa4ed074b4ff3c7c5a7020460dbe20cc4d325ba9",
+      "size_bytes": 1706
+    },
+    "paper5\\method_contract\\05d4\\neural_confirmatory_ablation_execution_protocol.json": {
+      "sha256": "8e71e9dc1c649f8f2d334f2373547ec7f632d584f431e63ab229c0089cb3ffb6",
+      "size_bytes": 13816
+    },
+    "paper5\\method_contract\\05d4\\neural_confirmatory_ablation_reference_fixture.json": {
+      "sha256": "247e0f900ce931c6338b59269704075dffc1f9e8282d02ad8007befb077dacae",
+      "size_bytes": 1091
+    },
+    "paper5\\method_contract\\05d4\\neural_confirmatory_ablation_results_manifest.json": {
+      "sha256": "a5faaf5ce6111acd51db9b575d6943d2ee11fdddd281772c86bf5a237effb11a",
+      "size_bytes": 8166
+    },
+    "paper5\\method_contract\\05d4\\neural_confirmatory_ablation_shard_manifest.csv": {
+      "sha256": "eae6a4258034631381912e792a99dd6482d297c6a8f7f903514a415d17c23bd0",
+      "size_bytes": 12247558
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation\\neural_confirmatory_ablation_delta_summary.csv": {
+      "sha256": "951030acb0a01d292d3b9b9daac4f7dce09a89f2e9da2bca64542ee2a07cc20b",
+      "size_bytes": 3283
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation\\neural_confirmatory_dataset_variant_metrics.csv.gz": {
+      "sha256": "9249e41112eb4401e5e0e34ab8c7b3ede2440b5b018cba8e14ab93ed10c43a3f",
+      "size_bytes": 539393
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation\\neural_confirmatory_fit_audit.csv.gz": {
+      "sha256": "7c8f2a6b583b4470d269712ebbf0d3e52e1963bf500c77ed32be3e967902f4da",
+      "size_bytes": 3711301
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation\\neural_confirmatory_fold_seed_metrics.csv.gz": {
+      "sha256": "cd41f7a7817d7be50bb81e7dbaff17a734cd8d0d8df5a19b69852d5e0799c2fb",
+      "size_bytes": 4290814
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation\\neural_confirmatory_preprocessing_audit.csv.gz": {
+      "sha256": "c021a990ec663b3c7085341996eed57bfa2989b18c55d5b30484d33cd380f49e",
+      "size_bytes": 1333698
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation\\neural_confirmatory_scenario_variant_summary.csv": {
+      "sha256": "298b16500911a24eabcd24628d18ee447b9955d0119e65fe7d181a03d44fbcba",
+      "size_bytes": 158720
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation\\neural_confirmatory_variant_summary.csv": {
+      "sha256": "d07a2681fa0894d51d671447109e28d2395437fb9a4c1b2a8d387e5572e8b105",
+      "size_bytes": 8727
+    }
+  },
+  "profile_id": "ARCH_COMPACT__REG_WEAK",
+  "result_manifest": {
+    "path": "paper5\\method_contract\\05d4\\neural_confirmatory_ablation_results_manifest.json",
+    "sha256": "a5faaf5ce6111acd51db9b575d6943d2ee11fdddd281772c86bf5a237effb11a"
+  },
+  "rewrite_policy": "This zero-argument stage never rewrites frozen 05d4 results. Any scientifically justified change requires a new versioned confirmatory stage rather than silent replacement.",
+  "scientific_state": {
+    "TARGET_model_fitting_performed": false,
+    "biological_annotations_used_for_model_selection": false,
+    "clinical_labels_loaded": false,
+    "confirmatory_V4_stability_performed": false,
+    "confirmatory_neural_ablation_performed": true,
+    "confirmatory_replicates_11_to_20_accessed": true,
+    "final_gate_calibration_data_used": false,
+    "neural_profile_frozen": true,
+    "outcomes_loaded": false,
+    "representation_method_selected": false
+  },
+  "script_version": "05d4-fit-neural-ablation-benchmark-gpu-v1.2-verified-fixture-hotfix-no-cli",
+  "shard_manifest": {
+    "n_rows": 21600,
+    "path": "paper5\\method_contract\\05d4\\neural_confirmatory_ablation_shard_manifest.csv",
+    "sha256": "eae6a4258034631381912e792a99dd6482d297c6a8f7f903514a415d17c23bd0"
+  },
+  "status": "FROZEN_NEURAL_CONFIRMATORY_ABLATION_RESULTS_BEFORE_05D5"
+}

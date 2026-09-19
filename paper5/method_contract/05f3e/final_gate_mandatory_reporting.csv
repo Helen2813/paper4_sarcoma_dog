@@ -1,0 +1,8 @@
+report_id,role,metric,numerator,denominator,point_estimate,ci_method,ci95_low,ci95_high,formal_gate_consequence,decision_rule,PASS
+R01_D01_PRIMARY_POOLED,primary_decision,gate_familywise_false_acceptance,70,1000,0.07,two-sided 95% Wilson score interval; z=1.959963984540054; no continuity correction,0.0557763641463,0.0875146481513,D01,PASS iff upper endpoint of two-sided 95% Wilson CI <= 0.10,True
+R02_D01_INDEPENDENT_NULL_POOLED,mandatory_secondary,gate_familywise_false_acceptance,0,800,0,two-sided 95% Wilson score interval; z=1.959963984540054; no continuity correction,4.33680868994e-19,0.00477887620568,NONE,,
+R03_D01_CORRELATED_PRIVATE,mandatory_secondary,gate_familywise_false_acceptance,70,200,0.35,two-sided 95% Wilson score interval; z=1.959963984540054; no continuity correction,0.287288241274,0.41836535664,NONE,,
+R_D01_INDEPENDENT_N50,mandatory_descriptive,gate_familywise_false_acceptance,0,200,0,two-sided 95% Wilson score interval; z=1.959963984540054; no continuity correction,1.73472347598e-18,0.0188453263773,NONE,,
+R_D01_INDEPENDENT_N62,mandatory_descriptive,gate_familywise_false_acceptance,0,200,0,two-sided 95% Wilson score interval; z=1.959963984540054; no continuity correction,1.73472347598e-18,0.0188453263773,NONE,,
+R_D01_INDEPENDENT_N75,mandatory_descriptive,gate_familywise_false_acceptance,0,200,0,two-sided 95% Wilson score interval; z=1.959963984540054; no continuity correction,1.73472347598e-18,0.0188453263773,NONE,,
+R_D01_INDEPENDENT_N100,mandatory_descriptive,gate_familywise_false_acceptance,0,200,0,two-sided 95% Wilson score interval; z=1.959963984540054; no continuity correction,1.73472347598e-18,0.0188453263773,NONE,,

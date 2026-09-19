@@ -1,0 +1,53 @@
+{
+  "created_at_utc": "2026-08-22T16:42:55+00:00",
+  "cublas_workspace_config": ":4096:8",
+  "cuda_available": true,
+  "cuda_device_count": 1,
+  "cudnn_benchmark": false,
+  "cudnn_deterministic": true,
+  "deterministic_algorithms_enabled": true,
+  "device": "cuda:0",
+  "expected_move_version": "1.5.0",
+  "gpu_compute_capability": [
+    8,
+    9
+  ],
+  "gpu_name": "NVIDIA GeForce RTX 4080 Laptop GPU",
+  "gpu_total_memory_bytes": 12878086144,
+  "move_distribution": "move-dl",
+  "move_source_files": {
+    "dataloaders": {
+      "path": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\comparator_envs\\move_1_5_0\\Lib\\site-packages\\move\\data\\dataloaders.py",
+      "sha256": "c33791e4a4b468d8081a7aea7975e8f93b33251a64bd3844bb77bd54bd75c982",
+      "size_bytes": 6780
+    },
+    "training_loop": {
+      "path": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\comparator_envs\\move_1_5_0\\Lib\\site-packages\\move\\training\\training_loop.py",
+      "sha256": "6dbd05437950e6a33f612f5bf969bb42fee30302d0a7395c56f558437b24caf6",
+      "size_bytes": 3724
+    },
+    "vae": {
+      "path": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\comparator_envs\\move_1_5_0\\Lib\\site-packages\\move\\models\\vae.py",
+      "sha256": "a73248339aef802a80e484849f0ccf72fc87b147c883c35bdb41561ed9b071a9",
+      "size_bytes": 26970
+    }
+  },
+  "move_version": "1.5.0",
+  "official_stable_version_match": true,
+  "platform": {
+    "machine": "AMD64",
+    "release": "10",
+    "system": "Windows",
+    "version": "10.0.26200"
+  },
+  "python_executable": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\comparator_envs\\move_1_5_0\\Scripts\\python.exe",
+  "python_version": "3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]",
+  "script_version": "05cmp0b-smoke-test-move-gpu-v1-no-cli",
+  "sys_base_prefix": "C:\\Users\\olegk\\AppData\\Local\\Programs\\Python\\Python310",
+  "sys_prefix": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\comparator_envs\\move_1_5_0",
+  "tf32_cudnn": false,
+  "tf32_matmul": false,
+  "torch_cuda_build": "13.0",
+  "torch_version": "2.12.1+cu130",
+  "virtual_environment_detected": true
+}

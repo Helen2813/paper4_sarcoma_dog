@@ -1,0 +1,16 @@
+{
+  "05d5_results_used": false,
+  "TARGET_results_used": false,
+  "checked_on": "2026-08-21",
+  "consequence": "Use iCluster2b as the required classical external comparator. Keep iClusterBayes2 only as a same-package fallback if the recommended continuous-data path fails the predeclared smoke test.",
+  "evidence_version": "paper5-icluster-continuous-data-method-choice-v1",
+  "official_recommendation": "Starting from Bioconductor 3.23, updated functions include iCluster2b, tune.iCluster2b, iClusterPlus2, and iClusterBayes2. The official manual recommends iCluster2b/tune.iCluster2b for continuous multi-omics and iClusterPlus2/iClusterBayes2 for mixed data types.",
+  "official_source": "Bioconductor iClusterPlus manual/tutorial current for the 2026 release cycle.",
+  "paper5_input_type_interpretation": "The secondary comparator branch treats the Paper 5 RNA, methylation, and CNV analysis matrices as continuous-valued multi-omics inputs.",
+  "scientific_results_used": false,
+  "source_urls": [
+    "https://bioconductor.posit.co/packages/3.24/bioc/vignettes/iClusterPlus/inst/doc/iManual.pdf",
+    "https://bioconductor.posit.co/packages/3.23/bioc/manuals/iClusterPlus/man/iClusterPlus.pdf",
+    "https://bioconductor.posit.co/packages/3.23/bioc/html/iClusterPlus.html"
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "analysis_role": "PROSPECTIVE_POST_DISCOVERY_CONFIRMATORY_RECALIBRATION_VALIDATION",
+  "candidate_rule": {
+    "inclusion_frequency_min": 0.8,
+    "loading_energy_fraction_per_supported_modality_min": 0.15,
+    "median_aligned_correlation_min": 0.7,
+    "n_supported_modalities_min": 2,
+    "q10_aligned_correlation_min": 0.6,
+    "reference_factor_variance_min": 0.0001
+  },
+  "fresh_bank": {
+    "G19_datasets": 200,
+    "STANDARD_datasets": 200,
+    "STANDARD_truth_factor_opportunities": 800,
+    "seed_overlap_with_prior_bank": 0
+  },
+  "original_rule": {
+    "inclusion_frequency_min": 0.8,
+    "loading_energy_fraction_per_supported_modality_min": 0.15,
+    "median_aligned_correlation_min": 0.7,
+    "n_supported_modalities_min": 2,
+    "q10_aligned_correlation_min": 0.4,
+    "reference_factor_variance_min": 0.0001
+  },
+  "primary_specificity_endpoint": {
+    "absolute_rate_reduction": 0.14,
+    "alpha": 0.05,
+    "candidate_false_acceptance_denominator": 200,
+    "candidate_false_acceptance_n": 38,
+    "candidate_false_acceptance_rate": 0.19,
+    "candidate_wilson95": [
+      0.14167171527790676,
+      0.25001238707599854
+    ],
+    "exact_two_sided_nested_mcnemar_p": 7.450580596923828e-09,
+    "original_false_acceptance_denominator": 200,
+    "original_false_acceptance_n": 66,
+    "original_false_acceptance_rate": 0.33,
+    "original_wilson95": [
+      0.26857425870603957,
+      0.39783315226223115
+    ],
+    "paired_bootstrap95_absolute_reduction": [
+      0.095,
+      0.19
+    ],
+    "relative_rate_reduction": 0.42424242424242425,
+    "required_direction_met": true,
+    "rescued_datasets": 28,
+    "reverse_discordance": 0
+  },
+  "prospective_confirmation": {
+    "candidate_confirmed": true,
+    "definition": "p<0.05 exact paired specificity improvement in required direction, reverse discordance=0, and candidate STANDARD recovery >=0.80.",
+    "formal_05f3e_gate_consequence": "NONE",
+    "retuning_after_result": "FORBIDDEN"
+  },
+  "provenance": {
+    "05y3_contract": {
+      "path": "method_contract/05y3/prospective_q10_recalibration_contract.json",
+      "sha256": "485603c89e478ca1f82772e510ea9e02c107747ec6ba7f57d68482781b562c38",
+      "size_bytes": 9264
+    },
+    "05y3_lock": {
+      "path": "method_contract/05y3/05y3_contract_lock.json",
+      "sha256": "ebae031bbd7b6dba5cae1333aaedaa6e0d2e9fb65c07e7a1bb25dd0813c65eac",
+      "size_bytes": 1351
+    },
+    "05y4_lock": {
+      "path": "method_contract/05y4/05y4_seed_bank_lock.json",
+      "sha256": "ff227acd3e8a65e9b2e7c3188792be17ecf3da725e206b987f13f5145a0f276c",
+      "size_bytes": 1672
+    },
+    "05y5_completion": {
+      "path": "method_contract/05y5/05y5_execution_completion_lock.json",
+      "sha256": "13b6c355f4f38750ed8288defe312f46b05ad9f2553f9347fd54a51e1f7405e5",
+      "size_bytes": 130280
+    },
+    "05y5_progress": {
+      "path": "method_contract/05y5/fresh_q10_validation_progress_manifest.csv",
+      "sha256": "814070b65fc94ba8cf0b9945622e514e67e98e4a6cdd67d3c9a6aaae5d8f71d8",
+      "size_bytes": 131192
+    }
+  },
+  "script_version": "05y6-aggregate-prospective-q10-validation-v1-no-cli",
+  "sensitivity_safety_endpoint": {
+    "candidate_recovered_n": 752,
+    "candidate_recovery_rate": 0.94,
+    "candidate_wilson95": [
+      0.9213458598323445,
+      0.9544487291066606
+    ],
+    "denominator": 800,
+    "existing_D02_floor": 0.8,
+    "floor_met": true,
+    "gained_truth_opportunities": 0,
+    "lost_truth_opportunities": 3,
+    "original_recovered_n": 755,
+    "original_recovery_rate": 0.94375
+  },
+  "status": "PROSPECTIVE_Q10_RECALIBRATION_RESULT_FROZEN"
+}

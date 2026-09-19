@@ -1,0 +1,229 @@
+{
+  "ablation_registry": "paper5\\method_contract\\05a\\sable_mo_ablation_registry.csv",
+  "amendment_policy": {
+    "changes_after_viewing_biological_or_outcome_results_forbidden": true,
+    "rewrite_requires_archived_previous_contract": true,
+    "rewrite_requires_documented_reason": true,
+    "silent_rewrite_forbidden": true
+  },
+  "baseline_grid": "paper5\\method_contract\\05a\\baseline_hyperparameter_grid.csv",
+  "contract_status": "FROZEN_BEFORE_MODEL_FITTING",
+  "created_at_utc": "2026-08-11T18:43:01.039109+00:00",
+  "data_lock": {
+    "case_hash": "f75b858a237ac1b5593d106d495a88efb51b163ee1c824aa7144e270b51baa43",
+    "feature_budgets": {
+      "CNV": {
+        "primary": 5000,
+        "sensitivity_high": 10000,
+        "sensitivity_low": 2000
+      },
+      "METHYLATION": {
+        "primary": 10000,
+        "sensitivity_high": 20000,
+        "sensitivity_low": 5000
+      },
+      "RNA": {
+        "primary": 5000,
+        "sensitivity_high": 10000,
+        "sensitivity_low": 2000
+      }
+    },
+    "modalities": [
+      "RNA",
+      "METHYLATION",
+      "CNV"
+    ],
+    "n_cases": 78
+  },
+  "environment_snapshot": "paper5\\method_contract\\05a\\environment_snapshot.json",
+  "evaluation": {
+    "all_prespecified_models_reported": true,
+    "failure_gate_registry": "paper5\\method_contract\\05a\\failure_gate_registry.csv",
+    "metric_registry": "paper5\\method_contract\\05a\\metric_registry.csv",
+    "pairing_permutations": 100,
+    "primary_selection_weights": {
+      "heldout_reconstruction_score": 0.3,
+      "missing_view_reconstruction_score": 0.25,
+      "modality_balance_score": 0.15,
+      "random_adjusted_cross_view_mrr": 0.3
+    },
+    "selection_policy": "paper5\\method_contract\\05a\\model_selection_policy.json",
+    "silent_omission_of_failed_models_forbidden": true
+  },
+  "external_method_benchmark": "paper5\\method_contract\\05a\\external_method_benchmark_contract.json",
+  "generated_artifacts": [
+    "paper5\\method_contract\\05a\\target_outer_cv_assignments.csv",
+    "paper5\\method_contract\\05a\\target_inner_cv_assignments.csv",
+    "paper5\\method_contract\\05a\\target_cv_split_summary.csv",
+    "paper5\\method_contract\\05a\\target_neural_training_assignments.csv",
+    "paper5\\method_contract\\05a\\model_family_registry.csv",
+    "paper5\\method_contract\\05a\\sable_mo_ablation_registry.csv",
+    "paper5\\method_contract\\05a\\baseline_hyperparameter_grid.csv",
+    "paper5\\method_contract\\05a\\sable_mo_architecture_profiles.csv",
+    "paper5\\method_contract\\05a\\sable_mo_regularization_profiles.csv",
+    "paper5\\method_contract\\05a\\simulation_scenarios.csv",
+    "paper5\\method_contract\\05a\\simulation_replicate_registry.csv",
+    "paper5\\method_contract\\05a\\metric_registry.csv",
+    "paper5\\method_contract\\05a\\failure_gate_registry.csv",
+    "paper5\\method_contract\\05a\\random_control_registry.csv",
+    "paper5\\method_contract\\05a\\multiplicity_family_registry.csv",
+    "paper5\\method_contract\\05a\\model_selection_policy.json",
+    "paper5\\method_contract\\05a\\external_method_benchmark_contract.json",
+    "paper5\\method_contract\\05a\\environment_snapshot.json"
+  ],
+  "guardrails": [
+    "No outcomes or clinical labels are used in scripts 05a-08.",
+    "No biological program annotation is used to select a model family.",
+    "No full-cohort feature ranking is used in held-out evaluation.",
+    "No post-z-score variance is used for feature selection.",
+    "No raw 500k-dimensional vector is supplied directly to a neural encoder.",
+    "Ordinary unregularized CCA is forbidden.",
+    "Neural architecture profiles are selected on simulations, not TARGET results.",
+    "Outer test samples are never used for preprocessing or model selection.",
+    "Prespecified failed models remain visible in the audit trail.",
+    "The proposed method is not guaranteed to be selected or declared superior."
+  ],
+  "method": {
+    "methodological_question": "Can stability-aware, block-balanced, shared/private latent learning improve honest held-out multi-view reconstruction, paired cross-view coherence, missing-view recovery, and factor reproducibility under extreme p >> n?",
+    "name_status": "provisional",
+    "proposed_components": [
+      "fold-local pre-standardization feature ranking",
+      "block-balanced reconstruction",
+      "shared/private latent decomposition",
+      "paired contrastive alignment",
+      "modality dropout",
+      "missing-view reconstruction",
+      "resampling-based factor alignment",
+      "stability-gated factor retention"
+    ],
+    "proposed_method_automatically_declared_winner": false,
+    "proposed_method_id": "V4_SABLE_MO",
+    "provisional_name": "SABLE-MO"
+  },
+  "model_registry": "paper5\\method_contract\\05a\\model_family_registry.csv",
+  "multiplicity_families": "paper5\\method_contract\\05a\\multiplicity_family_registry.csv",
+  "nested_cv": {
+    "early_stop_fraction": 0.2,
+    "inner_assignment_file": "paper5\\method_contract\\05a\\target_inner_cv_assignments.csv",
+    "inner_folds": 4,
+    "inner_model_seeds": [
+      1103,
+      2207
+    ],
+    "master_seed": 20260811,
+    "neural_training_assignment_file": "paper5\\method_contract\\05a\\target_neural_training_assignments.csv",
+    "outcome_used_for_splits": false,
+    "outer_assignment_file": "paper5\\method_contract\\05a\\target_outer_cv_assignments.csv",
+    "outer_folds": 5,
+    "outer_model_seeds": [
+      1103,
+      2207,
+      3301
+    ],
+    "outer_repeats": 5,
+    "split_summary_file": "paper5\\method_contract\\05a\\target_cv_split_summary.csv",
+    "stratification": "none"
+  },
+  "paper_scope": {
+    "GSE149679_individual_level_RNA_methylation_pairing_status": "not established by the public GEO/COTC identifier audit; supplementary crosswalk remains unresolved",
+    "outcomes_accessed_only_after_representation_freeze": true,
+    "paper5_primary_scope": "Outcome-blind small-n multi-omics representation learning, biological interpretation, and cross-platform recurrence.",
+    "paper6_transfer_learning_is_out_of_scope": true
+  },
+  "preprocessing": {
+    "MOFA_missingness": "native probabilistic handling without imputation",
+    "block_PCA_scaling": "After fold-local standardization, multiply each view by the inverse square root of its total training variance before concatenation.",
+    "heldout_rule": "Missingness filtering, feature ranking, median imputation, scaling, block scaling, and PCA are fitted on training samples only.",
+    "imputation_sensitivity": [
+      "training-fold KNN k=5",
+      "training-fold KNN k=10"
+    ],
+    "neural_input": "fold-local PCA-compressed per-view representations",
+    "neural_raw_high_dimensional_input_forbidden": true,
+    "post_zscore_variance_selection_forbidden": true,
+    "primary_imputation": "training-fold feature median",
+    "variance_ranking_scale": {
+      "CNV": "log2(copy number / 2) before z-score",
+      "METHYLATION": "M-value before z-score",
+      "RNA": "log2 TPM before z-score"
+    }
+  },
+  "random_controls": "paper5\\method_contract\\05a\\random_control_registry.csv",
+  "scientific_state": {
+    "biological_program_labels_used_for_model_selection": false,
+    "clinical_labels_loaded": false,
+    "global_preprocessing_allowed_in_heldout_evaluation": false,
+    "model_fitting_performed": false,
+    "outcome_loaded": false,
+    "post_standardization_variance_used_for_selection": false,
+    "simulation_results_viewed": false,
+    "target_benchmark_results_viewed": false
+  },
+  "script_version": "05a-freeze-ai-method-contract-v1",
+  "simulation": {
+    "architecture_profile_file": "paper5\\method_contract\\05a\\sable_mo_architecture_profiles.csv",
+    "master_seed": 20260812,
+    "neural_profile_selected_using_target_data": false,
+    "regularization_profile_file": "paper5\\method_contract\\05a\\sable_mo_regularization_profiles.csv",
+    "replicate_registry": "paper5\\method_contract\\05a\\simulation_replicate_registry.csv",
+    "scenario_file": "paper5\\method_contract\\05a\\simulation_scenarios.csv"
+  },
+  "stability_gate": {
+    "factor_alignment": "orthogonal Procrustes, Hungarian matching, and sign alignment",
+    "final_resamples": 100,
+    "full_data_seeds": [
+      1103,
+      2207,
+      3301,
+      4409,
+      5519,
+      6637,
+      7753,
+      8863,
+      9973,
+      11027
+    ],
+    "stability_evaluated_before_biology_and_outcomes": true,
+    "subsample_fraction": 0.8,
+    "thresholds": {
+      "minimum_factor_variance": 0.0001,
+      "minimum_loading_energy_fraction_per_supported_modality": 0.15,
+      "minimum_supported_modalities": 2,
+      "primary_inclusion_frequency": 0.8,
+      "primary_median_factor_correlation": 0.7,
+      "primary_q10_factor_correlation": 0.4,
+      "sensitivity_high_median_factor_correlation": 0.8,
+      "sensitivity_low_median_factor_correlation": 0.6
+    }
+  },
+  "upstream_artifacts": {
+    "paper5\\model_inputs\\TARGET_OS_primary78\\TARGET_OS_primary_multimodal_case_order.csv": {
+      "sha256": "9a39a40f0ed6be767d9640219b4b3f7ee0813b8e81e6db64880a1fe1bcd44cb4",
+      "size_bytes": 1650
+    },
+    "paper5\\model_inputs\\TARGET_OS_primary78\\harmonized\\harmonized_input_lock.json": {
+      "sha256": "04c32b6fefed42f433fc29e4f48413a730dc4504a46cfde8de6e7b6c45c99cac",
+      "size_bytes": 1971
+    },
+    "paper5\\model_inputs\\TARGET_OS_primary78\\premodel_qc\\fold_local_preprocessing_contract.json": {
+      "sha256": "fbaba8fbf4370f780a8f0d85fc5af9fd86e803b5646f728e79593c6ce30cd3d2",
+      "size_bytes": 3103
+    },
+    "paper5\\model_inputs\\TARGET_OS_primary78\\premodel_qc\\harmonized_reconstruction_audit.csv": {
+      "sha256": "807675d34ba61d430d9fd3c7202b2eaa334e2cba77fd7b71eefb6562d79860e3",
+      "size_bytes": 276
+    },
+    "paper5\\model_inputs\\TARGET_OS_primary78\\premodel_qc\\prestandardization_variance_audit_manifest.json": {
+      "sha256": "e4c0d637e179ed76ba934ce67c9ef5542a1d144699a48da9c7f14226915aeb95",
+      "size_bytes": 12015
+    },
+    "paper5\\model_inputs\\TARGET_OS_primary78\\premodel_qc\\prestandardization_variance_summary.csv": {
+      "sha256": "86111300d0272e6db187e7d9dba8166972b61bd0a412ee3c430b473ad959de24",
+      "size_bytes": 1355
+    },
+    "paper5\\model_inputs\\TARGET_OS_primary78\\premodel_qc\\representation_feature_budget_plan.csv": {
+      "sha256": "bf8b38c38151dc00c7b5c04f2f031ef06176c7bab807cc16c7629c65dd9b06b6",
+      "size_bytes": 4629
+    }
+  }
+}

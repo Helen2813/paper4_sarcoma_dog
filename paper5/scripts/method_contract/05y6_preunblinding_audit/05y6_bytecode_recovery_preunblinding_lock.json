@@ -1,0 +1,23 @@
+﻿{
+    "status":  "FROZEN_05Y6_BYTECODE_RECOVERY_BEFORE_UNBLINDING",
+    "recorded_at":  "2026-09-19T11:44:15.9568330-04:00",
+    "aggregator":  {
+                       "path":  "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\scripts\\__pycache__\\05y6_aggregate_prospective_q10_validation.cpython-310.pyc",
+                       "filename":  "05y6_aggregate_prospective_q10_validation.cpython-310.pyc",
+                       "sha256":  "BAD3EE4833918B578C76DAA013EE8E92DE72F945C0F2B976DB7DC75873CE39E8",
+                       "size_bytes":  18381,
+                       "creation_time":  "2026-09-15T20:54:01.4973554-04:00",
+                       "last_write_time":  "2026-09-15T20:54:01.4973554-04:00",
+                       "embedded_source_path":  ".\\paper5\\scripts\\05y6_aggregate_prospective_q10_validation.py",
+                       "bytecode_runtime":  "CPython 3.10"
+                   },
+    "prospective_contract":  {
+                                 "path":  ".\\paper5\\method_contract\\05y3\\prospective_q10_recalibration_contract.json",
+                                 "sha256":  "485603C89E478CA1F82772E510EA9E02C107747EC6BA7F57D68482781B562C38"
+                             },
+    "execution_completion_lock":  {
+                                      "path":  ".\\paper5\\method_contract\\05y5\\05y5_execution_completion_lock.json",
+                                      "sha256":  "13B6C355F4F38750ED8288DEFE312F46B05AD9F2553F9347FD54A51E1F7405E5"
+                                  },
+    "recovery_reason":  "Original 05y6 source .py is absent, but prospectively-created CPython 3.10 bytecode exists and predates fresh 05y5 execution completion. Frozen bytecode will be executed directly without modification."
+}

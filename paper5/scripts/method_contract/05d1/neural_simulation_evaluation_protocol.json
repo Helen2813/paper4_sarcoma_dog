@@ -1,0 +1,163 @@
+{
+  "confirmatory_ablation": {
+    "V4_confirmatory_stability_reference_fits": 360,
+    "V4_confirmatory_stability_resample_fits": 7200,
+    "dataset_registry": "paper5\\method_contract\\05d1\\neural_simulation_dataset_role_registry.csv",
+    "fit_evaluations": 21600,
+    "fit_seed_registry": "paper5\\method_contract\\05d1\\neural_confirmatory_ablation_fit_seed_registry.csv",
+    "folds": 5,
+    "optimization_runs_including_refit": 43200,
+    "seeds_per_variant_fold": 2,
+    "stability_resample_registry": "paper5\\method_contract\\05d1\\neural_confirmatory_stability_resample_registry.csv",
+    "variants": [
+      "V0_BALANCED_AE",
+      "V1_SHARED_PRIVATE_AE",
+      "V2_CONTRASTIVE_SPAE",
+      "V3_DROPOUT_SPAE",
+      "V4_SABLE_MO",
+      "V5_SABLE_VAE"
+    ]
+  },
+  "contract_version": "paper5-neural-simulation-protocol-v1",
+  "created_at_utc": "2026-08-12T15:18:27.930157+00:00",
+  "forbidden_operations": [
+    "Using simulation replicates 11-20 to select the neural profile.",
+    "Using simulation replicates 1-10 as confirmatory neural ablation evidence.",
+    "Using TARGET-OS results to change architecture or regularization profiles.",
+    "Changing the 05a architecture or regularization grids.",
+    "Using biological program labels for neural profile selection.",
+    "Using survival, metastasis, treatment, or other outcomes.",
+    "Using final gate-calibration simulations before architecture freeze.",
+    "Quietly falling back to CPU for neural optimization.",
+    "Using automatic mixed precision, TF32, or torch.compile in the confirmatory neural branch.",
+    "Changing stability thresholds after viewing neural results.",
+    "Silently omitting failed V0-V5 variants."
+  ],
+  "generated_registries": {
+    "confirmatory_fit_seeds": "paper5\\method_contract\\05d1\\neural_confirmatory_ablation_fit_seed_registry.csv",
+    "confirmatory_stability": "paper5\\method_contract\\05d1\\neural_confirmatory_stability_resample_registry.csv",
+    "dataset_roles": "paper5\\method_contract\\05d1\\neural_simulation_dataset_role_registry.csv",
+    "development_partitions": "paper5\\method_contract\\05d1\\neural_profile_development_partition_registry.csv",
+    "profile_fit_seeds": "paper5\\method_contract\\05d1\\neural_profile_screen_fit_seed_registry.csv",
+    "profile_grid": "paper5\\method_contract\\05d1\\neural_architecture_regularization_profile_grid.csv",
+    "profile_stability": "paper5\\method_contract\\05d1\\neural_profile_stability_resample_registry.csv"
+  },
+  "gpu_execution": {
+    "device": "cuda:0",
+    "frozen_environment_contract": "paper5\\method_contract\\05d0\\neural_environment_contract.json",
+    "frozen_environment_sha256": "a5647e7cae4548bb1992385600dd6906cbcca4138636d1a7adb0692d680d3f92",
+    "quiet_cpu_fallback_allowed": false,
+    "required_for_heavy_neural_compute": true
+  },
+  "loss_contract": "paper5\\method_contract\\05d1\\neural_loss_and_architecture_contract.json",
+  "master_seed": 20260812,
+  "profile_development": {
+    "dataset_registry": "paper5\\method_contract\\05d1\\neural_simulation_dataset_role_registry.csv",
+    "development_partition_rule": "05c1 folds 3-5 fit; fold 2 early-stop; fold 1 validation",
+    "fit_seed_registry": "paper5\\method_contract\\05d1\\neural_profile_screen_fit_seed_registry.csv",
+    "partition_registry": "paper5\\method_contract\\05d1\\neural_profile_development_partition_registry.csv",
+    "profile_screen_fit_evaluations": 3240,
+    "profile_screen_optimization_runs": 6480,
+    "profile_stability_reference_fits": 3240,
+    "profile_stability_resample_fits": 64800,
+    "stability_resample_registry": "paper5\\method_contract\\05d1\\neural_profile_stability_resample_registry.csv"
+  },
+  "profile_grid": {
+    "file": "paper5\\method_contract\\05d1\\neural_architecture_regularization_profile_grid.csv",
+    "n_profiles": 9
+  },
+  "runtime_rule": "All neural optimization and tensor-heavy representation calculations must execute on the frozen CUDA device; deterministic CPU preprocessing is allowed where it is scientifically preferable.",
+  "scientific_state": {
+    "TARGET_model_fitting_performed": false,
+    "architecture_selected": false,
+    "biological_annotations_loaded": false,
+    "clinical_labels_loaded": false,
+    "final_gate_calibration_data_used": false,
+    "neural_profile_selected": false,
+    "neural_simulation_model_fitting_performed": false,
+    "outcomes_loaded": false,
+    "stability_gate_thresholds_retuned": false
+  },
+  "script_version": "05d1-freeze-neural-simulation-protocol-v1-no-cli",
+  "selection_contract": "paper5\\method_contract\\05d1\\neural_profile_selection_contract.json",
+  "simulation_scope": {
+    "confirmatory_ablation_datasets": 360,
+    "confirmatory_replicates_per_scenario": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "development_replicates_per_scenario": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "profile_development_datasets": 360,
+    "split_created_before_neural_results": true,
+    "total_datasets": 720,
+    "total_scenarios": 36
+  },
+  "stage_order": [
+    {
+      "neural_profile_selected_at_end": true,
+      "purpose": "GPU profile screening and 20-resample stability audit on development simulation replicates only",
+      "script": "05d2_screen_neural_profiles_gpu.py",
+      "stage": "05d2"
+    },
+    {
+      "purpose": "freeze the outcome-blind simulation-selected neural profile before confirmatory neural ablations",
+      "script": "05d3_freeze_selected_neural_profile.py",
+      "stage": "05d3"
+    },
+    {
+      "purpose": "GPU V0-V5 confirmatory held-out benchmark on replicate indices 11-20",
+      "script": "05d4_fit_neural_ablation_benchmark_gpu.py",
+      "stage": "05d4"
+    },
+    {
+      "purpose": "GPU 20-resample confirmatory V4 stability-gate evaluation",
+      "script": "05d5_evaluate_sable_mo_stability_gpu.py",
+      "stage": "05d5"
+    },
+    {
+      "purpose": "compare frozen linear, MOFA, and neural results without outcomes and freeze the representation method",
+      "script": "05e_compare_ablate_and_freeze_method.py",
+      "stage": "05e"
+    }
+  ],
+  "upstream_hashes": {
+    "paper5\\method_contract\\05a1\\simulation_and_technical_confound_addendum.json": "3aadb87386f796663e68b97fb608cb864c197013fe52c70ac5b37bed06e7a3e8",
+    "paper5\\method_contract\\05a1\\simulation_and_technical_confound_addendum_lock.json": "61969f36872e3e508a239d5e6903ae3395fd36ec74ee7aa4e31740a514c119e3",
+    "paper5\\method_contract\\05a\\ai_method_contract.json": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+    "paper5\\method_contract\\05a\\ai_method_contract_lock.json": "cc62dcc75c5f06e0c2c7220d1419392f8838b9eccad4ae916831689255dfc9f0",
+    "paper5\\method_contract\\05a\\failure_gate_registry.csv": "32b9bd92db7b6455744a4aba03c6cdd1e9966b1b8e408e7451147d407fd06083",
+    "paper5\\method_contract\\05a\\model_family_registry.csv": "b0a70a5f5df4b30a6aa2d4069e15d1d1b9fe3b770f8c5ef16248301acabf1a39",
+    "paper5\\method_contract\\05a\\model_selection_policy.json": "8d8b39d3d424e695324085ee533f13a555dada9b65acbc6718d7809ce07d0b44",
+    "paper5\\method_contract\\05a\\sable_mo_ablation_registry.csv": "0c4fdfeea5aec2c2e74c8570855c930a978097eb2b6607c87eecb5066079a6ba",
+    "paper5\\method_contract\\05a\\sable_mo_architecture_profiles.csv": "e5be64ebd2986a06f80288d78d10dcc739f05f157333ad6fc183a8d271aa9f5a",
+    "paper5\\method_contract\\05a\\sable_mo_regularization_profiles.csv": "706d11d6ef546db4dcf33c1645f2439322db1c2114881cf19f9851cc5308f569",
+    "paper5\\method_contract\\05b_v2\\architecture_screening_data_manifest.csv": "f3980e88aff408b65cbfce96aca50bad4fc08ecece2bc42bbc04f365c35d9c87",
+    "paper5\\method_contract\\05b_v2\\simulation_generation_v2_lock.json": "1198da23059876a439183b35c8d095f8731bcddd98aa0964da2486995aefd524",
+    "paper5\\method_contract\\05c1\\linear_baseline_results_manifest.json": "2c9797be68e881b81c75c5de7183715b62dfc333c39fb616d28d68b88dade135",
+    "paper5\\method_contract\\05c1\\linear_simulation_baseline_lock.json": "b95dcf6e69fbf3b397f1fc344d31365449f0b880dd9cbe4f673bdd2c0b0ae5fa",
+    "paper5\\method_contract\\05c2b\\mofa_baseline_results_manifest.json": "b56dc9a9d4c82f64cdef6192748ce01433a4eb8bba8cf22f1fe71a9d65d8722c",
+    "paper5\\method_contract\\05c2b\\mofa_simulation_baseline_lock.json": "674c727a0a20c93a7c876b8c20d78e463adbee301300edea0a64c4f27383fd95",
+    "paper5\\method_contract\\05d0\\neural_environment_contract.json": "a5647e7cae4548bb1992385600dd6906cbcca4138636d1a7adb0692d680d3f92",
+    "paper5\\method_contract\\05d0\\neural_environment_lock.json": "e1420d82a1de564efa3b141aa0eb5249b502232ece61c9aaeacdc1f152b71914",
+    "paper5\\results\\simulation_benchmark\\05c1_linear_baselines\\linear_simulation_split_registry.csv.gz": "c683436960893ce89254ecf8d79bc8ed64930ba44222425858968da753e60279"
+  }
+}

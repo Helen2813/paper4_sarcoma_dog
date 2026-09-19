@@ -1,0 +1,8 @@
+decision_id,metric,numerator,denominator,point_estimate,ci95_low,ci95_high,decision_quantity,threshold,pass_rule,PASS,independence_note
+D01_NULL_SPECIFICITY,gate_familywise_false_acceptance,70,1000,0.07,0.0557763641463,0.0875146481513,upper endpoint of two-sided 95% Wilson CI,0.1,ci95_high <= 0.10,True,primary core specificity decision
+D02_STANDARD_SENSITIVITY,gate_true_positive_rate,371,400,0.9275,0.897817506746,0.949049481598,point estimate,0.8,point_estimate >= 0.80,True,primary core sensitivity decision
+D03_STANDARD_FNR,gate_false_negative_rate,29,400,0.0725,0.0509505184023,0.102182493254,point estimate,0.2,point_estimate <= 0.20,True,algebraic mirror of D02 on identical denominator; not independent evidence
+D04_ROTATIONAL_SUBSPACE,subspace_mean_principal_angle_cosine,,100,0.828985873985,0.818738161573,0.838781365413,mean dataset-level mean canonical correlation,0.8,point_estimate >= 0.80,True,narrow rotational-subspace gate
+D05_VIEW_SUPPORT,view_support_classification_accuracy,81,120,0.675,0.586901840859,0.752241450894,point estimate,0.8,point_estimate >= 0.80,False,narrow mixed-support gate
+D06_BATCH_SPECIFICITY,batch_false_biological_acceptance_rate,0,400,0,8.67361737988e-19,0.0095122943343,point estimate,0.1,point_estimate <= 0.10,True,narrow technical-confound specificity gate
+D07_NO_POSTHOC_RETUNING,process_integrity,,,,,,process audit,,all thresholds/selection rules unchanged from frozen 05a2/05f2a,True,"process gate, not a performance metric"

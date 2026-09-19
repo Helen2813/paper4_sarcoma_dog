@@ -1,0 +1,54 @@
+{
+  "created_at_utc": "2026-09-15T23:07:07+00:00",
+  "formal_gate_changed": false,
+  "generated_files": {
+    "paper5/method_contract/05x0/05x0_README.txt": {
+      "path": "paper5/method_contract/05x0/05x0_README.txt",
+      "sha256": "cd5658e246eedfaf5c9e4d069c07fb9b57b88ac78a38227b6c4b60b2aae997fc",
+      "size_bytes": 1349
+    },
+    "paper5/method_contract/05x0/retention_ablation_candidate_fields.csv": {
+      "path": "paper5/method_contract/05x0/retention_ablation_candidate_fields.csv",
+      "sha256": "1d188de8d08d75994dbcd2128dc0921fb892d1f3f264cd56ba15cfef221c8150",
+      "size_bytes": 2811
+    },
+    "paper5/method_contract/05x0/retention_ablation_preflight.json": {
+      "path": "paper5/method_contract/05x0/retention_ablation_preflight.json",
+      "sha256": "760c3c3b538d697b8778af500dcd68559fa87c6a54654d4d1163c3e1e1c559d3",
+      "size_bytes": 4105
+    },
+    "paper5/method_contract/05x0/retention_rule_source_context.txt": {
+      "path": "paper5/method_contract/05x0/retention_rule_source_context.txt",
+      "sha256": "fcb1f620060f42c11fd4189accc1f5fd70297faa741b00e19632a9a567e09c6d",
+      "size_bytes": 113428
+    },
+    "paper5/method_contract/05x0/sealed_factor_schema_inventory.csv": {
+      "path": "paper5/method_contract/05x0/sealed_factor_schema_inventory.csv",
+      "sha256": "34ec07ce890bf4dd1fc5190593d821db5625b3bb55b16272a16ab04f622695c0",
+      "size_bytes": 4715
+    }
+  },
+  "gpu_computation": false,
+  "model_refit": false,
+  "rewrite_policy": "05x0 is a read-only preflight. Do not add an ablation calculation to this version after inspecting the schema. Any exploratory calculation must be defined in a new versioned script/contract.",
+  "scientific_result_computed": false,
+  "script_path": "paper5/scripts/05x0_retention_ablation_readonly_preflight.py",
+  "script_sha256": "8309cf2978feecf462a8d75031b2f28a5b6148354f55907d6a17efa0c1ac9003",
+  "script_version": "05x0-retention-ablation-readonly-preflight-v1-no-cli",
+  "source_05f2_progress_manifest": {
+    "path": "paper5/method_contract/05f2/full_run_progress_manifest.csv",
+    "sha256": "24a5d1e5c0b340254c12ff53dc1cd9209813e1bc98f4dee02c581e59706c2e6e",
+    "size_bytes": 1119616
+  },
+  "source_05f3e_lock": {
+    "path": "paper5/method_contract/05f3e/final_gate_results_lock.json",
+    "sha256": "6d691237662d633a4f8d8294126a33b32c5694372a6e58de71bd45731d67c397",
+    "size_bytes": 3302
+  },
+  "source_05f4b_lock": {
+    "path": "paper5/method_contract/05f4b/05f4b_manuscript_assets_lock.json",
+    "sha256": "43bee35781ff1d70e1f2b7f8bfd762847becc3893c9a09653eb968a889d0f28f",
+    "size_bytes": 5322
+  },
+  "status": "READ_ONLY_PREFLIGHT_NO_EXPLORATORY_RESULT_COMPUTED"
+}

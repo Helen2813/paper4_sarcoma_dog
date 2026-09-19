@@ -1,0 +1,25 @@
+{
+  "D01_PASS": true,
+  "D02_PASS": true,
+  "D03_PASS": true,
+  "core_status": "CORE_PASS",
+  "frozen_core_outcome": {
+    "condition": "D01 PASS and D02 PASS and D03 PASS",
+    "downstream": "Proceed with the planned outcome-blind TARGET representation benchmark and subsequent frozen stability/biology pipeline, subject to all other frozen gates.",
+    "interpretation": "The frozen gate meets the preregistered core specificity and standard-operating-point sensitivity criteria in the final simulation bank."
+  },
+  "frozen_narrow_gate_failure_policy": {
+    "D04_ROTATIONAL_SUBSPACE": "If failed, do not claim reliable recovery of rotationally ambiguous subspaces; individual-factor claims remain forbidden as already specified.",
+    "D05_VIEW_SUPPORT": "If failed, view-support labels remain exploratory and cannot support primary shared-versus-partial claims.",
+    "D06_BATCH_SPECIFICITY": "If failed, stable factors cannot be assumed biological without external recurrence; technical-confound limitations become a primary conclusion rather than a hidden caveat.",
+    "D07_NO_POSTHOC_RETUNING": "Any alternative threshold explored after results is explicitly exploratory and cannot replace the primary frozen gate."
+  },
+  "narrow_gate_status": {
+    "D04_ROTATIONAL_SUBSPACE": true,
+    "D05_VIEW_SUPPORT": false,
+    "D06_BATCH_SPECIFICITY": true,
+    "D07_NO_POSTHOC_RETUNING": true
+  },
+  "outcome_boundary": "Outcomes are not opened to rescue a failed core representation/gate validation. Outcome analysis, if reached, is a minimal downstream validation of a representation already frozen without outcomes.",
+  "stress_subgroup_rule": "A favorable pooled D01 result may not suppress poor prespecified subgroup behavior. Per-n and null-mechanism results are mandatory descriptive reporting, but they do not create new post-hoc PASS/FAIL thresholds."
+}

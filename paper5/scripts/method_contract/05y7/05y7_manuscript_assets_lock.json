@@ -1,0 +1,49 @@
+{
+  "status": "05Y7_MANUSCRIPT_Q10_RECALIBRATION_ASSETS_FROZEN",
+  "script_version": "05y7-freeze-manuscript-q10-recalibration-assets-v1-no-cli",
+  "script_source": {
+    "path": "scripts/05y7_freeze_manuscript_q10_recalibration_assets_v1.py",
+    "sha256": "2ca712c62bc0583a687101ac0a78ae8c006c895fbb4ff2d1ee5e7fa3af3608de",
+    "size_bytes": 16412
+  },
+  "created_at_utc": "2026-09-19T16:04:03.945839+00:00",
+  "scientific_endpoint_recomputation": false,
+  "threshold_retuning": false,
+  "candidate_confirmed": true,
+  "formal_05f3e_gate_consequence": "NONE",
+  "source_files": {
+    "05y6_result": {
+      "path": "method_contract/05y6/prospective_q10_validation_result.json",
+      "sha256": "daa11e17a0a273d45b33c6c3ab14a2ae1bf6dc559bb722b18816a906e7f86052",
+      "size_bytes": 3700
+    },
+    "05y6_results_lock": {
+      "path": "method_contract/05y6/05y6_results_lock.json",
+      "sha256": "a93aeebcdcb07bd654096b5926ec3aa7b23b9b8a4bf51835991a843473ac21b1",
+      "size_bytes": 1936
+    }
+  },
+  "generated_files": {
+    "method_contract/05y7/manuscript_q10_recalibration_summary.json": {
+      "path": "method_contract/05y7/manuscript_q10_recalibration_summary.json",
+      "sha256": "275b30b42fd40dc1138c5d49b860d5d93db455719521ef041a74696894286a9f",
+      "size_bytes": 2510
+    },
+    "method_contract/05y7/manuscript_q10_recalibration_summary.csv": {
+      "path": "method_contract/05y7/manuscript_q10_recalibration_summary.csv",
+      "sha256": "bcae635222db1db2d285d64fe24743cfdf9d405c311b343be9821bae08347947",
+      "size_bytes": 228
+    },
+    "method_contract/05y7/manuscript_q10_recalibration_text.txt": {
+      "path": "method_contract/05y7/manuscript_q10_recalibration_text.txt",
+      "sha256": "b34f03f27edbe79799a68e42eb2dc9a689bae8e4db498d56523773383e52719f",
+      "size_bytes": 2125
+    },
+    "method_contract/05y7/05y7_README.txt": {
+      "path": "method_contract/05y7/05y7_README.txt",
+      "sha256": "cd15bc772e78f79a6bdc0806dabe3e9b39d5e1db5723e9ad85e530cb3030af7d",
+      "size_bytes": 602
+    }
+  },
+  "rewrite_policy": "05y7 manuscript-facing assets are immutable summaries of the frozen 05y6 result. Do not select an alternative threshold or modify endpoint values using the 05y5 fresh bank."
+}

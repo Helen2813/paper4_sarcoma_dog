@@ -1,0 +1,30 @@
+{
+  "all_generated_seed_values_unique_across_simulation_reference_subsample_fit_roles": true,
+  "fresh_simulation_seed_count": 400,
+  "intersection": [],
+  "intersection_count": 0,
+  "prior_sources": {
+    "paper5/method_contract/05a/simulation_replicate_registry.csv": {
+      "rows": 320,
+      "seed_fields": 1,
+      "unique_seeds": 320
+    },
+    "paper5/method_contract/05a1/final_gate_calibration_replicates.csv": {
+      "rows": 3100,
+      "seed_fields": 1,
+      "unique_seeds": 3100
+    },
+    "paper5/method_contract/05b_v2/architecture_screening_data_manifest.csv": {
+      "rows": 720,
+      "seed_fields": 1,
+      "unique_seeds": 720
+    },
+    "paper5/method_contract/05f2/full_run_progress_manifest.csv": {
+      "rows": 3100,
+      "seed_fields": 1,
+      "unique_seeds": 3100
+    }
+  },
+  "prior_unique_simulation_seed_count": 3820,
+  "total_generated_seed_values": 80800
+}

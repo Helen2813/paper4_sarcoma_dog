@@ -1,0 +1,53 @@
+{
+  "contract_path": "paper5\\method_contract\\05cmp0\\secondary_comparator_selection_contract.json",
+  "contract_sha256": "fd4f16510ca9b11fb78a6aad65911e526b4b0c0e12abcc5a40a4df2d5a50b699",
+  "contract_version": "sable-mo-secondary-comparator-selection-contract-v1",
+  "created_at_utc": "2026-08-21T22:01:45+00:00",
+  "generated_files": {
+    "paper5\\method_contract\\05cmp0\\05cmp0_README.txt": {
+      "path": "paper5\\method_contract\\05cmp0\\05cmp0_README.txt",
+      "sha256": "dd1f6016f0b0958ff30c9ffab9e5fc968eb090737cad5e33507aea6de6fcd50b",
+      "size_bytes": 2655
+    },
+    "paper5\\method_contract\\05cmp0\\secondary_comparator_benchmark_policy.json": {
+      "path": "paper5\\method_contract\\05cmp0\\secondary_comparator_benchmark_policy.json",
+      "sha256": "82d5a24ac64f202c5871538a40da1de80adf458493fa12be8ac039d81ee717c8",
+      "size_bytes": 2612
+    },
+    "paper5\\method_contract\\05cmp0\\secondary_comparator_candidate_registry.csv": {
+      "path": "paper5\\method_contract\\05cmp0\\secondary_comparator_candidate_registry.csv",
+      "sha256": "f0ddaf1fea5377f1d829a958b3e04377471abca4860e2556951a7c3a4043d2ea",
+      "size_bytes": 5682
+    },
+    "paper5\\method_contract\\05cmp0\\secondary_comparator_failure_policy.json": {
+      "path": "paper5\\method_contract\\05cmp0\\secondary_comparator_failure_policy.json",
+      "sha256": "285de41086231dafb1c49ce0f74718c48bdf6b578d6dddc58bba979c8b3d4d52",
+      "size_bytes": 2997
+    },
+    "paper5\\method_contract\\05cmp0\\secondary_comparator_literature_search_manifest.json": {
+      "path": "paper5\\method_contract\\05cmp0\\secondary_comparator_literature_search_manifest.json",
+      "sha256": "ff24656efa99f815467deec7b2d9ea5fa2d7fb9e116535693a6bface3dd2042d",
+      "size_bytes": 2187
+    },
+    "paper5\\method_contract\\05cmp0\\secondary_comparator_selected_registry.csv": {
+      "path": "paper5\\method_contract\\05cmp0\\secondary_comparator_selected_registry.csv",
+      "sha256": "e8ee91b573005ad7cb686d21f7a6cd408327b212b74c06f684e1833a132ebb25",
+      "size_bytes": 2995
+    },
+    "paper5\\method_contract\\05cmp0\\secondary_comparator_selection_contract.json": {
+      "path": "paper5\\method_contract\\05cmp0\\secondary_comparator_selection_contract.json",
+      "sha256": "fd4f16510ca9b11fb78a6aad65911e526b4b0c0e12abcc5a40a4df2d5a50b699",
+      "size_bytes": 2626
+    }
+  },
+  "literature_search_date": "2026-08-21",
+  "rewrite_policy": "05cmp0 is immutable. Comparator replacements or eligibility changes require a new versioned prospective amendment. Exact implementation versions/hyperparameters belong to 05cmp1 and must be frozen before scientific comparator runs.",
+  "script_version": "05cmp0-freeze-secondary-comparator-selection-contract-v1-no-cli",
+  "status": "FROZEN_SECONDARY_COMPARATOR_SELECTION_BEFORE_05E_AND_TARGET_RESULTS",
+  "upstream_hashes": {
+    "05a2_amendment": "06b34c4e763a4dd150807afb4777ef4bcbb17abd7dc075b95baf438c9faad445",
+    "05a2_lock": "052544f9230c961ac8d4e6b6cc8f763653fffc6b531468af1f21fa4c28da0932",
+    "05dev0_contract": "e4387664398891334e8f5c4f7524277dbefa43f7f2cc4a3b07a08477d6ac1df5",
+    "05dev0_lock": "8300b430bdf8ee641443782809816c2691777644a534e9ecbc2669b9f7ed7eb9"
+  }
+}

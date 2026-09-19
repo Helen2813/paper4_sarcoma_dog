@@ -1,0 +1,33 @@
+{
+  "capability_specific_examples_to_freeze_in_05cmp1": [
+    "held-out reconstruction only if the published implementation natively exposes reconstruction",
+    "missing-view reconstruction only if the method natively supports missing-view inference",
+    "cross-view retrieval only if separate-view or cross-modal embeddings are natively defined"
+  ],
+  "common_core_endpoints_to_freeze_in_05cmp1": [
+    "latent representation dimensionality",
+    "representation stability under the same declared secondary resampling protocol where feasible",
+    "simulation shared-subspace recovery where a joint latent space is available",
+    "technical/batch association diagnostics where applicable",
+    "runtime and convergence/failure rate"
+  ],
+  "outcome_boundary": "Secondary comparators remain outcome-blind. They cannot be configured or ranked using survival, metastasis, treatment, or biological-program labels.",
+  "policy_version": "paper5-secondary-comparator-benchmark-policy-v1",
+  "reporting_principles": [
+    "Do not create a forced single composite winner score across methods with different native capabilities.",
+    "Use common representation-level endpoints wherever mathematically comparable.",
+    "Report capability-specific endpoints only for methods that natively support them.",
+    "Do not add custom decoders, imputation modules, or supervised heads to a comparator solely to make an endpoint available.",
+    "Separate classical Bayesian and deep VAE comparator results from the frozen primary baseline/ablation table.",
+    "Clearly label all comparator analyses as secondary post-freeze benchmarking."
+  ],
+  "role": "Secondary external benchmarking only. These methods do not participate in primary architecture/profile selection, 05e primary method freeze, or final-gate threshold validation.",
+  "scientific_scope_finalization": "05cmp1, frozen before any comparator scientific result, must define exact secondary simulation/TARGET datasets, metrics, preprocessing adapters, feature-budget policy, split policy, and hyperparameter-selection rule after both selected comparator implementations have been smoke-tested on 05dev0.",
+  "status": "FROZEN_BEFORE_05E_AND_COMPARATOR_SCIENTIFIC_RUN",
+  "timing": {
+    "TARGET_comparator_results": "forbidden before 05e and 05cmp1 implementation freeze",
+    "outcomes": "forbidden for comparator tuning and representation evaluation",
+    "scientific_comparator_results": "forbidden before 05e primary representation-method freeze",
+    "synthetic_smoke_tests": "allowed before 05e using 05dev0 only"
+  }
+}

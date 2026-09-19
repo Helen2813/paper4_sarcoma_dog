@@ -1,0 +1,209 @@
+{
+  "analysis_role": "PROSPECTIVE_POST_DISCOVERY_METHOD_RECALIBRATION_VALIDATION",
+  "contract_version": "paper5-05y3-prospective-q10-recalibration-v1",
+  "created_at_utc": "2026-09-16T00:41:43+00:00",
+  "discovery_provenance": {
+    "candidate_was_selected_after_discovery_frontier": true,
+    "discovery_bank_is_forbidden_for_confirmation": true,
+    "discovery_observation": {
+      "candidate_G19": [
+        41,
+        200
+      ],
+      "candidate_STANDARD": [
+        368,
+        400
+      ],
+      "original_G19": [
+        70,
+        200
+      ],
+      "original_STANDARD": [
+        371,
+        400
+      ]
+    },
+    "frontier_row": {
+      "dominates_frozen_point": "False",
+      "g19_false_event_denominator": "200",
+      "g19_false_event_numerator": "41",
+      "g19_false_event_rate": "0.205",
+      "inclusion_threshold": "0.8",
+      "is_pareto_efficient": "False",
+      "median_threshold": "0.7",
+      "q10_threshold": "0.6",
+      "standard_recovery_denominator": "400",
+      "standard_recovery_numerator": "368",
+      "standard_recovery_rate": "0.92"
+    },
+    "source_stage": "05y2b"
+  },
+  "execution_contract": {
+    "05f1_runner_source": {
+      "path": "paper5/scripts/05f1_run_final_gate_runtime_pilot_gpu_v2.py",
+      "sha256": "a5d19d318538741ae61c26c5c3fd6b9a19b22d1517c91c968bfd41f1daad34c6",
+      "size_bytes": 107679
+    },
+    "05f2_source": {
+      "path": "paper5/scripts/05f2_run_full_final_gate_gpu_resumable.py",
+      "sha256": "8052e6278abef99585e3a90d64480ea7c9a6dc04eb53598bf841f7c9c2431abd",
+      "size_bytes": 53763
+    },
+    "duplicate_model_fits_for_original_and_candidate_rules": false,
+    "fixed_epoch": 248,
+    "fresh_thresholds_are_applied_post_fit_to_the_same_factor_metrics": true,
+    "generator_source": {
+      "path": "paper5/scripts/05b_generate_small_n_multiomics_simulations_v2.py",
+      "sha256": "b4adb1fcb32b65a998ee70e1b72d52e13490194c7ad8e5ddd802b95bf05a28db",
+      "size_bytes": 109309
+    },
+    "neural_profile": "EXACT_FROZEN_FINAL_GATE_PROFILE",
+    "numerical_path": "EXACT_FROZEN_05F2_05F1_RUNNER_PATH",
+    "reason": "Original and candidate differ only in q10 threshold; one fresh model/stability evaluation supplies factor metrics for both nested rules.",
+    "stability_resamples_per_dataset": 100,
+    "stability_subsample_fraction": 0.8
+  },
+  "fresh_bank_design": {
+    "master_seed": 20260915,
+    "permanent_input_npz_bank": false,
+    "scenarios": [
+      {
+        "fresh_datasets": 200,
+        "role": "PRIMARY_CORRELATED_PRIVATE_SPECIFICITY_STRESS",
+        "source_scenario_id": "G19_CORRELATED_PRIVATE_NULL_N62"
+      },
+      {
+        "fresh_datasets": 200,
+        "role": "TRUE_SHARED_SENSITIVITY_SAFETY",
+        "source_scenario_id": "G07_IND_N62_S1P00"
+      }
+    ],
+    "seed_derivation": "SHA256(namespace|master_seed|scenario_id|fresh_replicate_index|purpose|retry) mapped to positive signed-31-bit integer; reject zero, duplicates, and any simulation seed present in frozen prior registries.",
+    "streaming_policy": "Fresh datasets are regenerated deterministically from frozen seed registry immediately before evaluation and may be discarded after each sealed result shard.",
+    "total_fresh_datasets": 400,
+    "zero_simulation_seed_overlap_required_with": [
+      "paper5/method_contract/05a/simulation_replicate_registry.csv",
+      "paper5/method_contract/05b_v2/architecture_screening_data_manifest.csv",
+      "paper5/method_contract/05a1/final_gate_calibration_replicates.csv"
+    ]
+  },
+  "guardrails": [
+    "05f3e remains the authoritative original formal gate.",
+    "The 05y2b discovery bank cannot be used as confirmatory evidence for q10=0.60.",
+    "Only q10 changes from 0.40 to 0.60; all other retention thresholds remain fixed.",
+    "No candidate replacement is allowed after any fresh result is viewed.",
+    "Fresh simulation seeds must have zero overlap with all frozen prior simulation registries.",
+    "Both original and candidate rules are evaluated on identical fresh datasets and identical fitted factor metrics.",
+    "No TARGET clinical outcomes or biological annotations are accessed."
+  ],
+  "only_changed_component": {
+    "candidate": 0.6,
+    "field": "q10_aligned_correlation_min",
+    "original": 0.4
+  },
+  "original_rule": {
+    "inclusion_frequency_min": 0.8,
+    "loading_energy_fraction_per_supported_modality_min": 0.15,
+    "median_aligned_correlation_min": 0.7,
+    "n_supported_modalities_min": 2,
+    "q10_aligned_correlation_min": 0.4,
+    "reference_factor_variance_min": 0.0001
+  },
+  "prospective_confirmation_rule": {
+    "candidate_confirmed": "TRUE iff (1) exact paired specificity test p<0.05 in the required improvement direction, (2) reverse discordance is zero as required by nesting, and (3) candidate STANDARD biological recovery point estimate >=0.80.",
+    "if_not_confirmed": "Report prospective failure/inconclusive result unchanged; do not modify q10 or select another frontier point on this fresh bank.",
+    "no_new_noninferiority_margin": true
+  },
+  "prospective_endpoints": {
+    "primary_specificity_endpoint": {
+      "candidate_event": "at least one candidate-rule retained factor that is neither biological nor technical truth matched",
+      "nesting_requirement": "candidate_event MUST be subset of original_event",
+      "original_event": "at least one original-rule retained factor that is neither biological nor technical truth matched",
+      "paired_by_same_fresh_dataset": true,
+      "population": "G19_CORRELATED_PRIVATE_NULL_N62",
+      "primary_test": {
+        "alpha": 0.05,
+        "method": "exact two-sided McNemar/binomial test on discordant pairs",
+        "required_direction": "candidate false-acceptance rate < original rate"
+      },
+      "report": [
+        "original numerator/200, rate, Wilson 95% CI",
+        "candidate numerator/200, rate, Wilson 95% CI",
+        "rescued datasets original=1 candidate=0",
+        "reverse discordance original=0 candidate=1 (must equal 0)",
+        "paired absolute rate reduction",
+        "bootstrap 95% CI for paired rate reduction",
+        "exact McNemar/binomial p-value"
+      ],
+      "unit": "dataset"
+    },
+    "sensitivity_safety_endpoint": {
+      "candidate_recovery": "candidate-retained AND biological_truth_match",
+      "existing_safety_floor": 0.8,
+      "floor_provenance": "original frozen D02 threshold",
+      "fresh_denominator": 800,
+      "original_recovery": "retained AND biological_truth_match",
+      "population": "G07_IND_N62_S1P00",
+      "report": [
+        "original numerator/800 and rate",
+        "candidate numerator/800 and rate",
+        "candidate Wilson 95% CI",
+        "paired lost/gained truth opportunities relative to original"
+      ],
+      "truth_factors_per_dataset": 4,
+      "unit": "truth-factor opportunity"
+    }
+  },
+  "script_version": "05y3-freeze-prospective-q10-recalibration-contract-v1-no-cli",
+  "single_candidate_rule": {
+    "inclusion_frequency_min": 0.8,
+    "loading_energy_fraction_per_supported_modality_min": 0.15,
+    "median_aligned_correlation_min": 0.7,
+    "n_supported_modalities_min": 2,
+    "q10_aligned_correlation_min": 0.6,
+    "reference_factor_variance_min": 0.0001
+  },
+  "sources": {
+    "05a1_scenarios": {
+      "path": "paper5/method_contract/05a1/final_gate_calibration_scenarios.csv",
+      "sha256": "8695887dc0b27b69d87fa944ce1068fe149718ddf6c00a7d91e71ee1b1b306c2",
+      "size_bytes": 13650
+    },
+    "05a_method_contract": {
+      "path": "paper5/method_contract/05a/ai_method_contract.json",
+      "sha256": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+      "size_bytes": 10644
+    },
+    "05f3e_lock": {
+      "path": "paper5/method_contract/05f3e/final_gate_results_lock.json",
+      "sha256": "6d691237662d633a4f8d8294126a33b32c5694372a6e58de71bd45731d67c397",
+      "size_bytes": 3302
+    },
+    "05f4b_lock": {
+      "path": "paper5/method_contract/05f4b/05f4b_manuscript_assets_lock.json",
+      "sha256": "43bee35781ff1d70e1f2b7f8bfd762847becc3893c9a09653eb968a889d0f28f",
+      "size_bytes": 5322
+    },
+    "05y2b_frontier": {
+      "path": "paper5/method_contract/05y2b/retention_threshold_frontier.csv",
+      "sha256": "cff9a7d910983b46dc026b70c11df771c9275aa7a794d104c1678dac8ea27bbb",
+      "size_bytes": 471878
+    },
+    "05y2b_lock": {
+      "path": "paper5/method_contract/05y2b/05y2b_results_lock.json",
+      "sha256": "2dbf502d59a4a9671381a79606c20ee58352fcfb16c0ac6ff5a08ae622b352c9",
+      "size_bytes": 3095
+    },
+    "05y2b_result": {
+      "path": "paper5/method_contract/05y2b/correlated_private_failure_diagnostic_result.json",
+      "sha256": "dd1d255213853424a006b07073982d0951d3339695b1e65977172ab18a04f3ab",
+      "size_bytes": 7194
+    },
+    "generator_05b": {
+      "path": "paper5/scripts/05b_generate_small_n_multiomics_simulations_v2.py",
+      "sha256": "b4adb1fcb32b65a998ee70e1b72d52e13490194c7ad8e5ddd802b95bf05a28db",
+      "size_bytes": 109309
+    }
+  },
+  "status": "FROZEN_PROSPECTIVE_Q10_RECALIBRATION_BEFORE_FRESH_BANK"
+}

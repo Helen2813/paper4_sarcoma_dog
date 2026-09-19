@@ -1,0 +1,26 @@
+{
+  "all_view_latent_frobenius_norm": 4.563504669899359,
+  "feature_counts": {
+    "CNV": 8,
+    "METHYLATION": 13,
+    "RNA": 9
+  },
+  "fixture_id": "05c2a-gaussian-oos-projection-v1",
+  "latent_rank": 4,
+  "max_abs_difference_raw_XW_vs_posterior": 15.677348752386818,
+  "missing_view_reconstruction_mse": {
+    "CNV": 1.009646224195144,
+    "METHYLATION": 0.646306013328975,
+    "RNA": 0.7997304984842055
+  },
+  "n_samples": 7,
+  "normal_equation_residual_norm": 8.881784197001252e-16,
+  "raw_XW_is_frozen_projection": false,
+  "seed": 20260815,
+  "single_view_latent_frobenius_norm": {
+    "CNV": 4.674371296420358,
+    "METHYLATION": 3.5451100835239426,
+    "RNA": 4.251488482855068
+  },
+  "status": "PASS"
+}

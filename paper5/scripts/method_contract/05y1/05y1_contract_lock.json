@@ -1,0 +1,20 @@
+{
+  "contract": {
+    "path": "paper5/method_contract/05y1/correlated_private_failure_diagnostic_contract.json",
+    "sha256": "71ef109768946bbb28be2bd70e6eb7985be22bcda6c4ef8c4611b6f97b82ffa1",
+    "size_bytes": 10722
+  },
+  "contract_version": "paper5-05y1-postunblinding-correlated-private-diagnostic-v1",
+  "created_at_utc": "2026-09-16T00:15:45+00:00",
+  "readme": {
+    "path": "paper5/method_contract/05y1/05y1_README.txt",
+    "sha256": "17f4c9b674e1698fb44040a77b678788328d641235645aa479c18f58aeaf2aab",
+    "size_bytes": 884
+  },
+  "rewrite_policy": "05y1 is frozen before 05y2 computes any failure diagnostic. Do not change predictor definition, classifier, anchors, grid, bootstrap plan, or interpretation rules after viewing results.",
+  "scientific_result_computed": false,
+  "script_path": "paper5/scripts/05y1_freeze_correlated_private_failure_diagnostic_contract.py",
+  "script_sha256": "d5364331d1cbcbbbbfa03c9b128ae2236bfc8c136c605e860334e842d7f3909d",
+  "script_version": "05y1-freeze-correlated-private-failure-diagnostic-contract-v1-no-cli",
+  "status": "FROZEN_POSTUNBLINDING_EXPLORATORY_DIAGNOSTIC_BEFORE_RESULT_COMPUTATION"
+}

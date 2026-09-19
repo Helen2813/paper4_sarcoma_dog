@@ -1,0 +1,129 @@
+{
+  "contract_version": "paper5-neural-confirmatory-ablation-benchmark-v1",
+  "created_at_utc": "2026-08-21T14:05:06.662514+00:00",
+  "execution_protocol": {
+    "path": "paper5\\method_contract\\05d4\\neural_confirmatory_ablation_execution_protocol.json",
+    "sha256": "8e71e9dc1c649f8f2d334f2373547ec7f632d584f431e63ab229c0089cb3ffb6"
+  },
+  "interpretation_guardrails": [
+    "05d4 uses confirmatory simulation replicate indices 11-20 only.",
+    "The 05d3-frozen ARCH_COMPACT__REG_WEAK profile is reused without retuning.",
+    "V4 stability is not applied in 05d4 because the frozen stability gate is a resampling component, not a training loss.",
+    "V4-minus-V3 is not interpreted as a stability-gate ablation in this stage.",
+    "V5 remains secondary exploratory and is not eligible for final method freeze.",
+    "No TARGET, outcome, clinical, biological-program, or final-gate calibration data were used.",
+    "No final representation method is selected in 05d4."
+  ],
+  "next_required_stage": "05d5_evaluate_sable_mo_stability_gpu.py",
+  "outputs": {
+    "paper5\\method_contract\\05d4\\neural_confirmatory_ablation_README.txt": {
+      "sha256": "c63bd7262ed4dc0f630aa809fa4ed074b4ff3c7c5a7020460dbe20cc4d325ba9",
+      "size_bytes": 1706
+    },
+    "paper5\\method_contract\\05d4\\neural_confirmatory_ablation_execution_protocol.json": {
+      "sha256": "8e71e9dc1c649f8f2d334f2373547ec7f632d584f431e63ab229c0089cb3ffb6",
+      "size_bytes": 13816
+    },
+    "paper5\\method_contract\\05d4\\neural_confirmatory_ablation_reference_fixture.json": {
+      "sha256": "247e0f900ce931c6338b59269704075dffc1f9e8282d02ad8007befb077dacae",
+      "size_bytes": 1091
+    },
+    "paper5\\method_contract\\05d4\\neural_confirmatory_ablation_shard_manifest.csv": {
+      "sha256": "eae6a4258034631381912e792a99dd6482d297c6a8f7f903514a415d17c23bd0",
+      "size_bytes": 12247558
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation\\neural_confirmatory_ablation_delta_summary.csv": {
+      "sha256": "951030acb0a01d292d3b9b9daac4f7dce09a89f2e9da2bca64542ee2a07cc20b",
+      "size_bytes": 3283
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation\\neural_confirmatory_dataset_variant_metrics.csv.gz": {
+      "sha256": "9249e41112eb4401e5e0e34ab8c7b3ede2440b5b018cba8e14ab93ed10c43a3f",
+      "size_bytes": 539393
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation\\neural_confirmatory_fit_audit.csv.gz": {
+      "sha256": "7c8f2a6b583b4470d269712ebbf0d3e52e1963bf500c77ed32be3e967902f4da",
+      "size_bytes": 3711301
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation\\neural_confirmatory_fold_seed_metrics.csv.gz": {
+      "sha256": "cd41f7a7817d7be50bb81e7dbaff17a734cd8d0d8df5a19b69852d5e0799c2fb",
+      "size_bytes": 4290814
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation\\neural_confirmatory_preprocessing_audit.csv.gz": {
+      "sha256": "c021a990ec663b3c7085341996eed57bfa2989b18c55d5b30484d33cd380f49e",
+      "size_bytes": 1333698
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation\\neural_confirmatory_scenario_variant_summary.csv": {
+      "sha256": "298b16500911a24eabcd24628d18ee447b9955d0119e65fe7d181a03d44fbcba",
+      "size_bytes": 158720
+    },
+    "paper5\\results\\simulation_benchmark\\05d_neural\\confirmatory_ablation\\neural_confirmatory_variant_summary.csv": {
+      "sha256": "d07a2681fa0894d51d671447109e28d2395437fb9a4c1b2a8d387e5572e8b105",
+      "size_bytes": 8727
+    }
+  },
+  "reference_fixture": {
+    "path": "paper5\\method_contract\\05d4\\neural_confirmatory_ablation_reference_fixture.json",
+    "sha256": "247e0f900ce931c6338b59269704075dffc1f9e8282d02ad8007befb077dacae",
+    "size_bytes": 1091
+  },
+  "scientific_state": {
+    "TARGET_model_fitting_performed": false,
+    "biological_annotations_used_for_model_selection": false,
+    "clinical_labels_loaded": false,
+    "confirmatory_V4_stability_performed": false,
+    "confirmatory_neural_ablation_performed": true,
+    "confirmatory_replicates_11_to_20_accessed": true,
+    "final_gate_calibration_data_used": false,
+    "neural_profile_frozen": true,
+    "outcomes_loaded": false,
+    "representation_method_selected": false
+  },
+  "scope": {
+    "confirmatory_datasets": 360,
+    "dataset_variant_rows": 2160,
+    "descriptive_ablation_contrasts": 3,
+    "failed_fold_seed_evaluations": 0,
+    "fit_audit_rows": 43200,
+    "fold_seed_evaluations": 21600,
+    "passed_fold_seed_evaluations": 21600,
+    "preprocessing_audit_rows": 129600,
+    "profile_id": "ARCH_COMPACT__REG_WEAK",
+    "scenario_variant_rows": 216,
+    "variant_summary_rows": 6,
+    "variants": [
+      "V0_BALANCED_AE",
+      "V1_SHARED_PRIVATE_AE",
+      "V2_CONTRASTIVE_SPAE",
+      "V3_DROPOUT_SPAE",
+      "V4_SABLE_MO",
+      "V5_SABLE_VAE"
+    ]
+  },
+  "script_version": "05d4-fit-neural-ablation-benchmark-gpu-v1.2-verified-fixture-hotfix-no-cli",
+  "shard_manifest": {
+    "n_rows": 21600,
+    "path": "paper5\\method_contract\\05d4\\neural_confirmatory_ablation_shard_manifest.csv",
+    "sha256": "eae6a4258034631381912e792a99dd6482d297c6a8f7f903514a415d17c23bd0"
+  },
+  "upstream_hashes": {
+    "paper5\\method_contract\\05a\\ai_method_contract.json": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+    "paper5\\method_contract\\05a\\sable_mo_ablation_registry.csv": "0c4fdfeea5aec2c2e74c8570855c930a978097eb2b6607c87eecb5066079a6ba",
+    "paper5\\method_contract\\05b_v2\\architecture_screening_data_manifest.csv": "f3980e88aff408b65cbfce96aca50bad4fc08ecece2bc42bbc04f365c35d9c87",
+    "paper5\\method_contract\\05d0\\neural_environment_contract.json": "a5647e7cae4548bb1992385600dd6906cbcca4138636d1a7adb0692d680d3f92",
+    "paper5\\method_contract\\05d0\\neural_environment_lock.json": "e1420d82a1de564efa3b141aa0eb5249b502232ece61c9aaeacdc1f152b71914",
+    "paper5\\method_contract\\05d1\\neural_architecture_regularization_profile_grid.csv": "118b2fd4c16751f0b83ac3053f726f9421db26949ab98a8a531ff584c194ee32",
+    "paper5\\method_contract\\05d1\\neural_confirmatory_ablation_fit_seed_registry.csv": "bdc528af0e3d41e1d2713ad9557f21ca88a3faee5eb3f634d1607a94fe2007cb",
+    "paper5\\method_contract\\05d1\\neural_loss_and_architecture_contract.json": "b90ded1d011ee3210154c2102389df0b4e0c8fcf668b70d7e2b8e14184e3f6b1",
+    "paper5\\method_contract\\05d1\\neural_simulation_dataset_role_registry.csv": "5dace3ec427e5b6765b1972ff7be817e8ad933ed03688d711c9fe64c61b85d71",
+    "paper5\\method_contract\\05d1\\neural_simulation_evaluation_protocol.json": "3cc4660551ca8d5731c2043096a68a0a675505b1a2a2a7d6971b41b526c4dd03",
+    "paper5\\method_contract\\05d1\\neural_simulation_protocol_lock.json": "b3f7d0c6528edaac8d91289332eb0fdf4a53cf1cc9d2c35b052d3987e3002066",
+    "paper5\\method_contract\\05d2_v2\\neural_profile_screen_results_lock.json": "1b5ef05f7d71393785a98d386c5b517e0dc51af9083a0643dd9e89488bb3d797",
+    "paper5\\method_contract\\05d2_v2\\neural_profile_screen_results_manifest.json": "441e2d33b2353f06047f67a6725bd7a09984f7a67b7c6864e29c5a0928f46bb3",
+    "paper5\\method_contract\\05d3\\selected_neural_profile.csv": "aeeb840f525cf4bd0e9d5946c90dbfbfc735b0950fa4f7adb10c81f2e43550d9",
+    "paper5\\method_contract\\05d3\\selected_neural_profile.json": "83ccee90a20b2fc51cec13de3f831835c85bbffc549a53d3cc6867c7bbfd1f0d",
+    "paper5\\method_contract\\05d3\\selected_neural_profile_lock.json": "e91353d9e399842cbf2eae2e2d254c10229692fa00141f0fe7039a0888c9461f",
+    "paper5\\results\\simulation_benchmark\\05c1_linear_baselines\\linear_simulation_split_registry.csv.gz": "c683436960893ce89254ecf8d79bc8ed64930ba44222425858968da753e60279",
+    "paper5\\scripts\\05c1_fit_linear_simulation_baselines.py": "c2c91b4ad274f78ccc369e6fca765102285cf3d9c8191f3c33f4a450b7426367",
+    "paper5\\scripts\\05d2v2_screen_neural_profiles_gpu_syncfree_pathfix.py": "05ae6923ce588c137bc6f4aa934262181dd99f4ebe6bec3250e4b7cd54ed1ff3"
+  }
+}

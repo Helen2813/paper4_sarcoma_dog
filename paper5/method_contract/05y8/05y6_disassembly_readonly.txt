@@ -1,0 +1,2993 @@
+READ-ONLY DISASSEMBLY OF FROZEN 05Y6 BYTECODE
+================================================
+
+PYC SHA256: bad3ee4833918b578c76daa013ee8e92de72f945c0f2b976db7dc75873ce39e8
+Embedded source filename: .\paper5\scripts\05y6_aggregate_prospective_q10_validation.py
+This disassembly was produced without executing the code object.
+It is not a claim of exact source-code reconstruction.
+
+  2           0 LOAD_CONST               0 (0)
+              2 LOAD_CONST               1 (('annotations',))
+              4 IMPORT_NAME              0 (__future__)
+              6 IMPORT_FROM              1 (annotations)
+              8 STORE_NAME               1 (annotations)
+             10 POP_TOP
+
+  4          12 LOAD_CONST               0 (0)
+             14 LOAD_CONST               2 (None)
+             16 IMPORT_NAME              2 (csv)
+             18 STORE_NAME               2 (csv)
+
+  5          20 LOAD_CONST               0 (0)
+             22 LOAD_CONST               2 (None)
+             24 IMPORT_NAME              3 (hashlib)
+             26 STORE_NAME               3 (hashlib)
+
+  6          28 LOAD_CONST               0 (0)
+             30 LOAD_CONST               2 (None)
+             32 IMPORT_NAME              4 (json)
+             34 STORE_NAME               4 (json)
+
+  7          36 LOAD_CONST               0 (0)
+             38 LOAD_CONST               2 (None)
+             40 IMPORT_NAME              5 (math)
+             42 STORE_NAME               5 (math)
+
+  8          44 LOAD_CONST               0 (0)
+             46 LOAD_CONST               2 (None)
+             48 IMPORT_NAME              6 (os)
+             50 STORE_NAME               6 (os)
+
+  9          52 LOAD_CONST               0 (0)
+             54 LOAD_CONST               2 (None)
+             56 IMPORT_NAME              7 (tempfile)
+             58 STORE_NAME               7 (tempfile)
+
+ 10          60 LOAD_CONST               0 (0)
+             62 LOAD_CONST               3 (('Path',))
+             64 IMPORT_NAME              8 (pathlib)
+             66 IMPORT_FROM              9 (Path)
+             68 STORE_NAME               9 (Path)
+             70 POP_TOP
+
+ 11          72 LOAD_CONST               0 (0)
+             74 LOAD_CONST               4 (('Any',))
+             76 IMPORT_NAME             10 (typing)
+             78 IMPORT_FROM             11 (Any)
+             80 STORE_NAME              11 (Any)
+             82 POP_TOP
+
+ 13          84 LOAD_CONST               0 (0)
+             86 LOAD_CONST               2 (None)
+             88 IMPORT_NAME             12 (numpy)
+             90 STORE_NAME              13 (np)
+
+ 14          92 LOAD_CONST               0 (0)
+             94 LOAD_CONST               2 (None)
+             96 IMPORT_NAME             14 (pandas)
+             98 STORE_NAME              15 (pd)
+
+ 17         100 LOAD_CONST               5 ('05y6-aggregate-prospective-q10-validation-v1-no-cli')
+            102 STORE_NAME              16 (SCRIPT_VERSION)
+
+ 18         104 LOAD_CONST               6 ('PROSPECTIVE_Q10_RECALIBRATION_RESULT_FROZEN')
+            106 STORE_NAME              17 (STATUS)
+
+ 20         108 LOAD_NAME                9 (Path)
+            110 LOAD_NAME               18 (__file__)
+            112 CALL_FUNCTION            1
+            114 LOAD_METHOD             19 (resolve)
+            116 CALL_METHOD              0
+            118 STORE_NAME              20 (SCRIPT_PATH)
+
+ 21         120 LOAD_NAME               20 (SCRIPT_PATH)
+            122 LOAD_ATTR               21 (parents)
+            124 LOAD_CONST               7 (1)
+            126 BINARY_SUBSCR
+            128 STORE_NAME              22 (PAPER5_ROOT)
+
+ 22         130 LOAD_NAME               20 (SCRIPT_PATH)
+            132 LOAD_ATTR               21 (parents)
+            134 LOAD_CONST               8 (2)
+            136 BINARY_SUBSCR
+            138 STORE_NAME              23 (PROJECT_ROOT)
+
+ 24         140 LOAD_NAME               22 (PAPER5_ROOT)
+            142 LOAD_CONST               9 ('method_contract')
+            144 BINARY_TRUE_DIVIDE
+            146 LOAD_CONST              10 ('05y3')
+            148 BINARY_TRUE_DIVIDE
+            150 STORE_NAME              24 (DIR_05Y3)
+
+ 25         152 LOAD_NAME               24 (DIR_05Y3)
+            154 LOAD_CONST              11 ('prospective_q10_recalibration_contract.json')
+            156 BINARY_TRUE_DIVIDE
+            158 STORE_NAME              25 (CONTRACT_05Y3)
+
+ 26         160 LOAD_NAME               24 (DIR_05Y3)
+            162 LOAD_CONST              12 ('05y3_contract_lock.json')
+            164 BINARY_TRUE_DIVIDE
+            166 STORE_NAME              26 (LOCK_05Y3)
+
+ 28         168 LOAD_NAME               22 (PAPER5_ROOT)
+            170 LOAD_CONST               9 ('method_contract')
+            172 BINARY_TRUE_DIVIDE
+            174 LOAD_CONST              13 ('05y4')
+            176 BINARY_TRUE_DIVIDE
+            178 STORE_NAME              27 (DIR_05Y4)
+
+ 29         180 LOAD_NAME               27 (DIR_05Y4)
+            182 LOAD_CONST              14 ('05y4_seed_bank_lock.json')
+            184 BINARY_TRUE_DIVIDE
+            186 STORE_NAME              28 (LOCK_05Y4)
+
+ 31         188 LOAD_NAME               22 (PAPER5_ROOT)
+            190 LOAD_CONST               9 ('method_contract')
+            192 BINARY_TRUE_DIVIDE
+            194 LOAD_CONST              15 ('05y5')
+            196 BINARY_TRUE_DIVIDE
+            198 STORE_NAME              29 (DIR_05Y5)
+
+ 32         200 LOAD_NAME               29 (DIR_05Y5)
+            202 LOAD_CONST              16 ('05y5_execution_completion_lock.json')
+            204 BINARY_TRUE_DIVIDE
+            206 STORE_NAME              30 (COMPLETION_05Y5)
+
+ 33         208 LOAD_NAME               29 (DIR_05Y5)
+            210 LOAD_CONST              17 ('fresh_q10_validation_progress_manifest.csv')
+            212 BINARY_TRUE_DIVIDE
+            214 STORE_NAME              31 (PROGRESS_05Y5)
+
+ 35         216 LOAD_NAME               22 (PAPER5_ROOT)
+            218 LOAD_CONST               9 ('method_contract')
+            220 BINARY_TRUE_DIVIDE
+            222 LOAD_CONST              18 ('05y6')
+            224 BINARY_TRUE_DIVIDE
+            226 STORE_NAME              32 (OUTPUT_DIR)
+
+ 36         228 LOAD_NAME               32 (OUTPUT_DIR)
+            230 LOAD_CONST              19 ('fresh_g19_paired_specificity.csv')
+            232 BINARY_TRUE_DIVIDE
+            234 STORE_NAME              33 (OUT_G19)
+
+ 37         236 LOAD_NAME               32 (OUTPUT_DIR)
+            238 LOAD_CONST              20 ('fresh_standard_recovery_by_dataset.csv')
+            240 BINARY_TRUE_DIVIDE
+            242 STORE_NAME              34 (OUT_STANDARD)
+
+ 38         244 LOAD_NAME               32 (OUTPUT_DIR)
+            246 LOAD_CONST              21 ('prospective_q10_validation_summary.csv')
+            248 BINARY_TRUE_DIVIDE
+            250 STORE_NAME              35 (OUT_SUMMARY)
+
+ 39         252 LOAD_NAME               32 (OUTPUT_DIR)
+            254 LOAD_CONST              22 ('prospective_q10_validation_result.json')
+            256 BINARY_TRUE_DIVIDE
+            258 STORE_NAME              36 (OUT_RESULT)
+
+ 40         260 LOAD_NAME               32 (OUTPUT_DIR)
+            262 LOAD_CONST              23 ('05y6_README.txt')
+            264 BINARY_TRUE_DIVIDE
+            266 STORE_NAME              37 (OUT_README)
+
+ 41         268 LOAD_NAME               32 (OUTPUT_DIR)
+            270 LOAD_CONST              24 ('05y6_results_lock.json')
+            272 BINARY_TRUE_DIVIDE
+            274 STORE_NAME              38 (OUT_LOCK)
+
+ 43         276 LOAD_CONST              25 ('SEALED_FRESH_Q10_VALIDATION_EXECUTION_COMPLETE_NO_AGGREGATION')
+            278 STORE_NAME              39 (EXPECTED_COMPLETION_STATUS)
+
+ 44         280 LOAD_CONST              26 (200)
+            282 STORE_NAME              40 (EXPECTED_G19_DATASETS)
+
+ 45         284 LOAD_CONST              26 (200)
+            286 STORE_NAME              41 (EXPECTED_STANDARD_DATASETS)
+
+ 46         288 LOAD_CONST              27 (800)
+            290 STORE_NAME              42 (EXPECTED_STANDARD_OPPORTUNITIES)
+
+ 47         292 LOAD_CONST              28 (0.4)
+            294 STORE_NAME              43 (ORIGINAL_Q10)
+
+ 48         296 LOAD_CONST              29 (0.6)
+            298 STORE_NAME              44 (CANDIDATE_Q10)
+
+ 49         300 LOAD_CONST              30 (10000)
+            302 STORE_NAME              45 (BOOTSTRAP_REPLICATES)
+
+ 50         304 LOAD_CONST              31 (20260916)
+            306 STORE_NAME              46 (BOOTSTRAP_SEED)
+
+ 51         308 LOAD_CONST              32 (0.05)
+            310 STORE_NAME              47 (ALPHA)
+
+ 54         312 LOAD_CONST              93 (('path', 'Path', 'return', 'str'))
+            314 LOAD_CONST              37 (<code object sha256_file at 0x00000191E65AE4A0, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 54>)
+            316 LOAD_CONST              38 ('sha256_file')
+            318 MAKE_FUNCTION            4 (annotations)
+            320 STORE_NAME              48 (sha256_file)
+
+ 62         322 LOAD_CONST              93 (('path', 'Path', 'return', 'str'))
+            324 LOAD_CONST              39 (<code object relative_path at 0x00000191E65BE600, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 62>)
+            326 LOAD_CONST              40 ('relative_path')
+            328 MAKE_FUNCTION            4 (annotations)
+            330 STORE_NAME              49 (relative_path)
+
+ 66         332 LOAD_CONST              94 (('value', 'Any', 'return', 'Path'))
+            334 LOAD_CONST              43 (<code object resolve_project_path at 0x00000191E65BFAA0, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 66>)
+            336 LOAD_CONST              44 ('resolve_project_path')
+            338 MAKE_FUNCTION            4 (annotations)
+            340 STORE_NAME              50 (resolve_project_path)
+
+ 71         342 LOAD_CONST              95 (('path', 'Path', 'return', 'None'))
+            344 LOAD_CONST              46 (<code object require_file at 0x00000191E65CB9F0, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 71>)
+            346 LOAD_CONST              47 ('require_file')
+            348 MAKE_FUNCTION            4 (annotations)
+            350 STORE_NAME              51 (require_file)
+
+ 76         352 LOAD_CONST              96 (('path', 'Path', 'return', 'Any'))
+            354 LOAD_CONST              48 (<code object load_json at 0x00000191E65CA970, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 76>)
+            356 LOAD_CONST              49 ('load_json')
+            358 MAKE_FUNCTION            4 (annotations)
+            360 STORE_NAME              52 (load_json)
+
+ 80         362 LOAD_CONST              97 (('path', 'Path', 'return', 'dict[str, Any]'))
+            364 LOAD_CONST              51 (<code object file_record at 0x00000191E65C9F20, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 80>)
+            366 LOAD_CONST              52 ('file_record')
+            368 MAKE_FUNCTION            4 (annotations)
+            370 STORE_NAME              53 (file_record)
+
+ 88         372 LOAD_CONST              98 (('value', 'Any', 'return', 'bool'))
+            374 LOAD_CONST              54 (<code object parse_bool at 0x00000191E65C9FD0, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 88>)
+            376 LOAD_CONST              55 ('parse_bool')
+            378 MAKE_FUNCTION            4 (annotations)
+            380 STORE_NAME              54 (parse_bool)
+
+103         382 LOAD_CONST              99 (('value', 'Any', 'path', 'Path', 'return', 'None'))
+            384 LOAD_CONST              56 (<code object write_json_atomic at 0x00000191E65CBD60, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 103>)
+            386 LOAD_CONST              57 ('write_json_atomic')
+            388 MAKE_FUNCTION            4 (annotations)
+            390 STORE_NAME              55 (write_json_atomic)
+
+125         392 LOAD_CONST             100 (('text', 'str', 'path', 'Path', 'return', 'None'))
+            394 LOAD_CONST              59 (<code object write_text_atomic at 0x00000191E65E8190, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 125>)
+            396 LOAD_CONST              60 ('write_text_atomic')
+            398 MAKE_FUNCTION            4 (annotations)
+            400 STORE_NAME              56 (write_text_atomic)
+
+138         402 LOAD_CONST             101 (('rows', 'list[dict[str, Any]]', 'path', 'Path', 'return', 'None'))
+            404 LOAD_CONST              63 (<code object write_csv_atomic at 0x00000191E65E83A0, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 138>)
+            406 LOAD_CONST              64 ('write_csv_atomic')
+            408 MAKE_FUNCTION            4 (annotations)
+            410 STORE_NAME              57 (write_csv_atomic)
+
+157         412 LOAD_CONST             102 (('k', 'int', 'n', 'int', 'return', 'tuple[float, float]'))
+            414 LOAD_CONST              69 (<code object wilson at 0x00000191E65E8BE0, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 157>)
+            416 LOAD_CONST              70 ('wilson')
+            418 MAKE_FUNCTION            4 (annotations)
+            420 STORE_NAME              58 (wilson)
+
+170         422 LOAD_CONST             103 (('rescued', 'int', 'reverse', 'int', 'return', 'float'))
+            424 LOAD_CONST              74 (<code object exact_two_sided_nested_mcnemar at 0x00000191E65EAA20, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 170>)
+            426 LOAD_CONST              75 ('exact_two_sided_nested_mcnemar')
+            428 MAKE_FUNCTION            4 (annotations)
+            430 STORE_NAME              59 (exact_two_sided_nested_mcnemar)
+
+183         432 LOAD_CONST             104 (('original', 'np.ndarray', 'candidate', 'np.ndarray', 'return', 'tuple[float, float]'))
+            434 LOAD_CONST              79 (<code object bootstrap_paired_reduction at 0x00000191E65EAB80, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 183>)
+            436 LOAD_CONST              80 ('bootstrap_paired_reduction')
+            438 MAKE_FUNCTION            4 (annotations)
+            440 STORE_NAME              60 (bootstrap_paired_reduction)
+
+198         442 LOAD_CONST             105 (('return', 'tuple[dict[str, Any], dict[str, Any], pd.DataFrame]'))
+            444 LOAD_CONST              82 (<code object verify_inputs at 0x00000191E65F52C0, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 198>)
+            446 LOAD_CONST              83 ('verify_inputs')
+            448 MAKE_FUNCTION            4 (annotations)
+            450 STORE_NAME              61 (verify_inputs)
+
+244         452 LOAD_CONST             106 (('factor', 'dict[str, Any]', 'return', 'bool'))
+            454 LOAD_CONST              85 (<code object candidate_keep at 0x00000191E65F4EA0, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 244>)
+            456 LOAD_CONST              86 ('candidate_keep')
+            458 MAKE_FUNCTION            4 (annotations)
+            460 STORE_NAME              62 (candidate_keep)
+
+250         462 LOAD_CONST             107 (('factor', 'dict[str, Any]', 'contract', 'dict[str, Any]', 'return', 'None'))
+            464 LOAD_CONST              88 (<code object validate_original_rule_fields at 0x00000191E65F5210, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 250>)
+            466 LOAD_CONST              89 ('validate_original_rule_fields')
+            468 MAKE_FUNCTION            4 (annotations)
+            470 STORE_NAME              63 (validate_original_rule_fields)
+
+272         472 LOAD_CONST             108 (('return', 'None'))
+            474 LOAD_CONST              90 (<code object main at 0x00000191E6615580, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 272>)
+            476 LOAD_CONST              91 ('main')
+            478 MAKE_FUNCTION            4 (annotations)
+            480 STORE_NAME              64 (main)
+
+684         482 LOAD_NAME               65 (__name__)
+            484 LOAD_CONST              92 ('__main__')
+            486 COMPARE_OP               2 (==)
+            488 POP_JUMP_IF_FALSE      250 (to 500)
+
+685         490 LOAD_NAME               64 (main)
+            492 CALL_FUNCTION            0
+            494 POP_TOP
+            496 LOAD_CONST               2 (None)
+            498 RETURN_VALUE
+
+684     >>  500 LOAD_CONST               2 (None)
+            502 RETURN_VALUE
+
+Disassembly of <code object sha256_file at 0x00000191E65AE4A0, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 54>:
+ 55           0 LOAD_GLOBAL              0 (hashlib)
+              2 LOAD_METHOD              1 (sha256)
+              4 CALL_METHOD              0
+              6 STORE_FAST               1 (h)
+
+ 56           8 LOAD_FAST                0 (path)
+             10 LOAD_METHOD              2 (open)
+             12 LOAD_CONST               1 ('rb')
+             14 CALL_METHOD              1
+             16 SETUP_WITH              28 (to 74)
+             18 STORE_DEREF              0 (fh)
+
+ 57          20 LOAD_GLOBAL              3 (iter)
+             22 LOAD_CLOSURE             0 (fh)
+             24 BUILD_TUPLE              1
+             26 LOAD_CONST               2 (<code object <lambda> at 0x00000191E65AE3F0, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 57>)
+             28 LOAD_CONST               3 ('sha256_file.<locals>.<lambda>')
+             30 MAKE_FUNCTION            8 (closure)
+             32 LOAD_CONST               4 (b'')
+             34 CALL_FUNCTION            2
+             36 GET_ITER
+        >>   38 FOR_ITER                 7 (to 54)
+             40 STORE_FAST               2 (chunk)
+
+ 58          42 LOAD_FAST                1 (h)
+             44 LOAD_METHOD              4 (update)
+             46 LOAD_FAST                2 (chunk)
+             48 CALL_METHOD              1
+             50 POP_TOP
+             52 JUMP_ABSOLUTE           19 (to 38)
+
+ 57     >>   54 POP_BLOCK
+
+ 56          56 LOAD_CONST               0 (None)
+             58 DUP_TOP
+             60 DUP_TOP
+             62 CALL_FUNCTION            3
+             64 POP_TOP
+
+ 59          66 LOAD_FAST                1 (h)
+             68 LOAD_METHOD              5 (hexdigest)
+             70 CALL_METHOD              0
+             72 RETURN_VALUE
+
+ 56     >>   74 WITH_EXCEPT_START
+             76 POP_JUMP_IF_TRUE        40 (to 80)
+             78 RERAISE                  1
+        >>   80 POP_TOP
+             82 POP_TOP
+             84 POP_TOP
+             86 POP_EXCEPT
+             88 POP_TOP
+
+ 59          90 LOAD_FAST                1 (h)
+             92 LOAD_METHOD              5 (hexdigest)
+             94 CALL_METHOD              0
+             96 RETURN_VALUE
+
+Disassembly of <code object <lambda> at 0x00000191E65AE3F0, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 57>:
+ 57           0 LOAD_DEREF               0 (fh)
+              2 LOAD_METHOD              0 (read)
+              4 LOAD_CONST               1 (4194304)
+              6 CALL_METHOD              1
+              8 RETURN_VALUE
+
+Disassembly of <code object relative_path at 0x00000191E65BE600, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 62>:
+ 63           0 LOAD_FAST                0 (path)
+              2 LOAD_METHOD              0 (resolve)
+              4 CALL_METHOD              0
+              6 LOAD_METHOD              1 (relative_to)
+              8 LOAD_GLOBAL              2 (PROJECT_ROOT)
+             10 LOAD_METHOD              0 (resolve)
+             12 CALL_METHOD              0
+             14 CALL_METHOD              1
+             16 LOAD_METHOD              3 (as_posix)
+             18 CALL_METHOD              0
+             20 RETURN_VALUE
+
+Disassembly of <code object resolve_project_path at 0x00000191E65BFAA0, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 66>:
+ 67           0 LOAD_GLOBAL              0 (Path)
+              2 LOAD_GLOBAL              1 (str)
+              4 LOAD_FAST                0 (value)
+              6 CALL_FUNCTION            1
+              8 LOAD_METHOD              2 (strip)
+             10 CALL_METHOD              0
+             12 CALL_FUNCTION            1
+             14 STORE_FAST               1 (path)
+
+ 68          16 LOAD_FAST                1 (path)
+             18 LOAD_METHOD              3 (is_absolute)
+             20 CALL_METHOD              0
+             22 POP_JUMP_IF_FALSE       14 (to 28)
+             24 LOAD_FAST                1 (path)
+             26 RETURN_VALUE
+        >>   28 LOAD_GLOBAL              4 (PROJECT_ROOT)
+             30 LOAD_FAST                1 (path)
+             32 BINARY_TRUE_DIVIDE
+             34 RETURN_VALUE
+
+Disassembly of <code object require_file at 0x00000191E65CB9F0, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 71>:
+ 72           0 LOAD_FAST                0 (path)
+              2 LOAD_METHOD              0 (is_file)
+              4 CALL_METHOD              0
+              6 POP_JUMP_IF_TRUE        11 (to 22)
+
+ 73           8 LOAD_GLOBAL              1 (FileNotFoundError)
+             10 LOAD_CONST               1 ('Required file missing: ')
+             12 LOAD_FAST                0 (path)
+             14 FORMAT_VALUE             0
+             16 BUILD_STRING             2
+             18 CALL_FUNCTION            1
+             20 RAISE_VARARGS            1
+
+ 72     >>   22 LOAD_CONST               0 (None)
+             24 RETURN_VALUE
+
+Disassembly of <code object load_json at 0x00000191E65CA970, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 76>:
+ 77           0 LOAD_GLOBAL              0 (json)
+              2 LOAD_METHOD              1 (loads)
+              4 LOAD_FAST                0 (path)
+              6 LOAD_ATTR                2 (read_text)
+              8 LOAD_CONST               1 ('utf-8')
+             10 LOAD_CONST               2 (('encoding',))
+             12 CALL_FUNCTION_KW         1
+             14 CALL_METHOD              1
+             16 RETURN_VALUE
+
+Disassembly of <code object file_record at 0x00000191E65C9F20, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 80>:
+ 82           0 LOAD_GLOBAL              0 (relative_path)
+              2 LOAD_FAST                0 (path)
+              4 CALL_FUNCTION            1
+
+ 83           6 LOAD_GLOBAL              1 (sha256_file)
+              8 LOAD_FAST                0 (path)
+             10 CALL_FUNCTION            1
+
+ 84          12 LOAD_GLOBAL              2 (int)
+             14 LOAD_FAST                0 (path)
+             16 LOAD_METHOD              3 (stat)
+             18 CALL_METHOD              0
+             20 LOAD_ATTR                4 (st_size)
+             22 CALL_FUNCTION            1
+
+ 81          24 LOAD_CONST               1 (('path', 'sha256', 'size_bytes'))
+             26 BUILD_CONST_KEY_MAP      3
+             28 RETURN_VALUE
+
+Disassembly of <code object parse_bool at 0x00000191E65C9FD0, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 88>:
+ 89           0 LOAD_GLOBAL              0 (isinstance)
+              2 LOAD_FAST                0 (value)
+              4 LOAD_GLOBAL              1 (bool)
+              6 LOAD_GLOBAL              2 (np)
+              8 LOAD_ATTR                3 (bool_)
+             10 BUILD_TUPLE              2
+             12 CALL_FUNCTION            2
+             14 POP_JUMP_IF_FALSE       12 (to 24)
+
+ 90          16 LOAD_GLOBAL              1 (bool)
+             18 LOAD_FAST                0 (value)
+             20 CALL_FUNCTION            1
+             22 RETURN_VALUE
+
+ 91     >>   24 LOAD_FAST                0 (value)
+             26 LOAD_CONST               1 ((1, 1.0))
+             28 CONTAINS_OP              0
+             30 POP_JUMP_IF_FALSE       18 (to 36)
+
+ 92          32 LOAD_CONST               2 (True)
+             34 RETURN_VALUE
+
+ 93     >>   36 LOAD_FAST                0 (value)
+             38 LOAD_CONST               3 ((0, 0.0))
+             40 CONTAINS_OP              0
+             42 POP_JUMP_IF_FALSE       24 (to 48)
+
+ 94          44 LOAD_CONST               4 (False)
+             46 RETURN_VALUE
+
+ 95     >>   48 LOAD_GLOBAL              4 (str)
+             50 LOAD_FAST                0 (value)
+             52 CALL_FUNCTION            1
+             54 LOAD_METHOD              5 (strip)
+             56 CALL_METHOD              0
+             58 LOAD_METHOD              6 (lower)
+             60 CALL_METHOD              0
+             62 STORE_FAST               1 (text)
+
+ 96          64 LOAD_FAST                1 (text)
+             66 LOAD_CONST               5 (frozenset({'t', 'y', '1', 'true', 'yes'}))
+             68 CONTAINS_OP              0
+             70 POP_JUMP_IF_FALSE       38 (to 76)
+
+ 97          72 LOAD_CONST               2 (True)
+             74 RETURN_VALUE
+
+ 98     >>   76 LOAD_FAST                1 (text)
+             78 LOAD_CONST               6 (frozenset({'false', 'n', 'no', '0', 'f'}))
+             80 CONTAINS_OP              0
+             82 POP_JUMP_IF_FALSE       44 (to 88)
+
+ 99          84 LOAD_CONST               4 (False)
+             86 RETURN_VALUE
+
+100     >>   88 LOAD_GLOBAL              7 (RuntimeError)
+             90 LOAD_CONST               7 ('Cannot parse boolean value: ')
+             92 LOAD_FAST                0 (value)
+             94 FORMAT_VALUE             2 (repr)
+             96 BUILD_STRING             2
+             98 CALL_FUNCTION            1
+            100 RAISE_VARARGS            1
+
+Disassembly of <code object write_json_atomic at 0x00000191E65CBD60, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 103>:
+104           0 LOAD_FAST                1 (path)
+              2 LOAD_ATTR                0 (parent)
+              4 LOAD_ATTR                1 (mkdir)
+              6 LOAD_CONST               1 (True)
+              8 LOAD_CONST               1 (True)
+             10 LOAD_CONST               2 (('parents', 'exist_ok'))
+             12 CALL_FUNCTION_KW         2
+             14 POP_TOP
+
+105          16 LOAD_GLOBAL              2 (tempfile)
+             18 LOAD_ATTR                3 (mkstemp)
+             20 LOAD_CONST               3 ('.tmp_')
+             22 LOAD_CONST               4 ('.json')
+             24 LOAD_GLOBAL              4 (str)
+             26 LOAD_FAST                1 (path)
+             28 LOAD_ATTR                0 (parent)
+             30 CALL_FUNCTION            1
+             32 LOAD_CONST               5 (('prefix', 'suffix', 'dir'))
+             34 CALL_FUNCTION_KW         3
+             36 UNPACK_SEQUENCE          2
+             38 STORE_FAST               2 (fd)
+             40 STORE_FAST               3 (tmp_name)
+
+106          42 LOAD_GLOBAL              5 (os)
+             44 LOAD_METHOD              6 (close)
+             46 LOAD_FAST                2 (fd)
+             48 CALL_METHOD              1
+             50 POP_TOP
+
+107          52 LOAD_GLOBAL              7 (Path)
+             54 LOAD_FAST                3 (tmp_name)
+             56 CALL_FUNCTION            1
+             58 STORE_FAST               4 (tmp)
+
+108          60 SETUP_FINALLY           36 (to 134)
+
+109          62 LOAD_FAST                4 (tmp)
+             64 LOAD_ATTR                8 (write_text)
+
+110          66 LOAD_GLOBAL              9 (json)
+             68 LOAD_ATTR               10 (dumps)
+
+111          70 LOAD_FAST                0 (value)
+
+112          72 LOAD_CONST               6 (2)
+
+113          74 LOAD_CONST               1 (True)
+
+114          76 LOAD_CONST               7 (False)
+
+115          78 LOAD_CONST               7 (False)
+
+110          80 LOAD_CONST               8 (('indent', 'sort_keys', 'ensure_ascii', 'allow_nan'))
+             82 CALL_FUNCTION_KW         5
+
+116          84 LOAD_CONST               9 ('\n')
+
+110          86 BINARY_ADD
+
+117          88 LOAD_CONST              10 ('utf-8')
+
+109          90 LOAD_CONST              11 (('encoding',))
+             92 CALL_FUNCTION_KW         2
+             94 POP_TOP
+
+119          96 LOAD_GLOBAL              5 (os)
+             98 LOAD_METHOD             11 (replace)
+            100 LOAD_FAST                4 (tmp)
+            102 LOAD_FAST                1 (path)
+            104 CALL_METHOD              2
+            106 POP_TOP
+            108 POP_BLOCK
+
+121         110 LOAD_FAST                4 (tmp)
+            112 LOAD_METHOD             12 (exists)
+            114 CALL_METHOD              0
+            116 POP_JUMP_IF_FALSE       65 (to 130)
+
+122         118 LOAD_FAST                4 (tmp)
+            120 LOAD_METHOD             13 (unlink)
+            122 CALL_METHOD              0
+            124 POP_TOP
+            126 LOAD_CONST               0 (None)
+            128 RETURN_VALUE
+
+121     >>  130 LOAD_CONST               0 (None)
+            132 RETURN_VALUE
+        >>  134 LOAD_FAST                4 (tmp)
+            136 LOAD_METHOD             12 (exists)
+            138 CALL_METHOD              0
+            140 POP_JUMP_IF_FALSE       76 (to 152)
+
+122         142 LOAD_FAST                4 (tmp)
+            144 LOAD_METHOD             13 (unlink)
+            146 CALL_METHOD              0
+            148 POP_TOP
+            150 RERAISE                  0
+
+121     >>  152 RERAISE                  0
+
+Disassembly of <code object write_text_atomic at 0x00000191E65E8190, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 125>:
+126           0 LOAD_FAST                1 (path)
+              2 LOAD_ATTR                0 (parent)
+              4 LOAD_ATTR                1 (mkdir)
+              6 LOAD_CONST               1 (True)
+              8 LOAD_CONST               1 (True)
+             10 LOAD_CONST               2 (('parents', 'exist_ok'))
+             12 CALL_FUNCTION_KW         2
+             14 POP_TOP
+
+127          16 LOAD_GLOBAL              2 (tempfile)
+             18 LOAD_ATTR                3 (mkstemp)
+             20 LOAD_CONST               3 ('.tmp_')
+             22 LOAD_CONST               4 ('.txt')
+             24 LOAD_GLOBAL              4 (str)
+             26 LOAD_FAST                1 (path)
+             28 LOAD_ATTR                0 (parent)
+             30 CALL_FUNCTION            1
+             32 LOAD_CONST               5 (('prefix', 'suffix', 'dir'))
+             34 CALL_FUNCTION_KW         3
+             36 UNPACK_SEQUENCE          2
+             38 STORE_FAST               2 (fd)
+             40 STORE_FAST               3 (tmp_name)
+
+128          42 LOAD_GLOBAL              5 (os)
+             44 LOAD_METHOD              6 (close)
+             46 LOAD_FAST                2 (fd)
+             48 CALL_METHOD              1
+             50 POP_TOP
+
+129          52 LOAD_GLOBAL              7 (Path)
+             54 LOAD_FAST                3 (tmp_name)
+             56 CALL_FUNCTION            1
+             58 STORE_FAST               4 (tmp)
+
+130          60 SETUP_FINALLY           26 (to 114)
+
+131          62 LOAD_FAST                4 (tmp)
+             64 LOAD_ATTR                8 (write_text)
+             66 LOAD_FAST                0 (text)
+             68 LOAD_CONST               6 ('utf-8')
+             70 LOAD_CONST               7 (('encoding',))
+             72 CALL_FUNCTION_KW         2
+             74 POP_TOP
+
+132          76 LOAD_GLOBAL              5 (os)
+             78 LOAD_METHOD              9 (replace)
+             80 LOAD_FAST                4 (tmp)
+             82 LOAD_FAST                1 (path)
+             84 CALL_METHOD              2
+             86 POP_TOP
+             88 POP_BLOCK
+
+134          90 LOAD_FAST                4 (tmp)
+             92 LOAD_METHOD             10 (exists)
+             94 CALL_METHOD              0
+             96 POP_JUMP_IF_FALSE       55 (to 110)
+
+135          98 LOAD_FAST                4 (tmp)
+            100 LOAD_METHOD             11 (unlink)
+            102 CALL_METHOD              0
+            104 POP_TOP
+            106 LOAD_CONST               0 (None)
+            108 RETURN_VALUE
+
+134     >>  110 LOAD_CONST               0 (None)
+            112 RETURN_VALUE
+        >>  114 LOAD_FAST                4 (tmp)
+            116 LOAD_METHOD             10 (exists)
+            118 CALL_METHOD              0
+            120 POP_JUMP_IF_FALSE       66 (to 132)
+
+135         122 LOAD_FAST                4 (tmp)
+            124 LOAD_METHOD             11 (unlink)
+            126 CALL_METHOD              0
+            128 POP_TOP
+            130 RERAISE                  0
+
+134     >>  132 RERAISE                  0
+
+Disassembly of <code object write_csv_atomic at 0x00000191E65E83A0, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 138>:
+139           0 LOAD_FAST                0 (rows)
+              2 POP_JUMP_IF_TRUE         9 (to 18)
+
+140           4 LOAD_GLOBAL              0 (RuntimeError)
+              6 LOAD_CONST               1 ('Refusing to write empty CSV: ')
+              8 LOAD_FAST                1 (path)
+             10 FORMAT_VALUE             0
+             12 BUILD_STRING             2
+             14 CALL_FUNCTION            1
+             16 RAISE_VARARGS            1
+
+141     >>   18 LOAD_FAST                1 (path)
+             20 LOAD_ATTR                1 (parent)
+             22 LOAD_ATTR                2 (mkdir)
+             24 LOAD_CONST               2 (True)
+             26 LOAD_CONST               2 (True)
+             28 LOAD_CONST               3 (('parents', 'exist_ok'))
+             30 CALL_FUNCTION_KW         2
+             32 POP_TOP
+
+142          34 LOAD_GLOBAL              3 (list)
+             36 LOAD_FAST                0 (rows)
+             38 LOAD_CONST               4 (0)
+             40 BINARY_SUBSCR
+             42 LOAD_METHOD              4 (keys)
+             44 CALL_METHOD              0
+             46 CALL_FUNCTION            1
+             48 STORE_FAST               2 (fields)
+
+143          50 LOAD_GLOBAL              5 (tempfile)
+             52 LOAD_ATTR                6 (mkstemp)
+             54 LOAD_CONST               5 ('.tmp_')
+             56 LOAD_CONST               6 ('.csv')
+             58 LOAD_GLOBAL              7 (str)
+             60 LOAD_FAST                1 (path)
+             62 LOAD_ATTR                1 (parent)
+             64 CALL_FUNCTION            1
+             66 LOAD_CONST               7 (('prefix', 'suffix', 'dir'))
+             68 CALL_FUNCTION_KW         3
+             70 UNPACK_SEQUENCE          2
+             72 STORE_FAST               3 (fd)
+             74 STORE_FAST               4 (tmp_name)
+
+144          76 LOAD_GLOBAL              8 (os)
+             78 LOAD_METHOD              9 (close)
+             80 LOAD_FAST                3 (fd)
+             82 CALL_METHOD              1
+             84 POP_TOP
+
+145          86 LOAD_GLOBAL             10 (Path)
+             88 LOAD_FAST                4 (tmp_name)
+             90 CALL_FUNCTION            1
+             92 STORE_FAST               5 (tmp)
+
+146          94 SETUP_FINALLY           60 (to 216)
+
+147          96 LOAD_FAST                5 (tmp)
+             98 LOAD_ATTR               11 (open)
+            100 LOAD_CONST               8 ('w')
+            102 LOAD_CONST               9 ('utf-8')
+            104 LOAD_CONST              10 ('')
+            106 LOAD_CONST              11 (('encoding', 'newline'))
+            108 CALL_FUNCTION_KW         3
+            110 SETUP_WITH              25 (to 162)
+            112 STORE_FAST               6 (fh)
+
+148         114 LOAD_GLOBAL             12 (csv)
+            116 LOAD_ATTR               13 (DictWriter)
+            118 LOAD_FAST                6 (fh)
+            120 LOAD_FAST                2 (fields)
+            122 LOAD_CONST              12 ('\n')
+            124 LOAD_CONST              13 (('fieldnames', 'lineterminator'))
+            126 CALL_FUNCTION_KW         3
+            128 STORE_FAST               7 (writer)
+
+149         130 LOAD_FAST                7 (writer)
+            132 LOAD_METHOD             14 (writeheader)
+            134 CALL_METHOD              0
+            136 POP_TOP
+
+150         138 LOAD_FAST                7 (writer)
+            140 LOAD_METHOD             15 (writerows)
+            142 LOAD_FAST                0 (rows)
+            144 CALL_METHOD              1
+            146 POP_TOP
+            148 POP_BLOCK
+
+147         150 LOAD_CONST               0 (None)
+            152 DUP_TOP
+            154 DUP_TOP
+            156 CALL_FUNCTION            3
+            158 POP_TOP
+            160 JUMP_FORWARD             8 (to 178)
+        >>  162 WITH_EXCEPT_START
+            164 POP_JUMP_IF_TRUE        84 (to 168)
+            166 RERAISE                  1
+        >>  168 POP_TOP
+            170 POP_TOP
+            172 POP_TOP
+            174 POP_EXCEPT
+            176 POP_TOP
+
+151     >>  178 LOAD_GLOBAL              8 (os)
+            180 LOAD_METHOD             16 (replace)
+            182 LOAD_FAST                5 (tmp)
+            184 LOAD_FAST                1 (path)
+            186 CALL_METHOD              2
+            188 POP_TOP
+            190 POP_BLOCK
+
+153         192 LOAD_FAST                5 (tmp)
+            194 LOAD_METHOD             17 (exists)
+            196 CALL_METHOD              0
+            198 POP_JUMP_IF_FALSE      106 (to 212)
+
+154         200 LOAD_FAST                5 (tmp)
+            202 LOAD_METHOD             18 (unlink)
+            204 CALL_METHOD              0
+            206 POP_TOP
+            208 LOAD_CONST               0 (None)
+            210 RETURN_VALUE
+
+153     >>  212 LOAD_CONST               0 (None)
+            214 RETURN_VALUE
+        >>  216 LOAD_FAST                5 (tmp)
+            218 LOAD_METHOD             17 (exists)
+            220 CALL_METHOD              0
+            222 POP_JUMP_IF_FALSE      117 (to 234)
+
+154         224 LOAD_FAST                5 (tmp)
+            226 LOAD_METHOD             18 (unlink)
+            228 CALL_METHOD              0
+            230 POP_TOP
+            232 RERAISE                  0
+
+153     >>  234 RERAISE                  0
+
+Disassembly of <code object wilson at 0x00000191E65E8BE0, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 157>:
+158           0 LOAD_CONST               1 (1.959963984540054)
+              2 STORE_FAST               2 (z)
+
+159           4 LOAD_FAST                0 (k)
+              6 LOAD_FAST                1 (n)
+              8 BINARY_TRUE_DIVIDE
+             10 STORE_FAST               3 (p)
+
+160          12 LOAD_CONST               2 (1.0)
+             14 LOAD_FAST                2 (z)
+             16 LOAD_FAST                2 (z)
+             18 BINARY_MULTIPLY
+             20 LOAD_FAST                1 (n)
+             22 BINARY_TRUE_DIVIDE
+             24 BINARY_ADD
+             26 STORE_FAST               4 (denom)
+
+161          28 LOAD_FAST                3 (p)
+             30 LOAD_FAST                2 (z)
+             32 LOAD_FAST                2 (z)
+             34 BINARY_MULTIPLY
+             36 LOAD_CONST               3 (2.0)
+             38 LOAD_FAST                1 (n)
+             40 BINARY_MULTIPLY
+             42 BINARY_TRUE_DIVIDE
+             44 BINARY_ADD
+             46 LOAD_FAST                4 (denom)
+             48 BINARY_TRUE_DIVIDE
+             50 STORE_FAST               5 (center)
+
+163          52 LOAD_FAST                2 (z)
+
+164          54 LOAD_GLOBAL              0 (math)
+             56 LOAD_METHOD              1 (sqrt)
+             58 LOAD_FAST                3 (p)
+             60 LOAD_CONST               2 (1.0)
+             62 LOAD_FAST                3 (p)
+             64 BINARY_SUBTRACT
+             66 BINARY_MULTIPLY
+             68 LOAD_FAST                1 (n)
+             70 BINARY_TRUE_DIVIDE
+             72 LOAD_FAST                2 (z)
+             74 LOAD_FAST                2 (z)
+             76 BINARY_MULTIPLY
+             78 LOAD_CONST               4 (4.0)
+             80 LOAD_FAST                1 (n)
+             82 BINARY_MULTIPLY
+             84 LOAD_FAST                1 (n)
+             86 BINARY_MULTIPLY
+             88 BINARY_TRUE_DIVIDE
+             90 BINARY_ADD
+             92 CALL_METHOD              1
+
+163          94 BINARY_MULTIPLY
+
+165          96 LOAD_FAST                4 (denom)
+
+163          98 BINARY_TRUE_DIVIDE
+
+162         100 STORE_FAST               6 (half)
+
+167         102 LOAD_GLOBAL              2 (max)
+            104 LOAD_CONST               5 (0.0)
+            106 LOAD_FAST                5 (center)
+            108 LOAD_FAST                6 (half)
+            110 BINARY_SUBTRACT
+            112 CALL_FUNCTION            2
+            114 LOAD_GLOBAL              3 (min)
+            116 LOAD_CONST               2 (1.0)
+            118 LOAD_FAST                5 (center)
+            120 LOAD_FAST                6 (half)
+            122 BINARY_ADD
+            124 CALL_FUNCTION            2
+            126 BUILD_TUPLE              2
+            128 RETURN_VALUE
+
+Disassembly of <code object exact_two_sided_nested_mcnemar at 0x00000191E65EAA20, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 170>:
+171           0 LOAD_GLOBAL              0 (int)
+              2 LOAD_FAST                0 (rescued)
+              4 LOAD_FAST                1 (reverse)
+              6 BINARY_ADD
+              8 CALL_FUNCTION            1
+             10 STORE_FAST               2 (discordant)
+
+172          12 LOAD_FAST                2 (discordant)
+             14 LOAD_CONST               1 (0)
+             16 COMPARE_OP               2 (==)
+             18 POP_JUMP_IF_FALSE       12 (to 24)
+
+173          20 LOAD_CONST               2 (1.0)
+             22 RETURN_VALUE
+
+174     >>   24 LOAD_FAST                1 (reverse)
+             26 LOAD_CONST               1 (0)
+             28 COMPARE_OP               3 (!=)
+             30 POP_JUMP_IF_FALSE       20 (to 40)
+
+175          32 LOAD_GLOBAL              1 (RuntimeError)
+
+176          34 LOAD_CONST               3 ('Candidate q10=.60 produced reverse discordance despite being a nested stricter rule. Scientific implementation integrity is violated.')
+
+175          36 CALL_FUNCTION            1
+             38 RAISE_VARARGS            1
+
+180     >>   40 LOAD_GLOBAL              2 (min)
+             42 LOAD_CONST               2 (1.0)
+             44 LOAD_CONST               4 (2.0)
+             46 LOAD_CONST               5 (0.5)
+             48 LOAD_FAST                2 (discordant)
+             50 BINARY_POWER
+             52 BINARY_MULTIPLY
+             54 CALL_FUNCTION            2
+             56 RETURN_VALUE
+
+Disassembly of <code object bootstrap_paired_reduction at 0x00000191E65EAB80, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 183>:
+187           0 LOAD_GLOBAL              0 (np)
+              2 LOAD_ATTR                1 (random)
+              4 LOAD_METHOD              2 (default_rng)
+              6 LOAD_GLOBAL              3 (BOOTSTRAP_SEED)
+              8 CALL_METHOD              1
+             10 STORE_FAST               2 (rng)
+
+188          12 LOAD_FAST                0 (original)
+             14 LOAD_ATTR                4 (size)
+             16 STORE_FAST               3 (n)
+
+189          18 LOAD_FAST                0 (original)
+             20 LOAD_METHOD              5 (astype)
+             22 LOAD_GLOBAL              6 (float)
+             24 CALL_METHOD              1
+             26 LOAD_FAST                1 (candidate)
+             28 LOAD_METHOD              5 (astype)
+             30 LOAD_GLOBAL              6 (float)
+             32 CALL_METHOD              1
+             34 BINARY_SUBTRACT
+             36 STORE_FAST               4 (differences)
+
+190          38 LOAD_GLOBAL              0 (np)
+             40 LOAD_ATTR                7 (empty)
+             42 LOAD_GLOBAL              8 (BOOTSTRAP_REPLICATES)
+             44 LOAD_GLOBAL              6 (float)
+             46 LOAD_CONST               1 (('dtype',))
+             48 CALL_FUNCTION_KW         2
+             50 STORE_FAST               5 (values)
+
+191          52 LOAD_GLOBAL              9 (range)
+             54 LOAD_GLOBAL              8 (BOOTSTRAP_REPLICATES)
+             56 CALL_FUNCTION            1
+             58 GET_ITER
+        >>   60 FOR_ITER                21 (to 104)
+             62 STORE_FAST               6 (i)
+
+192          64 LOAD_FAST                2 (rng)
+             66 LOAD_ATTR               10 (integers)
+             68 LOAD_CONST               2 (0)
+             70 LOAD_FAST                3 (n)
+             72 LOAD_FAST                3 (n)
+             74 LOAD_CONST               3 (('size',))
+             76 CALL_FUNCTION_KW         3
+             78 STORE_FAST               7 (idx)
+
+193          80 LOAD_GLOBAL              6 (float)
+             82 LOAD_GLOBAL              0 (np)
+             84 LOAD_METHOD             11 (mean)
+             86 LOAD_FAST                4 (differences)
+             88 LOAD_FAST                7 (idx)
+             90 BINARY_SUBSCR
+             92 CALL_METHOD              1
+             94 CALL_FUNCTION            1
+             96 LOAD_FAST                5 (values)
+             98 LOAD_FAST                6 (i)
+            100 STORE_SUBSCR
+            102 JUMP_ABSOLUTE           30 (to 60)
+
+194     >>  104 LOAD_GLOBAL              0 (np)
+            106 LOAD_METHOD             12 (quantile)
+            108 LOAD_FAST                5 (values)
+            110 LOAD_CONST               4 (0.025)
+            112 LOAD_CONST               5 (0.975)
+            114 BUILD_LIST               2
+            116 CALL_METHOD              2
+            118 UNPACK_SEQUENCE          2
+            120 STORE_FAST               8 (lo)
+            122 STORE_FAST               9 (hi)
+
+195         124 LOAD_GLOBAL              6 (float)
+            126 LOAD_FAST                8 (lo)
+            128 CALL_FUNCTION            1
+            130 LOAD_GLOBAL              6 (float)
+            132 LOAD_FAST                9 (hi)
+            134 CALL_FUNCTION            1
+            136 BUILD_TUPLE              2
+            138 RETURN_VALUE
+
+Disassembly of <code object verify_inputs at 0x00000191E65F52C0, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 198>:
+200           0 LOAD_GLOBAL              0 (CONTRACT_05Y3)
+
+201           2 LOAD_GLOBAL              1 (LOCK_05Y3)
+
+202           4 LOAD_GLOBAL              2 (LOCK_05Y4)
+
+203           6 LOAD_GLOBAL              3 (COMPLETION_05Y5)
+
+204           8 LOAD_GLOBAL              4 (PROGRESS_05Y5)
+
+199          10 BUILD_TUPLE              5
+             12 GET_ITER
+        >>   14 FOR_ITER                 6 (to 28)
+             16 STORE_FAST               0 (path)
+
+206          18 LOAD_GLOBAL              5 (require_file)
+             20 LOAD_FAST                0 (path)
+             22 CALL_FUNCTION            1
+             24 POP_TOP
+             26 JUMP_ABSOLUTE            7 (to 14)
+
+208     >>   28 LOAD_GLOBAL              6 (load_json)
+             30 LOAD_GLOBAL              1 (LOCK_05Y3)
+             32 CALL_FUNCTION            1
+             34 STORE_FAST               1 (lock3)
+
+209          36 LOAD_GLOBAL              7 (str)
+             38 LOAD_FAST                1 (lock3)
+             40 LOAD_METHOD              8 (get)
+             42 LOAD_CONST               1 ('status')
+             44 LOAD_CONST               2 ('')
+             46 CALL_METHOD              2
+             48 CALL_FUNCTION            1
+             50 LOAD_METHOD              9 (strip)
+             52 CALL_METHOD              0
+
+210          54 LOAD_CONST               3 ('FROZEN_PROSPECTIVE_Q10_RECALIBRATION_BEFORE_FRESH_BANK')
+
+209          56 COMPARE_OP               3 (!=)
+             58 POP_JUMP_IF_FALSE       34 (to 68)
+
+212          60 LOAD_GLOBAL             10 (RuntimeError)
+             62 LOAD_CONST               4 ('05y3 lock status mismatch.')
+             64 CALL_FUNCTION            1
+             66 RAISE_VARARGS            1
+
+213     >>   68 LOAD_GLOBAL             11 (sha256_file)
+             70 LOAD_GLOBAL              0 (CONTRACT_05Y3)
+             72 CALL_FUNCTION            1
+             74 LOAD_METHOD             12 (lower)
+             76 CALL_METHOD              0
+             78 LOAD_GLOBAL              7 (str)
+             80 LOAD_FAST                1 (lock3)
+             82 LOAD_CONST               5 ('contract')
+             84 BINARY_SUBSCR
+             86 LOAD_CONST               6 ('sha256')
+             88 BINARY_SUBSCR
+             90 CALL_FUNCTION            1
+             92 LOAD_METHOD             12 (lower)
+             94 CALL_METHOD              0
+             96 COMPARE_OP               3 (!=)
+             98 POP_JUMP_IF_FALSE       54 (to 108)
+
+214         100 LOAD_GLOBAL             10 (RuntimeError)
+            102 LOAD_CONST               7 ('05y3 contract hash mismatch.')
+            104 CALL_FUNCTION            1
+            106 RAISE_VARARGS            1
+
+216     >>  108 LOAD_GLOBAL              6 (load_json)
+            110 LOAD_GLOBAL              0 (CONTRACT_05Y3)
+            112 CALL_FUNCTION            1
+            114 STORE_FAST               2 (contract)
+
+217         116 LOAD_GLOBAL             13 (float)
+            118 LOAD_FAST                2 (contract)
+            120 LOAD_CONST               8 ('single_candidate_rule')
+            122 BINARY_SUBSCR
+            124 LOAD_CONST               9 ('q10_aligned_correlation_min')
+            126 BINARY_SUBSCR
+            128 CALL_FUNCTION            1
+            130 LOAD_GLOBAL             14 (CANDIDATE_Q10)
+            132 COMPARE_OP               3 (!=)
+            134 POP_JUMP_IF_FALSE       72 (to 144)
+
+218         136 LOAD_GLOBAL             10 (RuntimeError)
+            138 LOAD_CONST              10 ('05y3 candidate q10 is not 0.60.')
+            140 CALL_FUNCTION            1
+            142 RAISE_VARARGS            1
+
+219     >>  144 LOAD_GLOBAL             13 (float)
+            146 LOAD_FAST                2 (contract)
+            148 LOAD_CONST              11 ('original_rule')
+            150 BINARY_SUBSCR
+            152 LOAD_CONST               9 ('q10_aligned_correlation_min')
+            154 BINARY_SUBSCR
+            156 CALL_FUNCTION            1
+            158 LOAD_GLOBAL             15 (ORIGINAL_Q10)
+            160 COMPARE_OP               3 (!=)
+            162 POP_JUMP_IF_FALSE       86 (to 172)
+
+220         164 LOAD_GLOBAL             10 (RuntimeError)
+            166 LOAD_CONST              12 ('05y3 original q10 is not 0.40.')
+            168 CALL_FUNCTION            1
+            170 RAISE_VARARGS            1
+
+222     >>  172 LOAD_GLOBAL              6 (load_json)
+            174 LOAD_GLOBAL              3 (COMPLETION_05Y5)
+            176 CALL_FUNCTION            1
+            178 STORE_FAST               3 (completion)
+
+223         180 LOAD_GLOBAL              7 (str)
+            182 LOAD_FAST                3 (completion)
+            184 LOAD_METHOD              8 (get)
+            186 LOAD_CONST               1 ('status')
+            188 LOAD_CONST               2 ('')
+            190 CALL_METHOD              2
+            192 CALL_FUNCTION            1
+            194 LOAD_METHOD              9 (strip)
+            196 CALL_METHOD              0
+            198 LOAD_GLOBAL             16 (EXPECTED_COMPLETION_STATUS)
+            200 COMPARE_OP               3 (!=)
+            202 POP_JUMP_IF_FALSE      106 (to 212)
+
+224         204 LOAD_GLOBAL             10 (RuntimeError)
+            206 LOAD_CONST              13 ('05y5 completion lock status mismatch.')
+            208 CALL_FUNCTION            1
+            210 RAISE_VARARGS            1
+
+225     >>  212 LOAD_GLOBAL             17 (int)
+            214 LOAD_FAST                3 (completion)
+            216 LOAD_METHOD              8 (get)
+            218 LOAD_CONST              14 ('fresh_datasets_completed')
+            220 LOAD_CONST              15 (-1)
+            222 CALL_METHOD              2
+            224 CALL_FUNCTION            1
+            226 LOAD_CONST              16 (400)
+            228 COMPARE_OP               3 (!=)
+            230 POP_JUMP_IF_FALSE      120 (to 240)
+
+226         232 LOAD_GLOBAL             10 (RuntimeError)
+            234 LOAD_CONST              17 ('05y5 completion lock does not represent 400 datasets.')
+            236 CALL_FUNCTION            1
+            238 RAISE_VARARGS            1
+
+227     >>  240 LOAD_GLOBAL             18 (bool)
+            242 LOAD_FAST                3 (completion)
+            244 LOAD_METHOD              8 (get)
+            246 LOAD_CONST              18 ('scientific_endpoint_aggregated')
+            248 LOAD_CONST              19 (True)
+            250 CALL_METHOD              2
+            252 CALL_FUNCTION            1
+            254 POP_JUMP_IF_FALSE      132 (to 264)
+
+228         256 LOAD_GLOBAL             10 (RuntimeError)
+            258 LOAD_CONST              20 ('05y5 unexpectedly claims scientific endpoint aggregation.')
+            260 CALL_FUNCTION            1
+            262 RAISE_VARARGS            1
+
+229     >>  264 LOAD_GLOBAL             18 (bool)
+            266 LOAD_FAST                3 (completion)
+            268 LOAD_METHOD              8 (get)
+            270 LOAD_CONST              21 ('threshold_retuned')
+            272 LOAD_CONST              19 (True)
+            274 CALL_METHOD              2
+            276 CALL_FUNCTION            1
+            278 POP_JUMP_IF_FALSE      144 (to 288)
+
+230         280 LOAD_GLOBAL             10 (RuntimeError)
+            282 LOAD_CONST              22 ('05y5 indicates threshold retuning.')
+            284 CALL_FUNCTION            1
+            286 RAISE_VARARGS            1
+
+232     >>  288 LOAD_GLOBAL             19 (pd)
+            290 LOAD_ATTR               20 (read_csv)
+            292 LOAD_GLOBAL              4 (PROGRESS_05Y5)
+            294 LOAD_GLOBAL              7 (str)
+            296 LOAD_CONST              23 (False)
+            298 LOAD_CONST              24 (('dtype', 'low_memory'))
+            300 CALL_FUNCTION_KW         3
+            302 LOAD_METHOD             21 (fillna)
+            304 LOAD_CONST               2 ('')
+            306 CALL_METHOD              1
+            308 STORE_FAST               4 (progress)
+
+233         310 LOAD_FAST                4 (progress)
+            312 LOAD_ATTR               22 (shape)
+            314 LOAD_CONST              25 (0)
+            316 BINARY_SUBSCR
+            318 LOAD_CONST              16 (400)
+            320 COMPARE_OP               3 (!=)
+            322 POP_JUMP_IF_FALSE      166 (to 332)
+
+234         324 LOAD_GLOBAL             10 (RuntimeError)
+            326 LOAD_CONST              26 ('05y5 progress manifest is not 400 rows.')
+            328 CALL_FUNCTION            1
+            330 RAISE_VARARGS            1
+
+236     >>  332 LOAD_GLOBAL             11 (sha256_file)
+            334 LOAD_GLOBAL              4 (PROGRESS_05Y5)
+            336 CALL_FUNCTION            1
+            338 LOAD_METHOD             12 (lower)
+            340 CALL_METHOD              0
+            342 LOAD_GLOBAL              7 (str)
+
+237         344 LOAD_FAST                3 (completion)
+            346 LOAD_CONST              27 ('progress_manifest')
+            348 BINARY_SUBSCR
+            350 LOAD_CONST               6 ('sha256')
+            352 BINARY_SUBSCR
+
+236         354 CALL_FUNCTION            1
+
+238         356 LOAD_METHOD             12 (lower)
+            358 CALL_METHOD              0
+
+236         360 COMPARE_OP               3 (!=)
+            362 POP_JUMP_IF_FALSE      186 (to 372)
+
+239         364 LOAD_GLOBAL             10 (RuntimeError)
+            366 LOAD_CONST              28 ('05y5 progress manifest hash mismatch.')
+            368 CALL_FUNCTION            1
+            370 RAISE_VARARGS            1
+
+241     >>  372 LOAD_FAST                2 (contract)
+            374 LOAD_FAST                3 (completion)
+            376 LOAD_FAST                4 (progress)
+            378 BUILD_TUPLE              3
+            380 RETURN_VALUE
+
+Disassembly of <code object candidate_keep at 0x00000191E65F4EA0, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 244>:
+245           0 LOAD_GLOBAL              0 (parse_bool)
+              2 LOAD_FAST                0 (factor)
+              4 LOAD_CONST               1 ('passes_stability_gate')
+              6 BINARY_SUBSCR
+              8 CALL_FUNCTION            1
+             10 STORE_FAST               1 (original)
+
+246          12 LOAD_GLOBAL              1 (float)
+             14 LOAD_FAST                0 (factor)
+             16 LOAD_CONST               2 ('q10_aligned_correlation')
+             18 BINARY_SUBSCR
+             20 CALL_FUNCTION            1
+             22 STORE_FAST               2 (q10)
+
+247          24 LOAD_GLOBAL              2 (bool)
+             26 LOAD_FAST                1 (original)
+             28 JUMP_IF_FALSE_OR_POP    18 (to 36)
+             30 LOAD_FAST                2 (q10)
+             32 LOAD_GLOBAL              3 (CANDIDATE_Q10)
+             34 COMPARE_OP               5 (>=)
+        >>   36 CALL_FUNCTION            1
+             38 RETURN_VALUE
+
+Disassembly of <code object validate_original_rule_fields at 0x00000191E65F5210, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 250>:
+251           0 LOAD_FAST                1 (contract)
+              2 LOAD_CONST               1 ('original_rule')
+              4 BINARY_SUBSCR
+              6 STORE_FAST               2 (rule)
+
+253           8 LOAD_GLOBAL              0 (float)
+             10 LOAD_FAST                0 (factor)
+             12 LOAD_CONST               2 ('median_aligned_correlation')
+             14 BINARY_SUBSCR
+             16 CALL_FUNCTION            1
+
+254          18 LOAD_GLOBAL              0 (float)
+             20 LOAD_FAST                2 (rule)
+             22 LOAD_CONST               3 ('median_aligned_correlation_min')
+             24 BINARY_SUBSCR
+             26 CALL_FUNCTION            1
+
+253          28 COMPARE_OP               5 (>=)
+             30 JUMP_IF_FALSE_OR_POP    63 (to 126)
+
+255          32 LOAD_GLOBAL              0 (float)
+             34 LOAD_FAST                0 (factor)
+             36 LOAD_CONST               4 ('q10_aligned_correlation')
+             38 BINARY_SUBSCR
+             40 CALL_FUNCTION            1
+
+256          42 LOAD_GLOBAL              0 (float)
+             44 LOAD_FAST                2 (rule)
+             46 LOAD_CONST               5 ('q10_aligned_correlation_min')
+             48 BINARY_SUBSCR
+             50 CALL_FUNCTION            1
+
+255          52 COMPARE_OP               5 (>=)
+
+253          54 JUMP_IF_FALSE_OR_POP    63 (to 126)
+
+257          56 LOAD_GLOBAL              0 (float)
+             58 LOAD_FAST                0 (factor)
+             60 LOAD_CONST               6 ('inclusion_frequency')
+             62 BINARY_SUBSCR
+             64 CALL_FUNCTION            1
+
+258          66 LOAD_GLOBAL              0 (float)
+             68 LOAD_FAST                2 (rule)
+             70 LOAD_CONST               7 ('inclusion_frequency_min')
+             72 BINARY_SUBSCR
+             74 CALL_FUNCTION            1
+
+257          76 COMPARE_OP               5 (>=)
+
+253          78 JUMP_IF_FALSE_OR_POP    63 (to 126)
+
+259          80 LOAD_GLOBAL              0 (float)
+             82 LOAD_FAST                0 (factor)
+             84 LOAD_CONST               8 ('reference_factor_variance')
+             86 BINARY_SUBSCR
+             88 CALL_FUNCTION            1
+
+260          90 LOAD_GLOBAL              0 (float)
+             92 LOAD_FAST                2 (rule)
+             94 LOAD_CONST               9 ('reference_factor_variance_min')
+             96 BINARY_SUBSCR
+             98 CALL_FUNCTION            1
+
+259         100 COMPARE_OP               5 (>=)
+
+253         102 JUMP_IF_FALSE_OR_POP    63 (to 126)
+
+261         104 LOAD_GLOBAL              1 (int)
+            106 LOAD_FAST                0 (factor)
+            108 LOAD_CONST              10 ('n_supported_modalities')
+            110 BINARY_SUBSCR
+            112 CALL_FUNCTION            1
+
+262         114 LOAD_GLOBAL              1 (int)
+            116 LOAD_FAST                2 (rule)
+            118 LOAD_CONST              11 ('n_supported_modalities_min')
+            120 BINARY_SUBSCR
+            122 CALL_FUNCTION            1
+
+261         124 COMPARE_OP               5 (>=)
+
+252     >>  126 STORE_FAST               3 (reconstructed)
+
+264         128 LOAD_GLOBAL              2 (parse_bool)
+            130 LOAD_FAST                0 (factor)
+            132 LOAD_CONST              12 ('passes_stability_gate')
+            134 BINARY_SUBSCR
+            136 CALL_FUNCTION            1
+            138 STORE_FAST               4 (stored)
+
+265         140 LOAD_FAST                3 (reconstructed)
+            142 LOAD_FAST                4 (stored)
+            144 COMPARE_OP               3 (!=)
+            146 POP_JUMP_IF_FALSE       78 (to 156)
+
+266         148 LOAD_GLOBAL              3 (RuntimeError)
+
+267         150 LOAD_CONST              13 ('Fresh factor stored passes_stability_gate disagrees with frozen original median/q10/inclusion/variance/modality-support rule.')
+
+266         152 CALL_FUNCTION            1
+            154 RAISE_VARARGS            1
+
+265     >>  156 LOAD_CONST               0 (None)
+            158 RETURN_VALUE
+
+Disassembly of <code object main at 0x00000191E6615580, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 272>:
+273           0 LOAD_GLOBAL              0 (print)
+              2 LOAD_CONST               1 ('====================================================================================================')
+              4 CALL_FUNCTION            1
+              6 POP_TOP
+
+274           8 LOAD_GLOBAL              0 (print)
+             10 LOAD_CONST               2 ('Paper 5 - aggregate prospective q10=.60 fresh validation')
+             12 CALL_FUNCTION            1
+             14 POP_TOP
+
+275          16 LOAD_GLOBAL              0 (print)
+             18 LOAD_CONST               1 ('====================================================================================================')
+             20 CALL_FUNCTION            1
+             22 POP_TOP
+
+276          24 LOAD_GLOBAL              0 (print)
+             26 LOAD_CONST               3 ('Script version: ')
+             28 LOAD_GLOBAL              1 (SCRIPT_VERSION)
+             30 FORMAT_VALUE             0
+             32 BUILD_STRING             2
+             34 CALL_FUNCTION            1
+             36 POP_TOP
+
+277          38 LOAD_GLOBAL              0 (print)
+             40 LOAD_CONST               4 ('This is the first stage allowed to aggregate fresh prospective endpoints.')
+             42 CALL_FUNCTION            1
+             44 POP_TOP
+
+278          46 LOAD_GLOBAL              0 (print)
+             48 LOAD_CONST               5 ('Candidate retuning after this point: FORBIDDEN')
+             50 CALL_FUNCTION            1
+             52 POP_TOP
+
+279          54 LOAD_GLOBAL              0 (print)
+             56 CALL_FUNCTION            0
+             58 POP_TOP
+
+281          60 LOAD_GLOBAL              2 (OUTPUT_DIR)
+             62 LOAD_METHOD              3 (exists)
+             64 CALL_METHOD              0
+             66 POP_JUMP_IF_FALSE       48 (to 96)
+             68 LOAD_GLOBAL              4 (any)
+             70 LOAD_GLOBAL              2 (OUTPUT_DIR)
+             72 LOAD_METHOD              5 (iterdir)
+             74 CALL_METHOD              0
+             76 CALL_FUNCTION            1
+             78 POP_JUMP_IF_FALSE       48 (to 96)
+
+282          80 LOAD_GLOBAL              6 (RuntimeError)
+
+283          82 LOAD_CONST               6 ('05y6 output directory already exists and is non-empty: ')
+             84 LOAD_GLOBAL              2 (OUTPUT_DIR)
+             86 FORMAT_VALUE             0
+             88 LOAD_CONST               7 ('. Do not overwrite prospective results.')
+             90 BUILD_STRING             3
+
+282          92 CALL_FUNCTION            1
+             94 RAISE_VARARGS            1
+
+287     >>   96 LOAD_GLOBAL              7 (verify_inputs)
+             98 CALL_FUNCTION            0
+            100 UNPACK_SEQUENCE          3
+            102 STORE_FAST               0 (contract)
+            104 STORE_FAST               1 (completion)
+            106 STORE_FAST               2 (progress)
+
+289         108 BUILD_LIST               0
+            110 STORE_FAST               3 (g19_rows)
+
+290         112 BUILD_LIST               0
+            114 STORE_FAST               4 (standard_rows)
+
+292         116 BUILD_LIST               0
+            118 STORE_FAST               5 (g19_original)
+
+293         120 BUILD_LIST               0
+            122 STORE_FAST               6 (g19_candidate)
+
+295         124 LOAD_CONST               8 (0)
+            126 STORE_FAST               7 (standard_original_total)
+
+296         128 LOAD_CONST               8 (0)
+            130 STORE_FAST               8 (standard_candidate_total)
+
+297         132 LOAD_CONST               8 (0)
+            134 STORE_FAST               9 (standard_lost_total)
+
+298         136 LOAD_CONST               8 (0)
+            138 STORE_FAST              10 (standard_gained_total)
+
+300         140 LOAD_GLOBAL              8 (set)
+            142 CALL_FUNCTION            0
+            144 STORE_FAST              11 (shard_hashes_seen)
+
+302         146 LOAD_FAST                2 (progress)
+            148 LOAD_METHOD              9 (copy)
+            150 CALL_METHOD              0
+            152 STORE_FAST               2 (progress)
+
+303         154 LOAD_GLOBAL             10 (pd)
+            156 LOAD_ATTR               11 (to_numeric)
+
+304         158 LOAD_FAST                2 (progress)
+            160 LOAD_CONST               9 ('bank_row_index')
+            162 BINARY_SUBSCR
+            164 LOAD_CONST              10 ('raise')
+
+303         166 LOAD_CONST              11 (('errors',))
+            168 CALL_FUNCTION_KW         2
+
+305         170 LOAD_METHOD             12 (astype)
+            172 LOAD_GLOBAL             13 (int)
+            174 CALL_METHOD              1
+
+303         176 LOAD_FAST                2 (progress)
+            178 LOAD_CONST              12 ('bank_row_index_num')
+            180 STORE_SUBSCR
+
+306         182 LOAD_FAST                2 (progress)
+            184 LOAD_ATTR               14 (sort_values)
+
+307         186 LOAD_CONST              12 ('bank_row_index_num')
+            188 LOAD_CONST              13 ('mergesort')
+
+306         190 LOAD_CONST              14 (('kind',))
+            192 CALL_FUNCTION_KW         2
+
+308         194 LOAD_ATTR               15 (reset_index)
+            196 LOAD_CONST              15 (True)
+
+306         198 LOAD_CONST              16 (('drop',))
+            200 CALL_FUNCTION_KW         1
+            202 STORE_FAST               2 (progress)
+
+310         204 LOAD_FAST                2 (progress)
+            206 LOAD_METHOD             16 (iterrows)
+            208 CALL_METHOD              0
+            210 GET_ITER
+        >>  212 EXTENDED_ARG             1
+            214 FOR_ITER               358 (to 932)
+            216 UNPACK_SEQUENCE          2
+            218 STORE_FAST              12 (_)
+            220 STORE_FAST              13 (row)
+
+311         222 LOAD_GLOBAL             17 (resolve_project_path)
+            224 LOAD_FAST               13 (row)
+            226 LOAD_CONST              17 ('shard_path')
+            228 BINARY_SUBSCR
+            230 CALL_FUNCTION            1
+            232 STORE_FAST              14 (shard_path)
+
+312         234 LOAD_GLOBAL             18 (require_file)
+            236 LOAD_FAST               14 (shard_path)
+            238 CALL_FUNCTION            1
+            240 POP_TOP
+
+313         242 LOAD_GLOBAL             19 (sha256_file)
+            244 LOAD_FAST               14 (shard_path)
+            246 CALL_FUNCTION            1
+            248 STORE_FAST              15 (actual_hash)
+
+314         250 LOAD_GLOBAL             20 (str)
+            252 LOAD_FAST               13 (row)
+            254 LOAD_CONST              18 ('shard_sha256')
+            256 BINARY_SUBSCR
+            258 CALL_FUNCTION            1
+            260 LOAD_METHOD             21 (strip)
+            262 CALL_METHOD              0
+            264 STORE_FAST              16 (expected_hash)
+
+315         266 LOAD_FAST               15 (actual_hash)
+            268 LOAD_METHOD             22 (lower)
+            270 CALL_METHOD              0
+            272 LOAD_FAST               16 (expected_hash)
+            274 LOAD_METHOD             22 (lower)
+            276 CALL_METHOD              0
+            278 COMPARE_OP               3 (!=)
+            280 POP_JUMP_IF_FALSE      148 (to 296)
+
+316         282 LOAD_GLOBAL              6 (RuntimeError)
+            284 LOAD_CONST              19 ('05y5 shard hash mismatch: ')
+            286 LOAD_FAST               14 (shard_path)
+            288 FORMAT_VALUE             0
+            290 BUILD_STRING             2
+            292 CALL_FUNCTION            1
+            294 RAISE_VARARGS            1
+
+317     >>  296 LOAD_FAST               15 (actual_hash)
+            298 LOAD_FAST               11 (shard_hashes_seen)
+            300 CONTAINS_OP              0
+            302 POP_JUMP_IF_FALSE      156 (to 312)
+
+318         304 LOAD_GLOBAL              6 (RuntimeError)
+            306 LOAD_CONST              20 ('Duplicate 05y5 shard hash encountered.')
+            308 CALL_FUNCTION            1
+            310 RAISE_VARARGS            1
+
+319     >>  312 LOAD_FAST               11 (shard_hashes_seen)
+            314 LOAD_METHOD             23 (add)
+            316 LOAD_FAST               15 (actual_hash)
+            318 CALL_METHOD              1
+            320 POP_TOP
+
+321         322 LOAD_GLOBAL             24 (load_json)
+            324 LOAD_FAST               14 (shard_path)
+            326 CALL_FUNCTION            1
+            328 STORE_FAST              17 (shard)
+
+322         330 LOAD_FAST               17 (shard)
+            332 LOAD_METHOD             25 (get)
+            334 LOAD_CONST              21 ('scientific_payload')
+            336 CALL_METHOD              1
+            338 STORE_FAST              18 (payload)
+
+323         340 LOAD_GLOBAL             26 (isinstance)
+            342 LOAD_FAST               18 (payload)
+            344 LOAD_GLOBAL             27 (dict)
+            346 CALL_FUNCTION            2
+            348 POP_JUMP_IF_TRUE       179 (to 358)
+
+324         350 LOAD_GLOBAL              6 (RuntimeError)
+            352 LOAD_CONST              22 ('05y5 shard lacks scientific_payload.')
+            354 CALL_FUNCTION            1
+            356 RAISE_VARARGS            1
+
+325     >>  358 LOAD_FAST               18 (payload)
+            360 LOAD_METHOD             25 (get)
+            362 LOAD_CONST              23 ('factor_rows')
+            364 CALL_METHOD              1
+            366 STORE_FAST              19 (factors)
+
+326         368 LOAD_GLOBAL             26 (isinstance)
+            370 LOAD_FAST               19 (factors)
+            372 LOAD_GLOBAL             28 (list)
+            374 CALL_FUNCTION            2
+            376 POP_JUMP_IF_TRUE       193 (to 386)
+
+327         378 LOAD_GLOBAL              6 (RuntimeError)
+            380 LOAD_CONST              24 ('05y5 shard lacks factor_rows.')
+            382 CALL_FUNCTION            1
+            384 RAISE_VARARGS            1
+
+329     >>  386 LOAD_FAST               19 (factors)
+            388 GET_ITER
+        >>  390 FOR_ITER                 7 (to 406)
+            392 STORE_FAST              20 (factor)
+
+330         394 LOAD_GLOBAL             29 (validate_original_rule_fields)
+            396 LOAD_FAST               20 (factor)
+            398 LOAD_FAST                0 (contract)
+            400 CALL_FUNCTION            2
+            402 POP_TOP
+            404 JUMP_ABSOLUTE          195 (to 390)
+
+332     >>  406 LOAD_GLOBAL             20 (str)
+            408 LOAD_FAST               13 (row)
+            410 LOAD_CONST              25 ('source_scenario_id')
+            412 BINARY_SUBSCR
+            414 CALL_FUNCTION            1
+            416 STORE_FAST              21 (sid)
+
+333         418 LOAD_GLOBAL             20 (str)
+            420 LOAD_FAST               13 (row)
+            422 LOAD_CONST              26 ('dataset_key')
+            424 BINARY_SUBSCR
+            426 CALL_FUNCTION            1
+            428 STORE_FAST              22 (dataset_key)
+
+335         430 LOAD_FAST               21 (sid)
+            432 LOAD_CONST              27 ('G19_CORRELATED_PRIVATE_NULL_N62')
+            434 COMPARE_OP               2 (==)
+            436 EXTENDED_ARG             1
+            438 POP_JUMP_IF_FALSE      335 (to 670)
+
+336         440 LOAD_CONST              28 (False)
+            442 STORE_FAST              23 (original_event)
+
+337         444 LOAD_CONST              28 (False)
+            446 STORE_FAST              24 (candidate_event)
+
+339         448 LOAD_FAST               19 (factors)
+            450 GET_ITER
+        >>  452 FOR_ITER                42 (to 538)
+            454 STORE_FAST              20 (factor)
+
+341         456 LOAD_GLOBAL             30 (parse_bool)
+            458 LOAD_FAST               20 (factor)
+            460 LOAD_CONST              29 ('biological_truth_match')
+            462 BINARY_SUBSCR
+            464 CALL_FUNCTION            1
+            466 UNARY_NOT
+            468 JUMP_IF_FALSE_OR_POP   241 (to 482)
+
+342         470 LOAD_GLOBAL             30 (parse_bool)
+            472 LOAD_FAST               20 (factor)
+            474 LOAD_CONST              30 ('technical_truth_match')
+            476 BINARY_SUBSCR
+            478 CALL_FUNCTION            1
+            480 UNARY_NOT
+
+340     >>  482 STORE_FAST              25 (false_truth)
+
+344         484 LOAD_GLOBAL             30 (parse_bool)
+            486 LOAD_FAST               20 (factor)
+            488 LOAD_CONST              31 ('passes_stability_gate')
+            490 BINARY_SUBSCR
+            492 CALL_FUNCTION            1
+            494 STORE_FAST              26 (original_keep)
+
+345         496 LOAD_GLOBAL             31 (candidate_keep)
+            498 LOAD_FAST               20 (factor)
+            500 CALL_FUNCTION            1
+            502 STORE_FAST              27 (cand_keep)
+
+347         504 LOAD_FAST               26 (original_keep)
+            506 EXTENDED_ARG             1
+            508 POP_JUMP_IF_FALSE      260 (to 520)
+            510 LOAD_FAST               25 (false_truth)
+            512 EXTENDED_ARG             1
+            514 POP_JUMP_IF_FALSE      260 (to 520)
+
+348         516 LOAD_CONST              15 (True)
+            518 STORE_FAST              23 (original_event)
+
+349     >>  520 LOAD_FAST               27 (cand_keep)
+            522 EXTENDED_ARG             1
+            524 POP_JUMP_IF_FALSE      268 (to 536)
+            526 LOAD_FAST               25 (false_truth)
+            528 EXTENDED_ARG             1
+            530 POP_JUMP_IF_FALSE      268 (to 536)
+
+350         532 LOAD_CONST              15 (True)
+            534 STORE_FAST              24 (candidate_event)
+        >>  536 JUMP_ABSOLUTE          226 (to 452)
+
+352     >>  538 LOAD_FAST               24 (candidate_event)
+            540 EXTENDED_ARG             1
+            542 POP_JUMP_IF_FALSE      283 (to 566)
+            544 LOAD_FAST               23 (original_event)
+            546 EXTENDED_ARG             1
+            548 POP_JUMP_IF_TRUE       283 (to 566)
+
+353         550 LOAD_GLOBAL              6 (RuntimeError)
+
+354         552 LOAD_CONST              32 ('Nested candidate event without original event in ')
+            554 LOAD_FAST               22 (dataset_key)
+            556 FORMAT_VALUE             0
+            558 LOAD_CONST              33 ('.')
+            560 BUILD_STRING             3
+
+353         562 CALL_FUNCTION            1
+            564 RAISE_VARARGS            1
+
+357     >>  566 LOAD_FAST                5 (g19_original)
+            568 LOAD_METHOD             32 (append)
+            570 LOAD_GLOBAL             13 (int)
+            572 LOAD_FAST               23 (original_event)
+            574 CALL_FUNCTION            1
+            576 CALL_METHOD              1
+            578 POP_TOP
+
+358         580 LOAD_FAST                6 (g19_candidate)
+            582 LOAD_METHOD             32 (append)
+            584 LOAD_GLOBAL             13 (int)
+            586 LOAD_FAST               24 (candidate_event)
+            588 CALL_FUNCTION            1
+            590 CALL_METHOD              1
+            592 POP_TOP
+
+359         594 LOAD_FAST                3 (g19_rows)
+            596 LOAD_METHOD             32 (append)
+
+361         598 LOAD_FAST               22 (dataset_key)
+
+362         600 LOAD_GLOBAL             13 (int)
+            602 LOAD_FAST               13 (row)
+            604 LOAD_CONST              34 ('fresh_replicate_index')
+            606 BINARY_SUBSCR
+            608 CALL_FUNCTION            1
+
+363         610 LOAD_GLOBAL             13 (int)
+            612 LOAD_FAST               13 (row)
+            614 LOAD_CONST              35 ('simulation_seed')
+            616 BINARY_SUBSCR
+            618 CALL_FUNCTION            1
+
+364         620 LOAD_GLOBAL             13 (int)
+            622 LOAD_FAST               23 (original_event)
+            624 CALL_FUNCTION            1
+
+365         626 LOAD_GLOBAL             13 (int)
+            628 LOAD_FAST               24 (candidate_event)
+            630 CALL_FUNCTION            1
+
+366         632 LOAD_GLOBAL             13 (int)
+            634 LOAD_FAST               23 (original_event)
+            636 EXTENDED_ARG             1
+            638 JUMP_IF_FALSE_OR_POP   322 (to 644)
+            640 LOAD_FAST               24 (candidate_event)
+            642 UNARY_NOT
+        >>  644 CALL_FUNCTION            1
+
+367         646 LOAD_GLOBAL             13 (int)
+            648 LOAD_FAST               24 (candidate_event)
+            650 EXTENDED_ARG             1
+            652 JUMP_IF_FALSE_OR_POP   329 (to 658)
+            654 LOAD_FAST               23 (original_event)
+            656 UNARY_NOT
+        >>  658 CALL_FUNCTION            1
+
+360         660 LOAD_CONST              36 (('dataset_key', 'fresh_replicate_index', 'simulation_seed', 'original_false_acceptance_event', 'candidate_false_acceptance_event', 'rescued_by_q10_060', 'reverse_discordance'))
+            662 BUILD_CONST_KEY_MAP      7
+
+359         664 CALL_METHOD              1
+            666 POP_TOP
+            668 JUMP_ABSOLUTE          106 (to 212)
+
+371     >>  670 LOAD_FAST               21 (sid)
+            672 LOAD_CONST              37 ('G07_IND_N62_S1P00')
+            674 COMPARE_OP               2 (==)
+            676 EXTENDED_ARG             1
+            678 POP_JUMP_IF_FALSE      459 (to 918)
+
+372         680 LOAD_CONST               8 (0)
+            682 STORE_FAST              28 (original_recovered)
+
+373         684 LOAD_CONST               8 (0)
+            686 STORE_FAST              29 (candidate_recovered)
+
+374         688 LOAD_CONST               8 (0)
+            690 STORE_FAST              30 (lost)
+
+375         692 LOAD_CONST               8 (0)
+            694 STORE_FAST              31 (gained)
+
+377         696 LOAD_FAST               19 (factors)
+            698 GET_ITER
+        >>  700 FOR_ITER                56 (to 814)
+            702 STORE_FAST              20 (factor)
+
+378         704 LOAD_GLOBAL             30 (parse_bool)
+            706 LOAD_FAST               20 (factor)
+            708 LOAD_CONST              29 ('biological_truth_match')
+            710 BINARY_SUBSCR
+            712 CALL_FUNCTION            1
+            714 STORE_FAST              32 (biological)
+
+379         716 LOAD_FAST               32 (biological)
+            718 EXTENDED_ARG             1
+            720 POP_JUMP_IF_TRUE       363 (to 726)
+
+380         722 EXTENDED_ARG             1
+            724 JUMP_ABSOLUTE          350 (to 700)
+
+381     >>  726 LOAD_GLOBAL             30 (parse_bool)
+            728 LOAD_FAST               20 (factor)
+            730 LOAD_CONST              31 ('passes_stability_gate')
+            732 BINARY_SUBSCR
+            734 CALL_FUNCTION            1
+            736 STORE_FAST              26 (original_keep)
+
+382         738 LOAD_GLOBAL             31 (candidate_keep)
+            740 LOAD_FAST               20 (factor)
+            742 CALL_FUNCTION            1
+            744 STORE_FAST              27 (cand_keep)
+
+384         746 LOAD_FAST               28 (original_recovered)
+            748 LOAD_GLOBAL             13 (int)
+            750 LOAD_FAST               26 (original_keep)
+            752 CALL_FUNCTION            1
+            754 INPLACE_ADD
+            756 STORE_FAST              28 (original_recovered)
+
+385         758 LOAD_FAST               29 (candidate_recovered)
+            760 LOAD_GLOBAL             13 (int)
+            762 LOAD_FAST               27 (cand_keep)
+            764 CALL_FUNCTION            1
+            766 INPLACE_ADD
+            768 STORE_FAST              29 (candidate_recovered)
+
+386         770 LOAD_FAST               30 (lost)
+            772 LOAD_GLOBAL             13 (int)
+            774 LOAD_FAST               26 (original_keep)
+            776 EXTENDED_ARG             1
+            778 JUMP_IF_FALSE_OR_POP   392 (to 784)
+            780 LOAD_FAST               27 (cand_keep)
+            782 UNARY_NOT
+        >>  784 CALL_FUNCTION            1
+            786 INPLACE_ADD
+            788 STORE_FAST              30 (lost)
+
+387         790 LOAD_FAST               31 (gained)
+            792 LOAD_GLOBAL             13 (int)
+            794 LOAD_FAST               27 (cand_keep)
+            796 EXTENDED_ARG             1
+            798 JUMP_IF_FALSE_OR_POP   402 (to 804)
+            800 LOAD_FAST               26 (original_keep)
+            802 UNARY_NOT
+        >>  804 CALL_FUNCTION            1
+            806 INPLACE_ADD
+            808 STORE_FAST              31 (gained)
+            810 EXTENDED_ARG             1
+            812 JUMP_ABSOLUTE          350 (to 700)
+
+389     >>  814 LOAD_FAST               31 (gained)
+            816 LOAD_CONST               8 (0)
+            818 COMPARE_OP               3 (!=)
+            820 EXTENDED_ARG             1
+            822 POP_JUMP_IF_FALSE      420 (to 840)
+
+390         824 LOAD_GLOBAL              6 (RuntimeError)
+
+391         826 LOAD_CONST              38 ('Nested q10=.60 rule gained STANDARD truth factors in ')
+            828 LOAD_FAST               22 (dataset_key)
+            830 FORMAT_VALUE             0
+            832 LOAD_CONST              33 ('.')
+            834 BUILD_STRING             3
+
+390         836 CALL_FUNCTION            1
+            838 RAISE_VARARGS            1
+
+394     >>  840 LOAD_FAST                7 (standard_original_total)
+            842 LOAD_FAST               28 (original_recovered)
+            844 INPLACE_ADD
+            846 STORE_FAST               7 (standard_original_total)
+
+395         848 LOAD_FAST                8 (standard_candidate_total)
+            850 LOAD_FAST               29 (candidate_recovered)
+            852 INPLACE_ADD
+            854 STORE_FAST               8 (standard_candidate_total)
+
+396         856 LOAD_FAST                9 (standard_lost_total)
+            858 LOAD_FAST               30 (lost)
+            860 INPLACE_ADD
+            862 STORE_FAST               9 (standard_lost_total)
+
+397         864 LOAD_FAST               10 (standard_gained_total)
+            866 LOAD_FAST               31 (gained)
+            868 INPLACE_ADD
+            870 STORE_FAST              10 (standard_gained_total)
+
+399         872 LOAD_FAST                4 (standard_rows)
+            874 LOAD_METHOD             32 (append)
+
+401         876 LOAD_FAST               22 (dataset_key)
+
+402         878 LOAD_GLOBAL             13 (int)
+            880 LOAD_FAST               13 (row)
+            882 LOAD_CONST              34 ('fresh_replicate_index')
+            884 BINARY_SUBSCR
+            886 CALL_FUNCTION            1
+
+403         888 LOAD_GLOBAL             13 (int)
+            890 LOAD_FAST               13 (row)
+            892 LOAD_CONST              35 ('simulation_seed')
+            894 BINARY_SUBSCR
+            896 CALL_FUNCTION            1
+
+404         898 LOAD_CONST              39 (4)
+
+405         900 LOAD_FAST               28 (original_recovered)
+
+406         902 LOAD_FAST               29 (candidate_recovered)
+
+407         904 LOAD_FAST               30 (lost)
+
+408         906 LOAD_FAST               31 (gained)
+
+400         908 LOAD_CONST              40 (('dataset_key', 'fresh_replicate_index', 'simulation_seed', 'truth_factor_opportunities', 'original_recovered_truth_factors', 'candidate_recovered_truth_factors', 'lost_truth_factors_under_q10_060', 'gained_truth_factors_under_q10_060'))
+            910 BUILD_CONST_KEY_MAP      8
+
+399         912 CALL_METHOD              1
+            914 POP_TOP
+            916 JUMP_ABSOLUTE          106 (to 212)
+
+412     >>  918 LOAD_GLOBAL              6 (RuntimeError)
+            920 LOAD_CONST              41 ('Unexpected 05y5 scenario in progress: ')
+            922 LOAD_FAST               21 (sid)
+            924 FORMAT_VALUE             0
+            926 BUILD_STRING             2
+            928 CALL_FUNCTION            1
+            930 RAISE_VARARGS            1
+
+414     >>  932 LOAD_GLOBAL             33 (len)
+            934 LOAD_FAST                3 (g19_rows)
+            936 CALL_FUNCTION            1
+            938 LOAD_GLOBAL             34 (EXPECTED_G19_DATASETS)
+            940 COMPARE_OP               3 (!=)
+            942 EXTENDED_ARG             1
+            944 POP_JUMP_IF_FALSE      486 (to 972)
+
+415         946 LOAD_GLOBAL              6 (RuntimeError)
+
+416         948 LOAD_CONST              42 ('Expected ')
+            950 LOAD_GLOBAL             34 (EXPECTED_G19_DATASETS)
+            952 FORMAT_VALUE             0
+            954 LOAD_CONST              43 (' fresh G19 datasets; found ')
+            956 LOAD_GLOBAL             33 (len)
+            958 LOAD_FAST                3 (g19_rows)
+            960 CALL_FUNCTION            1
+            962 FORMAT_VALUE             0
+            964 LOAD_CONST              33 ('.')
+            966 BUILD_STRING             5
+
+415         968 CALL_FUNCTION            1
+            970 RAISE_VARARGS            1
+
+418     >>  972 LOAD_GLOBAL             33 (len)
+            974 LOAD_FAST                4 (standard_rows)
+            976 CALL_FUNCTION            1
+            978 LOAD_GLOBAL             35 (EXPECTED_STANDARD_DATASETS)
+            980 COMPARE_OP               3 (!=)
+            982 EXTENDED_ARG             1
+            984 POP_JUMP_IF_FALSE      506 (to 1012)
+
+419         986 LOAD_GLOBAL              6 (RuntimeError)
+
+420         988 LOAD_CONST              42 ('Expected ')
+            990 LOAD_GLOBAL             35 (EXPECTED_STANDARD_DATASETS)
+            992 FORMAT_VALUE             0
+            994 LOAD_CONST              44 (' fresh STANDARD datasets; found ')
+
+421         996 LOAD_GLOBAL             33 (len)
+            998 LOAD_FAST                4 (standard_rows)
+           1000 CALL_FUNCTION            1
+
+420        1002 FORMAT_VALUE             0
+           1004 LOAD_CONST              33 ('.')
+           1006 BUILD_STRING             5
+
+419        1008 CALL_FUNCTION            1
+           1010 RAISE_VARARGS            1
+
+424     >> 1012 LOAD_GLOBAL             36 (np)
+           1014 LOAD_ATTR               37 (asarray)
+           1016 LOAD_FAST                5 (g19_original)
+           1018 LOAD_GLOBAL             13 (int)
+           1020 LOAD_CONST              45 (('dtype',))
+           1022 CALL_FUNCTION_KW         2
+           1024 STORE_FAST              33 (original)
+
+425        1026 LOAD_GLOBAL             36 (np)
+           1028 LOAD_ATTR               37 (asarray)
+           1030 LOAD_FAST                6 (g19_candidate)
+           1032 LOAD_GLOBAL             13 (int)
+           1034 LOAD_CONST              45 (('dtype',))
+           1036 CALL_FUNCTION_KW         2
+           1038 STORE_FAST              34 (candidate)
+
+427        1040 LOAD_GLOBAL             13 (int)
+           1042 LOAD_FAST               33 (original)
+           1044 LOAD_METHOD             38 (sum)
+           1046 CALL_METHOD              0
+           1048 CALL_FUNCTION            1
+           1050 STORE_FAST              35 (original_n)
+
+428        1052 LOAD_GLOBAL             13 (int)
+           1054 LOAD_FAST               34 (candidate)
+           1056 LOAD_METHOD             38 (sum)
+           1058 CALL_METHOD              0
+           1060 CALL_FUNCTION            1
+           1062 STORE_FAST              36 (candidate_n)
+
+429        1064 LOAD_GLOBAL             13 (int)
+           1066 LOAD_GLOBAL             36 (np)
+           1068 LOAD_METHOD             38 (sum)
+           1070 LOAD_FAST               33 (original)
+           1072 LOAD_CONST              46 (1)
+           1074 COMPARE_OP               2 (==)
+           1076 LOAD_FAST               34 (candidate)
+           1078 LOAD_CONST               8 (0)
+           1080 COMPARE_OP               2 (==)
+           1082 BINARY_AND
+           1084 CALL_METHOD              1
+           1086 CALL_FUNCTION            1
+           1088 STORE_FAST              37 (rescued)
+
+430        1090 LOAD_GLOBAL             13 (int)
+           1092 LOAD_GLOBAL             36 (np)
+           1094 LOAD_METHOD             38 (sum)
+           1096 LOAD_FAST               33 (original)
+           1098 LOAD_CONST               8 (0)
+           1100 COMPARE_OP               2 (==)
+           1102 LOAD_FAST               34 (candidate)
+           1104 LOAD_CONST              46 (1)
+           1106 COMPARE_OP               2 (==)
+           1108 BINARY_AND
+           1110 CALL_METHOD              1
+           1112 CALL_FUNCTION            1
+           1114 STORE_FAST              38 (reverse)
+
+432        1116 LOAD_FAST               35 (original_n)
+           1118 LOAD_FAST               36 (candidate_n)
+           1120 BINARY_SUBTRACT
+           1122 LOAD_FAST               37 (rescued)
+           1124 LOAD_FAST               38 (reverse)
+           1126 BINARY_SUBTRACT
+           1128 COMPARE_OP               3 (!=)
+           1130 EXTENDED_ARG             2
+           1132 POP_JUMP_IF_FALSE      571 (to 1142)
+
+433        1134 LOAD_GLOBAL              6 (RuntimeError)
+           1136 LOAD_CONST              47 ('Paired G19 accounting identity failed.')
+           1138 CALL_FUNCTION            1
+           1140 RAISE_VARARGS            1
+
+434     >> 1142 LOAD_FAST               38 (reverse)
+           1144 LOAD_CONST               8 (0)
+           1146 COMPARE_OP               3 (!=)
+           1148 EXTENDED_ARG             2
+           1150 POP_JUMP_IF_FALSE      580 (to 1160)
+
+435        1152 LOAD_GLOBAL              6 (RuntimeError)
+           1154 LOAD_CONST              48 ('Candidate nesting violated: reverse discordance is nonzero.')
+           1156 CALL_FUNCTION            1
+           1158 RAISE_VARARGS            1
+
+437     >> 1160 LOAD_FAST               35 (original_n)
+           1162 LOAD_GLOBAL             34 (EXPECTED_G19_DATASETS)
+           1164 BINARY_TRUE_DIVIDE
+           1166 STORE_FAST              39 (original_rate)
+
+438        1168 LOAD_FAST               36 (candidate_n)
+           1170 LOAD_GLOBAL             34 (EXPECTED_G19_DATASETS)
+           1172 BINARY_TRUE_DIVIDE
+           1174 STORE_FAST              40 (candidate_rate)
+
+439        1176 LOAD_FAST               39 (original_rate)
+           1178 LOAD_FAST               40 (candidate_rate)
+           1180 BINARY_SUBTRACT
+           1182 STORE_FAST              41 (absolute_reduction)
+
+441        1184 LOAD_FAST               39 (original_rate)
+           1186 LOAD_CONST               8 (0)
+           1188 COMPARE_OP               4 (>)
+           1190 EXTENDED_ARG             2
+           1192 POP_JUMP_IF_FALSE      601 (to 1202)
+           1194 LOAD_FAST               41 (absolute_reduction)
+           1196 LOAD_FAST               39 (original_rate)
+           1198 BINARY_TRUE_DIVIDE
+           1200 JUMP_FORWARD             1 (to 1204)
+        >> 1202 LOAD_CONST               0 (None)
+
+440     >> 1204 STORE_FAST              42 (relative_reduction)
+
+444        1206 LOAD_GLOBAL             39 (wilson)
+           1208 LOAD_FAST               35 (original_n)
+           1210 LOAD_GLOBAL             34 (EXPECTED_G19_DATASETS)
+           1212 CALL_FUNCTION            2
+           1214 STORE_FAST              43 (orig_ci)
+
+445        1216 LOAD_GLOBAL             39 (wilson)
+           1218 LOAD_FAST               36 (candidate_n)
+           1220 LOAD_GLOBAL             34 (EXPECTED_G19_DATASETS)
+           1222 CALL_FUNCTION            2
+           1224 STORE_FAST              44 (cand_ci)
+
+446        1226 LOAD_GLOBAL             40 (bootstrap_paired_reduction)
+           1228 LOAD_FAST               33 (original)
+           1230 LOAD_FAST               34 (candidate)
+           1232 CALL_FUNCTION            2
+           1234 STORE_FAST              45 (reduction_ci)
+
+447        1236 LOAD_GLOBAL             41 (exact_two_sided_nested_mcnemar)
+           1238 LOAD_FAST               37 (rescued)
+           1240 LOAD_FAST               38 (reverse)
+           1242 CALL_FUNCTION            2
+           1244 STORE_FAST              46 (p_value)
+
+449        1246 LOAD_FAST                7 (standard_original_total)
+           1248 LOAD_GLOBAL             42 (EXPECTED_STANDARD_OPPORTUNITIES)
+           1250 COMPARE_OP               4 (>)
+           1252 EXTENDED_ARG             2
+           1254 POP_JUMP_IF_FALSE      632 (to 1264)
+
+450        1256 LOAD_GLOBAL              6 (RuntimeError)
+           1258 LOAD_CONST              49 ('Original STANDARD recovered count exceeds 800.')
+           1260 CALL_FUNCTION            1
+           1262 RAISE_VARARGS            1
+
+451     >> 1264 LOAD_FAST                8 (standard_candidate_total)
+           1266 LOAD_GLOBAL             42 (EXPECTED_STANDARD_OPPORTUNITIES)
+           1268 COMPARE_OP               4 (>)
+           1270 EXTENDED_ARG             2
+           1272 POP_JUMP_IF_FALSE      641 (to 1282)
+
+452        1274 LOAD_GLOBAL              6 (RuntimeError)
+           1276 LOAD_CONST              50 ('Candidate STANDARD recovered count exceeds 800.')
+           1278 CALL_FUNCTION            1
+           1280 RAISE_VARARGS            1
+
+453     >> 1282 LOAD_FAST                7 (standard_original_total)
+           1284 LOAD_FAST                8 (standard_candidate_total)
+           1286 BINARY_SUBTRACT
+
+454        1288 LOAD_FAST                9 (standard_lost_total)
+           1290 LOAD_FAST               10 (standard_gained_total)
+           1292 BINARY_SUBTRACT
+
+453        1294 COMPARE_OP               3 (!=)
+           1296 EXTENDED_ARG             2
+           1298 POP_JUMP_IF_FALSE      654 (to 1308)
+
+456        1300 LOAD_GLOBAL              6 (RuntimeError)
+           1302 LOAD_CONST              51 ('STANDARD paired accounting identity failed.')
+           1304 CALL_FUNCTION            1
+           1306 RAISE_VARARGS            1
+
+457     >> 1308 LOAD_FAST               10 (standard_gained_total)
+           1310 LOAD_CONST               8 (0)
+           1312 COMPARE_OP               3 (!=)
+           1314 EXTENDED_ARG             2
+           1316 POP_JUMP_IF_FALSE      663 (to 1326)
+
+458        1318 LOAD_GLOBAL              6 (RuntimeError)
+           1320 LOAD_CONST              52 ('Candidate nesting violated for STANDARD truth recovery.')
+           1322 CALL_FUNCTION            1
+           1324 RAISE_VARARGS            1
+
+460     >> 1326 LOAD_FAST                7 (standard_original_total)
+           1328 LOAD_GLOBAL             42 (EXPECTED_STANDARD_OPPORTUNITIES)
+           1330 BINARY_TRUE_DIVIDE
+           1332 STORE_FAST              47 (standard_original_rate)
+
+461        1334 LOAD_FAST                8 (standard_candidate_total)
+           1336 LOAD_GLOBAL             42 (EXPECTED_STANDARD_OPPORTUNITIES)
+           1338 BINARY_TRUE_DIVIDE
+           1340 STORE_FAST              48 (standard_candidate_rate)
+
+462        1342 LOAD_GLOBAL             39 (wilson)
+
+463        1344 LOAD_FAST                8 (standard_candidate_total)
+
+464        1346 LOAD_GLOBAL             42 (EXPECTED_STANDARD_OPPORTUNITIES)
+
+462        1348 CALL_FUNCTION            2
+           1350 STORE_FAST              49 (standard_candidate_ci)
+
+467        1352 LOAD_GLOBAL             43 (bool)
+
+468        1354 LOAD_FAST               46 (p_value)
+           1356 LOAD_GLOBAL             44 (ALPHA)
+           1358 COMPARE_OP               0 (<)
+           1360 EXTENDED_ARG             2
+           1362 JUMP_IF_FALSE_OR_POP   695 (to 1390)
+
+469        1364 LOAD_FAST               40 (candidate_rate)
+           1366 LOAD_FAST               39 (original_rate)
+           1368 COMPARE_OP               0 (<)
+
+468        1370 EXTENDED_ARG             2
+           1372 JUMP_IF_FALSE_OR_POP   695 (to 1390)
+
+470        1374 LOAD_FAST               38 (reverse)
+           1376 LOAD_CONST               8 (0)
+           1378 COMPARE_OP               2 (==)
+
+468        1380 EXTENDED_ARG             2
+           1382 JUMP_IF_FALSE_OR_POP   695 (to 1390)
+
+471        1384 LOAD_FAST               48 (standard_candidate_rate)
+           1386 LOAD_CONST              53 (0.8)
+           1388 COMPARE_OP               5 (>=)
+
+467     >> 1390 CALL_FUNCTION            1
+           1392 STORE_FAST              50 (confirmation)
+
+476        1394 LOAD_CONST              54 ('G19_original_false_acceptance')
+
+477        1396 LOAD_FAST               35 (original_n)
+
+478        1398 LOAD_GLOBAL             34 (EXPECTED_G19_DATASETS)
+
+479        1400 LOAD_FAST               39 (original_rate)
+
+480        1402 LOAD_FAST               43 (orig_ci)
+           1404 LOAD_CONST               8 (0)
+           1406 BINARY_SUBSCR
+
+481        1408 LOAD_FAST               43 (orig_ci)
+           1410 LOAD_CONST              46 (1)
+           1412 BINARY_SUBSCR
+
+475        1414 LOAD_CONST              55 (('endpoint', 'numerator', 'denominator', 'rate', 'ci95_low', 'ci95_high'))
+           1416 BUILD_CONST_KEY_MAP      6
+
+484        1418 LOAD_CONST              56 ('G19_candidate_false_acceptance_q10_060')
+
+485        1420 LOAD_FAST               36 (candidate_n)
+
+486        1422 LOAD_GLOBAL             34 (EXPECTED_G19_DATASETS)
+
+487        1424 LOAD_FAST               40 (candidate_rate)
+
+488        1426 LOAD_FAST               44 (cand_ci)
+           1428 LOAD_CONST               8 (0)
+           1430 BINARY_SUBSCR
+
+489        1432 LOAD_FAST               44 (cand_ci)
+           1434 LOAD_CONST              46 (1)
+           1436 BINARY_SUBSCR
+
+483        1438 LOAD_CONST              55 (('endpoint', 'numerator', 'denominator', 'rate', 'ci95_low', 'ci95_high'))
+           1440 BUILD_CONST_KEY_MAP      6
+
+492        1442 LOAD_CONST              57 ('STANDARD_original_biological_recovery')
+
+493        1444 LOAD_FAST                7 (standard_original_total)
+
+494        1446 LOAD_GLOBAL             42 (EXPECTED_STANDARD_OPPORTUNITIES)
+
+495        1448 LOAD_FAST               47 (standard_original_rate)
+
+496        1450 LOAD_CONST              58 ('')
+
+497        1452 LOAD_CONST              58 ('')
+
+491        1454 LOAD_CONST              55 (('endpoint', 'numerator', 'denominator', 'rate', 'ci95_low', 'ci95_high'))
+           1456 BUILD_CONST_KEY_MAP      6
+
+500        1458 LOAD_CONST              59 ('STANDARD_candidate_biological_recovery_q10_060')
+
+501        1460 LOAD_FAST                8 (standard_candidate_total)
+
+502        1462 LOAD_GLOBAL             42 (EXPECTED_STANDARD_OPPORTUNITIES)
+
+503        1464 LOAD_FAST               48 (standard_candidate_rate)
+
+504        1466 LOAD_FAST               49 (standard_candidate_ci)
+           1468 LOAD_CONST               8 (0)
+           1470 BINARY_SUBSCR
+
+505        1472 LOAD_FAST               49 (standard_candidate_ci)
+           1474 LOAD_CONST              46 (1)
+           1476 BINARY_SUBSCR
+
+499        1478 LOAD_CONST              55 (('endpoint', 'numerator', 'denominator', 'rate', 'ci95_low', 'ci95_high'))
+           1480 BUILD_CONST_KEY_MAP      6
+
+474        1482 BUILD_LIST               4
+           1484 STORE_FAST              51 (summary_rows)
+
+510        1486 LOAD_GLOBAL              1 (SCRIPT_VERSION)
+
+511        1488 LOAD_GLOBAL             45 (STATUS)
+
+512        1490 LOAD_CONST              60 ('PROSPECTIVE_POST_DISCOVERY_CONFIRMATORY_RECALIBRATION_VALIDATION')
+
+513        1492 LOAD_FAST                0 (contract)
+           1494 LOAD_CONST              61 ('original_rule')
+           1496 BINARY_SUBSCR
+
+514        1498 LOAD_FAST                0 (contract)
+           1500 LOAD_CONST              62 ('single_candidate_rule')
+           1502 BINARY_SUBSCR
+
+516        1504 LOAD_GLOBAL             34 (EXPECTED_G19_DATASETS)
+
+517        1506 LOAD_GLOBAL             35 (EXPECTED_STANDARD_DATASETS)
+
+518        1508 LOAD_GLOBAL             42 (EXPECTED_STANDARD_OPPORTUNITIES)
+
+519        1510 LOAD_CONST               8 (0)
+
+515        1512 LOAD_CONST              63 (('G19_datasets', 'STANDARD_datasets', 'STANDARD_truth_factor_opportunities', 'seed_overlap_with_prior_bank'))
+           1514 BUILD_CONST_KEY_MAP      4
+
+521        1516 BUILD_MAP                0
+
+522        1518 LOAD_CONST              64 ('original_false_acceptance_n')
+           1520 LOAD_FAST               35 (original_n)
+
+521        1522 MAP_ADD                  1
+
+523        1524 LOAD_CONST              65 ('original_false_acceptance_denominator')
+           1526 LOAD_GLOBAL             34 (EXPECTED_G19_DATASETS)
+
+521        1528 MAP_ADD                  1
+
+524        1530 LOAD_CONST              66 ('original_false_acceptance_rate')
+           1532 LOAD_FAST               39 (original_rate)
+
+521        1534 MAP_ADD                  1
+
+525        1536 LOAD_CONST              67 ('original_wilson95')
+           1538 LOAD_GLOBAL             28 (list)
+           1540 LOAD_FAST               43 (orig_ci)
+           1542 CALL_FUNCTION            1
+
+521        1544 MAP_ADD                  1
+
+526        1546 LOAD_CONST              68 ('candidate_false_acceptance_n')
+           1548 LOAD_FAST               36 (candidate_n)
+
+521        1550 MAP_ADD                  1
+
+527        1552 LOAD_CONST              69 ('candidate_false_acceptance_denominator')
+           1554 LOAD_GLOBAL             34 (EXPECTED_G19_DATASETS)
+
+521        1556 MAP_ADD                  1
+
+528        1558 LOAD_CONST              70 ('candidate_false_acceptance_rate')
+           1560 LOAD_FAST               40 (candidate_rate)
+
+521        1562 MAP_ADD                  1
+
+529        1564 LOAD_CONST              71 ('candidate_wilson95')
+           1566 LOAD_GLOBAL             28 (list)
+           1568 LOAD_FAST               44 (cand_ci)
+           1570 CALL_FUNCTION            1
+
+521        1572 MAP_ADD                  1
+
+530        1574 LOAD_CONST              72 ('rescued_datasets')
+           1576 LOAD_FAST               37 (rescued)
+
+521        1578 MAP_ADD                  1
+
+531        1580 LOAD_CONST              73 ('reverse_discordance')
+           1582 LOAD_FAST               38 (reverse)
+
+521        1584 MAP_ADD                  1
+
+532        1586 LOAD_CONST              74 ('absolute_rate_reduction')
+           1588 LOAD_FAST               41 (absolute_reduction)
+
+521        1590 MAP_ADD                  1
+
+533        1592 LOAD_CONST              75 ('relative_rate_reduction')
+           1594 LOAD_FAST               42 (relative_reduction)
+
+521        1596 MAP_ADD                  1
+
+534        1598 LOAD_CONST              76 ('paired_bootstrap95_absolute_reduction')
+           1600 LOAD_GLOBAL             28 (list)
+           1602 LOAD_FAST               45 (reduction_ci)
+           1604 CALL_FUNCTION            1
+
+521        1606 MAP_ADD                  1
+
+535        1608 LOAD_CONST              77 ('exact_two_sided_nested_mcnemar_p')
+           1610 LOAD_FAST               46 (p_value)
+
+521        1612 MAP_ADD                  1
+
+536        1614 LOAD_CONST              78 ('alpha')
+           1616 LOAD_GLOBAL             44 (ALPHA)
+
+521        1618 MAP_ADD                  1
+
+537        1620 LOAD_CONST              79 ('required_direction_met')
+           1622 LOAD_GLOBAL             43 (bool)
+           1624 LOAD_FAST               40 (candidate_rate)
+           1626 LOAD_FAST               39 (original_rate)
+           1628 COMPARE_OP               0 (<)
+           1630 CALL_FUNCTION            1
+
+521        1632 MAP_ADD                  1
+
+540        1634 LOAD_FAST                7 (standard_original_total)
+
+541        1636 LOAD_GLOBAL             42 (EXPECTED_STANDARD_OPPORTUNITIES)
+
+542        1638 LOAD_FAST               47 (standard_original_rate)
+
+543        1640 LOAD_FAST                8 (standard_candidate_total)
+
+544        1642 LOAD_FAST               48 (standard_candidate_rate)
+
+545        1644 LOAD_GLOBAL             28 (list)
+           1646 LOAD_FAST               49 (standard_candidate_ci)
+           1648 CALL_FUNCTION            1
+
+546        1650 LOAD_FAST                9 (standard_lost_total)
+
+547        1652 LOAD_FAST               10 (standard_gained_total)
+
+548        1654 LOAD_CONST              53 (0.8)
+
+549        1656 LOAD_GLOBAL             43 (bool)
+           1658 LOAD_FAST               48 (standard_candidate_rate)
+           1660 LOAD_CONST              53 (0.8)
+           1662 COMPARE_OP               5 (>=)
+           1664 CALL_FUNCTION            1
+
+539        1666 LOAD_CONST              80 (('original_recovered_n', 'denominator', 'original_recovery_rate', 'candidate_recovered_n', 'candidate_recovery_rate', 'candidate_wilson95', 'lost_truth_opportunities', 'gained_truth_opportunities', 'existing_D02_floor', 'floor_met'))
+           1668 BUILD_CONST_KEY_MAP     10
+
+552        1670 LOAD_FAST               50 (confirmation)
+
+554        1672 LOAD_CONST              81 ('p<0.05 exact paired specificity improvement in required direction, reverse discordance=0, and candidate STANDARD recovery >=0.80.')
+
+557        1674 LOAD_CONST              82 ('FORBIDDEN')
+
+558        1676 LOAD_CONST              83 ('NONE')
+
+551        1678 LOAD_CONST              84 (('candidate_confirmed', 'definition', 'retuning_after_result', 'formal_05f3e_gate_consequence'))
+           1680 BUILD_CONST_KEY_MAP      4
+
+561        1682 LOAD_GLOBAL             46 (file_record)
+           1684 LOAD_GLOBAL             47 (CONTRACT_05Y3)
+           1686 CALL_FUNCTION            1
+
+562        1688 LOAD_GLOBAL             46 (file_record)
+           1690 LOAD_GLOBAL             48 (LOCK_05Y3)
+           1692 CALL_FUNCTION            1
+
+563        1694 LOAD_GLOBAL             46 (file_record)
+           1696 LOAD_GLOBAL             49 (LOCK_05Y4)
+           1698 CALL_FUNCTION            1
+
+564        1700 LOAD_GLOBAL             46 (file_record)
+           1702 LOAD_GLOBAL             50 (COMPLETION_05Y5)
+           1704 CALL_FUNCTION            1
+
+565        1706 LOAD_GLOBAL             46 (file_record)
+           1708 LOAD_GLOBAL             51 (PROGRESS_05Y5)
+           1710 CALL_FUNCTION            1
+
+560        1712 LOAD_CONST              85 (('05y3_contract', '05y3_lock', '05y4_lock', '05y5_completion', '05y5_progress'))
+           1714 BUILD_CONST_KEY_MAP      5
+
+509        1716 LOAD_CONST              86 (('script_version', 'status', 'analysis_role', 'original_rule', 'candidate_rule', 'fresh_bank', 'primary_specificity_endpoint', 'sensitivity_safety_endpoint', 'prospective_confirmation', 'provenance'))
+           1718 BUILD_CONST_KEY_MAP     10
+           1720 STORE_FAST              52 (result)
+
+569        1722 LOAD_GLOBAL              2 (OUTPUT_DIR)
+           1724 LOAD_ATTR               52 (mkdir)
+           1726 LOAD_CONST              15 (True)
+           1728 LOAD_CONST              15 (True)
+           1730 LOAD_CONST              87 (('parents', 'exist_ok'))
+           1732 CALL_FUNCTION_KW         2
+           1734 POP_TOP
+
+570        1736 LOAD_GLOBAL             53 (write_csv_atomic)
+           1738 LOAD_FAST                3 (g19_rows)
+           1740 LOAD_GLOBAL             54 (OUT_G19)
+           1742 CALL_FUNCTION            2
+           1744 POP_TOP
+
+571        1746 LOAD_GLOBAL             53 (write_csv_atomic)
+           1748 LOAD_FAST                4 (standard_rows)
+           1750 LOAD_GLOBAL             55 (OUT_STANDARD)
+           1752 CALL_FUNCTION            2
+           1754 POP_TOP
+
+572        1756 LOAD_GLOBAL             53 (write_csv_atomic)
+           1758 LOAD_FAST               51 (summary_rows)
+           1760 LOAD_GLOBAL             56 (OUT_SUMMARY)
+           1762 CALL_FUNCTION            2
+           1764 POP_TOP
+
+573        1766 LOAD_GLOBAL             57 (write_json_atomic)
+           1768 LOAD_FAST               52 (result)
+           1770 LOAD_GLOBAL             58 (OUT_RESULT)
+           1772 CALL_FUNCTION            2
+           1774 POP_TOP
+
+575        1776 LOAD_CONST              58 ('')
+           1778 LOAD_METHOD             59 (join)
+           1780 BUILD_LIST               0
+           1782 LOAD_CONST              88 ('Paper 5 05y6 — prospective q10=.60 validation\n==================================================\n\nFresh G19 specificity\n---------------------\nOriginal q10=.40:\n  ')
+           1784 LIST_APPEND              1
+
+581        1786 LOAD_FAST               35 (original_n)
+
+575        1788 FORMAT_VALUE             0
+           1790 LIST_APPEND              1
+           1792 LOAD_CONST              89 ('/')
+           1794 LIST_APPEND              1
+
+581        1796 LOAD_GLOBAL             34 (EXPECTED_G19_DATASETS)
+
+575        1798 FORMAT_VALUE             0
+           1800 LIST_APPEND              1
+           1802 LOAD_CONST              90 (' = ')
+           1804 LIST_APPEND              1
+
+581        1806 LOAD_FAST               39 (original_rate)
+
+575        1808 LOAD_CONST              91 ('.6f')
+           1810 FORMAT_VALUE             4 (with format)
+           1812 LIST_APPEND              1
+           1814 LOAD_CONST              92 ('\n\nCandidate q10=.60:\n  ')
+           1816 LIST_APPEND              1
+
+584        1818 LOAD_FAST               36 (candidate_n)
+
+575        1820 FORMAT_VALUE             0
+           1822 LIST_APPEND              1
+           1824 LOAD_CONST              89 ('/')
+           1826 LIST_APPEND              1
+
+584        1828 LOAD_GLOBAL             34 (EXPECTED_G19_DATASETS)
+
+575        1830 FORMAT_VALUE             0
+           1832 LIST_APPEND              1
+           1834 LOAD_CONST              90 (' = ')
+           1836 LIST_APPEND              1
+
+584        1838 LOAD_FAST               40 (candidate_rate)
+
+575        1840 LOAD_CONST              91 ('.6f')
+           1842 FORMAT_VALUE             4 (with format)
+           1844 LIST_APPEND              1
+           1846 LOAD_CONST              93 ('\n\nRescued fresh datasets:\n  ')
+           1848 LIST_APPEND              1
+
+587        1850 LOAD_FAST               37 (rescued)
+
+575        1852 FORMAT_VALUE             0
+           1854 LIST_APPEND              1
+           1856 LOAD_CONST              94 ('\n\nReverse discordance:\n  ')
+           1858 LIST_APPEND              1
+
+590        1860 LOAD_FAST               38 (reverse)
+
+575        1862 FORMAT_VALUE             0
+           1864 LIST_APPEND              1
+           1866 LOAD_CONST              95 ('\n\nAbsolute paired reduction:\n  ')
+           1868 LIST_APPEND              1
+
+593        1870 LOAD_FAST               41 (absolute_reduction)
+
+575        1872 LOAD_CONST              91 ('.6f')
+           1874 FORMAT_VALUE             4 (with format)
+           1876 LIST_APPEND              1
+           1878 LOAD_CONST              96 ('\n\n95% paired-bootstrap CI:\n  [')
+           1880 LIST_APPEND              1
+
+596        1882 LOAD_FAST               45 (reduction_ci)
+           1884 LOAD_CONST               8 (0)
+           1886 BINARY_SUBSCR
+
+575        1888 LOAD_CONST              91 ('.6f')
+           1890 FORMAT_VALUE             4 (with format)
+           1892 LIST_APPEND              1
+           1894 LOAD_CONST              97 (', ')
+           1896 LIST_APPEND              1
+
+596        1898 LOAD_FAST               45 (reduction_ci)
+           1900 LOAD_CONST              46 (1)
+           1902 BINARY_SUBSCR
+
+575        1904 LOAD_CONST              91 ('.6f')
+           1906 FORMAT_VALUE             4 (with format)
+           1908 LIST_APPEND              1
+           1910 LOAD_CONST              98 (']\n\nExact two-sided paired p:\n  ')
+           1912 LIST_APPEND              1
+
+599        1914 LOAD_FAST               46 (p_value)
+
+575        1916 LOAD_CONST              99 ('.12g')
+           1918 FORMAT_VALUE             4 (with format)
+           1920 LIST_APPEND              1
+           1922 LOAD_CONST             100 ('\n\nFresh STANDARD sensitivity safety\n---------------------------------\nOriginal:\n  ')
+           1924 LIST_APPEND              1
+
+604        1926 LOAD_FAST                7 (standard_original_total)
+
+575        1928 FORMAT_VALUE             0
+           1930 LIST_APPEND              1
+           1932 LOAD_CONST              89 ('/')
+           1934 LIST_APPEND              1
+
+604        1936 LOAD_GLOBAL             42 (EXPECTED_STANDARD_OPPORTUNITIES)
+
+575        1938 FORMAT_VALUE             0
+           1940 LIST_APPEND              1
+           1942 LOAD_CONST             101 ('\n  = ')
+           1944 LIST_APPEND              1
+
+605        1946 LOAD_FAST               47 (standard_original_rate)
+
+575        1948 LOAD_CONST              91 ('.6f')
+           1950 FORMAT_VALUE             4 (with format)
+           1952 LIST_APPEND              1
+           1954 LOAD_CONST             102 ('\n\nCandidate:\n  ')
+           1956 LIST_APPEND              1
+
+608        1958 LOAD_FAST                8 (standard_candidate_total)
+
+575        1960 FORMAT_VALUE             0
+           1962 LIST_APPEND              1
+           1964 LOAD_CONST              89 ('/')
+           1966 LIST_APPEND              1
+
+608        1968 LOAD_GLOBAL             42 (EXPECTED_STANDARD_OPPORTUNITIES)
+
+575        1970 FORMAT_VALUE             0
+           1972 LIST_APPEND              1
+           1974 LOAD_CONST             101 ('\n  = ')
+           1976 LIST_APPEND              1
+
+609        1978 LOAD_FAST               48 (standard_candidate_rate)
+
+575        1980 LOAD_CONST              91 ('.6f')
+           1982 FORMAT_VALUE             4 (with format)
+           1984 LIST_APPEND              1
+           1986 LOAD_CONST             103 ('\n\nExisting D02 floor:\n  0.80\n\nFloor met:\n  ')
+           1988 LIST_APPEND              1
+
+615        1990 LOAD_FAST               48 (standard_candidate_rate)
+           1992 LOAD_CONST              53 (0.8)
+           1994 COMPARE_OP               5 (>=)
+
+575        1996 FORMAT_VALUE             0
+           1998 LIST_APPEND              1
+           2000 LOAD_CONST             104 ('\n\nProspective candidate confirmed:\n  ')
+           2002 LIST_APPEND              1
+
+618        2004 LOAD_FAST               50 (confirmation)
+
+575        2006 FORMAT_VALUE             0
+           2008 LIST_APPEND              1
+           2010 LOAD_CONST             105 ('\n\nThe original 05f3e gate remains authoritative and unchanged.\nNo further threshold selection is permitted on this fresh bank.\n')
+           2012 LIST_APPEND              1
+           2014 CALL_METHOD              1
+           2016 STORE_FAST              53 (readme)
+
+623        2018 LOAD_GLOBAL             60 (write_text_atomic)
+           2020 LOAD_FAST               53 (readme)
+           2022 LOAD_GLOBAL             61 (OUT_README)
+           2024 CALL_FUNCTION            2
+           2026 POP_TOP
+
+626        2028 LOAD_GLOBAL             54 (OUT_G19)
+
+627        2030 LOAD_GLOBAL             55 (OUT_STANDARD)
+
+628        2032 LOAD_GLOBAL             56 (OUT_SUMMARY)
+
+629        2034 LOAD_GLOBAL             58 (OUT_RESULT)
+
+630        2036 LOAD_GLOBAL             61 (OUT_README)
+
+625        2038 BUILD_LIST               5
+           2040 STORE_FAST              54 (generated)
+
+633        2042 LOAD_GLOBAL              1 (SCRIPT_VERSION)
+
+634        2044 LOAD_GLOBAL             62 (relative_path)
+           2046 LOAD_GLOBAL             63 (SCRIPT_PATH)
+           2048 CALL_FUNCTION            1
+
+635        2050 LOAD_GLOBAL             19 (sha256_file)
+           2052 LOAD_GLOBAL             63 (SCRIPT_PATH)
+           2054 CALL_FUNCTION            1
+
+636        2056 LOAD_GLOBAL             45 (STATUS)
+
+637        2058 LOAD_FAST               50 (confirmation)
+
+638        2060 LOAD_CONST              83 ('NONE')
+
+639        2062 LOAD_CONST              28 (False)
+
+640        2064 LOAD_CONST             106 (<code object <dictcomp> at 0x00000191E66154D0, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 640>)
+           2066 LOAD_CONST             107 ('main.<locals>.<dictcomp>')
+           2068 MAKE_FUNCTION            0
+
+642        2070 LOAD_FAST               54 (generated)
+
+640        2072 GET_ITER
+           2074 CALL_FUNCTION            1
+
+645        2076 LOAD_CONST             108 ('05y6 prospective result is immutable. No alternative q10, median, inclusion, or other frontier point may be selected using this fresh validation bank.')
+
+632        2078 LOAD_CONST             109 (('script_version', 'script_path', 'script_sha256', 'status', 'candidate_confirmed', 'formal_05f3e_gate_consequence', 'threshold_retuning_after_fresh_result', 'generated_files', 'rewrite_policy'))
+           2080 BUILD_CONST_KEY_MAP      9
+           2082 STORE_FAST              55 (lock)
+
+649        2084 LOAD_GLOBAL             57 (write_json_atomic)
+           2086 LOAD_FAST               55 (lock)
+           2088 LOAD_GLOBAL             64 (OUT_LOCK)
+           2090 CALL_FUNCTION            2
+           2092 POP_TOP
+
+651        2094 LOAD_GLOBAL              0 (print)
+           2096 LOAD_CONST             110 ('05y6 prospective aggregation: COMPLETE')
+           2098 CALL_FUNCTION            1
+           2100 POP_TOP
+
+652        2102 LOAD_GLOBAL              0 (print)
+           2104 CALL_FUNCTION            0
+           2106 POP_TOP
+
+653        2108 LOAD_GLOBAL              0 (print)
+
+654        2110 LOAD_CONST             111 ('G19 original false acceptance:  ')
+           2112 LOAD_FAST               35 (original_n)
+           2114 FORMAT_VALUE             0
+           2116 LOAD_CONST              89 ('/')
+           2118 LOAD_GLOBAL             34 (EXPECTED_G19_DATASETS)
+           2120 FORMAT_VALUE             0
+           2122 LOAD_CONST              90 (' = ')
+
+655        2124 LOAD_FAST               39 (original_rate)
+           2126 LOAD_CONST             112 ('.3%')
+
+654        2128 FORMAT_VALUE             4 (with format)
+           2130 BUILD_STRING             6
+
+653        2132 CALL_FUNCTION            1
+           2134 POP_TOP
+
+657        2136 LOAD_GLOBAL              0 (print)
+
+658        2138 LOAD_CONST             113 ('G19 q10=.60 false acceptance:   ')
+           2140 LOAD_FAST               36 (candidate_n)
+           2142 FORMAT_VALUE             0
+           2144 LOAD_CONST              89 ('/')
+           2146 LOAD_GLOBAL             34 (EXPECTED_G19_DATASETS)
+           2148 FORMAT_VALUE             0
+           2150 LOAD_CONST              90 (' = ')
+
+659        2152 LOAD_FAST               40 (candidate_rate)
+           2154 LOAD_CONST             112 ('.3%')
+
+658        2156 FORMAT_VALUE             4 (with format)
+           2158 BUILD_STRING             6
+
+657        2160 CALL_FUNCTION            1
+           2162 POP_TOP
+
+661        2164 LOAD_GLOBAL              0 (print)
+
+662        2166 LOAD_CONST             114 ('Paired absolute reduction:      ')
+           2168 LOAD_FAST               41 (absolute_reduction)
+           2170 LOAD_CONST             112 ('.3%')
+           2172 FORMAT_VALUE             4 (with format)
+           2174 LOAD_CONST             115 (' [95% bootstrap ')
+
+663        2176 LOAD_FAST               45 (reduction_ci)
+           2178 LOAD_CONST               8 (0)
+           2180 BINARY_SUBSCR
+           2182 LOAD_CONST             112 ('.3%')
+
+662        2184 FORMAT_VALUE             4 (with format)
+           2186 LOAD_CONST              97 (', ')
+
+663        2188 LOAD_FAST               45 (reduction_ci)
+           2190 LOAD_CONST              46 (1)
+           2192 BINARY_SUBSCR
+           2194 LOAD_CONST             112 ('.3%')
+
+662        2196 FORMAT_VALUE             4 (with format)
+           2198 LOAD_CONST             116 (']')
+           2200 BUILD_STRING             7
+
+661        2202 CALL_FUNCTION            1
+           2204 POP_TOP
+
+665        2206 LOAD_GLOBAL              0 (print)
+           2208 LOAD_CONST             117 ('Rescued / reverse discordance:  ')
+           2210 LOAD_FAST               37 (rescued)
+           2212 FORMAT_VALUE             0
+           2214 LOAD_CONST             118 (' / ')
+           2216 LOAD_FAST               38 (reverse)
+           2218 FORMAT_VALUE             0
+           2220 BUILD_STRING             4
+           2222 CALL_FUNCTION            1
+           2224 POP_TOP
+
+666        2226 LOAD_GLOBAL              0 (print)
+           2228 LOAD_CONST             119 ('Exact paired p-value:           ')
+           2230 LOAD_FAST               46 (p_value)
+           2232 LOAD_CONST             120 ('.6g')
+           2234 FORMAT_VALUE             4 (with format)
+           2236 BUILD_STRING             2
+           2238 CALL_FUNCTION            1
+           2240 POP_TOP
+
+667        2242 LOAD_GLOBAL              0 (print)
+           2244 CALL_FUNCTION            0
+           2246 POP_TOP
+
+668        2248 LOAD_GLOBAL              0 (print)
+
+669        2250 LOAD_CONST             121 ('STANDARD original recovery:     ')
+           2252 LOAD_FAST                7 (standard_original_total)
+           2254 FORMAT_VALUE             0
+           2256 LOAD_CONST              89 ('/')
+
+670        2258 LOAD_GLOBAL             42 (EXPECTED_STANDARD_OPPORTUNITIES)
+
+669        2260 FORMAT_VALUE             0
+           2262 LOAD_CONST              90 (' = ')
+
+670        2264 LOAD_FAST               47 (standard_original_rate)
+           2266 LOAD_CONST             112 ('.3%')
+
+669        2268 FORMAT_VALUE             4 (with format)
+           2270 BUILD_STRING             6
+
+668        2272 CALL_FUNCTION            1
+           2274 POP_TOP
+
+672        2276 LOAD_GLOBAL              0 (print)
+
+673        2278 LOAD_CONST             122 ('STANDARD q10=.60 recovery:      ')
+           2280 LOAD_FAST                8 (standard_candidate_total)
+           2282 FORMAT_VALUE             0
+           2284 LOAD_CONST              89 ('/')
+
+674        2286 LOAD_GLOBAL             42 (EXPECTED_STANDARD_OPPORTUNITIES)
+
+673        2288 FORMAT_VALUE             0
+           2290 LOAD_CONST              90 (' = ')
+
+674        2292 LOAD_FAST               48 (standard_candidate_rate)
+           2294 LOAD_CONST             112 ('.3%')
+
+673        2296 FORMAT_VALUE             4 (with format)
+           2298 BUILD_STRING             6
+
+672        2300 CALL_FUNCTION            1
+           2302 POP_TOP
+
+676        2304 LOAD_GLOBAL              0 (print)
+           2306 LOAD_CONST             123 ('Existing D02 >=0.80 floor met:  ')
+           2308 LOAD_FAST               48 (standard_candidate_rate)
+           2310 LOAD_CONST              53 (0.8)
+           2312 COMPARE_OP               5 (>=)
+           2314 FORMAT_VALUE             0
+           2316 BUILD_STRING             2
+           2318 CALL_FUNCTION            1
+           2320 POP_TOP
+
+677        2322 LOAD_GLOBAL              0 (print)
+           2324 CALL_FUNCTION            0
+           2326 POP_TOP
+
+678        2328 LOAD_GLOBAL              0 (print)
+           2330 LOAD_CONST             124 ('PROSPECTIVE q10=.60 CONFIRMED:  ')
+           2332 LOAD_FAST               50 (confirmation)
+           2334 FORMAT_VALUE             0
+           2336 BUILD_STRING             2
+           2338 CALL_FUNCTION            1
+           2340 POP_TOP
+
+679        2342 LOAD_GLOBAL              0 (print)
+           2344 LOAD_CONST             125 ('Formal 05f3e gate changed:       NO')
+           2346 CALL_FUNCTION            1
+           2348 POP_TOP
+
+680        2350 LOAD_GLOBAL              0 (print)
+           2352 LOAD_CONST             126 ('Result: ')
+           2354 LOAD_GLOBAL             62 (relative_path)
+           2356 LOAD_GLOBAL             58 (OUT_RESULT)
+           2358 CALL_FUNCTION            1
+           2360 FORMAT_VALUE             0
+           2362 BUILD_STRING             2
+           2364 CALL_FUNCTION            1
+           2366 POP_TOP
+
+681        2368 LOAD_GLOBAL              0 (print)
+           2370 LOAD_CONST             127 ('Lock:   ')
+           2372 LOAD_GLOBAL             62 (relative_path)
+           2374 LOAD_GLOBAL             64 (OUT_LOCK)
+           2376 CALL_FUNCTION            1
+           2378 FORMAT_VALUE             0
+           2380 BUILD_STRING             2
+           2382 CALL_FUNCTION            1
+           2384 POP_TOP
+           2386 LOAD_CONST               0 (None)
+           2388 RETURN_VALUE
+
+Disassembly of <code object <dictcomp> at 0x00000191E66154D0, file ".\paper5\scripts\05y6_aggregate_prospective_q10_validation.py", line 640>:
+640           0 BUILD_MAP                0
+              2 LOAD_FAST                0 (.0)
+        >>    4 FOR_ITER                 9 (to 24)
+
+642           6 STORE_FAST               1 (path)
+
+641           8 LOAD_GLOBAL              0 (relative_path)
+             10 LOAD_FAST                1 (path)
+             12 CALL_FUNCTION            1
+             14 LOAD_GLOBAL              1 (file_record)
+             16 LOAD_FAST                1 (path)
+             18 CALL_FUNCTION            1
+
+640          20 MAP_ADD                  2
+             22 JUMP_ABSOLUTE            2 (to 4)
+        >>   24 RETURN_VALUE

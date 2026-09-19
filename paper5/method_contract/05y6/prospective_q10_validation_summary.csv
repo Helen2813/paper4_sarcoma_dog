@@ -1,0 +1,5 @@
+endpoint,numerator,denominator,rate,ci95_low,ci95_high
+G19_original_false_acceptance,66,200,0.33,0.26857425870603957,0.39783315226223115
+G19_candidate_false_acceptance_q10_060,38,200,0.19,0.14167171527790676,0.25001238707599854
+STANDARD_original_biological_recovery,755,800,0.94375,,
+STANDARD_candidate_biological_recovery_q10_060,752,800,0.94,0.9213458598323445,0.9544487291066606

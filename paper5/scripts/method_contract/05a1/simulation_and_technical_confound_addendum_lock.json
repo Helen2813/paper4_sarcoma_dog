@@ -1,0 +1,81 @@
+{
+  "addendum_path": "paper5\\method_contract\\05a1\\simulation_and_technical_confound_addendum.json",
+  "addendum_sha256": "3aadb87386f796663e68b97fb608cb864c197013fe52c70ac5b37bed06e7a3e8",
+  "addendum_version": "sable-mo-prospective-simulation-technical-addendum-v3-no-cli",
+  "base_05a_contract_sha256": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+  "base_05a_lock_sha256": "cc62dcc75c5f06e0c2c7220d1419392f8838b9eccad4ae916831689255dfc9f0",
+  "created_at_utc": "2026-08-11T20:35:14.240654+00:00",
+  "generated_files": {
+    "paper5\\method_contract\\05a1\\addendum_environment_snapshot.json": {
+      "sha256": "741e9cbaebb7f622a3b8bd9344c473037b9acce157e12455e66c155f2257d643",
+      "size_bytes": 1042
+    },
+    "paper5\\method_contract\\05a1\\architecture_screening_addendum_replicates.csv": {
+      "sha256": "833fd5b9fd6d4de7125985ff97dad15ed190cab4615bedd4bb06d9c6483c6b85",
+      "size_bytes": 46256
+    },
+    "paper5\\method_contract\\05a1\\architecture_screening_addendum_scenarios.csv": {
+      "sha256": "a7b2fe65e73a49d86f22daf1f0485cc0b9ddb367c3bde9bb13ab1ff68aca247d",
+      "size_bytes": 11070
+    },
+    "paper5\\method_contract\\05a1\\combined_architecture_screening_replicates.csv": {
+      "sha256": "789f7bc8afb305ec6b14da147f04beb529df75eaa7d973145c4158534ad78694",
+      "size_bytes": 80493
+    },
+    "paper5\\method_contract\\05a1\\combined_architecture_screening_scenarios.csv": {
+      "sha256": "37902e76926cd580297f172bbe4c0c137e9eae3670a9035aa8e5196ac7546d6d",
+      "size_bytes": 18417
+    },
+    "paper5\\method_contract\\05a1\\external_method_benchmark_addendum.json": {
+      "sha256": "8c771d3e9e8230abd68a3715b4903ef6d2aadbf845324a7a1b3dbf9faac2b7cb",
+      "size_bytes": 1915
+    },
+    "paper5\\method_contract\\05a1\\final_gate_calibration_replicates.csv": {
+      "sha256": "a8e1fb8fa70a4585f43c11264b5a39f1459488c1089df2b10789e4670ff874f0",
+      "size_bytes": 432129
+    },
+    "paper5\\method_contract\\05a1\\final_gate_calibration_scenarios.csv": {
+      "sha256": "8695887dc0b27b69d87fa944ce1068fe149718ddf6c00a7d91e71ee1b1b306c2",
+      "size_bytes": 13650
+    },
+    "paper5\\method_contract\\05a1\\novelty_positioning_contract.json": {
+      "sha256": "885afc0350ed10821abc7d114ad7ff79197ca76a6b0e26b50b8bdee04c63a029",
+      "size_bytes": 2107
+    },
+    "paper5\\method_contract\\05a1\\pre_addendum_05b_pilot_materialization_disclosure.json": {
+      "sha256": "ae781114057a1dc0d1cfbf5ae3233dc3691bbb2dff83ef735e53139c045315fa",
+      "size_bytes": 2045
+    },
+    "paper5\\method_contract\\05a1\\simulation_and_technical_confound_addendum.json": {
+      "sha256": "3aadb87386f796663e68b97fb608cb864c197013fe52c70ac5b37bed06e7a3e8",
+      "size_bytes": 8565
+    },
+    "paper5\\method_contract\\05a1\\simulation_and_technical_confound_addendum_README.txt": {
+      "sha256": "8228685ba18cbff0d20a08128b86b5443efe2cc0caefac9d0a1b8fedbb2da53d",
+      "size_bytes": 2057
+    },
+    "paper5\\method_contract\\05a1\\simulation_truth_taxonomy.csv": {
+      "sha256": "d61e33ed0a797e5fe7cff2d0d0b306c62fc12908739ad1b242020253b4783196",
+      "size_bytes": 991
+    },
+    "paper5\\method_contract\\05a1\\stability_gate_decision_registry.csv": {
+      "sha256": "8c01e42f1700d92b2b7d56116388949eede9c1f50bc1d470f722ad5e85b73ed8",
+      "size_bytes": 1944
+    },
+    "paper5\\method_contract\\05a1\\stability_gate_operating_metric_registry.csv": {
+      "sha256": "c186eebbc201e5f9ed3deedebec81d2b9b4a3201dde2274f0b85d18f6872812d",
+      "size_bytes": 2603
+    },
+    "paper5\\method_contract\\05a1\\target_technical_covariate_registry.csv": {
+      "sha256": "b506bc2154403c4b2bb80f565ef9fd95c1d915e39a01fbf0906ff23bb9b66543",
+      "size_bytes": 2143
+    },
+    "paper5\\method_contract\\05a1\\target_technical_metadata_preflight_contract.json": {
+      "sha256": "0ac187eb0d06dc79b283af10fdfc80f5d0f0fffd13e2c0378373657dc2326e92",
+      "size_bytes": 3223
+    }
+  },
+  "rewrite_policy": "This no-argument script never rewrites a frozen addendum. Any future scientifically justified amendment must use a new versioned script and preserve the current locked contract. A disclosed data-only 05b v1 pilot remains excluded from confirmatory analyses.",
+  "script_version": "05a1-freeze-simulation-technical-confound-addendum-v3-no-cli",
+  "status": "FROZEN_BEFORE_MODEL_FITTING_AFTER_DISCLOSED_PILOT_MATERIALIZATION"
+}

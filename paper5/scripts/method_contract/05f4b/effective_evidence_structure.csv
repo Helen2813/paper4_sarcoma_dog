@@ -1,0 +1,7 @@
+evidence_family,decision_ids,role,independence_or_conditioning
+E1_CORE_NULL_SPECIFICITY,D01,core_performance_evidence,Primary pooled null decision; mandatory independent-null and correlated-private mechanism-specific estimates are descriptive components of the same family.
+E2_CORE_STANDARD_RECOVERY,D02;D03,core_performance_evidence,D02 and D03 use the same 400 true-factor opportunities; D03 is the algebraic complement of D02 and is not independent evidence.
+E3_ROTATIONAL_SUBSPACE,D04,narrow_performance_evidence,Rotational-subspace stress gate using a continuous subspace-recovery quantity.
+E4_VIEW_SUPPORT,D05,narrow_conditional_performance_evidence,Conditional on factors that are both retained by the stability gate and matched to biological truth; failed the frozen utility threshold.
+E5_TECHNICAL_CONFOUND,D06,narrow_performance_evidence,Technical-confound specificity stress gate.
+E6_PROCESS_INTEGRITY,D07,process_audit_not_performance_evidence,Confirms no post-hoc retuning; should not be counted as a separate performance result.

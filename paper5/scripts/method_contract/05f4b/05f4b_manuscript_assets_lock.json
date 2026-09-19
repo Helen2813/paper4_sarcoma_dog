@@ -1,0 +1,101 @@
+{
+  "created_at_utc": "2026-09-15T22:56:17+00:00",
+  "d01_replacement_trend_model": false,
+  "d01_reweighting": false,
+  "d05_new_chance_estimand": false,
+  "generated_files": {
+    "paper5/method_contract/05f4b/05f4b_README.txt": {
+      "path": "paper5/method_contract/05f4b/05f4b_README.txt",
+      "sha256": "d3068f992ecb28eac8d0cb1d1597636a354b70999837405fd027d8faf025b848",
+      "size_bytes": 2312
+    },
+    "paper5/method_contract/05f4b/d01_independent_null_per_n.csv": {
+      "path": "paper5/method_contract/05f4b/d01_independent_null_per_n.csv",
+      "sha256": "850492d61c386fa9593758bb7efb18f42d42d9c243f4155f1e1c36cded191380",
+      "size_bytes": 389
+    },
+    "paper5/method_contract/05f4b/d01_mechanism_breakdown.csv": {
+      "path": "paper5/method_contract/05f4b/d01_mechanism_breakdown.csv",
+      "sha256": "101fdd4351753a2d64984ea7be999c35d8ae9e70bfa843493e5de796a9e33073",
+      "size_bytes": 664
+    },
+    "paper5/method_contract/05f4b/d01_trend_manuscript_reporting.json": {
+      "path": "paper5/method_contract/05f4b/d01_trend_manuscript_reporting.json",
+      "sha256": "ef0fcbbb7b60c0681a2229b3eee0d323e695becdc43522414484e472708b2fba",
+      "size_bytes": 1109
+    },
+    "paper5/method_contract/05f4b/d05_reporting_context.json": {
+      "path": "paper5/method_contract/05f4b/d05_reporting_context.json",
+      "sha256": "e94ac0602f2a53b6e788c1cc6494bbf6fb0822ab2502df7c1f921539358c940c",
+      "size_bytes": 849
+    },
+    "paper5/method_contract/05f4b/effective_evidence_structure.csv": {
+      "path": "paper5/method_contract/05f4b/effective_evidence_structure.csv",
+      "sha256": "7abaeb86e1dc97d21491a25938562aa85e36e049f47b578b2b1f67d215e58bec",
+      "size_bytes": 1050
+    },
+    "paper5/method_contract/05f4b/fig_d01_independent_by_n.pdf": {
+      "path": "paper5/method_contract/05f4b/fig_d01_independent_by_n.pdf",
+      "sha256": "795fa428425ecf24ef447f8a26ff50d1e9deebd23e02ded16fa770bf56a060c6",
+      "size_bytes": 13243
+    },
+    "paper5/method_contract/05f4b/fig_d01_independent_by_n.png": {
+      "path": "paper5/method_contract/05f4b/fig_d01_independent_by_n.png",
+      "sha256": "76edb0d65c65bd2019b5e30c4882f615748d952d25a81af27afc61ab4a98b915",
+      "size_bytes": 144545
+    },
+    "paper5/method_contract/05f4b/fig_d01_mechanism_breakdown.pdf": {
+      "path": "paper5/method_contract/05f4b/fig_d01_mechanism_breakdown.pdf",
+      "sha256": "3697477dd1f28f340e51b67babe9c0b1d12e90007ab8f88041ecda7caef1dcd9",
+      "size_bytes": 12955
+    },
+    "paper5/method_contract/05f4b/fig_d01_mechanism_breakdown.png": {
+      "path": "paper5/method_contract/05f4b/fig_d01_mechanism_breakdown.png",
+      "sha256": "c2b4c60110bd6b50dd5bae0d29d76a7d0905f140fff32e7fa6e785d96c651237",
+      "size_bytes": 148184
+    },
+    "paper5/method_contract/05f4b/final_gate_numbers.tex": {
+      "path": "paper5/method_contract/05f4b/final_gate_numbers.tex",
+      "sha256": "5a192ee503f605613fdad8b343831be87c10c24154580ad79ca57aa85ad23c88",
+      "size_bytes": 724
+    },
+    "paper5/method_contract/05f4b/manuscript_final_gate_summary.csv": {
+      "path": "paper5/method_contract/05f4b/manuscript_final_gate_summary.csv",
+      "sha256": "8ebda9351347739787ffe71af38b724a4269523a40f87a396594f1bd3e498fe0",
+      "size_bytes": 2180
+    },
+    "paper5/method_contract/05f4b/postunblinding_recovery_audit.csv": {
+      "path": "paper5/method_contract/05f4b/postunblinding_recovery_audit.csv",
+      "sha256": "846865c90676cd500d0f410f935a95424f4eff3105bf90be892ac3c824bab260",
+      "size_bytes": 2054
+    },
+    "paper5/method_contract/05f4b/scenario_operating_characteristics_columns.json": {
+      "path": "paper5/method_contract/05f4b/scenario_operating_characteristics_columns.json",
+      "sha256": "1242d7360ff642ac1ead8e107766d28b3810b4fd7166116b762fae9cd1b6a752",
+      "size_bytes": 938
+    },
+    "paper5/method_contract/05f4b/scenario_operating_characteristics_locked_copy.csv": {
+      "path": "paper5/method_contract/05f4b/scenario_operating_characteristics_locked_copy.csv",
+      "sha256": "f2ee124cbe8b2c140279cee7c2b074bd27aad2dca6551a983d2e85458f9a6123",
+      "size_bytes": 3692
+    }
+  },
+  "new_formal_decisions": false,
+  "rewrite_policy": "05f4b assets are derived read-only from the locked 05f3e results. If manuscript-facing formatting changes are needed later, create a new versioned export rather than altering scientific values.",
+  "scientific_mutation": false,
+  "script_path": "paper5/scripts/05f4b_export_final_gate_manuscript_assets_v2.py",
+  "script_sha256": "4a2c6e280c4dd8e2dce23c088c64eb864ce26b4284b675681ac696483968f1d0",
+  "script_version": "05f4b-export-final-gate-manuscript-assets-v2-read-only-plot-tolerance-no-cli",
+  "source_05f3e_lock": {
+    "path": "paper5/method_contract/05f3e/final_gate_results_lock.json",
+    "sha256": "6d691237662d633a4f8d8294126a33b32c5694372a6e58de71bd45731d67c397",
+    "size_bytes": 3302
+  },
+  "source_05f3e_result": {
+    "path": "paper5/method_contract/05f3e/final_gate_result.json",
+    "sha256": "ece198de28b8c4123b3212b19c9aac63698cf78147fcb8a33f4ef4d108fbd792",
+    "size_bytes": 14030
+  },
+  "source_core_status": "CORE_PASS",
+  "status": "READ_ONLY_MANUSCRIPT_ASSET_EXPORT_FROM_LOCKED_05F3E"
+}

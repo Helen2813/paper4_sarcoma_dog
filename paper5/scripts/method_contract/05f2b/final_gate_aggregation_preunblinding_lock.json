@@ -1,0 +1,52 @@
+{
+  "05a2_amendment_sha256": "06b34c4e763a4dd150807afb4777ef4bcbb17abd7dc075b95baf438c9faad445",
+  "aggregation_script_path": "paper5/scripts/05f3b_aggregate_final_gate_results_cpu_preunblinding_locked.py",
+  "aggregation_script_sha256": "fcf1a2e1fec76b0ea15ef93be813851153d763a437c95d46ce1c41d148b9e435",
+  "aggregation_script_version": "05f3b-aggregate-final-gate-results-cpu-v1-poststart-preunblinding-locked-no-cli",
+  "created_at_utc": "2026-08-23T00:07:02+00:00",
+  "final_gate_replicates_sha256": "a8e1fb8fa70a4585f43c11264b5a39f1459488c1089df2b10789e4670ff874f0",
+  "final_gate_scenarios_sha256": "8695887dc0b27b69d87fa944ce1068fe149718ddf6c00a7d91e71ee1b1b306c2",
+  "generated_files": {
+    "paper5/method_contract/05f2b/05f2b_README.txt": {
+      "path": "paper5/method_contract/05f2b/05f2b_README.txt",
+      "sha256": "477378a9f96f812d43fc84e277f5331f7f2fa52063e3e1aac69e9ce4d48d5fed",
+      "size_bytes": 1518
+    },
+    "paper5/method_contract/05f2b/05f3b_aggregation_script_snapshot.json": {
+      "path": "paper5/method_contract/05f2b/05f3b_aggregation_script_snapshot.json",
+      "sha256": "5e5e84cc4a9ae88701acd25e1f972a0d6c6d2d6d7cc5402a8d09681c0b24b45d",
+      "size_bytes": 2142
+    },
+    "paper5/method_contract/05f2b/final_gate_aggregation_poststart_preunblinding_plan.json": {
+      "path": "paper5/method_contract/05f2b/final_gate_aggregation_poststart_preunblinding_plan.json",
+      "sha256": "d6cb73c9b3580e23bfeddafeb2c12f083a98a8494e76b80fdcaa18bbd81dd7da",
+      "size_bytes": 10366
+    }
+  },
+  "plan_version": "paper5-final-gate-aggregation-plan-poststart-preunblinding-v1",
+  "preexisting_05f3_sha256": "443b553e2e9e95a9f4d3ac7de5fe7b4f33479d6552264555e3edc276b077d5c2",
+  "preexisting_strict_05f2a_sha256": "ee902b351f9ed6218f34165da9edc70954749759398c551f0859aa6ef035b5bb",
+  "rewrite_policy": "This no-argument script never rewrites a frozen 05f2b plan. Primary final-gate aggregation must use the exact SHA256-locked 05f3b script. Any later alternative aggregation is exploratory and must be separately versioned after the primary frozen result.",
+  "scientific_core_ast_equivalent_to_preexisting_05f3": true,
+  "scientific_core_ast_sha256": "1844483cd7e2924609cd090bc68e0a0d26e9c4bb4ed8ede9f6185a68a2d511da",
+  "scientific_state_at_freeze": {
+    "05f2_completion_lock_present": false,
+    "05f2_progress_rows": 12,
+    "D01_D02_D03_evaluated": false,
+    "TARGET_accessed": false,
+    "before_data_generation": false,
+    "before_scientific_unblinding": true,
+    "biology_annotations_accessed": false,
+    "final_gate_PASS_FAIL_evaluated": false,
+    "final_gate_scientific_shards_read": false,
+    "freeze_timing_classification": "POSTSTART_PREUNBLINDING",
+    "outcomes_accessed": false,
+    "preexisting_05f3_scientific_core_unchanged": true,
+    "scientific_metrics_computed": false,
+    "threshold_retuning_performed": false
+  },
+  "script_path": "paper5/scripts/05f2b_freeze_final_gate_aggregation_poststart_preunblinding.py",
+  "script_sha256": "145313f56c1c7db6250a5791851f146cdedd167a2907d824bf1d99581c5665fd",
+  "script_version": "05f2b-freeze-final-gate-aggregation-poststart-preunblinding-v2-runtime-portable-ast-equivalence-no-cli",
+  "status": "FROZEN_FINAL_GATE_AGGREGATION_IMPLEMENTATION_POSTSTART_PREUNBLINDING"
+}

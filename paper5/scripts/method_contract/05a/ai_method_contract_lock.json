@@ -1,0 +1,121 @@
+{
+  "case_hash": "f75b858a237ac1b5593d106d495a88efb51b163ee1c824aa7144e270b51baa43",
+  "contract_path": "paper5\\method_contract\\05a\\ai_method_contract.json",
+  "contract_sha256": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+  "contract_status": "FROZEN_BEFORE_MODEL_FITTING",
+  "created_at_utc": "2026-08-11T18:43:01.353644+00:00",
+  "generated_files": {
+    "paper5\\method_contract\\05a\\ai_method_contract.json": {
+      "sha256": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+      "size_bytes": 10644
+    },
+    "paper5\\method_contract\\05a\\ai_method_contract_README.txt": {
+      "sha256": "c5d05b10b04607a8d5231ba41bfb95b4be955d5761a4d9e3f544e6191fd3f4b6",
+      "size_bytes": 1795
+    },
+    "paper5\\method_contract\\05a\\baseline_hyperparameter_grid.csv": {
+      "sha256": "e25f30d5804365404436b62edf15e5affe859ac1f52309208db3f78dd1bca52a",
+      "size_bytes": 2253
+    },
+    "paper5\\method_contract\\05a\\environment_snapshot.json": {
+      "sha256": "ac8b1fa44b0aad798ae799e723d02fea0642615c26f819bcc5ac5198dfc9ac92",
+      "size_bytes": 1162
+    },
+    "paper5\\method_contract\\05a\\external_method_benchmark_contract.json": {
+      "sha256": "8e3ae0525281dd8fecf772e113d69092519795965f97e90f57d5ae7e87c2e4ca",
+      "size_bytes": 1033
+    },
+    "paper5\\method_contract\\05a\\failure_gate_registry.csv": {
+      "sha256": "32b9bd92db7b6455744a4aba03c6cdd1e9966b1b8e408e7451147d407fd06083",
+      "size_bytes": 1693
+    },
+    "paper5\\method_contract\\05a\\metric_registry.csv": {
+      "sha256": "b0e70d2ccb8821ef44ef4d0baec5848edc4a156f139004317ff26e7bb518ee9b",
+      "size_bytes": 3147
+    },
+    "paper5\\method_contract\\05a\\model_family_registry.csv": {
+      "sha256": "b0a70a5f5df4b30a6aa2d4069e15d1d1b9fe3b770f8c5ef16248301acabf1a39",
+      "size_bytes": 2808
+    },
+    "paper5\\method_contract\\05a\\model_selection_policy.json": {
+      "sha256": "8d8b39d3d424e695324085ee533f13a555dada9b65acbc6718d7809ce07d0b44",
+      "size_bytes": 4100
+    },
+    "paper5\\method_contract\\05a\\multiplicity_family_registry.csv": {
+      "sha256": "7d6f4aa1ca194f0bdb471a58068ae2350b795f0c096d5a551dddfd8ba924c694",
+      "size_bytes": 1180
+    },
+    "paper5\\method_contract\\05a\\random_control_registry.csv": {
+      "sha256": "f64139b287a40ba86096ae81e3957712cd2bfd7b73238f630dfb9401b4218f4f",
+      "size_bytes": 724
+    },
+    "paper5\\method_contract\\05a\\sable_mo_ablation_registry.csv": {
+      "sha256": "0c4fdfeea5aec2c2e74c8570855c930a978097eb2b6607c87eecb5066079a6ba",
+      "size_bytes": 1069
+    },
+    "paper5\\method_contract\\05a\\sable_mo_architecture_profiles.csv": {
+      "sha256": "e5be64ebd2986a06f80288d78d10dcc739f05f157333ad6fc183a8d271aa9f5a",
+      "size_bytes": 479
+    },
+    "paper5\\method_contract\\05a\\sable_mo_regularization_profiles.csv": {
+      "sha256": "706d11d6ef546db4dcf33c1645f2439322db1c2114881cf19f9851cc5308f569",
+      "size_bytes": 445
+    },
+    "paper5\\method_contract\\05a\\simulation_replicate_registry.csv": {
+      "sha256": "c4cc3427f35a1a60756640a51794a61b172c9bc0908ae2c087d29df0bd8d77d0",
+      "size_bytes": 11896
+    },
+    "paper5\\method_contract\\05a\\simulation_scenarios.csv": {
+      "sha256": "1809bc4f718fe1f83e5ccfa011350b557d94ce7c2aed98dd0c0f2d18c167a2fc",
+      "size_bytes": 2687
+    },
+    "paper5\\method_contract\\05a\\target_cv_split_summary.csv": {
+      "sha256": "0f61fa286134c288ff094d7206549bc8cc1b147c73472aa9f8d4ec375b5cb959",
+      "size_bytes": 2289
+    },
+    "paper5\\method_contract\\05a\\target_inner_cv_assignments.csv": {
+      "sha256": "03aa043f9dda10fce2bfec0aab615e24f88a49ad3807ceab63a5aa2cdc0fe1a1",
+      "size_bytes": 323829
+    },
+    "paper5\\method_contract\\05a\\target_neural_training_assignments.csv": {
+      "sha256": "29b6fb6513d7292417ad802d8d59d2f9ab541341b6c8f763df1f5d2a528e331d",
+      "size_bytes": 724310
+    },
+    "paper5\\method_contract\\05a\\target_outer_cv_assignments.csv": {
+      "sha256": "807736ea87c9532d6a264e50eeae4c97eb47cc4a08a40a1178f6c692f94c7811",
+      "size_bytes": 94204
+    }
+  },
+  "rewrite_policy": "Run with --rewrite-contract and a documented --amendment-reason. The previous contract will be archived.",
+  "script_version": "05a-freeze-ai-method-contract-v1",
+  "upstream_artifacts": {
+    "paper5\\model_inputs\\TARGET_OS_primary78\\TARGET_OS_primary_multimodal_case_order.csv": {
+      "sha256": "9a39a40f0ed6be767d9640219b4b3f7ee0813b8e81e6db64880a1fe1bcd44cb4",
+      "size_bytes": 1650
+    },
+    "paper5\\model_inputs\\TARGET_OS_primary78\\harmonized\\harmonized_input_lock.json": {
+      "sha256": "04c32b6fefed42f433fc29e4f48413a730dc4504a46cfde8de6e7b6c45c99cac",
+      "size_bytes": 1971
+    },
+    "paper5\\model_inputs\\TARGET_OS_primary78\\premodel_qc\\fold_local_preprocessing_contract.json": {
+      "sha256": "fbaba8fbf4370f780a8f0d85fc5af9fd86e803b5646f728e79593c6ce30cd3d2",
+      "size_bytes": 3103
+    },
+    "paper5\\model_inputs\\TARGET_OS_primary78\\premodel_qc\\harmonized_reconstruction_audit.csv": {
+      "sha256": "807675d34ba61d430d9fd3c7202b2eaa334e2cba77fd7b71eefb6562d79860e3",
+      "size_bytes": 276
+    },
+    "paper5\\model_inputs\\TARGET_OS_primary78\\premodel_qc\\prestandardization_variance_audit_manifest.json": {
+      "sha256": "e4c0d637e179ed76ba934ce67c9ef5542a1d144699a48da9c7f14226915aeb95",
+      "size_bytes": 12015
+    },
+    "paper5\\model_inputs\\TARGET_OS_primary78\\premodel_qc\\prestandardization_variance_summary.csv": {
+      "sha256": "86111300d0272e6db187e7d9dba8166972b61bd0a412ee3c430b473ad959de24",
+      "size_bytes": 1355
+    },
+    "paper5\\model_inputs\\TARGET_OS_primary78\\premodel_qc\\representation_feature_budget_plan.csv": {
+      "sha256": "bf8b38c38151dc00c7b5c04f2f031ef06176c7bab807cc16c7629c65dd9b06b6",
+      "size_bytes": 4629
+    }
+  }
+}

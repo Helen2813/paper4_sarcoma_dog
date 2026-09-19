@@ -1,0 +1,19 @@
+{
+  "invalidation_rule": "Any change to the numerical/GPU code path, dtype, reduction order, preprocessing math, model fitting path, alignment math, or stability computation invalidates all pilot shards; they must be recomputed.",
+  "non_numerical_change_rule": "Logging/progress/checkpoint-wrapper changes may retain pilot shards only if the numerical implementation hash is unchanged and the shard validation hash passes.",
+  "pilot_dataset_selection": "Use the first prespecified dataset IDs in frozen final_gate_calibration_replicates.csv order; do not select pilot datasets based on observed scientific results or runtime difficulty.",
+  "pilot_scientific_output_visibility": "During runtime pilot execution, print timing/VRAM/progress only. Do not print or aggregate TPR, FNR, FDP, familywise false acceptance, or final-gate PASS/FAIL.",
+  "policy_version": "sable-mo-final-gate-runtime-pilot-policy-v1",
+  "purpose": "Measure production wall time, VRAM, shard size, and ETA without making scientific decisions.",
+  "required_shard_provenance": [
+    "scientific_contract_hash",
+    "05a2_amendment_hash",
+    "script_hash",
+    "numerical_implementation_hash",
+    "PyTorch_version",
+    "CUDA_build",
+    "GPU_model"
+  ],
+  "reuse_rule": "Pilot shards may be retained as final shards only when the numerical implementation hash is unchanged.",
+  "status": "FROZEN_BEFORE_FINAL_GATE_RUNTIME_PILOT"
+}

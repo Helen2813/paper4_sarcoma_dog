@@ -1,0 +1,10 @@
+gate_id,applies_to,threshold,assessment_scope,consequence
+G01_NONFINITE_OPTIMIZATION,all fitted models,"any non-finite loss, latent value, loading, or reconstruction",per fit,fit failure; exclude fit but retain audit record
+G02_LATENT_COLLAPSE,integrated latent models,shared latent effective rank < 2 or median shared-dimension variance < 1e-4,per fit,model configuration fails that split
+G03_RECONSTRUCTION_WORSE_THAN_NULL,all reconstructive models,mean held-out normalized reconstruction error >= 1.0,aggregated outer CV,ineligible for final representation freeze
+G04_RETRIEVAL_NOT_ABOVE_RANDOM,integrated multi-view models,random-adjusted cross-view MRR <= 0,aggregated outer CV,ineligible for final representation freeze
+G05_SINGLE_VIEW_DOMINATION,integrated shared representations,median normalized modality contribution entropy < 0.60,aggregated outer CV,flag severe view domination; fail proposed-method claim
+G06_SEED_INSTABILITY,stochastic models,median seed-aligned subspace similarity < 0.60,aggregated outer CV,ineligible for final representation freeze
+G07_PAIRING_NULL_FAILURE,selected integrated method,observed cross-view retrieval does not exceed the 95th percentile of the pairing-permutation null,post-selection outcome-blind permutation audit,no paired cross-view structure claim
+G08_NO_STABLE_FACTORS,final selected representation,zero factors pass the primary stability gate,final full-data stability analysis,do not proceed to factor-level biological or outcome claims
+G09_SIMULATION_FALSE_SHARED_DISCOVERY,SABLE-MO architecture-profile selection,mean simulation false shared discovery rate > 0.10,simulation benchmark,architecture/regularization profile is ineligible

@@ -1,0 +1,4 @@
+control_id,phase,n_replicates,unit_permuted,preserved_structure,primary_metric,outcome_used,base_n_replicates,amended_by,amendment_reason
+RC01_PAIRING_PERMUTATION,representation_benchmark,1000,patient pairing between modalities within training data,"sample count, each view marginal distribution, feature identities, and outer held-out samples",cross_view_mrr;missing_view_r2,False,100,05a2,"Monte Carlo p-value resolution only; null construction, metrics, BH family, model registry, and outcome blinding are unchanged."
+RC02_MATCHED_RANDOM_GENE_PANELS,biological_alignment,10000,gene or probe membership,"panel size, modality, mean abundance/detection bin, and prestandardization variance bin",latent-program alignment statistic,False,10000,,
+RC03_LATENT_LABEL_PERMUTATION,biological_alignment,1000,sample labels of frozen latent factors,factor marginal distribution,program alignment and annotation statistics,False,1000,,

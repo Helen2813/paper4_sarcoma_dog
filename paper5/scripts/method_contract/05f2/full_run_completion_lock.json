@@ -1,0 +1,38 @@
+{
+  "completion_summary": {
+    "path": "paper5/method_contract/05f2/full_run_completion_summary.json",
+    "sha256": "e8bcca6af95832b4ca468b20f522ef4553100fe80762c78d8b57e9f4d7e4d066",
+    "size_bytes": 1648
+  },
+  "contract_version": "paper5-05f2-full-final-gate-streaming-run-v1",
+  "created_at_utc": "2026-09-12T08:01:40+00:00",
+  "execution_choice_hash": "c57cb6038e8b053a499a1fe67f2aba716a1318a3483d029d360b47bea5880a83",
+  "execution_prelock": {
+    "path": "paper5/method_contract/05f2/full_run_execution_choice_prelock.json",
+    "sha256": "a0d1c1a3591f099b6811c0acc16df7712e082006943a0a249480cdeb54f8912d",
+    "size_bytes": 5328
+  },
+  "n_datasets": 3100,
+  "next_stage": "05f3 frozen final-gate aggregation from all 3,100 sealed shards.",
+  "numerical_implementation_hash": "e16deabe0cb733bf4d6a2dbf8b0a977eb7d5a959d7a6331a69d59dda16144b1a",
+  "optimization_runs_represented": 313100,
+  "progress_manifest": {
+    "path": "paper5/method_contract/05f2/full_run_progress_manifest.csv",
+    "sha256": "24a5d1e5c0b340254c12ff53dc1cd9209813e1bc98f4dee02c581e59706c2e6e",
+    "size_bytes": 1119616
+  },
+  "scientific_contract_hash": "bd5830f967d58c9e5afa70d183df1d22b581877b27688d52c50de60edc165fc2",
+  "scientific_state": {
+    "D01_D02_D03_evaluated": false,
+    "TARGET_accessed": false,
+    "final_gate_PASS_FAIL_evaluated": false,
+    "outcomes_accessed": false,
+    "scientific_metrics_aggregated": false,
+    "scientific_metrics_printed": false,
+    "threshold_retuning_performed": false
+  },
+  "script_path": "paper5/scripts/05f2_run_full_final_gate_gpu_resumable.py",
+  "script_sha256": "8052e6278abef99585e3a90d64480ea7c9a6dc04eb53598bf841f7c9c2431abd",
+  "script_version": "05f2-run-full-final-gate-gpu-resumable-v1-sequential-05f1-path-no-cli",
+  "status": "FROZEN_ALL_3100_FINAL_GATE_SHARDS_COMPLETE_BEFORE_SCIENTIFIC_AGGREGATION"
+}

@@ -1,0 +1,19 @@
+{
+  "archive_role": "READ_ONLY_PROVENANCE_ARCHIVE_OF_PREEXISTING_05Y6_BYTECODE",
+  "script_version": "05y8-archive-05y6-bytecode-provenance-v1-no-cli",
+  "pyc_path": "scripts/__pycache__/05y6_aggregate_prospective_q10_validation.cpython-310.pyc",
+  "pyc_sha256": "bad3ee4833918b578c76daa013ee8e92de72f945c0f2b976db7dc75873ce39e8",
+  "pyc_size_bytes": 18381,
+  "python_runtime_used_for_archive": "3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]",
+  "runtime_magic_number_hex": "6f0d0d0a",
+  "pyc_magic_number_hex": "6f0d0d0a",
+  "magic_matches_current_runtime": true,
+  "flags_uint32": 0,
+  "hash_based_pyc": false,
+  "expected_source_path": "scripts/05y6_aggregate_prospective_q10_validation.py",
+  "expected_source_exists_at_archive_time": false,
+  "source_mtime_unix_from_pyc_header": 1789519956,
+  "source_mtime_utc_from_pyc_header": "2026-09-16T00:52:36+00:00",
+  "source_size_bytes_from_pyc_header": 24971,
+  "embedded_co_filename": ".\\paper5\\scripts\\05y6_aggregate_prospective_q10_validation.py"
+}

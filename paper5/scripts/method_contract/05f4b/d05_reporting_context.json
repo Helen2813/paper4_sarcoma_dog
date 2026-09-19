@@ -1,0 +1,13 @@
+{
+  "PASS": false,
+  "chance_baseline_reason": "The locked 05f3e summary does not define a chance model for the conditional view-support classification task. 05f4 is a read-only manuscript-packaging stage and does not introduce a new post-unblinding chance estimand. A separately versioned exploratory analysis may compute a baseline from the frozen mixed-support truth-class distribution if that estimand is specified before inspecting its result.",
+  "chance_baseline_status": "NOT_DEFINED_OR_COMPUTED_IN_05F4",
+  "ci95_high": 0.7522414508939805,
+  "ci95_low": 0.5869018408594733,
+  "decision_id": "D05_VIEW_SUPPORT",
+  "denominator": 120.0,
+  "frozen_consequence": "View-support labels remain exploratory and cannot support primary shared-versus-partial claims.",
+  "numerator": 81.0,
+  "point_estimate": 0.675,
+  "threshold": 0.8
+}

@@ -1,0 +1,26 @@
+{
+  "columns": [
+    "scenario_id",
+    "scenario_family",
+    "calibration_role",
+    "n_samples",
+    "shared_signal_strength",
+    "n_datasets",
+    "true_biological_factor_opportunities",
+    "matched_retained_biological_factors",
+    "biological_factor_TPR",
+    "familywise_false_acceptance_numerator",
+    "familywise_false_acceptance_rate",
+    "stable_factors_total",
+    "stable_biological_factors",
+    "stable_technical_factors",
+    "stable_unmatched_nontechnical_factors",
+    "pooled_stability_gated_FDP",
+    "mean_reference_shared_subspace_recovery",
+    "matched_retained_view_support_accuracy"
+  ],
+  "n_rows": 24,
+  "note": "Exact read-only copy of the locked 05f3e scenario summary. No new PASS/FAIL rule is defined in 05f4.",
+  "source": "paper5/method_contract/05f3e/final_gate_scenario_summary.csv",
+  "source_sha256": "a01d96610b1ac19629125032a76901561242005bfdd877021968e0f81d422fa2"
+}

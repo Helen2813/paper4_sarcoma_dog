@@ -1,0 +1,51 @@
+{
+  "status": "RECOVERED_SOURCE_NOT_VERIFIED",
+  "script_version": "05y8a-verify-and-restore-recovered-05y6-source-v1-no-cli",
+  "candidate": {
+    "path": "C:\\Users\\olegk\\Downloads\\Telegram Desktop\\05y6_aggregate_prospective_q10_validation.py",
+    "sha256": "9a790077a7e7369839573924db1bbc95693c8210a4936f65a6d249c7434850be",
+    "size_bytes": 24971,
+    "mtime_unix": 1789519956,
+    "mtime_utc": "2026-09-16T00:52:36.873976+00:00",
+    "creation_time_note": "Python stdlib does not provide portable Windows creation-time provenance here; the pre-archive PowerShell search separately recorded candidate CreationTime."
+  },
+  "frozen_pyc": {
+    "path": "scripts/__pycache__/05y6_aggregate_prospective_q10_validation.cpython-310.pyc",
+    "sha256": "bad3ee4833918b578c76daa013ee8e92de72f945c0f2b976db7dc75873ce39e8",
+    "size_bytes": 18381,
+    "header_source_mtime_unix": 1789519956,
+    "header_source_mtime_utc": "2026-09-16T00:52:36+00:00",
+    "header_source_size_bytes": 24971,
+    "embedded_co_filename": ".\\paper5\\scripts\\05y6_aggregate_prospective_q10_validation.py",
+    "marshal_payload_sha256": "5e9e373b5b534869126630215ff0816a11a3c1ddf421c0966c62440001a534c0"
+  },
+  "checks": {
+    "candidate_size_matches_pyc_header": true,
+    "candidate_mtime_matches_pyc_header": true,
+    "exact_marshaled_compiled_code_match": false,
+    "recursive_code_inventory_match": false,
+    "matching_optimize_level": null,
+    "verified_for_restoration": false
+  },
+  "compile_attempts": [
+    {
+      "optimize": 0,
+      "marshal_payload_sha256": "a866f7966e320afa1258fbaf4b359111825806339888788310cf0550a1ae5a62",
+      "exact_marshaled_code_object_match": false,
+      "recursive_code_inventory_match": true
+    },
+    {
+      "optimize": 1,
+      "marshal_payload_sha256": "a866f7966e320afa1258fbaf4b359111825806339888788310cf0550a1ae5a62",
+      "exact_marshaled_code_object_match": false,
+      "recursive_code_inventory_match": true
+    },
+    {
+      "optimize": 2,
+      "marshal_payload_sha256": "a866f7966e320afa1258fbaf4b359111825806339888788310cf0550a1ae5a62",
+      "exact_marshaled_code_object_match": false,
+      "recursive_code_inventory_match": true
+    }
+  ],
+  "interpretation": "Verification requires matching PYC-header source size and mtime plus an exact marshaled CPython code-object match when the candidate is compiled under the embedded source filename. Because the original PYC is timestamp-based rather than source-hash-based, this establishes exact compiled-code equivalence and matching header provenance; it does not mathematically prove that comments/whitespace bytes were identical to a now-missing original source file."
+}

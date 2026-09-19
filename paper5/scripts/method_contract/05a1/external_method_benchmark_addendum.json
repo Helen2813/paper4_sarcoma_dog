@@ -1,0 +1,46 @@
+{
+  "addendum_version": "paper5-external-method-benchmark-addendum-v1",
+  "amends_base_05a_section": "external_method_benchmark",
+  "benchmark_hierarchy": [
+    {
+      "cohort": "TCGA-SARC",
+      "minimum_complete_cases_for_primary_role": 50,
+      "priority": 1,
+      "required_modalities": [
+        "RNA",
+        "DNA methylation",
+        "gene-level CNV"
+      ],
+      "role": "primary_disease_related_external_method_benchmark",
+      "selection_uses_outcome": false,
+      "source_preference": "direct GDC or reproducibly linked multi-omics source",
+      "status": "requires_preflight"
+    },
+    {
+      "allowed_scale": "Original",
+      "cohort": "MLOmics_Original_generalization_cohort",
+      "forbidden_reason": "Top uses cancer-type-label ANOVA feature selection.",
+      "forbidden_scale": "Top",
+      "minimum_complete_cases": 100,
+      "priority": 2,
+      "role": "non_sarcoma_generalization_benchmark",
+      "selection_rule": "Select the eligible non-sarcoma cancer type with the largest complete-case RNA-methylation-CNV sample count; break ties alphabetically before any method result is viewed.",
+      "selection_uses_outcome": false
+    }
+  ],
+  "downsampling_sample_sizes": [
+    50,
+    75,
+    100
+  ],
+  "guardrails": [
+    "Do not assume SARC is a standalone MLOmics task without preflight confirmation.",
+    "Do not use MLOmics Top features.",
+    "Do not use external outcomes for architecture selection.",
+    "External cohorts are selected before SABLE-MO benchmark results are viewed."
+  ],
+  "minimum_downsampling_repeats": 20,
+  "reason": "Add a disease-related sarcoma benchmark and prohibit label-selected MLOmics feature scales before viewing SABLE-MO results.",
+  "status": "FROZEN_BEFORE_MODEL_FITTING",
+  "target_os_use": "flagship osteosarcoma biological application, not the sole proof of a general method claim"
+}

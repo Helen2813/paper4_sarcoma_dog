@@ -1,0 +1,64 @@
+{
+  "compressed": false,
+  "contract_files": {
+    "paper5\\method_contract\\05b\\simulation_data_manifest.csv": {
+      "sha256": "fb8e36c5d659baca425f3f65d560ebd06e61635543ff9abb88a805f0f3e36e36",
+      "size_bytes": 202185
+    },
+    "paper5\\method_contract\\05b\\simulation_environment_snapshot.json": {
+      "sha256": "4108695e98eb505ed3c18272042e2b8b7970145603602c0658be0f29e32f6a84",
+      "size_bytes": 569
+    },
+    "paper5\\method_contract\\05b\\simulation_generation_README.txt": {
+      "sha256": "1c74949cb3be6f4703cbdd67881150636e7ef93d751c330d335e5a33c55e0858",
+      "size_bytes": 1755
+    },
+    "paper5\\method_contract\\05b\\simulation_generator_specification.json": {
+      "sha256": "fbedb53ffdba760aca6e537ef1c34388a27f98f1c38bf649de75ed17d6718c61",
+      "size_bytes": 2426
+    },
+    "paper5\\method_contract\\05b\\simulation_materialization_summary.csv": {
+      "sha256": "669f18ca68c78f2aef97f435293641de9843280c96d83a677b2e874fccc4b6e4",
+      "size_bytes": 2344
+    },
+    "paper5\\method_contract\\05b\\simulation_reference_fixture_hashes.json": {
+      "sha256": "a90c28113f368069306bb14ca9c4e27bb49285ce8c2bb5327048194a18c86154",
+      "size_bytes": 10691
+    },
+    "paper5\\method_contract\\05b\\stability_gate_calibration_replicates.csv": {
+      "sha256": "659cafb44fb4529c6b78ee3eacc1c6c77c892b3850bc6e0eddbd6067d917e60a",
+      "size_bytes": 9841
+    },
+    "paper5\\method_contract\\05b\\stability_gate_calibration_scenarios.csv": {
+      "sha256": "290167cdb1c9b1ac792de525f96353fedd12899da993483a1c66c55494e53e9a",
+      "size_bytes": 4211
+    },
+    "paper5\\method_contract\\05b\\stability_gate_operating_characteristic_contract.json": {
+      "sha256": "b8fc2c1757316e7e26e312848473fe98fa19958b442cd021936908c8c4d89076",
+      "size_bytes": 2478
+    }
+  },
+  "created_at_utc": "2026-08-11T19:22:25.382200+00:00",
+  "data_manifest": "paper5\\method_contract\\05b\\simulation_data_manifest.csv",
+  "data_manifest_sha256": "fb8e36c5d659baca425f3f65d560ebd06e61635543ff9abb88a805f0f3e36e36",
+  "generator_version": "sable-mo-simulation-generator-v1",
+  "lock_version": "paper5-simulation-generation-lock-v1",
+  "model_fitting_performed": false,
+  "n_addendum_datasets": 300,
+  "n_core_datasets": 320,
+  "n_datasets": 620,
+  "outcome_access": false,
+  "scope": "all",
+  "script_version": "05b-generate-small-n-multiomics-simulations-v1",
+  "silent_regeneration_forbidden": true,
+  "stability_gate_thresholds_retuned": false,
+  "total_size_bytes": 1022926400,
+  "upstream_05a_contract": {
+    "path": "paper5\\method_contract\\05a\\ai_method_contract.json",
+    "sha256": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2"
+  },
+  "upstream_05a_lock": {
+    "path": "paper5\\method_contract\\05a\\ai_method_contract_lock.json",
+    "sha256": "cc62dcc75c5f06e0c2c7220d1419392f8838b9eccad4ae916831689255dfc9f0"
+  }
+}

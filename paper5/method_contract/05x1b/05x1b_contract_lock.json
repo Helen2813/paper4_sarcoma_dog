@@ -1,0 +1,20 @@
+{
+  "contract": {
+    "path": "paper5/method_contract/05x1b/stability_only_retention_ablation_contract.json",
+    "sha256": "851cca70b5e7554b7e671bf2d3e506ed4d3a33637ebc60be651ec9756410bda1",
+    "size_bytes": 6281
+  },
+  "contract_version": "paper5-05x1b-postunblinding-exploratory-retention-ablation-v2",
+  "created_at_utc": "2026-09-15T23:29:51+00:00",
+  "readme": {
+    "path": "paper5/method_contract/05x1b/05x1b_README.txt",
+    "sha256": "8023f006599bb9ffbbcfd3ab915737569bddbd94cf912b2a625d484fef954366",
+    "size_bytes": 730
+  },
+  "rewrite_policy": "05x1b is frozen before 05x2b computes the exploratory result. Do not alter subbanks, rules, thresholds, metrics, or reference checks.",
+  "scientific_result_computed": false,
+  "script_path": "paper5/scripts/05x1b_freeze_stability_only_retention_ablation_contract_v2.py",
+  "script_sha256": "34efe8a35b4c7c4dffbd046dcc4a5d69c18379d9f754f01c12ef284b757527b6",
+  "script_version": "05x1b-freeze-stability-only-retention-ablation-contract-v2-no-cli",
+  "status": "FROZEN_POSTUNBLINDING_EXPLORATORY_ABLATION_BEFORE_RESULT_COMPUTATION"
+}

@@ -1,0 +1,134 @@
+{
+  "amendment_version": "sable-mo-inference-final-gate-clarification-v1",
+  "amends": [
+    "05a random-control implementation count for RC01 pairing permutations",
+    "05a1 D01 final-gate aggregation and confidence-interval implementation",
+    "05a1 D02/D03 exact STANDARD selector and aggregation implementation",
+    "final-gate reporting and failure-consequence semantics",
+    "final-gate runtime-pilot numerical-versioning policy"
+  ],
+  "created_at_utc": "2026-08-21T21:38:31+00:00",
+  "does_not_rewrite": [
+    "05a",
+    "05a1",
+    "05d1",
+    "05d3",
+    "05d4",
+    "05d4a",
+    "05d4b"
+  ],
+  "effective_overrides": {
+    "D01_NULL_SPECIFICITY": {
+      "aggregation": "pool all matching dataset-level events; N=1000",
+      "confidence_interval": {
+        "confidence_level": 0.95,
+        "continuity_correction": false,
+        "decision_endpoint": "upper",
+        "equivalent_one_sided_confidence_level": 0.975,
+        "method": "Wilson score",
+        "sidedness": "two-sided",
+        "z": 1.959963984540054
+      },
+      "event": "dataset retains at least one false biological shared factor in a null dataset",
+      "mandatory_secondary_reporting": [
+        "independent-null pooled N=800",
+        "correlated-private stress null N=200",
+        "independent-null n=50,62,75,100 separately, N=200 each",
+        "descriptive logistic trend on raw n scale, OR per +25 samples"
+      ],
+      "pass_rule": "upper two-sided 95% Wilson endpoint <= 0.10",
+      "primary_estimand": "familywise false biological acceptance over the prespecified final-gate null registry",
+      "selector": "true_biological_shared_factors == 0 and true_technical_shared_factors == 0",
+      "threshold": 0.1
+    },
+    "D02_STANDARD_SENSITIVITY": {
+      "aggregation": "total true biological shared factors matched-and-retained / 400 true biological shared-factor opportunities",
+      "confidence_bound_used_for_decision": false,
+      "datasets": 100,
+      "favorable_direction_disclosure": "This selector clarification probably increases TPR by excluding harder mixed-support and sparse/dense loading stress scenarios; it also reduces selected datasets from 400 to 100. The clarification is frozen before final-gate data exist because STANDARD and standard_n62_signal1 were already prospectively named.",
+      "pass_rule": "point estimate >= 0.80",
+      "resolved_scenario": "G07_IND_N62_S1P00",
+      "selector": "scenario_family == 'final_independent_gate_curve' and n_samples == 62 and shared_signal_strength == 1.0 and shared_factor_correlation == 0 and batch_mode == 'none'",
+      "threshold": 0.8,
+      "true_factor_opportunities": 400
+    },
+    "D03_STANDARD_FNR": {
+      "aggregation": "FNR = 1 - D02 TPR on the identical pooled denominator",
+      "confidence_bound_used_for_decision": false,
+      "independence_status": "algebraic mirror of D02, not independent evidence",
+      "pass_rule": "point estimate <= 0.20",
+      "resolved_scenario": "G07_IND_N62_S1P00",
+      "selector": "identical to D02",
+      "threshold": 0.2
+    },
+    "RC01_PAIRING_PERMUTATION": {
+      "base_n_replicates": 100,
+      "effective_n_replicates": 1000,
+      "reason": "Monte Carlo p-value resolution only.",
+      "unchanged": [
+        "unit permuted",
+        "preserved structure",
+        "primary metrics",
+        "outcome blinding",
+        "MF01 Benjamini-Hochberg multiplicity family"
+      ]
+    },
+    "factor_level_stability_thresholds": {
+      "confidence_bounds_used_for_factor_acceptance": false,
+      "decision_type": "point-estimate factor rules",
+      "unchanged_thresholds": {
+        "inclusion_frequency_min": 0.8,
+        "median_aligned_correlation_min": 0.7,
+        "q10_aligned_correlation_min": 0.4
+      }
+    }
+  },
+  "effective_registries": {
+    "failure_policy": "paper5\\method_contract\\05a2\\final_gate_failure_consequence_policy.json",
+    "gate_decisions": "paper5\\method_contract\\05a2\\effective_stability_gate_decision_registry.csv",
+    "gate_metrics": "paper5\\method_contract\\05a2\\effective_stability_gate_operating_metric_registry.csv",
+    "random_controls": "paper5\\method_contract\\05a2\\effective_random_control_registry.csv",
+    "reporting": "paper5\\method_contract\\05a2\\final_gate_reporting_registry.csv",
+    "runtime_pilot_policy": "paper5\\method_contract\\05a2\\final_gate_runtime_pilot_policy.json"
+  },
+  "guardrails": [
+    "No final-gate simulation dataset existed at the 05a2 freeze.",
+    "05a2 is not blind to 05d4/05d4a results; this is disclosed explicitly.",
+    "05d5 results are not used to define any 05a2 rule even if 05d5 is running or later completes.",
+    "No TARGET representation result, pairing-permutation result, biological result, or outcome result is used.",
+    "A failed frozen criterion changes the conclusion, not the criterion.",
+    "No final-gate threshold or dataset count is changed by 05a2.",
+    "No V5 exploratory result can alter the primary method hierarchy."
+  ],
+  "method": "SABLE-MO",
+  "precondition_snapshot": "paper5\\method_contract\\05a2\\amendment_precondition_snapshot.json",
+  "script_version": "05a2-freeze-inference-final-gate-clarification-v1-no-cli",
+  "selector_audit_reference": {
+    "D01_correlated_private_datasets": 200,
+    "D01_datasets": 1000,
+    "D01_independent_datasets": 800,
+    "D02_current_scenarios": [
+      "G07_IND_N62_S1P00",
+      "G18_MIXED_SUPPORT_N62_S1P00",
+      "G23_SPARSE_LOADING_N62_S1P00",
+      "G24_DENSE_LOADING_N62_S1P00"
+    ],
+    "D02_standard_scenarios": [
+      "G07_IND_N62_S1P00"
+    ],
+    "D02_standard_true_factor_opportunities": 400
+  },
+  "specificity_sensitivity_evidence_asymmetry": "D01 uses an uncertainty-aware upper confidence bound, whereas D02/D03 use point-estimate operating targets. This asymmetry is preserved rather than harmonized post hoc because it was already present in the frozen design and reflects the preregistered priority on avoiding false biological acceptance.",
+  "status": "FROZEN_BEFORE_FINAL_GATE_MATERIALIZATION",
+  "unchanged_scientific_design": {
+    "D01_threshold": 0.1,
+    "D02_threshold": 0.8,
+    "D03_threshold": 0.2,
+    "architecture_profile": "unchanged from 05d3",
+    "final_gate_datasets": 3100,
+    "final_gate_scenarios": 24,
+    "outcome_blinding": true,
+    "representation_method_selection": "unchanged",
+    "stability_resamples_per_dataset": 100
+  }
+}

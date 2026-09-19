@@ -1,0 +1,62 @@
+{
+  "biological_annotations_loaded": false,
+  "clinical_labels_generated": false,
+  "contract_version": "paper5-confirmatory-architecture-simulation-materialization-v2",
+  "created_at_utc": "2026-08-11T21:44:27.884066+00:00",
+  "factor_identifiability": {
+    "factor_level": "Evaluated only where the frozen scenario marks factors identifiable.",
+    "subspace_level": "Always preserved for designated rotationally ambiguous scenarios; principal angles/projection distance are required downstream."
+  },
+  "format": {
+    "atomic_replacement": true,
+    "compression": "ZIP_STORED",
+    "container": "deterministic NumPy NPZ",
+    "dtype": "float32 for molecular and latent numeric arrays",
+    "fixed_zip_timestamp": "1980-01-01T00:00:00",
+    "pickle_allowed": false
+  },
+  "generative_equation": "X_view = block_scale_view * (shared_signal_strength * f_view(Z_bio diag(s) W_bio_view^T) + private_signal_strength * Z_private_view W_private_view^T + batch_effect_strength * Z_technical W_technical_view^T + feature_offset + Gaussian_noise), followed by the frozen row-pairing corruption and missingness mechanism.",
+  "generator_version": "sable-mo-simulation-generator-v2",
+  "guardrails": [
+    "05a and 05a1 are verified by SHA256 before generation.",
+    "The 04d technical preflight is verified by SHA256 before generation.",
+    "No representation, survival or biological result is read or fitted.",
+    "The disclosed sable_mo_v1 pilot is never modified or reused for confirmatory evaluation.",
+    "Only the combined architecture-screening registry is materialized.",
+    "The final gate-calibration registry is not materialized by this script.",
+    "Every dataset contains exact known biological, private and technical truth.",
+    "No stability threshold is tuned or evaluated in this script."
+  ],
+  "materialization_scope": {
+    "architecture_screening": "materialized now",
+    "final_gate_calibration": "not materialized until architecture selection is complete and frozen",
+    "pre_addendum_v1_pilot": "preserved, disclosed and ineligible for confirmatory results"
+  },
+  "models_fitted": false,
+  "outcomes_generated": false,
+  "pair_corruption": "RNA remains in canonical order; methylation and CNV receive independent exact derangements of the frozen row fraction.",
+  "script_version": "05b-generate-small-n-multiomics-simulations-v2-no-cli",
+  "simulation_stage": "architecture_screening",
+  "stability_gate_thresholds_retuned": false,
+  "technical_metadata_preflight": {
+    "consequence": "Technical batch truth is formally stress-tested in simulations; real TARGET factors retain technical-status-unknown unless later supported by independent evidence.",
+    "cross_view_batch_candidates": 0,
+    "interpretation": "Cosmetic source-discovery accounting discrepancy; the frozen parsed source inventory is authoritative for downstream audit provenance.",
+    "manifest_discovered_source_count": 17,
+    "source_count_discrepancy": true,
+    "source_inventory_rows": 16,
+    "strict_usable_variables": 0
+  },
+  "truth_layers": {
+    "biological_shared": "Factor-specific ALL3 or pair-view support with exact score, loading, support-mask and truth-class arrays.",
+    "complete_observed_matrix": "Observed row ordering after any intentional pairing corruption, before missing-value masking.",
+    "missingness": "Per-cell reason codes with separate base MCAR, feature-structured, sample-quality, partial-view and batch-dependent mechanisms.",
+    "private": "View-specific score and loading arrays; selected null scenarios may correlate corresponding private scores across views without creating biological shared truth.",
+    "technical": "Known binary-batch label, continuous technical score, exact view support, loadings and batch/biology correlation."
+  },
+  "views": [
+    "RNA",
+    "METHYLATION",
+    "CNV"
+  ]
+}

@@ -1,0 +1,5 @@
+subbank_id,ablation_rule_id,both_full_and_ablation_false_event,ablation_false_event_but_not_full,full_false_event_but_not_ablation,neither_false_event,denominator
+CORRELATED_PRIVATE_N62,NO_MODALITY_SUPPORT,70,0,0,130,200
+CORRELATED_PRIVATE_N62,PURE_FACTOR_REPRODUCIBILITY,70,0,0,130,200
+INDEPENDENT_NULL_N62,NO_MODALITY_SUPPORT,0,0,0,200,200
+INDEPENDENT_NULL_N62,PURE_FACTOR_REPRODUCIBILITY,0,0,0,200,200

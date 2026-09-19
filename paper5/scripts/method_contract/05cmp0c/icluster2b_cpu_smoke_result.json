@@ -1,0 +1,209 @@
+{
+  "comparator": {
+    "Bioconductor_version": "3.23",
+    "fallback_activated": false,
+    "method": "iCluster2b",
+    "official_Bioconductor_source_release_version": "1.48.0",
+    "package": "iClusterPlus",
+    "package_version": "1.47.3",
+    "platform_binary_policy": "Bioconductor 3.23 publishes iClusterPlus 1.48.0 as the source release, while the official Windows x86_64 binary for R 4.6 is 1.47.3. This smoke test prospectively uses the official platform-native Windows binary; no source compilation or performance-based version choice is permitted here.",
+    "role": "required_external_classical_secondary_comparator",
+    "same_package_fallback": "iClusterBayes2"
+  },
+  "contract_version": "sable-mo-icluster2b-cpu-synthetic-smoke-v1",
+  "created_at_utc": "2026-08-22T17:16:34+00:00",
+  "development_smoke_configuration": {
+    "EM_iter": 10,
+    "K": 3,
+    "eps": 0.0001,
+    "eps2": 1e-06,
+    "lambda_per_view": [
+      10.0,
+      10.0,
+      10.0
+    ],
+    "method_per_view": [
+      "lasso",
+      "lasso",
+      "lasso"
+    ],
+    "purpose": "Implementation smoke only. These values exercise the documented iCluster2b continuous-data path and must not be reused as scientific K/lambda/tuning settings without a prospective 05cmp1 freeze.",
+    "seed": 1103,
+    "tune_iCluster2b_executed": false
+  },
+  "environment": {
+    "path": "paper5\\method_contract\\05cmp0c\\icluster2b_cpu_smoke_environment.json",
+    "sha256": "c2bc881d056ada211929626dac80fd07c345c66b4e36d41ed77ab9c2ac251b76"
+  },
+  "fixture_adapter_audit": {
+    "cnv": {
+      "adapter": "NaN_to_zero_only_on_already_standardized_05dev0_fixture",
+      "dtype_after_adapter": "float64",
+      "dtype_before_adapter": "float64",
+      "encoded_finite": true,
+      "encoded_sha256": "e195545e36f84cd2d0f9bf6bd57a4124c394755d487e4c02ed4f96f539318df3",
+      "feature_level_nan_count_in_available_rows": 0,
+      "shape": [
+        24,
+        30
+      ],
+      "whole_view_missing_rows": 7
+    },
+    "methylation": {
+      "adapter": "NaN_to_zero_only_on_already_standardized_05dev0_fixture",
+      "dtype_after_adapter": "float64",
+      "dtype_before_adapter": "float64",
+      "encoded_finite": true,
+      "encoded_sha256": "28bf1263ca24a0737374ac863ec29bc1108157b40b6ee610f05f20161ace28bd",
+      "feature_level_nan_count_in_available_rows": 5,
+      "shape": [
+        24,
+        50
+      ],
+      "whole_view_missing_rows": 8
+    },
+    "rna": {
+      "adapter": "NaN_to_zero_only_on_already_standardized_05dev0_fixture",
+      "dtype_after_adapter": "float64",
+      "dtype_before_adapter": "float64",
+      "encoded_finite": true,
+      "encoded_sha256": "eaf783a935712c9f64735202ad8ed2b8e0c7372e9baef08f2f0f7e330d61af48",
+      "feature_level_nan_count_in_available_rows": 0,
+      "shape": [
+        24,
+        40
+      ],
+      "whole_view_missing_rows": 6
+    }
+  },
+  "next_stage": "Create 05cmp1 to freeze exact iCluster2b/MOVE implementations, scientific adapters, hyperparameter/tuning rules, seeds and comparable output metrics before any scientific secondary-comparator run. Secondary comparators remain unable to influence 05e.",
+  "pass_checks": {
+    "Bioconductor_exactly_3_23": true,
+    "R_version_exact_expected_prefix": true,
+    "automatic_fallback_not_activated": true,
+    "beta_finite": true,
+    "beta_shapes_match_three_views": true,
+    "feature_level_missingness_adapter_exercised": true,
+    "iCluster2b_API_available": true,
+    "iClusterPlus_exactly_official_windows_binary_1_47_3": true,
+    "latent_columns_equal_development_K": true,
+    "latent_finite": true,
+    "latent_rows_equal_24": true,
+    "loaded_from_isolated_Paper5_R_library": true,
+    "tune_iCluster2b_API_available": true,
+    "whole_view_missingness_adapter_exercised": true
+  },
+  "run_1": {
+    "beta_all_finite": true,
+    "beta_sha256_by_view": {
+      "cnv": "e95be745387f11b9e62bf40413d94e7a178a14e8a8261e6e0ca270514f183bd5",
+      "methylation": "498bf9a5e380d03d3b7c06f36b7029ac67cb15ae73f270ac9241f5a3f73a6413",
+      "rna": "1285e1022327a42589fbd37d08b80342bd97c0ef9041f081d3db638f8d26fea5"
+    },
+    "beta_shapes": [
+      [
+        40,
+        3
+      ],
+      [
+        50,
+        3
+      ],
+      [
+        30,
+        3
+      ]
+    ],
+    "bioconductor_version": "3.23",
+    "elapsed_seconds": 0.0,
+    "iclusterplus_version": "1.47.3",
+    "latent_all_finite": true,
+    "latent_sha256": "e10e8a147b67be951967b00c1b2537d9913a41511ccc56432d287a58208fc202",
+    "latent_shape": [
+      24,
+      3
+    ],
+    "r_stdout_pass_sentinel": true,
+    "r_version": "R version 4.6.1 (2026-06-24 ucrt)",
+    "reported_iterations": 10.0,
+    "session_info_sha256": "bc79d2a3a5f201b0d8b881e11169e5af4d8c693a0aa9fb47cd0e9e0ebf9e73fd"
+  },
+  "run_2": {
+    "beta_all_finite": true,
+    "beta_sha256_by_view": {
+      "cnv": "e95be745387f11b9e62bf40413d94e7a178a14e8a8261e6e0ca270514f183bd5",
+      "methylation": "498bf9a5e380d03d3b7c06f36b7029ac67cb15ae73f270ac9241f5a3f73a6413",
+      "rna": "1285e1022327a42589fbd37d08b80342bd97c0ef9041f081d3db638f8d26fea5"
+    },
+    "beta_shapes": [
+      [
+        40,
+        3
+      ],
+      [
+        50,
+        3
+      ],
+      [
+        30,
+        3
+      ]
+    ],
+    "bioconductor_version": "3.23",
+    "elapsed_seconds": 0.0,
+    "iclusterplus_version": "1.47.3",
+    "latent_all_finite": true,
+    "latent_sha256": "e10e8a147b67be951967b00c1b2537d9913a41511ccc56432d287a58208fc202",
+    "latent_shape": [
+      24,
+      3
+    ],
+    "r_stdout_pass_sentinel": true,
+    "r_version": "R version 4.6.1 (2026-06-24 ucrt)",
+    "reported_iterations": 10.0,
+    "session_info_sha256": "bc79d2a3a5f201b0d8b881e11169e5af4d8c693a0aa9fb47cd0e9e0ebf9e73fd"
+  },
+  "same_seed_repeatability_diagnostic": {
+    "allclose_rtol_1e-10_atol_1e-10": true,
+    "beta_hashes_exact_match": true,
+    "exact_latent_match": true,
+    "gate_consequence": "NONE_IN_05CMP0C; this is an implementation-repeatability diagnostic only. Scientific seed/tuning/stability rules must be frozen prospectively in 05cmp1.",
+    "independent_R_processes": true,
+    "maximum_absolute_latent_difference": 0.0,
+    "run1_latent_sha256": "e10e8a147b67be951967b00c1b2537d9913a41511ccc56432d287a58208fc202",
+    "run2_latent_sha256": "e10e8a147b67be951967b00c1b2537d9913a41511ccc56432d287a58208fc202",
+    "same_seed": 1103
+  },
+  "scientific_boundaries": {
+    "TARGET_outcomes_accessed": false,
+    "biological_annotations_accessed": false,
+    "latent_or_beta_values_persisted": false,
+    "may_influence_05e": false,
+    "may_influence_final_gate": false,
+    "real_TARGET_values_accessed": false,
+    "scientific_comparator_result_generated": false,
+    "scientific_hyperparameters_frozen_here": false,
+    "scientific_missing_view_policy_frozen_here": false,
+    "scientific_preprocessing_frozen_here": false,
+    "scientific_tuning_rule_frozen_here": false,
+    "synthetic_05dev0_only": true
+  },
+  "script_version": "05cmp0c-smoke-test-icluster2b-cpu-v4-cache-safe-windows-binary-no-cli",
+  "status": "PASS_SYNTHETIC_ICLUSTER2B_CPU_SMOKE_BEFORE_05CMP1",
+  "upstream_hashes": {
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\cnv.npy": "266fd02b86ec51d87f14e519f2177a1ff98575e313e33f57e08c1fb36aab8d29",
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\methylation.npy": "7da1a6e68bbd3609dd0c0e3eb896aad1295a89f8d89b1ede0bebed3e4a2b7d61",
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\rna.npy": "05b15c86877eb1d200ddb9aa2aa8e7dc032ef38afddeb28a76b46e16c81f44da",
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\sample_manifest.csv": "6d5dc85606047abcb10b436b6fbc8066f73233f6628eb024ad189695785c5509",
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\view_availability.csv": "88d3a9d688e7c97f810c9db410919b95b2708a03a8d12ce0bf58b2dc74aa4eaa",
+    "paper5\\method_contract\\05cmp0\\secondary_comparator_selection_contract.json": "fd4f16510ca9b11fb78a6aad65911e526b4b0c0e12abcc5a40a4df2d5a50b699",
+    "paper5\\method_contract\\05cmp0\\secondary_comparator_selection_contract_lock.json": "b0f7eb2de3afa52d8fc54894eb82aef8e8a5d10d64c456f0bdf4f927084b6dfe",
+    "paper5\\method_contract\\05cmp0a\\effective_secondary_comparator_selected_registry.csv": "d4b765a777b08206bddcbb49138b7b430e8609129f93a6ac2af7d5b37185390f",
+    "paper5\\method_contract\\05cmp0a\\secondary_comparator_continuous_data_amendment.json": "ed4c9d821b1633de9528d68d0fe2fbca5b13c2de69d816181bba15a12840042e",
+    "paper5\\method_contract\\05cmp0a\\secondary_comparator_continuous_data_amendment_lock.json": "04e74228ff85eafc6bd65535dd02c95a4efbc7a1a37bddbd9a1f9f82bdba5e5e",
+    "paper5\\method_contract\\05cmp0b\\move_gpu_smoke_lock.json": "a425155ddcac7e922c2874cb39eeaf6232e9502e8d6578903b5b78db5aefd68f",
+    "paper5\\method_contract\\05cmp0b\\move_gpu_smoke_result.json": "abe44fd3daaf68393977eacbb22da1c9de40e5d10e5791c0eb2df584e54f0f30",
+    "paper5\\method_contract\\05dev0\\target_input_synthetic_fixture_contract.json": "e4387664398891334e8f5c4f7524277dbefa43f7f2cc4a3b07a08477d6ac1df5",
+    "paper5\\method_contract\\05dev0\\target_input_synthetic_fixture_lock.json": "8300b430bdf8ee641443782809816c2691777644a534e9ecbc2669b9f7ed7eb9"
+  }
+}

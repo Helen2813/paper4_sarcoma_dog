@@ -1,0 +1,46 @@
+{
+  "aggregation_script": {
+    "path": "paper5/scripts/05f3b_aggregate_final_gate_results_cpu_preunblinding_locked.py",
+    "sha256": "fcf1a2e1fec76b0ea15ef93be813851153d763a437c95d46ce1c41d148b9e435",
+    "size_bytes": 61478
+  },
+  "created_at_utc": "2026-08-23T00:07:02+00:00",
+  "literal_constant_audit": {
+    "BATCH_NULL_SCENARIO_IDS": [
+      "G20_BATCH_SHARED_NULL_N62",
+      "G21_BATCH_PARTIAL_NULL_N62"
+    ],
+    "BOOTSTRAP_MASTER_SEED": 20260822,
+    "BOOTSTRAP_REPLICATES": 10000,
+    "CORRELATED_PRIVATE_SCENARIO_ID": "G19_CORRELATED_PRIVATE_NULL_N62",
+    "D01_LIMIT": 0.1,
+    "D01_WILSON_Z": 1.959963984540054,
+    "D02_TPR_MIN": 0.8,
+    "D03_FNR_MAX": 0.2,
+    "D04_SUBSPACE_MIN": 0.8,
+    "D05_VIEW_SUPPORT_MIN": 0.8,
+    "D06_BATCH_FALSE_ACCEPT_MAX": 0.1,
+    "EXPECTED_D01_CORRELATED_PRIVATE_DATASETS": 200,
+    "EXPECTED_D01_DATASETS": 1000,
+    "EXPECTED_D01_INDEPENDENT_DATASETS": 800,
+    "EXPECTED_D02_DATASETS": 100,
+    "EXPECTED_D02_FACTOR_OPPORTUNITIES": 400,
+    "EXPECTED_DATASETS": 3100,
+    "EXPECTED_SCENARIOS": 24,
+    "EXPECTED_STABILITY_RESAMPLES": 100,
+    "MIXED_SUPPORT_SCENARIO_ID": "G18_MIXED_SUPPORT_N62_S1P00",
+    "ROTATIONAL_SCENARIO_ID": "G17_ROTATIONAL_N62_S1P00",
+    "SCRIPT_VERSION": "05f3b-aggregate-final-gate-results-cpu-v1-poststart-preunblinding-locked-no-cli",
+    "STANDARD_SCENARIO_ID": "G07_IND_N62_S1P00"
+  },
+  "preexisting_05f3_sha256": "443b553e2e9e95a9f4d3ac7de5fe7b4f33479d6552264555e3edc276b077d5c2",
+  "preexisting_strict_05f2a_sha256": "ee902b351f9ed6218f34165da9edc70954749759398c551f0859aa6ef035b5bb",
+  "scientific_core_ast_equivalent_to_preexisting_05f3": true,
+  "scientific_core_ast_sha256": "1844483cd7e2924609cd090bc68e0a0d26e9c4bb4ed8ede9f6185a68a2d511da",
+  "scientific_results_used": false,
+  "scientific_shards_read": false,
+  "script_version": "05f3b-aggregate-final-gate-results-cpu-v1-poststart-preunblinding-locked-no-cli",
+  "snapshot_version": "paper5-05f3b-source-snapshot-v1",
+  "source_code_executed_in_05f2b": false,
+  "status": "FROZEN_FINAL_GATE_AGGREGATION_IMPLEMENTATION_POSTSTART_PREUNBLINDING"
+}

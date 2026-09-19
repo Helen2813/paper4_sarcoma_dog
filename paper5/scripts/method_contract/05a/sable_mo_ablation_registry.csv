@@ -1,0 +1,7 @@
+variant_id,block_balanced_reconstruction,shared_private_decomposition,paired_contrastive_alignment,modality_dropout,missing_view_reconstruction,stability_gate,variational_latent,prespecified_component_hypothesis
+V0_BALANCED_AE,True,False,False,False,False,False,False,Block normalization prevents methylation dominance and improves held-out reconstruction fairness.
+V1_SHARED_PRIVATE_AE,True,True,False,False,False,False,False,Shared/private decomposition separates cross-view structure from assay-specific variation.
+V2_CONTRASTIVE_SPAE,True,True,True,False,False,False,False,Paired contrastive alignment improves same-patient cross-view retrieval.
+V3_DROPOUT_SPAE,True,True,True,True,True,False,False,Modality dropout improves partial-view robustness and RNA-only projection.
+V4_SABLE_MO,True,True,True,True,True,True,False,The stability gate removes attractive but non-reproducible latent factors.
+V5_SABLE_VAE,True,True,True,True,True,True,True,The variational extension tests whether posterior regularization improves generalization despite the small sample size.

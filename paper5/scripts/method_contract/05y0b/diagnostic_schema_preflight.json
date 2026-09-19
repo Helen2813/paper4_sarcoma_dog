@@ -1,0 +1,117 @@
+{
+  "failure_labels_inspected": false,
+  "g19_factor_payload": {
+    "all_factor_rows_have_median_q10_inclusion": true,
+    "all_nonretained_factor_rows_have_median_q10_inclusion": true,
+    "bidirectional_threshold_frontier_available_from_sealed_payload": true,
+    "datasets": 200,
+    "factor_rows": 1000,
+    "frontier_field_nonnull_rows": {
+      "inclusion_frequency": 1000,
+      "median_aligned_correlation": 1000,
+      "passes_stability_gate": 1000,
+      "q10_aligned_correlation": 1000
+    },
+    "frontier_field_present_rows": {
+      "inclusion_frequency": 1000,
+      "median_aligned_correlation": 1000,
+      "passes_stability_gate": 1000,
+      "q10_aligned_correlation": 1000
+    },
+    "frontier_metrics_nonnull_in_nonretained_rows": {
+      "inclusion_frequency": 923,
+      "median_aligned_correlation": 923,
+      "q10_aligned_correlation": 923
+    },
+    "nonretained_factor_rows": 923,
+    "retained_factor_rows": 77,
+    "truth_context_field_nonnull_rows": {
+      "biological_truth_match": 1000,
+      "primary_truth_target": 1000,
+      "technical_truth_match": 1000
+    },
+    "truth_context_field_present_rows": {
+      "biological_truth_match": 1000,
+      "primary_truth_target": 1000,
+      "technical_truth_match": 1000,
+      "truth_factor_class": 1000
+    }
+  },
+  "next_stage_guardrail": "The exact realized-correlation source and the complete factor-level frontier schema are established without failure-label comparison. Any 70-vs-130 analysis, factor classifier, anchor calibration, or threshold sweep must be frozen in a new 05y1 contract before computation.",
+  "realized_private_correlation_candidate": {
+    "dataset_row_leaf_nonnull_datasets": 0,
+    "dataset_row_leaf_numeric_finite_datasets": 0,
+    "dataset_row_leaf_present_datasets": 0,
+    "direct_path_nonnull_datasets": 200,
+    "direct_path_numeric_finite_datasets": 200,
+    "direct_path_present_datasets": 200,
+    "exact_path_from_05y0": "scientific_payload.factor_rows[0].best_private_absolute_correlation",
+    "factor_row_leaf_nonnull_rows": 1000,
+    "factor_row_leaf_numeric_finite_rows": 1000,
+    "factor_row_leaf_present_rows": 1000,
+    "leaf_name": "best_private_absolute_correlation",
+    "scope_interpretation": "ONE_NON_NULL_DIRECT_VALUE_PER_G19_DATASET",
+    "seed_reconstruction_required": false
+  },
+  "scientific_result_computed": false,
+  "script_version": "05y0b-realized-rho-and-frontier-schema-preflight-v3-no-cli",
+  "sources": {
+    "05f2_progress_manifest": {
+      "path": "paper5/method_contract/05f2/full_run_progress_manifest.csv",
+      "sha256": "24a5d1e5c0b340254c12ff53dc1cd9209813e1bc98f4dee02c581e59706c2e6e",
+      "size_bytes": 1119616
+    },
+    "05f3e_lock": {
+      "path": "paper5/method_contract/05f3e/final_gate_results_lock.json",
+      "sha256": "6d691237662d633a4f8d8294126a33b32c5694372a6e58de71bd45731d67c397",
+      "size_bytes": 3302
+    },
+    "05x2b_lock": {
+      "path": "paper5/method_contract/05x2b/05x2b_results_lock.json",
+      "sha256": "410f1ddb1fcd03c20627335c41b441ff3373ec88547a1e0026d6b072cc2b3950",
+      "size_bytes": 2201
+    },
+    "05y0_lock": {
+      "path": "paper5/method_contract/05y0/05y0_preflight_lock.json",
+      "sha256": "eaeb93312fc065ee9e3600c2cddd3f53e0d6b0320e547e34b552c20c19bc59a5",
+      "size_bytes": 1652
+    },
+    "05y0_preflight": {
+      "path": "paper5/method_contract/05y0/realized_rho_preflight.json",
+      "sha256": "883d05515c27a415bdd0241ac0edabd7acd7adef54d822756ddebfe8e2a2e8c8",
+      "size_bytes": 7090
+    }
+  },
+  "standard_count_source": {
+    "frozen_dataset_count": 100,
+    "reason_not_hardcoded": "STANDARD is used only as a secondary blind schema/control source in this preflight. Its frozen completed-run count is therefore read from the authoritative 05f2 progress manifest rather than assumed to be 200.",
+    "scenario_id": "G07_IND_N62_S1P00",
+    "source": "paper5/method_contract/05f2/full_run_progress_manifest.csv"
+  },
+  "standard_factor_payload": {
+    "datasets": 100,
+    "factor_rows": 500,
+    "frontier_metrics_nonnull_in_nonretained_rows": {
+      "inclusion_frequency": 49,
+      "median_aligned_correlation": 49,
+      "q10_aligned_correlation": 49
+    },
+    "frontier_metrics_nonnull_rows": {
+      "inclusion_frequency": 500,
+      "median_aligned_correlation": 500,
+      "q10_aligned_correlation": 500
+    },
+    "matched_nonretained_scenario_signature_control_schema_available": true,
+    "nonretained_factor_rows": 49,
+    "retained_factor_rows": 451,
+    "scenario_id": "G07_IND_N62_S1P00",
+    "truth_context_field_nonnull_rows": {
+      "biological_truth_match": 500,
+      "primary_truth_target": 500,
+      "technical_truth_match": 500,
+      "truth_factor_class": 400
+    }
+  },
+  "status": "READ_ONLY_SUPPLEMENTAL_PREFLIGHT_NO_DIAGNOSTIC_RESULT_COMPUTED",
+  "threshold_frontier_computed": false
+}

@@ -1,0 +1,50 @@
+{
+  "contract_version": "sable-mo-secondary-comparator-selection-contract-v1",
+  "created_at_utc": "2026-08-21T22:01:45+00:00",
+  "fallback_candidate_ids": [
+    "CMP_AUTOENCODIX_VARIX"
+  ],
+  "guardrails": [
+    "Comparator selection is frozen before 05e and before any TARGET representation result.",
+    "Comparator methods cannot alter the primary 05e decision.",
+    "Comparator methods cannot alter final-gate thresholds or PASS/FAIL.",
+    "No comparator scientific result may be generated before 05cmp1 freezes exact implementations.",
+    "Only 05dev0 synthetic fixtures may be used for pre-05e comparator smoke tests.",
+    "Any future comparator replacement requires a new versioned prospective amendment."
+  ],
+  "literature_search_cutoff": "2026-08-21",
+  "literature_search_date": "2026-08-21",
+  "next_comparator_stage": "05cmp1_freeze_secondary_comparator_implementations.py after synthetic installation/smoke tests; 05cmp1 must be frozen before any comparator scientific run.",
+  "primary_secondary_candidate_ids": [
+    "CMP_ICLUSTERBAYES2",
+    "CMP_MOVE"
+  ],
+  "prospective_state": {
+    "05d5_results_used_for_comparator_selection": false,
+    "05d5_state_at_contract": "IN_PROGRESS",
+    "05e_primary_method_frozen": false,
+    "TARGET_outcomes_viewed": false,
+    "TARGET_representation_results_viewed": false,
+    "secondary_comparator_scientific_results_exist": false
+  },
+  "script_version": "05cmp0-freeze-secondary-comparator-selection-contract-v1-no-cli",
+  "selected_candidate_ids": [
+    "CMP_ICLUSTERBAYES2",
+    "CMP_MOVE",
+    "CMP_AUTOENCODIX_VARIX"
+  ],
+  "selection": {
+    "number_required_if_implementable": 2,
+    "predeclared_deep_fallback": "AUTOENCODIX varix",
+    "required_external_classical": "iClusterBayes2",
+    "required_external_deep": "MOVE"
+  },
+  "status": "FROZEN_SECONDARY_COMPARATOR_SELECTION_BEFORE_05E_AND_TARGET_RESULTS",
+  "upstream_hashes": {
+    "05a2_amendment": "06b34c4e763a4dd150807afb4777ef4bcbb17abd7dc075b95baf438c9faad445",
+    "05a2_lock": "052544f9230c961ac8d4e6b6cc8f763653fffc6b531468af1f21fa4c28da0932",
+    "05dev0_contract": "e4387664398891334e8f5c4f7524277dbefa43f7f2cc4a3b07a08477d6ac1df5",
+    "05dev0_lock": "8300b430bdf8ee641443782809816c2691777644a534e9ecbc2669b9f7ed7eb9"
+  },
+  "why_two_methods_only": "The frozen primary benchmark already includes PCA-by-view, BLOCK_PCA, multiple MOFA configurations, ridge GCCA, and neural V0-V5. The secondary branch adds one established Bayesian latent-variable comparator and one published external VAE rather than creating a post-hoc method zoo."
+}

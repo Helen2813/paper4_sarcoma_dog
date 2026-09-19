@@ -1,0 +1,16 @@
+model_id,family,role,views,integrated_representation,eligible_for_nested_selection,eligible_for_final_freeze,complexity_rank,hyperparameter_source,outcome_access,notes
+PCA_RNA,modality_specific_PCA,primary_linear_baseline,RNA,False,False,False,0,fixed,False,Descriptive single-view baseline.
+PCA_METHYLATION,modality_specific_PCA,primary_linear_baseline,METHYLATION,False,False,False,0,fixed,False,Descriptive single-view baseline.
+PCA_CNV,modality_specific_PCA,primary_linear_baseline,CNV,False,False,False,0,fixed,False,Descriptive single-view baseline.
+BLOCK_PCA,block_scaled_PCA,primary_integrated_baseline,RNA;METHYLATION;CNV,True,True,True,1,fixed,False,Each fold-local standardized block is scaled to equal total training variance before concatenation.
+MOFA_K5,MOFA_plus,primary_probabilistic_baseline,RNA;METHYLATION;CNV,True,True,True,2,prespecified_rank_sweep,False,Gaussian views; K=5; native missing-value handling.
+MOFA_K10,MOFA_plus,primary_probabilistic_baseline,RNA;METHYLATION;CNV,True,True,True,3,prespecified_rank_sweep,False,Gaussian views; K=10; native missing-value handling.
+MOFA_K15,MOFA_plus,primary_probabilistic_baseline,RNA;METHYLATION;CNV,True,True,True,4,prespecified_rank_sweep,False,Gaussian views; K=15; native missing-value handling.
+MOFA_K20,MOFA_plus,primary_probabilistic_baseline,RNA;METHYLATION;CNV,True,True,True,5,prespecified_rank_sweep,False,Gaussian views; K=20; native missing-value handling.
+RIDGE_GCCA,ridge_generalized_CCA,secondary_regularized_baseline,RNA;METHYLATION;CNV,True,False,False,5,inner_cv,False,Exploratory regularized baseline. Ordinary unregularized CCA is forbidden because p greatly exceeds n.
+V0_BALANCED_AE,SABLE_MO_ablation,primary_nonlinear_ablation,RNA;METHYLATION;CNV,True,True,True,6,simulation_selected,False,Block-balanced reconstruction only.
+V1_SHARED_PRIVATE_AE,SABLE_MO_ablation,primary_nonlinear_ablation,RNA;METHYLATION;CNV,True,True,True,7,simulation_selected,False,V0 plus shared/private decomposition.
+V2_CONTRASTIVE_SPAE,SABLE_MO_ablation,primary_nonlinear_ablation,RNA;METHYLATION;CNV,True,True,True,8,simulation_selected,False,V1 plus paired cross-view contrastive alignment.
+V3_DROPOUT_SPAE,SABLE_MO_ablation,primary_nonlinear_ablation,RNA;METHYLATION;CNV,True,True,True,9,simulation_selected,False,V2 plus modality dropout and missing-view reconstruction.
+V4_SABLE_MO,SABLE_MO,proposed_primary_method,RNA;METHYLATION;CNV,True,True,True,10,simulation_selected,False,V3 plus resampling-based factor alignment and stability gate. Proposed method is not guaranteed to win the benchmark.
+V5_SABLE_VAE,SABLE_MO_variational_extension,secondary_exploratory,RNA;METHYLATION;CNV,True,False,False,11,simulation_selected,False,Variational extension. Exploratory because n=78 adds substantial posterior and optimization uncertainty.

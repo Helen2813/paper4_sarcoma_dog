@@ -1,0 +1,42 @@
+{
+  "status": "05Y8_05Y6_BYTECODE_PROVENANCE_ARCHIVED",
+  "script_version": "05y8-archive-05y6-bytecode-provenance-v1-no-cli",
+  "created_at_utc": "2026-09-19T19:01:46.083233+00:00",
+  "archive_script": {
+    "path": "scripts/05y8_archive_05y6_bytecode_provenance_v1.py",
+    "sha256": "b6d3964ef6184d629cfa35f10a5ec0fe7fdfa504289aaa0bd428028ea26de8e7",
+    "size_bytes": 9082
+  },
+  "frozen_05y6_pyc": {
+    "path": "scripts/__pycache__/05y6_aggregate_prospective_q10_validation.cpython-310.pyc",
+    "sha256": "bad3ee4833918b578c76daa013ee8e92de72f945c0f2b976db7dc75873ce39e8",
+    "size_bytes": 18381
+  },
+  "expected_source_exists_at_archive_time": false,
+  "recovered_source_if_present": null,
+  "scientific_endpoint_recomputation": false,
+  "frozen_05y6_execution": false,
+  "generated_files": {
+    "method_contract/05y8/05y6_pyc_header.json": {
+      "path": "method_contract/05y8/05y6_pyc_header.json",
+      "sha256": "554dae3570ae000cade519010b408a1055d1dcb8833d6911fd122898335acb23",
+      "size_bytes": 1059
+    },
+    "method_contract/05y8/05y6_disassembly_readonly.txt": {
+      "path": "method_contract/05y8/05y6_disassembly_readonly.txt",
+      "sha256": "4afdb47432c9430a8e32a7cabc8145416419f7940a7c483a8d38c0b610fec519",
+      "size_bytes": 130813
+    },
+    "method_contract/05y8/05y6_code_object_inventory.json": {
+      "path": "method_contract/05y8/05y6_code_object_inventory.json",
+      "sha256": "d6913bf6b9a2b22758f6d7054ca996efc53f93f204def39d2e16e0df551896a9",
+      "size_bytes": 20386
+    },
+    "method_contract/05y8/05y8_README.txt": {
+      "path": "method_contract/05y8/05y8_README.txt",
+      "sha256": "a7cde206cd763966932a5ea015a0aec247a0a4ddda344033741ea01252aea2ed",
+      "size_bytes": 686
+    }
+  },
+  "interpretation": "Documents the exact pre-existing bytecode and its CPython header/code-object structure. Does not replace the missing original .py source and does not claim exact source reconstruction."
+}

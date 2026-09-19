@@ -1,0 +1,26 @@
+{
+  "05d4_performance_metrics_used": false,
+  "05d5_stability_metrics_used": false,
+  "TARGET_or_outcomes_used": false,
+  "bridge_version": "paper5-final-gate-fixed-epoch-bridge-v1",
+  "created_at_utc": "2026-08-22T18:24:35+00:00",
+  "dataset_specific_final_gate_epoch": false,
+  "final_gate_fixed_epoch": 248,
+  "final_gate_results_used": false,
+  "method_id": "V4_SABLE_MO",
+  "profile_id": "ARCH_COMPACT__REG_WEAK",
+  "rule": "Arithmetic mean across the 360 frozen 05d5 selected_epoch_mean_05d4 diagnostics (equivalent to all 3,600 confirmatory V4 fold/seed selected epochs), then nearest integer half-up via floor(mean+0.5), bounded to the frozen profile maximum.",
+  "source_05d5_rounded_epoch_mean": 248.46944444444443,
+  "source_confirmatory_datasets": 360,
+  "source_fold_seed_selected_epoch_opportunities": 3600,
+  "source_registry": {
+    "path": "paper5/method_contract/05d5/confirmatory_stability_epoch_registry.csv",
+    "sha256": "989ad4f8b7d0a21b5a4e1ef39e74c7d6f41de9c49139e5a9f7b8df2b4ddfbf44",
+    "size_bytes": 100776
+  },
+  "source_selected_epoch_mean_grand_mean": 248.4363888888889,
+  "source_selected_epoch_mean_max": 400.0,
+  "source_selected_epoch_mean_min": 71.9,
+  "status": "FROZEN_BEFORE_FIRST_FINAL_GATE_FIT",
+  "threshold_retuning_performed": false
+}

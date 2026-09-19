@@ -1,0 +1,35 @@
+{
+  "D01_D02_D03_evaluated": false,
+  "completed_datasets": 3100,
+  "completion_fraction": 1.0,
+  "contract_version": "paper5-05f2-full-final-gate-streaming-run-v1",
+  "current_runtime_mean_seconds_per_new_dataset": 617.6767322932353,
+  "disk_preflight": {
+    "mean_pilot_shard_size_bytes": 911711.0,
+    "observed_free_bytes": 21821345792,
+    "pass": true,
+    "projected_remaining_shard_bytes": 309981740,
+    "remaining_datasets": 340,
+    "required_free_bytes_with_buffer": 1492217173
+  },
+  "execution_choice_hash": "c57cb6038e8b053a499a1fe67f2aba716a1318a3483d029d360b47bea5880a83",
+  "final_gate_PASS_FAIL_evaluated": false,
+  "numerical_implementation_hash": "e16deabe0cb733bf4d6a2dbf8b0a977eb7d5a959d7a6331a69d59dda16144b1a",
+  "optimization_runs_represented": 313100,
+  "progress_manifest": {
+    "path": "paper5/method_contract/05f2/full_run_progress_manifest.csv",
+    "sha256": "24a5d1e5c0b340254c12ff53dc1cd9209813e1bc98f4dee02c581e59706c2e6e",
+    "size_bytes": 1119616
+  },
+  "remaining_datasets": 0,
+  "rough_remaining_eta_days": 0.0,
+  "rough_remaining_eta_seconds": 0.0,
+  "scientific_contract_hash": "bd5830f967d58c9e5afa70d183df1d22b581877b27688d52c50de60edc165fc2",
+  "scientific_metrics_aggregated": false,
+  "scientific_metrics_printed": false,
+  "script_version": "05f2-run-full-final-gate-gpu-resumable-v1-sequential-05f1-path-no-cli",
+  "session_elapsed_seconds": 210110.3727802,
+  "session_generated_datasets": 340,
+  "status": "COMPLETE_ALL_3100_SHARDS_SEALED_BEFORE_SCIENTIFIC_AGGREGATION",
+  "updated_at_utc": "2026-09-12T08:01:40+00:00"
+}

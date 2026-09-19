@@ -1,0 +1,46 @@
+{
+  "eligibility_criteria": [
+    "peer-reviewed published method or framework",
+    "unsupervised for the benchmarked representation-learning step",
+    "does not require survival, metastasis, treatment response, or class labels",
+    "produces a patient/sample-level joint latent representation",
+    "applicable to bulk multi-omics with continuous modalities",
+    "public implementation or official package available",
+    "reasonable path to RNA + methylation + CNV-like inputs",
+    "can be evaluated without altering the frozen primary SABLE-MO selection hierarchy"
+  ],
+  "exclusion_rules": [
+    "supervised method requiring outcome or class labels",
+    "single-cell-specific method without a justified bulk-patient formulation",
+    "method already present in the frozen primary baseline registry",
+    "implementation so obsolete that a maintained eligible alternative is available",
+    "bespoke context that requires additional biological/clinical covariates not permitted in the outcome-blind benchmark"
+  ],
+  "manifest_version": "paper5-secondary-comparator-literature-search-v1",
+  "predeclared_fallback": [
+    "AUTOENCODIX varix for MOVE only"
+  ],
+  "preference_criteria": [
+    "published cancer or biomedical multi-omics use",
+    "implementation currently installable or actively documented",
+    "modern maintained Python/PyTorch or official Bioconductor implementation",
+    "small-n evidence or at least no hard large-n requirement",
+    "methodological diversity relative to existing MOFA/GCCA/PCA primary baselines"
+  ],
+  "purpose": "Select a small, defensible secondary comparator set before 05e and before any TARGET representation result.",
+  "search_cutoff": "2026-08-21",
+  "search_date": "2026-08-21",
+  "search_terms_recorded": [
+    "iClusterBayes multi-omics latent variable",
+    "multi-omics variational autoencoder public code",
+    "MOVE multi-omics VAE",
+    "AUTOENCODIX variational autoencoder multi-omics",
+    "maui multi-omics autoencoder",
+    "multi-omics deconfounding VAE cancer",
+    "MOSA unsupervised multi-omics VAE cancer"
+  ],
+  "selected": [
+    "iClusterBayes2",
+    "MOVE"
+  ]
+}

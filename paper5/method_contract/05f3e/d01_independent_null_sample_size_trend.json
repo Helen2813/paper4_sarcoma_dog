@@ -1,0 +1,22 @@
+{
+  "ci95_high": null,
+  "ci95_high_overflowed": true,
+  "ci95_low": 0.0,
+  "ci95_low_underflowed_to_zero": true,
+  "converged": false,
+  "event_count": 0,
+  "formal_gate_consequence": "NONE_DESCRIPTIVE_ONLY",
+  "interpretation": "odds ratio per +25 samples",
+  "iterations": 100,
+  "log_odds_ci95_high": 93378.2131722274,
+  "log_odds_ci95_low": -93378.2131722274,
+  "log_odds_coefficient_per_25": 3.7054265406076664e-15,
+  "model": "unpenalized_logistic_regression",
+  "n_datasets": 800,
+  "numeric_recovery_note": "Post-unblinding reporting-only recovery: an exponentiated descriptive logistic quantity that exceeds float64 range is serialized as null while its finite log-scale value is retained. Formal gate rules and decisions are unchanged.",
+  "odds_ratio_overflowed": false,
+  "odds_ratio_per_25": 1.0000000000000038,
+  "outcome": "dataset_level_false_biological_acceptance_event",
+  "predictor": "n_samples / 25",
+  "standard_error": 47642.8209440494
+}

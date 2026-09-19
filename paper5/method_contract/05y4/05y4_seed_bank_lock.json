@@ -1,0 +1,34 @@
+{
+  "dataset_registry": {
+    "path": "paper5/method_contract/05y4/fresh_q10_validation_dataset_registry.csv",
+    "sha256": "95aad350916d71252239c7649655b6377d33a9d984e626662901b6070a763fba",
+    "size_bytes": 67937
+  },
+  "fresh_arrays_materialized": false,
+  "manifest": {
+    "path": "paper5/method_contract/05y4/fresh_q10_validation_bank_manifest.json",
+    "sha256": "4ea74c8e1b0468eb232a31f819f0899854ecd93261e6f495e46c85e3593dc6be",
+    "size_bytes": 1942
+  },
+  "overlap_audit": {
+    "path": "paper5/method_contract/05y4/fresh_seed_overlap_audit.json",
+    "sha256": "46d984eb12e9b1c5b72d3dd6f48d9f60f277fddfc3391b6ef56da292e2644698",
+    "size_bytes": 924
+  },
+  "readme": {
+    "path": "paper5/method_contract/05y4/05y4_README.txt",
+    "sha256": "4b37a6e828de69f7c704f3f99a95b90842e68c15f7d87be49b08b33a1ffecbb9",
+    "size_bytes": 659
+  },
+  "rewrite_policy": "05y4 seed bank is immutable before 05y5. Any changed seed, dataset count, scenario membership, resample count, or candidate threshold requires a new prospective branch.",
+  "scientific_result_computed": false,
+  "script_path": "paper5/scripts/05y4_freeze_fresh_q10_validation_seed_bank.py",
+  "script_sha256": "d3d2e64607b169beeb9489fd96f30717ec60302eee299d5b76d153cf5a716d5f",
+  "script_version": "05y4-freeze-fresh-q10-validation-seed-bank-v1-no-cli",
+  "stability_registry": {
+    "path": "paper5/method_contract/05y4/fresh_q10_validation_stability_seed_registry.csv",
+    "sha256": "2ece0d23f1a07acfa30debbdc837ce206f93d3617e07992f5c949684012c70e1",
+    "size_bytes": 5873749
+  },
+  "status": "FROZEN_FRESH_Q10_VALIDATION_SEED_BANK_BEFORE_MODEL_EVALUATION"
+}

@@ -1,0 +1,109 @@
+{
+  "05f3e_modified": false,
+  "05f4b_lock_present_and_verified": true,
+  "ablation_frequency_computed": false,
+  "created_at_utc": "2026-09-15T23:07:07+00:00",
+  "execution_decision": "DO_NOT_COMPUTE_ABLATION_YET. Inspect the source-context export and candidate field inventory first. If the frozen source establishes an unambiguous stability-only rule from fields present in the sealed payload, define that rule in a separately versioned 05x1 exploratory contract before opening its result. If reconstruction requires refitting, defer the ablation and proceed to the frozen TARGET branch.",
+  "formal_gate_changed": false,
+  "high_value_candidate_presence": {
+    "factor_variance": {
+      "present": false,
+      "present_in_all_factor_rows": false
+    },
+    "inclusion_frequency": {
+      "present": true,
+      "present_in_all_factor_rows": true
+    },
+    "median_aligned_correlation": {
+      "present": true,
+      "present_in_all_factor_rows": true
+    },
+    "n_supported_modalities": {
+      "present": true,
+      "present_in_all_factor_rows": true
+    },
+    "passes_stability_gate": {
+      "present": true,
+      "present_in_all_factor_rows": true
+    },
+    "predicted_view_support": {
+      "present": true,
+      "present_in_all_factor_rows": true
+    },
+    "q10_aligned_correlation": {
+      "present": true,
+      "present_in_all_factor_rows": true
+    },
+    "supported_modalities": {
+      "present": true,
+      "present_in_all_factor_rows": true
+    },
+    "view_support_exact": {
+      "present": true,
+      "present_in_all_factor_rows": true
+    }
+  },
+  "no_refit_ablation_plausible_from_schema": true,
+  "purpose": "Determine whether a post-unblinding exploratory SABLE-MO retention-rule ablation can be reconstructed from already-sealed 05f2 factor payloads without any model refit or GPU computation.",
+  "scan_summary": {
+    "n_dataset_fields": 57,
+    "n_datasets": 3100,
+    "n_factor_fields": 66,
+    "n_factor_rows": 15500
+  },
+  "scientific_result_computed": false,
+  "script_version": "05x0-retention-ablation-readonly-preflight-v1-no-cli",
+  "source_context_records": [
+    {
+      "n_context_windows": 17,
+      "n_matching_lines": 47,
+      "script": "paper5/scripts/05a_freeze_ai_method_contract.py",
+      "sha256": "0054799d1d05d74d6718a1cd317e13332ad80c9d35a785770a17898731f04024"
+    },
+    {
+      "n_context_windows": 40,
+      "n_matching_lines": 186,
+      "script": "paper5/scripts/05d5_evaluate_sable_mo_stability_gpu.py",
+      "sha256": "d3c685393fcd4111fb3fb6b3d138d597b3ec3bc3cb55713266ba95db1cd06dfd"
+    },
+    {
+      "n_context_windows": 22,
+      "n_matching_lines": 54,
+      "script": "paper5/scripts/05e_compare_ablate_and_freeze_method.py",
+      "sha256": "db2415ec671f716f6cd24dfec1a8fbdca843fc795b1b319eb4696249d4db5141"
+    },
+    {
+      "n_context_windows": 9,
+      "n_matching_lines": 10,
+      "script": "paper5/scripts/05f2_run_full_final_gate_gpu_resumable.py",
+      "sha256": "8052e6278abef99585e3a90d64480ea7c9a6dc04eb53598bf841f7c9c2431abd"
+    },
+    {
+      "n_context_windows": 15,
+      "n_matching_lines": 26,
+      "script": "paper5/scripts/05f3e_aggregate_final_gate_results_cpu_postunblinding_schema_recovery_v3.py",
+      "sha256": "d97d12b54927d8e378e22ef3a229c2e5622398d1a7c7c9e1180631bc85cf7874"
+    }
+  ],
+  "stability_component_like_fields": [
+    "best_biological_absolute_correlation",
+    "best_private_absolute_correlation",
+    "best_technical_absolute_correlation",
+    "biological_assigned_absolute_correlation",
+    "inclusion_frequency",
+    "median_aligned_correlation",
+    "passes_stability_gate",
+    "q10_aligned_correlation",
+    "technical_assigned_absolute_correlation"
+  ],
+  "status": "READ_ONLY_PREFLIGHT_NO_EXPLORATORY_RESULT_COMPUTED",
+  "support_component_like_fields": [
+    "n_supported_modalities",
+    "predicted_view_support",
+    "supported_modalities",
+    "truth_view_support",
+    "view_support_exact",
+    "view_support_jaccard"
+  ],
+  "threshold_changed": false
+}

@@ -1,0 +1,11 @@
+﻿{
+    "status":  "05Y6_ATTEMPT2_STOPPED_BY_OUTPUT_DIRECTORY_GUARD",
+    "recorded_at":  "2026-09-19T11:53:00.2421092-04:00",
+    "stage":  "BEFORE_SCIENTIFIC_AGGREGATION",
+    "error":  "RuntimeError: 05y6 output directory already exists and is non-empty",
+    "cause":  "Pre-unblinding recovery/audit files had been stored in the reserved 05y6 output directory.",
+    "remediation":  "Moved those audit files unchanged to paper5/method_contract/05y6_preunblinding_audit. Reserved paper5/method_contract/05y6 is left absent for the frozen aggregator to create.",
+    "scientific_thresholds_changed":  false,
+    "scientific_endpoints_changed":  false,
+    "frozen_bytecode_changed":  false
+}

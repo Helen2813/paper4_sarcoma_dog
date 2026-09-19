@@ -1,0 +1,160 @@
+{
+  "comparison_policy": {
+    "MOFA_K20_linear_same_rank_comparator": "none",
+    "model_selection_performed_here": false,
+    "same_rank_BLOCK_PCA": "descriptive paired deltas for K=5,10,15 only"
+  },
+  "contract_version": "paper5-mofa-simulation-baseline-benchmark-v1",
+  "created_at_utc": "2026-08-12T00:04:35.762028+00:00",
+  "exact_05c1_split_reuse": {
+    "path": "paper5\\results\\simulation_benchmark\\05c1_linear_baselines\\linear_simulation_split_registry.csv.gz",
+    "sha256": "c683436960893ce89254ecf8d79bc8ed64930ba44222425858968da753e60279"
+  },
+  "failure_policy": {
+    "G09_false_shared_discovery": "diagnostic_only_for_probabilistic_baseline",
+    "failed_fits_retained": true,
+    "partial_fold_success_not_used_as_primary_dataset_metric": true,
+    "silent_omission_forbidden": true
+  },
+  "fit_seed_registry": {
+    "path": "paper5\\method_contract\\05c2a\\mofa_simulation_fit_seed_registry.csv",
+    "sha256": "19a52d69eecbe0b84b338725dfac3c40c7c9641e7de5ef1deaa615e88c8399ae"
+  },
+  "fold_local_preprocessing": {
+    "centering": "training-fold finite-value feature mean",
+    "complete_simulation_truth_used_for_preprocessing": false,
+    "feature_budget_rule": "Within each training fold, retain eligible features and, only if their count exceeds the frozen primary budget, rank by training-fold pre-standardization variance descending with original feature index as deterministic tie-breaker.",
+    "feature_budgets": {
+      "CNV": 5000,
+      "METHYLATION": 10000,
+      "RNA": 5000
+    },
+    "heldout_data_used_for_preprocessing": false,
+    "imputation": "none; missing values remain NaN for native MOFA Gaussian handling",
+    "maximum_feature_missing_fraction": 0.2,
+    "minimum_finite_training_values": 3,
+    "minimum_prestandardization_variance": 1e-10,
+    "minimum_training_standard_deviation": 1e-08,
+    "mofapy2_internal_centering": false,
+    "mofapy2_internal_group_scaling": false,
+    "mofapy2_internal_view_scaling": false,
+    "post_zscore_variance_ranking_allowed": false,
+    "scaling": "training-fold finite-value sample standard deviation"
+  },
+  "frozen_05c2a": {
+    "path": "paper5\\method_contract\\05c2a\\mofa_out_of_sample_projection_protocol.json",
+    "sha256": "826ee4c64deae4f623889c3388cf2b0f46b4fe0ffa1a2c2e97319beca95f80eb"
+  },
+  "metric_implementation": {
+    "05c1_helper_source": "paper5\\scripts\\05c1_fit_linear_simulation_baselines.py",
+    "05c1_helper_source_sha256": "c2c91b4ad274f78ccc369e6fca765102285cf3d9c8191f3c33f4a450b7426367",
+    "reuse": [
+      "simulation loading",
+      "reconstruction metric",
+      "cross-view retrieval",
+      "subspace recovery",
+      "factor matching",
+      "truth alignment",
+      "effective rank",
+      "support Jaccard"
+    ]
+  },
+  "mofapy2_configuration": {
+    "data_options": {
+      "center_groups": false,
+      "scale_groups": false,
+      "scale_views": false,
+      "use_float32": true
+    },
+    "deterministic_seed_registry": "paper5\\method_contract\\05c2a\\mofa_simulation_fit_seed_registry.csv",
+    "deterministic_seed_registry_sha256": "19a52d69eecbe0b84b338725dfac3c40c7c9641e7de5ef1deaa615e88c8399ae",
+    "factor_dropping_during_training": false,
+    "fixed_rank_model_ids_preserved": true,
+    "likelihoods": {
+      "CNV": "gaussian",
+      "METHYLATION": "gaussian",
+      "RNA": "gaussian"
+    },
+    "model_options": {
+      "ard_factors": false,
+      "ard_weights": true,
+      "spikeslab_factors": false,
+      "spikeslab_weights": true
+    },
+    "mofapy2_version": "0.7.3",
+    "single_group": true,
+    "train_options": {
+      "convergence_mode": "fast",
+      "dropR2": null,
+      "gpu_mode": false,
+      "iter": 1000,
+      "nostop": false,
+      "quiet": true,
+      "weight_views": false
+    }
+  },
+  "out_of_sample_projection": {
+    "all_view_projection": "Use RNA, methylation, and CNV observed entries to infer z_hat.",
+    "frozen_parameter_estimates": "Use fitted posterior means of MOFA weights W and expected Gaussian noise precisions tau from the training fit. No held-out sample may update W, tau, sparsity parameters, ARD parameters, or preprocessing statistics.",
+    "missing_values": "For each held-out sample and view, only finite observed features contribute to A and b.",
+    "missing_view_projection": "Exclude the omitted view from A and b, infer z_hat from the remaining view or views, then reconstruct the omitted standardized view as z_hat @ W_omitted^T.",
+    "name": "fixed-parameter Gaussian posterior mean projection",
+    "native_mofapy2_transform_claimed": false,
+    "per_sample_equations": {
+      "A": "I_K + sum_m W_m,obs^T diag(tau_m,obs) W_m,obs",
+      "b": "sum_m W_m,obs^T diag(tau_m,obs) x_m,obs",
+      "z_hat": "solve(A, b)"
+    },
+    "prior": "z ~ N(0, I_K)",
+    "raw_X_times_W_projection_allowed": false,
+    "reconstruction": "x_hat_m = z_hat @ W_m^T in the fold-local standardized coordinate system",
+    "single_view_projection_for_retrieval": "Infer z_hat independently from one view at a time using the same frozen W/tau. Because all projections share the fitted factor coordinate system, no test-set alignment or refitting is allowed.",
+    "test_sample_refitting": false,
+    "test_sample_variational_updates": false
+  },
+  "prohibited_operations": [
+    "Use of sable_mo_v1 pilot simulations.",
+    "Access to final gate-calibration simulations.",
+    "Changing frozen MOFA ranks or training settings.",
+    "Held-out preprocessing.",
+    "Pre-MOFA imputation.",
+    "Raw X @ W held-out projection.",
+    "Held-out MOFA refitting.",
+    "Outcome, clinical, or biological-label model selection.",
+    "Architecture selection in 05c2b."
+  ],
+  "scientific_state": {
+    "MOFA_simulation_model_fitting_performed_before_protocol_freeze": false,
+    "TARGET_model_fitting_performed": false,
+    "architecture_selected": false,
+    "biological_annotations_loaded": false,
+    "clinical_labels_loaded": false,
+    "final_gate_calibration_data_used": false,
+    "neural_model_fitting_performed": false,
+    "outcomes_loaded": false,
+    "stability_gate_thresholds_retuned": false
+  },
+  "scope": {
+    "architecture_selection_performed_here": false,
+    "full_data_truth_fit_per_dataset_and_rank": true,
+    "heldout_folds_per_dataset": 5,
+    "model_files_saved": false,
+    "n_datasets": 720,
+    "planned_rank_shards": 2880,
+    "planned_total_mofa_fits": 17280,
+    "ranks": [
+      5,
+      10,
+      15,
+      20
+    ]
+  },
+  "script_version": "05c2b-fit-mofa-simulation-baselines-v1-no-cli",
+  "truth_evaluation": {
+    "factor_truth_match_absolute_correlation": 0.5,
+    "integrated_truth_anchor": "RNA row_source, identical to 05c1 BLOCK_PCA",
+    "private_metric_semantics": "view-specific private-signal capture from single-view posterior projections; MOFA is not described as having an explicit private block",
+    "rotationally_ambiguous_factor_metrics_primary": false,
+    "subspace_metrics_retained_under_rotational_ambiguity": true
+  }
+}

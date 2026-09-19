@@ -1,0 +1,44 @@
+{
+  "05x1b_contract": {
+    "path": "paper5/method_contract/05x1b/stability_only_retention_ablation_contract.json",
+    "sha256": "851cca70b5e7554b7e671bf2d3e506ed4d3a33637ebc60be651ec9756410bda1",
+    "size_bytes": 6281
+  },
+  "05x1b_lock": {
+    "path": "paper5/method_contract/05x1b/05x1b_contract_lock.json",
+    "sha256": "1fa066b11097fa4fc6a2374c0ca33a5e3b7b3e14664688bde02c3cfee7af93d2",
+    "size_bytes": 1114
+  },
+  "GPU_computation": false,
+  "created_at_utc": "2026-09-15T23:30:19+00:00",
+  "formal_final_gate_consequence": "NONE",
+  "generated_files": {
+    "paper5/method_contract/05x2b/05x2b_README.txt": {
+      "path": "paper5/method_contract/05x2b/05x2b_README.txt",
+      "sha256": "51bbe107c30e2fea1c512f6fb5f689abc4e883697bf41ba63e68a41341f1fb5f",
+      "size_bytes": 976
+    },
+    "paper5/method_contract/05x2b/retention_ablation_paired_transitions.csv": {
+      "path": "paper5/method_contract/05x2b/retention_ablation_paired_transitions.csv",
+      "sha256": "96e1971524a83bf372b758ec02a9de6eb07f7d9c4f5949a60bcff48414a6bed2",
+      "size_bytes": 410
+    },
+    "paper5/method_contract/05x2b/retention_ablation_result.json": {
+      "path": "paper5/method_contract/05x2b/retention_ablation_result.json",
+      "sha256": "dc91adc2a2bdb6b063202d16e5b8005b9f7f39286c644b732888f415c52b4661",
+      "size_bytes": 5540
+    },
+    "paper5/method_contract/05x2b/retention_ablation_summary.csv": {
+      "path": "paper5/method_contract/05x2b/retention_ablation_summary.csv",
+      "sha256": "fb58c7ac2d699f39561eaf7fb4d1dda949aed517351de248c2510126712bd5f2",
+      "size_bytes": 1333
+    }
+  },
+  "model_refit": false,
+  "rewrite_policy": "05x2b results are immutable. Additional exploratory retention analyses require a new versioned stage.",
+  "scientific_role": "POSTUNBLINDING_EXPLORATORY_ABLATION",
+  "script_path": "paper5/scripts/05x2b_run_stability_only_retention_ablation_fast_cpu_v2.py",
+  "script_sha256": "eb2054e4b4776028f75d8f446e2d7b74259102cc966d8aacfcbf5101d6c554b8",
+  "script_version": "05x2b-run-stability-only-retention-ablation-fast-cpu-v2-no-cli",
+  "status": "POSTUNBLINDING_EXPLORATORY_RETENTION_ABLATION_COMPLETE"
+}

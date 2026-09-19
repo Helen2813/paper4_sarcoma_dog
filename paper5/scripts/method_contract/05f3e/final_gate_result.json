@@ -1,0 +1,318 @@
+{
+  "D01_independent_null_sample_size_trend": {
+    "ci95_high": null,
+    "ci95_high_overflowed": true,
+    "ci95_low": 0.0,
+    "ci95_low_underflowed_to_zero": true,
+    "converged": false,
+    "event_count": 0,
+    "formal_gate_consequence": "NONE_DESCRIPTIVE_ONLY",
+    "interpretation": "odds ratio per +25 samples",
+    "iterations": 100,
+    "log_odds_ci95_high": 93378.2131722274,
+    "log_odds_ci95_low": -93378.2131722274,
+    "log_odds_coefficient_per_25": 3.7054265406076664e-15,
+    "model": "unpenalized_logistic_regression",
+    "n_datasets": 800,
+    "numeric_recovery_note": "Post-unblinding reporting-only recovery: an exponentiated descriptive logistic quantity that exceeds float64 range is serialized as null while its finite log-scale value is retained. Formal gate rules and decisions are unchanged.",
+    "odds_ratio_overflowed": false,
+    "odds_ratio_per_25": 1.0000000000000038,
+    "outcome": "dataset_level_false_biological_acceptance_event",
+    "predictor": "n_samples / 25",
+    "standard_error": 47642.8209440494
+  },
+  "bootstrap_implementation": {
+    "05f2_had_started_before_05f2b_freeze": true,
+    "fixed_in_preexisting_05f3_and_relocked_by_05f2b_before_unblinding": true,
+    "formal_D01_decision_uses_bootstrap": false,
+    "formal_D02_D03_decisions_use_bootstrap": false,
+    "interval": "2.5th and 97.5th percentile of bootstrap means",
+    "master_seed": 20260822,
+    "replicates": 10000,
+    "role": "continuous descriptive/narrow-gate confidence intervals only"
+  },
+  "contract_version": "paper5-05f3b-final-gate-scientific-aggregation-v1",
+  "created_at_utc": "2026-09-15T21:49:02+00:00",
+  "failure_policy_route": {
+    "D01_PASS": true,
+    "D02_PASS": true,
+    "D03_PASS": true,
+    "core_status": "CORE_PASS",
+    "frozen_core_outcome": {
+      "condition": "D01 PASS and D02 PASS and D03 PASS",
+      "downstream": "Proceed with the planned outcome-blind TARGET representation benchmark and subsequent frozen stability/biology pipeline, subject to all other frozen gates.",
+      "interpretation": "The frozen gate meets the preregistered core specificity and standard-operating-point sensitivity criteria in the final simulation bank."
+    },
+    "frozen_narrow_gate_failure_policy": {
+      "D04_ROTATIONAL_SUBSPACE": "If failed, do not claim reliable recovery of rotationally ambiguous subspaces; individual-factor claims remain forbidden as already specified.",
+      "D05_VIEW_SUPPORT": "If failed, view-support labels remain exploratory and cannot support primary shared-versus-partial claims.",
+      "D06_BATCH_SPECIFICITY": "If failed, stable factors cannot be assumed biological without external recurrence; technical-confound limitations become a primary conclusion rather than a hidden caveat.",
+      "D07_NO_POSTHOC_RETUNING": "Any alternative threshold explored after results is explicitly exploratory and cannot replace the primary frozen gate."
+    },
+    "narrow_gate_status": {
+      "D04_ROTATIONAL_SUBSPACE": true,
+      "D05_VIEW_SUPPORT": false,
+      "D06_BATCH_SPECIFICITY": true,
+      "D07_NO_POSTHOC_RETUNING": true
+    },
+    "outcome_boundary": "Outcomes are not opened to rescue a failed core representation/gate validation. Outcome analysis, if reached, is a minimal downstream validation of a representation already frozen without outcomes.",
+    "stress_subgroup_rule": "A favorable pooled D01 result may not suppress poor prespecified subgroup behavior. Per-n and null-mechanism results are mandatory descriptive reporting, but they do not create new post-hoc PASS/FAIL thresholds."
+  },
+  "formal_decisions": [
+    {
+      "PASS": true,
+      "ci95_high": 0.08751464815128336,
+      "ci95_low": 0.05577636414629404,
+      "decision_id": "D01_NULL_SPECIFICITY",
+      "decision_quantity": "upper endpoint of two-sided 95% Wilson CI",
+      "denominator": 1000.0,
+      "independence_note": "primary core specificity decision",
+      "metric": "gate_familywise_false_acceptance",
+      "numerator": 70.0,
+      "pass_rule": "ci95_high <= 0.10",
+      "point_estimate": 0.07,
+      "threshold": 0.1
+    },
+    {
+      "PASS": true,
+      "ci95_high": 0.9490494815977232,
+      "ci95_low": 0.8978175067464532,
+      "decision_id": "D02_STANDARD_SENSITIVITY",
+      "decision_quantity": "point estimate",
+      "denominator": 400.0,
+      "independence_note": "primary core sensitivity decision",
+      "metric": "gate_true_positive_rate",
+      "numerator": 371.0,
+      "pass_rule": "point_estimate >= 0.80",
+      "point_estimate": 0.9275,
+      "threshold": 0.8
+    },
+    {
+      "PASS": true,
+      "ci95_high": 0.10218249325354678,
+      "ci95_low": 0.05095051840227682,
+      "decision_id": "D03_STANDARD_FNR",
+      "decision_quantity": "point estimate",
+      "denominator": 400.0,
+      "independence_note": "algebraic mirror of D02 on identical denominator; not independent evidence",
+      "metric": "gate_false_negative_rate",
+      "numerator": 29.0,
+      "pass_rule": "point_estimate <= 0.20",
+      "point_estimate": 0.0725,
+      "threshold": 0.2
+    },
+    {
+      "PASS": true,
+      "ci95_high": 0.8387813654128206,
+      "ci95_low": 0.8187381615727594,
+      "decision_id": "D04_ROTATIONAL_SUBSPACE",
+      "decision_quantity": "mean dataset-level mean canonical correlation",
+      "denominator": 100.0,
+      "independence_note": "narrow rotational-subspace gate",
+      "metric": "subspace_mean_principal_angle_cosine",
+      "numerator": null,
+      "pass_rule": "point_estimate >= 0.80",
+      "point_estimate": 0.8289858739848132,
+      "threshold": 0.8
+    },
+    {
+      "PASS": false,
+      "ci95_high": 0.7522414508939805,
+      "ci95_low": 0.5869018408594733,
+      "decision_id": "D05_VIEW_SUPPORT",
+      "decision_quantity": "point estimate",
+      "denominator": 120.0,
+      "independence_note": "narrow mixed-support gate",
+      "metric": "view_support_classification_accuracy",
+      "numerator": 81.0,
+      "pass_rule": "point_estimate >= 0.80",
+      "point_estimate": 0.675,
+      "threshold": 0.8
+    },
+    {
+      "PASS": true,
+      "ci95_high": 0.009512294334296508,
+      "ci95_low": 8.673617379884035e-19,
+      "decision_id": "D06_BATCH_SPECIFICITY",
+      "decision_quantity": "point estimate",
+      "denominator": 400.0,
+      "independence_note": "narrow technical-confound specificity gate",
+      "metric": "batch_false_biological_acceptance_rate",
+      "numerator": 0.0,
+      "pass_rule": "point_estimate <= 0.10",
+      "point_estimate": 0.0,
+      "threshold": 0.1
+    },
+    {
+      "PASS": true,
+      "ci95_high": null,
+      "ci95_low": null,
+      "decision_id": "D07_NO_POSTHOC_RETUNING",
+      "decision_quantity": "process audit",
+      "denominator": null,
+      "independence_note": "process gate, not a performance metric",
+      "metric": "process_integrity",
+      "numerator": null,
+      "pass_rule": "all thresholds/selection rules unchanged from frozen 05a2/05f2a",
+      "point_estimate": null,
+      "threshold": null
+    }
+  ],
+  "mandatory_D01_reporting": [
+    {
+      "PASS": true,
+      "ci95_high": 0.08751464815128336,
+      "ci95_low": 0.05577636414629404,
+      "ci_method": "two-sided 95% Wilson score interval; z=1.959963984540054; no continuity correction",
+      "decision_rule": "PASS iff upper endpoint of two-sided 95% Wilson CI <= 0.10",
+      "denominator": 1000,
+      "formal_gate_consequence": "D01",
+      "metric": "gate_familywise_false_acceptance",
+      "numerator": 70,
+      "point_estimate": 0.07,
+      "report_id": "R01_D01_PRIMARY_POOLED",
+      "role": "primary_decision"
+    },
+    {
+      "PASS": null,
+      "ci95_high": 0.004778876205676033,
+      "ci95_low": 4.336808689942018e-19,
+      "ci_method": "two-sided 95% Wilson score interval; z=1.959963984540054; no continuity correction",
+      "decision_rule": "",
+      "denominator": 800,
+      "formal_gate_consequence": "NONE",
+      "metric": "gate_familywise_false_acceptance",
+      "numerator": 0,
+      "point_estimate": 0.0,
+      "report_id": "R02_D01_INDEPENDENT_NULL_POOLED",
+      "role": "mandatory_secondary"
+    },
+    {
+      "PASS": null,
+      "ci95_high": 0.4183653566395992,
+      "ci95_low": 0.28728824127358077,
+      "ci_method": "two-sided 95% Wilson score interval; z=1.959963984540054; no continuity correction",
+      "decision_rule": "",
+      "denominator": 200,
+      "formal_gate_consequence": "NONE",
+      "metric": "gate_familywise_false_acceptance",
+      "numerator": 70,
+      "point_estimate": 0.35,
+      "report_id": "R03_D01_CORRELATED_PRIVATE",
+      "role": "mandatory_secondary"
+    },
+    {
+      "PASS": null,
+      "ci95_high": 0.018845326377266575,
+      "ci95_low": 1.734723475976807e-18,
+      "ci_method": "two-sided 95% Wilson score interval; z=1.959963984540054; no continuity correction",
+      "decision_rule": "",
+      "denominator": 200,
+      "formal_gate_consequence": "NONE",
+      "metric": "gate_familywise_false_acceptance",
+      "numerator": 0,
+      "point_estimate": 0.0,
+      "report_id": "R_D01_INDEPENDENT_N50",
+      "role": "mandatory_descriptive"
+    },
+    {
+      "PASS": null,
+      "ci95_high": 0.018845326377266575,
+      "ci95_low": 1.734723475976807e-18,
+      "ci_method": "two-sided 95% Wilson score interval; z=1.959963984540054; no continuity correction",
+      "decision_rule": "",
+      "denominator": 200,
+      "formal_gate_consequence": "NONE",
+      "metric": "gate_familywise_false_acceptance",
+      "numerator": 0,
+      "point_estimate": 0.0,
+      "report_id": "R_D01_INDEPENDENT_N62",
+      "role": "mandatory_descriptive"
+    },
+    {
+      "PASS": null,
+      "ci95_high": 0.018845326377266575,
+      "ci95_low": 1.734723475976807e-18,
+      "ci_method": "two-sided 95% Wilson score interval; z=1.959963984540054; no continuity correction",
+      "decision_rule": "",
+      "denominator": 200,
+      "formal_gate_consequence": "NONE",
+      "metric": "gate_familywise_false_acceptance",
+      "numerator": 0,
+      "point_estimate": 0.0,
+      "report_id": "R_D01_INDEPENDENT_N75",
+      "role": "mandatory_descriptive"
+    },
+    {
+      "PASS": null,
+      "ci95_high": 0.018845326377266575,
+      "ci95_low": 1.734723475976807e-18,
+      "ci_method": "two-sided 95% Wilson score interval; z=1.959963984540054; no continuity correction",
+      "decision_rule": "",
+      "denominator": 200,
+      "formal_gate_consequence": "NONE",
+      "metric": "gate_familywise_false_acceptance",
+      "numerator": 0,
+      "point_estimate": 0.0,
+      "report_id": "R_D01_INDEPENDENT_N100",
+      "role": "mandatory_descriptive"
+    }
+  ],
+  "scientific_integrity": {
+    "D01_Wilson_rule_changed": false,
+    "D02_D03_STANDARD_selector_changed": false,
+    "TARGET_used_to_rescue_gate": false,
+    "aggregation_lock_timing": "post-05f2-start but before scientific unblinding",
+    "numeric_recovery_scope": "Overflow-safe serialization of the descriptive D01 sample-size logistic Wald interval only; no model, data, threshold, selector, denominator, Wilson decision rule, D02/D03 rule, or scenario change.",
+    "original_frozen_05f3b_sha256": "FCF1A2E1FEC76B0EA15EF93BE813851153D763A437C95D46CE1C41D148B9E435",
+    "outcomes_used_to_rescue_gate": false,
+    "postunblinding_numeric_recovery": true,
+    "postunblinding_schema_recovery": true,
+    "preexisting_05f3_source_sha256": "443b553e2e9e95a9f4d3ac7de5fe7b4f33479d6552264555e3edc276b077d5c2",
+    "schema_recovery_scope": "Propagate the already-stored dataset-level private_truth_audit_available flag to factor rows from the same sealed dataset so that the pre-specified descriptive private-to-shared leakage metric can consume its intended audit-eligibility field. No factor truth value, gate rule, threshold, selector, denominator, or model is changed.",
+    "scientific_core_ast_equivalent_to_preexisting_05f3": true,
+    "selectors_changed_after_results": false,
+    "thresholds_retuned_after_results": false
+  },
+  "scope": {
+    "method": "V4_SABLE_MO",
+    "n_datasets": 3100,
+    "n_scenarios": 24,
+    "profile": "ARCH_COMPACT__REG_WEAK",
+    "stability_resamples_per_dataset": 100
+  },
+  "script_version": "05f3e-aggregate-final-gate-results-cpu-v3-postunblinding-schema-recovery-no-cli",
+  "source_records": {
+    "05a2_amendment": {
+      "path": "paper5/method_contract/05a2/inference_final_gate_implementation_amendment.json",
+      "sha256": "06b34c4e763a4dd150807afb4777ef4bcbb17abd7dc075b95baf438c9faad445",
+      "size_bytes": 6523
+    },
+    "05a2_failure_policy": {
+      "path": "paper5/method_contract/05a2/final_gate_failure_consequence_policy.json",
+      "sha256": "192692eda095f4ff0426c9029f8ce7d2ad45f5a2faee55a4b2e3352b08ff0f82",
+      "size_bytes": 3486
+    },
+    "05a2_reporting_registry": {
+      "path": "paper5/method_contract/05a2/final_gate_reporting_registry.csv",
+      "sha256": "fc09105101a36633cd5e0a33481aa9cea4814fc5abe940c85313ca45de51cf99",
+      "size_bytes": 3116
+    },
+    "05f2_completion_lock": {
+      "path": "paper5/method_contract/05f2/full_run_completion_lock.json",
+      "sha256": "b20146cf70bfd6008cd63c3aabf9c294ea4dba4df8af33427eac4e184764cc3c",
+      "size_bytes": 1890
+    },
+    "05f2b_aggregation_plan_lock": {
+      "path": "paper5/method_contract/05f2b/final_gate_aggregation_preunblinding_lock.json",
+      "sha256": "489b1203e29231d58b7e925505ff7b351da4a2dbb35e16228747bb0885a8d6de",
+      "size_bytes": 3326
+    },
+    "original_frozen_05f3b_source": {
+      "path": "paper5/scripts/05f3b_aggregate_final_gate_results_cpu_preunblinding_locked.py",
+      "sha256": "fcf1a2e1fec76b0ea15ef93be813851153d763a437c95d46ce1c41d148b9e435",
+      "size_bytes": 61478
+    }
+  },
+  "status": "FROZEN_FINAL_GATE_SCIENTIFIC_RESULTS_NO_RETUNING"
+}

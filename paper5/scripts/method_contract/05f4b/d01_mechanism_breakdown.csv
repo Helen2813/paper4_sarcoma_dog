@@ -1,0 +1,4 @@
+report_id,mechanism,role,numerator,denominator,point_estimate,ci95_low,ci95_high,formal_gate_consequence,composition_note
+R01_D01_PRIMARY_POOLED,pooled_frozen_null_bank,primary_decision,70,1000,0.07,0.05577636414629404,0.08751464815128336,D01,Frozen pooled endpoint; do not reweight post-unblinding.
+R02_D01_INDEPENDENT_NULL_POOLED,independent_null,mandatory_secondary,0,800,0.0,4.336808689942018e-19,0.004778876205676033,NONE,Mandatory prespecified mechanism-specific reporting.
+R03_D01_CORRELATED_PRIVATE,correlated_private_null,mandatory_secondary,70,200,0.35,0.28728824127358077,0.4183653566395992,NONE,Mandatory prespecified mechanism-specific reporting.

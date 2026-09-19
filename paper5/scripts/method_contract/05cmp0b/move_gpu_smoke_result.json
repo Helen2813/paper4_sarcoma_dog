@@ -1,0 +1,181 @@
+{
+  "comparator": {
+    "distribution": "move-dl",
+    "fallback_activated": false,
+    "method": "MOVE",
+    "role": "required_external_deep_secondary_comparator",
+    "version": "1.5.0"
+  },
+  "contract_version": "sable-mo-move-gpu-synthetic-smoke-v1",
+  "created_at_utc": "2026-08-22T16:42:56+00:00",
+  "development_smoke_configuration": {
+    "batch_size": 8,
+    "beta": 0.01,
+    "continuous_weights": [
+      1,
+      1,
+      1
+    ],
+    "dropout": 0.1,
+    "epochs": 12,
+    "kld_warmup_steps": [
+      1,
+      4,
+      8,
+      12
+    ],
+    "learning_rate": 0.001,
+    "num_hidden": [
+      32,
+      16
+    ],
+    "num_latent": 5,
+    "purpose": "implementation smoke only; equal continuous weights only exercise the documented MOVE multi-dataset loss path and may not be treated as 05cmp1 scientific weights/hyperparameters",
+    "seed": 1103
+  },
+  "environment": {
+    "path": "paper5\\method_contract\\05cmp0b\\move_gpu_smoke_environment.json",
+    "sha256": "5b81bef722f85141b9d6e0ec9d7617fc625e3b13f6180da4e9eddc0ee56feeb6"
+  },
+  "fixture_adapter_audit": {
+    "cnv": {
+      "adapter": "NaN_to_zero_only_on_already_standardized_05dev0_fixture",
+      "dtype": "float32",
+      "encoded_finite": true,
+      "encoded_sha256": "3595746106d5c3cf12e0d5ff93938c212f233c4da5a0a7a352c47b84f07404c2",
+      "feature_level_nan_count_in_available_rows": 0,
+      "shape": [
+        24,
+        30
+      ],
+      "whole_view_missing_rows": 7
+    },
+    "methylation": {
+      "adapter": "NaN_to_zero_only_on_already_standardized_05dev0_fixture",
+      "dtype": "float32",
+      "encoded_finite": true,
+      "encoded_sha256": "dd118054dd88dbba424f2693feb45ee0ce21a6cd62ba7bd4a24600128f313395",
+      "feature_level_nan_count_in_available_rows": 5,
+      "shape": [
+        24,
+        50
+      ],
+      "whole_view_missing_rows": 8
+    },
+    "rna": {
+      "adapter": "NaN_to_zero_only_on_already_standardized_05dev0_fixture",
+      "dtype": "float32",
+      "encoded_finite": true,
+      "encoded_sha256": "d42f0fbda56ec7fb06f130020eadd3dabad34a9e76b8e5e4b6d4b2ae26196fad",
+      "feature_level_nan_count_in_available_rows": 0,
+      "shape": [
+        24,
+        40
+      ],
+      "whole_view_missing_rows": 6
+    }
+  },
+  "next_stage": "Complete the iCluster2b synthetic smoke test, then freeze exact MOVE/iCluster2b versions, adapters, seeds, preprocessing and scientific benchmark rules in 05cmp1 before any scientific secondary-comparator run.",
+  "pass_checks": {
+    "CUDA_available": true,
+    "CUDA_memory_allocated": true,
+    "decoder_output_finite": true,
+    "feature_level_missingness_adapter_exercised": true,
+    "latent_finite": true,
+    "latent_rows_equal_24": true,
+    "model_parameters_on_CUDA": true,
+    "move_version_exactly_1_5_0": true,
+    "training_history_finite": true,
+    "whole_view_missingness_adapter_exercised": true
+  },
+  "run_1": {
+    "device": "cuda",
+    "epochs_recorded": 12,
+    "epochs_requested": 12,
+    "final_kld": 0.015205964135626951,
+    "final_kld_weight": 1.0,
+    "final_loss": 2.577636162439982,
+    "final_sse": 2.562430222829183,
+    "latent_all_finite": true,
+    "latent_sha256": "6db93860deaeff15d045eef32a3805575ac212d557259e1b5ef0464e6aaa803b",
+    "latent_shape": [
+      24,
+      5
+    ],
+    "max_cuda_memory_allocated_bytes": 67345920,
+    "parameter_devices": [
+      "cuda"
+    ],
+    "reconstruction_all_finite": true,
+    "reconstruction_shape": [
+      24,
+      120
+    ],
+    "seed": 1103,
+    "wall_seconds": 0.3848299000001134
+  },
+  "run_2": {
+    "device": "cuda",
+    "epochs_recorded": 12,
+    "epochs_requested": 12,
+    "final_kld": 0.015205964135626951,
+    "final_kld_weight": 1.0,
+    "final_loss": 2.577636162439982,
+    "final_sse": 2.562430222829183,
+    "latent_all_finite": true,
+    "latent_sha256": "6db93860deaeff15d045eef32a3805575ac212d557259e1b5ef0464e6aaa803b",
+    "latent_shape": [
+      24,
+      5
+    ],
+    "max_cuda_memory_allocated_bytes": 67345920,
+    "parameter_devices": [
+      "cuda"
+    ],
+    "reconstruction_all_finite": true,
+    "reconstruction_shape": [
+      24,
+      120
+    ],
+    "seed": 1103,
+    "wall_seconds": 0.13638110000010784
+  },
+  "same_seed_repeatability_diagnostic": {
+    "allclose_rtol_1e-6_atol_1e-6": true,
+    "exact_latent_match": true,
+    "gate_consequence": "NONE_IN_05CMP0B; seed/stability policy must be frozen prospectively in 05cmp1",
+    "maximum_absolute_latent_difference": 0.0,
+    "run1_latent_sha256": "6db93860deaeff15d045eef32a3805575ac212d557259e1b5ef0464e6aaa803b",
+    "run2_latent_sha256": "6db93860deaeff15d045eef32a3805575ac212d557259e1b5ef0464e6aaa803b",
+    "same_seed": 1103
+  },
+  "scientific_boundaries": {
+    "TARGET_outcomes_accessed": false,
+    "biological_annotations_accessed": false,
+    "latent_values_persisted": false,
+    "may_influence_05e": false,
+    "may_influence_final_gate": false,
+    "real_TARGET_values_accessed": false,
+    "scientific_comparator_result_generated": false,
+    "scientific_feature_weights_frozen_here": false,
+    "scientific_hyperparameters_frozen_here": false,
+    "scientific_preprocessing_frozen_here": false,
+    "synthetic_05dev0_only": true
+  },
+  "script_version": "05cmp0b-smoke-test-move-gpu-v1-no-cli",
+  "status": "PASS_SYNTHETIC_MOVE_GPU_SMOKE_BEFORE_05CMP1",
+  "upstream_hashes": {
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\cnv.npy": "266fd02b86ec51d87f14e519f2177a1ff98575e313e33f57e08c1fb36aab8d29",
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\methylation.npy": "7da1a6e68bbd3609dd0c0e3eb896aad1295a89f8d89b1ede0bebed3e4a2b7d61",
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\rna.npy": "05b15c86877eb1d200ddb9aa2aa8e7dc032ef38afddeb28a76b46e16c81f44da",
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\sample_manifest.csv": "6d5dc85606047abcb10b436b6fbc8066f73233f6628eb024ad189695785c5509",
+    "paper5\\development_fixtures\\target_input_synthetic_v1\\view_availability.csv": "88d3a9d688e7c97f810c9db410919b95b2708a03a8d12ce0bf58b2dc74aa4eaa",
+    "paper5\\method_contract\\05cmp0\\secondary_comparator_selection_contract.json": "fd4f16510ca9b11fb78a6aad65911e526b4b0c0e12abcc5a40a4df2d5a50b699",
+    "paper5\\method_contract\\05cmp0\\secondary_comparator_selection_contract_lock.json": "b0f7eb2de3afa52d8fc54894eb82aef8e8a5d10d64c456f0bdf4f927084b6dfe",
+    "paper5\\method_contract\\05cmp0a\\effective_secondary_comparator_selected_registry.csv": "d4b765a777b08206bddcbb49138b7b430e8609129f93a6ac2af7d5b37185390f",
+    "paper5\\method_contract\\05cmp0a\\secondary_comparator_continuous_data_amendment.json": "ed4c9d821b1633de9528d68d0fe2fbca5b13c2de69d816181bba15a12840042e",
+    "paper5\\method_contract\\05cmp0a\\secondary_comparator_continuous_data_amendment_lock.json": "04e74228ff85eafc6bd65535dd02c95a4efbc7a1a37bddbd9a1f9f82bdba5e5e",
+    "paper5\\method_contract\\05dev0\\target_input_synthetic_fixture_contract.json": "e4387664398891334e8f5c4f7524277dbefa43f7f2cc4a3b07a08477d6ac1df5",
+    "paper5\\method_contract\\05dev0\\target_input_synthetic_fixture_lock.json": "8300b430bdf8ee641443782809816c2691777644a534e9ecbc2669b9f7ed7eb9"
+  }
+}

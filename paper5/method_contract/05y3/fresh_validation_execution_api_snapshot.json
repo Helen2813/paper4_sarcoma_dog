@@ -1,0 +1,37 @@
+{
+  "05f2_script": {
+    "path": "paper5/scripts/05f2_run_full_final_gate_gpu_resumable.py",
+    "sha256": "8052e6278abef99585e3a90d64480ea7c9a6dc04eb53598bf841f7c9c2431abd",
+    "size_bytes": 53763
+  },
+  "epoch_bridge": {
+    "path": "paper5/method_contract/05f1/final_gate_fixed_epoch_bridge.json",
+    "sha256": "6926d1613f03b6eb4b60e83a085621b2778421192dc7960887299df204759e72",
+    "size_bytes": 1307
+  },
+  "final_gate_fixed_epoch": 248,
+  "runner_callable_signatures": {
+    "attach_final_gate_metadata": "(rows: 'list[dict[str, Any]]', metadata: 'dict[str, Any]', profile: 'Any', selected_epoch: 'int', primary_eligible: 'bool') -> 'None'",
+    "build_full_stability_seed_registry": "(upstream: 'dict[str, Any]') -> 'pd.DataFrame'",
+    "build_stability_group": "(seed_rows: 'pd.DataFrame', expected_n_samples: 'int') -> 'dict[str, Any]'",
+    "configure_final_gate_neural_helper": "(neural: 'Any') -> 'None'",
+    "dataset_metadata": "(scenario: 'Any', replicate_row: 'pd.Series', validation: 'dict[str, Any]', input_sha256: 'str') -> 'dict[str, Any]'",
+    "enrich_final_gate_truth_audit": "(neural: 'Any', linear: 'Any', arrays: 'dict[str, np.ndarray]', reference_scores: 'np.ndarray', factor_rows: 'list[dict[str, Any]]') -> 'dict[str, Any]'",
+    "evaluate_final_gate_dataset": "(neural: 'Any', linear: 'Any', arrays: 'dict[str, np.ndarray]', metadata: 'dict[str, Any]', profile: 'Any', selected_epoch: 'int', stability_group: 'dict[str, Any]', stability_thresholds: 'dict[str, Any]') -> 'dict[str, Any]'",
+    "execute_or_verify_dataset_shard": "(upstream: 'dict[str, Any]', prelock: 'dict[str, Any]', seed_registry: 'pd.DataFrame', replicate_row: 'pd.Series', selected_epoch: 'int') -> 'tuple[dict[str, Any], str, float, int]'",
+    "final_gate_shard_path": "(metadata: 'dict[str, Any]', selected_epoch: 'int', prelock: 'dict[str, Any]') -> 'Path'",
+    "validate_existing_final_gate_shard": "(shard: 'dict[str, Any]', metadata: 'dict[str, Any]', selected_epoch: 'int', prelock: 'dict[str, Any]') -> 'None'",
+    "validate_final_gate_arrays": "(generator: 'Any', arrays: 'dict[str, np.ndarray]', scenario: 'Any', registry_label: 'str', replicate_index: 'int', simulation_seed: 'int') -> 'dict[str, Any]'",
+    "validate_full_stability_seed_registry": "(table: 'pd.DataFrame') -> 'dict[str, Any]'",
+    "verify_upstream_and_load": "() -> 'dict[str, Any]'"
+  },
+  "runner_globals": {
+    "OUTPUT_SEED_REGISTRY": "paper5/method_contract/05f1/final_gate_stability_seed_registry.csv.gz"
+  },
+  "runner_path": "paper5/scripts/05f1_run_final_gate_runtime_pilot_gpu_v2.py",
+  "runner_source": {
+    "path": "paper5/scripts/05f1_run_final_gate_runtime_pilot_gpu_v2.py",
+    "sha256": "a5d19d318538741ae61c26c5c3fd6b9a19b22d1517c91c968bfd41f1daad34c6",
+    "size_bytes": 107679
+  }
+}

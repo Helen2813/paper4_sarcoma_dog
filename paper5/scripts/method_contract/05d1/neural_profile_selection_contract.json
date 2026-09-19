@@ -1,0 +1,133 @@
+{
+  "baseline_results_may_change_profile": false,
+  "biological_or_outcome_labels_may_change_profile": false,
+  "candidate_profiles": [
+    {
+      "architecture_complexity_rank": 1,
+      "architecture_profile": "compact",
+      "combined_complexity_rank": 2,
+      "profile_id": "ARCH_COMPACT__REG_WEAK",
+      "regularization_complexity_rank": 1,
+      "regularization_profile": "weak"
+    },
+    {
+      "architecture_complexity_rank": 1,
+      "architecture_profile": "compact",
+      "combined_complexity_rank": 3,
+      "profile_id": "ARCH_COMPACT__REG_STANDARD",
+      "regularization_complexity_rank": 2,
+      "regularization_profile": "standard"
+    },
+    {
+      "architecture_complexity_rank": 2,
+      "architecture_profile": "standard",
+      "combined_complexity_rank": 3,
+      "profile_id": "ARCH_STANDARD__REG_WEAK",
+      "regularization_complexity_rank": 1,
+      "regularization_profile": "weak"
+    },
+    {
+      "architecture_complexity_rank": 1,
+      "architecture_profile": "compact",
+      "combined_complexity_rank": 4,
+      "profile_id": "ARCH_COMPACT__REG_STRONG",
+      "regularization_complexity_rank": 3,
+      "regularization_profile": "strong"
+    },
+    {
+      "architecture_complexity_rank": 2,
+      "architecture_profile": "standard",
+      "combined_complexity_rank": 4,
+      "profile_id": "ARCH_STANDARD__REG_STANDARD",
+      "regularization_complexity_rank": 2,
+      "regularization_profile": "standard"
+    },
+    {
+      "architecture_complexity_rank": 3,
+      "architecture_profile": "expanded",
+      "combined_complexity_rank": 4,
+      "profile_id": "ARCH_EXPANDED__REG_WEAK",
+      "regularization_complexity_rank": 1,
+      "regularization_profile": "weak"
+    },
+    {
+      "architecture_complexity_rank": 2,
+      "architecture_profile": "standard",
+      "combined_complexity_rank": 5,
+      "profile_id": "ARCH_STANDARD__REG_STRONG",
+      "regularization_complexity_rank": 3,
+      "regularization_profile": "strong"
+    },
+    {
+      "architecture_complexity_rank": 3,
+      "architecture_profile": "expanded",
+      "combined_complexity_rank": 5,
+      "profile_id": "ARCH_EXPANDED__REG_STANDARD",
+      "regularization_complexity_rank": 2,
+      "regularization_profile": "standard"
+    },
+    {
+      "architecture_complexity_rank": 3,
+      "architecture_profile": "expanded",
+      "combined_complexity_rank": 6,
+      "profile_id": "ARCH_EXPANDED__REG_STRONG",
+      "regularization_complexity_rank": 3,
+      "regularization_profile": "strong"
+    }
+  ],
+  "combined_complexity_rank": "architecture_complexity_rank + regularization_complexity_rank",
+  "confirmatory_dataset_count": 360,
+  "confirmatory_neural_dataset_role": "confirmatory_ablation only; replicate indices 11-20 within each scenario",
+  "confirmatory_replicates_may_change_profile": false,
+  "contract_version": "paper5-neural-profile-selection-v1",
+  "dataset_utility": "weighted sum of the five frozen components after validation scoring",
+  "development_dataset_count": 360,
+  "development_partition": {
+    "early_stop_fold": 2,
+    "fit_folds": [
+      3,
+      4,
+      5
+    ],
+    "source": "exact 05c1 frozen five-fold split registry",
+    "validation_fold": 1,
+    "validation_never_used_for_early_stopping": true
+  },
+  "hard_eligibility": {
+    "latent_collapse": "zero development reference fits may satisfy G02_LATENT_COLLAPSE",
+    "nonfinite_optimization": "all failed fits retained; profile is ineligible if any required profile-development reference or stability fit is non-finite",
+    "stability_gated_false_shared_discovery": "mean false biological shared discovery fraction <= 0.10 among factor-level-identifiable or true-null development datasets"
+  },
+  "one_standard_error_rule": "Among hard-gate-eligible profiles, identify the profile with the highest overall mean utility. Eligible profiles with mean utility >= best_mean - SE(best) form the one-SE set. Select the profile with the lowest combined_complexity_rank; ties use architecture_complexity_rank, then regularization_complexity_rank, then profile_id lexicographically.",
+  "overall_aggregation": "equal-weight mean of the 36 scenario means",
+  "primary_utility": {
+    "missing_view_reconstruction_score": 0.1,
+    "modality_balance_score": 0.1,
+    "random_adjusted_cross_view_mrr": 0.2,
+    "simulation_private_subspace_recovery": 0.2,
+    "simulation_shared_subspace_recovery": 0.4
+  },
+  "profile_reused_by": [
+    "V0_BALANCED_AE",
+    "V1_SHARED_PRIVATE_AE",
+    "V2_CONTRASTIVE_SPAE",
+    "V3_DROPOUT_SPAE",
+    "V5_SABLE_VAE"
+  ],
+  "profile_selected_for": "V4_SABLE_MO",
+  "profile_selection_dataset_role": "profile_development only; replicate indices 1-10 within each scenario",
+  "scenario_aggregation": "average dataset utility within each of the 36 scenarios",
+  "screening_base_seed": 1103,
+  "screening_seed_count": 1,
+  "stability_profile_screen": {
+    "all_9_profiles_evaluated": true,
+    "development_datasets_per_profile": 360,
+    "reference_full_data_fit_per_dataset_profile": 1,
+    "resamples_per_dataset_profile": 20,
+    "rotational_scenarios_use_subspace_metrics": true,
+    "subsample_fraction": 0.8,
+    "technical_truth_is_not_training_information": true
+  },
+  "standard_error_unit": "36 scenario-level mean utilities, not 360 individual datasets",
+  "target_data_may_change_profile": false
+}

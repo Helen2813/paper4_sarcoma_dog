@@ -1,0 +1,290 @@
+{
+  "05y0_candidate": {
+    "dataset_row_nonnull": false,
+    "dataset_row_present": false,
+    "factor_rows_nonnull_in_first_shard": 5,
+    "factor_rows_present_in_first_shard": 5,
+    "factor_rows_total_in_first_shard": 5,
+    "leaf": "best_private_absolute_correlation",
+    "path": "scientific_payload.factor_rows[0].best_private_absolute_correlation",
+    "permitted_as_primary_realized_generator_rho": false,
+    "reason": "A factor_rows[0] path is an arbitrary first-factor projection when the same field exists on all factor rows. It must not be treated as a unique dataset-level realized generator correlation without an explicit source definition.",
+    "structural_classification": "FIRST_FACTOR_PROJECTION_OF_A_FACTOR_LEVEL_FIELD__NOT_A_UNIQUE_DATASET_SCALAR"
+  },
+  "05y0b_schema_summary": {
+    "bidirectional_frontier_available": true,
+    "g19_factor_rows": 1000,
+    "g19_nonretained_factor_rows": 923,
+    "g19_retained_factor_rows": 77,
+    "standard_factor_rows": 500,
+    "standard_nonretained_factor_rows": 49,
+    "standard_retained_factor_rows": 451
+  },
+  "decision": "DO_NOT_FREEZE_05Y1_PRIMARY_REALIZED_RHO_USING_THE_05Y0_CANDIDATE",
+  "failure_labels_inspected": false,
+  "first_g19_shard": {
+    "dataset_relevant_schema": [
+      {
+        "field": "input_mode",
+        "nonnull": true,
+        "type": "str"
+      },
+      {
+        "field": "input_path",
+        "nonnull": false,
+        "type": "str"
+      },
+      {
+        "field": "input_sha256",
+        "nonnull": true,
+        "type": "str"
+      },
+      {
+        "field": "latent_collapse",
+        "nonnull": true,
+        "type": "bool"
+      },
+      {
+        "field": "n_true_private_factors_per_view",
+        "nonnull": true,
+        "type": "int"
+      },
+      {
+        "field": "private_latent_dim_per_view",
+        "nonnull": true,
+        "type": "int"
+      },
+      {
+        "field": "private_truth_audit_available",
+        "nonnull": true,
+        "type": "bool"
+      },
+      {
+        "field": "reference_fit_seed",
+        "nonnull": true,
+        "type": "int"
+      },
+      {
+        "field": "reference_shared_subspace_minimum_correlation",
+        "nonnull": false,
+        "type": "NoneType"
+      },
+      {
+        "field": "reference_shared_subspace_recovery",
+        "nonnull": false,
+        "type": "NoneType"
+      },
+      {
+        "field": "reference_technical_subspace_recovery",
+        "nonnull": false,
+        "type": "NoneType"
+      },
+      {
+        "field": "shared_latent_dim",
+        "nonnull": true,
+        "type": "int"
+      },
+      {
+        "field": "simulation_seed",
+        "nonnull": true,
+        "type": "int"
+      },
+      {
+        "field": "stability_gated_false_biological_discovery_fraction",
+        "nonnull": true,
+        "type": "float"
+      },
+      {
+        "field": "stability_subspace_median_canonical_correlation",
+        "nonnull": true,
+        "type": "float"
+      },
+      {
+        "field": "stability_subspace_q10_canonical_correlation",
+        "nonnull": true,
+        "type": "float"
+      }
+    ],
+    "factor0_relevant_schema": [
+      {
+        "field": "best_biological_absolute_correlation",
+        "nonnull": true,
+        "type": "float"
+      },
+      {
+        "field": "best_private_absolute_correlation",
+        "nonnull": true,
+        "type": "float"
+      },
+      {
+        "field": "best_technical_absolute_correlation",
+        "nonnull": true,
+        "type": "float"
+      },
+      {
+        "field": "biological_assigned_absolute_correlation",
+        "nonnull": false,
+        "type": "NoneType"
+      },
+      {
+        "field": "input_mode",
+        "nonnull": true,
+        "type": "str"
+      },
+      {
+        "field": "input_path",
+        "nonnull": false,
+        "type": "str"
+      },
+      {
+        "field": "input_sha256",
+        "nonnull": true,
+        "type": "str"
+      },
+      {
+        "field": "median_aligned_correlation",
+        "nonnull": true,
+        "type": "float"
+      },
+      {
+        "field": "n_true_private_factors_per_view",
+        "nonnull": true,
+        "type": "int"
+      },
+      {
+        "field": "private_latent_dim_per_view",
+        "nonnull": true,
+        "type": "int"
+      },
+      {
+        "field": "private_stronger_than_shared_truth",
+        "nonnull": true,
+        "type": "bool"
+      },
+      {
+        "field": "q10_aligned_correlation",
+        "nonnull": true,
+        "type": "float"
+      },
+      {
+        "field": "shared_latent_dim",
+        "nonnull": true,
+        "type": "int"
+      },
+      {
+        "field": "simulation_seed",
+        "nonnull": true,
+        "type": "int"
+      },
+      {
+        "field": "technical_assigned_absolute_correlation",
+        "nonnull": false,
+        "type": "NoneType"
+      }
+    ],
+    "path": "paper5/results/simulation_benchmark/05f_final_gate/shards/_compact/shard_ad425da5d300e3c8c3f70b09474ee26b.json",
+    "sha256": "0c81e13df2258d649d07723574149ccb88d0225960fdb16242a0d6c72834ec7e"
+  },
+  "g19_scenario_registry_private_correlation_metadata": {
+    "batch_signal_correlation": "0.0",
+    "correlated_private_mode": "correlated_private_scores",
+    "description": "Final false-shared calibration under correlated private factors.",
+    "n_private_factors_per_view": "2",
+    "pair_corruption_fraction": "0.0",
+    "private_cross_view_correlation": "0.6",
+    "private_loading_fraction": "0.1",
+    "private_signal_strength": "1.0",
+    "scenario_family": "correlated_private_null",
+    "scenario_id": "G19_CORRELATED_PRIVATE_NULL_N62",
+    "shared_factor_correlation": "0.0"
+  },
+  "next_step": "Inspect the exported source context to identify either: (a) an explicit realized private cross-view latent correlation stored by the generator, or (b) the exact frozen generator function/RNG sequence needed to reconstruct it from the G19 seed. Freeze that source/formula before any 70-vs-130 calculation.",
+  "scientific_result_computed": false,
+  "script_version": "05y0c-semantic-realized-private-correlation-source-preflight-v4-no-cli",
+  "source_context": {
+    "best_private_identifier_found": true,
+    "export_path": "paper5/method_contract/05y0c/realized_private_correlation_source_context.txt",
+    "records": [
+      {
+        "n_windows": 10,
+        "path": "paper5/scripts/05b_generate_small_n_multiomics_simulations.py",
+        "sha256": "c239ed19ee512977d65bf73ded71867000e7cbc4a6c8ba80d45114138139a01e"
+      },
+      {
+        "n_windows": 15,
+        "path": "paper5/scripts/05b_generate_small_n_multiomics_simulations_v2.py",
+        "sha256": "b4adb1fcb32b65a998ee70e1b72d52e13490194c7ad8e5ddd802b95bf05a28db"
+      },
+      {
+        "n_windows": 6,
+        "path": "paper5/scripts/05d2v2_screen_neural_profiles_gpu_syncfree.py",
+        "sha256": "c10bc91e044ea9869129bb08fe896964c469ba60534090b20c35a4508715be84"
+      },
+      {
+        "n_windows": 6,
+        "path": "paper5/scripts/05d2v2_screen_neural_profiles_gpu_syncfree_pathfix.py",
+        "sha256": "05ae6923ce588c137bc6f4aa934262181dd99f4ebe6bec3250e4b7cd54ed1ff3"
+      },
+      {
+        "n_windows": 1,
+        "path": "paper5/scripts/05f0_materialize_final_gate_calibration.py",
+        "sha256": "7b69e977a4c90fb5a34b69c36ace9547192a041c227dbc2ad47b92b16e367436"
+      },
+      {
+        "n_windows": 6,
+        "path": "paper5/scripts/05f1_run_final_gate_runtime_pilot_gpu.py",
+        "sha256": "b9092166bd9d4a6cd89628eaeaf52e41cfe0263844739ab71732c8034fc25535"
+      },
+      {
+        "n_windows": 6,
+        "path": "paper5/scripts/05f1_run_final_gate_runtime_pilot_gpu_v2.py",
+        "sha256": "a5d19d318538741ae61c26c5c3fd6b9a19b22d1517c91c968bfd41f1daad34c6"
+      },
+      {
+        "n_windows": 5,
+        "path": "paper5/scripts/05f2a_freeze_final_gate_aggregation_plan.py",
+        "sha256": "ee902b351f9ed6218f34165da9edc70954749759398c551f0859aa6ef035b5bb"
+      },
+      {
+        "n_windows": 5,
+        "path": "paper5/scripts/05f2b_freeze_final_gate_aggregation_poststart_preunblinding.py",
+        "sha256": "145313f56c1c7db6250a5791851f146cdedd167a2907d824bf1d99581c5665fd"
+      }
+    ],
+    "truth_matching_tokens_present_in_same_source_export": true
+  },
+  "sources": {
+    "05f2_progress_manifest": {
+      "path": "paper5/method_contract/05f2/full_run_progress_manifest.csv",
+      "sha256": "24a5d1e5c0b340254c12ff53dc1cd9209813e1bc98f4dee02c581e59706c2e6e",
+      "size_bytes": 1119616
+    },
+    "05y0_lock": {
+      "path": "paper5/method_contract/05y0/05y0_preflight_lock.json",
+      "sha256": "eaeb93312fc065ee9e3600c2cddd3f53e0d6b0320e547e34b552c20c19bc59a5",
+      "size_bytes": 1652
+    },
+    "05y0_report": {
+      "path": "paper5/method_contract/05y0/realized_rho_preflight.json",
+      "sha256": "883d05515c27a415bdd0241ac0edabd7acd7adef54d822756ddebfe8e2a2e8c8",
+      "size_bytes": 7090
+    },
+    "05y0b_lock": {
+      "path": "paper5/method_contract/05y0b/05y0b_preflight_lock.json",
+      "sha256": "515fef09082d188ad094f1d92a24f783e5ab1ca215acd76cae1b07e878c1aae0",
+      "size_bytes": 1062
+    },
+    "05y0b_report": {
+      "path": "paper5/method_contract/05y0b/diagnostic_schema_preflight.json",
+      "sha256": "1ac448860d01f9cd7bf2c587e856d7a2a0ba5ff3548c5aa42585d574d0ba46fa",
+      "size_bytes": 4965
+    },
+    "scenario_registry": {
+      "path": "paper5/method_contract/05a1/final_gate_calibration_scenarios.csv",
+      "sha256": "8695887dc0b27b69d87fa944ce1068fe149718ddf6c00a7d91e71ee1b1b306c2",
+      "size_bytes": 13650
+    }
+  },
+  "status": "READ_ONLY_SEMANTIC_SOURCE_PREFLIGHT_NO_DIAGNOSTIC_RESULT_COMPUTED",
+  "threshold_frontier_computed": false
+}

@@ -1,0 +1,6 @@
+method_name,purpose,seed_label,base_seed,derivation,selection_role
+iCluster2b,dataset_scientific_tuning_and_fit,icluster_fit,1103,"SHA256(method|dataset_id|purpose|base_seed) -> integer in [1, 2147483646]",single deterministic seed; no seed selection by performance
+MOVE,architecture_selection_cv,architecture_selection,1103,"SHA256(method|dataset_id|fold_id|candidate_id|purpose|base_seed) -> integer in [1, 2147483646]",reconstruction-only architecture screening
+MOVE,full_data_stability,canonical_fit,1103,"SHA256(method|dataset_id|candidate_id|purpose|base_seed) -> integer in [1, 2147483646]",a-priori canonical scientific latent representation
+MOVE,full_data_stability,stability_rep_2,2207,"SHA256(method|dataset_id|candidate_id|purpose|base_seed) -> integer in [1, 2147483646]",stability diagnostic only
+MOVE,full_data_stability,stability_rep_3,3301,"SHA256(method|dataset_id|candidate_id|purpose|base_seed) -> integer in [1, 2147483646]",stability diagnostic only

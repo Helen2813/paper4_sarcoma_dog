@@ -1,0 +1,20 @@
+{
+  "generated_files": {
+    "paper5/method_contract/05y0b/05y0b_README.txt": {
+      "path": "paper5/method_contract/05y0b/05y0b_README.txt",
+      "sha256": "84379f1f2fc3d97de08e80fabed5ad5c5af1b10ea30de9a52497028714b77cc4",
+      "size_bytes": 1223
+    },
+    "paper5/method_contract/05y0b/diagnostic_schema_preflight.json": {
+      "path": "paper5/method_contract/05y0b/diagnostic_schema_preflight.json",
+      "sha256": "1ac448860d01f9cd7bf2c587e856d7a2a0ba5ff3548c5aa42585d574d0ba46fa",
+      "size_bytes": 4965
+    }
+  },
+  "rewrite_policy": "05y0b is a blind supplemental preflight. Do not add diagnostic calculations to this version after seeing labels.",
+  "scientific_result_computed": false,
+  "script_path": "paper5/scripts/05y0b_realized_rho_and_frontier_schema_preflight_v3.py",
+  "script_sha256": "6359d763596c042435ab1029ad1763b69c8947af5c5370d15cbcdd733363ab19",
+  "script_version": "05y0b-realized-rho-and-frontier-schema-preflight-v3-no-cli",
+  "status": "READ_ONLY_SUPPLEMENTAL_PREFLIGHT_NO_DIAGNOSTIC_RESULT_COMPUTED"
+}

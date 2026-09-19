@@ -1,0 +1,32 @@
+{
+  "amendment_path": "paper5\\method_contract\\05cmp0a\\secondary_comparator_continuous_data_amendment.json",
+  "amendment_sha256": "ed4c9d821b1633de9528d68d0fe2fbca5b13c2de69d816181bba15a12840042e",
+  "amendment_version": "sable-mo-secondary-comparator-continuous-data-amendment-v1",
+  "base_05cmp0_lock_sha256": "b0f7eb2de3afa52d8fc54894eb82aef8e8a5d10d64c456f0bdf4f927084b6dfe",
+  "created_at_utc": "2026-08-21T22:20:07+00:00",
+  "generated_files": {
+    "paper5\\method_contract\\05cmp0a\\05cmp0a_README.txt": {
+      "path": "paper5\\method_contract\\05cmp0a\\05cmp0a_README.txt",
+      "sha256": "51d35a6bdeafb2d76a8369bff606bcc43bb2ba193be80bd468f5b9c7ecd696d1",
+      "size_bytes": 1494
+    },
+    "paper5\\method_contract\\05cmp0a\\continuous_data_method_choice_evidence.json": {
+      "path": "paper5\\method_contract\\05cmp0a\\continuous_data_method_choice_evidence.json",
+      "sha256": "05c1f50b44b9c3a8a5e05239bdde3c4dff6f5f0430512b4dbfd25afc2d5c10db",
+      "size_bytes": 1303
+    },
+    "paper5\\method_contract\\05cmp0a\\effective_secondary_comparator_selected_registry.csv": {
+      "path": "paper5\\method_contract\\05cmp0a\\effective_secondary_comparator_selected_registry.csv",
+      "sha256": "d4b765a777b08206bddcbb49138b7b430e8609129f93a6ac2af7d5b37185390f",
+      "size_bytes": 4373
+    },
+    "paper5\\method_contract\\05cmp0a\\secondary_comparator_continuous_data_amendment.json": {
+      "path": "paper5\\method_contract\\05cmp0a\\secondary_comparator_continuous_data_amendment.json",
+      "sha256": "ed4c9d821b1633de9528d68d0fe2fbca5b13c2de69d816181bba15a12840042e",
+      "size_bytes": 2488
+    }
+  },
+  "rewrite_policy": "05cmp0 remains immutable. 05cmp0a is the prospective correction layer. Any later method replacement requires a new versioned amendment.",
+  "script_version": "05cmp0a-amend-classical-comparator-continuous-data-path-v1-no-cli",
+  "status": "FROZEN_COMPARATOR_METHOD_CORRECTION_BEFORE_SCIENTIFIC_RUNS"
+}

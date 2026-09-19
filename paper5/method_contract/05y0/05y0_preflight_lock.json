@@ -1,0 +1,30 @@
+{
+  "generated_files": {
+    "paper5/method_contract/05y0/05y0_README.txt": {
+      "path": "paper5/method_contract/05y0/05y0_README.txt",
+      "sha256": "23f83db82c3aaa2f08b174147383bf63d2e685f39e3384c7c47bef61028ef607",
+      "size_bytes": 732
+    },
+    "paper5/method_contract/05y0/candidate_input_arrays.txt": {
+      "path": "paper5/method_contract/05y0/candidate_input_arrays.txt",
+      "sha256": "d216261ab25376be9d430d9202f6239e7ebb855bc64e1d8f931cbbdef2268681",
+      "size_bytes": 74
+    },
+    "paper5/method_contract/05y0/candidate_payload_key_paths.txt": {
+      "path": "paper5/method_contract/05y0/candidate_payload_key_paths.txt",
+      "sha256": "d12af6377c1536f8e95c1f1782748279e5cb79641a870a1a98f5502b4738934a",
+      "size_bytes": 7520
+    },
+    "paper5/method_contract/05y0/realized_rho_preflight.json": {
+      "path": "paper5/method_contract/05y0/realized_rho_preflight.json",
+      "sha256": "883d05515c27a415bdd0241ac0edabd7acd7adef54d822756ddebfe8e2a2e8c8",
+      "size_bytes": 7090
+    }
+  },
+  "rewrite_policy": "05y0 is a read-only preflight. If the realized-rho source is ambiguous, inspect the exported schema/source information and create a new versioned preflight or contract; do not add a diagnostic calculation to 05y0.",
+  "scientific_comparison_computed": false,
+  "script_path": "paper5/scripts/05y0_preflight_correlated_private_realized_rho.py",
+  "script_sha256": "84ac89113f3f8c2f5a056c9444c9a272876afb8af4f82aa780edcd31e4283bac",
+  "script_version": "05y0-preflight-correlated-private-realized-rho-v1-no-cli",
+  "status": "READ_ONLY_PREFLIGHT_NO_DIAGNOSTIC_RESULT_COMPUTED"
+}

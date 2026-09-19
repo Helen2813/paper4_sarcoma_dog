@@ -1,0 +1,34 @@
+{
+  "allowed_provisional_claim": "SABLE-MO is explicitly designed and prospectively characterized for extreme-small-sample same-patient multi-omics representation learning using block-balanced optimization, shared/private decomposition, missing-view recovery, and factor-and-subspace reproducibility gates.",
+  "contract_version": "paper5-sable-mo-novelty-positioning-v1",
+  "final_first_or_unique_claim_rule": "No first or unique claim is permitted until a documented systematic novelty search is repeated immediately before manuscript submission.",
+  "forbidden_claims": [
+    "first stability-based multi-omics method",
+    "first shared/private multi-omics autoencoder",
+    "existing methods were never evaluated below n=100",
+    "theoretically guaranteed factor stability",
+    "SABLE-MO solves small-n multi-omics universally"
+  ],
+  "headline_novelty_components": [
+    "extreme-small-n operating regime",
+    "block-balanced loss",
+    "same-patient cross-view contrastive alignment",
+    "shared/private decomposition",
+    "modality dropout and missing-view recovery",
+    "factor-level and subspace-level stability",
+    "prospective TPR/FNR/FDP and false-acceptance characterization",
+    "explicit technical-confound flagging",
+    "outcome-blind model selection before biological annotation"
+  ],
+  "related_work_distinctions": {
+    "CODE_AE": "shared/private domain separation between cell lines and patient tissues for drug-response transfer, not same-patient omics views",
+    "Flexynesis": "modular bulk multi-omics deep-learning toolkit; not the same prospective factor acceptance and rejection framework",
+    "MOFA_plus": "probabilistic shared and view-specific factors with native missing-value handling and ARD/sparsity",
+    "stability_based_multiomics": "stability concepts pre-exist; novelty cannot rest on stability alone"
+  },
+  "status": "PROVISIONAL_UNTIL_SYSTEMATIC_REVIEW_UPDATE",
+  "terminology": {
+    "avoid_without_theorem": "theoretically guaranteed stability",
+    "preferred": "simulation-characterized operating properties"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "contract_version": "paper5-neural-profile-screen-v2-syncfree",
+  "created_at_utc": "2026-08-12T18:18:28.147196+00:00",
+  "gpu_execution": {
+    "contrastive_similarity": "CUDA",
+    "deterministic_dual_PCA": "CUDA float64 required for Gram/eigendecomposition/projection",
+    "fold_local_feature_ranking_and_imputation": "CPU allowed",
+    "forward_backward_optimizer": "CUDA",
+    "heavy_neural_compute_device": "cuda:0",
+    "neural_reconstruction": "CUDA",
+    "quiet_cpu_fallback": false
+  },
+  "hard_profile_eligibility": {
+    "development_reference_latent_collapse_count": 0,
+    "false_discovery_eligible_datasets": "factor-level-identifiable datasets plus true biological null datasets",
+    "mean_stability_gated_false_biological_discovery_fraction_maximum": 0.1,
+    "required_fit_failure_count": 0
+  },
+  "objective": {
+    "early_stop_monitor": "deterministic total objective with modality dropout disabled and systematic leave-one-view-out cross reconstruction",
+    "gradient_clip_norm": 5.0,
+    "optimizer": "AdamW foreach=False fused=False",
+    "source": "paper5\\method_contract\\05d1\\neural_loss_and_architecture_contract.json",
+    "variant": "V4_SABLE_MO"
+  },
+  "preprocessing": {
+    "PCA": "algebraically matched dual PCA with 05c1 sign convention; Gram matrix, eigendecomposition, and projection run in float64 on cuda:0",
+    "centering_scaling": "training-subset mean and sample standard deviation after imputation",
+    "complete_truth_used_for_preprocessing": false,
+    "feature_budgets": {
+      "CNV": 5000,
+      "METHYLATION": 10000,
+      "RNA": 5000
+    },
+    "global_rankings_used": false,
+    "imputation": "training-subset feature median",
+    "missingness_threshold": 0.2,
+    "ranking": "training-subset pre-standardization variance descending; original feature index deterministic tie-break"
+  },
+  "profile_development_partition": {
+    "early_stop": "05c1 fold 2",
+    "fit": "05c1 folds 3,4,5",
+    "selected_epoch_refit": "reinitialize with same frozen profile fit seed; refit on fit+early-stop for selected epoch count",
+    "validation": "05c1 fold 1",
+    "validation_used_for_early_stopping": false,
+    "validation_used_for_preprocessing": false
+  },
+  "resumability": {
+    "existing_shards_verified_by": [
+      "script version",
+      "execution protocol SHA256",
+      "input SHA256",
+      "scenario/replicate",
+      "profile ID"
+    ],
+    "n_shards": 3240,
+    "unit": "simulation dataset x profile"
+  },
+  "runtime_optimization_v2": {
+    "changes": [
+      "remove per-epoch CUDA-to-host mask/count synchronizations",
+      "remove per-epoch fixed-fit loss scalar transfers",
+      "replace dynamic-length masked losses with algebraically equivalent fixed-shape CUDA masks",
+      "replace modality-dropout nonzero indexing with synchronization-free one-hot masking",
+      "retain deterministic float32 neural arithmetic, float64 CUDA dual PCA, AdamW, seeds, profiles, losses, resamples and one-SE rule"
+    ],
+    "reason": "Interrupted v1 runtime pilot stabilized near 170-180 hours after approximately 30 PASS shards; no scientific performance metric values were inspected before this execution rewrite.",
+    "scientific_contract_changed": false,
+    "v1_partial_shards_preserved_for_audit": true,
+    "v1_partial_shards_reused": false
+  },
+  "scientific_state_before_fit": {
+    "TARGET_model_fitting_performed": false,
+    "biological_annotations_loaded": false,
+    "clinical_labels_loaded": false,
+    "final_gate_calibration_data_used": false,
+    "neural_profile_screening_performed": false,
+    "neural_profile_selected": false,
+    "outcomes_loaded": false,
+    "representation_architecture_selected": false
+  },
+  "scope": {
+    "candidate_profiles": 9,
+    "dataset_profile_shards": 3240,
+    "development_datasets": 360,
+    "expected_optimization_runs": 74520,
+    "model": "V4_SABLE_MO",
+    "stability_resamples_per_shard": 20
+  },
+  "script_version": "05d2v2-screen-neural-profiles-gpu-syncfree-v2-no-cli",
+  "selection": {
+    "TARGET_data_used": false,
+    "best_profile": "highest mean utility among hard-gate-eligible profiles",
+    "confirmatory_replicates_11_to_20_used": false,
+    "one_se_threshold": "best mean utility minus SE(best) across 36 scenario means",
+    "rule": "one-standard-error rule from frozen 05d1 contract",
+    "selection_within_one_se_set": "lowest combined complexity rank; then architecture complexity; then regularization complexity; then profile_id lexicographically"
+  },
+  "stability": {
+    "alignment": "standardize shared scores, orthogonal Procrustes resample to reference, Hungarian factor matching, absolute correlation",
+    "biological_truth_match_absolute_correlation": 0.5,
+    "false_biological_discovery_denominator": "stable nontechnical factors",
+    "reference_fit": "one full-data fit per dataset-profile using frozen reference seed and the profile-specific selected epoch count",
+    "resample_neural_refit": true,
+    "resample_preprocessing_refit": true,
+    "resamples": 20,
+    "rotational_nonnull_factor_false_discovery_primary_eligible": false,
+    "stable_technical_factors_counted_as_false_biological": false,
+    "subsample_fraction": 0.8,
+    "technical_truth_match_absolute_correlation": 0.5,
+    "thresholds": {
+      "minimum_factor_variance": 0.0001,
+      "minimum_loading_energy_fraction_per_supported_modality": 0.15,
+      "minimum_supported_modalities": 2,
+      "primary_inclusion_frequency": 0.8,
+      "primary_median_factor_correlation": 0.7,
+      "primary_q10_factor_correlation": 0.4,
+      "sensitivity_high_median_factor_correlation": 0.8,
+      "sensitivity_low_median_factor_correlation": 0.6
+    }
+  },
+  "upstream_hashes": {
+    "paper5\\method_contract\\05a\\ai_method_contract.json": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+    "paper5\\method_contract\\05b_v2\\architecture_screening_data_manifest.csv": "f3980e88aff408b65cbfce96aca50bad4fc08ecece2bc42bbc04f365c35d9c87",
+    "paper5\\method_contract\\05d0\\neural_environment_contract.json": "a5647e7cae4548bb1992385600dd6906cbcca4138636d1a7adb0692d680d3f92",
+    "paper5\\method_contract\\05d0\\neural_environment_lock.json": "e1420d82a1de564efa3b141aa0eb5249b502232ece61c9aaeacdc1f152b71914",
+    "paper5\\method_contract\\05d1\\neural_architecture_regularization_profile_grid.csv": "118b2fd4c16751f0b83ac3053f726f9421db26949ab98a8a531ff584c194ee32",
+    "paper5\\method_contract\\05d1\\neural_loss_and_architecture_contract.json": "b90ded1d011ee3210154c2102389df0b4e0c8fcf668b70d7e2b8e14184e3f6b1",
+    "paper5\\method_contract\\05d1\\neural_profile_development_partition_registry.csv": "1b423af3f6152c1e4b3c14f6d787e08196a7ed0d01cb579864c8b0698960d175",
+    "paper5\\method_contract\\05d1\\neural_profile_screen_fit_seed_registry.csv": "b3d263f5c946c06d9ffa333c12b5f58a266250a86547b17a4f801ddf9693d381",
+    "paper5\\method_contract\\05d1\\neural_profile_selection_contract.json": "4dc5ec24f19a7b575515d29628f1f3c2c0d6a69ffa7685ad81e1fafb05f39cd1",
+    "paper5\\method_contract\\05d1\\neural_profile_stability_resample_registry.csv": "3591f454e474533fb4bc7d5f1d9585026c0a63f15d86e2291bc3cd455ee053d5",
+    "paper5\\method_contract\\05d1\\neural_simulation_dataset_role_registry.csv": "5dace3ec427e5b6765b1972ff7be817e8ad933ed03688d711c9fe64c61b85d71",
+    "paper5\\method_contract\\05d1\\neural_simulation_evaluation_protocol.json": "3cc4660551ca8d5731c2043096a68a0a675505b1a2a2a7d6971b41b526c4dd03",
+    "paper5\\method_contract\\05d1\\neural_simulation_protocol_lock.json": "b3f7d0c6528edaac8d91289332eb0fdf4a53cf1cc9d2c35b052d3987e3002066",
+    "paper5\\scripts\\05c1_fit_linear_simulation_baselines.py": "c2c91b4ad274f78ccc369e6fca765102285cf3d9c8191f3c33f4a450b7426367"
+  },
+  "utility": {
+    "overall_aggregation": "equal-weight mean across 36 scenario means",
+    "scenario_aggregation": "mean across 10 development replicates",
+    "standard_error_unit": "36 scenario means",
+    "true_zero_dimensional_truth_rule": "Raw subspace recovery remains NA when the corresponding truth subspace has zero dimensions. For the prespecified fixed-weight selection utility only, that absent truth component contributes 0.0 rather than dropping or reweighting the component.",
+    "weights": {
+      "missing_view_reconstruction_score": 0.1,
+      "modality_balance_score": 0.1,
+      "private_subspace_recovery": 0.2,
+      "random_adjusted_cross_view_mrr": 0.2,
+      "shared_subspace_recovery": 0.4
+    }
+  }
+}

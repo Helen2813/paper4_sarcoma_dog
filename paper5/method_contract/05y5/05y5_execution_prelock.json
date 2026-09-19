@@ -1,0 +1,60 @@
+{
+  "05y3_api_snapshot": {
+    "path": "paper5/method_contract/05y3/fresh_validation_execution_api_snapshot.json",
+    "sha256": "baf62597a57f7f95afb48de0cfcea777af4e644e67009cab667c34e1264b9fbb",
+    "size_bytes": 2827
+  },
+  "05y3_contract": {
+    "path": "paper5/method_contract/05y3/prospective_q10_recalibration_contract.json",
+    "sha256": "485603c89e478ca1f82772e510ea9e02c107747ec6ba7f57d68482781b562c38",
+    "size_bytes": 9264
+  },
+  "05y3_lock": {
+    "path": "paper5/method_contract/05y3/05y3_contract_lock.json",
+    "sha256": "ebae031bbd7b6dba5cae1333aaedaa6e0d2e9fb65c07e7a1bb25dd0813c65eac",
+    "size_bytes": 1351
+  },
+  "05y4_dataset_registry": {
+    "path": "paper5/method_contract/05y4/fresh_q10_validation_dataset_registry.csv",
+    "sha256": "95aad350916d71252239c7649655b6377d33a9d984e626662901b6070a763fba",
+    "size_bytes": 67937
+  },
+  "05y4_lock": {
+    "path": "paper5/method_contract/05y4/05y4_seed_bank_lock.json",
+    "sha256": "ff227acd3e8a65e9b2e7c3188792be17ecf3da725e206b987f13f5145a0f276c",
+    "size_bytes": 1672
+  },
+  "05y4_stability_registry": {
+    "path": "paper5/method_contract/05y4/fresh_q10_validation_stability_seed_registry.csv",
+    "sha256": "2ece0d23f1a07acfa30debbdc837ce206f93d3617e07992f5c949684012c70e1",
+    "size_bytes": 5873749
+  },
+  "created_at_utc": "2026-09-16T00:56:28+00:00",
+  "fixed_epoch": 248,
+  "frozen_05f1_runner": {
+    "path": "paper5/scripts/05f1_run_final_gate_runtime_pilot_gpu_v2.py",
+    "sha256": "a5d19d318538741ae61c26c5c3fd6b9a19b22d1517c91c968bfd41f1daad34c6",
+    "size_bytes": 107679
+  },
+  "rewrite_policy": "This prelock is immutable before the first fresh fit. Any numerical-path, seed-bank, model, epoch, resample-count, threshold, or endpoint change requires a new prospective branch.",
+  "runtime_environment": {
+    "CUDA_build": "13.0",
+    "GPU_model": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "PyTorch_version": "2.12.1+cu130"
+  },
+  "scientific_execution_hash": "5948b54cde2dbaa0cbe0664be7efedea404720072e5313db7e1b17fd8a09b7e2",
+  "scientific_state_before_first_fresh_fit": {
+    "TARGET_accessed": false,
+    "candidate_threshold_retuned": false,
+    "fresh_datasets_evaluated": 0,
+    "fresh_model_fits_performed": 0,
+    "fresh_scientific_metrics_aggregated": false,
+    "fresh_scientific_metrics_printed": false,
+    "outcomes_accessed": false
+  },
+  "script_path": "paper5/scripts/05y5_run_fresh_q10_validation_gpu_resumable.py",
+  "script_sha256": "b5da84d388e387639a9ca511e8ee24c937da4fff65f717a56cd9e8ec76fe7980",
+  "script_version": "05y5-run-fresh-q10-validation-gpu-resumable-v1-no-cli",
+  "stability_resamples_per_dataset": 100,
+  "status": "FROZEN_FRESH_Q10_VALIDATION_EXECUTION_PRELOCK_BEFORE_FIRST_FIT"
+}

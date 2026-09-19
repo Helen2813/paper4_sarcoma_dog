@@ -1,0 +1,4 @@
+architecture_profile,rna_pca_components,methylation_pca_components,cnv_pca_components,shared_latent_dim,private_latent_dim_per_view,encoder_hidden_dim,decoder_hidden_dim,activation,layer_normalization,full_batch_training,maximum_epochs,early_stopping_patience,early_stopping_min_delta,complexity_rank
+compact,10,10,10,5,2,32,32,GELU,True,True,400,30,0.0001,1
+standard,20,20,20,10,5,64,64,GELU,True,True,500,40,0.0001,2
+expanded,30,30,30,15,5,96,96,GELU,True,True,600,50,0.0001,3

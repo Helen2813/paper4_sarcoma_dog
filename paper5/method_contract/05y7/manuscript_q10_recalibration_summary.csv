@@ -1,0 +1,5 @@
+endpoint,numerator,denominator,rate
+G19 original false acceptance,66,200,0.33
+G19 q10=.60 false acceptance,38,200,0.19
+STANDARD original biological recovery,755,800,0.94375
+STANDARD q10=.60 biological recovery,752,800,0.94

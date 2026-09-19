@@ -1,0 +1,55 @@
+{
+  "05a2_amendment_sha256": "06b34c4e763a4dd150807afb4777ef4bcbb17abd7dc075b95baf438c9faad445",
+  "05f2_completion_lock_sha256": "b20146cf70bfd6008cd63c3aabf9c294ea4dba4df8af33427eac4e184764cc3c",
+  "05f2b_aggregation_plan_lock_sha256": "489b1203e29231d58b7e925505ff7b351da4a2dbb35e16228747bb0885a8d6de",
+  "contract_version": "paper5-05f3b-final-gate-scientific-aggregation-v1",
+  "core_status": "CORE_PASS",
+  "created_at_utc": "2026-09-15T21:49:02+00:00",
+  "generated_files": {
+    "paper5/method_contract/05f3e/05f3e_README.txt": {
+      "path": "paper5/method_contract/05f3e/05f3e_README.txt",
+      "sha256": "5296949233ea21239bac051dc4a2d5c72548936a2740e056117a1b773bbb741a",
+      "size_bytes": 1046
+    },
+    "paper5/method_contract/05f3e/d01_independent_null_sample_size_trend.json": {
+      "path": "paper5/method_contract/05f3e/d01_independent_null_sample_size_trend.json",
+      "sha256": "ba40895c10005fe40acf3ec7476628847c37f8b01f2c89a3c72b133f9a55ae42",
+      "size_bytes": 984
+    },
+    "paper5/method_contract/05f3e/final_gate_failure_consequence.json": {
+      "path": "paper5/method_contract/05f3e/final_gate_failure_consequence.json",
+      "sha256": "bad2123bc0a23e49c888ec3e3c9a58803a32aed4adc022f02ee32ea39b20ff8b",
+      "size_bytes": 1890
+    },
+    "paper5/method_contract/05f3e/final_gate_mandatory_reporting.csv": {
+      "path": "paper5/method_contract/05f3e/final_gate_mandatory_reporting.csv",
+      "sha256": "d3313374d2d3dd9cb0579dc08b3cc92e8874478d755ea061fe599a71946c28f2",
+      "size_bytes": 1666
+    },
+    "paper5/method_contract/05f3e/final_gate_operating_metric_summary.csv": {
+      "path": "paper5/method_contract/05f3e/final_gate_operating_metric_summary.csv",
+      "sha256": "86fe9e2b833ee82dc1adf0b2b093784e0ea1c69c7999e16290364e64d415fb96",
+      "size_bytes": 1359
+    },
+    "paper5/method_contract/05f3e/final_gate_primary_decisions.csv": {
+      "path": "paper5/method_contract/05f3e/final_gate_primary_decisions.csv",
+      "sha256": "8449ec28c9d67154eb65bee407e5b0a1c3b0f5b36a190f157f1c0406f0212f94",
+      "size_bytes": 1479
+    },
+    "paper5/method_contract/05f3e/final_gate_result.json": {
+      "path": "paper5/method_contract/05f3e/final_gate_result.json",
+      "sha256": "ece198de28b8c4123b3212b19c9aac63698cf78147fcb8a33f4ef4d108fbd792",
+      "size_bytes": 14030
+    },
+    "paper5/method_contract/05f3e/final_gate_scenario_summary.csv": {
+      "path": "paper5/method_contract/05f3e/final_gate_scenario_summary.csv",
+      "sha256": "a01d96610b1ac19629125032a76901561242005bfdd877021968e0f81d422fa2",
+      "size_bytes": 3567
+    }
+  },
+  "rewrite_policy": "05f3b results are immutable. No threshold, selector, CI decision rule, scenario membership, or aggregation denominator may be changed after these results are opened. Any later sensitivity analysis must be separately versioned and labeled exploratory.",
+  "script_path": "paper5/scripts/05f3e_aggregate_final_gate_results_cpu_postunblinding_schema_recovery_v3.py",
+  "script_sha256": "d97d12b54927d8e378e22ef3a229c2e5622398d1a7c7c9e1180631bc85cf7874",
+  "script_version": "05f3e-aggregate-final-gate-results-cpu-v3-postunblinding-schema-recovery-no-cli",
+  "status": "FROZEN_FINAL_GATE_SCIENTIFIC_RESULTS_NO_RETUNING"
+}

@@ -1,0 +1,73 @@
+{
+  "analysis_role": "MANUSCRIPT_FACING_LOCKED_SUMMARY_OF_05Y6_PROSPECTIVE_Q10_RECALIBRATION",
+  "script_version": "05y7-freeze-manuscript-q10-recalibration-assets-v1-no-cli",
+  "source_status": "PROSPECTIVE_Q10_RECALIBRATION_RESULT_FROZEN",
+  "candidate_confirmed": true,
+  "formal_05f3e_gate_consequence": "NONE",
+  "retuning_after_result": "FORBIDDEN",
+  "change_tested": {
+    "field": "q10_aligned_correlation_min",
+    "original": 0.4,
+    "candidate": 0.6,
+    "all_other_rule_components_unchanged": true
+  },
+  "fresh_validation_bank": {
+    "G19_correlated_private_null_datasets": 200,
+    "STANDARD_true_shared_datasets": 200,
+    "STANDARD_truth_factor_opportunities": 800,
+    "seed_overlap_with_prior_bank": 0
+  },
+  "specificity": {
+    "original_false_acceptance_n": 66,
+    "original_false_acceptance_denominator": 200,
+    "original_false_acceptance_rate": 0.33,
+    "original_wilson95": [
+      0.26857425870603957,
+      0.39783315226223115
+    ],
+    "candidate_false_acceptance_n": 38,
+    "candidate_false_acceptance_denominator": 200,
+    "candidate_false_acceptance_rate": 0.19,
+    "candidate_wilson95": [
+      0.14167171527790676,
+      0.25001238707599854
+    ],
+    "absolute_rate_reduction": 0.14,
+    "paired_bootstrap95_absolute_reduction": [
+      0.095,
+      0.19
+    ],
+    "relative_rate_reduction": 0.42424242424242425,
+    "rescued_datasets": 28,
+    "reverse_discordance": 0,
+    "exact_two_sided_nested_mcnemar_p": 7.450580596923828e-09
+  },
+  "sensitivity_safety": {
+    "original_recovered_n": 755,
+    "candidate_recovered_n": 752,
+    "denominator": 800,
+    "original_recovery_rate": 0.94375,
+    "candidate_recovery_rate": 0.94,
+    "candidate_wilson95": [
+      0.9213458598323445,
+      0.9544487291066606
+    ],
+    "lost_truth_opportunities": 3,
+    "gained_truth_opportunities": 0,
+    "existing_D02_floor": 0.8,
+    "floor_met": true
+  },
+  "source_provenance": {
+    "05y6_result": {
+      "path": "method_contract/05y6/prospective_q10_validation_result.json",
+      "sha256": "daa11e17a0a273d45b33c6c3ab14a2ae1bf6dc559bb722b18816a906e7f86052",
+      "size_bytes": 3700
+    },
+    "05y6_lock": {
+      "path": "method_contract/05y6/05y6_results_lock.json",
+      "sha256": "a93aeebcdcb07bd654096b5926ec3aa7b23b9b8a4bf51835991a843473ac21b1",
+      "size_bytes": 1936
+    },
+    "05y6_frozen_aggregator_sha256": "bad3ee4833918b578c76daa013ee8e92de72f945c0f2b976db7dc75873ce39e8"
+  }
+}

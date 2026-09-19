@@ -1,0 +1,108 @@
+{
+  "05a2_amendment_hash": "06b34c4e763a4dd150807afb4777ef4bcbb17abd7dc075b95baf438c9faad445",
+  "contract_version": "paper5-final-gate-runtime-pilot-v2",
+  "created_at_utc": "2026-08-22T18:24:40+00:00",
+  "epoch_bridge": {
+    "path": "paper5/method_contract/05f1/final_gate_fixed_epoch_bridge.json",
+    "sha256": "6926d1613f03b6eb4b60e83a085621b2778421192dc7960887299df204759e72",
+    "size_bytes": 1307
+  },
+  "invalidation_rule": "Any change to the numerical/GPU code path, dtype, reduction order, preprocessing math, model fitting path, alignment math, or stability computation invalidates all pilot shards; they must be recomputed.",
+  "numerical_contract": {
+    "path": "paper5/method_contract/05f1/final_gate_numerical_runtime_contract.json",
+    "sha256": "2eeebb73d72d6faf8bf894be1feef526646b4db29522eaadf89816e92584f00b",
+    "size_bytes": 5780
+  },
+  "numerical_implementation_hash": "e16deabe0cb733bf4d6a2dbf8b0a977eb7d5a959d7a6331a69d59dda16144b1a",
+  "prepilot_recovery": {
+    "artifacts": [
+      {
+        "path": "paper5/method_contract/05f1/final_gate_fixed_epoch_bridge.json",
+        "sha256": "d580aed30f8474e1986043dbdb02c8988a92a46474eb560b8efabdd453ba68a1",
+        "size_bytes": 1307
+      }
+    ],
+    "n_unlocked_artifacts_detected": 1,
+    "prior_failed_v1_seed_uniqueness_guard_generated_model_fits": false,
+    "recovery_allowed_only_because_result_shards_absent": true,
+    "recovery_allowed_only_because_valid_prelock_absent": true,
+    "unlocked_artifacts_detected_before_v2_prelock": true
+  },
+  "required_shard_provenance": [
+    "scientific_contract_hash",
+    "05a2_amendment_hash",
+    "script_hash",
+    "numerical_implementation_hash",
+    "PyTorch_version",
+    "CUDA_build",
+    "GPU_model"
+  ],
+  "reuse_rule": "Pilot shards may be retained as final shards only when the numerical implementation hash is unchanged.",
+  "rewrite_policy": "This prelock is written before the first final-gate pilot fit and is immutable. Any numerical-path change requires a new versioned pilot and invalidates all shards created under this numerical implementation hash.",
+  "runtime_environment": {
+    "CUDA_build": "13.0",
+    "GPU_model": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "PyTorch_version": "2.12.1+cu130"
+  },
+  "scientific_contract_hash": "bd5830f967d58c9e5afa70d183df1d22b581877b27688d52c50de60edc165fc2",
+  "scientific_state_before_first_pilot_fit": {
+    "TARGET_accessed": false,
+    "biology_annotations_accessed": false,
+    "final_gate_scientific_metrics_aggregated": false,
+    "final_gate_scientific_metrics_printed": false,
+    "outcomes_accessed": false,
+    "pilot_final_gate_datasets_generated": 0,
+    "pilot_model_fits_performed": 0,
+    "threshold_retuning_performed": false
+  },
+  "script_path": "paper5/scripts/05f1_run_final_gate_runtime_pilot_gpu_v2.py",
+  "script_sha256": "a5d19d318538741ae61c26c5c3fd6b9a19b22d1517c91c968bfd41f1daad34c6",
+  "script_version": "05f1-run-final-gate-runtime-pilot-gpu-v2-seed-collision-aware-no-cli",
+  "seed_collision_policy_and_audit": {
+    "global_uniqueness_required": false,
+    "interpretation": "Cross-dataset equality of 32-bit seed integers is expected at this registry size and is provenance-only. Each dataset remains a distinct deterministic simulation, and every dataset's 100 subsample seeds and 100 resample-fit seeds are strictly unique. No seed namespace, hash derivation, RNG implementation, or scientific threshold is changed by this collision-aware validation.",
+    "policy_version": "paper5-final-gate-32bit-seed-collision-policy-v1",
+    "reference_fit_seed": {
+      "birthday_approx_probability_at_least_one_collision": 0.0011177651901073116,
+      "birthday_expected_pair_collisions_under_uniform_32bit_space": 0.0011183903555195757,
+      "max_global_multiplicity": 1,
+      "n_dataset_level_draws": 3100,
+      "n_global_collision_values": 0,
+      "n_global_duplicate_draws_beyond_first": 0,
+      "n_unique_global_values": 3100
+    },
+    "resample_fit_seed": {
+      "birthday_approx_probability_at_least_one_collision": 0.9999861534761366,
+      "birthday_expected_pair_collisions_under_uniform_32bit_space": 11.187476341423457,
+      "global_cross_dataset_collisions_allowed": true,
+      "max_global_multiplicity": 2,
+      "n_draws": 310000,
+      "n_global_collision_values": 16,
+      "n_global_duplicate_draws_beyond_first": 16,
+      "n_unique_global_values": 309984,
+      "within_dataset_collisions_allowed": false
+    },
+    "seed_space_size": 4294967295,
+    "stable_seed_range": "0..(2**32-2) from modulo (2**32-1)",
+    "subsample_seed": {
+      "birthday_approx_probability_at_least_one_collision": 0.9999861534761366,
+      "birthday_expected_pair_collisions_under_uniform_32bit_space": 11.187476341423457,
+      "global_cross_dataset_collisions_allowed": true,
+      "max_global_multiplicity": 2,
+      "n_draws": 310000,
+      "n_global_collision_values": 12,
+      "n_global_duplicate_draws_beyond_first": 12,
+      "n_unique_global_values": 309988,
+      "within_dataset_collisions_allowed": false
+    },
+    "within_dataset_resample_fit_seed_unique_count_required": 100,
+    "within_dataset_subsample_seed_unique_count_required": 100,
+    "within_dataset_uniqueness_required": true
+  },
+  "seed_registry": {
+    "path": "paper5/method_contract/05f1/final_gate_stability_seed_registry.csv.gz",
+    "sha256": "fb599c000022ad4d7140341342cee13a0f327079620d323d5595d32e058b02a9",
+    "size_bytes": 5052416
+  },
+  "status": "FROZEN_FINAL_GATE_NUMERICAL_IMPLEMENTATION_BEFORE_FIRST_PILOT_FIT"
+}

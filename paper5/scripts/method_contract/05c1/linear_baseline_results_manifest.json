@@ -1,0 +1,114 @@
+{
+  "contract_version": "paper5-linear-simulation-baseline-benchmark-v1",
+  "created_at_utc": "2026-08-11T23:23:40.680344+00:00",
+  "guardrails": [
+    "Only frozen sable_mo_v2 architecture-screening simulations were used.",
+    "The disclosed sable_mo_v1 pilot was not used.",
+    "Final gate-calibration simulations were not accessed.",
+    "All preprocessing was fitted within the training fold for held-out metrics.",
+    "Complete simulation truth was used for evaluation only.",
+    "No outcome, clinical variable or biological annotation was accessed.",
+    "All prespecified linear baselines are retained regardless of performance.",
+    "No architecture or stability threshold was selected or changed."
+  ],
+  "outputs": {
+    "paper5\\method_contract\\05c1\\linear_baseline_environment_snapshot.json": {
+      "sha256": "53b344b86247572941a8785403da3ff08fd1b555a1fc8934ee06199f4d3b19e9",
+      "size_bytes": 846
+    },
+    "paper5\\method_contract\\05c1\\linear_baseline_reference_fixture.json": {
+      "sha256": "4b02ee94f32eafd89aeeb4a45fc6354ee0b840ed7763a71d4f5f427d819b5bd6",
+      "size_bytes": 515
+    },
+    "paper5\\method_contract\\05c1\\linear_baseline_shard_manifest.csv": {
+      "sha256": "f1e5ab3896d2718a7445c4f5e8f18df83bdc89dacaf8554c560e7008648a759e",
+      "size_bytes": 387694
+    },
+    "paper5\\method_contract\\05c1\\linear_simulation_baseline_README.txt": {
+      "sha256": "1c060ed45b19bd9b3cdbd49968233c6ee7052c4b71c0ba5ea30ae551ffa14d71",
+      "size_bytes": 1205
+    },
+    "paper5\\method_contract\\05c1\\linear_simulation_evaluation_protocol.json": {
+      "sha256": "ab874fcbf55beadac339bd867124ece5660b9efc4c4f27d5b53a07cd1497a369",
+      "size_bytes": 6509
+    },
+    "paper5\\results\\simulation_benchmark\\05c1_linear_baselines\\linear_dataset_metrics.csv.gz": {
+      "sha256": "0d94815d50daaaf9baa55343682c43371561f137b4f5bca2cfe420eff51eebe2",
+      "size_bytes": 1118478
+    },
+    "paper5\\results\\simulation_benchmark\\05c1_linear_baselines\\linear_factor_truth_match_audit.csv.gz": {
+      "sha256": "99fcc26622b971330b9f09b8531299b47d5e4dfd1d95bf23972e0827615c53c3",
+      "size_bytes": 1931176
+    },
+    "paper5\\results\\simulation_benchmark\\05c1_linear_baselines\\linear_failure_gate_audit.csv.gz": {
+      "sha256": "f89ba9c78e5e58ec1a5576cb60131871a7299b489a9315fab2ca2c737fb42d72",
+      "size_bytes": 290651
+    },
+    "paper5\\results\\simulation_benchmark\\05c1_linear_baselines\\linear_fold_metrics.csv.gz": {
+      "sha256": "b9a3b9b67e14ac2135fb3d295ad0f0c99c391437edbd1aeaabe11e8fefe3f551",
+      "size_bytes": 2679678
+    },
+    "paper5\\results\\simulation_benchmark\\05c1_linear_baselines\\linear_preprocessing_audit.csv.gz": {
+      "sha256": "080715572939a74a30dccc369cefc5e70129d492984a2f8e2ec6350d67c43c4d",
+      "size_bytes": 209873
+    },
+    "paper5\\results\\simulation_benchmark\\05c1_linear_baselines\\linear_scenario_summary.csv": {
+      "sha256": "da5b1a6ac18936939f39935fb4c679ce895cfe9054dd67c29b3877e93a4db580",
+      "size_bytes": 258586
+    },
+    "paper5\\results\\simulation_benchmark\\05c1_linear_baselines\\linear_simulation_split_registry.csv.gz": {
+      "sha256": "c683436960893ce89254ecf8d79bc8ed64930ba44222425858968da753e60279",
+      "size_bytes": 177930
+    }
+  },
+  "protocol": {
+    "path": "paper5\\method_contract\\05c1\\linear_simulation_evaluation_protocol.json",
+    "sha256": "ab874fcbf55beadac339bd867124ece5660b9efc4c4f27d5b53a07cd1497a369"
+  },
+  "scientific_state": {
+    "MOFA_model_fitting_performed": false,
+    "TARGET_model_fitting_performed": false,
+    "architecture_selected": false,
+    "biological_annotations_loaded": false,
+    "clinical_labels_loaded": false,
+    "final_gate_calibration_data_used": false,
+    "neural_model_fitting_performed": false,
+    "outcomes_loaded": false,
+    "stability_gate_thresholds_retuned": false
+  },
+  "scope": {
+    "n_dataset_model_rows": 8640,
+    "n_datasets": 720,
+    "n_factor_audit_rows": 86400,
+    "n_fold_rows": 43200,
+    "n_models_per_rank": 4,
+    "n_scenarios": 36,
+    "primary_rank": 10,
+    "ranks": [
+      5,
+      10,
+      15
+    ]
+  },
+  "script_version": "05c1-fit-linear-simulation-baselines-v1-no-cli",
+  "shard_manifest": {
+    "n_rows": 720,
+    "path": "paper5\\method_contract\\05c1\\linear_baseline_shard_manifest.csv",
+    "sha256": "f1e5ab3896d2718a7445c4f5e8f18df83bdc89dacaf8554c560e7008648a759e"
+  },
+  "upstream_hashes": {
+    "paper5\\data_manifest\\TARGET_OS_technical_metadata\\TARGET_OS_technical_metadata_preflight_lock.json": "d40906a27d1120a128fd3a8efc489dd7d0ca97bf9631a48f9c7f3263d460b8bb",
+    "paper5\\data_manifest\\TARGET_OS_technical_metadata\\TARGET_OS_technical_metadata_preflight_manifest.json": "73232610dcd3f0e2c9a45d7c3a66c0eaac138766a9cf339ed03cd67d282ef532",
+    "paper5\\method_contract\\05a1\\simulation_and_technical_confound_addendum.json": "3aadb87386f796663e68b97fb608cb864c197013fe52c70ac5b37bed06e7a3e8",
+    "paper5\\method_contract\\05a1\\simulation_and_technical_confound_addendum_lock.json": "61969f36872e3e508a239d5e6903ae3395fd36ec74ee7aa4e31740a514c119e3",
+    "paper5\\method_contract\\05a\\ai_method_contract.json": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+    "paper5\\method_contract\\05a\\ai_method_contract_lock.json": "cc62dcc75c5f06e0c2c7220d1419392f8838b9eccad4ae916831689255dfc9f0",
+    "paper5\\method_contract\\05a\\failure_gate_registry.csv": "32b9bd92db7b6455744a4aba03c6cdd1e9966b1b8e408e7451147d407fd06083",
+    "paper5\\method_contract\\05a\\metric_registry.csv": "b0e70d2ccb8821ef44ef4d0baec5848edc4a156f139004317ff26e7bb518ee9b",
+    "paper5\\method_contract\\05a\\model_family_registry.csv": "b0a70a5f5df4b30a6aa2d4069e15d1d1b9fe3b770f8c5ef16248301acabf1a39",
+    "paper5\\method_contract\\05a\\model_selection_policy.json": "8d8b39d3d424e695324085ee533f13a555dada9b65acbc6718d7809ce07d0b44",
+    "paper5\\method_contract\\05a\\sable_mo_architecture_profiles.csv": "e5be64ebd2986a06f80288d78d10dcc739f05f157333ad6fc183a8d271aa9f5a",
+    "paper5\\method_contract\\05b_v2\\architecture_screening_data_manifest.csv": "f3980e88aff408b65cbfce96aca50bad4fc08ecece2bc42bbc04f365c35d9c87",
+    "paper5\\method_contract\\05b_v2\\simulation_generation_v2_lock.json": "1198da23059876a439183b35c8d095f8731bcddd98aa0964da2486995aefd524"
+  }
+}

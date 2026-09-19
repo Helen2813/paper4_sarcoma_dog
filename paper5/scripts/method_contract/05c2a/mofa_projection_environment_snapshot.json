@@ -1,0 +1,88 @@
+{
+  "created_at_utc": "2026-08-11T23:43:17.940696+00:00",
+  "mofa_dependencies_ready": true,
+  "mofapy2_api": {
+    "entry_point_parameters": {
+      "set_data_options": [
+        "self",
+        "scale_views",
+        "scale_groups",
+        "center_groups",
+        "use_float32"
+      ],
+      "set_model_options": [
+        "self",
+        "factors",
+        "spikeslab_factors",
+        "spikeslab_weights",
+        "ard_factors",
+        "ard_weights"
+      ],
+      "set_train_options": [
+        "self",
+        "iter",
+        "startELBO",
+        "freqELBO",
+        "startSparsity",
+        "tolerance",
+        "convergence_mode",
+        "startDrop",
+        "freqDrop",
+        "dropR2",
+        "nostop",
+        "verbose",
+        "quiet",
+        "seed",
+        "schedule",
+        "gpu_mode",
+        "gpu_device",
+        "weight_views",
+        "outfile",
+        "save_interrupted"
+      ]
+    },
+    "entry_point_signatures": {
+      "set_data_options": "(self, scale_views=False, scale_groups=False, center_groups=True, use_float32=False)",
+      "set_model_options": "(self, factors=10, spikeslab_factors=False, spikeslab_weights=True, ard_factors=False, ard_weights=True)",
+      "set_train_options": "(self, iter=1000, startELBO=1, freqELBO=1, startSparsity=50, tolerance=None, convergence_mode='fast', startDrop=1, freqDrop=1, dropR2=None, nostop=False, verbose=False, quiet=False, seed=None, schedule=None, gpu_mode=False, gpu_device: Optional[int] = None, weight_views=False, outfile=None, save_interrupted=False)"
+    },
+    "package": {
+      "installed": true,
+      "version": "0.7.3"
+    },
+    "required_api_parameters_verified": true
+  },
+  "packages": {
+    "mofapy2": {
+      "installed": true,
+      "version": "0.7.3"
+    },
+    "numpy": {
+      "installed": true,
+      "version": "2.2.6"
+    },
+    "pandas": {
+      "installed": true,
+      "version": "2.3.3"
+    },
+    "scikit-learn": {
+      "installed": true,
+      "version": "1.7.2"
+    },
+    "scipy": {
+      "installed": true,
+      "version": "1.15.3"
+    }
+  },
+  "platform": {
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "release": "10",
+    "system": "Windows",
+    "version": "10.0.26200"
+  },
+  "python": {
+    "executable": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\venv\\Scripts\\python.exe",
+    "version": "3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]"
+  }
+}

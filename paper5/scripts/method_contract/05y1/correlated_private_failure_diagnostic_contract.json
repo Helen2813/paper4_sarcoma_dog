@@ -1,0 +1,224 @@
+{
+  "analysis_role": "POSTUNBLINDING_EXPLORATORY_FAILURE_CHARACTERIZATION",
+  "contract_version": "paper5-05y1-postunblinding-correlated-private-diagnostic-v1",
+  "created_at_utc": "2026-09-16T00:15:45+00:00",
+  "factor_space_diagnostics": {
+    "claim_limit": "No universal identifiability claim. The strongest allowed wording is empirical separability within the frozen retention-summary space.",
+    "classifier": {
+      "C": 1.0,
+      "class_weight": "balanced",
+      "cluster_bootstrap": {
+        "replicates": 10000,
+        "seed": 20260915,
+        "unit": "dataset_key"
+      },
+      "fold_assignment_seed": 20260915,
+      "folds": 5,
+      "grouping": "dataset_key",
+      "metric": "out-of-fold ROC AUC",
+      "model": "L2 logistic regression",
+      "solver": "lbfgs",
+      "training_standardization": "StandardScaler fit within each training fold only"
+    },
+    "features_primary": [
+      "median_aligned_correlation",
+      "q10_aligned_correlation",
+      "inclusion_frequency"
+    ],
+    "negative_scenario_signature_anchor": "G19 non-retained factors versus STANDARD non-retained factors, using the same features/model/CV",
+    "positive_pipeline_anchor": "within G19: retained false-biological factors versus non-retained factors, using the same features/model/CV; interpreted only as calibration because retention itself is defined from these features",
+    "predefined_calibration_outputs": [
+      "target_AUC",
+      "negative_anchor_AUC",
+      "positive_anchor_AUC",
+      "absolute_distance_target_to_negative",
+      "absolute_distance_target_to_positive",
+      "boolean_target_closer_to_negative_than_positive"
+    ],
+    "target_contrast": "G19 retained false-biological factors versus STANDARD retained biological-truth-matched factors"
+  },
+  "implementation_integrity": {
+    "environment_snapshot": {
+      "path": "paper5/method_contract/05a/environment_snapshot.json",
+      "sha256": "ac8b1fa44b0aad798ae799e723d02fea0642615c26f819bcc5ac5198dfc9ac92",
+      "size_bytes": 1162
+    },
+    "generator_function": "generate_private_scores",
+    "generator_source": {
+      "path": "paper5/scripts/05b_generate_small_n_multiomics_simulations_v2.py",
+      "sha256": "b4adb1fcb32b65a998ee70e1b72d52e13490194c7ad8e5ddd802b95bf05a28db",
+      "size_bytes": 109309
+    },
+    "pre_private_rng_call": "generate_correlated_scores(root_rng, n, scenario.n_shared_factors, scenario.shared_factor_correlation)",
+    "replay_must_use_exact_frozen_generator_source": true,
+    "rng_initialization": "np.random.default_rng(simulation_seed)",
+    "seed_source": "frozen simulation seed associated with each sealed G19 dataset; implementation may read it from 05f2 manifest or sealed dataset metadata but must verify consistency"
+  },
+  "interpretation_precommitment": {
+    "broad_realized_correlation_pattern": "If failures are distributed across lower and middle realized-rho quintiles rather than concentrated toward the upper tail, state that the frozen criterion's failure is not confined to near-equivalence realizations and that a new information source would be required for a prospective discriminator.",
+    "frontier_pattern": "If reducing G19 false acceptance requires lower STANDARD recovery, characterize the overlap as an empirical trade-off in the frozen summary space. If grid points dominate the frozen point, report them descriptively but do not adopt a new threshold without fresh-seed prospective validation.",
+    "high_realized_correlation_pattern": "If failure rates rise across predictor-only realized-rho quintiles, discuss this as consistent with increasing observational similarity of correlated-private and shared structure within this simulator; do not generalize as a theorem."
+  },
+  "primary_dataset_level_diagnostic": {
+    "absolute_value": false,
+    "definition": "Replay the exact frozen 05b G19 private-score generator from each dataset's frozen simulation_seed and exact pre-private RNG call order. For each of the 2 private factors, compute Pearson correlation across each of the 3 unordered view pairs in the returned standardized private-score matrices. The primary dataset scalar is the arithmetic mean of these 6 signed Pearson correlations.",
+    "factor_pairing": "same private-factor column only; no cross-factor matching",
+    "integrity_reference": {
+      "datasets": 200,
+      "events": 70
+    },
+    "outcome_blind_curve": {
+      "additional_contrast": "Q5 minus Q1 failure-rate difference",
+      "bins": 5,
+      "construction": "realized-correlation quintile cutpoints computed from predictor values only, before attaching false-acceptance labels",
+      "no_pass_fail_interpretation": true,
+      "report": "numerator/denominator, rate, Wilson 95% CI per quintile"
+    },
+    "predictor_name": "realized_private_cross_view_correlation",
+    "primary_statistic": "ROC AUC for higher realized correlation predicting dataset false acceptance",
+    "response": "dataset-level false biological acceptance event: at least one factor with false_biological_acceptance=true",
+    "secondary_predictor_summaries": [
+      "median of the 6 same-factor pairwise correlations",
+      "minimum of the 6 same-factor pairwise correlations",
+      "maximum of the 6 same-factor pairwise correlations",
+      "standard deviation of the 6 same-factor pairwise correlations"
+    ],
+    "uncertainty": {
+      "interval": "2.5th and 97.5th percentiles",
+      "method": "stratified dataset bootstrap of AUC",
+      "replicates": 10000,
+      "seed": 20260915
+    },
+    "view_pairing": "all 3 unordered pairs among the frozen VIEWS"
+  },
+  "scenarios": {
+    "correlated_private": {
+      "datasets": 200,
+      "n_private_factors_per_view": 2,
+      "n_samples": 62,
+      "nominal_private_cross_view_correlation": 0.6,
+      "scenario_id": "G19_CORRELATED_PRIVATE_NULL_N62"
+    },
+    "standard_true_shared_control": {
+      "datasets": 100,
+      "formal_D02_denominator": 400,
+      "scenario_id": "G07_IND_N62_S1P00"
+    }
+  },
+  "scientific_boundary": {
+    "TARGET_or_outcomes_accessed": false,
+    "claim_role": "EXPLORATORY_CHARACTERIZATION_ONLY",
+    "formal_05f3e_gate_reopened": false,
+    "formal_D01_reweighted": false,
+    "model_refit_of_SABLE_MO": false,
+    "new_threshold_selected_on_same_data": false,
+    "threshold_retuning": false
+  },
+  "script_version": "05y1-freeze-correlated-private-failure-diagnostic-contract-v1-no-cli",
+  "sources": {
+    "05a1_scenario_registry": {
+      "path": "paper5/method_contract/05a1/final_gate_calibration_scenarios.csv",
+      "sha256": "8695887dc0b27b69d87fa944ce1068fe149718ddf6c00a7d91e71ee1b1b306c2",
+      "size_bytes": 13650
+    },
+    "05a_environment_snapshot": {
+      "path": "paper5/method_contract/05a/environment_snapshot.json",
+      "sha256": "ac8b1fa44b0aad798ae799e723d02fea0642615c26f819bcc5ac5198dfc9ac92",
+      "size_bytes": 1162
+    },
+    "05a_method_contract": {
+      "path": "paper5/method_contract/05a/ai_method_contract.json",
+      "sha256": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+      "size_bytes": 10644
+    },
+    "05f2_progress_manifest": {
+      "path": "paper5/method_contract/05f2/full_run_progress_manifest.csv",
+      "sha256": "24a5d1e5c0b340254c12ff53dc1cd9209813e1bc98f4dee02c581e59706c2e6e",
+      "size_bytes": 1119616
+    },
+    "05f3e_lock": {
+      "path": "paper5/method_contract/05f3e/final_gate_results_lock.json",
+      "sha256": "6d691237662d633a4f8d8294126a33b32c5694372a6e58de71bd45731d67c397",
+      "size_bytes": 3302
+    },
+    "05f4b_lock": {
+      "path": "paper5/method_contract/05f4b/05f4b_manuscript_assets_lock.json",
+      "sha256": "43bee35781ff1d70e1f2b7f8bfd762847becc3893c9a09653eb968a889d0f28f",
+      "size_bytes": 5322
+    },
+    "05x2b_lock": {
+      "path": "paper5/method_contract/05x2b/05x2b_results_lock.json",
+      "sha256": "410f1ddb1fcd03c20627335c41b441ff3373ec88547a1e0026d6b072cc2b3950",
+      "size_bytes": 2201
+    },
+    "05y0b_lock": {
+      "path": "paper5/method_contract/05y0b/05y0b_preflight_lock.json",
+      "sha256": "515fef09082d188ad094f1d92a24f783e5ab1ca215acd76cae1b07e878c1aae0",
+      "size_bytes": 1062
+    },
+    "05y0c_lock": {
+      "path": "paper5/method_contract/05y0c/05y0c_preflight_lock.json",
+      "sha256": "9ae15c9c7e2ad78fc34dc97158666d0522580e928b477458d58c62514e02181d",
+      "size_bytes": 1430
+    },
+    "05y0d_lock": {
+      "path": "paper5/method_contract/05y0d/05y0d_preflight_lock.json",
+      "sha256": "63bb8e3d90471fde051ad1264f3cb034b145eceb0458330f4f0252f6008d3892",
+      "size_bytes": 1333
+    },
+    "05y0d_report": {
+      "path": "paper5/method_contract/05y0d/private_score_generator_contract.json",
+      "sha256": "46775da058dd5d179a2943f74f152b5dd725078de8cd9514ea01f97851ad7821",
+      "size_bytes": 3012
+    }
+  },
+  "status": "FROZEN_POSTUNBLINDING_EXPLORATORY_DIAGNOSTIC_BEFORE_RESULT_COMPUTATION",
+  "threshold_frontier": {
+    "G19_metric": "dataset false-acceptance rate: any candidate-retained factor that is neither technical-truth-matched nor biological-truth-matched",
+    "STANDARD_metric": "candidate-retained biological-truth-matched factor count divided by the frozen 400 STANDARD truth-factor opportunities; implementation must reproduce the frozen D02 numerator 371 at the frozen point",
+    "candidate_rule": "median>=m AND q10>=q AND inclusion>=i AND variance>=0.0001 AND n_supported_modalities>=2",
+    "fixed_constraints": {
+      "n_supported_modalities_min": 2,
+      "reference_factor_variance_min": 0.0001
+    },
+    "frozen_point": {
+      "G19_reference": [
+        70,
+        200
+      ],
+      "STANDARD_reference": [
+        371,
+        400
+      ],
+      "inclusion": 0.8,
+      "median": 0.7,
+      "q10": 0.4
+    },
+    "pareto_definition": "A grid point is dominated if another point has no higher G19 false-acceptance rate and no lower STANDARD recovery, with at least one strict improvement.",
+    "report": [
+      "all grid points",
+      "Pareto-efficient flag",
+      "whether frozen point is Pareto-efficient",
+      "number of grid points dominating frozen point"
+    ],
+    "role": "POSTUNBLINDING_EXPLORATORY_FRONTIER_NO_SELECTION",
+    "selection_from_frontier": "FORBIDDEN",
+    "swept_thresholds": {
+      "inclusion_frequency": [
+        0.0,
+        1.0,
+        0.05
+      ],
+      "median_aligned_correlation": [
+        0.0,
+        1.0,
+        0.05
+      ],
+      "q10_aligned_correlation": [
+        0.0,
+        1.0,
+        0.05
+      ]
+    }
+  }
+}

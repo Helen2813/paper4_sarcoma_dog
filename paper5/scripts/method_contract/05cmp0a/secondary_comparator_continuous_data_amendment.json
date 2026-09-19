@@ -1,0 +1,40 @@
+{
+  "amendment_version": "sable-mo-secondary-comparator-continuous-data-amendment-v1",
+  "amends": "05cmp0 classical comparator method choice only",
+  "base_classical_comparator": "iClusterBayes2",
+  "created_at_utc": "2026-08-21T22:20:07+00:00",
+  "deep_comparator_unchanged": "MOVE",
+  "deep_fallback_unchanged": "AUTOENCODIX varix",
+  "effective_classical_comparator": "iCluster2b",
+  "next_comparator_stage": "Use 05cmp0 + 05cmp0a together as the effective comparator selection layer. Proceed to installation/synthetic smoke testing, then freeze exact implementations in 05cmp1.",
+  "prospective_state": {
+    "05d5_results_used": false,
+    "05d5_state": "IN_PROGRESS",
+    "05e_results_exist": false,
+    "TARGET_outcomes_accessed": false,
+    "TARGET_representation_results_exist": false,
+    "secondary_comparator_scientific_results_exist": false
+  },
+  "reason": "Official current iClusterPlus documentation recommends iCluster2b/tune.iCluster2b for continuous multi-omics data and iClusterBayes2 for mixed data types. Paper 5 uses continuous-valued RNA, methylation, and CNV analysis matrices. This correction is frozen before comparator installation smoke tests and before any scientific comparator result.",
+  "same_package_fallback": "iClusterBayes2",
+  "script_version": "05cmp0a-amend-classical-comparator-continuous-data-path-v1-no-cli",
+  "status": "FROZEN_COMPARATOR_METHOD_CORRECTION_BEFORE_SCIENTIFIC_RUNS",
+  "unchanged_05cmp0_rules": [
+    "secondary-only role",
+    "no influence on 05e primary method freeze",
+    "no influence on final-gate thresholds",
+    "synthetic smoke tests only before 05e",
+    "exact implementation must be frozen in 05cmp1 before scientific runs",
+    "no outcome or biological labels for comparator configuration",
+    "MOVE remains required deep comparator",
+    "AUTOENCODIX varix remains MOVE-only fallback"
+  ],
+  "upstream_hashes": {
+    "05a2_lock": "052544f9230c961ac8d4e6b6cc8f763653fffc6b531468af1f21fa4c28da0932",
+    "05cmp0_candidate_registry": "f0ddaf1fea5377f1d829a958b3e04377471abca4860e2556951a7c3a4043d2ea",
+    "05cmp0_contract": "fd4f16510ca9b11fb78a6aad65911e526b4b0c0e12abcc5a40a4df2d5a50b699",
+    "05cmp0_lock": "b0f7eb2de3afa52d8fc54894eb82aef8e8a5d10d64c456f0bdf4f927084b6dfe",
+    "05cmp0_selected_registry": "e8ee91b573005ad7cb686d21f7a6cd408327b212b74c06f684e1833a132ebb25",
+    "05dev0_lock": "8300b430bdf8ee641443782809816c2691777644a534e9ecbc2669b9f7ed7eb9"
+  }
+}

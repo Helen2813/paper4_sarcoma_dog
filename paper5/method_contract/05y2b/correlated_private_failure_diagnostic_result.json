@@ -1,0 +1,102 @@
+{
+  "GPU_computation": false,
+  "SABLE_MO_refit": false,
+  "analysis_role": "POSTUNBLINDING_EXPLORATORY_FAILURE_CHARACTERIZATION",
+  "factor_space_calibration": {
+    "absolute_distance_target_to_negative": 0.17458711517403291,
+    "absolute_distance_target_to_positive": 0.0322081016815462,
+    "classifier_rows": [
+      {
+        "ci95_high": 0.9807325111519285,
+        "ci95_low": 0.9503427401560035,
+        "contrast": "target",
+        "fold_audit_json": "[{\"fold\": 0, \"test_groups\": 34, \"test_negative_rows\": 76, \"test_positive_rows\": 18, \"test_rows\": 94, \"train_groups\": 136, \"train_negative_rows\": 295, \"train_positive_rows\": 59, \"train_rows\": 354}, {\"fold\": 1, \"test_groups\": 34, \"test_negative_rows\": 76, \"test_positive_rows\": 15, \"test_rows\": 91, \"train_groups\": 136, \"train_negative_rows\": 295, \"train_positive_rows\": 62, \"train_rows\": 357}, {\"fold\": 2, \"test_groups\": 34, \"test_negative_rows\": 65, \"test_positive_rows\": 17, \"test_rows\": 82, \"train_groups\": 136, \"train_negative_rows\": 306, \"train_positive_rows\": 60, \"train_rows\": 366}, {\"fold\": 3, \"test_groups\": 34, \"test_negative_rows\": 75, \"test_positive_rows\": 14, \"test_rows\": 89, \"train_groups\": 136, \"train_negative_rows\": 296, \"train_positive_rows\": 63, \"train_rows\": 359}, {\"fold\": 4, \"test_groups\": 34, \"test_negative_rows\": 79, \"test_positive_rows\": 13, \"test_rows\": 92, \"train_groups\": 136, \"train_negative_rows\": 292, \"train_positive_rows\": 64, \"train_rows\": 356}]",
+        "n_dataset_groups": 170,
+        "n_factor_rows": 448,
+        "n_negative_factor_rows": 371,
+        "n_positive_factor_rows": 77,
+        "oof_auc": 0.9669898834319319
+      },
+      {
+        "ci95_high": 0.866024523739201,
+        "ci95_low": 0.7077961744350835,
+        "contrast": "negative_anchor",
+        "fold_audit_json": "[{\"fold\": 0, \"test_groups\": 49, \"test_negative_rows\": 9, \"test_positive_rows\": 188, \"test_rows\": 197, \"train_groups\": 197, \"train_negative_rows\": 40, \"train_positive_rows\": 735, \"train_rows\": 775}, {\"fold\": 1, \"test_groups\": 50, \"test_negative_rows\": 12, \"test_positive_rows\": 182, \"test_rows\": 194, \"train_groups\": 196, \"train_negative_rows\": 37, \"train_positive_rows\": 741, \"train_rows\": 778}, {\"fold\": 2, \"test_groups\": 49, \"test_negative_rows\": 10, \"test_positive_rows\": 173, \"test_rows\": 183, \"train_groups\": 197, \"train_negative_rows\": 39, \"train_positive_rows\": 750, \"train_rows\": 789}, {\"fold\": 3, \"test_groups\": 49, \"test_negative_rows\": 9, \"test_positive_rows\": 192, \"test_rows\": 201, \"train_groups\": 197, \"train_negative_rows\": 40, \"train_positive_rows\": 731, \"train_rows\": 771}, {\"fold\": 4, \"test_groups\": 49, \"test_negative_rows\": 9, \"test_positive_rows\": 188, \"test_rows\": 197, \"train_groups\": 197, \"train_negative_rows\": 40, \"train_positive_rows\": 735, \"train_rows\": 775}]",
+        "n_dataset_groups": 246,
+        "n_factor_rows": 972,
+        "n_negative_factor_rows": 49,
+        "n_positive_factor_rows": 923,
+        "oof_auc": 0.792402768257899
+      },
+      {
+        "ci95_high": 0.9999124394372775,
+        "ci95_low": 0.9980696827273399,
+        "contrast": "positive_anchor",
+        "fold_audit_json": "[{\"fold\": 0, \"test_groups\": 40, \"test_negative_rows\": 185, \"test_positive_rows\": 15, \"test_rows\": 200, \"train_groups\": 160, \"train_negative_rows\": 738, \"train_positive_rows\": 62, \"train_rows\": 800}, {\"fold\": 1, \"test_groups\": 40, \"test_negative_rows\": 183, \"test_positive_rows\": 17, \"test_rows\": 200, \"train_groups\": 160, \"train_negative_rows\": 740, \"train_positive_rows\": 60, \"train_rows\": 800}, {\"fold\": 2, \"test_groups\": 40, \"test_negative_rows\": 186, \"test_positive_rows\": 14, \"test_rows\": 200, \"train_groups\": 160, \"train_negative_rows\": 737, \"train_positive_rows\": 63, \"train_rows\": 800}, {\"fold\": 3, \"test_groups\": 40, \"test_negative_rows\": 188, \"test_positive_rows\": 12, \"test_rows\": 200, \"train_groups\": 160, \"train_negative_rows\": 735, \"train_positive_rows\": 65, \"train_rows\": 800}, {\"fold\": 4, \"test_groups\": 40, \"test_negative_rows\": 181, \"test_positive_rows\": 19, \"test_rows\": 200, \"train_groups\": 160, \"train_negative_rows\": 742, \"train_positive_rows\": 58, \"train_rows\": 800}]",
+        "n_dataset_groups": 200,
+        "n_factor_rows": 1000,
+        "n_negative_factor_rows": 923,
+        "n_positive_factor_rows": 77,
+        "oof_auc": 0.9991979851134781
+      }
+    ],
+    "target_closer_to_negative_than_positive": false
+  },
+  "formal_final_gate_consequence": "NONE",
+  "guardrails": [
+    "No new threshold is selected or adopted from the exploratory frontier.",
+    "No formal D01/D02/D03 decision is changed.",
+    "No universal identifiability theorem is claimed.",
+    "Any prospective discriminator or threshold modification requires fresh-seed validation."
+  ],
+  "implementation_recovery": {
+    "anchors_changed": false,
+    "classifier_changed": false,
+    "failed_runner_sha256": "6685ab1fb52e56c608c41554bf1e88536e7bbdf6681f5fee744747d885062c29",
+    "failed_stage": "05y2",
+    "failure": "Custom grouped-fold allocator produced a held-out fold with only one class before any factor-space classifier result was emitted.",
+    "features_changed": false,
+    "metric_changed": false,
+    "primary_realized_rho_definition_changed": false,
+    "recovery": "Replace only the fold-allocation implementation with deterministic sklearn StratifiedGroupKFold using the already-frozen 5 folds and seed.",
+    "scientific_contract_changed": false,
+    "threshold_frontier_changed": false
+  },
+  "primary_realized_rho_diagnostic": {
+    "auc_ci95_high": 0.6604395604395604,
+    "auc_ci95_low": 0.4957142857142857,
+    "auc_higher_rho_predicts_failure": 0.5786813186813187,
+    "false_acceptance_events": 70,
+    "n_datasets": 200,
+    "predictor_only_quintile_cutpoints": [
+      0.577715569737062,
+      0.5937423287262856,
+      0.6061807565653171,
+      0.6223874972971829
+    ],
+    "q5_minus_q1_failure_rate": 0.19999999999999996,
+    "quintile_failure_rates_monotone_non_decreasing": false,
+    "realized_rho_mean_across_datasets": 0.6005079135554995,
+    "realized_rho_sd_across_datasets": 0.026373970122028773
+  },
+  "script_version": "05y2b-run-correlated-private-failure-diagnostics-fast-cpu-v2-fold-recovery-no-cli",
+  "status": "POSTUNBLINDING_EXPLORATORY_FAILURE_DIAGNOSTICS_COMPLETE",
+  "threshold_frontier": {
+    "frozen_point": {
+      "dominates_frozen_point": false,
+      "g19_false_event_denominator": 200,
+      "g19_false_event_numerator": 70,
+      "g19_false_event_rate": 0.35,
+      "inclusion_threshold": 0.8,
+      "is_pareto_efficient": false,
+      "median_threshold": 0.7,
+      "q10_threshold": 0.4,
+      "standard_recovery_denominator": 400,
+      "standard_recovery_numerator": 371,
+      "standard_recovery_rate": 0.9275
+    },
+    "frozen_point_pareto_efficient": false,
+    "grid_points": 9261,
+    "n_grid_points_dominating_frozen": 31
+  }
+}

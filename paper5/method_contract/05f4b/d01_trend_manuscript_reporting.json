@@ -1,0 +1,36 @@
+{
+  "converged": false,
+  "event_count": 0,
+  "iterations": 100,
+  "manuscript_ci95_high": null,
+  "manuscript_ci95_low": null,
+  "manuscript_odds_ratio_per_25": null,
+  "n_datasets": 800,
+  "per_n_event_counts": [
+    {
+      "datasets": 200,
+      "events": 0,
+      "n_samples": 50
+    },
+    {
+      "datasets": 200,
+      "events": 0,
+      "n_samples": 62
+    },
+    {
+      "datasets": 200,
+      "events": 0,
+      "n_samples": 75
+    },
+    {
+      "datasets": 200,
+      "events": 0,
+      "n_samples": 100
+    }
+  ],
+  "posthoc_replacement_model_fitted": false,
+  "raw_prespecified_model_record_source": "paper5/method_contract/05f3e/d01_independent_null_sample_size_trend.json",
+  "raw_record_retained_for_audit": true,
+  "reason": "The prespecified unpenalized logistic sample-size trend is not estimable in a meaningful way because there were zero false-acceptance events in all 800 independent-null datasets and in every prespecified sample-size cell. Do not report the raw OR or its odds-scale Wald CI.",
+  "reporting_status": "NON_ESTIMABLE_ZERO_EVENTS"
+}

@@ -1,0 +1,28 @@
+{
+  "status": "06D1_V2_V1_POSTFREEZE_TECHNICAL_STATUS_AUDIT_FROZEN",
+  "script_version": "06d1-audit-v1-postfreeze-technical-status-v2-no-cli",
+  "created_at_utc": "2026-10-07T21:20:05.605732+00:00",
+  "audit_report": {
+    "path": "method_contract/06d1_v2/v1_postfreeze_technical_status_audit_v2.json",
+    "sha256": "2922febd47109d3f48e013d5a8a36c49042c5b18027560557b5f2c3912def1c8",
+    "size_bytes": 6551
+  },
+  "coordinate_status_table": {
+    "path": "method_contract/06d1_v2/v1_shared_coordinate_technical_status_v2.csv",
+    "sha256": "8f9035333716782516ab7cd24d47bce573f36fb6b2373527a096dee56c8896ad",
+    "size_bytes": 1185
+  },
+  "selected_model": "V1_SHARED_PRIVATE_AE",
+  "primary_seed": 1103,
+  "strict_usable_technical_covariates": 0,
+  "technical_association_test_performed": false,
+  "technical_status": "UNKNOWN_NO_STRICT_USABLE_TECHNICAL_COVARIATES",
+  "q10_060_for_v1": "FORBIDDEN",
+  "q10_040_for_v1": "FORBIDDEN",
+  "sable_mo_stability_gate_for_v1": "FORBIDDEN",
+  "target_molecular_matrices_read": false,
+  "biological_annotations_read": false,
+  "clinical_or_outcome_values_read": false,
+  "target_model_fit_or_refit": false,
+  "06b_06c_06c3_rewritten": false
+}

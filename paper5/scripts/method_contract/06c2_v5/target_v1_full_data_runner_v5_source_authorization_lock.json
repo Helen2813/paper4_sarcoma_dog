@@ -1,0 +1,65 @@
+{
+  "status": "06C2_V5_TARGET_V1_FULL_DATA_RUNNER_SOURCE_AUTHORIZED",
+  "script_version": "06c2-freeze-target-v1-full-data-runner-v5-source-authorization-v1-no-cli",
+  "created_at_utc": "2026-10-07T16:47:35.973364+00:00",
+  "target_molecular_values_read": false,
+  "target_outcomes_clinical_biology_read": false,
+  "target_model_fit": false,
+  "scientific_target_full_data_results_read": false,
+  "runner_source": {
+    "path": "scripts/06c_run_target_v1_full_data_refit_gpu_v5.py",
+    "sha256": "a2d87f4d7bd8ad7ca6493361ca2405944e8de2b4f3f3117215f3c54dd3d8c22c",
+    "script_version": "06c-run-target-v1-full-data-refit-gpu-v5-exact-authorized-v4-profile-variant-path-two-stage-no-cli",
+    "size_bytes": 44065
+  },
+  "synthetic_selftest": {
+    "path": "method_contract/06c_preflight/target_v1_full_data_runner_synthetic_selftest_v5.json",
+    "sha256": "453396c58baa0148a2b420274208d02be559c73c58184916064d369fd560ca45",
+    "status": "06C_V5_TARGET_V1_FULL_DATA_RUNNER_SYNTHETIC_SELFTEST_PASS",
+    "fit_availability_candidate_index": 1,
+    "encode_availability_candidate_index": 1,
+    "patient_shared_shape": [
+      36,
+      5
+    ]
+  },
+  "frozen_upstream": {
+    "06c_contract_sha256": "8ab8516e30964f220d0f1204ca892e29ca337691e06cbcbf29315e1cb6aec2e5",
+    "06c_lock_sha256": "1c3b4fb36706dc6afd0208fda23b1dc6d51c2953b4ccb9541099466aea13a374",
+    "authorized_06b_v4_sha256": "4f69680a2d26d6c8e4bd5b337a5e94e6cdc36d149ea6a4b9af547b3855a93eab"
+  },
+  "static_source_audit": {
+    "functions_with_real_target_loader": [
+      "run_real"
+    ],
+    "main_authorization_gate": "PASS",
+    "exact_frozen_reuse_path": "PASS",
+    "separate_first_success_fit_and_encode": "PASS"
+  },
+  "authorized_scientific_execution": {
+    "model_id": "V1_SHARED_PRIVATE_AE",
+    "profile_id": "ARCH_COMPACT__REG_WEAK",
+    "n_cases": 78,
+    "primary_seed": 1103,
+    "reproducibility_only_seeds": [
+      2207,
+      3301
+    ],
+    "fixed_epochs": 400,
+    "availability_semantics": "authorized_06b_v4_ordered_first_success",
+    "post_fit_seed_selection": false,
+    "post_fit_epoch_selection": false,
+    "seed_ensemble_or_averaging": false,
+    "q10_transfer_to_v1": false
+  },
+  "historical_pre_authorization_boundaries": {
+    "v1_sha256": "06842dc803d17c3ea3789262655429481c081232ed8828b6e0d2cce56cb2703f",
+    "v2_sha256": "8901ea9dd3870ade3910934fba6106ae4b0fa4b8a6d2183e0cea9dd802962f9c",
+    "v3_sha256": "9d27534767434b1c8e41f46731ea8cd48c16fbdf1813ea3d85cf6a0cdfef1777",
+    "v4_sha256": "75297d8b4c92083b020d2396cad3c83ea236bd905f6e62f826dec14138925980",
+    "all_v1_to_v4_real_target_molecular_values_read": false,
+    "all_v1_to_v4_target_scientific_fit_performed": false,
+    "v4_note": "Synthetic PASS but not authorized because its internal SCRIPT_VERSION still carried the v3 identity label."
+  },
+  "authorization_rule": "Only this exact runner SHA is authorized. Any source change requires a new synthetic PASS and new source authorization before real TARGET execution."
+}

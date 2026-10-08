@@ -1,0 +1,92 @@
+{
+  "status": "06E2A_V3_V2_FROZEN_BIOLOGICAL_RESULT_READONLY_AUDIT_PASS",
+  "script_version": "06e2a-v3-readonly-audit-v2-exact-case-index-schema-no-cli",
+  "created_at_utc": "2026-10-08T00:54:33.620950+00:00",
+  "runner_sha256": "77fbe2d681ddaa906db71c93a654c5f6ddac1fed10c5ad96fcd211db48f78d26",
+  "authorization_lock_sha256": "0c84dcac02be3299e7f324332419e5e8076763ca7819a6497040e5397e9c4549",
+  "result_lock_sha256": "2efe6ed3f40971c5cf8dc85a55ab3c24d4ce90ce45444e8f0e8908a187a9d890",
+  "chronology": {
+    "authorization_created_at_utc": "2026-10-08T00:32:41.629746+00:00",
+    "result_lock_created_at_utc": "2026-10-08T00:37:24.782665+00:00",
+    "authorization_precedes_result": true
+  },
+  "checks": {
+    "exact_result_file_set_and_hashes": "PASS",
+    "coordinate_rows_4x5": "PASS",
+    "best_coordinate_consistency": "PASS",
+    "random_draw_rows_4x1000": "PASS",
+    "plus_one_empirical_probability_replay": "PASS",
+    "bh_q4_replay": "PASS",
+    "membership_rows_287000": "PASS",
+    "random_panels_exclude_primary_anchor_union": "PASS",
+    "within_panel_without_replacement": "PASS",
+    "zero_fallback_replay": "PASS",
+    "score_rows_78": "PASS",
+    "case_order_schema_case_index_case_id": "PASS",
+    "case_index_exact_0_to_77": "PASS",
+    "score_ddof1_standardization": "PASS",
+    "all_20_spearman_correlations_replayed_from_frozen_V1": "PASS",
+    "scientific_firewalls": "PASS"
+  },
+  "program_results": {
+    "M34": {
+      "n_strict_genes": 162,
+      "observed_max_abs_spearman": 0.5106665486412322,
+      "best_coordinate_id": "V1_SHARED_04",
+      "best_signed_spearman": -0.5106665486412322,
+      "null_median": 0.3289621770634429,
+      "null_q05": 0.26090238875049,
+      "null_q95": 0.4065238558909444,
+      "null_exceedances": 0,
+      "empirical_p_plus1": 0.000999000999000999,
+      "bh_q_4": 0.003996003996003996,
+      "support": true
+    },
+    "M40": {
+      "n_strict_genes": 111,
+      "observed_max_abs_spearman": 0.3946053946053946,
+      "best_coordinate_id": "V1_SHARED_01",
+      "best_signed_spearman": 0.3946053946053946,
+      "null_median": 0.3118274130932358,
+      "null_q05": 0.21963479558416263,
+      "null_q95": 0.41190834481973715,
+      "null_exceedances": 85,
+      "empirical_p_plus1": 0.08591408591408592,
+      "bh_q_4": 0.17182817182817184,
+      "support": false
+    },
+    "M11": {
+      "n_strict_genes": 7,
+      "observed_max_abs_spearman": 0.1509756066718092,
+      "best_coordinate_id": "V1_SHARED_04",
+      "best_signed_spearman": -0.1509756066718092,
+      "null_median": 0.2870800085989959,
+      "null_q05": 0.15067970004678866,
+      "null_q95": 0.4553193641801236,
+      "null_exceedances": 948,
+      "empirical_p_plus1": 0.948051948051948,
+      "bh_q_4": 0.948051948051948,
+      "support": false
+    },
+    "M24": {
+      "n_strict_genes": 7,
+      "observed_max_abs_spearman": 0.3293036077846204,
+      "best_coordinate_id": "V1_SHARED_05",
+      "best_signed_spearman": -0.3293036077846204,
+      "null_median": 0.28113658493405325,
+      "null_q05": 0.1596643862466647,
+      "null_q95": 0.4482239279707633,
+      "null_exceedances": 302,
+      "empirical_p_plus1": 0.3026973026973027,
+      "bh_q_4": 0.40359640359640364,
+      "support": false
+    }
+  },
+  "scientific_state": {
+    "paper4_expression_or_weight_rows_read_in_audit": false,
+    "target_expression_values_read_in_audit": false,
+    "target_clinical_or_outcomes_read_in_audit": false,
+    "model_fit_or_refit": false,
+    "frozen_scientific_outputs_rewritten": false
+  }
+}

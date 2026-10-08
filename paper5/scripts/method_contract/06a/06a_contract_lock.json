@@ -1,0 +1,27 @@
+{
+  "status": "06A_TARGET_APPLICATION_CONTRACT_FROZEN",
+  "script_version": "06a-freeze-target-application-contract-v3-no-cli",
+  "created_at_utc": "2026-09-19T19:22:00.546771+00:00",
+  "contract": {
+    "path": "method_contract/06a/target_application_contract.json",
+    "sha256": "4459333373437d262fb0d37ec88b6767c7df31dca397f8604756cf2055229dcf",
+    "size_bytes": 6389
+  },
+  "readme": {
+    "path": "method_contract/06a/06a_README.txt",
+    "sha256": "3dfae003a51b6ef8f64875562435cbdea794f8b71ad8e0b110c1f5953d5eef4a",
+    "size_bytes": 892
+  },
+  "script_source": {
+    "path": "scripts/06a_freeze_target_application_contract_v3.py",
+    "sha256": "f273bb0a6782e70d36b7226dc310edbc4699fd965e61f0b974f477b515ca3058",
+    "size_bytes": 14021
+  },
+  "primary_q10": 0.6,
+  "historical_sensitivity_q10": 0.4,
+  "sensitivity_is_fallback": false,
+  "target_data_read": false,
+  "target_outcomes_read": false,
+  "target_fit_performed": false,
+  "threshold_retuning_after_target": false
+}

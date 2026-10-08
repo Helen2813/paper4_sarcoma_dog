@@ -1,0 +1,96 @@
+{
+  "status": "06C3_TARGET_V1_FULL_DATA_REFIT_RESULTS_FROZEN",
+  "script_version": "06c-run-target-v1-full-data-refit-gpu-v7-exact-authorized-v4-profile-variant-path-two-stage-no-cli",
+  "created_at_utc": "2026-10-07T17:17:04.217732+00:00",
+  "runner_source": {
+    "path": "scripts/06c_run_target_v1_full_data_refit_gpu_v7.py",
+    "sha256": "006f718de8b0a1f768f8b4b7c35e4951719970f4d91ef43fa75541c74c8dc3bb"
+  },
+  "source_authorization_lock": {
+    "path": "method_contract/06c2_v7/target_v1_full_data_runner_v7_source_authorization_lock.json",
+    "sha256": "f072de8b623d54ca2623dcce3a76ce9283ae8c230ab34f83d2d3336075da433b"
+  },
+  "06c_contract_sha256": "8ab8516e30964f220d0f1204ca892e29ca337691e06cbcbf29315e1cb6aec2e5",
+  "06c_lock_sha256": "1c3b4fb36706dc6afd0208fda23b1dc6d51c2953b4ccb9541099466aea13a374",
+  "model_id": "V1_SHARED_PRIVATE_AE",
+  "profile_id": "ARCH_COMPACT__REG_WEAK",
+  "primary_seed": 1103,
+  "reproducibility_only_seeds": [
+    2207,
+    3301
+  ],
+  "fixed_epochs": 400,
+  "post_fit_seed_selection_performed": false,
+  "q10_applied_to_v1": false,
+  "outcomes_clinical_biology_accessed": false,
+  "result_files": {
+    "target_v1_fit_audit_seed1103.json": {
+      "sha256": "7be0cc5b553faf868c504c8a5231ca1c10f6524ca85eac98a72455c7bd47c9b4",
+      "size_bytes": 4125
+    },
+    "target_v1_fit_audit_seed2207.json": {
+      "sha256": "201dcb14d3f4c72f40e0057f564b9b90125ca39262a5b8e510154fe96fbe8c42",
+      "size_bytes": 4140
+    },
+    "target_v1_fit_audit_seed3301.json": {
+      "sha256": "bb110b119c8eaed23196201675c0dd7384f5f79c7b2b396d6509bec90efa2428",
+      "size_bytes": 4134
+    },
+    "target_v1_full_data_case_order.csv": {
+      "sha256": "f259778ecfe8a19e83d366615734d0318b14738267af2162ff45f0d240b26f96",
+      "size_bytes": 1648
+    },
+    "target_v1_full_data_model_input_CNV.npy": {
+      "sha256": "e80bd1dd600398ad86def45231df99b62257754a32c9921ecd840785fb81d8ef",
+      "size_bytes": 3248
+    },
+    "target_v1_full_data_model_input_METHYLATION.npy": {
+      "sha256": "12c2dc16c5c2dbe9b85dd12ae86e52b876f6c4996c8d0b16e405f128ed0e300f",
+      "size_bytes": 3248
+    },
+    "target_v1_full_data_model_input_RNA.npy": {
+      "sha256": "65c7f97293dd6f459013e2322d376269f9de4393d846e7bdc65904600d2829cd",
+      "size_bytes": 3248
+    },
+    "target_v1_full_data_refit_summary.json": {
+      "sha256": "17687ee34483f01876a85d1690c92bedb6a897ad02f62b9f0c804c7bc015ea4a",
+      "size_bytes": 8948
+    },
+    "target_v1_model_state_seed1103.pt": {
+      "sha256": "d6817dee25faab7ec0d9d6db632c32b426fbf5fd91123442d6938c3386655946",
+      "size_bytes": 29749
+    },
+    "target_v1_model_state_seed2207.pt": {
+      "sha256": "e5e74021d3a7778cea772aaf41650cb41e3d9630d8965b1a009c59c7c0ef4478",
+      "size_bytes": 29749
+    },
+    "target_v1_model_state_seed3301.pt": {
+      "sha256": "03305a51cec9c68baed3dd1e86a5c5098732b42e8aa83e0cb540ce03ed244e8d",
+      "size_bytes": 29749
+    },
+    "target_v1_patient_shared_seed1103.csv": {
+      "sha256": "2b639817fb34faf4a71fd7f0aaa3fe03527d4bb85836c862184eb8eff83b097b",
+      "size_bytes": 7534
+    },
+    "target_v1_patient_shared_seed1103.npy": {
+      "sha256": "c05bf08017ad8544e1e4ce0c8f58f086060dd7a6a0a68ed7f8d5a6723768a95f",
+      "size_bytes": 3248
+    },
+    "target_v1_patient_shared_seed2207.csv": {
+      "sha256": "dbfb558e24ef618a0022a0389c9d4d3921d984e04f66ae3709097a7fe7e301dc",
+      "size_bytes": 7630
+    },
+    "target_v1_patient_shared_seed2207.npy": {
+      "sha256": "08c10fb0c5c27b19955b735e02abee513002439a892ed4d642178afc2cbf2989",
+      "size_bytes": 3248
+    },
+    "target_v1_patient_shared_seed3301.csv": {
+      "sha256": "9a592130754362a215c82fd63433ac678f78a2f4097a238595862507a0655025",
+      "size_bytes": 7676
+    },
+    "target_v1_patient_shared_seed3301.npy": {
+      "sha256": "f0c4b28797f1ed4dd4fc06cbdfff1dfc39139bf060cba34a2c18edd139ce4c06",
+      "size_bytes": 3248
+    }
+  }
+}

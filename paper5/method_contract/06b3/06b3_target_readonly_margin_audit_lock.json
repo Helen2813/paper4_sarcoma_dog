@@ -1,0 +1,46 @@
+{
+  "status": "06B3_TARGET_READONLY_MARGIN_AUDIT_FROZEN",
+  "script_version": "06b3-readonly-target-margin-audit-v1-descriptive-no-cli",
+  "created_at_utc": "2026-10-08T01:14:09.949411+00:00",
+  "source_hashes": {
+    "selection": "8d6f17311cc98c3312619d3410f804e6581f152ce7811616b87ab9774a3e68c1",
+    "outer": "b3c04b163392df043f78c8d377ff9f802afea2d7e95dcbff21fc5c87e504f2c5",
+    "summary": "c2b350f8d0e957cf1a1005d0aa5f490d631a30d9e6607c12a90659c8037ca2e5",
+    "lock": "2730c783f1a74f7aa58030d1ee03f324f1d50c4830c72e4229a15e41b60dc121"
+  },
+  "generated_files": {
+    "target_inner_one_se_geometry.csv": {
+      "sha256": "9c4fe8c7a4865c4c546181445f97873030dd38a03fccd96b1ba268c09e632ce8",
+      "size_bytes": 5594
+    },
+    "target_inner_one_se_model_frequency.csv": {
+      "sha256": "2e0a158dabbd497c9cf7a99c713bccde3c91299a7941348ced100b0f2b3717ce",
+      "size_bytes": 333
+    },
+    "target_outer_split_model_metrics.csv": {
+      "sha256": "e6d96bbd0b0f0a2fb8580ffa000555d36192104b9e194452f6c81bd081d7731c",
+      "size_bytes": 97016
+    },
+    "target_outer_model_metric_summary.csv": {
+      "sha256": "d78ad4070b1fbf2c08a4d3fb37110f492ce9a3e6d3f4ebd2246b507302f36348",
+      "size_bytes": 11425
+    },
+    "target_outer_v1_pairwise_utility_deltas.csv": {
+      "sha256": "d30a23a3b540cac0b223f0dfe1e8ba05af5bea6ee772c63e55a2184467f4897c",
+      "size_bytes": 23780
+    },
+    "target_outer_v1_pairwise_utility_summary.csv": {
+      "sha256": "49f315e1c3665c58611f10e8a24331fa81c7ec89e920fb1189ed279486f1e6fa",
+      "size_bytes": 3244
+    },
+    "target_outer_v1_v4_seed_variability.csv": {
+      "sha256": "013bbf8a3cc219fe41201b32604493d48710403bbcfbef46483e9df61b453c45",
+      "size_bytes": 1177
+    },
+    "target_06b_readonly_margin_audit.json": {
+      "sha256": "f811ac163590dd7a71fb85fbe12d1019481fdc93238f0f3bb2b94ff879601b80",
+      "size_bytes": 2133
+    }
+  },
+  "rewrite_policy": "Read-only descriptive audit of frozen 06b outputs. Never rewrite 06b/06c scientific results or use this audit to reopen selection."
+}

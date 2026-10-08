@@ -1,0 +1,4168 @@
+{
+  "status": "READ_ONLY_TARGET_RUNNER_DEPENDENCY_AUDIT_COMPLETE",
+  "script_version": "06b0a-audit-target-runner-dependencies-v1-no-cli",
+  "created_at_utc": "2026-09-19T19:57:30.144186+00:00",
+  "06b0_lock": {
+    "path": "paper5/method_contract/06b0/06b0_prefit_lock.json",
+    "sha256": "656bd06e2aa6d85778f288c4184742416d64cb2ba3d42caf77ff33b10e4c5a5b",
+    "status": "06B0_TARGET_PREFIT_INPUT_POLICY_LOCK_FROZEN"
+  },
+  "registries": {
+    "model_family_registry.csv": {
+      "path": "paper5/method_contract/05a/model_family_registry.csv",
+      "sha256": "b0a70a5f5df4b30a6aa2d4069e15d1d1b9fe3b770f8c5ef16248301acabf1a39",
+      "size_bytes": 2808,
+      "columns": [
+        "model_id",
+        "family",
+        "role",
+        "views",
+        "integrated_representation",
+        "eligible_for_nested_selection",
+        "eligible_for_final_freeze",
+        "complexity_rank",
+        "hyperparameter_source",
+        "outcome_access",
+        "notes"
+      ],
+      "n_rows": 15,
+      "rows": [
+        {
+          "model_id": "PCA_RNA",
+          "family": "modality_specific_PCA",
+          "role": "primary_linear_baseline",
+          "views": "RNA",
+          "integrated_representation": "False",
+          "eligible_for_nested_selection": "False",
+          "eligible_for_final_freeze": "False",
+          "complexity_rank": "0",
+          "hyperparameter_source": "fixed",
+          "outcome_access": "False",
+          "notes": "Descriptive single-view baseline."
+        },
+        {
+          "model_id": "PCA_METHYLATION",
+          "family": "modality_specific_PCA",
+          "role": "primary_linear_baseline",
+          "views": "METHYLATION",
+          "integrated_representation": "False",
+          "eligible_for_nested_selection": "False",
+          "eligible_for_final_freeze": "False",
+          "complexity_rank": "0",
+          "hyperparameter_source": "fixed",
+          "outcome_access": "False",
+          "notes": "Descriptive single-view baseline."
+        },
+        {
+          "model_id": "PCA_CNV",
+          "family": "modality_specific_PCA",
+          "role": "primary_linear_baseline",
+          "views": "CNV",
+          "integrated_representation": "False",
+          "eligible_for_nested_selection": "False",
+          "eligible_for_final_freeze": "False",
+          "complexity_rank": "0",
+          "hyperparameter_source": "fixed",
+          "outcome_access": "False",
+          "notes": "Descriptive single-view baseline."
+        },
+        {
+          "model_id": "BLOCK_PCA",
+          "family": "block_scaled_PCA",
+          "role": "primary_integrated_baseline",
+          "views": "RNA;METHYLATION;CNV",
+          "integrated_representation": "True",
+          "eligible_for_nested_selection": "True",
+          "eligible_for_final_freeze": "True",
+          "complexity_rank": "1",
+          "hyperparameter_source": "fixed",
+          "outcome_access": "False",
+          "notes": "Each fold-local standardized block is scaled to equal total training variance before concatenation."
+        },
+        {
+          "model_id": "MOFA_K5",
+          "family": "MOFA_plus",
+          "role": "primary_probabilistic_baseline",
+          "views": "RNA;METHYLATION;CNV",
+          "integrated_representation": "True",
+          "eligible_for_nested_selection": "True",
+          "eligible_for_final_freeze": "True",
+          "complexity_rank": "2",
+          "hyperparameter_source": "prespecified_rank_sweep",
+          "outcome_access": "False",
+          "notes": "Gaussian views; K=5; native missing-value handling."
+        },
+        {
+          "model_id": "MOFA_K10",
+          "family": "MOFA_plus",
+          "role": "primary_probabilistic_baseline",
+          "views": "RNA;METHYLATION;CNV",
+          "integrated_representation": "True",
+          "eligible_for_nested_selection": "True",
+          "eligible_for_final_freeze": "True",
+          "complexity_rank": "3",
+          "hyperparameter_source": "prespecified_rank_sweep",
+          "outcome_access": "False",
+          "notes": "Gaussian views; K=10; native missing-value handling."
+        },
+        {
+          "model_id": "MOFA_K15",
+          "family": "MOFA_plus",
+          "role": "primary_probabilistic_baseline",
+          "views": "RNA;METHYLATION;CNV",
+          "integrated_representation": "True",
+          "eligible_for_nested_selection": "True",
+          "eligible_for_final_freeze": "True",
+          "complexity_rank": "4",
+          "hyperparameter_source": "prespecified_rank_sweep",
+          "outcome_access": "False",
+          "notes": "Gaussian views; K=15; native missing-value handling."
+        },
+        {
+          "model_id": "MOFA_K20",
+          "family": "MOFA_plus",
+          "role": "primary_probabilistic_baseline",
+          "views": "RNA;METHYLATION;CNV",
+          "integrated_representation": "True",
+          "eligible_for_nested_selection": "True",
+          "eligible_for_final_freeze": "True",
+          "complexity_rank": "5",
+          "hyperparameter_source": "prespecified_rank_sweep",
+          "outcome_access": "False",
+          "notes": "Gaussian views; K=20; native missing-value handling."
+        },
+        {
+          "model_id": "RIDGE_GCCA",
+          "family": "ridge_generalized_CCA",
+          "role": "secondary_regularized_baseline",
+          "views": "RNA;METHYLATION;CNV",
+          "integrated_representation": "True",
+          "eligible_for_nested_selection": "False",
+          "eligible_for_final_freeze": "False",
+          "complexity_rank": "5",
+          "hyperparameter_source": "inner_cv",
+          "outcome_access": "False",
+          "notes": "Exploratory regularized baseline. Ordinary unregularized CCA is forbidden because p greatly exceeds n."
+        },
+        {
+          "model_id": "V0_BALANCED_AE",
+          "family": "SABLE_MO_ablation",
+          "role": "primary_nonlinear_ablation",
+          "views": "RNA;METHYLATION;CNV",
+          "integrated_representation": "True",
+          "eligible_for_nested_selection": "True",
+          "eligible_for_final_freeze": "True",
+          "complexity_rank": "6",
+          "hyperparameter_source": "simulation_selected",
+          "outcome_access": "False",
+          "notes": "Block-balanced reconstruction only."
+        },
+        {
+          "model_id": "V1_SHARED_PRIVATE_AE",
+          "family": "SABLE_MO_ablation",
+          "role": "primary_nonlinear_ablation",
+          "views": "RNA;METHYLATION;CNV",
+          "integrated_representation": "True",
+          "eligible_for_nested_selection": "True",
+          "eligible_for_final_freeze": "True",
+          "complexity_rank": "7",
+          "hyperparameter_source": "simulation_selected",
+          "outcome_access": "False",
+          "notes": "V0 plus shared/private decomposition."
+        },
+        {
+          "model_id": "V2_CONTRASTIVE_SPAE",
+          "family": "SABLE_MO_ablation",
+          "role": "primary_nonlinear_ablation",
+          "views": "RNA;METHYLATION;CNV",
+          "integrated_representation": "True",
+          "eligible_for_nested_selection": "True",
+          "eligible_for_final_freeze": "True",
+          "complexity_rank": "8",
+          "hyperparameter_source": "simulation_selected",
+          "outcome_access": "False",
+          "notes": "V1 plus paired cross-view contrastive alignment."
+        },
+        {
+          "model_id": "V3_DROPOUT_SPAE",
+          "family": "SABLE_MO_ablation",
+          "role": "primary_nonlinear_ablation",
+          "views": "RNA;METHYLATION;CNV",
+          "integrated_representation": "True",
+          "eligible_for_nested_selection": "True",
+          "eligible_for_final_freeze": "True",
+          "complexity_rank": "9",
+          "hyperparameter_source": "simulation_selected",
+          "outcome_access": "False",
+          "notes": "V2 plus modality dropout and missing-view reconstruction."
+        },
+        {
+          "model_id": "V4_SABLE_MO",
+          "family": "SABLE_MO",
+          "role": "proposed_primary_method",
+          "views": "RNA;METHYLATION;CNV",
+          "integrated_representation": "True",
+          "eligible_for_nested_selection": "True",
+          "eligible_for_final_freeze": "True",
+          "complexity_rank": "10",
+          "hyperparameter_source": "simulation_selected",
+          "outcome_access": "False",
+          "notes": "V3 plus resampling-based factor alignment and stability gate. Proposed method is not guaranteed to win the benchmark."
+        },
+        {
+          "model_id": "V5_SABLE_VAE",
+          "family": "SABLE_MO_variational_extension",
+          "role": "secondary_exploratory",
+          "views": "RNA;METHYLATION;CNV",
+          "integrated_representation": "True",
+          "eligible_for_nested_selection": "False",
+          "eligible_for_final_freeze": "False",
+          "complexity_rank": "11",
+          "hyperparameter_source": "simulation_selected",
+          "outcome_access": "False",
+          "notes": "Variational extension. Exploratory because n=78 adds substantial posterior and optimization uncertainty."
+        }
+      ]
+    },
+    "baseline_hyperparameter_grid.csv": {
+      "path": "paper5/method_contract/05a/baseline_hyperparameter_grid.csv",
+      "sha256": "e25f30d5804365404436b62edf15e5affe859ac1f52309208db3f78dd1bca52a",
+      "size_bytes": 2253,
+      "columns": [
+        "model_family",
+        "parameter_set_id",
+        "latent_rank",
+        "ridge_penalty",
+        "feature_budget_role",
+        "likelihoods",
+        "native_missingness",
+        "inner_cv_required",
+        "notes"
+      ],
+      "n_rows": 16,
+      "rows": [
+        {
+          "model_family": "MOFA_plus",
+          "parameter_set_id": "MOFA_K5",
+          "latent_rank": "5",
+          "ridge_penalty": "",
+          "feature_budget_role": "primary",
+          "likelihoods": "gaussian;gaussian;gaussian",
+          "native_missingness": "True",
+          "inner_cv_required": "False",
+          "notes": "ARD and spike-and-slab sparsity enabled."
+        },
+        {
+          "model_family": "MOFA_plus",
+          "parameter_set_id": "MOFA_K10",
+          "latent_rank": "10",
+          "ridge_penalty": "",
+          "feature_budget_role": "primary",
+          "likelihoods": "gaussian;gaussian;gaussian",
+          "native_missingness": "True",
+          "inner_cv_required": "False",
+          "notes": "ARD and spike-and-slab sparsity enabled."
+        },
+        {
+          "model_family": "MOFA_plus",
+          "parameter_set_id": "MOFA_K15",
+          "latent_rank": "15",
+          "ridge_penalty": "",
+          "feature_budget_role": "primary",
+          "likelihoods": "gaussian;gaussian;gaussian",
+          "native_missingness": "True",
+          "inner_cv_required": "False",
+          "notes": "ARD and spike-and-slab sparsity enabled."
+        },
+        {
+          "model_family": "MOFA_plus",
+          "parameter_set_id": "MOFA_K20",
+          "latent_rank": "20",
+          "ridge_penalty": "",
+          "feature_budget_role": "primary",
+          "likelihoods": "gaussian;gaussian;gaussian",
+          "native_missingness": "True",
+          "inner_cv_required": "False",
+          "notes": "ARD and spike-and-slab sparsity enabled."
+        },
+        {
+          "model_family": "ridge_generalized_CCA",
+          "parameter_set_id": "RGCCA_K5_L0.1",
+          "latent_rank": "5",
+          "ridge_penalty": "0.1",
+          "feature_budget_role": "primary",
+          "likelihoods": "not_applicable",
+          "native_missingness": "False",
+          "inner_cv_required": "True",
+          "notes": "Fold-local median imputation and PCA compression are required."
+        },
+        {
+          "model_family": "ridge_generalized_CCA",
+          "parameter_set_id": "RGCCA_K5_L1",
+          "latent_rank": "5",
+          "ridge_penalty": "1.0",
+          "feature_budget_role": "primary",
+          "likelihoods": "not_applicable",
+          "native_missingness": "False",
+          "inner_cv_required": "True",
+          "notes": "Fold-local median imputation and PCA compression are required."
+        },
+        {
+          "model_family": "ridge_generalized_CCA",
+          "parameter_set_id": "RGCCA_K5_L10",
+          "latent_rank": "5",
+          "ridge_penalty": "10.0",
+          "feature_budget_role": "primary",
+          "likelihoods": "not_applicable",
+          "native_missingness": "False",
+          "inner_cv_required": "True",
+          "notes": "Fold-local median imputation and PCA compression are required."
+        },
+        {
+          "model_family": "ridge_generalized_CCA",
+          "parameter_set_id": "RGCCA_K5_L100",
+          "latent_rank": "5",
+          "ridge_penalty": "100.0",
+          "feature_budget_role": "primary",
+          "likelihoods": "not_applicable",
+          "native_missingness": "False",
+          "inner_cv_required": "True",
+          "notes": "Fold-local median imputation and PCA compression are required."
+        },
+        {
+          "model_family": "ridge_generalized_CCA",
+          "parameter_set_id": "RGCCA_K10_L0.1",
+          "latent_rank": "10",
+          "ridge_penalty": "0.1",
+          "feature_budget_role": "primary",
+          "likelihoods": "not_applicable",
+          "native_missingness": "False",
+          "inner_cv_required": "True",
+          "notes": "Fold-local median imputation and PCA compression are required."
+        },
+        {
+          "model_family": "ridge_generalized_CCA",
+          "parameter_set_id": "RGCCA_K10_L1",
+          "latent_rank": "10",
+          "ridge_penalty": "1.0",
+          "feature_budget_role": "primary",
+          "likelihoods": "not_applicable",
+          "native_missingness": "False",
+          "inner_cv_required": "True",
+          "notes": "Fold-local median imputation and PCA compression are required."
+        },
+        {
+          "model_family": "ridge_generalized_CCA",
+          "parameter_set_id": "RGCCA_K10_L10",
+          "latent_rank": "10",
+          "ridge_penalty": "10.0",
+          "feature_budget_role": "primary",
+          "likelihoods": "not_applicable",
+          "native_missingness": "False",
+          "inner_cv_required": "True",
+          "notes": "Fold-local median imputation and PCA compression are required."
+        },
+        {
+          "model_family": "ridge_generalized_CCA",
+          "parameter_set_id": "RGCCA_K10_L100",
+          "latent_rank": "10",
+          "ridge_penalty": "100.0",
+          "feature_budget_role": "primary",
+          "likelihoods": "not_applicable",
+          "native_missingness": "False",
+          "inner_cv_required": "True",
+          "notes": "Fold-local median imputation and PCA compression are required."
+        },
+        {
+          "model_family": "ridge_generalized_CCA",
+          "parameter_set_id": "RGCCA_K15_L0.1",
+          "latent_rank": "15",
+          "ridge_penalty": "0.1",
+          "feature_budget_role": "primary",
+          "likelihoods": "not_applicable",
+          "native_missingness": "False",
+          "inner_cv_required": "True",
+          "notes": "Fold-local median imputation and PCA compression are required."
+        },
+        {
+          "model_family": "ridge_generalized_CCA",
+          "parameter_set_id": "RGCCA_K15_L1",
+          "latent_rank": "15",
+          "ridge_penalty": "1.0",
+          "feature_budget_role": "primary",
+          "likelihoods": "not_applicable",
+          "native_missingness": "False",
+          "inner_cv_required": "True",
+          "notes": "Fold-local median imputation and PCA compression are required."
+        },
+        {
+          "model_family": "ridge_generalized_CCA",
+          "parameter_set_id": "RGCCA_K15_L10",
+          "latent_rank": "15",
+          "ridge_penalty": "10.0",
+          "feature_budget_role": "primary",
+          "likelihoods": "not_applicable",
+          "native_missingness": "False",
+          "inner_cv_required": "True",
+          "notes": "Fold-local median imputation and PCA compression are required."
+        },
+        {
+          "model_family": "ridge_generalized_CCA",
+          "parameter_set_id": "RGCCA_K15_L100",
+          "latent_rank": "15",
+          "ridge_penalty": "100.0",
+          "feature_budget_role": "primary",
+          "likelihoods": "not_applicable",
+          "native_missingness": "False",
+          "inner_cv_required": "True",
+          "notes": "Fold-local median imputation and PCA compression are required."
+        }
+      ]
+    },
+    "sable_mo_ablation_registry.csv": {
+      "path": "paper5/method_contract/05a/sable_mo_ablation_registry.csv",
+      "sha256": "0c4fdfeea5aec2c2e74c8570855c930a978097eb2b6607c87eecb5066079a6ba",
+      "size_bytes": 1069,
+      "columns": [
+        "variant_id",
+        "block_balanced_reconstruction",
+        "shared_private_decomposition",
+        "paired_contrastive_alignment",
+        "modality_dropout",
+        "missing_view_reconstruction",
+        "stability_gate",
+        "variational_latent",
+        "prespecified_component_hypothesis"
+      ],
+      "n_rows": 6,
+      "rows": [
+        {
+          "variant_id": "V0_BALANCED_AE",
+          "block_balanced_reconstruction": "True",
+          "shared_private_decomposition": "False",
+          "paired_contrastive_alignment": "False",
+          "modality_dropout": "False",
+          "missing_view_reconstruction": "False",
+          "stability_gate": "False",
+          "variational_latent": "False",
+          "prespecified_component_hypothesis": "Block normalization prevents methylation dominance and improves held-out reconstruction fairness."
+        },
+        {
+          "variant_id": "V1_SHARED_PRIVATE_AE",
+          "block_balanced_reconstruction": "True",
+          "shared_private_decomposition": "True",
+          "paired_contrastive_alignment": "False",
+          "modality_dropout": "False",
+          "missing_view_reconstruction": "False",
+          "stability_gate": "False",
+          "variational_latent": "False",
+          "prespecified_component_hypothesis": "Shared/private decomposition separates cross-view structure from assay-specific variation."
+        },
+        {
+          "variant_id": "V2_CONTRASTIVE_SPAE",
+          "block_balanced_reconstruction": "True",
+          "shared_private_decomposition": "True",
+          "paired_contrastive_alignment": "True",
+          "modality_dropout": "False",
+          "missing_view_reconstruction": "False",
+          "stability_gate": "False",
+          "variational_latent": "False",
+          "prespecified_component_hypothesis": "Paired contrastive alignment improves same-patient cross-view retrieval."
+        },
+        {
+          "variant_id": "V3_DROPOUT_SPAE",
+          "block_balanced_reconstruction": "True",
+          "shared_private_decomposition": "True",
+          "paired_contrastive_alignment": "True",
+          "modality_dropout": "True",
+          "missing_view_reconstruction": "True",
+          "stability_gate": "False",
+          "variational_latent": "False",
+          "prespecified_component_hypothesis": "Modality dropout improves partial-view robustness and RNA-only projection."
+        },
+        {
+          "variant_id": "V4_SABLE_MO",
+          "block_balanced_reconstruction": "True",
+          "shared_private_decomposition": "True",
+          "paired_contrastive_alignment": "True",
+          "modality_dropout": "True",
+          "missing_view_reconstruction": "True",
+          "stability_gate": "True",
+          "variational_latent": "False",
+          "prespecified_component_hypothesis": "The stability gate removes attractive but non-reproducible latent factors."
+        },
+        {
+          "variant_id": "V5_SABLE_VAE",
+          "block_balanced_reconstruction": "True",
+          "shared_private_decomposition": "True",
+          "paired_contrastive_alignment": "True",
+          "modality_dropout": "True",
+          "missing_view_reconstruction": "True",
+          "stability_gate": "True",
+          "variational_latent": "True",
+          "prespecified_component_hypothesis": "The variational extension tests whether posterior regularization improves generalization despite the small sample size."
+        }
+      ]
+    },
+    "sable_mo_architecture_profiles.csv": {
+      "path": "paper5/method_contract/05a/sable_mo_architecture_profiles.csv",
+      "sha256": "e5be64ebd2986a06f80288d78d10dcc739f05f157333ad6fc183a8d271aa9f5a",
+      "size_bytes": 479,
+      "columns": [
+        "architecture_profile",
+        "rna_pca_components",
+        "methylation_pca_components",
+        "cnv_pca_components",
+        "shared_latent_dim",
+        "private_latent_dim_per_view",
+        "encoder_hidden_dim",
+        "decoder_hidden_dim",
+        "activation",
+        "layer_normalization",
+        "full_batch_training",
+        "maximum_epochs",
+        "early_stopping_patience",
+        "early_stopping_min_delta",
+        "complexity_rank"
+      ],
+      "n_rows": 3,
+      "rows": [
+        {
+          "architecture_profile": "compact",
+          "rna_pca_components": "10",
+          "methylation_pca_components": "10",
+          "cnv_pca_components": "10",
+          "shared_latent_dim": "5",
+          "private_latent_dim_per_view": "2",
+          "encoder_hidden_dim": "32",
+          "decoder_hidden_dim": "32",
+          "activation": "GELU",
+          "layer_normalization": "True",
+          "full_batch_training": "True",
+          "maximum_epochs": "400",
+          "early_stopping_patience": "30",
+          "early_stopping_min_delta": "0.0001",
+          "complexity_rank": "1"
+        },
+        {
+          "architecture_profile": "standard",
+          "rna_pca_components": "20",
+          "methylation_pca_components": "20",
+          "cnv_pca_components": "20",
+          "shared_latent_dim": "10",
+          "private_latent_dim_per_view": "5",
+          "encoder_hidden_dim": "64",
+          "decoder_hidden_dim": "64",
+          "activation": "GELU",
+          "layer_normalization": "True",
+          "full_batch_training": "True",
+          "maximum_epochs": "500",
+          "early_stopping_patience": "40",
+          "early_stopping_min_delta": "0.0001",
+          "complexity_rank": "2"
+        },
+        {
+          "architecture_profile": "expanded",
+          "rna_pca_components": "30",
+          "methylation_pca_components": "30",
+          "cnv_pca_components": "30",
+          "shared_latent_dim": "15",
+          "private_latent_dim_per_view": "5",
+          "encoder_hidden_dim": "96",
+          "decoder_hidden_dim": "96",
+          "activation": "GELU",
+          "layer_normalization": "True",
+          "full_batch_training": "True",
+          "maximum_epochs": "600",
+          "early_stopping_patience": "50",
+          "early_stopping_min_delta": "0.0001",
+          "complexity_rank": "3"
+        }
+      ]
+    },
+    "sable_mo_regularization_profiles.csv": {
+      "path": "paper5/method_contract/05a/sable_mo_regularization_profiles.csv",
+      "sha256": "706d11d6ef546db4dcf33c1645f2439322db1c2114881cf19f9851cc5308f569",
+      "size_bytes": 445,
+      "columns": [
+        "regularization_profile",
+        "reconstruction_weight",
+        "shared_alignment_weight",
+        "contrastive_weight",
+        "shared_private_orthogonality_weight",
+        "private_separation_weight",
+        "cross_reconstruction_weight",
+        "modality_dropout_probability",
+        "contrastive_temperature",
+        "learning_rate",
+        "weight_decay",
+        "complexity_rank"
+      ],
+      "n_rows": 3,
+      "rows": [
+        {
+          "regularization_profile": "weak",
+          "reconstruction_weight": "1.0",
+          "shared_alignment_weight": "0.5",
+          "contrastive_weight": "0.1",
+          "shared_private_orthogonality_weight": "0.05",
+          "private_separation_weight": "0.05",
+          "cross_reconstruction_weight": "0.25",
+          "modality_dropout_probability": "0.15",
+          "contrastive_temperature": "0.2",
+          "learning_rate": "0.001",
+          "weight_decay": "0.0001",
+          "complexity_rank": "1"
+        },
+        {
+          "regularization_profile": "standard",
+          "reconstruction_weight": "1.0",
+          "shared_alignment_weight": "1.0",
+          "contrastive_weight": "0.25",
+          "shared_private_orthogonality_weight": "0.1",
+          "private_separation_weight": "0.1",
+          "cross_reconstruction_weight": "0.5",
+          "modality_dropout_probability": "0.25",
+          "contrastive_temperature": "0.1",
+          "learning_rate": "0.0005",
+          "weight_decay": "0.0005",
+          "complexity_rank": "2"
+        },
+        {
+          "regularization_profile": "strong",
+          "reconstruction_weight": "1.0",
+          "shared_alignment_weight": "2.0",
+          "contrastive_weight": "0.5",
+          "shared_private_orthogonality_weight": "0.2",
+          "private_separation_weight": "0.2",
+          "cross_reconstruction_weight": "1.0",
+          "modality_dropout_probability": "0.35",
+          "contrastive_temperature": "0.07",
+          "learning_rate": "0.0003",
+          "weight_decay": "0.001",
+          "complexity_rank": "3"
+        }
+      ]
+    },
+    "target_cv_split_summary.csv": {
+      "path": "paper5/method_contract/05a/target_cv_split_summary.csv",
+      "sha256": "0f61fa286134c288ff094d7206549bc8cc1b147c73472aa9f8d4ec375b5cb959",
+      "size_bytes": 2289,
+      "columns": [
+        "repeat_index",
+        "outer_fold",
+        "split_id",
+        "outer_seed",
+        "inner_seed",
+        "n_outer_train",
+        "n_outer_test",
+        "n_inner_folds",
+        "n_outer_fit_before_refit",
+        "n_outer_early_stop",
+        "minimum_inner_fit_before_refit",
+        "maximum_inner_fit_before_refit",
+        "minimum_inner_early_stop",
+        "maximum_inner_early_stop",
+        "minimum_inner_validation_size",
+        "maximum_inner_validation_size",
+        "stratification_used",
+        "outcome_used_for_split"
+      ],
+      "n_rows": 25,
+      "rows": [
+        {
+          "repeat_index": "1",
+          "outer_fold": "1",
+          "split_id": "R01_F01",
+          "outer_seed": "772188093",
+          "inner_seed": "119612030",
+          "n_outer_train": "62",
+          "n_outer_test": "16",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "49",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "36",
+          "maximum_inner_fit_before_refit": "37",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "1",
+          "outer_fold": "2",
+          "split_id": "R01_F02",
+          "outer_seed": "772188093",
+          "inner_seed": "1818696629",
+          "n_outer_train": "62",
+          "n_outer_test": "16",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "49",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "36",
+          "maximum_inner_fit_before_refit": "37",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "1",
+          "outer_fold": "3",
+          "split_id": "R01_F03",
+          "outer_seed": "772188093",
+          "inner_seed": "768610963",
+          "n_outer_train": "62",
+          "n_outer_test": "16",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "49",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "36",
+          "maximum_inner_fit_before_refit": "37",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "1",
+          "outer_fold": "4",
+          "split_id": "R01_F04",
+          "outer_seed": "772188093",
+          "inner_seed": "3894832375",
+          "n_outer_train": "63",
+          "n_outer_test": "15",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "50",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "37",
+          "maximum_inner_fit_before_refit": "38",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "1",
+          "outer_fold": "5",
+          "split_id": "R01_F05",
+          "outer_seed": "772188093",
+          "inner_seed": "553722629",
+          "n_outer_train": "63",
+          "n_outer_test": "15",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "50",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "37",
+          "maximum_inner_fit_before_refit": "38",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "2",
+          "outer_fold": "1",
+          "split_id": "R02_F01",
+          "outer_seed": "2317868519",
+          "inner_seed": "3333612443",
+          "n_outer_train": "62",
+          "n_outer_test": "16",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "49",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "36",
+          "maximum_inner_fit_before_refit": "37",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "2",
+          "outer_fold": "2",
+          "split_id": "R02_F02",
+          "outer_seed": "2317868519",
+          "inner_seed": "1022035690",
+          "n_outer_train": "62",
+          "n_outer_test": "16",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "49",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "36",
+          "maximum_inner_fit_before_refit": "37",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "2",
+          "outer_fold": "3",
+          "split_id": "R02_F03",
+          "outer_seed": "2317868519",
+          "inner_seed": "3128705198",
+          "n_outer_train": "62",
+          "n_outer_test": "16",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "49",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "36",
+          "maximum_inner_fit_before_refit": "37",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "2",
+          "outer_fold": "4",
+          "split_id": "R02_F04",
+          "outer_seed": "2317868519",
+          "inner_seed": "2514812445",
+          "n_outer_train": "63",
+          "n_outer_test": "15",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "50",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "37",
+          "maximum_inner_fit_before_refit": "38",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "2",
+          "outer_fold": "5",
+          "split_id": "R02_F05",
+          "outer_seed": "2317868519",
+          "inner_seed": "4103662866",
+          "n_outer_train": "63",
+          "n_outer_test": "15",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "50",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "37",
+          "maximum_inner_fit_before_refit": "38",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "3",
+          "outer_fold": "1",
+          "split_id": "R03_F01",
+          "outer_seed": "1301107989",
+          "inner_seed": "600562548",
+          "n_outer_train": "62",
+          "n_outer_test": "16",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "49",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "36",
+          "maximum_inner_fit_before_refit": "37",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "3",
+          "outer_fold": "2",
+          "split_id": "R03_F02",
+          "outer_seed": "1301107989",
+          "inner_seed": "583247535",
+          "n_outer_train": "62",
+          "n_outer_test": "16",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "49",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "36",
+          "maximum_inner_fit_before_refit": "37",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "3",
+          "outer_fold": "3",
+          "split_id": "R03_F03",
+          "outer_seed": "1301107989",
+          "inner_seed": "2126843804",
+          "n_outer_train": "62",
+          "n_outer_test": "16",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "49",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "36",
+          "maximum_inner_fit_before_refit": "37",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "3",
+          "outer_fold": "4",
+          "split_id": "R03_F04",
+          "outer_seed": "1301107989",
+          "inner_seed": "3723757233",
+          "n_outer_train": "63",
+          "n_outer_test": "15",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "50",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "37",
+          "maximum_inner_fit_before_refit": "38",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "3",
+          "outer_fold": "5",
+          "split_id": "R03_F05",
+          "outer_seed": "1301107989",
+          "inner_seed": "4041579161",
+          "n_outer_train": "63",
+          "n_outer_test": "15",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "50",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "37",
+          "maximum_inner_fit_before_refit": "38",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "4",
+          "outer_fold": "1",
+          "split_id": "R04_F01",
+          "outer_seed": "3490537716",
+          "inner_seed": "2073737523",
+          "n_outer_train": "62",
+          "n_outer_test": "16",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "49",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "36",
+          "maximum_inner_fit_before_refit": "37",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "4",
+          "outer_fold": "2",
+          "split_id": "R04_F02",
+          "outer_seed": "3490537716",
+          "inner_seed": "3037697857",
+          "n_outer_train": "62",
+          "n_outer_test": "16",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "49",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "36",
+          "maximum_inner_fit_before_refit": "37",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "4",
+          "outer_fold": "3",
+          "split_id": "R04_F03",
+          "outer_seed": "3490537716",
+          "inner_seed": "3756321682",
+          "n_outer_train": "62",
+          "n_outer_test": "16",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "49",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "36",
+          "maximum_inner_fit_before_refit": "37",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "4",
+          "outer_fold": "4",
+          "split_id": "R04_F04",
+          "outer_seed": "3490537716",
+          "inner_seed": "1704493766",
+          "n_outer_train": "63",
+          "n_outer_test": "15",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "50",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "37",
+          "maximum_inner_fit_before_refit": "38",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "4",
+          "outer_fold": "5",
+          "split_id": "R04_F05",
+          "outer_seed": "3490537716",
+          "inner_seed": "841685957",
+          "n_outer_train": "63",
+          "n_outer_test": "15",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "50",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "37",
+          "maximum_inner_fit_before_refit": "38",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "5",
+          "outer_fold": "1",
+          "split_id": "R05_F01",
+          "outer_seed": "155493801",
+          "inner_seed": "2415419031",
+          "n_outer_train": "62",
+          "n_outer_test": "16",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "49",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "36",
+          "maximum_inner_fit_before_refit": "37",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "5",
+          "outer_fold": "2",
+          "split_id": "R05_F02",
+          "outer_seed": "155493801",
+          "inner_seed": "1181563584",
+          "n_outer_train": "62",
+          "n_outer_test": "16",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "49",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "36",
+          "maximum_inner_fit_before_refit": "37",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "5",
+          "outer_fold": "3",
+          "split_id": "R05_F03",
+          "outer_seed": "155493801",
+          "inner_seed": "1946675611",
+          "n_outer_train": "62",
+          "n_outer_test": "16",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "49",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "36",
+          "maximum_inner_fit_before_refit": "37",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "5",
+          "outer_fold": "4",
+          "split_id": "R05_F04",
+          "outer_seed": "155493801",
+          "inner_seed": "1189719218",
+          "n_outer_train": "63",
+          "n_outer_test": "15",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "50",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "37",
+          "maximum_inner_fit_before_refit": "38",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        },
+        {
+          "repeat_index": "5",
+          "outer_fold": "5",
+          "split_id": "R05_F05",
+          "outer_seed": "155493801",
+          "inner_seed": "2899961060",
+          "n_outer_train": "63",
+          "n_outer_test": "15",
+          "n_inner_folds": "4",
+          "n_outer_fit_before_refit": "50",
+          "n_outer_early_stop": "13",
+          "minimum_inner_fit_before_refit": "37",
+          "maximum_inner_fit_before_refit": "38",
+          "minimum_inner_early_stop": "10",
+          "maximum_inner_early_stop": "10",
+          "minimum_inner_validation_size": "15",
+          "maximum_inner_validation_size": "16",
+          "stratification_used": "False",
+          "outcome_used_for_split": "False"
+        }
+      ]
+    }
+  },
+  "nested_selection_eligible_model_rows": [
+    {
+      "model_id": "BLOCK_PCA",
+      "family": "block_scaled_PCA",
+      "role": "primary_integrated_baseline",
+      "views": "RNA;METHYLATION;CNV",
+      "integrated_representation": "True",
+      "eligible_for_nested_selection": "True",
+      "eligible_for_final_freeze": "True",
+      "complexity_rank": "1",
+      "hyperparameter_source": "fixed",
+      "outcome_access": "False",
+      "notes": "Each fold-local standardized block is scaled to equal total training variance before concatenation."
+    },
+    {
+      "model_id": "MOFA_K5",
+      "family": "MOFA_plus",
+      "role": "primary_probabilistic_baseline",
+      "views": "RNA;METHYLATION;CNV",
+      "integrated_representation": "True",
+      "eligible_for_nested_selection": "True",
+      "eligible_for_final_freeze": "True",
+      "complexity_rank": "2",
+      "hyperparameter_source": "prespecified_rank_sweep",
+      "outcome_access": "False",
+      "notes": "Gaussian views; K=5; native missing-value handling."
+    },
+    {
+      "model_id": "MOFA_K10",
+      "family": "MOFA_plus",
+      "role": "primary_probabilistic_baseline",
+      "views": "RNA;METHYLATION;CNV",
+      "integrated_representation": "True",
+      "eligible_for_nested_selection": "True",
+      "eligible_for_final_freeze": "True",
+      "complexity_rank": "3",
+      "hyperparameter_source": "prespecified_rank_sweep",
+      "outcome_access": "False",
+      "notes": "Gaussian views; K=10; native missing-value handling."
+    },
+    {
+      "model_id": "MOFA_K15",
+      "family": "MOFA_plus",
+      "role": "primary_probabilistic_baseline",
+      "views": "RNA;METHYLATION;CNV",
+      "integrated_representation": "True",
+      "eligible_for_nested_selection": "True",
+      "eligible_for_final_freeze": "True",
+      "complexity_rank": "4",
+      "hyperparameter_source": "prespecified_rank_sweep",
+      "outcome_access": "False",
+      "notes": "Gaussian views; K=15; native missing-value handling."
+    },
+    {
+      "model_id": "MOFA_K20",
+      "family": "MOFA_plus",
+      "role": "primary_probabilistic_baseline",
+      "views": "RNA;METHYLATION;CNV",
+      "integrated_representation": "True",
+      "eligible_for_nested_selection": "True",
+      "eligible_for_final_freeze": "True",
+      "complexity_rank": "5",
+      "hyperparameter_source": "prespecified_rank_sweep",
+      "outcome_access": "False",
+      "notes": "Gaussian views; K=20; native missing-value handling."
+    },
+    {
+      "model_id": "V0_BALANCED_AE",
+      "family": "SABLE_MO_ablation",
+      "role": "primary_nonlinear_ablation",
+      "views": "RNA;METHYLATION;CNV",
+      "integrated_representation": "True",
+      "eligible_for_nested_selection": "True",
+      "eligible_for_final_freeze": "True",
+      "complexity_rank": "6",
+      "hyperparameter_source": "simulation_selected",
+      "outcome_access": "False",
+      "notes": "Block-balanced reconstruction only."
+    },
+    {
+      "model_id": "V1_SHARED_PRIVATE_AE",
+      "family": "SABLE_MO_ablation",
+      "role": "primary_nonlinear_ablation",
+      "views": "RNA;METHYLATION;CNV",
+      "integrated_representation": "True",
+      "eligible_for_nested_selection": "True",
+      "eligible_for_final_freeze": "True",
+      "complexity_rank": "7",
+      "hyperparameter_source": "simulation_selected",
+      "outcome_access": "False",
+      "notes": "V0 plus shared/private decomposition."
+    },
+    {
+      "model_id": "V2_CONTRASTIVE_SPAE",
+      "family": "SABLE_MO_ablation",
+      "role": "primary_nonlinear_ablation",
+      "views": "RNA;METHYLATION;CNV",
+      "integrated_representation": "True",
+      "eligible_for_nested_selection": "True",
+      "eligible_for_final_freeze": "True",
+      "complexity_rank": "8",
+      "hyperparameter_source": "simulation_selected",
+      "outcome_access": "False",
+      "notes": "V1 plus paired cross-view contrastive alignment."
+    },
+    {
+      "model_id": "V3_DROPOUT_SPAE",
+      "family": "SABLE_MO_ablation",
+      "role": "primary_nonlinear_ablation",
+      "views": "RNA;METHYLATION;CNV",
+      "integrated_representation": "True",
+      "eligible_for_nested_selection": "True",
+      "eligible_for_final_freeze": "True",
+      "complexity_rank": "9",
+      "hyperparameter_source": "simulation_selected",
+      "outcome_access": "False",
+      "notes": "V2 plus modality dropout and missing-view reconstruction."
+    },
+    {
+      "model_id": "V4_SABLE_MO",
+      "family": "SABLE_MO",
+      "role": "proposed_primary_method",
+      "views": "RNA;METHYLATION;CNV",
+      "integrated_representation": "True",
+      "eligible_for_nested_selection": "True",
+      "eligible_for_final_freeze": "True",
+      "complexity_rank": "10",
+      "hyperparameter_source": "simulation_selected",
+      "outcome_access": "False",
+      "notes": "V3 plus resampling-based factor alignment and stability gate. Proposed method is not guaranteed to win the benchmark."
+    }
+  ],
+  "assignments": {
+    "target_outer_cv_assignments.csv": {
+      "path": "paper5/method_contract/05a/target_outer_cv_assignments.csv",
+      "sha256": "807736ea87c9532d6a264e50eeae4c97eb47cc4a08a40a1178f6c692f94c7811",
+      "size_bytes": 94204,
+      "columns": [
+        "repeat_index",
+        "outer_fold",
+        "split_id",
+        "outer_seed",
+        "case_index",
+        "case_id",
+        "outer_role"
+      ],
+      "n_rows": 1950,
+      "unique_counts": {
+        "case_id": {
+          "n_unique": 78,
+          "values": [
+            "TARGET-40-0A4HLD",
+            "TARGET-40-0A4HMC",
+            "TARGET-40-0A4HX8",
+            "TARGET-40-0A4HXS",
+            "TARGET-40-0A4HY5",
+            "TARGET-40-0A4I0Q",
+            "TARGET-40-0A4I0W",
+            "TARGET-40-0A4I3S",
+            "TARGET-40-0A4I42",
+            "TARGET-40-0A4I48",
+            "TARGET-40-0A4I4E",
+            "TARGET-40-0A4I4M",
+            "TARGET-40-0A4I4O",
+            "TARGET-40-0A4I5B",
+            "TARGET-40-0A4I65",
+            "TARGET-40-0A4I6O",
+            "TARGET-40-0A4I8U",
+            "TARGET-40-0A4I9K",
+            "TARGET-40-PAKFVX",
+            "TARGET-40-PAKUZU",
+            "TARGET-40-PAKXLD",
+            "TARGET-40-PAKZZK",
+            "TARGET-40-PALECC",
+            "TARGET-40-PALFYN",
+            "TARGET-40-PALHRL",
+            "TARGET-40-PALKDP",
+            "TARGET-40-PALKGN",
+            "TARGET-40-PALWWX",
+            "TARGET-40-PALZGU",
+            "TARGET-40-PAMEKS",
+            "TARGET-40-PAMHYN",
+            "TARGET-40-PAMLKS",
+            "TARGET-40-PAMRHD",
+            "TARGET-40-PAMYYJ",
+            "TARGET-40-PANGPE",
+            "TARGET-40-PANGRW",
+            "TARGET-40-PANMIG",
+            "TARGET-40-PANPUM",
+            "TARGET-40-PANSEN",
+            "TARGET-40-PANVJJ",
+            "TARGET-40-PANXSC",
+            "TARGET-40-PANZHX",
+            "TARGET-40-PAPFLB",
+            "TARGET-40-PAPIJR",
+            "TARGET-40-PAPNVD",
+            "TARGET-40-PAPXGT",
+            "TARGET-40-PARDAX",
+            "TARGET-40-PARFTG",
+            "TARGET-40-PARJXU",
+            "TARGET-40-PARKAF",
+            "TARGET-40-PASEBY",
+            "TARGET-40-PASEFS",
+            "TARGET-40-PASFCV",
+            "TARGET-40-PASKZZ",
+            "TARGET-40-PASNZV",
+            "TARGET-40-PASRNE",
+            "TARGET-40-PASSLM",
+            "TARGET-40-PASUUH",
+            "TARGET-40-PASYUK",
+            "TARGET-40-PATAWV",
+            "TARGET-40-PATJVI",
+            "TARGET-40-PATKSS",
+            "TARGET-40-PATMIF",
+            "TARGET-40-PATMPU",
+            "TARGET-40-PATMXR",
+            "TARGET-40-PATPBS",
+            "TARGET-40-PATUXZ",
+            "TARGET-40-PAUBIT",
+            "TARGET-40-PAUTWB",
+            "TARGET-40-PAUTYB",
+            "TARGET-40-PAUUML",
+            "TARGET-40-PAUVUL",
+            "TARGET-40-PAUXPZ",
+            "TARGET-40-PAUYTT",
+            "TARGET-40-PAVALD",
+            "TARGET-40-PAVCLP",
+            "TARGET-40-PAVDTY",
+            "TARGET-40-PAVECB"
+          ],
+          "truncated": false
+        },
+        "outer_fold": {
+          "n_unique": 5,
+          "values": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "truncated": false
+        }
+      },
+      "first_3_rows_for_schema_only": [
+        {
+          "repeat_index": "1",
+          "outer_fold": "1",
+          "split_id": "R01_F01",
+          "outer_seed": "772188093",
+          "case_index": "0",
+          "case_id": "TARGET-40-0A4HLD",
+          "outer_role": "train"
+        },
+        {
+          "repeat_index": "1",
+          "outer_fold": "1",
+          "split_id": "R01_F01",
+          "outer_seed": "772188093",
+          "case_index": "1",
+          "case_id": "TARGET-40-0A4HMC",
+          "outer_role": "test"
+        },
+        {
+          "repeat_index": "1",
+          "outer_fold": "1",
+          "split_id": "R01_F01",
+          "outer_seed": "772188093",
+          "case_index": "2",
+          "case_id": "TARGET-40-0A4HX8",
+          "outer_role": "train"
+        }
+      ]
+    },
+    "target_inner_cv_assignments.csv": {
+      "path": "paper5/method_contract/05a/target_inner_cv_assignments.csv",
+      "sha256": "03aa043f9dda10fce2bfec0aab615e24f88a49ad3807ceab63a5aa2cdc0fe1a1",
+      "size_bytes": 323829,
+      "columns": [
+        "repeat_index",
+        "outer_fold",
+        "split_id",
+        "inner_fold",
+        "inner_seed",
+        "case_index",
+        "case_id",
+        "inner_role"
+      ],
+      "n_rows": 6240,
+      "unique_counts": {
+        "case_id": {
+          "n_unique": 78,
+          "values": [
+            "TARGET-40-0A4HLD",
+            "TARGET-40-0A4HMC",
+            "TARGET-40-0A4HX8",
+            "TARGET-40-0A4HXS",
+            "TARGET-40-0A4HY5",
+            "TARGET-40-0A4I0Q",
+            "TARGET-40-0A4I0W",
+            "TARGET-40-0A4I3S",
+            "TARGET-40-0A4I42",
+            "TARGET-40-0A4I48",
+            "TARGET-40-0A4I4E",
+            "TARGET-40-0A4I4M",
+            "TARGET-40-0A4I4O",
+            "TARGET-40-0A4I5B",
+            "TARGET-40-0A4I65",
+            "TARGET-40-0A4I6O",
+            "TARGET-40-0A4I8U",
+            "TARGET-40-0A4I9K",
+            "TARGET-40-PAKFVX",
+            "TARGET-40-PAKUZU",
+            "TARGET-40-PAKXLD",
+            "TARGET-40-PAKZZK",
+            "TARGET-40-PALECC",
+            "TARGET-40-PALFYN",
+            "TARGET-40-PALHRL",
+            "TARGET-40-PALKDP",
+            "TARGET-40-PALKGN",
+            "TARGET-40-PALWWX",
+            "TARGET-40-PALZGU",
+            "TARGET-40-PAMEKS",
+            "TARGET-40-PAMHYN",
+            "TARGET-40-PAMLKS",
+            "TARGET-40-PAMRHD",
+            "TARGET-40-PAMYYJ",
+            "TARGET-40-PANGPE",
+            "TARGET-40-PANGRW",
+            "TARGET-40-PANMIG",
+            "TARGET-40-PANPUM",
+            "TARGET-40-PANSEN",
+            "TARGET-40-PANVJJ",
+            "TARGET-40-PANXSC",
+            "TARGET-40-PANZHX",
+            "TARGET-40-PAPFLB",
+            "TARGET-40-PAPIJR",
+            "TARGET-40-PAPNVD",
+            "TARGET-40-PAPXGT",
+            "TARGET-40-PARDAX",
+            "TARGET-40-PARFTG",
+            "TARGET-40-PARJXU",
+            "TARGET-40-PARKAF",
+            "TARGET-40-PASEBY",
+            "TARGET-40-PASEFS",
+            "TARGET-40-PASFCV",
+            "TARGET-40-PASKZZ",
+            "TARGET-40-PASNZV",
+            "TARGET-40-PASRNE",
+            "TARGET-40-PASSLM",
+            "TARGET-40-PASUUH",
+            "TARGET-40-PASYUK",
+            "TARGET-40-PATAWV",
+            "TARGET-40-PATJVI",
+            "TARGET-40-PATKSS",
+            "TARGET-40-PATMIF",
+            "TARGET-40-PATMPU",
+            "TARGET-40-PATMXR",
+            "TARGET-40-PATPBS",
+            "TARGET-40-PATUXZ",
+            "TARGET-40-PAUBIT",
+            "TARGET-40-PAUTWB",
+            "TARGET-40-PAUTYB",
+            "TARGET-40-PAUUML",
+            "TARGET-40-PAUVUL",
+            "TARGET-40-PAUXPZ",
+            "TARGET-40-PAUYTT",
+            "TARGET-40-PAVALD",
+            "TARGET-40-PAVCLP",
+            "TARGET-40-PAVDTY",
+            "TARGET-40-PAVECB"
+          ],
+          "truncated": false
+        },
+        "outer_fold": {
+          "n_unique": 5,
+          "values": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "truncated": false
+        },
+        "inner_fold": {
+          "n_unique": 4,
+          "values": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "truncated": false
+        }
+      },
+      "first_3_rows_for_schema_only": [
+        {
+          "repeat_index": "1",
+          "outer_fold": "1",
+          "split_id": "R01_F01",
+          "inner_fold": "1",
+          "inner_seed": "119612030",
+          "case_index": "0",
+          "case_id": "TARGET-40-0A4HLD",
+          "inner_role": "train"
+        },
+        {
+          "repeat_index": "1",
+          "outer_fold": "1",
+          "split_id": "R01_F01",
+          "inner_fold": "1",
+          "inner_seed": "119612030",
+          "case_index": "2",
+          "case_id": "TARGET-40-0A4HX8",
+          "inner_role": "train"
+        },
+        {
+          "repeat_index": "1",
+          "outer_fold": "1",
+          "split_id": "R01_F01",
+          "inner_fold": "1",
+          "inner_seed": "119612030",
+          "case_index": "3",
+          "case_id": "TARGET-40-0A4HXS",
+          "inner_role": "train"
+        }
+      ]
+    },
+    "target_neural_training_assignments.csv": {
+      "path": "paper5/method_contract/05a/target_neural_training_assignments.csv",
+      "sha256": "29b6fb6513d7292417ad802d8d59d2f9ab541341b6c8f763df1f5d2a528e331d",
+      "size_bytes": 724310,
+      "columns": [
+        "stage",
+        "repeat_index",
+        "outer_fold",
+        "split_id",
+        "inner_fold",
+        "partition_seed",
+        "case_index",
+        "case_id",
+        "role"
+      ],
+      "n_rows": 9750,
+      "unique_counts": {
+        "case_id": {
+          "n_unique": 78,
+          "values": [
+            "TARGET-40-0A4HLD",
+            "TARGET-40-0A4HMC",
+            "TARGET-40-0A4HX8",
+            "TARGET-40-0A4HXS",
+            "TARGET-40-0A4HY5",
+            "TARGET-40-0A4I0Q",
+            "TARGET-40-0A4I0W",
+            "TARGET-40-0A4I3S",
+            "TARGET-40-0A4I42",
+            "TARGET-40-0A4I48",
+            "TARGET-40-0A4I4E",
+            "TARGET-40-0A4I4M",
+            "TARGET-40-0A4I4O",
+            "TARGET-40-0A4I5B",
+            "TARGET-40-0A4I65",
+            "TARGET-40-0A4I6O",
+            "TARGET-40-0A4I8U",
+            "TARGET-40-0A4I9K",
+            "TARGET-40-PAKFVX",
+            "TARGET-40-PAKUZU",
+            "TARGET-40-PAKXLD",
+            "TARGET-40-PAKZZK",
+            "TARGET-40-PALECC",
+            "TARGET-40-PALFYN",
+            "TARGET-40-PALHRL",
+            "TARGET-40-PALKDP",
+            "TARGET-40-PALKGN",
+            "TARGET-40-PALWWX",
+            "TARGET-40-PALZGU",
+            "TARGET-40-PAMEKS",
+            "TARGET-40-PAMHYN",
+            "TARGET-40-PAMLKS",
+            "TARGET-40-PAMRHD",
+            "TARGET-40-PAMYYJ",
+            "TARGET-40-PANGPE",
+            "TARGET-40-PANGRW",
+            "TARGET-40-PANMIG",
+            "TARGET-40-PANPUM",
+            "TARGET-40-PANSEN",
+            "TARGET-40-PANVJJ",
+            "TARGET-40-PANXSC",
+            "TARGET-40-PANZHX",
+            "TARGET-40-PAPFLB",
+            "TARGET-40-PAPIJR",
+            "TARGET-40-PAPNVD",
+            "TARGET-40-PAPXGT",
+            "TARGET-40-PARDAX",
+            "TARGET-40-PARFTG",
+            "TARGET-40-PARJXU",
+            "TARGET-40-PARKAF",
+            "TARGET-40-PASEBY",
+            "TARGET-40-PASEFS",
+            "TARGET-40-PASFCV",
+            "TARGET-40-PASKZZ",
+            "TARGET-40-PASNZV",
+            "TARGET-40-PASRNE",
+            "TARGET-40-PASSLM",
+            "TARGET-40-PASUUH",
+            "TARGET-40-PASYUK",
+            "TARGET-40-PATAWV",
+            "TARGET-40-PATJVI",
+            "TARGET-40-PATKSS",
+            "TARGET-40-PATMIF",
+            "TARGET-40-PATMPU",
+            "TARGET-40-PATMXR",
+            "TARGET-40-PATPBS",
+            "TARGET-40-PATUXZ",
+            "TARGET-40-PAUBIT",
+            "TARGET-40-PAUTWB",
+            "TARGET-40-PAUTYB",
+            "TARGET-40-PAUUML",
+            "TARGET-40-PAUVUL",
+            "TARGET-40-PAUXPZ",
+            "TARGET-40-PAUYTT",
+            "TARGET-40-PAVALD",
+            "TARGET-40-PAVCLP",
+            "TARGET-40-PAVDTY",
+            "TARGET-40-PAVECB"
+          ],
+          "truncated": false
+        },
+        "outer_fold": {
+          "n_unique": 5,
+          "values": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "truncated": false
+        },
+        "inner_fold": {
+          "n_unique": 5,
+          "values": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "truncated": false
+        },
+        "role": {
+          "n_unique": 5,
+          "values": [
+            "early_stop",
+            "fit",
+            "outer_test_excluded",
+            "test",
+            "validation"
+          ],
+          "truncated": false
+        }
+      },
+      "first_3_rows_for_schema_only": [
+        {
+          "stage": "outer_evaluation",
+          "repeat_index": "1",
+          "outer_fold": "1",
+          "split_id": "R01_F01",
+          "inner_fold": "0",
+          "partition_seed": "3154304389",
+          "case_index": "0",
+          "case_id": "TARGET-40-0A4HLD",
+          "role": "fit"
+        },
+        {
+          "stage": "outer_evaluation",
+          "repeat_index": "1",
+          "outer_fold": "1",
+          "split_id": "R01_F01",
+          "inner_fold": "0",
+          "partition_seed": "3154304389",
+          "case_index": "1",
+          "case_id": "TARGET-40-0A4HMC",
+          "role": "test"
+        },
+        {
+          "stage": "outer_evaluation",
+          "repeat_index": "1",
+          "outer_fold": "1",
+          "split_id": "R01_F01",
+          "inner_fold": "0",
+          "partition_seed": "3154304389",
+          "case_index": "2",
+          "case_id": "TARGET-40-0A4HX8",
+          "role": "fit"
+        }
+      ]
+    }
+  },
+  "selected_neural_profile": {
+    "contract_version": "paper5-selected-neural-profile-freeze-v1",
+    "created_at_utc": "2026-08-18T22:13:08.656408+00:00",
+    "development_screen_scope": {
+      "candidate_profiles": 9,
+      "dataset_profile_shards": 3240,
+      "development_datasets": 360,
+      "failed_shards": 0,
+      "fit_audit_rows": 74520,
+      "passed_shards": 3240,
+      "preprocessing_audit_rows": 223560,
+      "stability_factor_rows": 32400
+    },
+    "guardrails": [
+      "05d3 performs no neural fitting and no GPU computation.",
+      "The selected profile is read only from the frozen 05d2 v2 result and independently replayed from its frozen selection table.",
+      "All 3,240 05d2 v2 shard files are reverified against the frozen shard manifest before profile freeze.",
+      "Only development simulation replicates 1-10 informed profile selection.",
+      "Confirmatory simulation replicates 11-20 remain untouched at 05d3.",
+      "TARGET matrices, outcomes, and clinical labels remain untouched at 05d3.",
+      "Final gate-calibration simulations must not exist before this freeze.",
+      "The selected architecture and regularization parameters are copied exactly from the frozen 05d1 profile grid.",
+      "The frozen profile must be reused by confirmatory neural variants without profile retuning.",
+      "This neural-profile freeze does not select the final representation method."
+    ],
+    "next_required_stage": "05d4_fit_neural_ablation_benchmark_gpu.py",
+    "profile_application": {
+      "TARGET_may_change_profile": false,
+      "confirmatory_profile_retuning_allowed": false,
+      "confirmatory_replicates_11_to_20_may_change_profile": false,
+      "final_gate_calibration_may_change_profile": false,
+      "outcomes_may_change_profile": false,
+      "reused_without_profile_retuning_by": [
+        "V0_BALANCED_AE",
+        "V1_SHARED_PRIVATE_AE",
+        "V2_CONTRASTIVE_SPAE",
+        "V3_DROPOUT_SPAE",
+        "V5_SABLE_VAE"
+      ],
+      "selected_for": "V4_SABLE_MO"
+    },
+    "provenance": {
+      "05d1_profile_grid": {
+        "path": "paper5\\method_contract\\05d1\\neural_architecture_regularization_profile_grid.csv",
+        "sha256": "118b2fd4c16751f0b83ac3053f726f9421db26949ab98a8a531ff584c194ee32",
+        "size_bytes": 2040
+      },
+      "05d1_selection_contract": {
+        "path": "paper5\\method_contract\\05d1\\neural_profile_selection_contract.json",
+        "sha256": "4dc5ec24f19a7b575515d29628f1f3c2c0d6a69ffa7685ad81e1fafb05f39cd1",
+        "size_bytes": 5480
+      },
+      "05d2_v2_results_lock": {
+        "path": "paper5\\method_contract\\05d2_v2\\neural_profile_screen_results_lock.json",
+        "sha256": "1b5ef05f7d71393785a98d386c5b517e0dc51af9083a0643dd9e89488bb3d797",
+        "size_bytes": 5266
+      },
+      "05d2_v2_results_manifest": {
+        "path": "paper5\\method_contract\\05d2_v2\\neural_profile_screen_results_manifest.json",
+        "sha256": "441e2d33b2353f06047f67a6725bd7a09984f7a67b7c6864e29c5a0928f46bb3",
+        "size_bytes": 8243
+      },
+      "05d2_v2_selection_result": {
+        "path": "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_selection_result.json",
+        "sha256": "381eecd87476970b9e1f07cb70ba84ce8b9d03c1fcd93b220bfe61baedfa45d4",
+        "size_bytes": 1280
+      },
+      "05d2_v2_selection_table": {
+        "path": "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_selection_table.csv",
+        "sha256": "f71483d119f8d1abe764dd226ed814503bed2a19331f3c126130afc48c581d4b",
+        "size_bytes": 1951
+      },
+      "source_files": {
+        "paper5\\method_contract\\05a\\ai_method_contract.json": {
+          "sha256": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+          "size_bytes": 10644
+        },
+        "paper5\\method_contract\\05d1\\neural_architecture_regularization_profile_grid.csv": {
+          "sha256": "118b2fd4c16751f0b83ac3053f726f9421db26949ab98a8a531ff584c194ee32",
+          "size_bytes": 2040
+        },
+        "paper5\\method_contract\\05d1\\neural_confirmatory_ablation_fit_seed_registry.csv": {
+          "sha256": "bdc528af0e3d41e1d2713ad9557f21ca88a3faee5eb3f634d1607a94fe2007cb",
+          "size_bytes": 2142212
+        },
+        "paper5\\method_contract\\05d1\\neural_confirmatory_stability_resample_registry.csv": {
+          "sha256": "82cea9378300c45d6bbd10653fd5421d8ea39f35c00404b739c9294f38e70a6c",
+          "size_bytes": 810613
+        },
+        "paper5\\method_contract\\05d1\\neural_loss_and_architecture_contract.json": {
+          "sha256": "b90ded1d011ee3210154c2102389df0b4e0c8fcf668b70d7e2b8e14184e3f6b1",
+          "size_bytes": 10722
+        },
+        "paper5\\method_contract\\05d1\\neural_profile_selection_contract.json": {
+          "sha256": "4dc5ec24f19a7b575515d29628f1f3c2c0d6a69ffa7685ad81e1fafb05f39cd1",
+          "size_bytes": 5480
+        },
+        "paper5\\method_contract\\05d1\\neural_simulation_protocol_lock.json": {
+          "sha256": "b3f7d0c6528edaac8d91289332eb0fdf4a53cf1cc9d2c35b052d3987e3002066",
+          "size_bytes": 3378
+        },
+        "paper5\\method_contract\\05d2_v2\\neural_profile_screen_results_lock.json": {
+          "sha256": "1b5ef05f7d71393785a98d386c5b517e0dc51af9083a0643dd9e89488bb3d797",
+          "size_bytes": 5266
+        },
+        "paper5\\method_contract\\05d2_v2\\neural_profile_screen_results_manifest.json": {
+          "sha256": "441e2d33b2353f06047f67a6725bd7a09984f7a67b7c6864e29c5a0928f46bb3",
+          "size_bytes": 8243
+        },
+        "paper5\\method_contract\\05d2_v2\\neural_profile_screen_shard_manifest.csv": {
+          "sha256": "91afadb1268443f945cdf60f57c290a36d882c79cfcd35712d490504083151e2",
+          "size_bytes": 1741746
+        },
+        "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_overall_summary.csv": {
+          "sha256": "be6c318a013cb31d2040fd571dbd78759f15235422c01e7ab83c5ef0f28b28f5",
+          "size_bytes": 1806
+        },
+        "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_selection_result.json": {
+          "sha256": "381eecd87476970b9e1f07cb70ba84ce8b9d03c1fcd93b220bfe61baedfa45d4",
+          "size_bytes": 1280
+        },
+        "paper5\\results\\simulation_benchmark\\05d_neural\\profile_screen_v2\\neural_profile_selection_table.csv": {
+          "sha256": "f71483d119f8d1abe764dd226ed814503bed2a19331f3c126130afc48c581d4b",
+          "size_bytes": 1951
+        }
+      }
+    },
+    "scientific_state": {
+      "TARGET_model_fitting_performed": false,
+      "biological_annotations_used_for_profile_selection": false,
+      "clinical_labels_loaded": false,
+      "confirmatory_neural_ablation_performed": false,
+      "confirmatory_replicates_11_to_20_accessed": false,
+      "development_neural_profile_screening_performed": true,
+      "development_neural_profile_selected": true,
+      "final_gate_calibration_data_used": false,
+      "outcomes_loaded": false,
+      "representation_method_selected": false,
+      "selected_neural_profile_frozen": true
+    },
+    "script_version": "05d3-freeze-selected-neural-profile-v1-no-cli",
+    "selected_profile": {
+      "architecture_profile": "compact",
+      "complexity": {
+        "architecture_complexity_rank": 1,
+        "combined_complexity_rank": 2,
+        "regularization_complexity_rank": 1
+      },
+      "parameters": {
+        "contrastive_temperature": 0.2,
+        "contrastive_weight": 0.1,
+        "cross_reconstruction_weight": 0.25,
+        "decoder_hidden_dim": 32,
+        "early_stopping_min_delta": 0.0001,
+        "early_stopping_patience": 30,
+        "encoder_hidden_dim": 32,
+        "learning_rate": 0.001,
+        "maximum_epochs": 400,
+        "modality_dropout_probability": 0.15,
+        "pca_components": {
+          "CNV": 10,
+          "METHYLATION": 10,
+          "RNA": 10
+        },
+        "private_latent_dim_per_view": 2,
+        "private_separation_weight": 0.05,
+        "reconstruction_weight": 1.0,
+        "shared_alignment_weight": 0.5,
+        "shared_latent_dim": 5,
+        "shared_private_orthogonality_weight": 0.05,
+        "weight_decay": 0.0001
+      },
+      "profile_id": "ARCH_COMPACT__REG_WEAK",
+      "regularization_profile": "weak",
+      "source_profile_grid_row": {
+        "arch_activation": "GELU",
+        "arch_cnv_pca_components": "10",
+        "arch_decoder_hidden_dim": "32",
+        "arch_early_stopping_min_delta": "0.0001",
+        "arch_early_stopping_patience": "30",
+        "arch_encoder_hidden_dim": "32",
+        "arch_full_batch_training": "True",
+        "arch_layer_normalization": "True",
+        "arch_maximum_epochs": "400",
+        "arch_methylation_pca_components": "10",
+        "arch_private_latent_dim_per_view": "2",
+        "arch_rna_pca_components": "10",
+        "arch_shared_latent_dim": "5",
+        "architecture_complexity_rank": "1",
+        "architecture_profile": "compact",
+        "combined_complexity_rank": "2",
+        "profile_id": "ARCH_COMPACT__REG_WEAK",
+        "reg_contrastive_temperature": "0.2",
+        "reg_contrastive_weight": "0.1",
+        "reg_cross_reconstruction_weight": "0.25",
+        "reg_learning_rate": "0.001",
+        "reg_modality_dropout_probability": "0.15",
+        "reg_private_separation_weight": "0.05",
+        "reg_reconstruction_weight": "1.0",
+        "reg_shared_alignment_weight": "0.5",
+        "reg_shared_private_orthogonality_weight": "0.05",
+        "reg_weight_decay": "0.0001",
+        "regularization_complexity_rank": "1",
+        "regularization_profile": "weak"
+      }
+    },
+    "selection_evidence": {
+      "best_mean_simulation_utility": 0.674453590656,
+      "best_profile_id": "ARCH_COMPACT__REG_WEAK",
+      "best_standard_error": 0.0271911923123,
+      "frozen_05d2_selection_order": [
+        "hard-gate eligibility",
+        "within one SE of highest eligible mean utility",
+        "lowest combined complexity rank",
+        "lowest architecture complexity rank",
+        "lowest regularization complexity rank",
+        "lexicographically smaller profile_id"
+      ],
+      "independent_rule_replay": "PASS",
+      "n_hard_gate_eligible_profiles": 3,
+      "n_within_one_se_profiles": 1,
+      "one_se_threshold": 0.6472623983436999,
+      "selected_mean_simulation_utility": 0.674453590656,
+      "selected_mean_stability_gated_false_biological_discovery_fraction": 0.0723039215686,
+      "selected_profile_id": "ARCH_COMPACT__REG_WEAK",
+      "selection_rule": "Among hard-gate-eligible profiles, identify the highest mean simulation utility. Profiles with mean utility >= best mean - SE(best) form the one-SE set. Select the lowest combined complexity rank; ties use architecture complexity, regularization complexity, then profile_id lexicographically.",
+      "selection_status": "PROFILE_SELECTED_BY_FROZEN_ONE_SE_RULE",
+      "within_one_se_profile_ids": [
+        "ARCH_COMPACT__REG_WEAK"
+      ]
+    },
+    "status": "FROZEN_OUTCOME_BLIND_NEURAL_PROFILE_BEFORE_CONFIRMATORY_ABLATION"
+  },
+  "candidate_existing_implementation_sources": [
+    {
+      "path": "paper5/scripts/05c1_fit_linear_simulation_baselines.py",
+      "sha256": "c2c91b4ad274f78ccc369e6fca765102285cf3d9c8191f3c33f4a450b7426367",
+      "size_bytes": 126641,
+      "relevant_top_level_functions": [
+        {
+          "name": "resolve_project_path",
+          "signature": "resolve_project_path(value)",
+          "lineno": 362
+        },
+        {
+          "name": "build_protocol",
+          "signature": "build_protocol(upstream)",
+          "lineno": 866
+        },
+        {
+          "name": "fit_view_preprocessor",
+          "signature": "fit_view_preprocessor(view, training_matrix)",
+          "lineno": 1111
+        },
+        {
+          "name": "fit_all_preprocessors",
+          "signature": "fit_all_preprocessors(arrays, training_indices)",
+          "lineno": 1188
+        },
+        {
+          "name": "fit_dual_pca",
+          "signature": "fit_dual_pca(training_matrix, maximum_rank)",
+          "lineno": 1262
+        },
+        {
+          "name": "subspace_metrics",
+          "signature": "subspace_metrics(estimated, truth)",
+          "lineno": 1408
+        },
+        {
+          "name": "standardized_columns",
+          "signature": "standardized_columns(matrix)",
+          "lineno": 1489
+        },
+        {
+          "name": "row_aligned_truth",
+          "signature": "row_aligned_truth(arrays, view, kind)",
+          "lineno": 1669
+        },
+        {
+          "name": "normalized_reconstruction_metrics",
+          "signature": "normalized_reconstruction_metrics(reconstructed, complete_truth)",
+          "lineno": 1765
+        },
+        {
+          "name": "standardize_embedding_train_test",
+          "signature": "standardize_embedding_train_test(training, test)",
+          "lineno": 1816
+        },
+        {
+          "name": "cross_view_retrieval_metrics",
+          "signature": "cross_view_retrieval_metrics(training_embeddings, test_embeddings, row_source, training_indices, test_indices)",
+          "lineno": 2003
+        },
+        {
+          "name": "single_view_full_truth_metrics",
+          "signature": "single_view_full_truth_metrics(arrays, view, pca, transformed, rank, threshold)",
+          "lineno": 2133
+        },
+        {
+          "name": "block_full_truth_metrics",
+          "signature": "block_full_truth_metrics(arrays, pca, block_views, view_slices, rank, threshold)",
+          "lineno": 2269
+        },
+        {
+          "name": "build_view_slices",
+          "signature": "build_view_slices(block_views)",
+          "lineno": 2518
+        },
+        {
+          "name": "evaluate_fold",
+          "signature": "evaluate_fold(arrays, training_indices, test_indices, fold_index, ranks)",
+          "lineno": 2552
+        },
+        {
+          "name": "deterministic_folds",
+          "signature": "deterministic_folds(n_samples, scenario_id, replicate_index, simulation_seed)",
+          "lineno": 2937
+        },
+        {
+          "name": "aggregate_fold_metrics",
+          "signature": "aggregate_fold_metrics(fold_rows, ranks)",
+          "lineno": 2966
+        }
+      ],
+      "relevant_classes": [
+        {
+          "name": "ViewPreprocessor",
+          "lineno": 235,
+          "methods": []
+        },
+        {
+          "name": "DualPCA",
+          "lineno": 290,
+          "methods": []
+        }
+      ],
+      "selected_literal_constants": {},
+      "imports": [
+        "__future__:annotations",
+        "hashlib",
+        "importlib.metadata",
+        "json",
+        "math",
+        "os",
+        "platform",
+        "sys",
+        "tempfile",
+        "traceback",
+        "dataclasses:dataclass",
+        "datetime:datetime,timezone",
+        "pathlib:Path",
+        "typing:Any,Iterable",
+        "numpy",
+        "pandas",
+        "scipy.optimize:linear_sum_assignment",
+        "sklearn.model_selection:KFold"
+      ]
+    },
+    {
+      "path": "paper5/scripts/05c2a_freeze_mofa_out_of_sample_projection_protocol.py",
+      "sha256": "8750fa2aaf6690eccb5b964c98ec013a76208f391256401481e9025294b8eedd",
+      "size_bytes": 59771,
+      "relevant_top_level_functions": [
+        {
+          "name": "resolve_project_path",
+          "signature": "resolve_project_path(value)",
+          "lineno": 269
+        },
+        {
+          "name": "inspect_mofapy2_api",
+          "signature": "inspect_mofapy2_api()",
+          "lineno": 913
+        },
+        {
+          "name": "gaussian_posterior_project",
+          "signature": "gaussian_posterior_project(observed_by_view, weights_by_view, precision_by_view, views_used)",
+          "lineno": 1029
+        },
+        {
+          "name": "run_projection_reference_fixture",
+          "signature": "run_projection_reference_fixture()",
+          "lineno": 1149
+        },
+        {
+          "name": "build_fit_seed_registry",
+          "signature": "build_fit_seed_registry(simulation_manifest)",
+          "lineno": 1467
+        },
+        {
+          "name": "build_protocol",
+          "signature": "build_protocol(upstream, environment, seed_registry_hash)",
+          "lineno": 1610
+        }
+      ],
+      "relevant_classes": [],
+      "selected_literal_constants": {
+        "MOFA_MODEL_IDS": [
+          "MOFA_K5",
+          "MOFA_K10",
+          "MOFA_K15",
+          "MOFA_K20"
+        ],
+        "MOFA_SIMULATION_MASTER_SEED": 20260815,
+        "MOFA_MODEL_OPTIONS": {
+          "spikeslab_factors": false,
+          "spikeslab_weights": true,
+          "ard_factors": false,
+          "ard_weights": true
+        }
+      },
+      "imports": [
+        "__future__:annotations",
+        "hashlib",
+        "importlib.metadata",
+        "inspect",
+        "json",
+        "math",
+        "os",
+        "platform",
+        "sys",
+        "tempfile",
+        "datetime:datetime,timezone",
+        "pathlib:Path",
+        "typing:Any",
+        "numpy",
+        "pandas"
+      ]
+    },
+    {
+      "path": "paper5/scripts/05c2b_fit_mofa_simulation_baselines.py",
+      "sha256": "4d806c39395b56b10dd3a35b8bea29c7f5c2b3321662e6d125661e683d5cdb60",
+      "size_bytes": 98585,
+      "relevant_top_level_functions": [
+        {
+          "name": "resolve_project_path",
+          "signature": "resolve_project_path(value)",
+          "lineno": 155
+        },
+        {
+          "name": "build_protocol",
+          "signature": "build_protocol(upstream)",
+          "lineno": 414
+        },
+        {
+          "name": "fit_view_preprocessor",
+          "signature": "fit_view_preprocessor(view, training_matrix, feature_budget, contract)",
+          "lineno": 534
+        },
+        {
+          "name": "fit_all_preprocessors",
+          "signature": "fit_all_preprocessors(arrays, training_indices, contract)",
+          "lineno": 598
+        },
+        {
+          "name": "build_preprocessing_rows",
+          "signature": "build_preprocessing_rows(arrays, preprocessors, fit_stage, fold_index, rank, n_training, n_test)",
+          "lineno": 635
+        },
+        {
+          "name": "gaussian_posterior_project",
+          "signature": "gaussian_posterior_project(observed_by_view, weights_by_view, precision_by_view, views_used)",
+          "lineno": 681
+        },
+        {
+          "name": "summarize_training_stats",
+          "signature": "summarize_training_stats(model)",
+          "lineno": 813
+        },
+        {
+          "name": "fit_mofa",
+          "signature": "fit_mofa(training_views, selected_feature_indices, rank, seed, frozen_protocol, sample_ids)",
+          "lineno": 851
+        },
+        {
+          "name": "build_split_lookup",
+          "signature": "build_split_lookup(table)",
+          "lineno": 971
+        },
+        {
+          "name": "build_seed_lookup",
+          "signature": "build_seed_lookup(table)",
+          "lineno": 1016
+        },
+        {
+          "name": "evaluate_heldout_fit",
+          "signature": "evaluate_heldout_fit(arrays, training_indices, test_indices, fold_index, rank, seed, frozen_protocol, linear)",
+          "lineno": 1090
+        },
+        {
+          "name": "failed_fold_row",
+          "signature": "failed_fold_row(fold_index, rank, n_training, n_test, error)",
+          "lineno": 1247
+        },
+        {
+          "name": "evaluate_full_truth_fit",
+          "signature": "evaluate_full_truth_fit(arrays, rank, seed, frozen_protocol, truth_threshold, linear)",
+          "lineno": 1288
+        },
+        {
+          "name": "failed_full_metrics",
+          "signature": "failed_full_metrics(error)",
+          "lineno": 1514
+        },
+        {
+          "name": "aggregate_folds",
+          "signature": "aggregate_folds(fold_rows, rank, linear)",
+          "lineno": 1563
+        },
+        {
+          "name": "build_base_metadata",
+          "signature": "build_base_metadata(row, dataset_path, dataset_hash)",
+          "lineno": 1699
+        },
+        {
+          "name": "build_paired_linear_comparison",
+          "signature": "build_paired_linear_comparison(mofa)",
+          "lineno": 2135
+        }
+      ],
+      "relevant_classes": [
+        {
+          "name": "MofaViewPreprocessor",
+          "lineno": 92,
+          "methods": []
+        },
+        {
+          "name": "MofaFit",
+          "lineno": 120,
+          "methods": []
+        }
+      ],
+      "selected_literal_constants": {},
+      "imports": [
+        "__future__:annotations",
+        "contextlib",
+        "gc",
+        "hashlib",
+        "importlib.metadata",
+        "importlib.util",
+        "json",
+        "math",
+        "os",
+        "platform",
+        "sys",
+        "tempfile",
+        "time",
+        "traceback",
+        "warnings",
+        "dataclasses:dataclass",
+        "datetime:datetime,timezone",
+        "pathlib:Path",
+        "typing:Any",
+        "numpy",
+        "pandas"
+      ]
+    },
+    {
+      "path": "paper5/scripts/05d2_screen_neural_profiles_gpu.py",
+      "sha256": "c031a435ad7f1541d0f5727460f0f19e41d9d49d0db4cc66656fa9f7bc262dec",
+      "size_bytes": 220916,
+      "relevant_top_level_functions": [
+        {
+          "name": "fit_dual_pca_gpu",
+          "signature": "fit_dual_pca_gpu(training_matrix, maximum_rank)",
+          "lineno": 514
+        },
+        {
+          "name": "resolve_project_path",
+          "signature": "resolve_project_path(value)",
+          "lineno": 798
+        },
+        {
+          "name": "parse_profile",
+          "signature": "parse_profile(row)",
+          "lineno": 1750
+        },
+        {
+          "name": "build_profile_lookup",
+          "signature": "build_profile_lookup(table)",
+          "lineno": 1922
+        },
+        {
+          "name": "build_manifest_lookup",
+          "signature": "build_manifest_lookup(table)",
+          "lineno": 1958
+        },
+        {
+          "name": "build_partition_lookup",
+          "signature": "build_partition_lookup(table)",
+          "lineno": 2004
+        },
+        {
+          "name": "build_profile_seed_lookup",
+          "signature": "build_profile_seed_lookup(table)",
+          "lineno": 2085
+        },
+        {
+          "name": "build_stability_lookup",
+          "signature": "build_stability_lookup(table)",
+          "lineno": 2146
+        },
+        {
+          "name": "fit_view_preprocessor",
+          "signature": "fit_view_preprocessor(linear, view, training_matrix, feature_budget, pca_target_components)",
+          "lineno": 2271
+        },
+        {
+          "name": "fit_preprocessors",
+          "signature": "fit_preprocessors(linear, arrays, training_indices, profile)",
+          "lineno": 2527
+        },
+        {
+          "name": "preprocessing_audit_rows",
+          "signature": "preprocessing_audit_rows(arrays, preprocessors, training_indices, profile, stage)",
+          "lineno": 2689
+        },
+        {
+          "name": "symmetric_info_nce",
+          "signature": "symmetric_info_nce(left, right, temperature)",
+          "lineno": 3325
+        },
+        {
+          "name": "reconstruction_loss",
+          "signature": "reconstruction_loss(model, views, private, patient_shared, active_mask, null_mse)",
+          "lineno": 3513
+        },
+        {
+          "name": "shared_alignment_loss",
+          "signature": "shared_alignment_loss(shared, patient_shared, active_mask)",
+          "lineno": 3589
+        },
+        {
+          "name": "dropped_view_reconstruction_loss",
+          "signature": "dropped_view_reconstruction_loss(model, views, patient_shared, dropped_mask, null_mse)",
+          "lineno": 3832
+        },
+        {
+          "name": "systematic_missing_view_loss",
+          "signature": "systematic_missing_view_loss(model, views, shared, availability, null_mse)",
+          "lineno": 3910
+        },
+        {
+          "name": "construct_model",
+          "signature": "construct_model(input_dims, profile, seed)",
+          "lineno": 4206
+        },
+        {
+          "name": "train_with_early_stopping",
+          "signature": "train_with_early_stopping(profile, fit_views_np, fit_availability_np, early_views_np, early_availability_np, fit_seed)",
+          "lineno": 4250
+        },
+        {
+          "name": "train_fixed_epochs",
+          "signature": "train_fixed_epochs(profile, training_views_np, availability_np, fit_seed, epochs, fit_stage)",
+          "lineno": 4493
+        },
+        {
+          "name": "encode_numpy",
+          "signature": "encode_numpy(model, views_np, availability_np)",
+          "lineno": 4645
+        },
+        {
+          "name": "normalized_reconstruction_against_training_null",
+          "signature": "normalized_reconstruction_against_training_null(prediction, truth, training_null_mse)",
+          "lineno": 4749
+        },
+        {
+          "name": "predict_reconstruction_numpy",
+          "signature": "predict_reconstruction_numpy(model, views_np, availability_np)",
+          "lineno": 4826
+        },
+        {
+          "name": "predict_missing_view_numpy",
+          "signature": "predict_missing_view_numpy(model, views_np, availability_np, omitted_view)",
+          "lineno": 4903
+        },
+        {
+          "name": "validation_metrics",
+          "signature": "validation_metrics(linear, arrays, profile, model, preprocessors, training_indices, validation_indices)",
+          "lineno": 4997
+        },
+        {
+          "name": "standardized_matrix",
+          "signature": "standardized_matrix(matrix)",
+          "lineno": 5532
+        },
+        {
+          "name": "align_resample_to_reference",
+          "signature": "align_resample_to_reference(linear, resample_scores, reference_scores)",
+          "lineno": 5586
+        },
+        {
+          "name": "stability_audit",
+          "signature": "stability_audit(linear, arrays, profile, selected_epoch, stability_group, stability_thresholds)",
+          "lineno": 5843
+        },
+        {
+          "name": "evaluate_dataset_profile",
+          "signature": "evaluate_dataset_profile(linear, manifest_row, profile, partitions, profile_fit_seed, stability_group, stability_thresholds)",
+          "lineno": 6698
+        },
+        {
+          "name": "build_execution_protocol",
+          "signature": "build_execution_protocol(upstream)",
+          "lineno": 7419
+        },
+        {
+          "name": "profile_overall_summary",
+          "signature": "profile_overall_summary(dataset_table, scenario_table)",
+          "lineno": 8487
+        },
+        {
+          "name": "select_profile_one_se",
+          "signature": "select_profile_one_se(profile_summary)",
+          "lineno": 8739
+        }
+      ],
+      "relevant_classes": [
+        {
+          "name": "NeuralViewPreprocessor",
+          "lineno": 301,
+          "methods": []
+        },
+        {
+          "name": "ProfileSpec",
+          "lineno": 405,
+          "methods": []
+        },
+        {
+          "name": "FitResult",
+          "lineno": 432,
+          "methods": []
+        },
+        {
+          "name": "GpuDualPCA",
+          "lineno": 443,
+          "methods": []
+        },
+        {
+          "name": "ViewEncoder",
+          "lineno": 2785,
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, input_dim, hidden_dim, shared_dim, private_dim)",
+              "lineno": 2788
+            }
+          ]
+        },
+        {
+          "name": "ViewDecoder",
+          "lineno": 2839,
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, shared_dim, private_dim, hidden_dim, output_dim)",
+              "lineno": 2842
+            }
+          ]
+        },
+        {
+          "name": "SableMOProfileModel",
+          "lineno": 2898,
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, input_dims, profile)",
+              "lineno": 2901
+            },
+            {
+              "name": "encode",
+              "signature": "encode(self, views)",
+              "lineno": 2987
+            },
+            {
+              "name": "decoder_shared_energy",
+              "signature": "decoder_shared_energy(self)",
+              "lineno": 3065
+            }
+          ]
+        }
+      ],
+      "selected_literal_constants": {
+        "EXPECTED_PROFILES": 9,
+        "STABILITY_RESAMPLES": 20
+      },
+      "imports": [
+        "__future__:annotations",
+        "contextlib",
+        "gc",
+        "hashlib",
+        "importlib.util",
+        "json",
+        "math",
+        "os",
+        "random",
+        "sys",
+        "tempfile",
+        "time",
+        "traceback",
+        "warnings",
+        "dataclasses:dataclass",
+        "pathlib:Path",
+        "typing:Any",
+        "numpy",
+        "pandas",
+        "scipy.optimize:linear_sum_assignment",
+        "torch",
+        "torch.nn",
+        "torch.nn.functional"
+      ]
+    },
+    {
+      "path": "paper5/scripts/05d2v2_screen_neural_profiles_gpu_syncfree.py",
+      "sha256": "c10bc91e044ea9869129bb08fe896964c469ba60534090b20c35a4508715be84",
+      "size_bytes": 230962,
+      "relevant_top_level_functions": [
+        {
+          "name": "fit_dual_pca_gpu",
+          "signature": "fit_dual_pca_gpu(training_matrix, maximum_rank)",
+          "lineno": 539
+        },
+        {
+          "name": "resolve_project_path",
+          "signature": "resolve_project_path(value)",
+          "lineno": 823
+        },
+        {
+          "name": "parse_profile",
+          "signature": "parse_profile(row)",
+          "lineno": 1775
+        },
+        {
+          "name": "build_profile_lookup",
+          "signature": "build_profile_lookup(table)",
+          "lineno": 1947
+        },
+        {
+          "name": "build_manifest_lookup",
+          "signature": "build_manifest_lookup(table)",
+          "lineno": 1983
+        },
+        {
+          "name": "build_partition_lookup",
+          "signature": "build_partition_lookup(table)",
+          "lineno": 2029
+        },
+        {
+          "name": "build_profile_seed_lookup",
+          "signature": "build_profile_seed_lookup(table)",
+          "lineno": 2110
+        },
+        {
+          "name": "build_stability_lookup",
+          "signature": "build_stability_lookup(table)",
+          "lineno": 2171
+        },
+        {
+          "name": "fit_view_preprocessor",
+          "signature": "fit_view_preprocessor(linear, view, training_matrix, feature_budget, pca_target_components)",
+          "lineno": 2296
+        },
+        {
+          "name": "fit_preprocessors",
+          "signature": "fit_preprocessors(linear, arrays, training_indices, profile)",
+          "lineno": 2552
+        },
+        {
+          "name": "preprocessing_audit_rows",
+          "signature": "preprocessing_audit_rows(arrays, preprocessors, training_indices, profile, stage)",
+          "lineno": 2714
+        },
+        {
+          "name": "symmetric_info_nce",
+          "signature": "symmetric_info_nce(left, right, temperature)",
+          "lineno": 3350
+        },
+        {
+          "name": "masked_symmetric_info_nce",
+          "signature": "masked_symmetric_info_nce(left, right, mask, temperature)",
+          "lineno": 3597
+        },
+        {
+          "name": "reconstruction_loss",
+          "signature": "reconstruction_loss(model, views, private, patient_shared, active_mask, null_mse)",
+          "lineno": 3709
+        },
+        {
+          "name": "shared_alignment_loss",
+          "signature": "shared_alignment_loss(shared, patient_shared, active_mask)",
+          "lineno": 3804
+        },
+        {
+          "name": "dropped_view_reconstruction_loss",
+          "signature": "dropped_view_reconstruction_loss(model, views, patient_shared, dropped_mask, null_mse)",
+          "lineno": 4061
+        },
+        {
+          "name": "systematic_missing_view_loss",
+          "signature": "systematic_missing_view_loss(model, views, shared, availability, null_mse)",
+          "lineno": 4161
+        },
+        {
+          "name": "construct_model",
+          "signature": "construct_model(input_dims, profile, seed)",
+          "lineno": 4474
+        },
+        {
+          "name": "train_with_early_stopping",
+          "signature": "train_with_early_stopping(profile, fit_views_np, fit_availability_np, early_views_np, early_availability_np, fit_seed)",
+          "lineno": 4518
+        },
+        {
+          "name": "train_fixed_epochs",
+          "signature": "train_fixed_epochs(profile, training_views_np, availability_np, fit_seed, epochs, fit_stage)",
+          "lineno": 4759
+        },
+        {
+          "name": "encode_numpy",
+          "signature": "encode_numpy(model, views_np, availability_np)",
+          "lineno": 4908
+        },
+        {
+          "name": "normalized_reconstruction_against_training_null",
+          "signature": "normalized_reconstruction_against_training_null(prediction, truth, training_null_mse)",
+          "lineno": 5012
+        },
+        {
+          "name": "predict_reconstruction_numpy",
+          "signature": "predict_reconstruction_numpy(model, views_np, availability_np)",
+          "lineno": 5089
+        },
+        {
+          "name": "predict_missing_view_numpy",
+          "signature": "predict_missing_view_numpy(model, views_np, availability_np, omitted_view)",
+          "lineno": 5166
+        },
+        {
+          "name": "validation_metrics",
+          "signature": "validation_metrics(linear, arrays, profile, model, preprocessors, training_indices, validation_indices)",
+          "lineno": 5260
+        },
+        {
+          "name": "standardized_matrix",
+          "signature": "standardized_matrix(matrix)",
+          "lineno": 5795
+        },
+        {
+          "name": "align_resample_to_reference",
+          "signature": "align_resample_to_reference(linear, resample_scores, reference_scores)",
+          "lineno": 5849
+        },
+        {
+          "name": "stability_audit",
+          "signature": "stability_audit(linear, arrays, profile, selected_epoch, stability_group, stability_thresholds)",
+          "lineno": 6106
+        },
+        {
+          "name": "evaluate_dataset_profile",
+          "signature": "evaluate_dataset_profile(linear, manifest_row, profile, partitions, profile_fit_seed, stability_group, stability_thresholds)",
+          "lineno": 6961
+        },
+        {
+          "name": "build_execution_protocol",
+          "signature": "build_execution_protocol(upstream)",
+          "lineno": 7682
+        },
+        {
+          "name": "profile_overall_summary",
+          "signature": "profile_overall_summary(dataset_table, scenario_table)",
+          "lineno": 8767
+        },
+        {
+          "name": "select_profile_one_se",
+          "signature": "select_profile_one_se(profile_summary)",
+          "lineno": 9019
+        }
+      ],
+      "relevant_classes": [
+        {
+          "name": "NeuralViewPreprocessor",
+          "lineno": 326,
+          "methods": []
+        },
+        {
+          "name": "ProfileSpec",
+          "lineno": 430,
+          "methods": []
+        },
+        {
+          "name": "FitResult",
+          "lineno": 457,
+          "methods": []
+        },
+        {
+          "name": "GpuDualPCA",
+          "lineno": 468,
+          "methods": []
+        },
+        {
+          "name": "ViewEncoder",
+          "lineno": 2810,
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, input_dim, hidden_dim, shared_dim, private_dim)",
+              "lineno": 2813
+            }
+          ]
+        },
+        {
+          "name": "ViewDecoder",
+          "lineno": 2864,
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, shared_dim, private_dim, hidden_dim, output_dim)",
+              "lineno": 2867
+            }
+          ]
+        },
+        {
+          "name": "SableMOProfileModel",
+          "lineno": 2923,
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, input_dims, profile)",
+              "lineno": 2926
+            },
+            {
+              "name": "encode",
+              "signature": "encode(self, views)",
+              "lineno": 3012
+            },
+            {
+              "name": "decoder_shared_energy",
+              "signature": "decoder_shared_energy(self)",
+              "lineno": 3090
+            }
+          ]
+        }
+      ],
+      "selected_literal_constants": {
+        "EXPECTED_PROFILES": 9,
+        "STABILITY_RESAMPLES": 20
+      },
+      "imports": [
+        "__future__:annotations",
+        "contextlib",
+        "gc",
+        "hashlib",
+        "importlib.util",
+        "json",
+        "math",
+        "os",
+        "random",
+        "sys",
+        "tempfile",
+        "time",
+        "traceback",
+        "warnings",
+        "dataclasses:dataclass",
+        "pathlib:Path",
+        "typing:Any",
+        "numpy",
+        "pandas",
+        "scipy.optimize:linear_sum_assignment",
+        "torch",
+        "torch.nn",
+        "torch.nn.functional"
+      ]
+    },
+    {
+      "path": "paper5/scripts/05d2v2_screen_neural_profiles_gpu_syncfree_pathfix.py",
+      "sha256": "05ae6923ce588c137bc6f4aa934262181dd99f4ebe6bec3250e4b7cd54ed1ff3",
+      "size_bytes": 234747,
+      "relevant_top_level_functions": [
+        {
+          "name": "fit_dual_pca_gpu",
+          "signature": "fit_dual_pca_gpu(training_matrix, maximum_rank)",
+          "lineno": 544
+        },
+        {
+          "name": "resolve_project_path",
+          "signature": "resolve_project_path(value)",
+          "lineno": 828
+        },
+        {
+          "name": "parse_profile",
+          "signature": "parse_profile(row)",
+          "lineno": 1780
+        },
+        {
+          "name": "build_profile_lookup",
+          "signature": "build_profile_lookup(table)",
+          "lineno": 1952
+        },
+        {
+          "name": "build_manifest_lookup",
+          "signature": "build_manifest_lookup(table)",
+          "lineno": 1988
+        },
+        {
+          "name": "build_partition_lookup",
+          "signature": "build_partition_lookup(table)",
+          "lineno": 2034
+        },
+        {
+          "name": "build_profile_seed_lookup",
+          "signature": "build_profile_seed_lookup(table)",
+          "lineno": 2115
+        },
+        {
+          "name": "build_stability_lookup",
+          "signature": "build_stability_lookup(table)",
+          "lineno": 2176
+        },
+        {
+          "name": "fit_view_preprocessor",
+          "signature": "fit_view_preprocessor(linear, view, training_matrix, feature_budget, pca_target_components)",
+          "lineno": 2301
+        },
+        {
+          "name": "fit_preprocessors",
+          "signature": "fit_preprocessors(linear, arrays, training_indices, profile)",
+          "lineno": 2557
+        },
+        {
+          "name": "preprocessing_audit_rows",
+          "signature": "preprocessing_audit_rows(arrays, preprocessors, training_indices, profile, stage)",
+          "lineno": 2719
+        },
+        {
+          "name": "symmetric_info_nce",
+          "signature": "symmetric_info_nce(left, right, temperature)",
+          "lineno": 3355
+        },
+        {
+          "name": "masked_symmetric_info_nce",
+          "signature": "masked_symmetric_info_nce(left, right, mask, temperature)",
+          "lineno": 3602
+        },
+        {
+          "name": "reconstruction_loss",
+          "signature": "reconstruction_loss(model, views, private, patient_shared, active_mask, null_mse)",
+          "lineno": 3714
+        },
+        {
+          "name": "shared_alignment_loss",
+          "signature": "shared_alignment_loss(shared, patient_shared, active_mask)",
+          "lineno": 3809
+        },
+        {
+          "name": "dropped_view_reconstruction_loss",
+          "signature": "dropped_view_reconstruction_loss(model, views, patient_shared, dropped_mask, null_mse)",
+          "lineno": 4066
+        },
+        {
+          "name": "systematic_missing_view_loss",
+          "signature": "systematic_missing_view_loss(model, views, shared, availability, null_mse)",
+          "lineno": 4166
+        },
+        {
+          "name": "construct_model",
+          "signature": "construct_model(input_dims, profile, seed)",
+          "lineno": 4479
+        },
+        {
+          "name": "train_with_early_stopping",
+          "signature": "train_with_early_stopping(profile, fit_views_np, fit_availability_np, early_views_np, early_availability_np, fit_seed)",
+          "lineno": 4523
+        },
+        {
+          "name": "train_fixed_epochs",
+          "signature": "train_fixed_epochs(profile, training_views_np, availability_np, fit_seed, epochs, fit_stage)",
+          "lineno": 4764
+        },
+        {
+          "name": "encode_numpy",
+          "signature": "encode_numpy(model, views_np, availability_np)",
+          "lineno": 4913
+        },
+        {
+          "name": "normalized_reconstruction_against_training_null",
+          "signature": "normalized_reconstruction_against_training_null(prediction, truth, training_null_mse)",
+          "lineno": 5017
+        },
+        {
+          "name": "predict_reconstruction_numpy",
+          "signature": "predict_reconstruction_numpy(model, views_np, availability_np)",
+          "lineno": 5094
+        },
+        {
+          "name": "predict_missing_view_numpy",
+          "signature": "predict_missing_view_numpy(model, views_np, availability_np, omitted_view)",
+          "lineno": 5171
+        },
+        {
+          "name": "validation_metrics",
+          "signature": "validation_metrics(linear, arrays, profile, model, preprocessors, training_indices, validation_indices)",
+          "lineno": 5265
+        },
+        {
+          "name": "standardized_matrix",
+          "signature": "standardized_matrix(matrix)",
+          "lineno": 5800
+        },
+        {
+          "name": "align_resample_to_reference",
+          "signature": "align_resample_to_reference(linear, resample_scores, reference_scores)",
+          "lineno": 5854
+        },
+        {
+          "name": "stability_audit",
+          "signature": "stability_audit(linear, arrays, profile, selected_epoch, stability_group, stability_thresholds)",
+          "lineno": 6111
+        },
+        {
+          "name": "evaluate_dataset_profile",
+          "signature": "evaluate_dataset_profile(linear, manifest_row, profile, partitions, profile_fit_seed, stability_group, stability_thresholds)",
+          "lineno": 6966
+        },
+        {
+          "name": "build_execution_protocol",
+          "signature": "build_execution_protocol(upstream)",
+          "lineno": 7687
+        },
+        {
+          "name": "profile_overall_summary",
+          "signature": "profile_overall_summary(dataset_table, scenario_table)",
+          "lineno": 8827
+        },
+        {
+          "name": "select_profile_one_se",
+          "signature": "select_profile_one_se(profile_summary)",
+          "lineno": 9079
+        }
+      ],
+      "relevant_classes": [
+        {
+          "name": "NeuralViewPreprocessor",
+          "lineno": 331,
+          "methods": []
+        },
+        {
+          "name": "ProfileSpec",
+          "lineno": 435,
+          "methods": []
+        },
+        {
+          "name": "FitResult",
+          "lineno": 462,
+          "methods": []
+        },
+        {
+          "name": "GpuDualPCA",
+          "lineno": 473,
+          "methods": []
+        },
+        {
+          "name": "ViewEncoder",
+          "lineno": 2815,
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, input_dim, hidden_dim, shared_dim, private_dim)",
+              "lineno": 2818
+            }
+          ]
+        },
+        {
+          "name": "ViewDecoder",
+          "lineno": 2869,
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, shared_dim, private_dim, hidden_dim, output_dim)",
+              "lineno": 2872
+            }
+          ]
+        },
+        {
+          "name": "SableMOProfileModel",
+          "lineno": 2928,
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, input_dims, profile)",
+              "lineno": 2931
+            },
+            {
+              "name": "encode",
+              "signature": "encode(self, views)",
+              "lineno": 3017
+            },
+            {
+              "name": "decoder_shared_energy",
+              "signature": "decoder_shared_energy(self)",
+              "lineno": 3095
+            }
+          ]
+        }
+      ],
+      "selected_literal_constants": {
+        "EXPECTED_PROFILES": 9,
+        "STABILITY_RESAMPLES": 20
+      },
+      "imports": [
+        "__future__:annotations",
+        "contextlib",
+        "gc",
+        "hashlib",
+        "importlib.util",
+        "json",
+        "math",
+        "os",
+        "random",
+        "sys",
+        "tempfile",
+        "time",
+        "traceback",
+        "warnings",
+        "dataclasses:dataclass",
+        "pathlib:Path",
+        "typing:Any",
+        "numpy",
+        "pandas",
+        "scipy.optimize:linear_sum_assignment",
+        "torch",
+        "torch.nn",
+        "torch.nn.functional"
+      ]
+    },
+    {
+      "path": "paper5/scripts/05d3_freeze_selected_neural_profile.py",
+      "sha256": "32ac0cc8c4310253c756ae1446e6e5fe3a2e2c5e5321735aa96563594dbf2fff",
+      "size_bytes": 61232,
+      "relevant_top_level_functions": [
+        {
+          "name": "resolve_project_path",
+          "signature": "resolve_project_path(value)",
+          "lineno": 266
+        },
+        {
+          "name": "selected_profile_row",
+          "signature": "selected_profile_row(profile_grid, selected_profile_id)",
+          "lineno": 1596
+        },
+        {
+          "name": "profile_parameter_contract",
+          "signature": "profile_parameter_contract(row)",
+          "lineno": 1620
+        },
+        {
+          "name": "build_contract",
+          "signature": "build_contract(profile, replay, selection_result)",
+          "lineno": 1855
+        },
+        {
+          "name": "build_readme",
+          "signature": "build_readme(contract)",
+          "lineno": 2016
+        },
+        {
+          "name": "build_lock",
+          "signature": "build_lock(selected_profile_id)",
+          "lineno": 2126
+        }
+      ],
+      "relevant_classes": [],
+      "selected_literal_constants": {
+        "EXPECTED_PROFILES": 9,
+        "EXPECTED_STABILITY_FACTOR_ROWS": 32400
+      },
+      "imports": [
+        "__future__:annotations",
+        "hashlib",
+        "json",
+        "math",
+        "os",
+        "tempfile",
+        "datetime:datetime,timezone",
+        "pathlib:Path",
+        "typing:Any",
+        "pandas"
+      ]
+    },
+    {
+      "path": "paper5/scripts/05d4_fit_neural_ablation_benchmark_gpu.py",
+      "sha256": "6c1dc18213bd0511a856bad0b6d8662cb7323146f7e05d15909d38eb4bea06c3",
+      "size_bytes": 133315,
+      "relevant_top_level_functions": [
+        {
+          "name": "resolve_project_path",
+          "signature": "resolve_project_path(value)",
+          "lineno": 179
+        },
+        {
+          "name": "build_variant_specs",
+          "signature": "build_variant_specs(loss_contract)",
+          "lineno": 321
+        },
+        {
+          "name": "build_split_lookup",
+          "signature": "build_split_lookup(table)",
+          "lineno": 367
+        },
+        {
+          "name": "build_manifest_lookup",
+          "signature": "build_manifest_lookup(table)",
+          "lineno": 382
+        },
+        {
+          "name": "build_seed_lookup",
+          "signature": "build_seed_lookup(table)",
+          "lineno": 392
+        },
+        {
+          "name": "masked_symmetric_info_nce",
+          "signature": "masked_symmetric_info_nce(left, right, mask, temperature)",
+          "lineno": 796
+        },
+        {
+          "name": "reconstruction_loss",
+          "signature": "reconstruction_loss(model, views, private, patient_shared, active_mask, null_mse)",
+          "lineno": 842
+        },
+        {
+          "name": "shared_alignment_loss",
+          "signature": "shared_alignment_loss(shared, patient_shared, active_mask)",
+          "lineno": 864
+        },
+        {
+          "name": "dropped_view_reconstruction_loss",
+          "signature": "dropped_view_reconstruction_loss(model, views, patient_shared, dropped_mask, null_mse)",
+          "lineno": 911
+        },
+        {
+          "name": "systematic_missing_view_loss",
+          "signature": "systematic_missing_view_loss(model, views, shared, availability, null_mse)",
+          "lineno": 933
+        },
+        {
+          "name": "construct_model",
+          "signature": "construct_model(input_dims, profile, variant, seed)",
+          "lineno": 1057
+        },
+        {
+          "name": "train_with_early_stopping",
+          "signature": "train_with_early_stopping(neural, profile, variant, fit_views_np, fit_availability_np, early_views_np, early_availability_np, fit_seed)",
+          "lineno": 1075
+        },
+        {
+          "name": "train_fixed_epochs",
+          "signature": "train_fixed_epochs(neural, profile, variant, training_views_np, availability_np, fit_seed, epochs)",
+          "lineno": 1176
+        },
+        {
+          "name": "encode_numpy",
+          "signature": "encode_numpy(model, views_np, availability_np)",
+          "lineno": 1248
+        },
+        {
+          "name": "normalized_reconstruction_against_training_null",
+          "signature": "normalized_reconstruction_against_training_null(prediction, truth, training_null_mse)",
+          "lineno": 1271
+        },
+        {
+          "name": "predict_reconstruction_numpy",
+          "signature": "predict_reconstruction_numpy(model, views_np, availability_np)",
+          "lineno": 1290
+        },
+        {
+          "name": "predict_missing_view_numpy",
+          "signature": "predict_missing_view_numpy(model, views_np, availability_np, omitted_view)",
+          "lineno": 1315
+        },
+        {
+          "name": "evaluate_fold_seed",
+          "signature": "evaluate_fold_seed(neural, linear, arrays, metadata, profile, variant, fold_index, base_model_seed, seed_record, fold_data)",
+          "lineno": 1514
+        },
+        {
+          "name": "build_execution_protocol",
+          "signature": "build_execution_protocol(upstream)",
+          "lineno": 1692
+        }
+      ],
+      "relevant_classes": [
+        {
+          "name": "FoldRefitData",
+          "lineno": 142,
+          "methods": []
+        },
+        {
+          "name": "SharedOnlyEncoder",
+          "lineno": 607,
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, input_dim, hidden_dim, shared_dim)",
+              "lineno": 608
+            }
+          ]
+        },
+        {
+          "name": "SharedPrivateEncoder",
+          "lineno": 617,
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, input_dim, hidden_dim, shared_dim, private_dim)",
+              "lineno": 618
+            }
+          ]
+        },
+        {
+          "name": "VariationalEncoder",
+          "lineno": 629,
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, input_dim, hidden_dim, shared_dim, private_dim)",
+              "lineno": 630
+            }
+          ]
+        },
+        {
+          "name": "VariantDecoder",
+          "lineno": 643,
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, shared_dim, private_dim, hidden_dim, output_dim)",
+              "lineno": 644
+            }
+          ]
+        },
+        {
+          "name": "NeuralAblationModel",
+          "lineno": 662,
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, input_dims, profile, variant)",
+              "lineno": 663
+            },
+            {
+              "name": "encode",
+              "signature": "encode(self, views, stochastic_latent)",
+              "lineno": 705
+            },
+            {
+              "name": "decode",
+              "signature": "decode(self, view, patient_shared, private)",
+              "lineno": 732
+            },
+            {
+              "name": "decoder_shared_energy",
+              "signature": "decoder_shared_energy(self)",
+              "lineno": 740
+            }
+          ]
+        }
+      ],
+      "selected_literal_constants": {
+        "NEURAL_VARIANTS": [
+          "V0_BALANCED_AE",
+          "V1_SHARED_PRIVATE_AE",
+          "V2_CONTRASTIVE_SPAE",
+          "V3_DROPOUT_SPAE",
+          "V4_SABLE_MO",
+          "V5_SABLE_VAE"
+        ],
+        "VAE_VARIANT": "V5_SABLE_VAE",
+        "CONFIRMATORY_MODEL_BASE_SEEDS": [
+          1103,
+          2207
+        ],
+        "EXPECTED_SEEDS_PER_VARIANT_FOLD": 2
+      },
+      "imports": [
+        "__future__:annotations",
+        "gc",
+        "hashlib",
+        "importlib.util",
+        "json",
+        "math",
+        "os",
+        "random",
+        "sys",
+        "tempfile",
+        "time",
+        "traceback",
+        "dataclasses:dataclass",
+        "pathlib:Path",
+        "typing:Any,Iterable",
+        "numpy",
+        "pandas",
+        "torch",
+        "torch.nn",
+        "torch.nn.functional"
+      ]
+    },
+    {
+      "path": "paper5/scripts/05d4_fit_neural_ablation_benchmark_gpu_v1_2_verified.py",
+      "sha256": "8ab3b84f1d7bcd475b88b5f06d49e661c2d6230ea3598406e66970d792c74a5c",
+      "size_bytes": 138057,
+      "relevant_top_level_functions": [
+        {
+          "name": "resolve_project_path",
+          "signature": "resolve_project_path(value)",
+          "lineno": 184
+        },
+        {
+          "name": "build_variant_specs",
+          "signature": "build_variant_specs(loss_contract)",
+          "lineno": 326
+        },
+        {
+          "name": "build_split_lookup",
+          "signature": "build_split_lookup(table)",
+          "lineno": 372
+        },
+        {
+          "name": "build_manifest_lookup",
+          "signature": "build_manifest_lookup(table)",
+          "lineno": 387
+        },
+        {
+          "name": "build_seed_lookup",
+          "signature": "build_seed_lookup(table)",
+          "lineno": 397
+        },
+        {
+          "name": "masked_symmetric_info_nce",
+          "signature": "masked_symmetric_info_nce(left, right, mask, temperature)",
+          "lineno": 801
+        },
+        {
+          "name": "reconstruction_loss",
+          "signature": "reconstruction_loss(model, views, private, patient_shared, active_mask, null_mse)",
+          "lineno": 847
+        },
+        {
+          "name": "shared_alignment_loss",
+          "signature": "shared_alignment_loss(shared, patient_shared, active_mask)",
+          "lineno": 869
+        },
+        {
+          "name": "dropped_view_reconstruction_loss",
+          "signature": "dropped_view_reconstruction_loss(model, views, patient_shared, dropped_mask, null_mse)",
+          "lineno": 916
+        },
+        {
+          "name": "systematic_missing_view_loss",
+          "signature": "systematic_missing_view_loss(model, views, shared, availability, null_mse)",
+          "lineno": 938
+        },
+        {
+          "name": "construct_model",
+          "signature": "construct_model(input_dims, profile, variant, seed)",
+          "lineno": 1062
+        },
+        {
+          "name": "train_with_early_stopping",
+          "signature": "train_with_early_stopping(neural, profile, variant, fit_views_np, fit_availability_np, early_views_np, early_availability_np, fit_seed)",
+          "lineno": 1080
+        },
+        {
+          "name": "train_fixed_epochs",
+          "signature": "train_fixed_epochs(neural, profile, variant, training_views_np, availability_np, fit_seed, epochs)",
+          "lineno": 1181
+        },
+        {
+          "name": "encode_numpy",
+          "signature": "encode_numpy(model, views_np, availability_np)",
+          "lineno": 1253
+        },
+        {
+          "name": "normalized_reconstruction_against_training_null",
+          "signature": "normalized_reconstruction_against_training_null(prediction, truth, training_null_mse)",
+          "lineno": 1276
+        },
+        {
+          "name": "predict_reconstruction_numpy",
+          "signature": "predict_reconstruction_numpy(model, views_np, availability_np)",
+          "lineno": 1295
+        },
+        {
+          "name": "predict_missing_view_numpy",
+          "signature": "predict_missing_view_numpy(model, views_np, availability_np, omitted_view)",
+          "lineno": 1320
+        },
+        {
+          "name": "evaluate_fold_seed",
+          "signature": "evaluate_fold_seed(neural, linear, arrays, metadata, profile, variant, fold_index, base_model_seed, seed_record, fold_data)",
+          "lineno": 1519
+        },
+        {
+          "name": "build_execution_protocol",
+          "signature": "build_execution_protocol(upstream)",
+          "lineno": 1697
+        }
+      ],
+      "relevant_classes": [
+        {
+          "name": "FoldRefitData",
+          "lineno": 147,
+          "methods": []
+        },
+        {
+          "name": "SharedOnlyEncoder",
+          "lineno": 612,
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, input_dim, hidden_dim, shared_dim)",
+              "lineno": 613
+            }
+          ]
+        },
+        {
+          "name": "SharedPrivateEncoder",
+          "lineno": 622,
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, input_dim, hidden_dim, shared_dim, private_dim)",
+              "lineno": 623
+            }
+          ]
+        },
+        {
+          "name": "VariationalEncoder",
+          "lineno": 634,
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, input_dim, hidden_dim, shared_dim, private_dim)",
+              "lineno": 635
+            }
+          ]
+        },
+        {
+          "name": "VariantDecoder",
+          "lineno": 648,
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, shared_dim, private_dim, hidden_dim, output_dim)",
+              "lineno": 649
+            }
+          ]
+        },
+        {
+          "name": "NeuralAblationModel",
+          "lineno": 667,
+          "methods": [
+            {
+              "name": "__init__",
+              "signature": "__init__(self, input_dims, profile, variant)",
+              "lineno": 668
+            },
+            {
+              "name": "encode",
+              "signature": "encode(self, views, stochastic_latent)",
+              "lineno": 710
+            },
+            {
+              "name": "decode",
+              "signature": "decode(self, view, patient_shared, private)",
+              "lineno": 737
+            },
+            {
+              "name": "decoder_shared_energy",
+              "signature": "decoder_shared_energy(self)",
+              "lineno": 745
+            }
+          ]
+        }
+      ],
+      "selected_literal_constants": {
+        "NEURAL_VARIANTS": [
+          "V0_BALANCED_AE",
+          "V1_SHARED_PRIVATE_AE",
+          "V2_CONTRASTIVE_SPAE",
+          "V3_DROPOUT_SPAE",
+          "V4_SABLE_MO",
+          "V5_SABLE_VAE"
+        ],
+        "VAE_VARIANT": "V5_SABLE_VAE",
+        "CONFIRMATORY_MODEL_BASE_SEEDS": [
+          1103,
+          2207
+        ],
+        "EXPECTED_SEEDS_PER_VARIANT_FOLD": 2
+      },
+      "imports": [
+        "__future__:annotations",
+        "ast",
+        "gc",
+        "hashlib",
+        "importlib.util",
+        "json",
+        "math",
+        "os",
+        "random",
+        "sys",
+        "tempfile",
+        "time",
+        "traceback",
+        "dataclasses:dataclass",
+        "pathlib:Path",
+        "typing:Any,Iterable",
+        "numpy",
+        "pandas",
+        "torch",
+        "torch.nn",
+        "torch.nn.functional"
+      ]
+    },
+    {
+      "path": "paper5/scripts/05d4a_audit_neural_confirmatory_ablation.py",
+      "sha256": "2262098396b08f26be9800ff87204ace28ce105f15cfa64d51b03d5bfe53aedc",
+      "size_bytes": 39835,
+      "relevant_top_level_functions": [
+        {
+          "name": "resolve_project_path",
+          "signature": "resolve_project_path(value)",
+          "lineno": 245
+        },
+        {
+          "name": "build_paired_dataset_deltas",
+          "signature": "build_paired_dataset_deltas(table)",
+          "lineno": 458
+        },
+        {
+          "name": "build_summaries",
+          "signature": "build_summaries(paired)",
+          "lineno": 647
+        },
+        {
+          "name": "build_contrast_registry",
+          "signature": "build_contrast_registry()",
+          "lineno": 687
+        },
+        {
+          "name": "build_readme",
+          "signature": "build_readme(source, headline)",
+          "lineno": 706
+        }
+      ],
+      "relevant_classes": [],
+      "selected_literal_constants": {
+        "BOOTSTRAP_GLOBAL_SEED": 54041,
+        "EXPECTED_VARIANTS": [
+          "V0_BALANCED_AE",
+          "V1_SHARED_PRIVATE_AE",
+          "V2_CONTRASTIVE_SPAE",
+          "V3_DROPOUT_SPAE",
+          "V4_SABLE_MO",
+          "V5_SABLE_VAE"
+        ],
+        "EXPECTED_PROFILE": "ARCH_COMPACT__REG_WEAK"
+      },
+      "imports": [
+        "__future__:annotations",
+        "hashlib",
+        "json",
+        "math",
+        "os",
+        "sys",
+        "datetime:datetime,timezone",
+        "pathlib:Path",
+        "typing:Any,Iterable",
+        "numpy",
+        "pandas"
+      ]
+    },
+    {
+      "path": "paper5/scripts/05d4b_read_only_final_gate_design_audit.py",
+      "sha256": "0ea5ea4cb5bd68e5a4a021c1dd012bdefcb4df8c89d4a4f318db725315b82b9b",
+      "size_bytes": 53959,
+      "relevant_top_level_functions": [
+        {
+          "name": "resolve_project_path",
+          "signature": "resolve_project_path(value)",
+          "lineno": 116
+        },
+        {
+          "name": "build_selector_membership",
+          "signature": "build_selector_membership(scenarios, replicates)",
+          "lineno": 416
+        },
+        {
+          "name": "audit_metric_and_decision_semantics",
+          "signature": "audit_metric_and_decision_semantics(metrics, decisions)",
+          "lineno": 559
+        },
+        {
+          "name": "build_wilson_threshold_table",
+          "signature": "build_wilson_threshold_table()",
+          "lineno": 654
+        },
+        {
+          "name": "build_d01_power_table",
+          "signature": "build_d01_power_table()",
+          "lineno": 684
+        },
+        {
+          "name": "build_d02_reference_table",
+          "signature": "build_d02_reference_table()",
+          "lineno": 707
+        },
+        {
+          "name": "build_amendment_requirements",
+          "signature": "build_amendment_requirements(source_05a, selector_summary, semantics, power_80_at_true_08)",
+          "lineno": 737
+        },
+        {
+          "name": "build_readme",
+          "signature": "build_readme(selector_summary, semantics, power_80, source_05a)",
+          "lineno": 868
+        }
+      ],
+      "relevant_classes": [],
+      "selected_literal_constants": {
+        "EXPECTED_FINAL_GATE_STABILITY_RESAMPLES": 100
+      },
+      "imports": [
+        "__future__:annotations",
+        "hashlib",
+        "json",
+        "math",
+        "os",
+        "datetime:datetime,timezone",
+        "pathlib:Path",
+        "typing:Any",
+        "numpy",
+        "pandas",
+        "scipy.stats:binom"
+      ]
+    },
+    {
+      "path": "paper5/scripts/05d5_evaluate_sable_mo_stability_gpu.py",
+      "sha256": "d3c685393fcd4111fb3fb6b3d138d597b3ec3bc3cb55713266ba95db1cd06dfd",
+      "size_bytes": 91139,
+      "relevant_top_level_functions": [
+        {
+          "name": "resolve_project_path",
+          "signature": "resolve_project_path(value)",
+          "lineno": 132
+        },
+        {
+          "name": "build_manifest_lookup",
+          "signature": "build_manifest_lookup(table)",
+          "lineno": 293
+        },
+        {
+          "name": "build_epoch_registry",
+          "signature": "build_epoch_registry(raw_05d4, dataset_05d4, profile)",
+          "lineno": 337
+        },
+        {
+          "name": "initialize_or_verify_epoch_registry",
+          "signature": "initialize_or_verify_epoch_registry(table)",
+          "lineno": 495
+        },
+        {
+          "name": "build_epoch_lookup",
+          "signature": "build_epoch_lookup(table)",
+          "lineno": 507
+        },
+        {
+          "name": "build_stability_lookup",
+          "signature": "build_stability_lookup(table, confirmatory_roles)",
+          "lineno": 525
+        },
+        {
+          "name": "build_execution_protocol",
+          "signature": "build_execution_protocol(upstream)",
+          "lineno": 841
+        },
+        {
+          "name": "evaluate_dataset_stability",
+          "signature": "evaluate_dataset_stability(neural, linear, arrays, metadata, profile, selected_epoch_record, stability_group, stability_thresholds)",
+          "lineno": 1087
+        }
+      ],
+      "relevant_classes": [],
+      "selected_literal_constants": {
+        "V4_VARIANT": "V4_SABLE_MO",
+        "STABILITY_RESAMPLES": 20,
+        "STABILITY_SUBSAMPLE_FRACTION": 0.8,
+        "EXPECTED_05D4_V4_FOLD_SEED_ROWS_PER_DATASET": 10
+      },
+      "imports": [
+        "__future__:annotations",
+        "gc",
+        "hashlib",
+        "importlib.util",
+        "json",
+        "math",
+        "os",
+        "sys",
+        "tempfile",
+        "time",
+        "traceback",
+        "pathlib:Path",
+        "typing:Any,Iterable",
+        "numpy",
+        "pandas",
+        "torch"
+      ]
+    },
+    {
+      "path": "paper5/scripts/05f1_run_final_gate_runtime_pilot_gpu.py",
+      "sha256": "b9092166bd9d4a6cd89628eaeaf52e41cfe0263844739ab71732c8034fc25535",
+      "size_bytes": 98435,
+      "relevant_top_level_functions": [
+        {
+          "name": "resolve_project_path",
+          "signature": "resolve_project_path(value)",
+          "lineno": 177
+        },
+        {
+          "name": "build_fixed_epoch_bridge",
+          "signature": "build_fixed_epoch_bridge(profile)",
+          "lineno": 633
+        },
+        {
+          "name": "build_full_stability_seed_registry",
+          "signature": "build_full_stability_seed_registry(upstream)",
+          "lineno": 703
+        },
+        {
+          "name": "configure_final_gate_neural_helper",
+          "signature": "configure_final_gate_neural_helper(neural)",
+          "lineno": 782
+        },
+        {
+          "name": "build_stability_group",
+          "signature": "build_stability_group(seed_rows, expected_n_samples)",
+          "lineno": 903
+        },
+        {
+          "name": "build_readme",
+          "signature": "build_readme(summary, prelock)",
+          "lineno": 1702
+        }
+      ],
+      "relevant_classes": [],
+      "selected_literal_constants": {
+        "EXPECTED_STABILITY_RESAMPLES": 100,
+        "EXPECTED_PROFILE_ID": "ARCH_COMPACT__REG_WEAK",
+        "EXPECTED_HELPER_BASE_STABILITY_RESAMPLES": 20,
+        "STABILITY_SUBSAMPLE_FRACTION": 0.8,
+        "REFERENCE_SEED_NAMESPACE": "paper5_final_gate_stability_reference_v1",
+        "SUBSAMPLE_SEED_NAMESPACE": "paper5_final_gate_stability_subsample_v1",
+        "FIT_SEED_NAMESPACE": "paper5_final_gate_stability_fit_v1"
+      },
+      "imports": [
+        "__future__:annotations",
+        "dataclasses",
+        "gc",
+        "hashlib",
+        "importlib.util",
+        "inspect",
+        "json",
+        "math",
+        "os",
+        "sys",
+        "tempfile",
+        "time",
+        "traceback",
+        "datetime:datetime,timezone",
+        "pathlib:Path",
+        "typing:Any,Iterable",
+        "numpy",
+        "pandas",
+        "torch"
+      ]
+    },
+    {
+      "path": "paper5/scripts/05f1_run_final_gate_runtime_pilot_gpu_v2.py",
+      "sha256": "a5d19d318538741ae61c26c5c3fd6b9a19b22d1517c91c968bfd41f1daad34c6",
+      "size_bytes": 107679,
+      "relevant_top_level_functions": [
+        {
+          "name": "resolve_project_path",
+          "signature": "resolve_project_path(value)",
+          "lineno": 177
+        },
+        {
+          "name": "build_fixed_epoch_bridge",
+          "signature": "build_fixed_epoch_bridge(profile)",
+          "lineno": 633
+        },
+        {
+          "name": "build_full_stability_seed_registry",
+          "signature": "build_full_stability_seed_registry(upstream)",
+          "lineno": 703
+        },
+        {
+          "name": "validate_full_stability_seed_registry",
+          "signature": "validate_full_stability_seed_registry(table)",
+          "lineno": 769
+        },
+        {
+          "name": "configure_final_gate_neural_helper",
+          "signature": "configure_final_gate_neural_helper(neural)",
+          "lineno": 911
+        },
+        {
+          "name": "build_stability_group",
+          "signature": "build_stability_group(seed_rows, expected_n_samples)",
+          "lineno": 1032
+        },
+        {
+          "name": "build_readme",
+          "signature": "build_readme(summary, prelock)",
+          "lineno": 1878
+        }
+      ],
+      "relevant_classes": [],
+      "selected_literal_constants": {
+        "EXPECTED_STABILITY_RESAMPLES": 100,
+        "EXPECTED_PROFILE_ID": "ARCH_COMPACT__REG_WEAK",
+        "EXPECTED_HELPER_BASE_STABILITY_RESAMPLES": 20,
+        "STABILITY_SUBSAMPLE_FRACTION": 0.8,
+        "REFERENCE_SEED_NAMESPACE": "paper5_final_gate_stability_reference_v1",
+        "SUBSAMPLE_SEED_NAMESPACE": "paper5_final_gate_stability_subsample_v1",
+        "FIT_SEED_NAMESPACE": "paper5_final_gate_stability_fit_v1"
+      },
+      "imports": [
+        "__future__:annotations",
+        "dataclasses",
+        "gc",
+        "hashlib",
+        "importlib.util",
+        "inspect",
+        "json",
+        "math",
+        "os",
+        "sys",
+        "tempfile",
+        "time",
+        "traceback",
+        "datetime:datetime,timezone",
+        "pathlib:Path",
+        "typing:Any,Iterable",
+        "numpy",
+        "pandas",
+        "torch"
+      ]
+    },
+    {
+      "path": "paper5/scripts/05f1a_profile_final_gate_runtime_breakdown_gpu.py",
+      "sha256": "c81d83f1316bba8588e3c9d702926e50d59368cecbaad1f04c1bcd8cb0f3a36a",
+      "size_bytes": 16598,
+      "relevant_top_level_functions": [],
+      "relevant_classes": [],
+      "selected_literal_constants": {},
+      "imports": [
+        "__future__:annotations",
+        "functools",
+        "gc",
+        "hashlib",
+        "importlib.util",
+        "json",
+        "math",
+        "sys",
+        "time",
+        "collections:defaultdict",
+        "datetime:datetime,timezone",
+        "pathlib:Path",
+        "typing:Any,Callable",
+        "numpy",
+        "pandas",
+        "torch"
+      ]
+    },
+    {
+      "path": "paper5/scripts/05f1b_benchmark_parallel_resample_fits_gpu.py",
+      "sha256": "cb01278a94be4f3f83d8e618c6a5247cd8d450f5bb52a09f1516f59018887e65",
+      "size_bytes": 28133,
+      "relevant_top_level_functions": [
+        {
+          "name": "run_fit",
+          "signature": "run_fit(neural, profile, job)",
+          "lineno": 193
+        }
+      ],
+      "relevant_classes": [],
+      "selected_literal_constants": {},
+      "imports": [
+        "__future__:annotations",
+        "gc",
+        "hashlib",
+        "importlib.util",
+        "json",
+        "math",
+        "multiprocessing",
+        "os",
+        "sys",
+        "tempfile",
+        "time",
+        "concurrent.futures:ProcessPoolExecutor",
+        "datetime:datetime,timezone",
+        "pathlib:Path",
+        "typing:Any",
+        "numpy",
+        "pandas",
+        "torch"
+      ]
+    },
+    {
+      "path": "paper5/scripts/05f1b_benchmark_parallel_resample_fits_gpu_v2.py",
+      "sha256": "5f4e5f0a8689690acbbb2e07b811a35352312731bbd24e75350a81edad0fcad1",
+      "size_bytes": 32919,
+      "relevant_top_level_functions": [
+        {
+          "name": "run_fit",
+          "signature": "run_fit(neural, profile, job)",
+          "lineno": 193
+        },
+        {
+          "name": "profile_contract_dict",
+          "signature": "profile_contract_dict(profile)",
+          "lineno": 227
+        }
+      ],
+      "relevant_classes": [],
+      "selected_literal_constants": {},
+      "imports": [
+        "__future__:annotations",
+        "gc",
+        "hashlib",
+        "importlib.util",
+        "json",
+        "math",
+        "multiprocessing",
+        "os",
+        "sys",
+        "tempfile",
+        "time",
+        "concurrent.futures:ProcessPoolExecutor",
+        "datetime:datetime,timezone",
+        "pathlib:Path",
+        "typing:Any",
+        "numpy",
+        "pandas",
+        "torch"
+      ]
+    },
+    {
+      "path": "paper5/scripts/05f1c2_benchmark_single_process_cuda_streams_gpu.py",
+      "sha256": "c4d2c50b446832a3fa348857733046b835d3236c0a6b64b19008cc5aa7be6b40",
+      "size_bytes": 30347,
+      "relevant_top_level_functions": [
+        {
+          "name": "encoded_bundle_hash",
+          "signature": "encoded_bundle_hash(encoded)",
+          "lineno": 186
+        },
+        {
+          "name": "official_run_fit",
+          "signature": "official_run_fit(neural, profile, job)",
+          "lineno": 207
+        },
+        {
+          "name": "enqueue_one_epoch",
+          "signature": "enqueue_one_epoch(neural, state, epoch)",
+          "lineno": 266
+        }
+      ],
+      "relevant_classes": [],
+      "selected_literal_constants": {},
+      "imports": [
+        "__future__:annotations",
+        "gc",
+        "hashlib",
+        "importlib.util",
+        "json",
+        "math",
+        "os",
+        "sys",
+        "tempfile",
+        "time",
+        "datetime:datetime,timezone",
+        "pathlib:Path",
+        "typing:Any",
+        "numpy",
+        "pandas",
+        "torch"
+      ]
+    },
+    {
+      "path": "paper5/scripts/05f1d_validate_two_stream_full_path_gpu.py",
+      "sha256": "33a26decba6fe14abbf382f77d7dc96c301e81cd163e6854ecf34478a815d7a9",
+      "size_bytes": 60167,
+      "relevant_top_level_functions": [
+        {
+          "name": "resolve_project_path",
+          "signature": "resolve_project_path(value)",
+          "lineno": 198
+        },
+        {
+          "name": "prepare_async_fit_state",
+          "signature": "prepare_async_fit_state(neural, profile, job)",
+          "lineno": 395
+        },
+        {
+          "name": "enqueue_async_epoch",
+          "signature": "enqueue_async_epoch(neural, state, epoch)",
+          "lineno": 425
+        },
+        {
+          "name": "finalize_async_fit_to_cpu_cache",
+          "signature": "finalize_async_fit_to_cpu_cache(profile, state)",
+          "lineno": 451
+        },
+        {
+          "name": "release_async_fit_state",
+          "signature": "release_async_fit_state(state)",
+          "lineno": 490
+        },
+        {
+          "name": "run_two_stream_training_cache",
+          "signature": "run_two_stream_training_cache(neural, profile, jobs)",
+          "lineno": 499
+        },
+        {
+          "name": "make_cached_train_fixed_epochs",
+          "signature": "make_cached_train_fixed_epochs(neural, profile, cache, original_train)",
+          "lineno": 566
+        },
+        {
+          "name": "build_execution_prelock",
+          "signature": "build_execution_prelock(runner, stream_benchmark)",
+          "lineno": 811
+        },
+        {
+          "name": "build_runtime_summary",
+          "signature": "build_runtime_summary(manifest)",
+          "lineno": 1162
+        },
+        {
+          "name": "build_readme",
+          "signature": "build_readme(summary, prelock)",
+          "lineno": 1211
+        }
+      ],
+      "relevant_classes": [],
+      "selected_literal_constants": {
+        "EXPECTED_STABILITY_RESAMPLES": 100
+      },
+      "imports": [
+        "__future__:annotations",
+        "gc",
+        "hashlib",
+        "importlib.util",
+        "inspect",
+        "json",
+        "math",
+        "os",
+        "sys",
+        "tempfile",
+        "time",
+        "traceback",
+        "datetime:datetime,timezone",
+        "pathlib:Path",
+        "typing:Any,Callable",
+        "numpy",
+        "pandas",
+        "torch"
+      ]
+    }
+  ],
+  "guardrails": {
+    "target_molecular_values_read": false,
+    "target_outcomes_read": false,
+    "target_clinical_values_read": false,
+    "target_model_fit_performed": false,
+    "scientific_results_generated": false,
+    "purpose": "Resolve exact frozen registry rows, CV assignment schemas, and reusable implementation entry points before writing the real TARGET runner. No numerical method is selected here."
+  },
+  "next_required_stage": "Write one new versioned TARGET runner using only frozen registry/policy choices and existing implementation paths where possible; test it only on 05dev0 synthetic fixtures; then source-hash lock the exact runner in 06b1 before first real TARGET fit."
+}

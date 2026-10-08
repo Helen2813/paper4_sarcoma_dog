@@ -1,0 +1,33 @@
+{
+  "status": "06E3_V1_SEED_SUBSPACE_BIOLOGY_SENSITIVITY_CONTRACT_FROZEN",
+  "script_version": "06e3-freeze-v1-seed-subspace-biology-sensitivity-contract-v1-no-cli",
+  "created_at_utc": "2026-10-08T01:28:25.514729+00:00",
+  "contract": {
+    "path": "method_contract/06e3/v1_seed_subspace_biology_sensitivity_contract.json",
+    "sha256": "cbac52ec634e566ccee070ec0116577388a23d4ceefd881fbe761b55a39e40a6",
+    "size_bytes": 9117
+  },
+  "script_source": {
+    "path": "scripts/06e3_freeze_v1_seed_subspace_biology_sensitivity_contract_v1.py",
+    "sha256": "e8ff96f38aacdfeee2329c3180e2724dac72874a00e5a4bbfb1d06eb8e5ec07f",
+    "size_bytes": 23052
+  },
+  "source_metadata_locks": {
+    "06c3_lock": {
+      "path": "method_contract/06c3/target_v1_full_data_refit_results_lock.json",
+      "sha256": "b23d4c630cffca3bc5b1c44328128d4da46028b8db8cb070e6be93d9d0795be5",
+      "status": "06C3_TARGET_V1_FULL_DATA_REFIT_RESULTS_FROZEN"
+    },
+    "06e2_primary_biology_lock": {
+      "path": "method_contract/06e2_v3/v1_biological_alignment_random_controls_results_lock_v3.json",
+      "sha256": "2efe6ed3f40971c5cf8dc85a55ab3c24d4ce90ce45444e8f0e8908a187a9d890",
+      "status": "06E2_V3_V1_BIOLOGICAL_ALIGNMENT_RANDOM_CONTROLS_FROZEN"
+    },
+    "06e2a_readonly_audit_lock": {
+      "path": "method_contract/06e2a_v3_v2/06e2a_v3_v2_frozen_biological_result_audit_lock.json",
+      "sha256": "ddf555d451e9dc6ee9a538d5abfd2a8c36c146ca53fdcfb273e6dbf8b19bcaf5",
+      "status": "06E2A_V3_V2_FROZEN_BIOLOGICAL_RESULT_AUDIT_LOCKED"
+    }
+  },
+  "rewrite_policy": "06e3 is frozen before any seed-2207/3301 biological sensitivity or pairwise seed-subspace result is read. Do not rewrite it in response to those results. Any scientific change requires a new versioned amendment."
+}

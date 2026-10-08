@@ -1,0 +1,90 @@
+{
+  "status": "06E4A_V1_SEED_SUBSPACE_RUNNER_SOURCE_AUTHORIZED",
+  "script_version": "06e4a-freeze-v1-seed-subspace-runner-source-authorization-v1-no-cli",
+  "created_at_utc": "2026-10-08T01:40:33.045617+00:00",
+  "scientific_state": {
+    "numeric_v1_latent_arrays_opened_or_hashed": false,
+    "biological_program_score_rows_opened_or_hashed": false,
+    "target_molecular_values_read": false,
+    "target_outcomes_or_clinical_read": false,
+    "seed_subspace_result_computed": false,
+    "program_seed_sensitivity_computed": false,
+    "model_fit_or_refit": false
+  },
+  "runner_source": {
+    "path": "scripts/06e4_run_v1_seed_subspace_biology_sensitivity_v1.py",
+    "sha256": "97a8af048e38c16000f27a078ea976af1c894a21850ac2924a05e3b8c16cee86",
+    "script_version": "06e4-run-v1-seed-subspace-biology-sensitivity-v1-two-stage-source-authorized-readonly-no-cli",
+    "size_bytes": 42265
+  },
+  "06e3_contract": {
+    "path": "method_contract/06e3/v1_seed_subspace_biology_sensitivity_contract.json",
+    "sha256": "cbac52ec634e566ccee070ec0116577388a23d4ceefd881fbe761b55a39e40a6",
+    "status": "FROZEN_BEFORE_V1_SEED_SUBSPACE_BIOLOGY_SENSITIVITY"
+  },
+  "06e3_contract_lock": {
+    "path": "method_contract/06e3/06e3_v1_seed_subspace_biology_sensitivity_contract_lock.json",
+    "sha256": "b4f117a45f5d78a1dadd4a7385c592c9a7ee361b30fb5918672105079e42be94",
+    "status": "06E3_V1_SEED_SUBSPACE_BIOLOGY_SENSITIVITY_CONTRACT_FROZEN"
+  },
+  "synthetic_preflight": {
+    "path": "method_contract/06e4_preflight/v1_seed_subspace_runner_synthetic_selftest_v1.json",
+    "sha256": "b83044a62e7c8cd217f8a00b0c6f567e9021d9ae2a72cd0a12865f3799eb6eb9",
+    "status": "06E4_V1_SEED_SUBSPACE_RUNNER_SYNTHETIC_SELFTEST_PASS",
+    "execution_mode": "SYNTHETIC_ONLY_PREAUTHORIZATION"
+  },
+  "authorized_scientific_execution": {
+    "analysis_role": "POST_RESULT_SENSITIVITY_USING_PROSPECTIVELY_FROZEN_REPRODUCIBILITY_SEEDS",
+    "primary_seed": 1103,
+    "reproducibility_only_seeds": [
+      2207,
+      3301
+    ],
+    "programs": [
+      "M34",
+      "M40",
+      "M11",
+      "M24"
+    ],
+    "report_all_12_program_seed_cells": true,
+    "pairwise_seed_pairs": [
+      [
+        1103,
+        2207
+      ],
+      [
+        1103,
+        3301
+      ],
+      [
+        2207,
+        3301
+      ]
+    ],
+    "primary_seed_1103_replay_required": true,
+    "new_seed_specific_p_or_q": "FORBIDDEN",
+    "matched_random_panel_recomputation": "FORBIDDEN",
+    "rotation_invariant_program_to_subspace_biology_statistic": "FORBIDDEN",
+    "seed_reselection_or_replacement": "FORBIDDEN",
+    "seed_averaging_or_ensemble": "FORBIDDEN",
+    "SABLE_q10_or_stability_transfer_to_V1": "FORBIDDEN",
+    "target_outcome_or_clinical_access": "FORBIDDEN",
+    "model_fit_or_refit": "FORBIDDEN"
+  },
+  "static_runner_audit": {
+    "authorization_gate_before_first_real_read": "PASS",
+    "authorization_lock_loaded_before_first_real_read": "PASS",
+    "scientific_result_collision_guard_before_first_real_read": "PASS",
+    "result_lock_collision_guard_before_first_real_read": "PASS",
+    "single_real_latent_load_site": "PASS",
+    "single_real_program_score_read_site": "PASS",
+    "primary_seed_1103_replay_required": "PASS",
+    "all_12_raw_program_seed_cells_required": "PASS",
+    "three_pair_seed_subspace_diagnostics_required": "PASS",
+    "new_seed_specific_p_or_q_false": "PASS",
+    "rotation_invariant_program_to_subspace_statistic_false": "PASS",
+    "training_backend_absent": "PASS"
+  },
+  "authorization_rule": "Only the exact 06e4 runner SHA recorded here is authorized to consume the exact frozen 06e3 contract. Any source change requires a new versioned synthetic preflight and new source authorization before any real sensitivity computation.",
+  "rewrite_policy": "06e4a is immutable after creation. Never overwrite or rerun this authorization in place."
+}

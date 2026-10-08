@@ -1,0 +1,27 @@
+{
+  "status": "06D0_V1_POSTFIT_DOWNSTREAM_SCOPE_AUDIT_FROZEN",
+  "script_version": "06d0-audit-v1-postfit-downstream-scope-v1-no-cli",
+  "created_at_utc": "2026-10-07T20:59:06.730132+00:00",
+  "audit_report": {
+    "path": "method_contract/06d0/v1_postfit_downstream_scope_audit.json",
+    "sha256": "82860aa52fb47ce626e6f76cf511b099f6619129cbdc7e72577def6edf264778",
+    "size_bytes": 31084281
+  },
+  "evidence_table": {
+    "path": "method_contract/06d0/v1_postfit_downstream_scope_evidence.csv",
+    "sha256": "5d112550deef3752a5f5826fedf99aab414458985cda75b3ab1783e5ebe2f6de",
+    "size_bytes": 12580658
+  },
+  "selected_model": "V1_SHARED_PRIVATE_AE",
+  "primary_seed": 1103,
+  "q10_060_for_v1": "FORBIDDEN",
+  "q10_040_for_v1": "FORBIDDEN",
+  "sable_mo_stability_gate_for_v1": "FORBIDDEN",
+  "generic_target_resampling_stability_status": "NOT_AUTHORIZED_FOR_V1_FROM_AVAILABLE_FROZEN_EVIDENCE__STABILITY_EVIDENCE_IS_SABLE_SPECIFIC",
+  "target_pairing_permutations_status": "NOT_AUTHORIZED_FOR_V1_FROM_AVAILABLE_FROZEN_EVIDENCE__PAIRING_EVIDENCE_IS_SABLE_SPECIFIC",
+  "target_molecular_values_read": false,
+  "target_outcomes_clinical_biology_read": false,
+  "target_model_fit": false,
+  "scientific_representation_generated": false,
+  "06b_06c_06c3_rewritten": false
+}

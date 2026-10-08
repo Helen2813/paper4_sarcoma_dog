@@ -1,0 +1,6 @@
+coordinate_id,model_id,primary_seed,technical_status,technical_association_test_performed,eligible_for_primary_biological_interpretation_from_technical_audit_alone,interpretation
+V1_SHARED_01,V1_SHARED_PRIVATE_AE,1103,UNKNOWN_NO_STRICT_USABLE_TECHNICAL_COVARIATES,False,False,Technical status unknown; absence of a usable technical label is not evidence of non-technical origin.
+V1_SHARED_02,V1_SHARED_PRIVATE_AE,1103,UNKNOWN_NO_STRICT_USABLE_TECHNICAL_COVARIATES,False,False,Technical status unknown; absence of a usable technical label is not evidence of non-technical origin.
+V1_SHARED_03,V1_SHARED_PRIVATE_AE,1103,UNKNOWN_NO_STRICT_USABLE_TECHNICAL_COVARIATES,False,False,Technical status unknown; absence of a usable technical label is not evidence of non-technical origin.
+V1_SHARED_04,V1_SHARED_PRIVATE_AE,1103,UNKNOWN_NO_STRICT_USABLE_TECHNICAL_COVARIATES,False,False,Technical status unknown; absence of a usable technical label is not evidence of non-technical origin.
+V1_SHARED_05,V1_SHARED_PRIVATE_AE,1103,UNKNOWN_NO_STRICT_USABLE_TECHNICAL_COVARIATES,False,False,Technical status unknown; absence of a usable technical label is not evidence of non-technical origin.

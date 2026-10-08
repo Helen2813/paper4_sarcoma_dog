@@ -1,0 +1,11 @@
+model_id,within_one_se_count,within_one_se_fraction,selected_count,best_mean_count
+BLOCK_PCA,0,0.0,0,0
+MOFA_K5,0,0.0,0,0
+MOFA_K10,0,0.0,0,0
+MOFA_K15,0,0.0,0,0
+MOFA_K20,0,0.0,0,0
+V0_BALANCED_AE,8,0.32,8,0
+V1_SHARED_PRIVATE_AE,25,1.0,17,23
+V2_CONTRASTIVE_SPAE,17,0.68,0,1
+V3_DROPOUT_SPAE,16,0.64,0,1
+V4_SABLE_MO,16,0.64,0,0

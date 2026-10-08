@@ -1,0 +1,26 @@
+{
+  "status": "06E4_V1_SEED_SUBSPACE_RUNNER_SYNTHETIC_SELFTEST_PASS",
+  "script_version": "06e4-run-v1-seed-subspace-biology-sensitivity-v1-two-stage-source-authorized-readonly-no-cli",
+  "runner_sha256": "97a8af048e38c16000f27a078ea976af1c894a21850ac2924a05e3b8c16cee86",
+  "contract_sha256": "cbac52ec634e566ccee070ec0116577388a23d4ceefd881fbe761b55a39e40a6",
+  "execution_mode": "SYNTHETIC_ONLY_PREAUTHORIZATION",
+  "created_at_utc": "2026-10-08T01:35:16.696154+00:00",
+  "real_numeric_latents_opened": false,
+  "real_biological_score_rows_opened": false,
+  "target_outcomes_or_clinical_read": false,
+  "model_fit_or_refit": false,
+  "tests": {
+    "canonical_correlation_sign_permutation_invariance": "PASS",
+    "canonical_correlation_rotation_invariance": "PASS",
+    "principal_angle_sign_permutation_fixture_max_degrees": 2.091309789151873e-06,
+    "principal_angle_rotation_fixture_max_degrees": 1.7075472925031877e-06,
+    "procrustes_sign_permutation_recovery": "PASS",
+    "procrustes_rotation_recovery": "PASS",
+    "hungarian_coordinate_matching": "PASS",
+    "max_abs_spearman_sign_permutation_invariance": "PASS",
+    "max_abs_spearman_rotation_sensitivity_fixture": "PASS",
+    "rotation_fixture_max_abs_spearman_difference": 0.009332439712186558,
+    "synthetic_program_coordinate_rows": 20,
+    "synthetic_program_summary_rows": 4
+  }
+}

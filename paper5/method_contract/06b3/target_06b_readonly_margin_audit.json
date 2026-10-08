@@ -1,0 +1,53 @@
+{
+  "status": "06B3_TARGET_READONLY_MARGIN_AUDIT_COMPLETE",
+  "script_version": "06b3-readonly-target-margin-audit-v1-descriptive-no-cli",
+  "created_at_utc": "2026-10-08T01:14:09.949411+00:00",
+  "source_hashes": {
+    "selection": "8d6f17311cc98c3312619d3410f804e6581f152ce7811616b87ab9774a3e68c1",
+    "outer": "b3c04b163392df043f78c8d377ff9f802afea2d7e95dcbff21fc5c87e504f2c5",
+    "summary": "c2b350f8d0e957cf1a1005d0aa5f490d631a30d9e6607c12a90659c8037ca2e5",
+    "lock": "2730c783f1a74f7aa58030d1ee03f324f1d50c4830c72e4229a15e41b60dc121"
+  },
+  "scientific_state": {
+    "target_molecular_matrices_read": false,
+    "target_outcomes_clinical_biology_read": false,
+    "model_fit_or_refit": false,
+    "06b_selection_reopened": false,
+    "new_winner_rule_created": false,
+    "new_p_value_created": false
+  },
+  "selection_counts": {
+    "V1_SHARED_PRIVATE_AE": 17,
+    "V0_BALANCED_AE": 8
+  },
+  "best_model_counts": {
+    "V1_SHARED_PRIVATE_AE": 23,
+    "V2_CONTRASTIVE_SPAE": 1,
+    "V3_DROPOUT_SPAE": 1
+  },
+  "within_one_se_counts": {
+    "BLOCK_PCA": 0,
+    "MOFA_K5": 0,
+    "MOFA_K10": 0,
+    "MOFA_K15": 0,
+    "MOFA_K20": 0,
+    "V0_BALANCED_AE": 8,
+    "V1_SHARED_PRIVATE_AE": 25,
+    "V2_CONTRASTIVE_SPAE": 17,
+    "V3_DROPOUT_SPAE": 16,
+    "V4_SABLE_MO": 16
+  },
+  "key_exact_implications": {
+    "v1_selected_count": 17,
+    "v0_selected_count": 8,
+    "v0_below_one_se_cutoff_when_v1_selected_count": 17,
+    "reason": "V0 is simpler than V1; if V1 is selected by the frozen simplest-within-one-SE rule, V0 cannot be in the accepted set.",
+    "v4_best_mean_count": 0,
+    "v4_within_one_se_count": 16
+  },
+  "interpretation_boundary": {
+    "outer_margins": "Post-selection descriptive summaries of already-frozen outer test rows. They do not alter 06b selection.",
+    "variance": "Between-split SD and within-split seed SD are descriptive; no formal variance-equality test is introduced post hoc.",
+    "repeated_cv": "The 25 outer folds are not treated as independent inferential replicates. Five repeat-level mean deltas are reported separately."
+  }
+}

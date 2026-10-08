@@ -1,0 +1,128 @@
+{
+  "status": "06D1_V2_V1_POSTFREEZE_TECHNICAL_STATUS_AUDIT_COMPLETE",
+  "script_version": "06d1-audit-v1-postfreeze-technical-status-v2-no-cli",
+  "created_at_utc": "2026-10-07T21:20:05.605732+00:00",
+  "selected_representation": {
+    "model_id": "V1_SHARED_PRIVATE_AE",
+    "profile_id": "ARCH_COMPACT__REG_WEAK",
+    "primary_seed": 1103,
+    "shared_dim": 5,
+    "representation_sha256": "c05bf08017ad8544e1e4ce0c8f58f086060dd7a6a0a68ed7f8d5a6723768a95f"
+  },
+  "06d1_v1_failed_audit_boundary": {
+    "script_sha256": "e91978672e17be2bc620b1903a02374f05e1f957291fc1875ee0b2472fb34c0d",
+    "script_version": "06d1-audit-v1-postfreeze-technical-status-v1-no-cli",
+    "failure_type": "RuntimeError",
+    "failure_message": "04d technical metadata were used for model selection.",
+    "cause": "v1 incorrectly looked for technical_covariates_used_for_model_selection at the top level of the 04d manifest; the frozen 04d schema stores it under scientific_state.",
+    "failure_before_06d1_output_directory_creation": true,
+    "target_molecular_matrices_read": false,
+    "biological_annotations_read": false,
+    "clinical_or_outcome_values_read": false,
+    "target_model_fit_or_refit": false,
+    "scientific_consequence": "NONE"
+  },
+  "06d0_scope_boundary": {
+    "generic_target_resampling_stability": "NOT_AUTHORIZED_FOR_V1_FROM_AVAILABLE_FROZEN_EVIDENCE__STABILITY_EVIDENCE_IS_SABLE_SPECIFIC",
+    "target_pairing_permutations": "NOT_AUTHORIZED_FOR_V1_FROM_AVAILABLE_FROZEN_EVIDENCE__PAIRING_EVIDENCE_IS_SABLE_SPECIFIC",
+    "q10_060_for_v1": "FORBIDDEN",
+    "q10_040_for_v1": "FORBIDDEN",
+    "sable_mo_stability_gate_for_v1": "FORBIDDEN"
+  },
+  "technical_metadata_preflight": {
+    "contract_version": "paper5-target-technical-metadata-preflight-execution-v1",
+    "status": "FROZEN_BEFORE_REPRESENTATION_MODEL_FITTING",
+    "strict_usable_technical_covariates": 0,
+    "ambiguous_specimen_technical_covariates": 0,
+    "potential_cross_view_batch_candidates": 0,
+    "technical_status_if_no_strict_usable_fields": "stable_technical_status_unknown",
+    "strict_inventory": [],
+    "ambiguous_inventory": [],
+    "generated_files_verified": 13
+  },
+  "technical_association_family": {
+    "performed": false,
+    "reason": "No strict usable technical covariate existed in the prospectively frozen 04d registry.",
+    "posthoc_covariate_creation": false,
+    "identifier_use_as_covariate": false,
+    "raw_timestamp_use_as_covariate": false
+  },
+  "technical_status_rule": {
+    "all_v1_shared_coordinates": "UNKNOWN_NO_STRICT_USABLE_TECHNICAL_COVARIATES",
+    "unknown_means_clean": false,
+    "unknown_means_biological": false,
+    "technical_status_may_change_selected_model": false,
+    "technical_status_may_change_primary_seed": false,
+    "technical_status_may_apply_sable_retention_to_v1": false
+  },
+  "scientific_state": {
+    "target_molecular_matrices_read": false,
+    "biological_annotations_read": false,
+    "clinical_or_outcome_values_read": false,
+    "target_model_fit_or_refit": false,
+    "technical_association_test_performed": false,
+    "representation_selection_changed": false,
+    "representation_seed_changed": false,
+    "06b_06c_06c3_rewritten": false
+  },
+  "next_stage_boundary": {
+    "technical_status_is_frozen_before_biology": true,
+    "biology_may_not_rescue_or_reselect_v1_coordinates": true,
+    "factor_level_biology_cannot_claim_stability_qualification": true,
+    "recommended_next_stage": "freeze outcome-blind biological-alignment/random-control contract before opening biological annotations"
+  },
+  "verified_04d_generated_files": {
+    "data_manifest/TARGET_OS_technical_metadata/TARGET_OS_resolved_technical_covariate_registry.csv": {
+      "sha256": "563ef2360755591eeb692940d9af250cb665c23640c718694d4f07977430a70c",
+      "size_bytes": 6882
+    },
+    "data_manifest/TARGET_OS_technical_metadata/TARGET_OS_selected_file_technical_metadata.csv": {
+      "sha256": "5e1ea5bf75b1c7e7425fec7ed0fa22c4cb53847fea4ab1b7e47bd8a9096cd970",
+      "size_bytes": 183317
+    },
+    "data_manifest/TARGET_OS_technical_metadata/TARGET_OS_technical_covariate_case_matrix.csv": {
+      "sha256": "6ca088d5c287c2d89aafebb806dc09921e22d5bf38372fb1c3c7b7b0bece9be2",
+      "size_bytes": 24763
+    },
+    "data_manifest/TARGET_OS_technical_metadata/TARGET_OS_technical_covariate_cross_view_concordance.csv": {
+      "sha256": "b5149619601105a3237143f6d2a3c32c41082e5d56a8d58b086fb17f60c24125",
+      "size_bytes": 1262
+    },
+    "data_manifest/TARGET_OS_technical_metadata/TARGET_OS_technical_covariate_level_counts.csv": {
+      "sha256": "21ff6647bd98f8ee69346163037ad6b6fc8a56ebad063d798558e06e29c44f04",
+      "size_bytes": 1139
+    },
+    "data_manifest/TARGET_OS_technical_metadata/TARGET_OS_technical_covariate_summary.csv": {
+      "sha256": "0f7063d900467a92dbc43586370910dd4d87f43a9facaadf6eb861d2605be76e",
+      "size_bytes": 7453
+    },
+    "data_manifest/TARGET_OS_technical_metadata/TARGET_OS_technical_metadata_conflicts.csv": {
+      "sha256": "a193d79f7e7e2a41092bfb2183b37553d5b7306f7c28b47d7f5577989678ac77",
+      "size_bytes": 52707
+    },
+    "data_manifest/TARGET_OS_technical_metadata/TARGET_OS_technical_metadata_key_inventory.csv": {
+      "sha256": "94187baa3ebc810b3f83819462e6b6e0b7479e7bf566adf74c2c32326ab19019",
+      "size_bytes": 45017
+    },
+    "data_manifest/TARGET_OS_technical_metadata/TARGET_OS_technical_metadata_linkage_audit.csv": {
+      "sha256": "521a460c2984f642d3a4a04e22b2b430a692edb426243f91a6be30f4dbcf43f0",
+      "size_bytes": 41024
+    },
+    "data_manifest/TARGET_OS_technical_metadata/TARGET_OS_technical_metadata_preflight_README.txt": {
+      "sha256": "57a2dd090db14cb7370cec7d038c8655154318f6ab0b339ab750854fe86fb1e6",
+      "size_bytes": 2585
+    },
+    "data_manifest/TARGET_OS_technical_metadata/TARGET_OS_technical_metadata_preflight_manifest.json": {
+      "sha256": "73232610dcd3f0e2c9a45d7c3a66c0eaac138766a9cf339ed03cd67d282ef532",
+      "size_bytes": 11239
+    },
+    "data_manifest/TARGET_OS_technical_metadata/TARGET_OS_technical_metadata_source_inventory.csv": {
+      "sha256": "d76131adb2bf7c5024a0cc7312dd65bc2234268db39edd99148bcd11bce06c30",
+      "size_bytes": 3803
+    },
+    "data_manifest/TARGET_OS_technical_metadata/TARGET_OS_technical_metadata_value_provenance.csv": {
+      "sha256": "9a9ee2a936c4865bc30ed1273ba969292b31279305dc0c703c13d24e9bef5f5e",
+      "size_bytes": 2741731
+    }
+  }
+}

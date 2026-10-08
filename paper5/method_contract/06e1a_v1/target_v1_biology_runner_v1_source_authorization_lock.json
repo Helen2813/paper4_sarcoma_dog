@@ -1,0 +1,88 @@
+{
+  "status": "06E1A_V1_TARGET_V1_BIOLOGY_RUNNER_SOURCE_AUTHORIZED",
+  "script_version": "06e1a-v1-freeze-v1-biology-runner-source-authorization-v1-no-cli",
+  "created_at_utc": "2026-10-07T21:49:32.718575+00:00",
+  "scientific_state": {
+    "paper4_biological_artifacts_opened_or_hashed": false,
+    "target_biological_values_read": false,
+    "v1_numeric_representation_read": false,
+    "target_molecular_matrices_read": false,
+    "target_clinical_or_outcomes_read": false,
+    "biological_alignment_computed": false,
+    "matched_random_controls_computed": false,
+    "model_fit_or_refit": false
+  },
+  "runner_source": {
+    "path": "scripts/06e1_run_v1_biological_alignment_random_controls_v1.py",
+    "sha256": "51eface403ec7b41a6436289590f0cd4159ad4b6e167800052de8eb2f11bd180",
+    "script_version": "06e1-run-v1-biological-alignment-random-controls-v1-two-stage-source-authorized-no-cli",
+    "size_bytes": 60440
+  },
+  "synthetic_selftest": {
+    "path": "method_contract/06e1_preflight/v1_biological_alignment_runner_synthetic_selftest_v1.json",
+    "sha256": "02c001e10bce9e31ab3fca3a67c067a0bbb9dcc13520ea17b32d92b35c54bb51",
+    "status": "06E1_V1_BIOLOGY_RUNNER_SYNTHETIC_SELFTEST_PASS",
+    "script_version": "06e1-run-v1-biological-alignment-random-controls-v1-two-stage-source-authorized-no-cli",
+    "runner_sha256": "51eface403ec7b41a6436289590f0cd4159ad4b6e167800052de8eb2f11bd180",
+    "execution_mode": "SYNTHETIC_ONLY_PREAUTHORIZATION",
+    "n_coordinates": 5,
+    "n_programs": 4,
+    "explicit_nearest_bin_fallback_test": "PASS",
+    "target_case_normalization": "PASS",
+    "bh_test": "PASS",
+    "sign_invariant_best_coordinate_test": "PASS"
+  },
+  "06e0_identity": {
+    "contract_path": "method_contract/06e0/v1_biological_alignment_random_control_contract.json",
+    "contract_sha256": "43c25abbc18eb79e7876bd5228ad5a0079957fef7a8aaa26b1b37b5025df759c",
+    "lock_path": "method_contract/06e0/06e0_v1_biological_alignment_random_control_contract_lock.json",
+    "lock_sha256": "2ee83579ea38f1c57882a387fcef7025ec41a10607bc332998170ae17da2c3dc"
+  },
+  "static_runner_audit": {
+    "script_version": "06e1-run-v1-biological-alignment-random-controls-v1-two-stage-source-authorized-no-cli",
+    "authorization_gate": "PASS",
+    "synthetic_biological_access": "FORBIDDEN",
+    "real_biological_hash_verification_before_parse": "PASS",
+    "posthoc_result_guard": "PASS",
+    "clinical_outcome_firewall": "PASS",
+    "observed_and_null_use_same_coordinate_statistic": "PASS",
+    "matched_random_without_replacement_and_nearest_bin_fallback": "PASS",
+    "plus_one_empirical_probability": "PASS",
+    "bh_across_four_programs": "PASS",
+    "scientific_output_creation_after_computation": "PASS"
+  },
+  "authorized_scientific_execution": {
+    "model_id": "V1_SHARED_PRIVATE_AE",
+    "profile_id": "ARCH_COMPACT__REG_WEAK",
+    "primary_seed": 1103,
+    "n_cases": 78,
+    "shared_dim": 5,
+    "programs": [
+      "M34",
+      "M40",
+      "M11",
+      "M24"
+    ],
+    "strict_gene_counts": {
+      "M34": 162,
+      "M40": 111,
+      "M11": 7,
+      "M24": 7
+    },
+    "representation_sha256": "c05bf08017ad8544e1e4ce0c8f58f086060dd7a6a0a68ed7f8d5a6723768a95f",
+    "technical_status": "UNKNOWN_NO_STRICT_USABLE_TECHNICAL_COVARIATES",
+    "program_score": "strict_signed_mean",
+    "primary_alignment_metric": "max_absolute_spearman_across_5_frozen_v1_shared_coordinates",
+    "random_panels_per_program": 1000,
+    "random_seed": 42,
+    "variability_bins": 10,
+    "minimum_program_coverage_fraction": 1.0,
+    "multiplicity": "BH",
+    "multiplicity_alpha": 0.05,
+    "clinical_or_outcome_access": "FORBIDDEN",
+    "representation_refit_or_reselection": "FORBIDDEN",
+    "SABLE_q10_or_stability_transfer_to_V1": "FORBIDDEN",
+    "technical_UNKNOWN_reinterpretation_as_clean": "FORBIDDEN"
+  },
+  "authorization_rule": "Only this exact 06e1 v1 runner SHA is authorized. Any source change requires a new versioned synthetic preflight and separate source authorization before real biological computation."
+}

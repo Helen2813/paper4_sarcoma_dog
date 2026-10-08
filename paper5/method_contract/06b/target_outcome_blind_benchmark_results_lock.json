@@ -1,0 +1,25 @@
+{
+  "06b2_authorization_lock": {
+    "path": "paper5/method_contract/06b2/target_runner_v4_source_authorization_lock.json",
+    "sha256": "3132f909c479119274412c4b9a6fcb8297a4ce10015b6731fcc83a04dc5cc0c4"
+  },
+  "created_at_utc": "2026-10-07T02:22:22+00:00",
+  "inner_selection": {
+    "path": "paper5/results/target_representation/06b_primary_benchmark/target_inner_one_se_selection_by_outer_split.csv",
+    "sha256": "8d6f17311cc98c3312619d3410f804e6581f152ce7811616b87ab9774a3e68c1"
+  },
+  "outer_benchmark": {
+    "path": "paper5/results/target_representation/06b_primary_benchmark/target_outer_fixed_model_benchmark.csv",
+    "sha256": "b3c04b163392df043f78c8d377ff9f802afea2d7e95dcbff21fc5c87e504f2c5"
+  },
+  "rewrite_policy": "06b scientific TARGET benchmark outputs are immutable. No outcome, biology, q10 threshold, or post-result model change may alter them.",
+  "runner_source": {
+    "path": "paper5/scripts/06b_run_target_outcome_blind_representation_benchmark_gpu_v4.py",
+    "sha256": "4f69680a2d26d6c8e4bd5b337a5e94e6cdc36d149ea6a4b9af547b3855a93eab"
+  },
+  "status": "06B_TARGET_OUTCOME_BLIND_REPRESENTATION_BENCHMARK_RESULTS_FROZEN",
+  "summary": {
+    "path": "paper5/results/target_representation/06b_primary_benchmark/target_outcome_blind_benchmark_summary.json",
+    "sha256": "c2b350f8d0e957cf1a1005d0aa5f490d631a30d9e6607c12a90659c8037ca2e5"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "status": "06B0_TARGET_PREFIT_INPUT_POLICY_LOCK_FROZEN",
+  "contract_version": "paper5-06b0-target-prefit-input-policy-lock-v1",
+  "script_version": "06b0-freeze-target-prefit-input-policy-lock-v1-no-cli",
+  "created_at_utc": "2026-09-19T19:53:38.789169+00:00",
+  "script_source": {
+    "path": "paper5/scripts/06b0_freeze_target_prefit_input_policy_lock_v1.py",
+    "sha256": "560e19bcdf7a793ce59c7a561dc9f671937bcefce8a9c0be63171d3ecb7c75fe",
+    "size_bytes": 28446
+  },
+  "contract": {
+    "path": "paper5/method_contract/06b0/target_prefit_input_policy_contract.json",
+    "sha256": "57b4720bcd9c71ad126f255876839e35103d3d74fa30f8b6bad7cfcfffb1bfb0",
+    "size_bytes": 30676
+  },
+  "readme": {
+    "path": "paper5/method_contract/06b0/06b0_README.txt",
+    "sha256": "da03ddc886426c080da842c9f9ce10121de89fe8027c055c2a3d9f63d8064375",
+    "size_bytes": 1082
+  },
+  "target_fit_performed": false,
+  "target_outcomes_read": false,
+  "target_clinical_values_read": false,
+  "biological_annotations_read": false,
+  "runner_source_authorized": false,
+  "next_required_stage": "06b1 pre-execution source/implementation lock before first real TARGET fit"
+}

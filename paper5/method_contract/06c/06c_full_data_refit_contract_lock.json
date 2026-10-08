@@ -1,0 +1,35 @@
+{
+  "status": "06C_TARGET_V1_FULL_DATA_REFIT_CONTRACT_FROZEN",
+  "script_version": "06c-freeze-target-v1-full-data-refit-contract-v1-no-cli",
+  "created_at_utc": "2026-10-07T02:34:15.303097+00:00",
+  "full_data_fit_performed": false,
+  "clinical_outcomes_read": false,
+  "biological_annotations_read": false,
+  "q10_applied_to_v1": false,
+  "primary_model_id": "V1_SHARED_PRIVATE_AE",
+  "primary_seed": 1103,
+  "fixed_epochs": 400,
+  "contract": {
+    "path": "method_contract/06c/target_v1_full_data_refit_contract.json",
+    "sha256": "8ab8516e30964f220d0f1204ca892e29ca337691e06cbcbf29315e1cb6aec2e5",
+    "size_bytes": 8185
+  },
+  "readme": {
+    "path": "method_contract/06c/06c_README.txt",
+    "sha256": "5bfeae95105002f9d9b25147df0062e3aa42149c70e4106e84204985f9314961",
+    "size_bytes": 1191
+  },
+  "script_source": {
+    "path": "scripts/06c_freeze_target_v1_full_data_refit_contract_v1.py",
+    "sha256": "537b4856c8b24fd9aa22ea4f490423c4f418cf602f8f5cf6cb6e836cc0760e8d",
+    "size_bytes": 26773
+  },
+  "06b_result_identity": {
+    "summary_sha256": "c2b350f8d0e957cf1a1005d0aa5f490d631a30d9e6607c12a90659c8037ca2e5",
+    "selection_sha256": "8d6f17311cc98c3312619d3410f804e6581f152ce7811616b87ab9774a3e68c1",
+    "outer_sha256": "b3c04b163392df043f78c8d377ff9f802afea2d7e95dcbff21fc5c87e504f2c5",
+    "results_lock_sha256": "2730c783f1a74f7aa58030d1ee03f324f1d50c4830c72e4229a15e41b60dc121",
+    "runner_sha256": "4f69680a2d26d6c8e4bd5b337a5e94e6cdc36d149ea6a4b9af547b3855a93eab"
+  },
+  "rewrite_policy": "Do not overwrite 06c after any all-78 V1 fit begins. Any execution runner must consume this exact frozen contract."
+}

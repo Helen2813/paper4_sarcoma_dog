@@ -1,0 +1,655 @@
+{
+  "contract_version": "paper5-06b0-target-prefit-input-policy-lock-v1",
+  "script_version": "06b0-freeze-target-prefit-input-policy-lock-v1-no-cli",
+  "created_at_utc": "2026-09-19T19:53:38.764621+00:00",
+  "status": "TARGET_PREFIT_INPUT_AND_POLICY_FROZEN_RUNNER_NOT_YET_AUTHORIZED",
+  "scientific_state_at_freeze": {
+    "target_molecular_values_summarized_or_interpreted": false,
+    "target_outcomes_read": false,
+    "target_clinical_values_read": false,
+    "biological_annotations_read": false,
+    "target_model_fit_performed": false,
+    "target_retained_factor_result_viewed": false,
+    "runner_source_authorized": false
+  },
+  "cohort": {
+    "path": "paper5/model_inputs/TARGET_OS_primary78/TARGET_OS_primary_multimodal_case_order.csv",
+    "sha256": "9a39a40f0ed6be767d9640219b4b3f7ee0813b8e81e6db64880a1fe1bcd44cb4",
+    "size_bytes": 1650,
+    "n_cases": 78,
+    "first_column": "sample_index",
+    "unique_first_column_ids": 78
+  },
+  "raw_locked_molecular_inputs": {
+    "RNA": {
+      "matrix": {
+        "path": "paper5/model_inputs/TARGET_OS_primary78/TARGET_OS_primary_rna_log2tpm.npy",
+        "sha256": "e9f40209336b0bc982b19852b19be10570c9a036e38e072a25b52217520c2074",
+        "size_bytes": 15731792,
+        "shape": [
+          78,
+          50422
+        ],
+        "dtype": "float32"
+      },
+      "features": {
+        "path": "paper5/model_inputs/TARGET_OS_primary78/TARGET_OS_primary_rna_features.csv",
+        "sha256": "202ce959bbcb512692caa6236bbbfab2719abbbbeafb2c53fa1d569f6b8b5ac8",
+        "size_bytes": 744589
+      },
+      "pre_z_transform": "identity_log2_TPM"
+    },
+    "METHYLATION": {
+      "matrix": {
+        "path": "paper5/model_inputs/TARGET_OS_primary78/TARGET_OS_primary_methylation_beta_corrected.npy",
+        "sha256": "f7097256240b99e99e2ef0c8ed4725c954bb56cf0c22a9048436e77d54112d42",
+        "size_bytes": 151765352,
+        "shape": [
+          78,
+          486427
+        ],
+        "dtype": "float32"
+      },
+      "features": {
+        "path": "paper5/model_inputs/TARGET_OS_primary78/TARGET_OS_primary_methylation_features_corrected.csv",
+        "sha256": "b3dea676c62616804ed90f34098085a42c895d228969665a8499e78a063bf1a5",
+        "size_bytes": 9144297
+      },
+      "pre_z_transform": "beta_to_M_value"
+    },
+    "CNV": {
+      "matrix": {
+        "path": "paper5/model_inputs/TARGET_OS_primary78/TARGET_OS_primary_cnv_gene_copy_number.npy",
+        "sha256": "26e13d3f3b9c056c8229c29b5ebac88127b3f0a491fcbe3eb563101dfe577792",
+        "size_bytes": 15720248,
+        "shape": [
+          78,
+          50385
+        ],
+        "dtype": "float32"
+      },
+      "features": {
+        "path": "paper5/model_inputs/TARGET_OS_primary78/TARGET_OS_primary_cnv_features.csv",
+        "sha256": "0541698063f1d71e7f857d6d4d3c9c541a33d7cb273043cf7f38d13ee5831aa1",
+        "size_bytes": 744084
+      },
+      "pre_z_transform": "log2_copy_number_over_2"
+    }
+  },
+  "harmonized_integrity_anchors": {
+    "RNA": {
+      "matrix": {
+        "path": "paper5/model_inputs/TARGET_OS_primary78/harmonized/RNA_zscore.npy",
+        "sha256": "4eeeeaaa0201dff71c48fc2e127018f6d71f801e291b5eff0c78545e8d641656",
+        "size_bytes": 15185168,
+        "shape": [
+          78,
+          48670
+        ],
+        "dtype": "float32"
+      },
+      "features": {
+        "path": "paper5/model_inputs/TARGET_OS_primary78/harmonized/RNA_features.csv",
+        "sha256": "20a3273ffb0779405865a27ad5dde1ad07c0d018a07790941daf0c0a877e92a2",
+        "size_bytes": 435921
+      },
+      "role": "verification/provenance anchor; not direct held-out-CV preprocessed input"
+    },
+    "METHYLATION": {
+      "matrix": {
+        "path": "paper5/model_inputs/TARGET_OS_primary78/harmonized/METHYLATION_Mvalue_zscore.npy",
+        "sha256": "cb9eb5399c585989919747a24f1035791b6678ec3cdea46c13d06f86e27a2923",
+        "size_bytes": 127005344,
+        "shape": [
+          78,
+          407068
+        ],
+        "dtype": "float32"
+      },
+      "features": {
+        "path": "paper5/model_inputs/TARGET_OS_primary78/harmonized/METHYLATION_features.csv",
+        "sha256": "ee18e8963eea630ce2e4bf8790f0f20a215a389ce22e95434ebd71eef92c1165",
+        "size_bytes": 4893174
+      },
+      "role": "verification/provenance anchor; not direct held-out-CV preprocessed input"
+    },
+    "CNV": {
+      "matrix": {
+        "path": "paper5/model_inputs/TARGET_OS_primary78/harmonized/CNV_log2ratio_zscore.npy",
+        "sha256": "1364642c43a4b673442d893d66b1dc054a7fa8a9ee575bab785d327c6c7cf55d",
+        "size_bytes": 15463160,
+        "shape": [
+          78,
+          49561
+        ],
+        "dtype": "float32"
+      },
+      "features": {
+        "path": "paper5/model_inputs/TARGET_OS_primary78/harmonized/CNV_features.csv",
+        "sha256": "e93fde2ca1cf9fbc6d2d3b15f37dd550a4f875e39d6f8b8456f85b8f3287f62b",
+        "size_bytes": 445008
+      },
+      "role": "verification/provenance anchor; not direct held-out-CV preprocessed input"
+    }
+  },
+  "preprocessing_contracts": {
+    "04b_harmonized_lock": {
+      "path": "paper5/model_inputs/TARGET_OS_primary78/harmonized/harmonized_input_lock.json",
+      "sha256": "04c32b6fefed42f433fc29e4f48413a730dc4504a46cfde8de6e7b6c45c99cac",
+      "size_bytes": 1971
+    },
+    "04c_prestandardization_manifest": {
+      "path": "paper5/model_inputs/TARGET_OS_primary78/premodel_qc/prestandardization_variance_audit_manifest.json",
+      "sha256": "e4c0d637e179ed76ba934ce67c9ef5542a1d144699a48da9c7f14226915aeb95",
+      "size_bytes": 12015
+    },
+    "04c_fold_local_preprocessing_contract": {
+      "path": "paper5/model_inputs/TARGET_OS_primary78/premodel_qc/fold_local_preprocessing_contract.json",
+      "sha256": "fbaba8fbf4370f780a8f0d85fc5af9fd86e803b5646f728e79593c6ce30cd3d2",
+      "size_bytes": 3103
+    },
+    "04c_feature_budget_plan": {
+      "path": "paper5/model_inputs/TARGET_OS_primary78/premodel_qc/representation_feature_budget_plan.csv",
+      "sha256": "bf8b38c38151dc00c7b5c04f2f031ef06176c7bab807cc16c7629c65dd9b06b6",
+      "size_bytes": 4629
+    },
+    "04c_reconstruction_audit": {
+      "path": "paper5/model_inputs/TARGET_OS_primary78/premodel_qc/harmonized_reconstruction_audit.csv",
+      "sha256": "807675d34ba61d430d9fd3c7202b2eaa334e2cba77fd7b71eefb6562d79860e3",
+      "size_bytes": 276
+    },
+    "primary_feature_budgets": {
+      "RNA": 5000,
+      "METHYLATION": 10000,
+      "CNV": 5000
+    },
+    "all_budget_rows": [
+      {
+        "modality": "RNA",
+        "ranking_method": "no_global_budget_all_training_fold_eligible_features",
+        "budget_role": "all_fold_local_eligible",
+        "n_features": "48670",
+        "candidate_file": "",
+        "full_cohort_use": "descriptive_and_final_refit",
+        "held_out_benchmark_use": "recompute_eligibility_imputation_scaling_and_PCA_inside_training_fold",
+        "model_family": "modality_specific_PCA"
+      },
+      {
+        "modality": "RNA",
+        "ranking_method": "no_global_budget_all_training_fold_eligible_features",
+        "budget_role": "all_fold_local_eligible",
+        "n_features": "48670",
+        "candidate_file": "",
+        "full_cohort_use": "descriptive_and_final_refit",
+        "held_out_benchmark_use": "recompute_eligibility_imputation_scaling_and_PCA_inside_training_fold",
+        "model_family": "block_scaled_PCA"
+      },
+      {
+        "modality": "METHYLATION",
+        "ranking_method": "no_global_budget_all_training_fold_eligible_features",
+        "budget_role": "all_fold_local_eligible",
+        "n_features": "407068",
+        "candidate_file": "",
+        "full_cohort_use": "descriptive_and_final_refit",
+        "held_out_benchmark_use": "recompute_eligibility_imputation_scaling_and_PCA_inside_training_fold",
+        "model_family": "modality_specific_PCA"
+      },
+      {
+        "modality": "METHYLATION",
+        "ranking_method": "no_global_budget_all_training_fold_eligible_features",
+        "budget_role": "all_fold_local_eligible",
+        "n_features": "407068",
+        "candidate_file": "",
+        "full_cohort_use": "descriptive_and_final_refit",
+        "held_out_benchmark_use": "recompute_eligibility_imputation_scaling_and_PCA_inside_training_fold",
+        "model_family": "block_scaled_PCA"
+      },
+      {
+        "modality": "CNV",
+        "ranking_method": "no_global_budget_all_training_fold_eligible_features",
+        "budget_role": "all_fold_local_eligible",
+        "n_features": "49561",
+        "candidate_file": "",
+        "full_cohort_use": "descriptive_and_final_refit",
+        "held_out_benchmark_use": "recompute_eligibility_imputation_scaling_and_PCA_inside_training_fold",
+        "model_family": "modality_specific_PCA"
+      },
+      {
+        "modality": "CNV",
+        "ranking_method": "no_global_budget_all_training_fold_eligible_features",
+        "budget_role": "all_fold_local_eligible",
+        "n_features": "49561",
+        "candidate_file": "",
+        "full_cohort_use": "descriptive_and_final_refit",
+        "held_out_benchmark_use": "recompute_eligibility_imputation_scaling_and_PCA_inside_training_fold",
+        "model_family": "block_scaled_PCA"
+      },
+      {
+        "modality": "RNA",
+        "ranking_method": "prestandardization_variance",
+        "budget_role": "sensitivity_low",
+        "n_features": "2000",
+        "candidate_file": "paper5\\model_inputs\\TARGET_OS_primary78\\premodel_qc\\feature_sets\\RNA_sensitivity_low_top2000_prestandardization_variance.csv",
+        "full_cohort_use": "final_refit_only",
+        "held_out_benchmark_use": "forbidden_recompute_within_training_fold",
+        "model_family": "MOFA;shared_private_AE;VAE"
+      },
+      {
+        "modality": "RNA",
+        "ranking_method": "prestandardization_variance",
+        "budget_role": "primary",
+        "n_features": "5000",
+        "candidate_file": "paper5\\model_inputs\\TARGET_OS_primary78\\premodel_qc\\feature_sets\\RNA_primary_top5000_prestandardization_variance.csv",
+        "full_cohort_use": "final_refit_only",
+        "held_out_benchmark_use": "forbidden_recompute_within_training_fold",
+        "model_family": "MOFA;shared_private_AE;VAE"
+      },
+      {
+        "modality": "RNA",
+        "ranking_method": "prestandardization_variance",
+        "budget_role": "sensitivity_high",
+        "n_features": "10000",
+        "candidate_file": "paper5\\model_inputs\\TARGET_OS_primary78\\premodel_qc\\feature_sets\\RNA_sensitivity_high_top10000_prestandardization_variance.csv",
+        "full_cohort_use": "final_refit_only",
+        "held_out_benchmark_use": "forbidden_recompute_within_training_fold",
+        "model_family": "MOFA;shared_private_AE;VAE"
+      },
+      {
+        "modality": "RNA",
+        "ranking_method": "prestandardization_robust_MAD",
+        "budget_role": "primary_metric_sensitivity",
+        "n_features": "5000",
+        "candidate_file": "paper5\\model_inputs\\TARGET_OS_primary78\\premodel_qc\\feature_sets\\RNA_primary_top5000_prestandardization_robust_mad.csv",
+        "full_cohort_use": "final_refit_sensitivity_only",
+        "held_out_benchmark_use": "forbidden_recompute_within_training_fold",
+        "model_family": "MOFA;shared_private_AE;VAE"
+      },
+      {
+        "modality": "METHYLATION",
+        "ranking_method": "prestandardization_variance",
+        "budget_role": "sensitivity_low",
+        "n_features": "5000",
+        "candidate_file": "paper5\\model_inputs\\TARGET_OS_primary78\\premodel_qc\\feature_sets\\METHYLATION_sensitivity_low_top5000_prestandardization_variance.csv",
+        "full_cohort_use": "final_refit_only",
+        "held_out_benchmark_use": "forbidden_recompute_within_training_fold",
+        "model_family": "MOFA;shared_private_AE;VAE"
+      },
+      {
+        "modality": "METHYLATION",
+        "ranking_method": "prestandardization_variance",
+        "budget_role": "primary",
+        "n_features": "10000",
+        "candidate_file": "paper5\\model_inputs\\TARGET_OS_primary78\\premodel_qc\\feature_sets\\METHYLATION_primary_top10000_prestandardization_variance.csv",
+        "full_cohort_use": "final_refit_only",
+        "held_out_benchmark_use": "forbidden_recompute_within_training_fold",
+        "model_family": "MOFA;shared_private_AE;VAE"
+      },
+      {
+        "modality": "METHYLATION",
+        "ranking_method": "prestandardization_variance",
+        "budget_role": "sensitivity_high",
+        "n_features": "20000",
+        "candidate_file": "paper5\\model_inputs\\TARGET_OS_primary78\\premodel_qc\\feature_sets\\METHYLATION_sensitivity_high_top20000_prestandardization_variance.csv",
+        "full_cohort_use": "final_refit_only",
+        "held_out_benchmark_use": "forbidden_recompute_within_training_fold",
+        "model_family": "MOFA;shared_private_AE;VAE"
+      },
+      {
+        "modality": "METHYLATION",
+        "ranking_method": "prestandardization_robust_MAD",
+        "budget_role": "primary_metric_sensitivity",
+        "n_features": "10000",
+        "candidate_file": "paper5\\model_inputs\\TARGET_OS_primary78\\premodel_qc\\feature_sets\\METHYLATION_primary_top10000_prestandardization_robust_mad.csv",
+        "full_cohort_use": "final_refit_sensitivity_only",
+        "held_out_benchmark_use": "forbidden_recompute_within_training_fold",
+        "model_family": "MOFA;shared_private_AE;VAE"
+      },
+      {
+        "modality": "CNV",
+        "ranking_method": "prestandardization_variance",
+        "budget_role": "sensitivity_low",
+        "n_features": "2000",
+        "candidate_file": "paper5\\model_inputs\\TARGET_OS_primary78\\premodel_qc\\feature_sets\\CNV_sensitivity_low_top2000_prestandardization_variance.csv",
+        "full_cohort_use": "final_refit_only",
+        "held_out_benchmark_use": "forbidden_recompute_within_training_fold",
+        "model_family": "MOFA;shared_private_AE;VAE"
+      },
+      {
+        "modality": "CNV",
+        "ranking_method": "prestandardization_variance",
+        "budget_role": "primary",
+        "n_features": "5000",
+        "candidate_file": "paper5\\model_inputs\\TARGET_OS_primary78\\premodel_qc\\feature_sets\\CNV_primary_top5000_prestandardization_variance.csv",
+        "full_cohort_use": "final_refit_only",
+        "held_out_benchmark_use": "forbidden_recompute_within_training_fold",
+        "model_family": "MOFA;shared_private_AE;VAE"
+      },
+      {
+        "modality": "CNV",
+        "ranking_method": "prestandardization_variance",
+        "budget_role": "sensitivity_high",
+        "n_features": "10000",
+        "candidate_file": "paper5\\model_inputs\\TARGET_OS_primary78\\premodel_qc\\feature_sets\\CNV_sensitivity_high_top10000_prestandardization_variance.csv",
+        "full_cohort_use": "final_refit_only",
+        "held_out_benchmark_use": "forbidden_recompute_within_training_fold",
+        "model_family": "MOFA;shared_private_AE;VAE"
+      },
+      {
+        "modality": "CNV",
+        "ranking_method": "prestandardization_robust_MAD",
+        "budget_role": "primary_metric_sensitivity",
+        "n_features": "5000",
+        "candidate_file": "paper5\\model_inputs\\TARGET_OS_primary78\\premodel_qc\\feature_sets\\CNV_primary_top5000_prestandardization_robust_mad.csv",
+        "full_cohort_use": "final_refit_sensitivity_only",
+        "held_out_benchmark_use": "forbidden_recompute_within_training_fold",
+        "model_family": "MOFA;shared_private_AE;VAE"
+      }
+    ]
+  },
+  "05a_frozen_target_execution_artifacts": {
+    "ai_method_contract.json": {
+      "path": "paper5/method_contract/05a/ai_method_contract.json",
+      "sha256": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+      "size_bytes": 10644
+    },
+    "ai_method_contract_lock.json": {
+      "path": "paper5/method_contract/05a/ai_method_contract_lock.json",
+      "sha256": "cc62dcc75c5f06e0c2c7220d1419392f8838b9eccad4ae916831689255dfc9f0",
+      "size_bytes": 5958
+    },
+    "model_selection_policy.json": {
+      "path": "paper5/method_contract/05a/model_selection_policy.json",
+      "sha256": "8d8b39d3d424e695324085ee533f13a555dada9b65acbc6718d7809ce07d0b44",
+      "size_bytes": 4100
+    },
+    "model_family_registry.csv": {
+      "path": "paper5/method_contract/05a/model_family_registry.csv",
+      "sha256": "b0a70a5f5df4b30a6aa2d4069e15d1d1b9fe3b770f8c5ef16248301acabf1a39",
+      "size_bytes": 2808
+    },
+    "baseline_hyperparameter_grid.csv": {
+      "path": "paper5/method_contract/05a/baseline_hyperparameter_grid.csv",
+      "sha256": "e25f30d5804365404436b62edf15e5affe859ac1f52309208db3f78dd1bca52a",
+      "size_bytes": 2253
+    },
+    "target_cv_split_summary.csv": {
+      "path": "paper5/method_contract/05a/target_cv_split_summary.csv",
+      "sha256": "0f61fa286134c288ff094d7206549bc8cc1b147c73472aa9f8d4ec375b5cb959",
+      "size_bytes": 2289
+    },
+    "target_outer_cv_assignments.csv": {
+      "path": "paper5/method_contract/05a/target_outer_cv_assignments.csv",
+      "sha256": "807736ea87c9532d6a264e50eeae4c97eb47cc4a08a40a1178f6c692f94c7811",
+      "size_bytes": 94204
+    },
+    "target_inner_cv_assignments.csv": {
+      "path": "paper5/method_contract/05a/target_inner_cv_assignments.csv",
+      "sha256": "03aa043f9dda10fce2bfec0aab615e24f88a49ad3807ceab63a5aa2cdc0fe1a1",
+      "size_bytes": 323829
+    },
+    "target_neural_training_assignments.csv": {
+      "path": "paper5/method_contract/05a/target_neural_training_assignments.csv",
+      "sha256": "29b6fb6513d7292417ad802d8d59d2f9ab541341b6c8f763df1f5d2a528e331d",
+      "size_bytes": 724310
+    }
+  },
+  "nested_cv_execution_policy": {
+    "authoritative_source": "paper5/method_contract/05a/model_selection_policy.json",
+    "outer_design": "5 repeats of 5-fold CV",
+    "inner_design": "4-fold CV within each outer-training split",
+    "outer_model_seeds": [
+      1103,
+      2207,
+      3301
+    ],
+    "inner_model_seeds": [
+      1103,
+      2207
+    ],
+    "outer_test_samples_used_for_selection": false,
+    "fold_local_preprocessing_required": true,
+    "heldout_cv_direct_use_of_global_harmonized_zscores": "FORBIDDEN",
+    "heldout_cv_rule": "For every inner/outer held-out evaluation, feature ranking/selection, missing-value handling, scaling, PCA or other learned preprocessing parameters must be estimated only from that split's training partition according to the frozen 04c/05a contracts, then applied to validation/test.",
+    "raw_locked_molecular_sources_for_cv": {
+      "RNA": "paper5/model_inputs/TARGET_OS_primary78/TARGET_OS_primary_rna_log2tpm.npy",
+      "METHYLATION": "paper5/model_inputs/TARGET_OS_primary78/TARGET_OS_primary_methylation_beta_corrected.npy",
+      "CNV": "paper5/model_inputs/TARGET_OS_primary78/TARGET_OS_primary_cnv_gene_copy_number.npy"
+    },
+    "global_harmonized_matrices_role": "Locked integrity/reconstruction anchors. They may not substitute for fold-local scaling/preprocessing during held-out nested-CV evaluation."
+  },
+  "nested_selection_eligible_models": [
+    {
+      "model_id": "BLOCK_PCA",
+      "family": "block_scaled_PCA",
+      "role": "primary_integrated_baseline",
+      "views": "RNA;METHYLATION;CNV",
+      "integrated_representation": "True",
+      "eligible_for_nested_selection": "True",
+      "eligible_for_final_freeze": "True",
+      "complexity_rank": "1",
+      "hyperparameter_source": "fixed",
+      "outcome_access": "False",
+      "notes": "Each fold-local standardized block is scaled to equal total training variance before concatenation."
+    },
+    {
+      "model_id": "MOFA_K5",
+      "family": "MOFA_plus",
+      "role": "primary_probabilistic_baseline",
+      "views": "RNA;METHYLATION;CNV",
+      "integrated_representation": "True",
+      "eligible_for_nested_selection": "True",
+      "eligible_for_final_freeze": "True",
+      "complexity_rank": "2",
+      "hyperparameter_source": "prespecified_rank_sweep",
+      "outcome_access": "False",
+      "notes": "Gaussian views; K=5; native missing-value handling."
+    },
+    {
+      "model_id": "MOFA_K10",
+      "family": "MOFA_plus",
+      "role": "primary_probabilistic_baseline",
+      "views": "RNA;METHYLATION;CNV",
+      "integrated_representation": "True",
+      "eligible_for_nested_selection": "True",
+      "eligible_for_final_freeze": "True",
+      "complexity_rank": "3",
+      "hyperparameter_source": "prespecified_rank_sweep",
+      "outcome_access": "False",
+      "notes": "Gaussian views; K=10; native missing-value handling."
+    },
+    {
+      "model_id": "MOFA_K15",
+      "family": "MOFA_plus",
+      "role": "primary_probabilistic_baseline",
+      "views": "RNA;METHYLATION;CNV",
+      "integrated_representation": "True",
+      "eligible_for_nested_selection": "True",
+      "eligible_for_final_freeze": "True",
+      "complexity_rank": "4",
+      "hyperparameter_source": "prespecified_rank_sweep",
+      "outcome_access": "False",
+      "notes": "Gaussian views; K=15; native missing-value handling."
+    },
+    {
+      "model_id": "MOFA_K20",
+      "family": "MOFA_plus",
+      "role": "primary_probabilistic_baseline",
+      "views": "RNA;METHYLATION;CNV",
+      "integrated_representation": "True",
+      "eligible_for_nested_selection": "True",
+      "eligible_for_final_freeze": "True",
+      "complexity_rank": "5",
+      "hyperparameter_source": "prespecified_rank_sweep",
+      "outcome_access": "False",
+      "notes": "Gaussian views; K=20; native missing-value handling."
+    },
+    {
+      "model_id": "V0_BALANCED_AE",
+      "family": "SABLE_MO_ablation",
+      "role": "primary_nonlinear_ablation",
+      "views": "RNA;METHYLATION;CNV",
+      "integrated_representation": "True",
+      "eligible_for_nested_selection": "True",
+      "eligible_for_final_freeze": "True",
+      "complexity_rank": "6",
+      "hyperparameter_source": "simulation_selected",
+      "outcome_access": "False",
+      "notes": "Block-balanced reconstruction only."
+    },
+    {
+      "model_id": "V1_SHARED_PRIVATE_AE",
+      "family": "SABLE_MO_ablation",
+      "role": "primary_nonlinear_ablation",
+      "views": "RNA;METHYLATION;CNV",
+      "integrated_representation": "True",
+      "eligible_for_nested_selection": "True",
+      "eligible_for_final_freeze": "True",
+      "complexity_rank": "7",
+      "hyperparameter_source": "simulation_selected",
+      "outcome_access": "False",
+      "notes": "V0 plus shared/private decomposition."
+    },
+    {
+      "model_id": "V2_CONTRASTIVE_SPAE",
+      "family": "SABLE_MO_ablation",
+      "role": "primary_nonlinear_ablation",
+      "views": "RNA;METHYLATION;CNV",
+      "integrated_representation": "True",
+      "eligible_for_nested_selection": "True",
+      "eligible_for_final_freeze": "True",
+      "complexity_rank": "8",
+      "hyperparameter_source": "simulation_selected",
+      "outcome_access": "False",
+      "notes": "V1 plus paired cross-view contrastive alignment."
+    },
+    {
+      "model_id": "V3_DROPOUT_SPAE",
+      "family": "SABLE_MO_ablation",
+      "role": "primary_nonlinear_ablation",
+      "views": "RNA;METHYLATION;CNV",
+      "integrated_representation": "True",
+      "eligible_for_nested_selection": "True",
+      "eligible_for_final_freeze": "True",
+      "complexity_rank": "9",
+      "hyperparameter_source": "simulation_selected",
+      "outcome_access": "False",
+      "notes": "V2 plus modality dropout and missing-view reconstruction."
+    },
+    {
+      "model_id": "V4_SABLE_MO",
+      "family": "SABLE_MO",
+      "role": "proposed_primary_method",
+      "views": "RNA;METHYLATION;CNV",
+      "integrated_representation": "True",
+      "eligible_for_nested_selection": "True",
+      "eligible_for_final_freeze": "True",
+      "complexity_rank": "10",
+      "hyperparameter_source": "simulation_selected",
+      "outcome_access": "False",
+      "notes": "V3 plus resampling-based factor alignment and stability gate. Proposed method is not guaranteed to win the benchmark."
+    }
+  ],
+  "05e_primary_proposed_method": {
+    "freeze": {
+      "path": "paper5/method_contract/05e/representation_method_freeze.json",
+      "sha256": "df01013be4d87fe7b67ea31a5d038ace8642ecb8cfc56d13b1bfa6414cb2d60f",
+      "size_bytes": 16963
+    },
+    "lock": {
+      "path": "paper5/method_contract/05e/representation_method_freeze_lock.json",
+      "sha256": "e0adaccada7f9b04f0e699badfac252a6dc865f24d2ea39a243b07bc3ddbafbf",
+      "size_bytes": 7038
+    },
+    "method_id": "V4_SABLE_MO",
+    "profile_id": "ARCH_COMPACT__REG_WEAK",
+    "role": "primary proposed implementation; does not override frozen 05a outcome-blind TARGET method selection"
+  },
+  "final_full_data_method_freeze": {
+    "authoritative_source": "paper5/method_contract/05a/model_selection_policy.json",
+    "selection_rule": "Choose the model_id selected most frequently by inner-CV one-SE selection across all outer splits.",
+    "minimum_single_method_selection_frequency": 0.4,
+    "uncertainty_rule": "If no model reaches 40% selection frequency, do not claim a unique winner. Freeze the two most frequently selected non-failed methods as co-primary representations and report method uncertainty.",
+    "tie_breaker": "Lower complexity_rank, then lexicographically smaller model_id.",
+    "full_data_refit": "Use the frozen method family, simulation-selected neural profile, primary feature budget, and all 78 cases without outcomes.",
+    "all_78_cases_without_outcomes": true,
+    "outcome_or_biology_may_change_method": false
+  },
+  "06a_SABLE_MO_retention_scope": {
+    "primary_SABLE_MO_q10": 0.6,
+    "historical_SABLE_MO_sensitivity_q10": 0.4,
+    "applies_to": "SABLE-MO factor stability/retention evaluation on TARGET",
+    "cross_engine_transfer": "FORBIDDEN",
+    "does_not_override_05a_TARGET_model_selection": true,
+    "non_SABLE_engines": "Do not apply the SABLE-MO median/q10/inclusion/modality-support retention thresholds to PCA, BLOCK_PCA, MOFA, RIDGE_GCCA, iCluster2b, MOVE, or other engines unless a separately prospective engine-specific calibration exists.",
+    "zero_factor_policy": "Report zero retained factors as the primary result. Do not relax q10 or substitute q10=0.40. Any downstream factor-specific analysis requiring at least one retained factor is reported as not estimable under the primary rule. Run q10=0.40 only as the separately labeled prespecified sensitivity.",
+    "few_factor_policy": "Do not invent a minimum retained-factor count and do not relax thresholds. Use all factors retained by the frozen primary rule for analyses that are mathematically and methodologically defined under the downstream frozen plan; otherwise report the corresponding analysis as not estimable. The q10=0.40 analysis remains sensitivity only."
+  },
+  "04d_technical_metadata_boundary": {
+    "lock": {
+      "path": "paper5/data_manifest/TARGET_OS_technical_metadata/TARGET_OS_technical_metadata_preflight_lock.json",
+      "sha256": "d40906a27d1120a128fd3a8efc489dd7d0ca97bf9631a48f9c7f3263d460b8bb",
+      "size_bytes": 5691
+    },
+    "manifest": {
+      "path": "paper5/data_manifest/TARGET_OS_technical_metadata/TARGET_OS_technical_metadata_preflight_manifest.json",
+      "sha256": "73232610dcd3f0e2c9a45d7c3a66c0eaac138766a9cf339ed03cd67d282ef532",
+      "size_bytes": 11239
+    },
+    "lock_status": "FROZEN_BEFORE_REPRESENTATION_MODEL_FITTING",
+    "n_cases": 78,
+    "resolved_covariates": {
+      "n_ambiguous_usable": 0,
+      "n_metadata_conflicts": 158,
+      "n_potential_cross_view_batch_candidates": 0,
+      "n_strict_usable": 0,
+      "n_view_specific_variables": 27,
+      "technical_status_if_no_strict_usable_fields": "stable_technical_status_unknown"
+    },
+    "technical_covariates_used_for_model_selection": false,
+    "automatic_batch_residualization": false,
+    "future_audit_timing": "after representation and stability freeze, before primary biological interpretation",
+    "interpretation": "The frozen 04d preflight found zero strict usable technical covariates. Representation/model selection therefore remains independent of technical metadata; later stable-factor technical status is not automatically assumed biological and may remain 'stable_technical_status_unknown'."
+  },
+  "upstream_embedded_hash_audit": {
+    "04b_harmonized_lock": {
+      "path_hash_records_seen": 0,
+      "project_local_records_verified": 0
+    },
+    "04c_premodel_manifest": {
+      "path_hash_records_seen": 13,
+      "project_local_records_verified": 13
+    },
+    "05a_lock": {
+      "path_hash_records_seen": 0,
+      "project_local_records_verified": 0
+    },
+    "05e_lock": {
+      "path_hash_records_seen": 7,
+      "project_local_records_verified": 7
+    },
+    "06a_lock": {
+      "path_hash_records_seen": 3,
+      "project_local_records_verified": 0
+    },
+    "04d_technical_lock": {
+      "path_hash_records_seen": 8,
+      "project_local_records_verified": 8
+    }
+  },
+  "forbidden_for_06b0_and_next_prefit_source_lock": [
+    "TARGET clinical outcome values",
+    "survival/metastasis labels",
+    "biological program annotations used for model/factor selection",
+    "technical covariates used to select representation family",
+    "global full-cohort feature ranking/scaling/PCA inside held-out CV",
+    "post-TARGET threshold relaxation or model-shopping"
+  ],
+  "runner_authorization_policy": {
+    "target_fit_authorized_by_06b0_alone": false,
+    "next_required_stage": "06b1 pre-execution source/implementation lock",
+    "require_exact_runner_source_sha256_before_first_TARGET_fit": true,
+    "require_no_scientific_TARGET_result_files_before_06b1": true,
+    "reason": "06b0 freezes input identity and scientific execution policy. The actual runner must be written/tested against synthetic fixtures and then source-hash locked before any real TARGET fit."
+  },
+  "rewrite_policy": "06b0 is immutable after creation. Any runner implementation must conform to this input/policy lock. No TARGET representation, retained-factor, biology, technical-association, or outcome result may be used to alter folds, feature budgets, preprocessing, eligible-model registry, method-selection rules, SABLE-MO retention thresholds, or technical-metadata boundaries."
+}

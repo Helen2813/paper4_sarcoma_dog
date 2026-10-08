@@ -1,0 +1,171 @@
+{
+  "status": "FROZEN_BEFORE_V1_BIOLOGICAL_ALIGNMENT_AND_RANDOM_CONTROLS",
+  "script_version": "06e0-freeze-v1-biological-alignment-random-control-contract-v1-no-cli",
+  "created_at_utc": "2026-10-07T21:27:45.335697+00:00",
+  "frozen_representation": {
+    "model_id": "V1_SHARED_PRIVATE_AE",
+    "profile_id": "ARCH_COMPACT__REG_WEAK",
+    "n_cases": 78,
+    "primary_seed": 1103,
+    "shared_dim": 5,
+    "representation_filename": "target_v1_patient_shared_seed1103.npy",
+    "representation_sha256": "c05bf08017ad8544e1e4ce0c8f58f086060dd7a6a0a68ed7f8d5a6723768a95f",
+    "coordinate_ids": [
+      "V1_SHARED_01",
+      "V1_SHARED_02",
+      "V1_SHARED_03",
+      "V1_SHARED_04",
+      "V1_SHARED_05"
+    ],
+    "coordinate_stability_qualification": "NOT_ESTABLISHED_FOR_V1",
+    "sable_mo_q10_or_retention_transfer": "FORBIDDEN"
+  },
+  "technical_boundary": {
+    "status": "UNKNOWN_NO_STRICT_USABLE_TECHNICAL_COVARIATES",
+    "strict_usable_technical_covariates": 0,
+    "technical_unknown_means_nontechnical": false,
+    "technical_unknown_means_biological": false,
+    "biological_alignment_may_override_technical_unknown": false
+  },
+  "primary_biological_programs": {
+    "program_ids": [
+      "M34",
+      "M40",
+      "M11",
+      "M24"
+    ],
+    "program_order_is_frozen": true,
+    "source": "previously_frozen_Paper4_programs",
+    "strict_gene_counts": {
+      "M34": 162,
+      "M40": 111,
+      "M11": 7,
+      "M24": 7
+    },
+    "additional_programs_may_be_added_after_results": false,
+    "hallmark_or_other_annotation_families_authorized_here": false
+  },
+  "program_score": {
+    "primary_variant": "strict_signed_mean",
+    "source_weights": "Paper4 frozen strict one-to-one human ortholog weights",
+    "gene_level_standardization": "within_exact_78_case_TARGET_frame_zscore_ddof1",
+    "score_definition": "mean(sign_weight * standardized_gene_expression) over available strict genes",
+    "score_standardization": "within_exact_78_case_TARGET_frame_zscore_ddof1",
+    "minimum_program_coverage_fraction": 1.0,
+    "missing_strict_gene_policy": "FAIL_CLOSED; no reduced-gene fallback in the primary analysis",
+    "no_outcome_or_clinical_input": true
+  },
+  "case_matching": {
+    "paper5_case_count_required": 78,
+    "paper4_TARGET_expression_rows_may_exceed_78": true,
+    "matching_key": "normalized TARGET case identifier",
+    "required_overlap": "all 78 frozen Paper5 cases exactly once",
+    "duplicates": "FORBIDDEN",
+    "missing_case": "FAIL_CLOSED",
+    "extra_Paper4_cases": "ignored after exact 78-case subset is identified"
+  },
+  "primary_alignment": {
+    "per_coordinate_metric": "Spearman correlation between frozen program score and frozen V1 shared coordinate",
+    "n_coordinates": 5,
+    "n_programs": 4,
+    "all_20_raw_signed_correlations_reported": true,
+    "primary_program_statistic": "max_absolute_spearman_across_5_frozen_v1_shared_coordinates",
+    "reason_for_absolute_value": "V1 latent-axis sign is arbitrary; magnitude is the invariant alignment quantity.",
+    "best_coordinate_id_reported": "DESCRIPTIVE_ONLY",
+    "best_coordinate_may_change_model_or_seed": false,
+    "best_coordinate_may_be_called_retained_or_stable": false
+  },
+  "matched_random_program_controls": {
+    "enabled": true,
+    "panels_per_program": 1000,
+    "random_seed": 42,
+    "gene_universe": "genes present in the frozen Paper4 TARGET expression file after exact 78-case subset; finite and positive ddof1 variance",
+    "exclude_genes": "union of strict genes from M34, M40, M11, M24",
+    "matching_variable": "pre-standardization sample variance across the exact 78-case TARGET frame",
+    "variability_bins": 10,
+    "binning_rule": "deterministic equal-frequency variability bins with original gene symbol as deterministic tie-break",
+    "sampling_rule": "same-bin preference; without replacement within each random panel",
+    "fallback_rule": "if same-bin candidates are insufficient, expand symmetrically to nearest variability bins; record every fallback draw",
+    "panel_size": "exact strict-gene count of the corresponding frozen program",
+    "weight_and_sign_rule": "carry the frozen anchor gene sign/weight positions onto the matched sampled genes so each null preserves the anchor score-weight distribution",
+    "null_statistic": "maximum absolute Spearman correlation across the same five frozen V1 shared coordinates",
+    "selection_correction": "the null also maximizes over five coordinates, matching the observed best-coordinate search",
+    "empirical_probability": "(1 + count(null_statistic >= observed_statistic)) / (1000 + 1)",
+    "minimum_attainable_probability": 0.000999000999000999,
+    "fallback_count_must_be_reported": true,
+    "matched_random_results_are": "specificity/context evidence, not proof that a coordinate is biological"
+  },
+  "multiplicity": {
+    "family": "four primary Paper4 program-level matched-random empirical probabilities",
+    "procedure": "Benjamini-Hochberg",
+    "alpha": 0.05,
+    "bh_q_reported_for_each_program": true,
+    "raw_20_coordinate_correlations": "descriptive; not separately thresholded"
+  },
+  "interpretation_firewall": {
+    "biology_may_change_selected_model": false,
+    "biology_may_change_primary_seed": false,
+    "biology_may_change_fixed_epochs": false,
+    "biology_may_apply_SABLE_q10_or_stability_gate_to_V1": false,
+    "biology_may_rescue_or_reject_V1_coordinates": false,
+    "strong_alignment_plus_random_control_support_may_be_called": "program-aligned V1 coordinate under technical-status-unknown",
+    "strong_alignment_may_be_called_stable_biological_factor": false,
+    "independent_recurrence_required_for_stronger_biological_claim": true,
+    "clinical_or_outcome_use": "FORBIDDEN"
+  },
+  "biological_input_identities_for_future_execution": {
+    "paper4_frozen_program_manifest": {
+      "path": "results/tables/GSE238110_frozen_canine_transfer_program_manifest.csv",
+      "expected_sha256_for_future_execution": "fcd34b985ea99986f39dfc43ce8e4018db2fde9ecc8a225bb40ac93006d5372c",
+      "size_bytes": 14880,
+      "content_opened_or_hashed_in_06e0": false
+    },
+    "paper4_frozen_strict_gene_weights": {
+      "path": "results/tables/GSE238110_frozen_transfer_gene_weights_strict.csv",
+      "expected_sha256_for_future_execution": "4f065aa4c4edf117a0c74015840d2b4b2347929f172cd517e1818ba0f6163b91",
+      "size_bytes": 50062,
+      "content_opened_or_hashed_in_06e0": false
+    },
+    "paper4_frozen_scoring_specification": {
+      "path": "results/tables/GSE238110_frozen_transfer_scoring_specification.csv",
+      "expected_sha256_for_future_execution": "562aab92caa949691f43b0285cf2585c98008e78c62d2c15477a6d156d7f47a7",
+      "size_bytes": 14951,
+      "content_opened_or_hashed_in_06e0": false
+    },
+    "paper4_target_expression": {
+      "path": "data/processed/human_validation/TARGET_OS_expression_log2_gene_symbol.csv",
+      "expected_sha256_for_future_execution": "0cde0d000cafa4acb40f42f90bcf6b8e82ece92e5da8db1839bf99007eb5e52f",
+      "size_bytes": 66594174,
+      "content_opened_or_hashed_in_06e0": false
+    }
+  },
+  "source_locks": {
+    "06c3": {
+      "path": "method_contract/06c3/target_v1_full_data_refit_results_lock.json",
+      "sha256": "b23d4c630cffca3bc5b1c44328128d4da46028b8db8cb070e6be93d9d0795be5"
+    },
+    "06d0": {
+      "path": "method_contract/06d0/06d0_v1_postfit_downstream_scope_audit_lock.json",
+      "sha256": "ed79f08162d6b69af6681ce908d0986d51ed46e6772203535fa94fdb58d6f049"
+    },
+    "06d1_v2": {
+      "path": "method_contract/06d1_v2/06d1_v2_v1_postfreeze_technical_status_audit_lock.json",
+      "sha256": "4b34cd777065e8b04f0c45634014f74c53176701ea2a27c480d4cc5b0002e3aa"
+    }
+  },
+  "scientific_state_at_freeze": {
+    "paper4_biological_artifact_contents_opened_in_06e0": false,
+    "target_biological_annotations_opened_in_06e0": false,
+    "target_clinical_or_outcomes_opened_in_06e0": false,
+    "target_molecular_matrices_read_in_06e0": false,
+    "v1_numeric_representation_array_read_in_06e0": false,
+    "model_fit_or_refit_in_06e0": false,
+    "biological_alignment_computed_in_06e0": false,
+    "random_controls_computed_in_06e0": false
+  },
+  "next_stage": {
+    "required": "separate versioned biological runner with synthetic/schema preflight and source authorization before first biological-result computation",
+    "future_runner_first_action": "verify exact SHA-256 of every frozen biological input before parsing any scientific row/value",
+    "post_result_contract_changes": "FORBIDDEN; any scientifically necessary amendment requires a new versioned pre-result contract and preservation of this contract"
+  }
+}

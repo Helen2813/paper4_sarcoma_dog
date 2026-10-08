@@ -1,0 +1,76 @@
+{
+  "authorization_conditions": {
+    "BLOCK_PCA_all_fold_local_eligible_features": true,
+    "MOFA_native_missingness_preserved": true,
+    "TARGET_clinical_access": false,
+    "TARGET_outcome_access": false,
+    "biological_annotation_access_for_selection": false,
+    "exact_runner_sha_required": "4f69680a2d26d6c8e4bd5b337a5e94e6cdc36d149ea6a4b9af547b3855a93eab",
+    "fold_local_feature_ranking_required": true,
+    "fold_local_imputation_scaling_PCA_required_where_applicable": true,
+    "global_full_cohort_rankings_used_in_heldout_CV": false,
+    "global_harmonized_zscores_used_as_heldout_CV_input": false,
+    "neural_primary_feature_budgets": {
+      "CNV": 5000,
+      "METHYLATION": 10000,
+      "RNA": 5000
+    },
+    "q10_040_used_for_cross_family_selection": false,
+    "q10_060_used_for_cross_family_selection": false,
+    "runner_may_change_after_authorization": false,
+    "secondary_comparators_used_for_primary_selection": false,
+    "technical_covariates_used_for_model_selection": false,
+    "threshold_or_model_retuning_after_TARGET_results": false
+  },
+  "authorization_scope": "Authorize exactly the immutable v4 runner source for the next outcome-blind TARGET representation benchmark after v4 synthetic full-path validation of the frozen 04c raw-to-model transformations and fold-local preprocessing.",
+  "contract_version": "paper5-06b2-target-runner-v4-source-authorization-v2",
+  "created_at_utc": "2026-09-19T23:15:38+00:00",
+  "historical_06b1": {
+    "authorization_scope": "historical exact v3 source only",
+    "path": "paper5/method_contract/06b1/target_runner_source_authorization_lock.json",
+    "rewritten": false,
+    "sha256": "8b5893d656d2c5c055b9912d1a76bb70132715bac9be8a4352bc73a5d9e331d7",
+    "size_bytes": 3100
+  },
+  "historical_recovery_record": {
+    "path": "paper5/method_contract/06b2/historical_v3_attempt_boundary_record.json",
+    "sha256": "3dff2813187a95f1a456c66c2879203d46f001e69208c13f9cb96dd03e5e781f",
+    "size_bytes": 2083
+  },
+  "preauthorization_scientific_output_check": {
+    "06b_method_contract_files_present": false,
+    "06b_primary_benchmark_files_present": false
+  },
+  "prospective_anchors": {
+    "06b0_prefit_lock": {
+      "path": "paper5/method_contract/06b0/06b0_prefit_lock.json",
+      "sha256": "656bd06e2aa6d85778f288c4184742416d64cb2ba3d42caf77ff33b10e4c5a5b",
+      "size_bytes": 1186
+    },
+    "06b0a_dependency_audit": {
+      "path": "paper5/method_contract/06b0a/target_runner_dependency_audit.json",
+      "sha256": "8562876678c3bd5eed3c5a7ded4a0708deda5810cac74d1f714320b586e49aed",
+      "size_bytes": 144200
+    }
+  },
+  "real_target_fit_authorized": true,
+  "rewrite_policy": "06b2 is immutable after creation. Any change to the v4 runner source, its SHA-256, raw-to-model transformations, fold-local preprocessing, eligible-model registry, utility definition, one-SE rule, final 40% rule, or scientific access boundary invalidates this authorization and requires a new versioned pre-fit authorization before another real TARGET fit.",
+  "runner_source": {
+    "path": "paper5/scripts/06b_run_target_outcome_blind_representation_benchmark_gpu_v4.py",
+    "script_version": "06b-run-target-outcome-blind-representation-benchmark-gpu-v4-frozen-04c-raw-input-fold-local-preprocessing-recovery-preauthorization-synthetic-gated-no-cli",
+    "sha256": "4f69680a2d26d6c8e4bd5b337a5e94e6cdc36d149ea6a4b9af547b3855a93eab",
+    "size_bytes": 114783
+  },
+  "script_version": "06b2-freeze-target-runner-v4-source-authorization-v2-float32-epsilon-canonicalization-no-cli",
+  "status": "06B2_TARGET_RUNNER_V4_SOURCE_AUTHORIZED_BEFORE_FIRST_TARGET_FIT",
+  "synthetic_selftest": {
+    "TARGET_model_fitting_performed": false,
+    "all_10_model_branches_executed": true,
+    "exact_04c_fold_local_preprocessing_tested": true,
+    "path": "paper5/method_contract/06b_preflight/target_runner_synthetic_selftest_v4.json",
+    "real_TARGET_values_accessed": false,
+    "sha256": "986f781bdee7e90aa0e22030e382b9844b36f11941b42d7d21e521d8d89825b7",
+    "size_bytes": 15036,
+    "status": "06B_TARGET_RUNNER_SYNTHETIC_SELFTEST_PASS_BEFORE_TARGET_ACCESS"
+  }
+}

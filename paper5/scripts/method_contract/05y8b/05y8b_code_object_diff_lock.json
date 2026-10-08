@@ -1,0 +1,23 @@
+{
+  "status": "05Y8B_RECOVERED_SOURCE_CODE_OBJECT_DIFF_FROZEN",
+  "script_version": "05y8b-compare-recovered-05y6-source-to-frozen-bytecode-v1-no-cli",
+  "created_at_utc": "2026-09-19T19:12:20.371826+00:00",
+  "report": {
+    "path": "method_contract/05y8b/05y6_recovered_source_code_object_diff.json",
+    "sha256": "1a3e74bc15035e74589e8cd40efe3b965a625e93b4ea6b0add72ef1db87003ca",
+    "size_bytes": 1605
+  },
+  "text_report": {
+    "path": "method_contract/05y8b/05y6_recovered_source_code_object_diff.txt",
+    "sha256": "ca3651e09ab8e7bf7995333044ad1cb40dc0da8f6c8bfff63edd2222b251a277",
+    "size_bytes": 658
+  },
+  "archive_script": {
+    "path": "scripts/05y8b_compare_recovered_05y6_source_to_frozen_bytecode_v1.py",
+    "sha256": "109f59a96a50e3e3cdd58d9e925e3a2a357c897aecc1dac5576e1022265802f8",
+    "size_bytes": 12797
+  },
+  "05y6_executed": false,
+  "scientific_shards_read": false,
+  "scientific_results_read": false
+}

@@ -1,0 +1,110 @@
+{
+  "status": "06E1_V1_BIOLOGY_RUNNER_SYNTHETIC_SELFTEST_PASS",
+  "script_version": "06e1-run-v1-biological-alignment-random-controls-v1-two-stage-source-authorized-no-cli",
+  "runner_sha256": "51eface403ec7b41a6436289590f0cd4159ad4b6e167800052de8eb2f11bd180",
+  "created_at_utc": "2026-10-07T21:44:17.605185+00:00",
+  "execution_mode": "SYNTHETIC_ONLY_PREAUTHORIZATION",
+  "06e0_identity": {
+    "contract_path": "method_contract/06e0/v1_biological_alignment_random_control_contract.json",
+    "contract_sha256": "43c25abbc18eb79e7876bd5228ad5a0079957fef7a8aaa26b1b37b5025df759c",
+    "lock_path": "method_contract/06e0/06e0_v1_biological_alignment_random_control_contract_lock.json",
+    "lock_sha256": "2ee83579ea38f1c57882a387fcef7025ec41a10607bc332998170ae17da2c3dc"
+  },
+  "synthetic_math_and_schema_audit": {
+    "status": "PASS",
+    "n_samples": 36,
+    "n_genes": 120,
+    "n_coordinates": 5,
+    "n_programs": 4,
+    "smoke_random_panels_per_program": 40,
+    "smoke_random_panel_count_is_scientific_setting": false,
+    "program_results": [
+      {
+        "program": "M34",
+        "observed": 0.9979407979407982,
+        "best_coordinate_index": 1,
+        "correlations": [
+          0.0028314028314028314,
+          0.9979407979407982,
+          -0.0676962676962677,
+          -0.07644787644787646,
+          0.044015444015444015
+        ],
+        "smoke_null_n": 40,
+        "smoke_empirical_p": 0.024390243902439025,
+        "smoke_null_exceedances": 0
+      },
+      {
+        "program": "M40",
+        "observed": 0.9979407979407982,
+        "best_coordinate_index": 3,
+        "correlations": [
+          -0.06280566280566281,
+          0.0676962676962677,
+          -0.275933075933076,
+          -0.9979407979407982,
+          0.17271557271557272
+        ],
+        "smoke_null_n": 40,
+        "smoke_empirical_p": 0.024390243902439025,
+        "smoke_null_exceedances": 0
+      },
+      {
+        "program": "M11",
+        "observed": 0.2682110682110682,
+        "best_coordinate_index": 2,
+        "correlations": [
+          0.08906048906048908,
+          0.21132561132561134,
+          -0.2682110682110682,
+          0.01724581724581725,
+          -0.009266409266409266
+        ],
+        "smoke_null_n": 40,
+        "smoke_empirical_p": 0.5853658536585366,
+        "smoke_null_exceedances": 23
+      },
+      {
+        "program": "M24",
+        "observed": 0.2725868725868726,
+        "best_coordinate_index": 2,
+        "correlations": [
+          -0.22033462033462034,
+          -0.17837837837837842,
+          0.2725868725868726,
+          0.25688545688545694,
+          -0.05611325611325611
+        ],
+        "smoke_null_n": 40,
+        "smoke_empirical_p": 0.3902439024390244,
+        "smoke_null_exceedances": 15
+      }
+    ],
+    "fallback_draws_exercised": 0,
+    "explicit_nearest_bin_fallback_test": "PASS",
+    "weight_schema_resolution": {
+      "module": "module_label",
+      "gene": "human_gene_symbol",
+      "sign": "canine_pca_loading_sign",
+      "weight": "canine_pca_loading"
+    },
+    "target_case_normalization": "PASS",
+    "bh_test": "PASS",
+    "sign_invariant_best_coordinate_test": "PASS"
+  },
+  "scientific_state": {
+    "real_biological_input_hashed": false,
+    "real_biological_input_parsed": false,
+    "v1_numeric_representation_array_read": false,
+    "target_clinical_or_outcomes_read": false,
+    "target_model_fit_or_refit": false,
+    "biological_alignment_computed_on_real_data": false,
+    "random_controls_computed_on_real_data": false
+  },
+  "real_execution_boundary": {
+    "authorization_required": true,
+    "authorization_status": "06E1A_V1_TARGET_V1_BIOLOGY_RUNNER_SOURCE_AUTHORIZED",
+    "authorization_namespace": "method_contract/06e1a_v1",
+    "real_runner_must_verify_all_frozen_biological_hashes_before_parsing": true
+  }
+}

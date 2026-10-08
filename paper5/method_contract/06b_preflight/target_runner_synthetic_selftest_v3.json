@@ -1,0 +1,262 @@
+{
+  "complexity_ranks": {
+    "BLOCK_PCA": 1,
+    "MOFA_K10": 3,
+    "MOFA_K15": 4,
+    "MOFA_K20": 5,
+    "MOFA_K5": 2,
+    "V0_BALANCED_AE": 6,
+    "V1_SHARED_PRIVATE_AE": 7,
+    "V2_CONTRASTIVE_SPAE": 8,
+    "V3_DROPOUT_SPAE": 9,
+    "V4_SABLE_MO": 10
+  },
+  "created_at_utc": "2026-09-19T20:32:34+00:00",
+  "elapsed_seconds": 4.073754899960477,
+  "eligible_model_ids": [
+    "BLOCK_PCA",
+    "MOFA_K5",
+    "MOFA_K10",
+    "MOFA_K15",
+    "MOFA_K20",
+    "V0_BALANCED_AE",
+    "V1_SHARED_PRIVATE_AE",
+    "V2_CONTRASTIVE_SPAE",
+    "V3_DROPOUT_SPAE",
+    "V4_SABLE_MO"
+  ],
+  "fixture_validation": {
+    "fixture_contract_sha256": "e4387664398891334e8f5c4f7524277dbefa43f7f2cc4a3b07a08477d6ac1df5",
+    "fixture_lock_sha256": "8300b430bdf8ee641443782809816c2691777644a534e9ecbc2669b9f7ed7eb9",
+    "fixture_root": "paper5/development_fixtures/target_input_synthetic_v1",
+    "matrices_by_expected_shape": {
+      "CNV": [
+        [
+          "paper5/development_fixtures/target_input_synthetic_v1/cnv.npy",
+          [
+            24,
+            30
+          ]
+        ]
+      ],
+      "METHYLATION": [
+        [
+          "paper5/development_fixtures/target_input_synthetic_v1/methylation.npy",
+          [
+            24,
+            50
+          ]
+        ]
+      ],
+      "RNA": [
+        [
+          "paper5/development_fixtures/target_input_synthetic_v1/rna.npy",
+          [
+            24,
+            40
+          ]
+        ]
+      ]
+    }
+  },
+  "frozen_callable_signatures": {
+    "ablation.build_variant_specs": "(loss_contract: 'dict[str, Any]') -> 'dict[str, VariantSpec]'",
+    "ablation.encode_numpy": "(model: 'NeuralAblationModel', views_np: 'dict[str, np.ndarray]', availability_np: 'np.ndarray') -> 'dict[str, Any]'",
+    "ablation.predict_missing_view_numpy": "(model: 'NeuralAblationModel', views_np: 'dict[str, np.ndarray]', availability_np: 'np.ndarray', omitted_view: 'str') -> 'tuple[np.ndarray, np.ndarray]'",
+    "ablation.predict_reconstruction_numpy": "(model: 'NeuralAblationModel', views_np: 'dict[str, np.ndarray]', availability_np: 'np.ndarray') -> 'dict[str, np.ndarray]'",
+    "ablation.train_fixed_epochs": "(neural: 'Any', profile: 'Any', variant: 'VariantSpec', training_views_np: 'dict[str, np.ndarray]', availability_np: 'np.ndarray', fit_seed: 'int', epochs: 'int') -> 'tuple[NeuralAblationModel, dict[str, Any]]'",
+    "ablation.train_with_early_stopping": "(neural: 'Any', profile: 'Any', variant: 'VariantSpec', fit_views_np: 'dict[str, np.ndarray]', fit_availability_np: 'np.ndarray', early_views_np: 'dict[str, np.ndarray]', early_availability_np: 'np.ndarray', fit_seed: 'int') -> 'tuple[int, dict[str, Any]]'",
+    "mofa.fit_mofa": "(training_views: 'dict[str, np.ndarray]', selected_feature_indices: 'dict[str, np.ndarray]', rank: 'int', seed: 'int', frozen_protocol: 'dict[str, Any]', sample_ids: 'list[str]') -> 'MofaFit'",
+    "mofa.gaussian_posterior_project": "(observed_by_view: 'dict[str, np.ndarray]', weights_by_view: 'dict[str, np.ndarray]', precision_by_view: 'dict[str, np.ndarray]', views_used: 'tuple[str, ...]') -> 'np.ndarray'"
+  },
+  "frozen_contract_hashes": {
+    "paper5/method_contract/05a/ai_method_contract.json": "5739ae475dd4e4542fcb2580c722a5eaf8d20f23c34a15f490eba6ce86b685b2",
+    "paper5/method_contract/05a/ai_method_contract_lock.json": "cc62dcc75c5f06e0c2c7220d1419392f8838b9eccad4ae916831689255dfc9f0",
+    "paper5/method_contract/05a/baseline_hyperparameter_grid.csv": "e25f30d5804365404436b62edf15e5affe859ac1f52309208db3f78dd1bca52a",
+    "paper5/method_contract/05a/model_family_registry.csv": "b0a70a5f5df4b30a6aa2d4069e15d1d1b9fe3b770f8c5ef16248301acabf1a39",
+    "paper5/method_contract/05a/model_selection_policy.json": "8d8b39d3d424e695324085ee533f13a555dada9b65acbc6718d7809ce07d0b44",
+    "paper5/method_contract/05a/target_inner_cv_assignments.csv": "03aa043f9dda10fce2bfec0aab615e24f88a49ad3807ceab63a5aa2cdc0fe1a1",
+    "paper5/method_contract/05a/target_neural_training_assignments.csv": "29b6fb6513d7292417ad802d8d59d2f9ab541341b6c8f763df1f5d2a528e331d",
+    "paper5/method_contract/05a/target_outer_cv_assignments.csv": "807736ea87c9532d6a264e50eeae4c97eb47cc4a08a40a1178f6c692f94c7811",
+    "paper5/method_contract/05d1/neural_architecture_regularization_profile_grid.csv": "118b2fd4c16751f0b83ac3053f726f9421db26949ab98a8a531ff584c194ee32",
+    "paper5/method_contract/05d1/neural_loss_and_architecture_contract.json": "b90ded1d011ee3210154c2102389df0b4e0c8fcf668b70d7e2b8e14184e3f6b1",
+    "paper5/method_contract/05d3/selected_neural_profile.json": "83ccee90a20b2fc51cec13de3f831835c85bbffc549a53d3cc6867c7bbfd1f0d",
+    "paper5/method_contract/05d4/neural_confirmatory_ablation_results_lock.json": "fdeeaf06846a3f45b451766056f355897c4f2cc375d6702bc4a99fa854aa26df",
+    "paper5/method_contract/05d4/neural_confirmatory_ablation_results_manifest.json": "a5faaf5ce6111acd51db9b575d6943d2ee11fdddd281772c86bf5a237effb11a",
+    "paper5/method_contract/05dev0/target_input_synthetic_fixture_contract.json": "e4387664398891334e8f5c4f7524277dbefa43f7f2cc4a3b07a08477d6ac1df5",
+    "paper5/method_contract/05dev0/target_input_synthetic_fixture_lock.json": "8300b430bdf8ee641443782809816c2691777644a534e9ecbc2669b9f7ed7eb9",
+    "paper5/method_contract/05e/representation_method_freeze.json": "df01013be4d87fe7b67ea31a5d038ace8642ecb8cfc56d13b1bfa6414cb2d60f",
+    "paper5/method_contract/05e/representation_method_freeze_lock.json": "e0adaccada7f9b04f0e699badfac252a6dc865f24d2ea39a243b07bc3ddbafbf",
+    "paper5/method_contract/06a/06a_contract_lock.json": "d534d48c8ff116e0c45b539e7e252badd573f1a9d600a89e4bb2e12dd26b6f77",
+    "paper5/method_contract/06a/target_application_contract.json": "4459333373437d262fb0d37ec88b6767c7df31dca397f8604756cf2055229dcf",
+    "paper5/method_contract/06b0/06b0_prefit_lock.json": "656bd06e2aa6d85778f288c4184742416d64cb2ba3d42caf77ff33b10e4c5a5b",
+    "paper5/method_contract/06b0/target_prefit_input_policy_contract.json": "57b4720bcd9c71ad126f255876839e35103d3d74fa30f8b6bad7cfcfffb1bfb0",
+    "paper5/method_contract/06b0a/target_runner_dependency_audit.json": "8562876678c3bd5eed3c5a7ded4a0708deda5810cac74d1f714320b586e49aed"
+  },
+  "frozen_implementation_hashes": {
+    "paper5/scripts/05c1_fit_linear_simulation_baselines.py": "c2c91b4ad274f78ccc369e6fca765102285cf3d9c8191f3c33f4a450b7426367",
+    "paper5/scripts/05c2b_fit_mofa_simulation_baselines.py": "4d806c39395b56b10dd3a35b8bea29c7f5c2b3321662e6d125661e683d5cdb60",
+    "paper5/scripts/05d2v2_screen_neural_profiles_gpu_syncfree_pathfix.py": "05ae6923ce588c137bc6f4aa934262181dd99f4ebe6bec3250e4b7cd54ed1ff3",
+    "paper5/scripts/05d4_fit_neural_ablation_benchmark_gpu_v1_2_verified.py": "8ab3b84f1d7bcd475b88b5f06d49e661c2d6230ea3598406e66970d792c74a5c"
+  },
+  "full_10_branch_synthetic_test": {
+    "all_10_model_branches_executed": true,
+    "models": {
+      "BLOCK_PCA": {
+        "heldout_reconstruction_score": 0.7815483577174831,
+        "missing_view_reconstruction_score": 0.5313951802367559,
+        "modality_balance_score": 0.9673388705949331,
+        "random_adjusted_cross_view_mrr": 0.7186537450229133,
+        "utility": 0.7280102564705478
+      },
+      "MOFA_K10": {
+        "heldout_reconstruction_score": 0.714884413256938,
+        "missing_view_reconstruction_score": 0.6080505800261936,
+        "modality_balance_score": 0.9559386939346048,
+        "random_adjusted_cross_view_mrr": 0.6497633536173089,
+        "utility": 0.7047977791590132
+      },
+      "MOFA_K15": {
+        "heldout_reconstruction_score": 0.6929092658006173,
+        "missing_view_reconstruction_score": 0.5942610850343023,
+        "modality_balance_score": 0.0,
+        "random_adjusted_cross_view_mrr": 0.656599804672827,
+        "utility": 0.5534179924006088
+      },
+      "MOFA_K20": {
+        "heldout_reconstruction_score": 0.693756814607478,
+        "missing_view_reconstruction_score": 0.5978022170358172,
+        "modality_balance_score": 0.0,
+        "random_adjusted_cross_view_mrr": 0.6592292089249493,
+        "utility": 0.5553463613186824
+      },
+      "MOFA_K5": {
+        "heldout_reconstruction_score": 0.650226674533067,
+        "missing_view_reconstruction_score": 0.5858534100014912,
+        "modality_balance_score": 0.98431530625378,
+        "random_adjusted_cross_view_mrr": 0.894823829915108,
+        "utility": 0.7576257997728923
+      },
+      "V0_BALANCED_AE": {
+        "heldout_reconstruction_score": 0.05464323067494322,
+        "missing_view_reconstruction_score": 0.0,
+        "modality_balance_score": 0.993637398709826,
+        "random_adjusted_cross_view_mrr": 0.02186161821050268,
+        "selected_epoch": 3.0,
+        "utility": 0.1719970644721077
+      },
+      "V1_SHARED_PRIVATE_AE": {
+        "heldout_reconstruction_score": 0.019044164634152927,
+        "missing_view_reconstruction_score": 0.0,
+        "modality_balance_score": 0.9926013612372756,
+        "random_adjusted_cross_view_mrr": 0.07426188866351141,
+        "selected_epoch": 3.0,
+        "utility": 0.17688202017489063
+      },
+      "V2_CONTRASTIVE_SPAE": {
+        "heldout_reconstruction_score": 0.019611211938800777,
+        "missing_view_reconstruction_score": 0.0,
+        "modality_balance_score": 0.9925897457614432,
+        "random_adjusted_cross_view_mrr": 0.09687476523176332,
+        "selected_epoch": 3.0,
+        "utility": 0.1838342550153857
+      },
+      "V3_DROPOUT_SPAE": {
+        "heldout_reconstruction_score": 0.018569856712108607,
+        "missing_view_reconstruction_score": 0.0,
+        "modality_balance_score": 0.9925407100631456,
+        "random_adjusted_cross_view_mrr": 0.09687476523176332,
+        "selected_epoch": 3.0,
+        "utility": 0.1835144930926334
+      },
+      "V4_SABLE_MO": {
+        "heldout_reconstruction_score": 0.018569856712108607,
+        "missing_view_reconstruction_score": 0.0,
+        "modality_balance_score": 0.9925407100631456,
+        "random_adjusted_cross_view_mrr": 0.09687476523176332,
+        "selected_epoch": 3.0,
+        "utility": 0.1835144930926334
+      }
+    },
+    "mofa_protocol": {
+      "path": "paper5/method_contract/05c2a/mofa_out_of_sample_projection_protocol.json",
+      "sha256": "826ee4c64deae4f623889c3388cf2b0f46b4fe0ffa1a2c2e97319beca95f80eb"
+    },
+    "scientific_target_results_generated": false,
+    "smoke_epoch_limit_is_scientific_setting": false,
+    "smoke_neural_epoch_limit": 3,
+    "target_values_accessed": false
+  },
+  "next_required_stage": "Freeze the exact runner SHA and this PASS self-test in 06b1 before the first real TARGET matrix read or fit.",
+  "resolved_05d4_script_version": "05d4-fit-neural-ablation-benchmark-gpu-v1.2-verified-fixture-hotfix-no-cli",
+  "resolved_05d4_source": "paper5/scripts/05d4_fit_neural_ablation_benchmark_gpu_v1_2_verified.py",
+  "resolved_05d4_source_sha256": "8ab3b84f1d7bcd475b88b5f06d49e661c2d6230ea3598406e66970d792c74a5c",
+  "runner_source": {
+    "path": "paper5/scripts/06b_run_target_outcome_blind_representation_benchmark_gpu_v3.py",
+    "sha256": "1b40573e91b6340edf8c5a210ef029ee6b584aca99489ce69a7041cce8c0e485",
+    "size_bytes": 98182
+  },
+  "scientific_state": {
+    "TARGET_biology_accessed": false,
+    "TARGET_clinical_values_accessed": false,
+    "TARGET_model_fitting_performed": false,
+    "TARGET_outcomes_accessed": false,
+    "real_TARGET_fit_authorized": false,
+    "real_TARGET_values_accessed": false,
+    "scientific_TARGET_result_generated": false
+  },
+  "script_version": "06b-run-target-outcome-blind-representation-benchmark-gpu-v3-missing-view-return-schema-recovery-preauthorization-synthetic-gated-no-cli",
+  "selection_rule_selftests": {
+    "one_se_cutoff": 0.6359175170953614,
+    "one_se_selected": "V1_SHARED_PRIVATE_AE",
+    "uncertainty_test": {
+      "minimum_single_method_selection_frequency": 0.4,
+      "primary_model_ids": [
+        "V4_SABLE_MO",
+        "BLOCK_PCA"
+      ],
+      "selection_counts": {
+        "BLOCK_PCA": 8,
+        "MOFA_K10": 0,
+        "MOFA_K15": 0,
+        "MOFA_K20": 0,
+        "MOFA_K5": 8,
+        "V0_BALANCED_AE": 0,
+        "V1_SHARED_PRIVATE_AE": 0,
+        "V2_CONTRASTIVE_SPAE": 0,
+        "V3_DROPOUT_SPAE": 0,
+        "V4_SABLE_MO": 9
+      },
+      "status": "CO_PRIMARY_REPRESENTATIONS_METHOD_UNCERTAINTY",
+      "top_selection_frequency": 0.36
+    },
+    "unique_primary_test": {
+      "minimum_single_method_selection_frequency": 0.4,
+      "primary_model_ids": [
+        "V4_SABLE_MO"
+      ],
+      "selection_counts": {
+        "BLOCK_PCA": 9,
+        "MOFA_K10": 0,
+        "MOFA_K15": 0,
+        "MOFA_K20": 0,
+        "MOFA_K5": 5,
+        "V0_BALANCED_AE": 0,
+        "V1_SHARED_PRIVATE_AE": 0,
+        "V2_CONTRASTIVE_SPAE": 0,
+        "V3_DROPOUT_SPAE": 0,
+        "V4_SABLE_MO": 11
+      },
+      "status": "UNIQUE_PRIMARY_REPRESENTATION",
+      "top_selection_frequency": 0.44
+    }
+  },
+  "status": "06B_TARGET_RUNNER_SYNTHETIC_SELFTEST_PASS_BEFORE_TARGET_ACCESS",
+  "v3_adapter_recovery": {
+    "TARGET_values_accessed_during_recovery": false,
+    "prediction_values_modified": false,
+    "scientific_metric_definition_changed": false,
+    "scope": "missing-view prediction return-container schema only",
+    "selection_rule": "unique numeric array exactly matching omitted-view target shape"
+  }
+}

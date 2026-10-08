@@ -1,0 +1,52 @@
+{
+  "authorization_conditions": {
+    "TARGET_clinical_access": false,
+    "TARGET_outcome_access": false,
+    "biological_annotation_access_for_selection": false,
+    "exact_runner_sha_required": "1b40573e91b6340edf8c5a210ef029ee6b584aca99489ce69a7041cce8c0e485",
+    "q10_040_used_for_cross_family_selection": false,
+    "q10_060_used_for_cross_family_selection": false,
+    "runner_may_change_after_authorization": false,
+    "secondary_comparators_used_for_primary_selection": false,
+    "technical_covariates_used_for_model_selection": false,
+    "threshold_or_model_retuning_after_TARGET_results": false
+  },
+  "authorization_scope": "Authorize exactly one immutable runner source for the first outcome-blind TARGET representation benchmark. Authorization does not permit outcome, clinical, biological-annotation, technical-covariate-driven, q10-driven cross-family, or secondary-comparator-driven model selection.",
+  "contract_version": "paper5-06b1-target-runner-source-authorization-v1",
+  "created_at_utc": "2026-09-19T20:36:18+00:00",
+  "preauthorization_scientific_output_check": {
+    "06b_method_contract_files_present": false,
+    "06b_primary_benchmark_files_present": false
+  },
+  "prospective_anchors": {
+    "06b0_prefit_lock": {
+      "path": "paper5/method_contract/06b0/06b0_prefit_lock.json",
+      "sha256": "656bd06e2aa6d85778f288c4184742416d64cb2ba3d42caf77ff33b10e4c5a5b",
+      "size_bytes": 1186
+    },
+    "06b0a_dependency_audit": {
+      "path": "paper5/method_contract/06b0a/target_runner_dependency_audit.json",
+      "sha256": "8562876678c3bd5eed3c5a7ded4a0708deda5810cac74d1f714320b586e49aed",
+      "size_bytes": 144200
+    }
+  },
+  "real_target_fit_authorized": true,
+  "rewrite_policy": "06b1 is immutable after creation. Any change to the authorized runner source, its SHA-256, frozen model registry, fold assignments, preprocessing, utility, one-SE rule, final 40% rule, or scientific execution boundary invalidates this authorization and requires a new versioned pre-fit authorization before any new real TARGET fit.",
+  "runner_source": {
+    "path": "paper5/scripts/06b_run_target_outcome_blind_representation_benchmark_gpu_v3.py",
+    "script_version": "06b-run-target-outcome-blind-representation-benchmark-gpu-v3-missing-view-return-schema-recovery-preauthorization-synthetic-gated-no-cli",
+    "sha256": "1b40573e91b6340edf8c5a210ef029ee6b584aca99489ce69a7041cce8c0e485",
+    "size_bytes": 98182
+  },
+  "script_version": "06b1-freeze-target-runner-source-authorization-v1-no-cli",
+  "status": "06B1_TARGET_RUNNER_SOURCE_AUTHORIZED_BEFORE_FIRST_TARGET_FIT",
+  "synthetic_selftest": {
+    "TARGET_model_fitting_performed": false,
+    "all_10_model_branches_executed": true,
+    "path": "paper5/method_contract/06b_preflight/target_runner_synthetic_selftest_v3.json",
+    "real_TARGET_values_accessed": false,
+    "sha256": "ffa5e9e2183db6573145672ab3d49e6ceebbf26b3c8a63a81c24bb565dbd5b1f",
+    "size_bytes": 13513,
+    "status": "06B_TARGET_RUNNER_SYNTHETIC_SELFTEST_PASS_BEFORE_TARGET_ACCESS"
+  }
+}

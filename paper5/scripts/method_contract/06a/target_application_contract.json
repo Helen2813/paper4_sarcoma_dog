@@ -1,0 +1,98 @@
+{
+  "analysis_role": "PRE_TARGET_APPLICATION_CONTRACT",
+  "contract_version": "paper5-06a-target-application-v3",
+  "script_version": "06a-freeze-target-application-contract-v3-no-cli",
+  "created_at_utc": "2026-09-19T19:22:00.542576+00:00",
+  "status": "FROZEN_BEFORE_TARGET_DATA_MODEL_FIT_OR_OUTCOME_INSPECTION",
+  "scientific_rationale": {
+    "primary_rule_choice": "q10=0.60 is primary because it was the single post-discovery recalibration frozen before a fresh independent-seed validation bank and was prospectively confirmed in 05y6.",
+    "historical_rule_role": "q10=0.40 remains a prespecified historical sensitivity analysis and never replaces the primary q10=0.60 result based on TARGET behavior.",
+    "scope_limit": "q10=0.60 is a targeted prospectively validated recalibration, not a rerun or replacement of the complete historical 05f3e simulation gate."
+  },
+  "primary_retention_rule": {
+    "role": "PRIMARY_TARGET_RETENTION_RULE",
+    "provenance": "single q10 recalibration prospectively confirmed in frozen 05y6 fresh-seed validation",
+    "inclusion_frequency_min": 0.8,
+    "loading_energy_fraction_per_supported_modality_min": 0.15,
+    "median_aligned_correlation_min": 0.7,
+    "n_supported_modalities_min": 2,
+    "q10_aligned_correlation_min": 0.6,
+    "reference_factor_variance_min": 0.0001
+  },
+  "historical_sensitivity_rule": {
+    "role": "PRESPECIFIED_HISTORICAL_SENSITIVITY_ONLY",
+    "provenance": "historical frozen 05f3e rule",
+    "inclusion_frequency_min": 0.8,
+    "loading_energy_fraction_per_supported_modality_min": 0.15,
+    "median_aligned_correlation_min": 0.7,
+    "n_supported_modalities_min": 2,
+    "q10_aligned_correlation_min": 0.4,
+    "reference_factor_variance_min": 0.0001
+  },
+  "target_application_decision_policy": {
+    "primary_rule_always_executed_first_and_reported": true,
+    "historical_sensitivity_also_executed": true,
+    "sensitivity_may_replace_primary": false,
+    "threshold_relaxation_after_target_results": false,
+    "alternative_frontier_point_selection_after_target_results": false,
+    "outcome_guided_threshold_selection": false,
+    "rule_if_primary_retains_zero_factors": "Report zero retained factors as the primary result. Do not relax q10 or substitute q10=0.40. Any downstream factor-specific analysis requiring at least one retained factor is reported as not estimable under the primary rule. Run q10=0.40 only as the separately labeled prespecified sensitivity.",
+    "rule_if_primary_retains_few_nonzero_factors": "Do not invent a minimum retained-factor count and do not relax thresholds. Use all factors retained by the frozen primary rule for analyses that are mathematically and methodologically defined under the downstream frozen plan; otherwise report the corresponding analysis as not estimable. The q10=0.40 analysis remains sensitivity only.",
+    "rule_if_primary_and_sensitivity_disagree": "Report both results with their prespecified labels. Do not select whichever rule yields the more favorable biological or outcome result; primary interpretation follows q10=0.60."
+  },
+  "historical_gate_boundaries": {
+    "formal_05f3e_gate_remains_historical": true,
+    "D04_and_D06_and_other_historical_gate_decisions_reestimated_for_q10_060": false,
+    "claim_for_q10_060": "Only the targeted fresh G19 specificity endpoint and fresh STANDARD truth-factor recovery safety endpoint were prospectively evaluated in 05y6.",
+    "D05_interpretation": {
+      "historical_restriction_carries_forward": true,
+      "historical_numeric_basis": "67.5% conditional mixed-support localization under the historical q10=0.40 gate",
+      "numeric_basis_reestimated_for_q10_060": false,
+      "allowed_wording": "Mixed/view-specific support attribution remains conservatively interpreted because its quantitative simulation basis was established under the historical q10=0.40 gate and was not recharacterized for q10=0.60."
+    }
+  },
+  "target_data_and_outcome_firewall": {
+    "target_expression_or_multiomics_read_at_06a": false,
+    "target_clinical_outcomes_read_at_06a": false,
+    "target_model_fit_at_06a": false,
+    "target_sample_count_used_to_choose_rule": false,
+    "target_result_may_modify_thresholds": false
+  },
+  "frozen_sources": {
+    "05f3e_historical_gate_lock": {
+      "path": "method_contract/05f3e/final_gate_results_lock.json",
+      "sha256": "6d691237662d633a4f8d8294126a33b32c5694372a6e58de71bd45731d67c397",
+      "size_bytes": 3302
+    },
+    "05y6_prospective_result": {
+      "path": "method_contract/05y6/prospective_q10_validation_result.json",
+      "sha256": "daa11e17a0a273d45b33c6c3ab14a2ae1bf6dc559bb722b18816a906e7f86052",
+      "size_bytes": 3700
+    },
+    "05y6_results_lock": {
+      "path": "method_contract/05y6/05y6_results_lock.json",
+      "sha256": "a93aeebcdcb07bd654096b5926ec3aa7b23b9b8a4bf51835991a843473ac21b1",
+      "size_bytes": 1936,
+      "rewrite_policy": "05y6 prospective result is immutable. No alternative q10, median, inclusion, or other frontier point may be selected using this fresh validation bank."
+    },
+    "05y7_manuscript_assets_lock": {
+      "path": "method_contract/05y7/05y7_manuscript_assets_lock.json",
+      "sha256": "b5563a9ec57ce248251931999f3c584d81cb82621a7a84d451b3c3281ecf379b",
+      "size_bytes": 2285
+    },
+    "05y8_bytecode_provenance_lock": {
+      "path": "method_contract/05y8/05y8_bytecode_archive_lock.json",
+      "sha256": "ff73e5c7e2e9b7be4f09be659ff96019abc4f3f9a90b39a54ec8ffb790202016",
+      "size_bytes": 1993
+    },
+    "05y8c_recovered_source_lock": {
+      "path": "method_contract/05y8c/05y8c_recovered_source_lock.json",
+      "sha256": "9a113dd00d55800aa3a57213415dc99809019bf9d6d3dabdc0746802cb953503",
+      "size_bytes": 2140,
+      "status": "05Y8C_RECOVERED_05Y6_SOURCE_ACCEPTED_AND_RESTORED",
+      "source_claim": "EXECUTABLE_EQUIVALENCE_PLUS_MATCHING_TIMESTAMP_BASED_HEADER_PROVENANCE",
+      "restored_source_sha256": "9a790077a7e7369839573924db1bbc95693c8210a4936f65a6d249c7434850be"
+    }
+  },
+  "rewrite_policy": "06a is immutable after any TARGET model fit, retained-factor result, biological annotation result, or clinical outcome result is viewed. q10=0.60 remains primary and q10=0.40 remains sensitivity regardless of which produces a more favorable TARGET result."
+}

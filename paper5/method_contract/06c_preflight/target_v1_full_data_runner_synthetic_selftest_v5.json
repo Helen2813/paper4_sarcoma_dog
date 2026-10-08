@@ -1,0 +1,240 @@
+{
+  "status": "06C_V5_TARGET_V1_FULL_DATA_RUNNER_SYNTHETIC_SELFTEST_PASS",
+  "script_version": "06c-run-target-v1-full-data-refit-gpu-v5-exact-authorized-v4-profile-variant-path-two-stage-no-cli",
+  "runner_sha256": "a2d87f4d7bd8ad7ca6493361ca2405944e8de2b4f3f3117215f3c54dd3d8c22c",
+  "created_at_utc": "2026-10-07T16:32:40.136065+00:00",
+  "real_target_molecular_values_read": false,
+  "target_outcomes_clinical_biology_read": false,
+  "target_scientific_fit_performed": false,
+  "06c_identity": {
+    "contract_sha256": "8ab8516e30964f220d0f1204ca892e29ca337691e06cbcbf29315e1cb6aec2e5",
+    "lock_sha256": "1c3b4fb36706dc6afd0208fda23b1dc6d51c2953b4ccb9541099466aea13a374"
+  },
+  "authorized_v4_identity": {
+    "sha256": "4f69680a2d26d6c8e4bd5b337a5e94e6cdc36d149ea6a4b9af547b3855a93eab"
+  },
+  "exact_reuse_path": {
+    "modules": {
+      "neural": "modules['neural']",
+      "ablation": "modules['ablation']"
+    },
+    "profile": "v4.parse_frozen_profile(modules['neural'])",
+    "variant": "v4.build_variant_map(modules['ablation'])['V1_SHARED_PRIVATE_AE']",
+    "preprocessing": "v4.fit_preprocessing_bundle(..., FEATURE_BUDGETS, NEURAL_PCA_COMPONENTS)",
+    "fixed_fit": "modules['ablation'].train_fixed_epochs(modules['neural'], profile, variant, ...)",
+    "encoding": "modules['ablation'].encode_numpy(...)['patient_shared']",
+    "availability_semantics": "Exact authorized 06b v4 semantics: iterate availability_candidates in frozen order and stop at the first successful adapter; fitting and encoding use separate loops."
+  },
+  "synthetic": {
+    "n_samples": 36,
+    "model_input_shapes": {
+      "RNA": [
+        36,
+        10
+      ],
+      "METHYLATION": [
+        36,
+        10
+      ],
+      "CNV": [
+        36,
+        10
+      ]
+    },
+    "fit_audit": {
+      "fit_stage": "confirmatory_refit_full_training_fold",
+      "variant_id": "V1_SHARED_PRIVATE_AE",
+      "fit_seed": 1103,
+      "profile_id": "ARCH_COMPACT__REG_WEAK",
+      "epochs_run": 2,
+      "selected_epoch": 2,
+      "final_training_objective": 1.4145041704177856,
+      "final_training_reconstruction": 1.1224309206008911,
+      "final_training_shared_alignment": 0.5539543032646179,
+      "final_training_contrastive": 0.0,
+      "final_training_orthogonality": 0.2512578070163727,
+      "final_training_private_separation": 0.050664085894823074,
+      "final_training_cross_reconstruction": 0.0,
+      "final_training_kl": 0.0,
+      "final_training_kl_weight": 0.0,
+      "wall_seconds": 0.30309760000000097,
+      "device": "cuda:0",
+      "fit_status": "PASS"
+    },
+    "adapter_audit": {
+      "fit_availability_candidate_index": 1,
+      "fit_availability": {
+        "type": "ndarray",
+        "shape": [
+          36,
+          3
+        ],
+        "dtype": "bool"
+      },
+      "fit_candidate_failures_before_success": [
+        {
+          "candidate_index": 0,
+          "availability": {
+            "type": "dict",
+            "keys": [
+              "RNA",
+              "METHYLATION",
+              "CNV"
+            ],
+            "values": {
+              "RNA": {
+                "shape": [
+                  36
+                ],
+                "dtype": "bool"
+              },
+              "METHYLATION": {
+                "shape": [
+                  36
+                ],
+                "dtype": "bool"
+              },
+              "CNV": {
+                "shape": [
+                  36
+                ],
+                "dtype": "bool"
+              }
+            }
+          },
+          "error_type": "TypeError",
+          "error": "'dict' object cannot be interpreted as an integer"
+        }
+      ],
+      "encode_availability_candidate_index": 1,
+      "encode_availability": {
+        "type": "ndarray",
+        "shape": [
+          36,
+          3
+        ],
+        "dtype": "bool"
+      },
+      "encode_candidate_failures_before_success": [
+        {
+          "candidate_index": 0,
+          "availability": {
+            "type": "dict",
+            "keys": [
+              "RNA",
+              "METHYLATION",
+              "CNV"
+            ],
+            "values": {
+              "RNA": {
+                "shape": [
+                  36
+                ],
+                "dtype": "bool"
+              },
+              "METHYLATION": {
+                "shape": [
+                  36
+                ],
+                "dtype": "bool"
+              },
+              "CNV": {
+                "shape": [
+                  36
+                ],
+                "dtype": "bool"
+              }
+            }
+          },
+          "error_type": "TypeError",
+          "error": "'dict' object cannot be interpreted as an integer"
+        }
+      ],
+      "fit_audit": {
+        "fit_stage": "confirmatory_refit_full_training_fold",
+        "variant_id": "V1_SHARED_PRIVATE_AE",
+        "fit_seed": 1103,
+        "profile_id": "ARCH_COMPACT__REG_WEAK",
+        "epochs_run": 2,
+        "selected_epoch": 2,
+        "final_training_objective": 1.4145041704177856,
+        "final_training_reconstruction": 1.1224309206008911,
+        "final_training_shared_alignment": 0.5539543032646179,
+        "final_training_contrastive": 0.0,
+        "final_training_orthogonality": 0.2512578070163727,
+        "final_training_private_separation": 0.050664085894823074,
+        "final_training_cross_reconstruction": 0.0,
+        "final_training_kl": 0.0,
+        "final_training_kl_weight": 0.0,
+        "wall_seconds": 0.30309760000000097,
+        "device": "cuda:0",
+        "fit_status": "PASS"
+      },
+      "patient_shared_shape": [
+        36,
+        5
+      ],
+      "encode_keys": [
+        "patient_shared",
+        "private_by_view",
+        "shared_by_view"
+      ],
+      "selection_semantics": "Exact authorized 06b v4 adapter semantics: iterate frozen availability_candidates in order and break on first successful train_fixed_epochs; resolve encode_numpy in a separate ordered first-success loop."
+    },
+    "patient_shared_shape": [
+      36,
+      5
+    ],
+    "smoke_epochs": 2,
+    "smoke_epochs_are_scientific_setting": false
+  },
+  "historical_runner_failures": {
+    "v1": {
+      "sha256": "06842dc803d17c3ea3789262655429481c081232ed8828b6e0d2cce56cb2703f",
+      "boundary": "synthetic-only before real TARGET molecular load",
+      "cause": "incorrect uniqueness assumption: both modules['neural'] and modules['ablation'] expose train_fixed_epochs+encode_numpy",
+      "scientific_consequence": "NONE"
+    },
+    "v2": {
+      "sha256": "8901ea9dd3870ade3910934fba6106ae4b0fa4b8a6d2183e0cea9dd802962f9c",
+      "boundary": "synthetic-only before real TARGET molecular load",
+      "cause": "profile-shape inference was unnecessary; frozen v4 already defines parse_frozen_profile(modules['neural'])",
+      "scientific_consequence": "NONE"
+    },
+    "v3": {
+      "sha256": "9d27534767434b1c8e41f46731ea8cd48c16fbdf1813ea3d85cf6a0cdfef1777",
+      "boundary": "synthetic-only before real TARGET molecular load",
+      "cause": "incorrectly required a unique working availability representation even though authorized 06b v4 explicitly uses ordered first-success semantics",
+      "scientific_consequence": "NONE"
+    },
+    "v4": {
+      "sha256": "75297d8b4c92083b020d2396cad3c83ea236bd905f6e62f826dec14138925980",
+      "boundary": "synthetic-only PASS; never authorized for real TARGET execution",
+      "cause": "internal SCRIPT_VERSION/self-identification still carried the v3 label despite the v4 filename and source hash; rejected before source authorization",
+      "scientific_consequence": "NONE"
+    }
+  },
+  "real_scientific_contract": {
+    "model_id": "V1_SHARED_PRIVATE_AE",
+    "profile_id": "ARCH_COMPACT__REG_WEAK",
+    "n_cases": 78,
+    "feature_budgets": {
+      "RNA": 5000,
+      "METHYLATION": 10000,
+      "CNV": 5000
+    },
+    "pca_components": {
+      "RNA": 10,
+      "METHYLATION": 10,
+      "CNV": 10
+    },
+    "primary_seed": 1103,
+    "reproducibility_only_seeds": [
+      2207,
+      3301
+    ],
+    "fixed_epochs": 400,
+    "post_fit_seed_selection": false,
+    "q10_transfer_to_v1": false
+  }
+}

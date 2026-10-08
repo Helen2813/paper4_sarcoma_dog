@@ -1,0 +1,106 @@
+{
+  "status": "06C2_V7_TARGET_V1_FULL_DATA_RUNNER_SOURCE_AUTHORIZED",
+  "script_version": "06c2-freeze-target-v1-full-data-runner-v7-source-authorization-v2-no-cli",
+  "created_at_utc": "2026-10-07T17:15:35.494582+00:00",
+  "target_molecular_values_read": false,
+  "target_outcomes_clinical_biology_read": false,
+  "target_model_fit": false,
+  "scientific_target_full_data_results_read": false,
+  "runner_source": {
+    "path": "scripts/06c_run_target_v1_full_data_refit_gpu_v7.py",
+    "sha256": "006f718de8b0a1f768f8b4b7c35e4951719970f4d91ef43fa75541c74c8dc3bb",
+    "script_version": "06c-run-target-v1-full-data-refit-gpu-v7-exact-authorized-v4-profile-variant-path-two-stage-no-cli",
+    "size_bytes": 54238
+  },
+  "synthetic_selftest": {
+    "path": "method_contract/06c_preflight/target_v1_full_data_runner_synthetic_selftest_v7.json",
+    "sha256": "b50e26977295d578c187039c95040760e1c95d4d2569180dbd4d83c9aa927ed4",
+    "status": "06C_V7_TARGET_V1_FULL_DATA_RUNNER_SYNTHETIC_SELFTEST_PASS",
+    "script_version": "06c-run-target-v1-full-data-refit-gpu-v7-exact-authorized-v4-profile-variant-path-two-stage-no-cli",
+    "fit_availability_candidate_index": 1,
+    "encode_availability_candidate_index": 1,
+    "patient_shared_shape": [
+      36,
+      5
+    ],
+    "real_target_molecular_values_read": false,
+    "target_scientific_fit_performed": false
+  },
+  "v5_authorized_attempt_boundary": {
+    "source_authorization_lock_path": "method_contract/06c2_v5/target_v1_full_data_runner_v5_source_authorization_lock.json",
+    "source_authorization_lock_sha256": "ace828e7ade7436ae1fb59e900810ba675ec2fea857eddd3ead8a897334c9c06",
+    "failure_occurs_before_loader_body_execution": true,
+    "real_target_molecular_values_read": false,
+    "target_scientific_fit_performed": false,
+    "scientific_result_directory_nonempty_after_failure": false,
+    "06c3_result_lock_directory_nonempty_after_failure": false
+  },
+  "frozen_upstream": {
+    "06c_contract_sha256": "8ab8516e30964f220d0f1204ca892e29ca337691e06cbcbf29315e1cb6aec2e5",
+    "06c_lock_sha256": "1c3b4fb36706dc6afd0208fda23b1dc6d51c2953b4ccb9541099466aea13a374",
+    "authorized_06b_v4_sha256": "4f69680a2d26d6c8e4bd5b337a5e94e6cdc36d149ea6a4b9af547b3855a93eab"
+  },
+  "static_source_audit": {
+    "direct_loader_attribute_functions": [
+      "run_real"
+    ],
+    "loader_contract_verifier_getattr": "getattr(v4, 'load_authorized_target_inputs', None)",
+    "real_loader_call": "load_inputs(runtime['modules'])",
+    "loader_contract_verified_before_real_call": true,
+    "main_authorization_gate": "PASS",
+    "authorization_namespace": "06c2_v7",
+    "authorization_status": "06C2_V7_TARGET_V1_FULL_DATA_RUNNER_SOURCE_AUTHORIZED",
+    "exact_frozen_reuse_path": "PASS",
+    "ordered_first_success_fit_and_encode": "PASS"
+  },
+  "authorized_scientific_execution": {
+    "model_id": "V1_SHARED_PRIVATE_AE",
+    "profile_id": "ARCH_COMPACT__REG_WEAK",
+    "n_cases": 78,
+    "feature_budgets": {
+      "RNA": 5000,
+      "METHYLATION": 10000,
+      "CNV": 5000
+    },
+    "pca_components": {
+      "RNA": 10,
+      "METHYLATION": 10,
+      "CNV": 10
+    },
+    "primary_seed": 1103,
+    "reproducibility_only_seeds": [
+      2207,
+      3301
+    ],
+    "fixed_epochs": 400,
+    "real_input_loader_call": "load_authorized_target_inputs(modules)",
+    "availability_semantics": "authorized_06b_v4_ordered_first_success",
+    "post_fit_seed_selection": false,
+    "post_fit_epoch_selection": false,
+    "seed_ensemble_or_averaging": false,
+    "q10_transfer_to_v1": false
+  },
+  "source_authorization_attempt_history": {
+    "v1_authorizer": {
+      "script_sha256": "0d7887a4a9820567c6445e86992e67baa11bbfbbd195b9cc0a07e617d7f43346",
+      "result_lock_created": false,
+      "failure_stage": "static_runner_audit before 06c2_v7 output-directory creation",
+      "failure_type": "RuntimeError",
+      "failure_message": "Unexpected functions reference load_authorized_target_inputs: ['run_real']",
+      "cause": "v1 audit incorrectly treated getattr(v4, 'load_authorized_target_inputs', None) as an ast.Attribute reference inside the contract-verifier function.",
+      "target_molecular_values_read": false,
+      "target_model_fit": false,
+      "scientific_consequence": "NONE"
+    }
+  },
+  "historical_pre_authorization_boundaries": {
+    "v1_sha256": "06842dc803d17c3ea3789262655429481c081232ed8828b6e0d2cce56cb2703f",
+    "v2_sha256": "8901ea9dd3870ade3910934fba6106ae4b0fa4b8a6d2183e0cea9dd802962f9c",
+    "v3_sha256": "9d27534767434b1c8e41f46731ea8cd48c16fbdf1813ea3d85cf6a0cdfef1777",
+    "v4_sha256": "75297d8b4c92083b020d2396cad3c83ea236bd905f6e62f826dec14138925980",
+    "v5_sha256": "a2d87f4d7bd8ad7ca6493361ca2405944e8de2b4f3f3117215f3c54dd3d8c22c",
+    "v6_sha256": "6eda2be1ee0abe243fec386f193c9b4afba52f0f5d1e50d9a3f046a00a1491de",
+    "v6_note": "Synthetic PASS but deliberately not source-authorized because final pre-authorization review found stale diagnostic version labels. Scientific/runtime logic was unchanged."
+  },
+  "authorization_rule": "Only this exact v7 runner SHA is authorized. Any source change, including comments or version labels, requires a new synthetic PASS and a new source-authorization stage before real TARGET execution."
+}

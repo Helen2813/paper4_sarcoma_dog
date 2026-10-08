@@ -1,0 +1,62 @@
+{
+  "status": "06E2_V3_V1_BIOLOGICAL_ALIGNMENT_RANDOM_CONTROLS_FROZEN",
+  "script_version": "06e1-run-v1-biological-alignment-random-controls-v3-exact-risk-oriented-weight-schema-provenance-text-fix-two-stage-source-authorized-no-cli",
+  "created_at_utc": "2026-10-08T00:37:24.782665+00:00",
+  "runner_source": {
+    "path": "scripts/06e1_run_v1_biological_alignment_random_controls_v3.py",
+    "sha256": "77fbe2d681ddaa906db71c93a654c5f6ddac1fed10c5ad96fcd211db48f78d26",
+    "script_version": "06e1-run-v1-biological-alignment-random-controls-v3-exact-risk-oriented-weight-schema-provenance-text-fix-two-stage-source-authorized-no-cli"
+  },
+  "selected_model": "V1_SHARED_PRIVATE_AE",
+  "primary_seed": 1103,
+  "technical_status": "UNKNOWN_NO_STRICT_USABLE_TECHNICAL_COVARIATES",
+  "programs": [
+    "M34",
+    "M40",
+    "M11",
+    "M24"
+  ],
+  "random_panels_per_program": 1000,
+  "result_files": {
+    "v1_program_coordinate_correlations.csv": {
+      "path": "results/target_representation/06e1_biological_alignment_v3/v1_program_coordinate_correlations.csv",
+      "sha256": "58cadf6ce02603d8d9a05cf06068c9f23e43a0a2dafe8835729407374d89c7f8",
+      "size_bytes": 2792
+    },
+    "v1_program_alignment_summary.csv": {
+      "path": "results/target_representation/06e1_biological_alignment_v3/v1_program_alignment_summary.csv",
+      "sha256": "a35e24eda531f40d1685f24feea6ae0eecd60f6bc9978feb1c73f5ca0a12b30f",
+      "size_bytes": 1501
+    },
+    "v1_matched_random_control_draws.csv": {
+      "path": "results/target_representation/06e1_biological_alignment_v3/v1_matched_random_control_draws.csv",
+      "sha256": "382f1d66ab36a478e791b43d2e1c29943748e8497423589d3a526c9316cc6887",
+      "size_bytes": 173362
+    },
+    "v1_matched_random_panel_memberships.csv.gz": {
+      "path": "results/target_representation/06e1_biological_alignment_v3/v1_matched_random_panel_memberships.csv.gz",
+      "sha256": "61a900a14d975c42bb4c9d43bba3e4b8fa98c56f22663f007dceba904239efac",
+      "size_bytes": 2370426
+    },
+    "v1_frozen_program_scores_78.csv": {
+      "path": "results/target_representation/06e1_biological_alignment_v3/v1_frozen_program_scores_78.csv",
+      "sha256": "7129ad9719d0f01ed12b3cf854c1a4dff2e7295094986e09f08c7344134b00dc",
+      "size_bytes": 7651
+    },
+    "v1_biological_alignment_summary.json": {
+      "path": "results/target_representation/06e1_biological_alignment_v3/v1_biological_alignment_summary.json",
+      "sha256": "e4e68f5f21b2a54db4d0524fdaba265c42972c0fb6654036d9116f5ed3ca8370",
+      "size_bytes": 6053
+    }
+  },
+  "firewalls": {
+    "target_clinical_or_outcomes_read": false,
+    "model_fit_or_refit": false,
+    "representation_selection_changed": false,
+    "primary_seed_changed": false,
+    "SABLE_q10_or_stability_retention_applied_to_V1": false,
+    "V1_coordinate_called_retained_or_stable": false,
+    "technical_UNKNOWN_reinterpreted_as_clean": false
+  },
+  "rewrite_policy": "Frozen scientific result. Never overwrite/delete/rerun in place. Any scientifically necessary recovery requires a new versioned stage that preserves this lock and all current result files."
+}

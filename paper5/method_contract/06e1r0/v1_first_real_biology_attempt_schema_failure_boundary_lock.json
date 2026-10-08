@@ -1,0 +1,72 @@
+{
+  "status": "06E1R0_V1_FIRST_REAL_BIOLOGY_ATTEMPT_SCHEMA_FAILURE_FROZEN",
+  "script_version": "06e1r0-freeze-v1-biology-runner-v1-schema-failure-boundary-v1-no-cli",
+  "created_at_utc": "2026-10-07T21:57:32.208192+00:00",
+  "failed_runner": {
+    "path": "scripts/06e1_run_v1_biological_alignment_random_controls_v1.py",
+    "sha256": "51eface403ec7b41a6436289590f0cd4159ad4b6e167800052de8eb2f11bd180",
+    "script_version": "06e1-run-v1-biological-alignment-random-controls-v1-two-stage-source-authorized-no-cli",
+    "authorization_status": "06E1A_V1_TARGET_V1_BIOLOGY_RUNNER_SOURCE_AUTHORIZED",
+    "synthetic_preflight_status": "06E1_V1_BIOLOGY_RUNNER_SYNTHETIC_SELFTEST_PASS"
+  },
+  "observed_failure": {
+    "failure_type": "RuntimeError",
+    "failure_message_prefix": "Could not resolve frozen strict-weight sign or loading column.",
+    "function": "resolve_weight_schema",
+    "observed_weight_columns": [
+      "module_label",
+      "canine_gene",
+      "canine_gene_symbol",
+      "human_gene_symbol",
+      "ortholog_qc_status",
+      "raw_pca_loading",
+      "risk_oriented_loading",
+      "absolute_risk_loading",
+      "is_strict_mapping",
+      "is_broad_mapping",
+      "human_symbol_duplicate_count",
+      "normalized_abs_sum_weight"
+    ],
+    "root_cause": "v1 schema resolver did not recognize the frozen Paper-4 risk_oriented_loading column as the source of the signed strict human score orientation.",
+    "scientific_rule_changed_by_repair": false,
+    "repair_semantics": "primary strict_signed_mean must use sign(risk_oriented_loading)"
+  },
+  "boundary_inferred_from_observed_traceback_and_exact_source_order": {
+    "all_frozen_biological_input_hashes_verified_before_failure": true,
+    "frozen_case_order_loaded_before_failure": true,
+    "v1_numeric_representation_loaded_before_failure": true,
+    "strict_weight_csv_parsed_before_failure": true,
+    "program_definitions_constructed": false,
+    "target_expression_values_loaded": false,
+    "program_scores_computed": false,
+    "program_coordinate_correlations_computed": false,
+    "matched_random_panels_generated": false,
+    "empirical_probabilities_computed": false,
+    "bh_q_values_computed": false,
+    "scientific_result_directory_created": false,
+    "06e2_result_lock_created": false,
+    "clinical_or_outcome_values_read": false,
+    "model_fit_or_refit": false
+  },
+  "filesystem_replay": {
+    "06e1_v1_scientific_result_directory_nonempty": false,
+    "06e2_result_lock_directory_nonempty": false
+  },
+  "recovery_policy": {
+    "rerun_failed_v1": "FORBIDDEN",
+    "delete_or_rewrite_failed_v1_history": "FORBIDDEN",
+    "required_repair": "new versioned 06e1 v2 runner with exact real strict-weight schema support and a new synthetic/schema preflight",
+    "required_before_next_real_biology_run": [
+      "06e1 v2 synthetic preflight PASS",
+      "separate exact-source authorization for 06e1 v2"
+    ],
+    "no_postresult_scientific_adaptation": "The repair is restricted to the schema adapter exposed by the pre-statistic failure. No biological alignment, null, threshold, program set, seed, multiplicity, or interpretation rule may change."
+  },
+  "scientific_state_of_this_recovery_freeze": {
+    "paper4_biological_files_opened_or_hashed": false,
+    "v1_numeric_representation_read": false,
+    "target_expression_read": false,
+    "target_clinical_or_outcomes_read": false,
+    "scientific_result_computed": false
+  }
+}

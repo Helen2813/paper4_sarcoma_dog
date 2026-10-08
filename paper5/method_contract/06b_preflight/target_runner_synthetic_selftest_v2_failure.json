@@ -1,0 +1,12 @@
+{
+  "TARGET_model_fitting_performed": false,
+  "created_at_utc": "2026-09-19T20:28:29+00:00",
+  "error": "setting an array element with a sequence. The requested array has an inhomogeneous shape after 2 dimensions. The detected shape was (2, 8) + inhomogeneous part.",
+  "error_type": "ValueError",
+  "real_TARGET_values_accessed": false,
+  "runner_sha256": "00ebc11ef3113ff8ab74c879027f599d614394d48cec5bfa6058920a4f2eb45b",
+  "scientific_TARGET_result_generated": false,
+  "script_version": "06b-run-target-outcome-blind-representation-benchmark-gpu-v2-05d4-provenance-recovery-preauthorization-synthetic-gated-no-cli",
+  "status": "06B_TARGET_RUNNER_SYNTHETIC_SELFTEST_FAIL_BEFORE_TARGET_ACCESS",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\scripts\\06b_run_target_outcome_blind_representation_benchmark_gpu_v2.py\", line 1835, in run_synthetic_selftest\n    branch = run_synthetic_branch_selftest(modules)\n  File \"C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\scripts\\06b_run_target_outcome_blind_representation_benchmark_gpu_v2.py\", line 1779, in run_synthetic_branch_selftest\n    metrics = evaluate_neural(\n  File \"C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\scripts\\06b_run_target_outcome_blind_representation_benchmark_gpu_v2.py\", line 1486, in evaluate_neural\n    pred = np.asarray(pred_raw, dtype=np.float64)\nValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 2 dimensions. The detected shape was (2, 8) + inhomogeneous part.\n"
+}

@@ -1,0 +1,30 @@
+{
+  "status": "06E0_V1_BIOLOGICAL_ALIGNMENT_RANDOM_CONTROL_CONTRACT_FROZEN",
+  "script_version": "06e0-freeze-v1-biological-alignment-random-control-contract-v1-no-cli",
+  "created_at_utc": "2026-10-07T21:27:45.335697+00:00",
+  "contract": {
+    "path": "method_contract/06e0/v1_biological_alignment_random_control_contract.json",
+    "sha256": "43c25abbc18eb79e7876bd5228ad5a0079957fef7a8aaa26b1b37b5025df759c",
+    "size_bytes": 8808
+  },
+  "selected_model": "V1_SHARED_PRIVATE_AE",
+  "primary_seed": 1103,
+  "programs": [
+    "M34",
+    "M40",
+    "M11",
+    "M24"
+  ],
+  "random_panels_per_program": 1000,
+  "primary_alignment_metric": "max_absolute_spearman_across_5_frozen_v1_shared_coordinates",
+  "technical_status": "UNKNOWN_NO_STRICT_USABLE_TECHNICAL_COVARIATES",
+  "sable_mo_q10_stability_transfer_to_v1": "FORBIDDEN",
+  "paper4_biological_artifact_contents_opened": false,
+  "target_biological_annotations_opened": false,
+  "target_clinical_or_outcomes_opened": false,
+  "target_molecular_matrices_read": false,
+  "v1_numeric_representation_array_read": false,
+  "model_fit_or_refit": false,
+  "biological_alignment_computed": false,
+  "random_controls_computed": false
+}

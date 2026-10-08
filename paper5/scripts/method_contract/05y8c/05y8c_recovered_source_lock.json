@@ -1,0 +1,48 @@
+{
+  "status": "05Y8C_RECOVERED_05Y6_SOURCE_ACCEPTED_AND_RESTORED",
+  "script_version": "05y8c-accept-and-restore-recovered-05y6-source-v1-no-cli",
+  "created_at_utc": "2026-09-19T19:19:21.509617+00:00",
+  "result": {
+    "path": "method_contract/05y8c/05y6_recovered_source_acceptance.json",
+    "sha256": "9abaa9667eb8d6dbe4a87a3cac58197020fbced516a29ca9a7373d93d745ba9b",
+    "size_bytes": 2285
+  },
+  "readme": {
+    "path": "method_contract/05y8c/05y8c_README.txt",
+    "sha256": "ebc4cc26474f2b38a658049a2a17bb061c8baf67b8024ab95cf1143a1ea4a3b5",
+    "size_bytes": 936
+  },
+  "archived_source": {
+    "path": "method_contract/05y8c/recovered_source/05y6_aggregate_prospective_q10_validation.py",
+    "sha256": "9a790077a7e7369839573924db1bbc95693c8210a4936f65a6d249c7434850be",
+    "size_bytes": 24971
+  },
+  "restored_source": {
+    "path": "scripts/05y6_aggregate_prospective_q10_validation.py",
+    "sha256": "9a790077a7e7369839573924db1bbc95693c8210a4936f65a6d249c7434850be",
+    "size_bytes": 24971,
+    "last_write_time_utc": "2026-09-16T00:52:36.873976+00:00"
+  },
+  "frozen_pyc": {
+    "path": "scripts/__pycache__/05y6_aggregate_prospective_q10_validation.cpython-310.pyc",
+    "sha256": "bad3ee4833918b578c76daa013ee8e92de72f945c0f2b976db7dc75873ce39e8",
+    "size_bytes": 18381,
+    "header_source_size_bytes": 24971,
+    "header_source_mtime_unix": 1789519956,
+    "embedded_source_filename": ".\\paper5\\scripts\\05y6_aggregate_prospective_q10_validation.py"
+  },
+  "05y8b_report": {
+    "path": "method_contract/05y8b/05y6_recovered_source_code_object_diff.json",
+    "sha256": "1a3e74bc15035e74589e8cd40efe3b965a625e93b4ea6b0add72ef1db87003ca",
+    "size_bytes": 1605
+  },
+  "archive_script": {
+    "path": "scripts/05y8c_accept_and_restore_recovered_05y6_source_v1.py",
+    "sha256": "efc601ce8f2afcef4c84e877f87b2752b8b264549a91d996786cec3fbcb54f5e",
+    "size_bytes": 13069
+  },
+  "05y6_executed": false,
+  "scientific_shards_read": false,
+  "scientific_results_read": false,
+  "source_claim": "EXECUTABLE_EQUIVALENCE_PLUS_MATCHING_TIMESTAMP_BASED_HEADER_PROVENANCE"
+}

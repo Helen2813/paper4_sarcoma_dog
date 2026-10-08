@@ -1,0 +1,65 @@
+{
+  "status": "06E5_V1_SEED_SUBSPACE_BIOLOGY_SENSITIVITY_FROZEN",
+  "script_version": "06e4-run-v1-seed-subspace-biology-sensitivity-v1-two-stage-source-authorized-readonly-no-cli",
+  "created_at_utc": "2026-10-08T01:42:35.448130+00:00",
+  "runner_source": {
+    "path": "scripts/06e4_run_v1_seed_subspace_biology_sensitivity_v1.py",
+    "sha256": "97a8af048e38c16000f27a078ea976af1c894a21850ac2924a05e3b8c16cee86"
+  },
+  "06e3_contract": {
+    "path": "method_contract/06e3/v1_seed_subspace_biology_sensitivity_contract.json",
+    "sha256": "cbac52ec634e566ccee070ec0116577388a23d4ceefd881fbe761b55a39e40a6"
+  },
+  "06e4a_authorization": {
+    "path": "method_contract/06e4a/v1_seed_subspace_sensitivity_runner_source_authorization_lock.json",
+    "sha256": "4e285211e91a01d6ba6f6480422a3a03e9eda2c946ef2e7cf7615a6d2d15a3ae"
+  },
+  "result_files": {
+    "v1_program_coordinate_correlations_by_seed.csv": {
+      "path": "results/target_representation/06e4_seed_subspace_sensitivity_v1/v1_program_coordinate_correlations_by_seed.csv",
+      "sha256": "07907598d4f15ebc36be05d76bc3a1eae9c06b95d4df915b728baf3482768a16",
+      "size_bytes": 5847
+    },
+    "v1_program_alignment_summary_by_seed.csv": {
+      "path": "results/target_representation/06e4_seed_subspace_sensitivity_v1/v1_program_alignment_summary_by_seed.csv",
+      "sha256": "33f6412685dbfc4bfdce292c0b316a5b5825c54a992ea6525a05270d8ef0bebd",
+      "size_bytes": 1242
+    },
+    "v1_program_raw_seed_sensitivity_summary.csv": {
+      "path": "results/target_representation/06e4_seed_subspace_sensitivity_v1/v1_program_raw_seed_sensitivity_summary.csv",
+      "sha256": "3425ffda777859b2a7b59e634618adce33e93c78652aad1dfc9096b5d7cedc46",
+      "size_bytes": 988
+    },
+    "v1_pairwise_seed_subspace_summary.csv": {
+      "path": "results/target_representation/06e4_seed_subspace_sensitivity_v1/v1_pairwise_seed_subspace_summary.csv",
+      "sha256": "5639a17c253282854524c98446ee473885547451bf25f9c824e3864b32d10d1b",
+      "size_bytes": 848
+    },
+    "v1_pairwise_seed_canonical_correlations.csv": {
+      "path": "results/target_representation/06e4_seed_subspace_sensitivity_v1/v1_pairwise_seed_canonical_correlations.csv",
+      "sha256": "a5ea78c38b43700dfb94d000d63572b618a257d2e6cd2aead412fbdec889bbd7",
+      "size_bytes": 846
+    },
+    "v1_pairwise_seed_hungarian_matches.csv": {
+      "path": "results/target_representation/06e4_seed_subspace_sensitivity_v1/v1_pairwise_seed_hungarian_matches.csv",
+      "sha256": "42b771b490e12e0ce2267dccfb3ad57732546d0ba5bff81797048d02c3c8a75e",
+      "size_bytes": 1329
+    },
+    "v1_program_procrustes_aligned_correlations.csv": {
+      "path": "results/target_representation/06e4_seed_subspace_sensitivity_v1/v1_program_procrustes_aligned_correlations.csv",
+      "sha256": "265c13e97e0240e425ae6fa3d6fcd0746e36664a8a56f7fb8fb5d0b1d4ed5c88",
+      "size_bytes": 4984
+    },
+    "v1_program_procrustes_aligned_summary.csv": {
+      "path": "results/target_representation/06e4_seed_subspace_sensitivity_v1/v1_program_procrustes_aligned_summary.csv",
+      "sha256": "121cc4cae6d144d734096e4960067dbcb4f7705b1d601acebf75d399cc81bae7",
+      "size_bytes": 1089
+    },
+    "v1_seed_subspace_biology_sensitivity_summary.json": {
+      "path": "results/target_representation/06e4_seed_subspace_sensitivity_v1/v1_seed_subspace_biology_sensitivity_summary.json",
+      "sha256": "f0a01fe513ca584fb494dae78cf9f1982adba7c5d81c0f53a567267a1a96dcb7",
+      "size_bytes": 5188
+    }
+  },
+  "rewrite_policy": "Frozen post-result sensitivity. Never overwrite/delete/rerun in place. Any scientifically necessary recovery requires a new versioned stage preserving this lock and all current results."
+}

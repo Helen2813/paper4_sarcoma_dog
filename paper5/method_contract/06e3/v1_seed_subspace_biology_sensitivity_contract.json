@@ -1,0 +1,177 @@
+{
+  "status": "FROZEN_BEFORE_V1_SEED_SUBSPACE_BIOLOGY_SENSITIVITY",
+  "script_version": "06e3-freeze-v1-seed-subspace-biology-sensitivity-contract-v1-no-cli",
+  "created_at_utc": "2026-10-08T01:28:25.504568+00:00",
+  "analysis_role": "POST_RESULT_SENSITIVITY_USING_PROSPECTIVELY_FROZEN_REPRODUCIBILITY_SEEDS",
+  "primary_result_boundary": {
+    "primary_seed": 1103,
+    "primary_result_remains_seed_1103": true,
+    "primary_result_may_be_replaced_by_seed_sensitivity": false,
+    "seed_selection_by_biology": "FORBIDDEN",
+    "seed_selection_by_subspace_similarity": "FORBIDDEN",
+    "seed_averaging_or_ensemble": "FORBIDDEN",
+    "primary_06e2_empirical_p_and_BH_q_remain_authoritative": true,
+    "new_seed_specific_empirical_p_or_q": "FORBIDDEN_IN_THIS_STAGE"
+  },
+  "frozen_inputs": {
+    "n_cases": 78,
+    "shared_dim": 5,
+    "model_id": "V1_SHARED_PRIVATE_AE",
+    "profile_id": "ARCH_COMPACT__REG_WEAK",
+    "case_order": {
+      "filename": "target_v1_full_data_case_order.csv",
+      "sha256": "f259778ecfe8a19e83d366615734d0318b14738267af2162ff45f0d240b26f96",
+      "size_bytes": 1648
+    },
+    "representations": {
+      "1103": {
+        "filename": "target_v1_patient_shared_seed1103.npy",
+        "sha256": "c05bf08017ad8544e1e4ce0c8f58f086060dd7a6a0a68ed7f8d5a6723768a95f",
+        "size_bytes": 3248
+      },
+      "2207": {
+        "filename": "target_v1_patient_shared_seed2207.npy",
+        "sha256": "08c10fb0c5c27b19955b735e02abee513002439a892ed4d642178afc2cbf2989",
+        "size_bytes": 3248
+      },
+      "3301": {
+        "filename": "target_v1_patient_shared_seed3301.npy",
+        "sha256": "f0c4b28797f1ed4dd4fc06cbdfff1dfc39139bf060cba34a2c18edd139ce4c06",
+        "size_bytes": 3248
+      }
+    },
+    "program_score_file": {
+      "sha256": "7129ad9719d0f01ed12b3cf854c1a4dff2e7295094986e09f08c7344134b00dc",
+      "size_bytes": 7651
+    },
+    "primary_coordinate_correlation_file": {
+      "sha256": "58cadf6ce02603d8d9a05cf06068c9f23e43a0a2dafe8835729407374d89c7f8",
+      "size_bytes": 2792
+    },
+    "programs": [
+      "M34",
+      "M40",
+      "M11",
+      "M24"
+    ]
+  },
+  "seed_roles": {
+    "1103": "PRIMARY_FROZEN_SCIENTIFIC_REPRESENTATION",
+    "2207": "MANDATORY_REPRODUCIBILITY_ONLY",
+    "3301": "MANDATORY_REPRODUCIBILITY_ONLY",
+    "report_all_seeds": true,
+    "report_all_program_seed_cells": true
+  },
+  "pairwise_subspace_diagnostics": {
+    "seed_pairs": [
+      [
+        1103,
+        2207
+      ],
+      [
+        1103,
+        3301
+      ],
+      [
+        2207,
+        3301
+      ]
+    ],
+    "input_preparation": "For each frozen 78x5 latent matrix, subtract the column mean. No outcome/biology-dependent transformation and no refit.",
+    "rank_requirement": "Each centered latent matrix must have numerical rank 5 using the standard SVD machine-epsilon rank criterion. Fail closed if rank < 5.",
+    "canonical_correlations": "Compute orthonormal bases for the centered 5D column spaces using thin SVD. Compute the five singular values of Q_A^T Q_B, clip only floating-point spillover to [0,1], and report all five values in descending order.",
+    "principal_angles_degrees": "For each canonical correlation c_j, report acos(c_j)*180/pi.",
+    "subspace_summary_per_pair": [
+      "mean_canonical_correlation",
+      "median_canonical_correlation",
+      "minimum_canonical_correlation",
+      "maximum_principal_angle_degrees"
+    ],
+    "05a_compatibility_summary": "Report the median across the three seed pairs of the pairwise mean canonical correlation. This is descriptive consistency with the already-frozen 05a seed_aligned_subspace_similarity concept; no V1 retention threshold is created or imported.",
+    "threshold_or_PASS_FAIL_gate": "FORBIDDEN"
+  },
+  "procrustes_hungarian_diagnostics": {
+    "role": "DESCRIPTIVE_COORDINATE_ORIENTATION_DIAGNOSTIC",
+    "reference_direction": "For pairs involving seed 1103, 1103 is the reference. For pair 2207/3301, 2207 is the reference.",
+    "procrustes": "On column-centered latent matrices A (moving) and B (reference), solve orthogonal Procrustes by SVD of A^T B; R=U V^T and A_aligned=A R. Report normalized residual ||A_aligned-B||_F / ||B||_F. No scaling fit beyond the orthogonal rotation/reflection.",
+    "hungarian": "After Procrustes alignment, compute the 5x5 Pearson correlation matrix between aligned moving coordinates and reference coordinates. Hungarian-match coordinates by maximizing absolute correlation. Report all five signed and absolute matched correlations plus their mean/minimum.",
+    "sign_flip": "For descriptive aligned-coordinate reporting only, a matched moving coordinate may be sign-flipped to make its matched correlation nonnegative. Raw latent arrays are never changed.",
+    "threshold_or_PASS_FAIL_gate": "FORBIDDEN"
+  },
+  "program_seed_sensitivity": {
+    "programs": [
+      "M34",
+      "M40",
+      "M11",
+      "M24"
+    ],
+    "seeds": [
+      1103,
+      2207,
+      3301
+    ],
+    "n_cells": 12,
+    "score_source": "Reuse the exact frozen 78-case strict_signed_mean program scores from the 06e2 primary analysis; do not reopen Paper-4 expression or recompute program scores.",
+    "raw_seed_statistic": "For each program x seed, compute Spearman correlation between the frozen program score and each of the five RAW frozen V1 shared coordinates. Primary descriptive statistic is the maximum absolute Spearman across the same five coordinates.",
+    "best_coordinate": "Report the coordinate attaining max absolute Spearman and its signed correlation. Coordinate labels across seeds are descriptive only and are not assumed comparable.",
+    "primary_seed_replay": "The seed-1103 4x5 raw correlations and four max-|rho| values must replay the already-frozen 06e2 primary results exactly within absolute tolerance 1e-12 before any sensitivity output is accepted.",
+    "across_seed_descriptive_summary": [
+      "min_raw_max_abs_spearman",
+      "median_raw_max_abs_spearman",
+      "max_raw_max_abs_spearman",
+      "range_raw_max_abs_spearman"
+    ],
+    "procrustes_oriented_sensitivity": "For seeds 2207 and 3301 only, additionally Procrustes-align their centered 5D latent coordinates to centered seed 1103 using the frozen rule above, then recompute program-to-coordinate Spearman correlations and max-|rho|. This is an explicitly exploratory orientation diagnostic and cannot replace the raw-coordinate primary statistic.",
+    "new_significance_threshold": "FORBIDDEN",
+    "new_empirical_p_or_BH_q": "FORBIDDEN",
+    "claim_upgrade_rule": "No binary 'robust/not robust' threshold is defined. Report the complete numerical sensitivity pattern regardless of direction."
+  },
+  "explicitly_not_authorized": [
+    "refit any representation model",
+    "select or replace the primary seed",
+    "average or ensemble latent representations",
+    "recompute matched random gene panels",
+    "transfer seed-1103 random-control p/q values to other seeds",
+    "create new seed-specific p-values or q-values",
+    "apply SABLE-MO q10/stability thresholds to V1",
+    "declare V1 coordinates retained/stable from these diagnostics",
+    "use technical UNKNOWN as evidence of no technical confounding",
+    "compute rotation-invariant program-to-subspace association (multiple correlation/canonical correlation) in this stage",
+    "open TARGET outcomes or clinical variables",
+    "change the frozen primary M34/M40/M11/M24 interpretation"
+  ],
+  "reporting_language": {
+    "required": "Describe this as a post-result sensitivity analysis using prospectively frozen reproducibility seeds.",
+    "forbidden": [
+      "pre-specified primary biological analysis",
+      "seed-validated primary result",
+      "stable biological factor",
+      "retained V1 factor"
+    ]
+  },
+  "source_metadata": {
+    "06c3_lock": {
+      "path": "method_contract/06c3/target_v1_full_data_refit_results_lock.json",
+      "sha256": "b23d4c630cffca3bc5b1c44328128d4da46028b8db8cb070e6be93d9d0795be5",
+      "status": "06C3_TARGET_V1_FULL_DATA_REFIT_RESULTS_FROZEN"
+    },
+    "06e2_primary_biology_lock": {
+      "path": "method_contract/06e2_v3/v1_biological_alignment_random_controls_results_lock_v3.json",
+      "sha256": "2efe6ed3f40971c5cf8dc85a55ab3c24d4ce90ce45444e8f0e8908a187a9d890",
+      "status": "06E2_V3_V1_BIOLOGICAL_ALIGNMENT_RANDOM_CONTROLS_FROZEN"
+    },
+    "06e2a_readonly_audit_lock": {
+      "path": "method_contract/06e2a_v3_v2/06e2a_v3_v2_frozen_biological_result_audit_lock.json",
+      "sha256": "ddf555d451e9dc6ee9a538d5abfd2a8c36c146ca53fdcfb273e6dbf8b19bcaf5",
+      "status": "06E2A_V3_V2_FROZEN_BIOLOGICAL_RESULT_AUDIT_LOCKED"
+    }
+  },
+  "scientific_state_at_contract_freeze": {
+    "numeric_latent_arrays_read_here": false,
+    "biological_score_rows_read_here": false,
+    "seed2207_biological_result_seen_here": false,
+    "seed3301_biological_result_seen_here": false,
+    "model_fit_or_refit": false,
+    "outcome_or_clinical_access": false
+  }
+}

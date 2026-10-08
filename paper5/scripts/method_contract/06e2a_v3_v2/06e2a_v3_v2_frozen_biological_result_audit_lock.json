@@ -1,0 +1,15 @@
+{
+  "status": "06E2A_V3_V2_FROZEN_BIOLOGICAL_RESULT_AUDIT_LOCKED",
+  "script_version": "06e2a-v3-readonly-audit-v2-exact-case-index-schema-no-cli",
+  "created_at_utc": "2026-10-08T00:54:33.620950+00:00",
+  "audit": {
+    "path": "method_contract/06e2a_v3_v2/v1_biological_alignment_v3_readonly_audit_v2.json",
+    "sha256": "a487bef7c3f8089bb5953f69b6cb545c7246dc4b34bbdb560ef2aed493e1c6d9",
+    "size_bytes": 3619
+  },
+  "source_result_lock": {
+    "path": "method_contract/06e2_v3/v1_biological_alignment_random_controls_results_lock_v3.json",
+    "sha256": "2efe6ed3f40971c5cf8dc85a55ab3c24d4ce90ce45444e8f0e8908a187a9d890"
+  },
+  "rewrite_policy": "Read-only audit. Never rewrite the frozen 06e1 v3 results or 06e2_v3 lock."
+}

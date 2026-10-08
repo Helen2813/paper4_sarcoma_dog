@@ -1,0 +1,123 @@
+{
+  "status": "06E1A_V3_TARGET_V1_BIOLOGY_RUNNER_SOURCE_AUTHORIZED",
+  "script_version": "06e1a-v3-freeze-v1-biology-runner-source-authorization-v1-no-cli",
+  "created_at_utc": "2026-10-08T00:32:41.629746+00:00",
+  "scientific_state": {
+    "paper4_biological_artifacts_opened_or_hashed": false,
+    "target_biological_values_read": false,
+    "v1_numeric_representation_read": false,
+    "target_molecular_matrices_read": false,
+    "target_clinical_or_outcomes_read": false,
+    "biological_alignment_computed": false,
+    "matched_random_controls_computed": false,
+    "model_fit_or_refit": false
+  },
+  "runner_source": {
+    "path": "scripts/06e1_run_v1_biological_alignment_random_controls_v3.py",
+    "sha256": "77fbe2d681ddaa906db71c93a654c5f6ddac1fed10c5ad96fcd211db48f78d26",
+    "script_version": "06e1-run-v1-biological-alignment-random-controls-v3-exact-risk-oriented-weight-schema-provenance-text-fix-two-stage-source-authorized-no-cli",
+    "size_bytes": 65524
+  },
+  "synthetic_selftest": {
+    "path": "method_contract/06e1_preflight_v3/v1_biological_alignment_runner_synthetic_selftest_v3.json",
+    "sha256": "cb30610fb714226349e02e9fa7f7ff1924375ee29d89583549ed393851f08c25",
+    "status": "06E1_V3_BIOLOGY_RUNNER_SYNTHETIC_SELFTEST_PASS",
+    "script_version": "06e1-run-v1-biological-alignment-random-controls-v3-exact-risk-oriented-weight-schema-provenance-text-fix-two-stage-source-authorized-no-cli",
+    "runner_sha256": "77fbe2d681ddaa906db71c93a654c5f6ddac1fed10c5ad96fcd211db48f78d26",
+    "execution_mode": "SYNTHETIC_ONLY_PREAUTHORIZATION",
+    "n_coordinates": 5,
+    "n_programs": 4,
+    "exact_real_weight_schema_resolution": {
+      "module": "module_label",
+      "gene": "human_gene_symbol",
+      "risk_orientation": "risk_oriented_loading"
+    },
+    "risk_oriented_loading_sign_test": "PASS",
+    "median_imputation_scoring_test": "PASS",
+    "explicit_nearest_bin_fallback_test": "PASS",
+    "target_case_normalization": "PASS",
+    "bh_test": "PASS",
+    "sign_invariant_best_coordinate_test": "PASS"
+  },
+  "06e0_identity": {
+    "contract_sha256": "43c25abbc18eb79e7876bd5228ad5a0079957fef7a8aaa26b1b37b5025df759c",
+    "lock_sha256": "2ee83579ea38f1c57882a387fcef7025ec41a10607bc332998170ae17da2c3dc"
+  },
+  "v1_failure_boundary_identity": {
+    "path": "method_contract/06e1r0/v1_first_real_biology_attempt_schema_failure_boundary_lock.json",
+    "sha256": "09190261803d38e64dd79a53c438b2a2474b96631a613ef223bff1db752f26e4",
+    "status": "06E1R0_V1_FIRST_REAL_BIOLOGY_ATTEMPT_SCHEMA_FAILURE_FROZEN",
+    "failed_runner_sha256": "51eface403ec7b41a6436289590f0cd4159ad4b6e167800052de8eb2f11bd180"
+  },
+  "superseded_v2_source": {
+    "runner_sha256": "b2cb9b9fa67412b373f02d8593df5b79e156b21bf5da742075c8605c858fc5a3",
+    "scientific_execution_authorized": false,
+    "real_biology_run_performed": false
+  },
+  "static_runner_audit": {
+    "script_version": "06e1-run-v1-biological-alignment-random-controls-v3-exact-risk-oriented-weight-schema-provenance-text-fix-two-stage-source-authorized-no-cli",
+    "authorization_gate": "PASS",
+    "synthetic_biological_access": "FORBIDDEN",
+    "v1_failure_provenance_guard": "PASS",
+    "exact_real_strict_weight_schema": "PASS",
+    "risk_orientation_sign_rule": "PASS",
+    "median_imputation_scoring_rule": "PASS",
+    "real_biological_hash_verification_before_parse": "PASS",
+    "schema_validation_before_v1_numeric_read": "PASS",
+    "clinical_outcome_firewall": "PASS",
+    "observed_and_null_use_same_coordinate_statistic": "PASS",
+    "matched_random_without_replacement_and_nearest_bin_fallback": "PASS",
+    "plus_one_empirical_probability": "PASS",
+    "bh_across_four_programs": "PASS",
+    "scientific_output_creation_after_computation": "PASS"
+  },
+  "authorized_scientific_execution": {
+    "model_id": "V1_SHARED_PRIVATE_AE",
+    "profile_id": "ARCH_COMPACT__REG_WEAK",
+    "primary_seed": 1103,
+    "n_cases": 78,
+    "shared_dim": 5,
+    "programs": [
+      "M34",
+      "M40",
+      "M11",
+      "M24"
+    ],
+    "strict_gene_counts": {
+      "M34": 162,
+      "M40": 111,
+      "M11": 7,
+      "M24": 7
+    },
+    "representation_sha256": "c05bf08017ad8544e1e4ce0c8f58f086060dd7a6a0a68ed7f8d5a6723768a95f",
+    "technical_status": "UNKNOWN_NO_STRICT_USABLE_TECHNICAL_COVARIATES",
+    "program_score": "strict_signed_mean",
+    "exact_strict_weight_columns": [
+      "module_label",
+      "canine_gene",
+      "canine_gene_symbol",
+      "human_gene_symbol",
+      "ortholog_qc_status",
+      "raw_pca_loading",
+      "risk_oriented_loading",
+      "absolute_risk_loading",
+      "is_strict_mapping",
+      "is_broad_mapping",
+      "human_symbol_duplicate_count",
+      "normalized_abs_sum_weight"
+    ],
+    "primary_sign_source": "sign(risk_oriented_loading)",
+    "primary_alignment_metric": "max_absolute_spearman_across_5_frozen_v1_shared_coordinates",
+    "random_panels_per_program": 1000,
+    "random_seed": 42,
+    "variability_bins": 10,
+    "minimum_program_coverage_fraction": 1.0,
+    "multiplicity": "BH",
+    "multiplicity_alpha": 0.05,
+    "clinical_or_outcome_access": "FORBIDDEN",
+    "representation_refit_or_reselection": "FORBIDDEN",
+    "SABLE_q10_or_stability_transfer_to_V1": "FORBIDDEN",
+    "technical_UNKNOWN_reinterpretation_as_clean": "FORBIDDEN"
+  },
+  "authorization_rule": "Only this exact 06e1 v3 runner SHA is authorized. Any source change requires a new versioned synthetic preflight and a new source authorization before real biological computation."
+}

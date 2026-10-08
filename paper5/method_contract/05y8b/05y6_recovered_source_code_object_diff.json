@@ -1,0 +1,28 @@
+{
+  "status": "RECOVERED_SOURCE_VS_FROZEN_PYC_STRUCTURAL_DIFF_COMPLETE",
+  "script_version": "05y8b-compare-recovered-05y6-source-to-frozen-bytecode-v1-no-cli",
+  "created_at_utc": "2026-09-19T19:12:20.369822+00:00",
+  "frozen_pyc": {
+    "path": "scripts/__pycache__/05y6_aggregate_prospective_q10_validation.cpython-310.pyc",
+    "sha256": "bad3ee4833918b578c76daa013ee8e92de72f945c0f2b976db7dc75873ce39e8",
+    "header_source_size_bytes": 24971,
+    "header_source_mtime_unix": 1789519956,
+    "embedded_co_filename": ".\\paper5\\scripts\\05y6_aggregate_prospective_q10_validation.py"
+  },
+  "candidate": {
+    "path": "C:\\Users\\olegk\\Downloads\\Telegram Desktop\\05y6_aggregate_prospective_q10_validation.py",
+    "sha256": "9a790077a7e7369839573924db1bbc95693c8210a4936f65a6d249c7434850be",
+    "size_bytes": 24971,
+    "mtime_unix": 1789519956
+  },
+  "summary": {
+    "diff_entry_count": 0,
+    "category_counts": {},
+    "all_raw_opcode_bytes_equal_recursive": true,
+    "no_noncode_constant_differences_recursive": true,
+    "no_resolved_instruction_differences_recursive": true,
+    "differences_only_debug_line_metadata": false
+  },
+  "differences": [],
+  "interpretation_rule": "If non-code constants or resolved instruction signatures differ, do not treat the candidate as exact executable semantics. If raw opcode bytes, constants, names/variables, and resolved instruction signatures all match and differences are limited to line/debug metadata, the candidate is executable-semantics-equivalent but still not cryptographically proven byte-identical source."
+}

@@ -1,0 +1,188 @@
+{
+  "authorizer_actions": {
+    "R_or_CUDA_started": false,
+    "existing_sources_preflights_contracts_modified": false,
+    "model_fit_performed": false,
+    "result_directory_metadata_checked": true,
+    "runner_or_helper_imported": false,
+    "scientific_result_contents_read": false,
+    "simulation_npz_read": false
+  },
+  "authorizer_source": {
+    "path": "paper5/scripts/05cmp3b_freeze_secondary_comparator_runner_v6_source_authorization_v1.py",
+    "sha256": "52f6df1e086ed787543aaf68236f7f92751ba99819bcbc71f2a16373db838720",
+    "size_bytes": 29254
+  },
+  "cmp2_contract": {
+    "path": "paper5/method_contract/05cmp2/secondary_comparator_confirmatory_benchmark_contract.json",
+    "sha256": "8e0a4d95a1f554af8e9c5188ca683d32c336c6bd5b797b3a91426adbe4ee9fc2",
+    "size_bytes": 9406
+  },
+  "created_at_utc": "2026-10-08T05:06:18.512667+00:00",
+  "environment_evidence_from_v6_preflight": {
+    "cuda_build": "13.0",
+    "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "icluster_package_tree_sha256": "cad0c995150e778026fb227ac533a974d77106e431c65a3802aeda4254f6fd70",
+    "move_version": "1.5.0",
+    "rscript_sha256": "d829bcf7e9fa1d7e3e828c565c3cdbb1ed416f551f4fa6fd4dfcdf231e33e5e8",
+    "torch_version": "2.12.1+cu130"
+  },
+  "execution_scope": {
+    "expected_method_dataset_shards": 720,
+    "methods": [
+      "iCluster2b",
+      "MOVE"
+    ],
+    "n_datasets": 360,
+    "n_scenarios": 36,
+    "replicate_indices": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "simulation_npz_paths_followed": false
+  },
+  "frozen_upstream_files": {
+    "cmp1_adapter": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_scientific_adapter_registry.csv",
+      "sha256": "f30c73d19627d357073786b75f7b8141a757becf9d2413491518948cc099ea48",
+      "size_bytes": 714
+    },
+    "cmp1_contract": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_implementation_contract.json",
+      "sha256": "418259cedd36cbd1913a4ff1ae9874a3decfddbb7a75e9b3bca2e9623f0aca95",
+      "size_bytes": 12328
+    },
+    "cmp1_impl": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_implementation_registry.csv",
+      "sha256": "85dbc68289bae71b9cf4f8a01af34b09d50750fde97f0b57ef3b6c57ebf299b0",
+      "size_bytes": 955
+    },
+    "cmp1_lock": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_implementation_contract_lock.json",
+      "sha256": "37e0db502a88f7beab52f1457cb0c5367091314faa6b86c7796810d883f31648",
+      "size_bytes": 4937
+    },
+    "cmp1_metric": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_metric_eligibility_registry.csv",
+      "sha256": "8802d8d4bba20cfd4acc3263b12f0a119bcef4e4107164e6f944d0a01d9bef46",
+      "size_bytes": 1474
+    },
+    "cmp1_seed": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_seed_registry.csv",
+      "sha256": "2c70c516ad07496a71fe513139b357b92f46fd746bea5258f1fb237028c4e87c",
+      "size_bytes": 978
+    },
+    "cmp2_contract": {
+      "path": "paper5/method_contract/05cmp2/secondary_comparator_confirmatory_benchmark_contract.json",
+      "sha256": "8e0a4d95a1f554af8e9c5188ca683d32c336c6bd5b797b3a91426adbe4ee9fc2",
+      "size_bytes": 9406
+    },
+    "cmp2_lock": {
+      "path": "paper5/method_contract/05cmp2/secondary_comparator_confirmatory_benchmark_contract_lock.json",
+      "sha256": "a55d3e3498d9cc6a4acaaab64e5098007b093071b60999c82cf8e124a0301b5b",
+      "size_bytes": 1329
+    },
+    "cmp2_registry": {
+      "path": "paper5/method_contract/05cmp2/secondary_comparator_confirmatory_dataset_registry.csv",
+      "sha256": "4b72b94c4df49dbbbd1a90d035855e628a4fa50eede0451dfe796227bda53314",
+      "size_bytes": 269402
+    },
+    "manifest05b": {
+      "path": "paper5/method_contract/05b_v2/architecture_screening_data_manifest.csv",
+      "sha256": "f3980e88aff408b65cbfce96aca50bad4fc08ecece2bc42bbc04f365c35d9c87",
+      "size_bytes": 507713
+    }
+  },
+  "historical_access_disclosure": {
+    "first_dataset_id": "A01_N62_STANDARD__R11__S1956851480",
+    "followup_diagnostic_decoded_array_values": false,
+    "followup_diagnostic_read_npy_headers": true,
+    "previous_authorized_v5_npz_bytes_hashed_and_container_opened": true,
+    "previous_v5_array_values_decoded_before_missing_key_error": false,
+    "scientific_fit_started_in_failed_v5_attempt": false,
+    "source": "reviewed schema evidence and v5 source/traceback; not new NPZ access here"
+  },
+  "linear_helper_source": {
+    "path": "paper5/scripts/05c1_fit_linear_simulation_baselines.py",
+    "sha256": "c2c91b4ad274f78ccc369e6fca765102285cf3d9c8191f3c33f4a450b7426367",
+    "size_bytes": 126641
+  },
+  "preauthorization_scientific_state": {
+    "TARGET_accessed": false,
+    "frozen_simulation_npz_opened": false,
+    "frozen_simulation_truth_opened": false,
+    "outcomes_clinical_biology_accessed": false,
+    "scientific_comparator_fit_performed": false
+  },
+  "rewrite_policy": "Do not overwrite/delete/rebind this lock. Changes require a separate versioned review and successful matching preflight before scientific use.",
+  "runner_source": {
+    "path": "paper5/scripts/05cmp3_run_secondary_comparator_confirmatory_benchmark_v6.py",
+    "script_version": "05cmp3-run-secondary-comparator-confirmatory-benchmark-v6-v2-npz-schema-postfit-biological-anchor-truth-serialized-preflight-source-amendment-no-cli",
+    "sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+    "size_bytes": 128331
+  },
+  "scope_limits": {
+    "05e_final_gate_or_TARGET_selection_changes_authorized": false,
+    "TARGET_outcomes_clinical_biology_access_authorized": false,
+    "benchmark_started_by_authorizer": false,
+    "data_interface_and_truth_access_order_correction_authorized": true,
+    "fallback_authorized": false,
+    "fitting_selection_or_metric_formula_changes_authorized": false,
+    "full_scientific_success_guaranteed": false
+  },
+  "script_version": "05cmp3b-freeze-secondary-comparator-runner-v6-source-authorization-v1-no-cli",
+  "source_history": {
+    "fitting_selection_and_metric_formula_code_changed": false,
+    "generator_source": {
+      "path": "paper5/scripts/05b_generate_small_n_multiomics_simulations_v2.py",
+      "sha256": "b4adb1fcb32b65a998ee70e1b72d52e13490194c7ad8e5ddd802b95bf05a28db",
+      "size_bytes": 109309
+    },
+    "historical_preflight_relabelled_as_v6": false,
+    "input_validation_and_truth_loading_code_changed": true,
+    "reviewed_evidence_zip_sha256": "0752c651b93a47505d3887f67630a421c31d279606472e3f018e7322ca5d9e1d",
+    "v5_authorization": {
+      "path": "paper5/method_contract/05cmp3a/secondary_comparator_runner_source_authorization_lock.json",
+      "sha256": "5dbb075b3467fa865cb2b0570a79c2419e952a2c8c001eb04287d8ade5fba319",
+      "size_bytes": 6616
+    },
+    "v5_authorizer": {
+      "path": "paper5/scripts/05cmp3a_freeze_secondary_comparator_runner_v5_source_authorization_v1.py",
+      "sha256": "526bf30c101dea38cb26d07c9acd625892febebcd697fb466be0c4c1fe653bfa",
+      "size_bytes": 23750
+    },
+    "v5_is_preserved_as_failed_schema_execution_not_a_scientific_method_failure": true,
+    "v5_original_successful_preflight": {
+      "path": "paper5/method_contract/05cmp3_preflight/secondary_comparator_runner_synthetic_preflight_v5.json",
+      "sha256": "7ec4e687151a4af67b718a1ee13e521109a0071be91de2e751e9d0bb02b96b94",
+      "size_bytes": 3062
+    },
+    "v5_source": {
+      "path": "paper5/scripts/05cmp3_run_secondary_comparator_confirmatory_benchmark_v5.py",
+      "sha256": "802c131dfda75effb4e60dd38ebf05512fa5da6c1b3eec97c0c499b3c4e869f5",
+      "size_bytes": 113760
+    },
+    "v6_changes": [
+      "strict generator-v2 NPZ observed-input loader; no legacy aliases",
+      "biological truth decoded only after fit/selection via frozen integrated_anchor_truth",
+      "synthetic serialized NPZ integration regression and guard cases",
+      "separate v6 preflight and additive 05cmp3b authorization gate",
+      "exact retained v5/generator/helper source bindings",
+      "final result lock identifies current cmp3b_authorization explicitly"
+    ]
+  },
+  "status": "05CMP3B_SECONDARY_COMPARATOR_RUNNER_V6_SOURCE_AUTHORIZED",
+  "synthetic_preflight": {
+    "path": "paper5/method_contract/05cmp3_preflight/secondary_comparator_runner_synthetic_preflight_v6.json",
+    "sha256": "e213d756bfcbef5ee01e46e72cec361ca39b3656674b8cba32afd5b821e49179",
+    "size_bytes": 5876
+  }
+}

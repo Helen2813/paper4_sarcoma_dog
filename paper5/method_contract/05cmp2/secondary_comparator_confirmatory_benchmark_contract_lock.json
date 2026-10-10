@@ -1,0 +1,27 @@
+{
+  "status": "05CMP2_SECONDARY_COMPARATOR_CONFIRMATORY_BENCHMARK_CONTRACT_FROZEN",
+  "script_version": "05cmp2-freeze-secondary-comparator-confirmatory-benchmark-contract-v1-no-cli",
+  "created_at_utc": "2026-10-08T02:14:45.192938+00:00",
+  "contract": {
+    "path": "method_contract/05cmp2/secondary_comparator_confirmatory_benchmark_contract.json",
+    "sha256": "8e0a4d95a1f554af8e9c5188ca683d32c336c6bd5b797b3a91426adbe4ee9fc2",
+    "size_bytes": 9406
+  },
+  "dataset_registry": {
+    "path": "method_contract/05cmp2/secondary_comparator_confirmatory_dataset_registry.csv",
+    "sha256": "4b72b94c4df49dbbbd1a90d035855e628a4fa50eede0451dfe796227bda53314",
+    "size_bytes": 269402,
+    "rows": 360
+  },
+  "readme": {
+    "path": "method_contract/05cmp2/05cmp2_README.txt",
+    "sha256": "dfa1d8e2534fdde01e0beabda0adb0188ea16b1f53fc30f86a4864bf5e670d56",
+    "size_bytes": 1281
+  },
+  "script_source": {
+    "path": "scripts/05cmp2_freeze_secondary_comparator_confirmatory_benchmark_contract_v1.py",
+    "sha256": "09a53200c912eaa1b7157fb793e2534319fd895e3818e44d19a3ed12730d8648",
+    "size_bytes": 31159
+  },
+  "rewrite_policy": "05cmp2 is immutable after creation. Any scientific comparator protocol change requires a new versioned amendment before additional scientific comparator results."
+}

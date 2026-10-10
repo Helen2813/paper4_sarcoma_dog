@@ -1,0 +1,63 @@
+{
+  "status": "06E5A_V1_FROZEN_SEED_SUBSPACE_BIOLOGY_SENSITIVITY_AUDIT_PASS",
+  "script_version": "06e5a-audit-frozen-v1-seed-subspace-biology-sensitivity-results-v2-no-cli",
+  "created_at_utc": "2026-10-08T01:53:41.024713+00:00",
+  "historical_v1_attempt": {
+    "script_sha256": "43dd7f1aa837bbd56876b6bab18b316dde845da87030c39a181fb1ff446ea9f2",
+    "failure_boundary": "READ_ONLY_GEOMETRY_ASSERTION_BEFORE_AUDIT_OUTPUT_WRITE",
+    "failure_reason": "v1 incorrectly expected v1_pairwise_seed_subspace_summary.csv shape (3,9); frozen file has the correct (3,10) geometry because analysis_role is the tenth column.",
+    "scientific_results_changed": false,
+    "historical_06e5a_v1_output_files_present": false
+  },
+  "source_result_lock": {
+    "path": "method_contract/06e5/v1_seed_subspace_biology_sensitivity_results_lock.json",
+    "sha256": "09ca92ad9ab5dd712615889157815720c896142cd7ae1af58459f5f38b193db9",
+    "status": "06E5_V1_SEED_SUBSPACE_BIOLOGY_SENSITIVITY_FROZEN"
+  },
+  "runner_sha256": "97a8af048e38c16000f27a078ea976af1c894a21850ac2924a05e3b8c16cee86",
+  "06e3_contract_sha256": "cbac52ec634e566ccee070ec0116577388a23d4ceefd881fbe761b55a39e40a6",
+  "frozen_result_file_hashes": {
+    "v1_program_coordinate_correlations_by_seed.csv": "07907598d4f15ebc36be05d76bc3a1eae9c06b95d4df915b728baf3482768a16",
+    "v1_program_alignment_summary_by_seed.csv": "33f6412685dbfc4bfdce292c0b316a5b5825c54a992ea6525a05270d8ef0bebd",
+    "v1_program_raw_seed_sensitivity_summary.csv": "3425ffda777859b2a7b59e634618adce33e93c78652aad1dfc9096b5d7cedc46",
+    "v1_pairwise_seed_subspace_summary.csv": "5639a17c253282854524c98446ee473885547451bf25f9c824e3864b32d10d1b",
+    "v1_pairwise_seed_canonical_correlations.csv": "a5ea78c38b43700dfb94d000d63572b618a257d2e6cd2aead412fbdec889bbd7",
+    "v1_pairwise_seed_hungarian_matches.csv": "42b771b490e12e0ce2267dccfb3ad57732546d0ba5bff81797048d02c3c8a75e",
+    "v1_program_procrustes_aligned_correlations.csv": "265c13e97e0240e425ae6fa3d6fcd0746e36664a8a56f7fb8fb5d0b1d4ed5c88",
+    "v1_program_procrustes_aligned_summary.csv": "121cc4cae6d144d734096e4960067dbcb4f7705b1d601acebf75d399cc81bae7",
+    "v1_seed_subspace_biology_sensitivity_summary.json": "f0a01fe513ca584fb494dae78cf9f1982adba7c5d81c0f53a567267a1a96dcb7"
+  },
+  "checks": {
+    "exact_06e5_result_file_set": "PASS",
+    "all_06e5_file_hashes_and_sizes": "PASS",
+    "raw_program_coordinate_geometry_60_rows": "PASS",
+    "all_12_program_seed_cells_present": "PASS",
+    "raw_max_abs_spearman_replay_12_of_12": "PASS",
+    "primary_seed_1103_replay_against_06e2_20_of_20": "PASS",
+    "primary_seed_1103_summary_replay_4_of_4": "PASS",
+    "across_seed_summary_replay_4_of_4": "PASS",
+    "pairwise_seed_set_3_of_3": "PASS",
+    "canonical_correlation_rows_15": "PASS",
+    "principal_angle_algebra_replay_15_of_15": "PASS",
+    "pairwise_subspace_summary_replay_3_of_3": "PASS",
+    "hungarian_summary_replay_3_of_3": "PASS",
+    "05a_compatible_subspace_scalar_replay": "PASS",
+    "aligned_program_coordinate_geometry_40_rows": "PASS",
+    "aligned_program_summary_replay_8_of_8": "PASS",
+    "all_scientific_firewalls_closed": "PASS"
+  },
+  "scientific_state": {
+    "scientific_result_rewrite": false,
+    "model_fit_or_refit": false,
+    "target_outcomes_or_clinical_read": false,
+    "new_p_or_q_computed": false,
+    "matched_random_panels_recomputed": false,
+    "program_scores_recomputed_from_expression": false
+  },
+  "interpretation_boundary": {
+    "primary_biology": "The seed-1103 06e2 matched-random result remains the primary biological result.",
+    "seed_sensitivity": "Seeds 2207/3301 remain descriptive post-result sensitivity using prospectively frozen reproducibility fits.",
+    "subspace": "Pairwise canonical-correlation/Procrustes/Hungarian diagnostics describe seed dependence only; no V1 PASS/FAIL retention gate is created.",
+    "no_new_inference": "No seed-specific significance claim is authorized by this audit."
+  }
+}

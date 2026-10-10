@@ -1,0 +1,220 @@
+{
+  "status": "FROZEN_SECONDARY_COMPARATOR_CONFIRMATORY_BENCHMARK_BEFORE_SCIENTIFIC_FITS",
+  "script_version": "05cmp2-freeze-secondary-comparator-confirmatory-benchmark-contract-v1-no-cli",
+  "created_at_utc": "2026-10-08T02:14:45.174962+00:00",
+  "role": "POST_05E_SECONDARY_CONFIRMATORY_SIMULATION_BENCHMARK_ONLY",
+  "scope": {
+    "methods": [
+      "iCluster2b",
+      "MOVE"
+    ],
+    "n_scenarios": 36,
+    "confirmatory_replicates": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "n_datasets": 360,
+    "dataset_bank": "exact same 360 confirmatory simulation datasets used by frozen 05e context",
+    "TARGET_comparator_run_authorized_here": false,
+    "final_gate_data_authorized_here": false,
+    "outcomes_clinical_biology_authorized_here": false
+  },
+  "data_adapter": {
+    "view_order": [
+      "RNA",
+      "METHYLATION",
+      "CNV"
+    ],
+    "orientation": "samples_x_features_per_view",
+    "latent_dimension": 5,
+    "standardization": "Within each actual fit/training split, estimate feature center and scale from observed entries in that fit split only; apply those parameters to held-out rows. For a full-data scientific fit, the full dataset is the fit split.",
+    "remaining_missing_after_standardization": 0.0,
+    "whole_view_missing": "all-zero standardized row",
+    "missingness_indicator": false,
+    "sample_repair_or_repairing": "FORBIDDEN",
+    "truth_use_for_fit_tuning_or_failure_handling": "FORBIDDEN",
+    "truth_use_after_fit_for_eligible_simulation_evaluation": "ALLOWED"
+  },
+  "iCluster2b": {
+    "implementation": "iClusterPlus::tune.iCluster2b -> iCluster2b",
+    "latent_K": 5,
+    "regularization": "lasso",
+    "tuning": {
+      "min_lambda": 10.0,
+      "max_lambda": 500.0,
+      "lambda_iter": 25,
+      "EM_iter": 25,
+      "eps": 0.0001,
+      "eps2": 1e-06,
+      "min_shrinkage_rate_per_view": [
+        0.05,
+        0.05,
+        0.05
+      ]
+    },
+    "fit_rule": "One prospectively seeded tune.iCluster2b call per dataset; use the returned lambda values for the scientific K=5 fit. No performance/truth/outcome-guided retuning.",
+    "seed": {
+      "base_seed": 1103,
+      "derivation": "SHA256(method|dataset_id|purpose|base_seed), first 8 hex, 1 + value mod 2147483646",
+      "purpose": "dataset_scientific_tuning_and_fit",
+      "seed_label": "icluster_fit"
+    },
+    "latent_subspace_stability": "NOT_ESTIMABLE_WITH_FROZEN_SINGLE_SEED_POLICY_IN_05CMP2",
+    "stability_reason": "05cmp1 froze one deterministic iCluster2b scientific seed and did not freeze a resampling/replicate schedule for this method. 05cmp2 will not invent one after 05e."
+  },
+  "MOVE": {
+    "version": "1.5.0",
+    "latent_dimension": 5,
+    "candidate_hidden_architectures": {
+      "MOVE_H64_32": [
+        64,
+        32
+      ],
+      "MOVE_H128_64": [
+        128,
+        64
+      ],
+      "MOVE_H256_128": [
+        256,
+        128
+      ]
+    },
+    "fixed_training": {
+      "epochs": 300,
+      "learning_rate": 0.001,
+      "dropout": 0.1,
+      "beta": 0.01,
+      "kld_warmup_steps": [
+        1,
+        75,
+        150,
+        300
+      ],
+      "batch_size_rule": "min(16, n_fit_samples)",
+      "AMP": false,
+      "TF32": false,
+      "torch_compile": false,
+      "dtype": "float32",
+      "device": "cuda:0"
+    },
+    "architecture_selection_stage_1": {
+      "folds": 5,
+      "fold_assignment": "Sort the frozen sample IDs lexicographically within each dataset and assign fold = sorted_position mod 5. No truth or outcome enters the assignment.",
+      "metric": "mean held-out reconstruction SSE over observed standardized entries only",
+      "rule": "retain candidates within one standard error of the best mean reconstruction SSE",
+      "seed_base": 1103,
+      "seed_derivation": "SHA256(method|dataset_id|fold_id|candidate_id|purpose|base_seed)"
+    },
+    "architecture_selection_stage_2": {
+      "full_data_seeds": [
+        1103,
+        2207,
+        3301
+      ],
+      "pairwise_subspace_metric": "For each seed pair, center latent coordinates, obtain orthonormal column-space bases by thin SVD, compute the five singular values of Q_A^T Q_B, take their arithmetic mean; candidate stability is the median of the three pairwise means.",
+      "selection": "highest stability; exact ties -> fewer hidden parameters -> lexical candidate_id",
+      "canonical_scientific_fit_seed_role": "canonical_fit/base_seed_1103 only",
+      "other_seed_role": "stability diagnostic only; never replace canonical_fit"
+    }
+  },
+  "eligible_metrics": {
+    "common_cross_method_primary_context": [
+      "shared_subspace_recovery",
+      "factor_alignment_correlation",
+      "scenario_robustness_summary",
+      "missing_view_robustness"
+    ],
+    "MOVE_method_specific_descriptive": [
+      "latent_subspace_stability",
+      "heldout_reconstruction"
+    ],
+    "iCluster2b_latent_subspace_stability": "NOT_ESTIMABLE_WITH_FROZEN_SINGLE_SEED_POLICY_IN_05CMP2",
+    "forbidden_or_not_cross_method": [
+      "cross_view_retrieval_MRR",
+      "private_subspace_recovery",
+      "SABLE_stability_gate_PASS_FAIL",
+      "primary_05e_selection_score",
+      "final_gate_decision"
+    ]
+  },
+  "metric_semantics": {
+    "shared_subspace_recovery": "Use the existing Paper 5 simulation definition: mean canonical correlation between estimated and true shared latent subspaces; truth is accessed only after the representation fit is complete.",
+    "factor_alignment_correlation": "Sign/permutation-invariant factor alignment on the frozen simulation truth; runner must reuse the same Paper 5 alignment semantics/helpers already used in the simulation branch rather than define a new post-hoc metric.",
+    "scenario_robustness_summary": "Aggregate only over the same 36 frozen scenario groups; report method/scenario summaries and an overall scenario-balanced descriptive summary. No winner threshold.",
+    "missing_view_robustness": "Use only the already-frozen missing-view scenarios and the fixed zero adapter. No comparator-specific rescue.",
+    "heldout_reconstruction": "MOVE-native descriptive endpoint only; do not compare directly against iCluster2b because 05cmp1 marked it ineligible there."
+  },
+  "failure_policy": {
+    "environment_mismatch": "STOP before scientific fits",
+    "per_dataset_fit_failure": "Retry once with identical configuration and identical seed. If it fails again, keep the dataset-method failure in the denominator/manifest.",
+    "nonfinite_output": "Record dataset-method failure; no clipping/rescue/retuning.",
+    "fallbacks": {
+      "iClusterBayes2": "LOCKED_INACTIVE",
+      "AUTOENCODIX_varix": "LOCKED_INACTIVE"
+    }
+  },
+  "interpretation_firewall": {
+    "may_reopen_05e": false,
+    "may_change_final_gate": false,
+    "may_change_TARGET_selected_representation": false,
+    "may_access_TARGET_outcomes": false,
+    "may_declare_cross_family_winner": false,
+    "may_create_new_composite_score": false,
+    "may_retrofit_SABLE_private_or_retention_metrics_to_comparators": false
+  },
+  "source_identity": {
+    "05cmp1_contract": {
+      "path": "method_contract/05cmp1/secondary_comparator_implementation_contract.json",
+      "sha256": "418259cedd36cbd1913a4ff1ae9874a3decfddbb7a75e9b3bca2e9623f0aca95"
+    },
+    "05cmp1_lock": {
+      "path": "method_contract/05cmp1/secondary_comparator_implementation_contract_lock.json",
+      "sha256": "37e0db502a88f7beab52f1457cb0c5367091314faa6b86c7796810d883f31648"
+    },
+    "05cmp1_implementation_registry": {
+      "sha256": "85dbc68289bae71b9cf4f8a01af34b09d50750fde97f0b57ef3b6c57ebf299b0"
+    },
+    "05cmp1_adapter_registry": {
+      "sha256": "f30c73d19627d357073786b75f7b8141a757becf9d2413491518948cc099ea48"
+    },
+    "05cmp1_seed_registry": {
+      "sha256": "2c70c516ad07496a71fe513139b357b92f46fd746bea5258f1fb237028c4e87c"
+    },
+    "05cmp1_metric_registry": {
+      "sha256": "8802d8d4bba20cfd4acc3263b12f0a119bcef4e4107164e6f944d0a01d9bef46"
+    },
+    "05cmp1_failure_policy": {
+      "sha256": "2a13658c81da91f96dd4854fe42cb9f667e4ee10fa2ebd696d355d9e22a4f6f7"
+    },
+    "05cmp0_benchmark_policy": {
+      "sha256": "82d5a24ac64f202c5871538a40da1de80adf458493fa12be8ac039d81ee717c8"
+    },
+    "05e_lock": {
+      "path": "method_contract/05e/representation_method_freeze_lock.json",
+      "sha256": "e0adaccada7f9b04f0e699badfac252a6dc865f24d2ea39a243b07bc3ddbafbf"
+    },
+    "05d4_dataset_variant_metrics": {
+      "path": "results/simulation_benchmark/05d_neural/confirmatory_ablation/neural_confirmatory_dataset_variant_metrics.csv.gz",
+      "sha256": "9249e41112eb4401e5e0e34ab8c7b3ede2440b5b018cba8e14ab93ed10c43a3f"
+    },
+    "05b_v2_manifest": {
+      "path": "method_contract/05b_v2/architecture_screening_data_manifest.csv",
+      "sha256": "f3980e88aff408b65cbfce96aca50bad4fc08ecece2bc42bbc04f365c35d9c87"
+    }
+  },
+  "scientific_state_at_freeze": {
+    "secondary_comparator_scientific_fit_performed": false,
+    "secondary_comparator_scientific_result_accessed": false,
+    "simulation_matrix_or_truth_array_read_here": false,
+    "TARGET_data_accessed_here": false,
+    "outcome_clinical_biology_accessed_here": false
+  }
+}

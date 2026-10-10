@@ -1,0 +1,59 @@
+Paper 5 - comparator v4 patch local validation
+
+Patch: patch_05cmp3_v4_cuda_init.py
+Patch SHA-256: d3da07f04a52c18137c0b5266b94f76f675b9cff098ded45a3ab6084a70fe339
+Validation interpreter: 3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]
+Actual parent runner pin: 41bee9179af62cc56104dbdfa4dfa47ec8d82110d5bd90078bb06c3bfacd21d8
+
+Scope of the edit:
+  1. Insert torch.cuda.init() immediately before seed_everything(seed) in fit_move.
+  2. Update SCRIPT_VERSION to v4.
+
+Validation limitations:
+- The full original v3 source is not present in this container.
+- Source tests use functions reconstructed from the user's diagnostic log,
+  preserving the reported Python code after removing Markdown escaping.
+- Successful filesystem tests use a test-only hash pin for those reconstructed
+  fixtures. The distributed patch retains the actual parent v3 hash above.
+- The actual pinned parent source is verified on the user's machine BEFORE a
+  new v4 file is created. The full-source AST and reversible byte-edit checks
+  are performed locally there as part of the patch.
+- CUDA ordering tests use a mock CUDA interface; no real GPU or MOVE fit is run.
+- Python 3.10 grammar is checked; Python 3.10 runtime is NOT tested here.
+- The user's separate Windows/PyTorch 2.12.1+cu130 diagnostic showed that explicit
+  init permitted reset_peak_memory_stats(0), and a tiny cuda:0 kernel succeeded.
+  That diagnostic is separate from the local mock tests and from benchmark PASS.
+- No result here authorizes scientific benchmark execution.
+
+test_already_patched_input_rejected (__main__.PatchTests.test_already_patched_input_rejected) ... ok
+test_bom_crlf (__main__.PatchTests.test_bom_crlf) ... ok
+test_bom_lf (__main__.PatchTests.test_bom_lf) ... ok
+test_changed_prefix_rejected (__main__.PatchTests.test_changed_prefix_rejected) ... ok
+test_crlf (__main__.PatchTests.test_crlf) ... ok
+test_duplicate_function_rejected (__main__.PatchTests.test_duplicate_function_rejected) ... ok
+test_existing_different_file_not_overwritten (__main__.PatchTests.test_existing_different_file_not_overwritten) ... ok
+test_existing_identical_file_not_rewritten (__main__.PatchTests.test_existing_identical_file_not_rewritten) ... ok
+test_failed_write_cleans_only_new_target (__main__.PatchTests.test_failed_write_cleans_only_new_target) ... ok
+test_file_creation_and_actual_output_hash (__main__.PatchTests.test_file_creation_and_actual_output_hash) ... ok
+test_hash_mismatch_creates_nothing (__main__.PatchTests.test_hash_mismatch_creates_nothing) ... ok
+test_lf_exact_two_edits_and_full_body (__main__.PatchTests.test_lf_exact_two_edits_and_full_body) ... ok
+test_main_unexpected_argument_rejected (__main__.PatchTests.test_main_unexpected_argument_rejected) ... ok
+test_missing_function_rejected (__main__.PatchTests.test_missing_function_rejected) ... ok
+test_mock_init_failure_not_swallowed (__main__.PatchTests.test_mock_init_failure_not_swallowed) ... ok
+test_mock_initialized_cuda (__main__.PatchTests.test_mock_initialized_cuda) ... ok
+test_mock_original_reproduces_cold_failure (__main__.PatchTests.test_mock_original_reproduces_cold_failure) ... ok
+test_mock_patched_cold_prefix_succeeds (__main__.PatchTests.test_mock_patched_cold_prefix_succeeds) ... ok
+test_mock_repeated_fit_does_not_reinitialize (__main__.PatchTests.test_mock_repeated_fit_does_not_reinitialize) ... ok
+test_no_model_or_runtime_imports_in_patch (__main__.PatchTests.test_no_model_or_runtime_imports_in_patch) ... ok
+test_python_310_grammar_patch_and_result (__main__.PatchTests.test_python_310_grammar_patch_and_result) ... ok
+test_reported_functions_parse (__main__.PatchTests.test_reported_functions_parse) ... ok
+test_scope_rejects_unrelated_change (__main__.PatchTests.test_scope_rejects_unrelated_change) ... ok
+test_scope_rejects_wrong_init_placement (__main__.PatchTests.test_scope_rejects_wrong_init_placement) ... ok
+test_symlink_source_refused (__main__.PatchTests.test_symlink_source_refused) ... ok
+test_unicode_byte_offsets (__main__.PatchTests.test_unicode_byte_offsets) ... ok
+test_wrong_version_rejected (__main__.PatchTests.test_wrong_version_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.290s
+
+OK

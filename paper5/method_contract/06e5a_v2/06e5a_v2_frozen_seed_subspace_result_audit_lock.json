@@ -1,0 +1,21 @@
+{
+  "status": "06E5A_V1_FROZEN_SEED_SUBSPACE_BIOLOGY_SENSITIVITY_AUDIT_LOCKED",
+  "script_version": "06e5a-audit-frozen-v1-seed-subspace-biology-sensitivity-results-v2-no-cli",
+  "created_at_utc": "2026-10-08T01:53:41.026717+00:00",
+  "audit": {
+    "path": "method_contract/06e5a_v2/v1_seed_subspace_biology_sensitivity_readonly_audit_v2.json",
+    "sha256": "8392e6af1f08b96071b3e49961e4b337232695c65726072c5736d03aa1f97f4a",
+    "size_bytes": 4028
+  },
+  "script_source": {
+    "path": "scripts/06e5a_audit_frozen_v1_seed_subspace_biology_sensitivity_results_v2.py",
+    "sha256": "72bb437d7794b62bb3c332e4bf21a2f95d56beb69cd8cc8722e280faa065ffc2",
+    "size_bytes": 33570
+  },
+  "source_result_lock": {
+    "path": "method_contract/06e5/v1_seed_subspace_biology_sensitivity_results_lock.json",
+    "sha256": "09ca92ad9ab5dd712615889157815720c896142cd7ae1af58459f5f38b193db9",
+    "status": "06E5_V1_SEED_SUBSPACE_BIOLOGY_SENSITIVITY_FROZEN"
+  },
+  "rewrite_policy": "Audit-only namespace. Never overwrite or rewrite frozen 06e4/06e5 scientific results. Never rerun this audit in place after lock creation."
+}

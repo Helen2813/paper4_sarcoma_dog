@@ -1,0 +1,156 @@
+{
+  "authorizer_actions": {
+    "R_or_CUDA_started": false,
+    "existing_sources_preflights_contracts_modified": false,
+    "model_fit_performed": false,
+    "result_directory_metadata_checked": true,
+    "runner_or_helper_imported": false,
+    "scientific_result_contents_read": false,
+    "simulation_npz_read": false
+  },
+  "authorizer_source": {
+    "path": "paper5/scripts/05cmp3a_freeze_secondary_comparator_runner_v5_source_authorization_v1.py",
+    "sha256": "526bf30c101dea38cb26d07c9acd625892febebcd697fb466be0c4c1fe653bfa",
+    "size_bytes": 23750
+  },
+  "cmp2_contract": {
+    "path": "paper5/method_contract/05cmp2/secondary_comparator_confirmatory_benchmark_contract.json",
+    "sha256": "8e0a4d95a1f554af8e9c5188ca683d32c336c6bd5b797b3a91426adbe4ee9fc2",
+    "size_bytes": 9406
+  },
+  "created_at_utc": "2026-10-08T04:28:33.458877+00:00",
+  "environment_evidence_from_v5_preflight": {
+    "cuda_build": "13.0",
+    "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "icluster_package_tree_sha256": "cad0c995150e778026fb227ac533a974d77106e431c65a3802aeda4254f6fd70",
+    "move_version": "1.5.0",
+    "rscript_sha256": "d829bcf7e9fa1d7e3e828c565c3cdbb1ed416f551f4fa6fd4dfcdf231e33e5e8",
+    "torch_version": "2.12.1+cu130"
+  },
+  "execution_scope": {
+    "expected_method_dataset_shards": 720,
+    "methods": [
+      "iCluster2b",
+      "MOVE"
+    ],
+    "n_datasets": 360,
+    "n_scenarios": 36,
+    "replicate_indices": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "simulation_npz_paths_followed": false
+  },
+  "frozen_upstream_files": {
+    "cmp1_adapter": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_scientific_adapter_registry.csv",
+      "sha256": "f30c73d19627d357073786b75f7b8141a757becf9d2413491518948cc099ea48",
+      "size_bytes": 714
+    },
+    "cmp1_contract": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_implementation_contract.json",
+      "sha256": "418259cedd36cbd1913a4ff1ae9874a3decfddbb7a75e9b3bca2e9623f0aca95",
+      "size_bytes": 12328
+    },
+    "cmp1_impl": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_implementation_registry.csv",
+      "sha256": "85dbc68289bae71b9cf4f8a01af34b09d50750fde97f0b57ef3b6c57ebf299b0",
+      "size_bytes": 955
+    },
+    "cmp1_lock": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_implementation_contract_lock.json",
+      "sha256": "37e0db502a88f7beab52f1457cb0c5367091314faa6b86c7796810d883f31648",
+      "size_bytes": 4937
+    },
+    "cmp1_metric": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_metric_eligibility_registry.csv",
+      "sha256": "8802d8d4bba20cfd4acc3263b12f0a119bcef4e4107164e6f944d0a01d9bef46",
+      "size_bytes": 1474
+    },
+    "cmp1_seed": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_seed_registry.csv",
+      "sha256": "2c70c516ad07496a71fe513139b357b92f46fd746bea5258f1fb237028c4e87c",
+      "size_bytes": 978
+    },
+    "cmp2_contract": {
+      "path": "paper5/method_contract/05cmp2/secondary_comparator_confirmatory_benchmark_contract.json",
+      "sha256": "8e0a4d95a1f554af8e9c5188ca683d32c336c6bd5b797b3a91426adbe4ee9fc2",
+      "size_bytes": 9406
+    },
+    "cmp2_lock": {
+      "path": "paper5/method_contract/05cmp2/secondary_comparator_confirmatory_benchmark_contract_lock.json",
+      "sha256": "a55d3e3498d9cc6a4acaaab64e5098007b093071b60999c82cf8e124a0301b5b",
+      "size_bytes": 1329
+    },
+    "cmp2_registry": {
+      "path": "paper5/method_contract/05cmp2/secondary_comparator_confirmatory_dataset_registry.csv",
+      "sha256": "4b72b94c4df49dbbbd1a90d035855e628a4fa50eede0451dfe796227bda53314",
+      "size_bytes": 269402
+    },
+    "manifest05b": {
+      "path": "paper5/method_contract/05b_v2/architecture_screening_data_manifest.csv",
+      "sha256": "f3980e88aff408b65cbfce96aca50bad4fc08ecece2bc42bbc04f365c35d9c87",
+      "size_bytes": 507713
+    }
+  },
+  "linear_helper_source": {
+    "path": "paper5/scripts/05c1_fit_linear_simulation_baselines.py",
+    "sha256": "c2c91b4ad274f78ccc369e6fca765102285cf3d9c8191f3c33f4a450b7426367",
+    "size_bytes": 126641
+  },
+  "preauthorization_scientific_state": {
+    "TARGET_accessed": false,
+    "frozen_simulation_npz_opened": false,
+    "frozen_simulation_truth_opened": false,
+    "outcomes_clinical_biology_accessed": false,
+    "scientific_comparator_fit_performed": false
+  },
+  "rewrite_policy": "Do not overwrite/delete/rebind this lock. Changes require a separate versioned review and successful matching preflight before scientific use.",
+  "runner_source": {
+    "path": "paper5/scripts/05cmp3_run_secondary_comparator_confirmatory_benchmark_v5.py",
+    "script_version": "05cmp3-run-secondary-comparator-confirmatory-benchmark-v5-exact-result-source-path-versioned-preflight-explicit-cuda-init-frozen-icluster-tree-hash-sysmodules-loader-fix-two-stage-source-authorized-resumable-no-cli",
+    "sha256": "802c131dfda75effb4e60dd38ebf05512fa5da6c1b3eec97c0c499b3c4e869f5",
+    "size_bytes": 113760
+  },
+  "scope_limits": {
+    "05e_final_gate_or_TARGET_selection_changes_authorized": false,
+    "TARGET_outcomes_clinical_biology_access_authorized": false,
+    "benchmark_started_by_authorizer": false,
+    "full_scientific_success_guaranteed": false,
+    "scientific_method_changes_or_fallback_authorized": false
+  },
+  "script_version": "05cmp3a-freeze-secondary-comparator-runner-v5-source-authorization-v1-no-cli",
+  "source_history": {
+    "historical_preflight_relabelled_as_v5": false,
+    "scientific_numerical_code_changed": false,
+    "v4_original_successful_preflight": {
+      "path": "paper5/method_contract/05cmp3_preflight/secondary_comparator_runner_synthetic_preflight_v1.json",
+      "sha256": "75498a895f180b84a87cc244e10b237be3628d6b5908c3cc47f82d7cab4dc625",
+      "size_bytes": 3017
+    },
+    "v4_source": {
+      "path": "paper5/scripts/05cmp3_run_secondary_comparator_confirmatory_benchmark_v4.py",
+      "sha256": "135cc95ca57080f231f3dec06836825ee9fe5ac67307d1751701c659e52af3d7",
+      "size_bytes": 113684
+    },
+    "v5_changes": [
+      "SCRIPT_VERSION",
+      "separate v5 preflight path and printed path",
+      "final result-lock runner_source.path resolves actual __file__"
+    ]
+  },
+  "status": "05CMP3A_SECONDARY_COMPARATOR_RUNNER_SOURCE_AUTHORIZED",
+  "synthetic_preflight": {
+    "path": "paper5/method_contract/05cmp3_preflight/secondary_comparator_runner_synthetic_preflight_v5.json",
+    "sha256": "7ec4e687151a4af67b718a1ee13e521109a0071be91de2e751e9d0bb02b96b94",
+    "size_bytes": 3062
+  }
+}

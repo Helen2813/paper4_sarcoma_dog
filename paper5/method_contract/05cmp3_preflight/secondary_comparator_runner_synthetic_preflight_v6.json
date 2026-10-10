@@ -1,0 +1,152 @@
+{
+  "cmp2_contract_sha256": "8e0a4d95a1f554af8e9c5188ca683d32c336c6bd5b797b3a91426adbe4ee9fc2",
+  "cmp2_registry_sha256": "4b72b94c4df49dbbbd1a90d035855e628a4fa50eede0451dfe796227bda53314",
+  "created_at_utc": "2026-10-08T05:05:53.834354+00:00",
+  "environment": {
+    "cuda_build": "13.0",
+    "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "icluster_package_tree_sha256": "cad0c995150e778026fb227ac533a974d77106e431c65a3802aeda4254f6fd70",
+    "move_version": "1.5.0",
+    "rscript_sha256": "d829bcf7e9fa1d7e3e828c565c3cdbb1ed416f551f4fa6fd4dfcdf231e33e5e8",
+    "torch_version": "2.12.1+cu130"
+  },
+  "execution_mode": "SYNTHETIC_ONLY_PREAUTHORIZATION",
+  "linear_helper_source": {
+    "path": "paper5/scripts/05c1_fit_linear_simulation_baselines.py",
+    "sha256": "c2c91b4ad274f78ccc369e6fca765102285cf3d9c8191f3c33f4a450b7426367"
+  },
+  "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+  "schema_amendment": {
+    "current_invocation_scientific_npz_values_decoded": false,
+    "historical_authorized_v5_preserved": true,
+    "history_bindings": {
+      "paper5/method_contract/05cmp3_preflight/secondary_comparator_runner_synthetic_preflight_v5.json": {
+        "sha256": "7ec4e687151a4af67b718a1ee13e521109a0071be91de2e751e9d0bb02b96b94",
+        "size_bytes": 3062
+      },
+      "paper5/method_contract/05cmp3a/secondary_comparator_runner_source_authorization_lock.json": {
+        "sha256": "5dbb075b3467fa865cb2b0570a79c2419e952a2c8c001eb04287d8ade5fba319",
+        "size_bytes": 6616
+      },
+      "paper5/scripts/05b_generate_small_n_multiomics_simulations_v2.py": {
+        "sha256": "b4adb1fcb32b65a998ee70e1b72d52e13490194c7ad8e5ddd802b95bf05a28db",
+        "size_bytes": 109309
+      },
+      "paper5/scripts/05c1_fit_linear_simulation_baselines.py": {
+        "sha256": "c2c91b4ad274f78ccc369e6fca765102285cf3d9c8191f3c33f4a450b7426367",
+        "size_bytes": 126641
+      },
+      "paper5/scripts/05cmp3_run_secondary_comparator_confirmatory_benchmark_v5.py": {
+        "sha256": "802c131dfda75effb4e60dd38ebf05512fa5da6c1b3eec97c0c499b3c4e869f5",
+        "size_bytes": 113760
+      },
+      "paper5/scripts/05cmp3a_freeze_secondary_comparator_runner_v5_source_authorization_v1.py": {
+        "sha256": "526bf30c101dea38cb26d07c9acd625892febebcd697fb466be0c4c1fe653bfa",
+        "size_bytes": 23750
+      }
+    },
+    "previous_v5_failure": "required Z_shared absent before array extraction or fitting",
+    "truth_key": "Z_biological_shared",
+    "truth_stage": "after each method fit/architecture selection completes"
+  },
+  "scientific_state": {
+    "TARGET_accessed": false,
+    "frozen_simulation_npz_opened": false,
+    "frozen_simulation_truth_opened": false,
+    "outcomes_clinical_biology_accessed": false,
+    "scientific_comparator_fit_performed": false
+  },
+  "script_version": "05cmp3-run-secondary-comparator-confirmatory-benchmark-v6-v2-npz-schema-postfit-biological-anchor-truth-serialized-preflight-source-amendment-no-cli",
+  "status": "05CMP3_SECONDARY_COMPARATOR_RUNNER_SYNTHETIC_PREAUTH_PASS",
+  "tests": {
+    "adapter_feature_and_whole_view_missing": "PASS",
+    "deterministic_seed_derivation": "PASS",
+    "frozen_upstream_metadata": "PASS",
+    "icluster2b_exact_tune_api_synthetic_fit": {
+      "finite": true,
+      "lambda": [
+        500.0,
+        500.0,
+        500.0
+      ],
+      "latent_shape": [
+        24,
+        5
+      ]
+    },
+    "move_exact_api_synthetic_fit": {
+      "finite": true,
+      "latent_shape": [
+        24,
+        5
+      ],
+      "synthetic_reconstruction_sse": 1347.213108024184
+    },
+    "move_selection_logic": {
+      "deterministic_folds": "PASS",
+      "one_se_retained": [
+        "A",
+        "B"
+      ],
+      "stage2_selected": "B"
+    },
+    "paper5_subspace_helper_replay": {
+      "factor_alignment": 1.0,
+      "factor_matches": [
+        {
+          "absolute_pearson": 1.0,
+          "estimated_factor_index": 0,
+          "signed_pearson": -1.0,
+          "truth_factor_index": 2
+        },
+        {
+          "absolute_pearson": 1.0,
+          "estimated_factor_index": 1,
+          "signed_pearson": 1.0,
+          "truth_factor_index": 0
+        },
+        {
+          "absolute_pearson": 1.0,
+          "estimated_factor_index": 2,
+          "signed_pearson": -1.0,
+          "truth_factor_index": 1
+        }
+      ],
+      "subspace_helper_replay": {
+        "helper_scalar_path": "mean_canonical_correlation",
+        "status": "PASS_FROZEN_HELPER_NAMED_SCALAR"
+      },
+      "subspace_recovery": 1.0
+    },
+    "serialized_v2_npz_schema_and_truth": {
+      "RNA_anchor_helper": "05c1.integrated_anchor_truth(arrays, 'biological')",
+      "biological_columns_filtered_by_view_support": false,
+      "frozen_scientific_NPZ_opened": false,
+      "negative_cases": [
+        "legacy_Z_shared_only_rejected",
+        "dual_truth_keys_rejected",
+        "missing_biological_truth_rejected",
+        "sample_index_reordering_rejected",
+        "view_shape_mismatch_rejected",
+        "RNA_anchor_repair_forbidden",
+        "biological_column_count_mismatch_rejected",
+        "size_mismatch_rejected",
+        "SHA_mismatch_rejected"
+      ],
+      "observed_input_payloads_only": true,
+      "positive_cases": [
+        "all3",
+        "partial_RNA_METH",
+        "partial_RNA_CNV",
+        "partial_METH_CNV",
+        "mixed_support_and_pair_corruption",
+        "rotational_subspace_only",
+        "technical_only_biological_null"
+      ],
+      "status": "PASS_SERIALIZED_V2_NPZ_LOADERS_AND_TRUTH_SEMANTICS",
+      "technical_and_private_truth_payloads_decoded": false,
+      "tracked_payload_reads": 49,
+      "truth_payload_read_only_in_explicit_truth_stage": true
+    }
+  }
+}

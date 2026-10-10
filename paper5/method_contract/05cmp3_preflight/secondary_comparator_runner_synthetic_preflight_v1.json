@@ -1,0 +1,89 @@
+{
+  "cmp2_contract_sha256": "8e0a4d95a1f554af8e9c5188ca683d32c336c6bd5b797b3a91426adbe4ee9fc2",
+  "cmp2_registry_sha256": "4b72b94c4df49dbbbd1a90d035855e628a4fa50eede0451dfe796227bda53314",
+  "created_at_utc": "2026-10-08T03:58:35.110179+00:00",
+  "environment": {
+    "cuda_build": "13.0",
+    "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "icluster_package_tree_sha256": "cad0c995150e778026fb227ac533a974d77106e431c65a3802aeda4254f6fd70",
+    "move_version": "1.5.0",
+    "rscript_sha256": "d829bcf7e9fa1d7e3e828c565c3cdbb1ed416f551f4fa6fd4dfcdf231e33e5e8",
+    "torch_version": "2.12.1+cu130"
+  },
+  "execution_mode": "SYNTHETIC_ONLY_PREAUTHORIZATION",
+  "linear_helper_source": {
+    "path": "paper5/scripts/05c1_fit_linear_simulation_baselines.py",
+    "sha256": "c2c91b4ad274f78ccc369e6fca765102285cf3d9c8191f3c33f4a450b7426367"
+  },
+  "runner_sha256": "135cc95ca57080f231f3dec06836825ee9fe5ac67307d1751701c659e52af3d7",
+  "scientific_state": {
+    "TARGET_accessed": false,
+    "frozen_simulation_npz_opened": false,
+    "frozen_simulation_truth_opened": false,
+    "outcomes_clinical_biology_accessed": false,
+    "scientific_comparator_fit_performed": false
+  },
+  "script_version": "05cmp3-run-secondary-comparator-confirmatory-benchmark-v4-explicit-cuda-init-frozen-icluster-tree-hash-sysmodules-loader-fix-two-stage-source-authorized-resumable-no-cli",
+  "status": "05CMP3_SECONDARY_COMPARATOR_RUNNER_SYNTHETIC_PREAUTH_PASS",
+  "tests": {
+    "adapter_feature_and_whole_view_missing": "PASS",
+    "deterministic_seed_derivation": "PASS",
+    "frozen_upstream_metadata": "PASS",
+    "icluster2b_exact_tune_api_synthetic_fit": {
+      "finite": true,
+      "lambda": [
+        500.0,
+        500.0,
+        500.0
+      ],
+      "latent_shape": [
+        24,
+        5
+      ]
+    },
+    "move_exact_api_synthetic_fit": {
+      "finite": true,
+      "latent_shape": [
+        24,
+        5
+      ],
+      "synthetic_reconstruction_sse": 1347.213108024184
+    },
+    "move_selection_logic": {
+      "deterministic_folds": "PASS",
+      "one_se_retained": [
+        "A",
+        "B"
+      ],
+      "stage2_selected": "B"
+    },
+    "paper5_subspace_helper_replay": {
+      "factor_alignment": 1.0,
+      "factor_matches": [
+        {
+          "absolute_pearson": 1.0,
+          "estimated_factor_index": 0,
+          "signed_pearson": -1.0,
+          "truth_factor_index": 2
+        },
+        {
+          "absolute_pearson": 1.0,
+          "estimated_factor_index": 1,
+          "signed_pearson": 1.0,
+          "truth_factor_index": 0
+        },
+        {
+          "absolute_pearson": 1.0,
+          "estimated_factor_index": 2,
+          "signed_pearson": -1.0,
+          "truth_factor_index": 1
+        }
+      ],
+      "subspace_helper_replay": {
+        "helper_scalar_path": "mean_canonical_correlation",
+        "status": "PASS_FROZEN_HELPER_NAMED_SCALAR"
+      },
+      "subspace_recovery": 1.0
+    }
+  }
+}

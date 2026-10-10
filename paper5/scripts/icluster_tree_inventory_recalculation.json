@@ -1,0 +1,234 @@
+{
+  "basis": "User-provided diagnostic inventory, not direct access to Windows package files",
+  "inventory_count": 43,
+  "inventory_bytes": 23258345,
+  "frozen_windows_algorithm_sha256": "cad0c995150e778026fb227ac533a974d77106e431c65a3802aeda4254f6fd70",
+  "runner_v2_algorithm_sha256": "b2916d0dd122b71b04a849e0adcc1465df768d5b91204f910da7f098a3f65cd1",
+  "inventory": [
+    {
+      "relative_path": "DESCRIPTION",
+      "size_bytes": 864,
+      "sha256": "44b8767c30fe04610941d5529f28d807b8d471718d80a1c7b41a5465ff7130d4"
+    },
+    {
+      "relative_path": "INDEX",
+      "size_bytes": 2308,
+      "sha256": "a96023043dfb710e8bb682e4085ebf399bb315983bf2958c147f8bf3797b0c4e"
+    },
+    {
+      "relative_path": "MD5",
+      "size_bytes": 2278,
+      "sha256": "cf800aba519f19f325993d208f9bb9abcaf9ddc78bc76a90985882f9e18f1dee"
+    },
+    {
+      "relative_path": "Meta/Rd.rds",
+      "size_bytes": 1155,
+      "sha256": "2b320c581421cd8348cab190a9bf7715958b0cb5c96ff64d0f8ba67c9098a340"
+    },
+    {
+      "relative_path": "Meta/data.rds",
+      "size_bytes": 368,
+      "sha256": "6ab48170acdc701f4f8f8dadd86f9d338d5aeb272dbe64bdce354b8bd415f9ec"
+    },
+    {
+      "relative_path": "Meta/demo.rds",
+      "size_bytes": 127,
+      "sha256": "3e5a64e4bfed86a85e16a52730c1f8ca60260512cf319d835ce47f320ae50509"
+    },
+    {
+      "relative_path": "Meta/features.rds",
+      "size_bytes": 122,
+      "sha256": "d7c4768207ee4eb81ddf48f3c827ee84d899b8ef253771f8e64a1adf80ae35ed"
+    },
+    {
+      "relative_path": "Meta/hsearch.rds",
+      "size_bytes": 1088,
+      "sha256": "d81780dcd5a13e5778d62be8bd47545038bb7823e2702a76f3e78d77f6bb96d9"
+    },
+    {
+      "relative_path": "Meta/links.rds",
+      "size_bytes": 511,
+      "sha256": "5cd60114a924ecd20b54d03c1c6bb8e49ae05717e85ebd38fc01f77b1f8145ef"
+    },
+    {
+      "relative_path": "Meta/nsInfo.rds",
+      "size_bytes": 484,
+      "sha256": "ccc1657704943140e8961fb184aff2d275e180d3b0dd0a3fef5a48a6efdab85d"
+    },
+    {
+      "relative_path": "Meta/package.rds",
+      "size_bytes": 933,
+      "sha256": "b7814fa4228f17e4693783f03fbc1415250a8ae160d0bc05fc45c4e8f6722a1f"
+    },
+    {
+      "relative_path": "Meta/vignette.rds",
+      "size_bytes": 232,
+      "sha256": "39e08193b40d6855d99b00f9cd03418cffbe521c2d33ef32569b41557253f8be"
+    },
+    {
+      "relative_path": "NAMESPACE",
+      "size_bytes": 573,
+      "sha256": "7df2ec2f61e899115439e58ab33f4d3b34201b449d7b5e61be1a728adcf00d51"
+    },
+    {
+      "relative_path": "NEWS",
+      "size_bytes": 523,
+      "sha256": "7d5be99d47c02e378ff751b03c2ac405a42647a4fdecb20164cf58f4974deb51"
+    },
+    {
+      "relative_path": "R/iClusterPlus",
+      "size_bytes": 1058,
+      "sha256": "570ca456b280cdeb201ef5ebdf22dc8f80092e2c0c68e33c7f73340e420f3759"
+    },
+    {
+      "relative_path": "R/iClusterPlus.rdb",
+      "size_bytes": 160084,
+      "sha256": "4219e7dc55cb0bce7fd0e22cdfeffc9cbca4b293fbd36ebb6f3b4f2eee937cff"
+    },
+    {
+      "relative_path": "R/iClusterPlus.rdx",
+      "size_bytes": 739,
+      "sha256": "7e85042bd3a33e9da5712216e6e2e13ecc888d810feaf6cccdfacd64a1bc977c"
+    },
+    {
+      "relative_path": "data/Rdata.rdb",
+      "size_bytes": 7883192,
+      "sha256": "7691c2820a146e0f6e765ff189b01712d8493303deafde5787f359bae751fc06"
+    },
+    {
+      "relative_path": "data/Rdata.rds",
+      "size_bytes": 244,
+      "sha256": "8418997329772466eee7f15944a9ba6b417dcef88aef1db233e01dce5dfb9c1f"
+    },
+    {
+      "relative_path": "data/Rdata.rdx",
+      "size_bytes": 337,
+      "sha256": "9e555ee51c5bdde41a34a687940abfa34bf6a427aa3bb33bb1a9a61868e63ae1"
+    },
+    {
+      "relative_path": "data/datalist",
+      "size_bytes": 39,
+      "sha256": "59d4fd876d10d0f783c5ac26c9e47097a6e89e8dcc4937e7a9366c42d02e1111"
+    },
+    {
+      "relative_path": "demo/demo.R",
+      "size_bytes": 4524,
+      "sha256": "015c0b3f84ba0d6f02e771ad9c5c2aa661f3aae9194590d7dd28a07743c41b30"
+    },
+    {
+      "relative_path": "demo/iCluster.demo.R",
+      "size_bytes": 1341,
+      "sha256": "49c7a3529398422fcceb8987f948532141d0c6f6175103f5051da771927a8721"
+    },
+    {
+      "relative_path": "doc/Tutorial_iCluster2b_singleCell.Rmd",
+      "size_bytes": 8471,
+      "sha256": "cf34aec39675f670879a6ef75d53008eab6974d26d0dbb499c646bd188d6e0cc"
+    },
+    {
+      "relative_path": "doc/Tutorial_iCluster2b_singleCell.html",
+      "size_bytes": 3500871,
+      "sha256": "c4cd1979d0d8ed2329e9fa9feaa45f8cb08bfe3b9e0e3b22f2387f786820367a"
+    },
+    {
+      "relative_path": "doc/Tutorial_iClusterBayes2_GBM.Rmd",
+      "size_bytes": 9778,
+      "sha256": "95cac51f2f072fd7d0e9ffc528136719d054ff773b7ce089ea2fc72c5027e208"
+    },
+    {
+      "relative_path": "doc/Tutorial_iClusterBayes2_GBM.html",
+      "size_bytes": 2176197,
+      "sha256": "711ccedafeafca809aa968504272e2761d3081439f64064efef4ff6fc2be4fad"
+    },
+    {
+      "relative_path": "doc/Tutorial_iClusterPlus2_UM.Rmd",
+      "size_bytes": 13319,
+      "sha256": "bb6353e1c68a303021176890d7ba87ce945a35236ef41f99b427882b6e484a70"
+    },
+    {
+      "relative_path": "doc/Tutorial_iClusterPlus2_UM.html",
+      "size_bytes": 3470123,
+      "sha256": "c34edbf0315dd33e3dac6583d3c6329230f1546be7665ee1c8af7400fd3bd290"
+    },
+    {
+      "relative_path": "doc/iClusterPlus.Rnw",
+      "size_bytes": 4147,
+      "sha256": "11d82465b4e867beca3fcedb99376935a1a787c109e0d963e2c16e84a3048ea3"
+    },
+    {
+      "relative_path": "doc/iClusterPlus.pdf",
+      "size_bytes": 67623,
+      "sha256": "7d04ca98ee910e9536ac1cf80f27dff1f12db64c3cea5c68d0d2d7c4f092a824"
+    },
+    {
+      "relative_path": "doc/iManual.pdf",
+      "size_bytes": 5204976,
+      "sha256": "662c63f77f74e40301959cf2b90fd0f24602f95ba3e2917460260dbcbc7a6c6e"
+    },
+    {
+      "relative_path": "doc/index.html",
+      "size_bytes": 2472,
+      "sha256": "f0d0d090513e254a41c619789ca9ebf4c2a6099a03982f093e42bd34265f8f5f"
+    },
+    {
+      "relative_path": "help/AnIndex",
+      "size_bytes": 778,
+      "sha256": "5d78e9f18537a5e17d18246680bb7b0e596aa9142f0e09e68ccc066e47abfcae"
+    },
+    {
+      "relative_path": "help/aliases.rds",
+      "size_bytes": 365,
+      "sha256": "ee1626fc20dc3b1fada89543439db3e3e31dc18d1c6755924b0dbbf2bc7b13f1"
+    },
+    {
+      "relative_path": "help/iClusterPlus.rdb",
+      "size_bytes": 74015,
+      "sha256": "14aad350973bc22262a1e07036629cc043308e2390366b219ae8ed5df79e1112"
+    },
+    {
+      "relative_path": "help/iClusterPlus.rdx",
+      "size_bytes": 699,
+      "sha256": "d4f80effb734cfc5075e5ce40fa1109a1c0cfced51977791600eb6deae206003"
+    },
+    {
+      "relative_path": "help/paths.rds",
+      "size_bytes": 376,
+      "sha256": "c8bcfdc724c4e78b6e65ae7ed276e3c6d86c1628671744eb7cdb2374563842d8"
+    },
+    {
+      "relative_path": "html/00Index.html",
+      "size_bytes": 6090,
+      "sha256": "503515bc5a688aa976e961771b9f2553064205f1146ecfd16f120b9ec07cb7bd"
+    },
+    {
+      "relative_path": "html/R.css",
+      "size_bytes": 2133,
+      "sha256": "3d290675266eebeba6efff07db879d699843c80bf428f9e71000e2fc6078f5db"
+    },
+    {
+      "relative_path": "libs/x64/iClusterPlus.dll",
+      "size_bytes": 642560,
+      "sha256": "65dc08bc013e1054df7ba550b301d6ada6ad092d3008618445741530399a4b43"
+    },
+    {
+      "relative_path": "libs/x64/symbols.rds",
+      "size_bytes": 1870,
+      "sha256": "bf0dba0a56a51035981fdbcdb4d16f5ee77939ee340ee1226d5862688c9929a5"
+    },
+    {
+      "relative_path": "unitTests/test_iClusterPlus.R",
+      "size_bytes": 8358,
+      "sha256": "8a700551dffa8fc9911e4229f2beeea9ae3f370aeed173c9e78a1f710ab35844"
+    }
+  ],
+  "frozen_windows_algorithm": {
+    "ordering": "sorted Windows pathlib.Path objects (reproduced with PureWindowsPath for the supplied inventory)",
+    "per_file_record": "UTF8(relative_posix_path) + NUL + ASCII(decimal_size) + NUL + ASCII(lowercase_file_sha256_hex) + LF",
+    "matches_frozen_record": true
+  },
+  "runner_v2_algorithm": {
+    "ordering": "sorted case-sensitive relative POSIX path strings",
+    "per_file_record": "UTF8(relative_posix_path) + NUL + raw_32_byte_file_sha256 + NUL",
+    "matches_reported_runtime_error": true
+  }
+}

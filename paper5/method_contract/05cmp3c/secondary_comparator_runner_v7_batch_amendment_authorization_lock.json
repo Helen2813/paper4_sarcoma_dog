@@ -1,0 +1,1368 @@
+{
+  "authorizer_actions": {
+    "R_or_CUDA_started": false,
+    "existing_sources_preflights_contracts_modified": false,
+    "historical_numeric_metric_values_decoded": false,
+    "historical_scientific_result_bytes_hashed": true,
+    "model_fit_performed": false,
+    "new_scientific_result_contents_read": false,
+    "result_directory_metadata_checked": true,
+    "runner_or_helper_imported": false,
+    "simulation_npz_read": false
+  },
+  "authorizer_source": {
+    "path": "paper5/scripts/05cmp3c_freeze_secondary_comparator_runner_v7_batch_amendment_v1.py",
+    "sha256": "ccfabd1f5727a1a43305d1364632a48d6d9606d101461107810806467925fb29",
+    "size_bytes": 121632
+  },
+  "batch_amendment": {
+    "evidence_sha256": "b782b74dd0bfd1a58a2a6b999b303e75a42fb5c99bbdb50c510658e1d7536819",
+    "old_MOVE_singleton_failures": 41,
+    "old_iCluster2b_PASS": 41,
+    "old_metric_values_decoded": false,
+    "old_records_transplanted_into_new_results": false,
+    "old_shard_bytes_hashed": true,
+    "old_shard_count": 82,
+    "status": "PASS_EXACT_V6_HISTORY_PRESERVED"
+  },
+  "batch_amendment_evidence": {
+    "historical_access_disclosure": {
+      "R_called": false,
+      "authorization_created": false,
+      "candidate_loader_substituted_in_memory_for_synthetic_probe_only": true,
+      "existing_sources_results_locks_modified": false,
+      "frozen_npz_or_truth_opened": false,
+      "installed_MOVE_source_bytes_copied_for_review": true,
+      "old_numeric_metrics_compared_or_exported": false,
+      "old_shard_JSON_bytes_read_and_parsed": true,
+      "old_shard_hash_status_and_errors_inspected": true,
+      "runner_imported_under_non_main_name": true,
+      "scientific_fit_performed": false
+    },
+    "historical_shards": {
+      "other_files": [],
+      "records": [
+        {
+          "attempt_count": null,
+          "dataset_id": "A01_N62_STANDARD__R11__S1956851480",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A01_N62_STANDARD__R11__S1956851480.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "9711723037ff3c88a5e76a05442c704a782eed20c7499029e8d097afc312d25d",
+          "size_bytes": 8025,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A01_N62_STANDARD__R12__S2151775064",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A01_N62_STANDARD__R12__S2151775064.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "3051f6a1910454527f12c2baad7712c61dd7c86885c95daea8c483bd0fc1d7a4",
+          "size_bytes": 8027,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A01_N62_STANDARD__R13__S2503617495",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A01_N62_STANDARD__R13__S2503617495.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "a5fba24fb9553687eec7e2172c0b25240147246c90adc1f8a4502b5a923e9620",
+          "size_bytes": 8027,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A01_N62_STANDARD__R14__S248501019",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A01_N62_STANDARD__R14__S248501019.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "dbeceb9c3f00621857bb9cc5a73035b2b7959481a67d2c14234279a9c026389e",
+          "size_bytes": 8023,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A01_N62_STANDARD__R15__S2956704822",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A01_N62_STANDARD__R15__S2956704822.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "9e14fdaed2ebb1a4737f69894d8425d6e417a6a123f18b97b90955d72fe25005",
+          "size_bytes": 8027,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A01_N62_STANDARD__R16__S4220044469",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A01_N62_STANDARD__R16__S4220044469.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "1637bf5e57be83ba35aa71225ceceda8a579aeb771fd2b5942f2294e37721e11",
+          "size_bytes": 8025,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A01_N62_STANDARD__R17__S3787896917",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A01_N62_STANDARD__R17__S3787896917.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "75d933ca479f69e806d8c22906614800fab8f2deef769469c99e356263c29425",
+          "size_bytes": 8026,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A01_N62_STANDARD__R18__S1834030575",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A01_N62_STANDARD__R18__S1834030575.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "4322e8c88dc5d44febeac770424ba59e759fe3f1fd9abb124a5e624eaa072e45",
+          "size_bytes": 8026,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A01_N62_STANDARD__R19__S676714901",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A01_N62_STANDARD__R19__S676714901.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "637ba7a6d611cc2c5c7b673f81e97c5d764f09563734aaaf2fe802a7e2f6c632",
+          "size_bytes": 8023,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A01_N62_STANDARD__R20__S3775451817",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A01_N62_STANDARD__R20__S3775451817.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "d102f954d091b167603880f199fdc10357b58e63f2b932042d9fc807a7f9685b",
+          "size_bytes": 8026,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A02_SHARED_RHO05__R11__S736203244",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A02_SHARED_RHO05__R11__S736203244.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "94c6b085dcd091b2f8ec1fc0770c832f8289ae3a278c2b06ece353ba536c60ba",
+          "size_bytes": 8032,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A02_SHARED_RHO05__R12__S825591582",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A02_SHARED_RHO05__R12__S825591582.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "fd8718d5259b33f48beff7ade222e4d8ed1640a9a5537a48016f6e5577c449cd",
+          "size_bytes": 8033,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A02_SHARED_RHO05__R13__S2035530975",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A02_SHARED_RHO05__R13__S2035530975.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "c37dc9ceb314d7eb6738fb24eaf1e24f6a5673e0d5a41b54aeccfd1f4c73e179",
+          "size_bytes": 8035,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A02_SHARED_RHO05__R14__S2194705193",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A02_SHARED_RHO05__R14__S2194705193.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "f44c5377bd0e9e46a31bf20563a270cf695aa0ffa4d81bd22d333e60441d9287",
+          "size_bytes": 8037,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A02_SHARED_RHO05__R15__S2774419216",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A02_SHARED_RHO05__R15__S2774419216.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "eae6203d000f57c0d9ea763ba14dd94b020efdeeef3db2b3b78ca9bca22bc3e2",
+          "size_bytes": 8037,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A02_SHARED_RHO05__R16__S3430676483",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A02_SHARED_RHO05__R16__S3430676483.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "53affe1700ba6ddf70124c8b165a1df1ce08575e85cf6e26a006e0dc599fba5f",
+          "size_bytes": 8036,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A02_SHARED_RHO05__R17__S3398246703",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A02_SHARED_RHO05__R17__S3398246703.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "71b6ce3871333936c0da06fa3e40064b36e6eadb1a5d0d3f5115e30ab31d1713",
+          "size_bytes": 8036,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A02_SHARED_RHO05__R18__S3480902876",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A02_SHARED_RHO05__R18__S3480902876.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "79fcdfb050bfbd6f27bc53a79d988a4e0c4d9c6c95d5d91f113ad416a5b879ff",
+          "size_bytes": 8036,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A02_SHARED_RHO05__R19__S3600454974",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A02_SHARED_RHO05__R19__S3600454974.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "90720ccf45f57311832717dc63f6db61648a1d9db35ececf9ee30a614cc7c394",
+          "size_bytes": 8036,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A02_SHARED_RHO05__R20__S1881944730",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A02_SHARED_RHO05__R20__S1881944730.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "bc6b4eaf770ad8263c85fc33920643b9c030d5f628ccccb48d06f22edbef64e3",
+          "size_bytes": 8036,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A03_ROTATIONAL_RHO08__R11__S2231306999",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A03_ROTATIONAL_RHO08__R11__S2231306999.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "d73261b5bfee7ff764e6c275f705f0a9856f848c24e3913e51920610f9ed6f01",
+          "size_bytes": 8030,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A03_ROTATIONAL_RHO08__R12__S1500210888",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A03_ROTATIONAL_RHO08__R12__S1500210888.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "f2e2cebf2ebaac95f703d0aa31e9d278e87755ab50184bf753fbd9a02dbe374b",
+          "size_bytes": 8028,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A03_ROTATIONAL_RHO08__R13__S596820742",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A03_ROTATIONAL_RHO08__R13__S596820742.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "949e5ebb3baf46088dfc348ead45a56e2ab9d4e4275391e2cbf9d3bb13f9bbd5",
+          "size_bytes": 8027,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A03_ROTATIONAL_RHO08__R14__S1692752220",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A03_ROTATIONAL_RHO08__R14__S1692752220.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "18d07b97d038b284d877790e02d86f29f6f64f4c2d5f44e104d2979e26f03889",
+          "size_bytes": 8028,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A03_ROTATIONAL_RHO08__R15__S3780506108",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A03_ROTATIONAL_RHO08__R15__S3780506108.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "4a46b4bb1c97f78555250d3b3f880d48f010a7b089b61b960f7019289ba34022",
+          "size_bytes": 8028,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A03_ROTATIONAL_RHO08__R16__S2233887688",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A03_ROTATIONAL_RHO08__R16__S2233887688.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "db5455ce0add7214db6cb785d3634e208215cfc55dbeba4587b1375dbd94f7ae",
+          "size_bytes": 8030,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A03_ROTATIONAL_RHO08__R17__S2046008660",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A03_ROTATIONAL_RHO08__R17__S2046008660.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "3edaeb6a5dd9cd57b2885c820d4ef156d8b113369685b0e063a4e18917cfaa0f",
+          "size_bytes": 8029,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A03_ROTATIONAL_RHO08__R18__S1306969488",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A03_ROTATIONAL_RHO08__R18__S1306969488.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "69a98cdcaca836a8dde0d39741f8d957b2aa68b3d9a041aec8119c24137788e0",
+          "size_bytes": 8027,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A03_ROTATIONAL_RHO08__R19__S4025994634",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A03_ROTATIONAL_RHO08__R19__S4025994634.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "6fcd43f6b12d6471862b44bc5ae089c986793d5e8ca6504a3d2af2fec3971a75",
+          "size_bytes": 8029,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A03_ROTATIONAL_RHO08__R20__S4284512387",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A03_ROTATIONAL_RHO08__R20__S4284512387.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "e63c764abafa021c83d643afffc96354a4781bc168506270e011b4e4c4036b0b",
+          "size_bytes": 8028,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A04_PARTIAL_RNA_METH__R11__S3837701889",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A04_PARTIAL_RNA_METH__R11__S3837701889.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "e016443a84c4ad2eec483e98743b5a368175f5da93cfa23753c20a613df160a8",
+          "size_bytes": 8039,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A04_PARTIAL_RNA_METH__R12__S3798729190",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A04_PARTIAL_RNA_METH__R12__S3798729190.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "d74df4e74694e88a126152d50c5752db6f0ea2b5643146a0ae9e6405107d0b28",
+          "size_bytes": 8039,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A04_PARTIAL_RNA_METH__R13__S1328920472",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A04_PARTIAL_RNA_METH__R13__S1328920472.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "5eeb37e4964681057c0f6398b784e411281d1c10c7b720e721e951f61c36faf5",
+          "size_bytes": 8039,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A04_PARTIAL_RNA_METH__R14__S2229041992",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A04_PARTIAL_RNA_METH__R14__S2229041992.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "61e5db523d889b2740f259670bb26384f4a36aafd9cbf3025462f0ea35adbb22",
+          "size_bytes": 8040,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A04_PARTIAL_RNA_METH__R15__S633780796",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A04_PARTIAL_RNA_METH__R15__S633780796.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "fc9acfe6e3bc4c5cb6d9f4b43e30adb6f1b6c3777b315fc73a6e45c476709e0e",
+          "size_bytes": 8037,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A04_PARTIAL_RNA_METH__R16__S414669577",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A04_PARTIAL_RNA_METH__R16__S414669577.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "e05c42a88b680576b9023bfdc9bd86d754f20933b70ec8de77ced374371e2acf",
+          "size_bytes": 8037,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A04_PARTIAL_RNA_METH__R17__S3123056078",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A04_PARTIAL_RNA_METH__R17__S3123056078.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "97f3b0f542649fb68b111cb5dc96a23b6e00fda52a9cd0f1613372ffa4a60654",
+          "size_bytes": 8040,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A04_PARTIAL_RNA_METH__R18__S2625537233",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A04_PARTIAL_RNA_METH__R18__S2625537233.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "a15a3cb98073a9b7f777c2972b1f624e0cec9d95f68f915545d48306da0f5267",
+          "size_bytes": 8040,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A04_PARTIAL_RNA_METH__R19__S1486566318",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A04_PARTIAL_RNA_METH__R19__S1486566318.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "db2c887a32b9f9a9dfd3c64da8ea357eca4c5c47c58a65cb55e38387fecc073e",
+          "size_bytes": 8038,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A04_PARTIAL_RNA_METH__R20__S1003318659",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A04_PARTIAL_RNA_METH__R20__S1003318659.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "8a799d50c47bcfb12166c81bc312750727992bf62507fa5a99dd569d87d0a29e",
+          "size_bytes": 8039,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": null,
+          "dataset_id": "A05_PARTIAL_RNA_CNV__R11__S1811950922",
+          "first_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "method": "MOVE",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/MOVE/A05_PARTIAL_RNA_CNV__R11__S1811950922.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "second_error_class": "SINGLETON_BATCHNORM_DURING_MOVE_SELECTION",
+          "sha256": "16bcde95b636254eca17dc3862ada4e4fc290de7961bfb6606a0e76c133b239e",
+          "size_bytes": 8036,
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A01_N62_STANDARD__R11__S1956851480",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A01_N62_STANDARD__R11__S1956851480.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "63136999957249f8d4a41a5e4b694f777710bee6afa1877ca28be98895a91efc",
+          "size_bytes": 3622,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A01_N62_STANDARD__R12__S2151775064",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A01_N62_STANDARD__R12__S2151775064.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "608adf6d335ee0418438383f6bd06a021093965a7797ac0e51bedffd570dc357",
+          "size_bytes": 3623,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A01_N62_STANDARD__R13__S2503617495",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A01_N62_STANDARD__R13__S2503617495.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "5f18229253e78870c161249f6cd84db3bda60285d76fc86d912dd16540ee3ee0",
+          "size_bytes": 3621,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A01_N62_STANDARD__R14__S248501019",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A01_N62_STANDARD__R14__S248501019.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "619f22e7f38895b880b7687d361ed62d2d7f961840198d546d77886fdd278e8b",
+          "size_bytes": 3620,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A01_N62_STANDARD__R15__S2956704822",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A01_N62_STANDARD__R15__S2956704822.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "3b2e4f2d122678f2e81f4dccb1a6c3fcf21c39f69f0356158500da1ea0f8a888",
+          "size_bytes": 3622,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A01_N62_STANDARD__R16__S4220044469",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A01_N62_STANDARD__R16__S4220044469.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "1e91bd6612500308d8a114eabaea382a712e5834d58c0b93f694f7d038cebb9d",
+          "size_bytes": 3617,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A01_N62_STANDARD__R17__S3787896917",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A01_N62_STANDARD__R17__S3787896917.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "a2c6e10ae42eaa360753eea6f03afc3877599212e25a9b6717800fc4531db185",
+          "size_bytes": 3622,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A01_N62_STANDARD__R18__S1834030575",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A01_N62_STANDARD__R18__S1834030575.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "5534e1f53a89225f09f512db2f0bfbec51973cb8b7c1b0f5a5e9a925e8fa93f1",
+          "size_bytes": 3622,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A01_N62_STANDARD__R19__S676714901",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A01_N62_STANDARD__R19__S676714901.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "3b5c71cb73c605ecccf783a888a583462720a4e14bc22a4020040955c512381b",
+          "size_bytes": 3618,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A01_N62_STANDARD__R20__S3775451817",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A01_N62_STANDARD__R20__S3775451817.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "6ea298ba63496f5ad80a11ace3e96811293a0dd9787929bcf25ed5b3931cf615",
+          "size_bytes": 3623,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A02_SHARED_RHO05__R11__S736203244",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A02_SHARED_RHO05__R11__S736203244.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "b78d0924cb210d92d51d16c357311667f658d088dde9e33203c748065c1480da",
+          "size_bytes": 3625,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A02_SHARED_RHO05__R12__S825591582",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A02_SHARED_RHO05__R12__S825591582.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "79d5fd7d3bfed17a6361d638d992f3553fe913e698815628648b1e00ca3df11c",
+          "size_bytes": 3627,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A02_SHARED_RHO05__R13__S2035530975",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A02_SHARED_RHO05__R13__S2035530975.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "d017dfcb7e89230722d5792744fd46ba8c2e9c91db1f09181e27cd645cf4e644",
+          "size_bytes": 3630,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A02_SHARED_RHO05__R14__S2194705193",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A02_SHARED_RHO05__R14__S2194705193.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "0abbe38d2d65800473e7e9627061aab55d4be8963ec88601625526588c5d8d08",
+          "size_bytes": 3630,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A02_SHARED_RHO05__R15__S2774419216",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A02_SHARED_RHO05__R15__S2774419216.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "b3e97a831d6bd9d24ee79f3d563695a012802f8ddd0c3091312733effeced08b",
+          "size_bytes": 3633,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A02_SHARED_RHO05__R16__S3430676483",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A02_SHARED_RHO05__R16__S3430676483.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "c7c1bfe355d2607838424fef183b1a3f101b232b41912a9180f71a79aa82f270",
+          "size_bytes": 3634,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A02_SHARED_RHO05__R17__S3398246703",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A02_SHARED_RHO05__R17__S3398246703.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "1217a0b98c6a22d96441ea22e5d6857ea35e94b6a0f2ba49d2903c74934943c8",
+          "size_bytes": 3632,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A02_SHARED_RHO05__R18__S3480902876",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A02_SHARED_RHO05__R18__S3480902876.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "0bbe00e4bdbbfb17d86fb06d033f7af8b3af98cc27df8f71e22509700e245989",
+          "size_bytes": 3633,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A02_SHARED_RHO05__R19__S3600454974",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A02_SHARED_RHO05__R19__S3600454974.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "3a1d53c6559d5f1d47f30353c8176f098266330f04afe4f67720501eb2fadbe6",
+          "size_bytes": 3632,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A02_SHARED_RHO05__R20__S1881944730",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A02_SHARED_RHO05__R20__S1881944730.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "17d76c6ab4650493be79eedf21634ba0151dc3c87186f306e40ec2bc6005942b",
+          "size_bytes": 3631,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A03_ROTATIONAL_RHO08__R11__S2231306999",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A03_ROTATIONAL_RHO08__R11__S2231306999.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "84ecfc6f5b0a8f8c17787cb24bb4422826b6555b76ef087632afadafe452cfe3",
+          "size_bytes": 2885,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A03_ROTATIONAL_RHO08__R12__S1500210888",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A03_ROTATIONAL_RHO08__R12__S1500210888.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "d89c7af39206b09361f2f6a7d55b1620c4f63a712b4f2f4638ac7c5b49e53e2c",
+          "size_bytes": 2884,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A03_ROTATIONAL_RHO08__R13__S596820742",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A03_ROTATIONAL_RHO08__R13__S596820742.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "16603a38b4664af727d99e4a67e56470bd8deffb6f0e9ca5e8f3a4a741c5c0a8",
+          "size_bytes": 2883,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A03_ROTATIONAL_RHO08__R14__S1692752220",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A03_ROTATIONAL_RHO08__R14__S1692752220.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "e2b495bbf753bd001202bf0bfbceb64641a6557058a4ea08fabd9621ffd0f8bd",
+          "size_bytes": 2884,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A03_ROTATIONAL_RHO08__R15__S3780506108",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A03_ROTATIONAL_RHO08__R15__S3780506108.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "b20f78e57816379b7c8bd8bc2ac13ce6e83b86c4d2f4b74a43908881fb85ebc8",
+          "size_bytes": 2884,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A03_ROTATIONAL_RHO08__R16__S2233887688",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A03_ROTATIONAL_RHO08__R16__S2233887688.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "bbef8e6189dea037c68d2d357ddf3c6a2bf5211338e03bc851c12e48ff5b5359",
+          "size_bytes": 2884,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A03_ROTATIONAL_RHO08__R17__S2046008660",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A03_ROTATIONAL_RHO08__R17__S2046008660.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "ee517b1e017a952ce31150100d1861c7a1b11dfd8886357a2c8842b61a760741",
+          "size_bytes": 2884,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A03_ROTATIONAL_RHO08__R18__S1306969488",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A03_ROTATIONAL_RHO08__R18__S1306969488.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "b6aceb7740f6d142c75b76c08d0b970a618989090b3a1a23d516830bbb76b0a6",
+          "size_bytes": 2883,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A03_ROTATIONAL_RHO08__R19__S4025994634",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A03_ROTATIONAL_RHO08__R19__S4025994634.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "64b113ffc36d489a25dea2597b8d39846849885421c9b9d8496e153e0b82df50",
+          "size_bytes": 2883,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A03_ROTATIONAL_RHO08__R20__S4284512387",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A03_ROTATIONAL_RHO08__R20__S4284512387.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "743c5862ccfad3ca55aa0a9ac4763fca7223ed4e35d8116a02a00cd468b83249",
+          "size_bytes": 2882,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A04_PARTIAL_RNA_METH__R11__S3837701889",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A04_PARTIAL_RNA_METH__R11__S3837701889.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "53ba8628a914c64ef14c48af4f9c5ebbd0cc005fa4579a311b29bb4ce8d0632b",
+          "size_bytes": 3255,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A04_PARTIAL_RNA_METH__R12__S3798729190",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A04_PARTIAL_RNA_METH__R12__S3798729190.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "3d567794d3408ccf9228235e1c20d8ce247ecac622fcdb713f37ec6588dc2729",
+          "size_bytes": 3257,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A04_PARTIAL_RNA_METH__R13__S1328920472",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A04_PARTIAL_RNA_METH__R13__S1328920472.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "07348619b946a0c4c453be0ae2b564ae5d872508e37a89c1162277116200f8dc",
+          "size_bytes": 3260,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A04_PARTIAL_RNA_METH__R14__S2229041992",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A04_PARTIAL_RNA_METH__R14__S2229041992.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "54e98d1a2edb4f72a4ff33dcb1932d2ae4364a5823328b7793ae5be8cea3c456",
+          "size_bytes": 3260,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A04_PARTIAL_RNA_METH__R15__S633780796",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A04_PARTIAL_RNA_METH__R15__S633780796.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "ce0fc89b6e944425c5392f1227281eb95accec8bf0b76752e18115011cc34ad6",
+          "size_bytes": 3256,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A04_PARTIAL_RNA_METH__R16__S414669577",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A04_PARTIAL_RNA_METH__R16__S414669577.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "7b8f919ff085bd12a22b528df68ad2dcf1c94f5b746a169fc70a567aaa6107f7",
+          "size_bytes": 3256,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A04_PARTIAL_RNA_METH__R17__S3123056078",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A04_PARTIAL_RNA_METH__R17__S3123056078.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "cc06e06c398474b1cbdd545d9b95f708291b80278fdb53a0c91e6bcf71e08d58",
+          "size_bytes": 3261,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A04_PARTIAL_RNA_METH__R18__S2625537233",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A04_PARTIAL_RNA_METH__R18__S2625537233.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "e94d4f482d8eba83e91dbc9acdd2dbdbca647860b224b8e5a8f4c3e84c3384bc",
+          "size_bytes": 3262,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A04_PARTIAL_RNA_METH__R19__S1486566318",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A04_PARTIAL_RNA_METH__R19__S1486566318.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "ed251f6bf6ac577809e0eb2bb15f97c4fe0417ff3f7fdff061e8ac6cdf42a604",
+          "size_bytes": 3259,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A04_PARTIAL_RNA_METH__R20__S1003318659",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A04_PARTIAL_RNA_METH__R20__S1003318659.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "b15562e5331e04ac28c45e9dd19a67f8b933a4d3d5912ad113072cf5d1ebc4f3",
+          "size_bytes": 3261,
+          "status": "PASS"
+        },
+        {
+          "attempt_count": 1,
+          "dataset_id": "A05_PARTIAL_RNA_CNV__R11__S1811950922",
+          "method": "iCluster2b",
+          "path": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1/shards/iCluster2b/A05_PARTIAL_RNA_CNV__R11__S1811950922.json",
+          "runner_sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+          "sha256": "e41525b9c8260629bfc34143686bbcb364d29a298726e647a6c5c5aef0109eec",
+          "size_bytes": 3258,
+          "status": "PASS"
+        }
+      ],
+      "status_counts": [
+        {
+          "count": 41,
+          "method": "MOVE",
+          "status": "FAILED_AFTER_IDENTICAL_RETRY"
+        },
+        {
+          "count": 41,
+          "method": "iCluster2b",
+          "status": "PASS"
+        }
+      ]
+    },
+    "policy": {
+      "action": "move the final index of the penultimate batch to the front of the final singleton batch",
+      "all_samples_exactly_once_per_epoch": true,
+      "base_batch_size_rule": "min(16, n_fit_samples)",
+      "batch_count_preserved": true,
+      "batchnorm_training_retained": true,
+      "drop_last_enabled": false,
+      "example_n49_after": [
+        16,
+        16,
+        15,
+        2
+      ],
+      "example_n49_before": [
+        16,
+        16,
+        16,
+        1
+      ],
+      "flattened_random_order_preserved": true,
+      "historical_final_lock_scope": "paper5/method_contract/05cmp4",
+      "new_execution": "recompute BOTH methods for all 360 datasets into a fresh namespace; never transplant old PASS records",
+      "new_result_lock_dir": "paper5/method_contract/05cmp4_v7_batch_rebalance",
+      "new_result_root": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v7_batch_rebalance",
+      "numerical_training_equivalence_claimed": false,
+      "old_result_root": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1",
+      "outcome_based_policy_search": false,
+      "policy_id": "MOVE_TRAIN_SINGLETON_TAIL_REBALANCE_V1",
+      "prior_failure_policy": "v6 records remain immutable and disclosed; v7 is a distinct amended execution",
+      "projection_loader_changed": false,
+      "sampler_generator_stream_preserved": true,
+      "scientific_epochs": 300,
+      "scope": "all 360 datasets under the same rule; no per-dataset rescue",
+      "training_batch_boundaries_changed": true,
+      "trigger": "training only, final batch contains exactly one sample"
+    },
+    "probe_status": "SYNTHETIC_CANDIDATE_PASS_NOT_AUTHORIZED",
+    "qualification": "Actual v6 scientific iCluster2b outputs already exist. Amendment was selected from runtime failure mechanics and artificial probes, not comparative numeric results. This is not a pre-first-fit freeze.",
+    "reviewed_report_sha256": "6141365b39ea92b6003ca359c94b8129fff11b0269df8a33a522a0d59e6f3d28",
+    "reviewed_zip_sha256": "1bcdd158a6255ddc85857b2b3a6694fb51b912c2557ba268bd7e633eb8766a3f",
+    "source_snapshots": {
+      "paper5/comparator_envs/move_1_5_0/Lib/site-packages/move/data/dataloaders.py": {
+        "path": "paper5/comparator_envs/move_1_5_0/Lib/site-packages/move/data/dataloaders.py",
+        "sha256": "c33791e4a4b468d8081a7aea7975e8f93b33251a64bd3844bb77bd54bd75c982",
+        "size_bytes": 6780
+      },
+      "paper5/comparator_envs/move_1_5_0/Lib/site-packages/move/models/vae.py": {
+        "path": "paper5/comparator_envs/move_1_5_0/Lib/site-packages/move/models/vae.py",
+        "sha256": "a73248339aef802a80e484849f0ccf72fc87b147c883c35bdb41561ed9b071a9",
+        "size_bytes": 26970
+      },
+      "paper5/comparator_envs/move_1_5_0/Lib/site-packages/move/training/training_loop.py": {
+        "path": "paper5/comparator_envs/move_1_5_0/Lib/site-packages/move/training/training_loop.py",
+        "sha256": "6dbd05437950e6a33f612f5bf969bb42fee30302d0a7395c56f558437b24caf6",
+        "size_bytes": 3724
+      },
+      "paper5/method_contract/05b_v2/architecture_screening_data_manifest.csv": {
+        "path": "paper5/method_contract/05b_v2/architecture_screening_data_manifest.csv",
+        "sha256": "f3980e88aff408b65cbfce96aca50bad4fc08ecece2bc42bbc04f365c35d9c87",
+        "size_bytes": 507713
+      },
+      "paper5/method_contract/05cmp1/secondary_comparator_implementation_contract.json": {
+        "path": "paper5/method_contract/05cmp1/secondary_comparator_implementation_contract.json",
+        "sha256": "418259cedd36cbd1913a4ff1ae9874a3decfddbb7a75e9b3bca2e9623f0aca95",
+        "size_bytes": 12328
+      },
+      "paper5/method_contract/05cmp1/secondary_comparator_implementation_contract_lock.json": {
+        "path": "paper5/method_contract/05cmp1/secondary_comparator_implementation_contract_lock.json",
+        "sha256": "37e0db502a88f7beab52f1457cb0c5367091314faa6b86c7796810d883f31648",
+        "size_bytes": 4937
+      },
+      "paper5/method_contract/05cmp1/secondary_comparator_implementation_registry.csv": {
+        "path": "paper5/method_contract/05cmp1/secondary_comparator_implementation_registry.csv",
+        "sha256": "85dbc68289bae71b9cf4f8a01af34b09d50750fde97f0b57ef3b6c57ebf299b0",
+        "size_bytes": 955
+      },
+      "paper5/method_contract/05cmp1/secondary_comparator_metric_eligibility_registry.csv": {
+        "path": "paper5/method_contract/05cmp1/secondary_comparator_metric_eligibility_registry.csv",
+        "sha256": "8802d8d4bba20cfd4acc3263b12f0a119bcef4e4107164e6f944d0a01d9bef46",
+        "size_bytes": 1474
+      },
+      "paper5/method_contract/05cmp1/secondary_comparator_scientific_adapter_registry.csv": {
+        "path": "paper5/method_contract/05cmp1/secondary_comparator_scientific_adapter_registry.csv",
+        "sha256": "f30c73d19627d357073786b75f7b8141a757becf9d2413491518948cc099ea48",
+        "size_bytes": 714
+      },
+      "paper5/method_contract/05cmp1/secondary_comparator_seed_registry.csv": {
+        "path": "paper5/method_contract/05cmp1/secondary_comparator_seed_registry.csv",
+        "sha256": "2c70c516ad07496a71fe513139b357b92f46fd746bea5258f1fb237028c4e87c",
+        "size_bytes": 978
+      },
+      "paper5/method_contract/05cmp2/secondary_comparator_confirmatory_benchmark_contract.json": {
+        "path": "paper5/method_contract/05cmp2/secondary_comparator_confirmatory_benchmark_contract.json",
+        "sha256": "8e0a4d95a1f554af8e9c5188ca683d32c336c6bd5b797b3a91426adbe4ee9fc2",
+        "size_bytes": 9406
+      },
+      "paper5/method_contract/05cmp2/secondary_comparator_confirmatory_benchmark_contract_lock.json": {
+        "path": "paper5/method_contract/05cmp2/secondary_comparator_confirmatory_benchmark_contract_lock.json",
+        "sha256": "a55d3e3498d9cc6a4acaaab64e5098007b093071b60999c82cf8e124a0301b5b",
+        "size_bytes": 1329
+      },
+      "paper5/method_contract/05cmp2/secondary_comparator_confirmatory_dataset_registry.csv": {
+        "path": "paper5/method_contract/05cmp2/secondary_comparator_confirmatory_dataset_registry.csv",
+        "sha256": "4b72b94c4df49dbbbd1a90d035855e628a4fa50eede0451dfe796227bda53314",
+        "size_bytes": 269402
+      },
+      "paper5/method_contract/05cmp3_preflight/secondary_comparator_runner_synthetic_preflight_v5.json": {
+        "path": "paper5/method_contract/05cmp3_preflight/secondary_comparator_runner_synthetic_preflight_v5.json",
+        "sha256": "7ec4e687151a4af67b718a1ee13e521109a0071be91de2e751e9d0bb02b96b94",
+        "size_bytes": 3062
+      },
+      "paper5/method_contract/05cmp3_preflight/secondary_comparator_runner_synthetic_preflight_v6.json": {
+        "path": "paper5/method_contract/05cmp3_preflight/secondary_comparator_runner_synthetic_preflight_v6.json",
+        "sha256": "e213d756bfcbef5ee01e46e72cec361ca39b3656674b8cba32afd5b821e49179",
+        "size_bytes": 5876
+      },
+      "paper5/method_contract/05cmp3a/secondary_comparator_runner_source_authorization_lock.json": {
+        "path": "paper5/method_contract/05cmp3a/secondary_comparator_runner_source_authorization_lock.json",
+        "sha256": "5dbb075b3467fa865cb2b0570a79c2419e952a2c8c001eb04287d8ade5fba319",
+        "size_bytes": 6616
+      },
+      "paper5/method_contract/05cmp3b/secondary_comparator_runner_v6_source_authorization_lock.json": {
+        "path": "paper5/method_contract/05cmp3b/secondary_comparator_runner_v6_source_authorization_lock.json",
+        "sha256": "cca95c069ae27b1c8adf7ad17d577ba38e80f3f5df778fe60068c67e3062675e",
+        "size_bytes": 8458
+      },
+      "paper5/scripts/05b_generate_small_n_multiomics_simulations_v2.py": {
+        "path": "paper5/scripts/05b_generate_small_n_multiomics_simulations_v2.py",
+        "sha256": "b4adb1fcb32b65a998ee70e1b72d52e13490194c7ad8e5ddd802b95bf05a28db",
+        "size_bytes": 109309
+      },
+      "paper5/scripts/05c1_fit_linear_simulation_baselines.py": {
+        "path": "paper5/scripts/05c1_fit_linear_simulation_baselines.py",
+        "sha256": "c2c91b4ad274f78ccc369e6fca765102285cf3d9c8191f3c33f4a450b7426367",
+        "size_bytes": 126641
+      },
+      "paper5/scripts/05cmp3_run_secondary_comparator_confirmatory_benchmark_v5.py": {
+        "path": "paper5/scripts/05cmp3_run_secondary_comparator_confirmatory_benchmark_v5.py",
+        "sha256": "802c131dfda75effb4e60dd38ebf05512fa5da6c1b3eec97c0c499b3c4e869f5",
+        "size_bytes": 113760
+      },
+      "paper5/scripts/05cmp3_run_secondary_comparator_confirmatory_benchmark_v6.py": {
+        "path": "paper5/scripts/05cmp3_run_secondary_comparator_confirmatory_benchmark_v6.py",
+        "sha256": "26c2a2c7efc84e52969ffc2c1f2380406b4a42b00e756fbccd798bc0c433b44a",
+        "size_bytes": 128331
+      },
+      "paper5/scripts/05cmp3a_freeze_secondary_comparator_runner_v5_source_authorization_v1.py": {
+        "path": "paper5/scripts/05cmp3a_freeze_secondary_comparator_runner_v5_source_authorization_v1.py",
+        "sha256": "526bf30c101dea38cb26d07c9acd625892febebcd697fb466be0c4c1fe653bfa",
+        "size_bytes": 23750
+      },
+      "paper5/scripts/cmp3bncheck.py": {
+        "path": "paper5/scripts/cmp3bncheck.py",
+        "sha256": "de6255d94b7b200f8dfcdfa6eb15a1c88b887e011572be45ab73bcf52dad3c79",
+        "size_bytes": 25768
+      }
+    },
+    "status": "REVIEWED_POST_V6_BATCH_IMPLEMENTATION_AMENDMENT_EVIDENCE",
+    "synthetic_probe_summary": {
+      "canonical_latent_shape": [
+        62,
+        5
+      ],
+      "completed_actual_synthetic_fit_count": 24,
+      "fixture": {
+        "features": [
+          500,
+          4000,
+          500
+        ],
+        "fold_test_sizes": [
+          13,
+          13,
+          12,
+          12,
+          12
+        ],
+        "fold_train_sizes": [
+          49,
+          49,
+          50,
+          50,
+          50
+        ],
+        "fresh_seed": 740091,
+        "n": 62
+      },
+      "frozen_scientific_epochs_unchanged": 300,
+      "scientific_metric_values_evaluated": false,
+      "status": "PASS_CANDIDATE_ACTUAL_MOVE_SYNTHETIC_SELECTION",
+      "synthetic_epochs": 2
+    }
+  },
+  "batch_policy": {
+    "action": "move the final index of the penultimate batch to the front of the final singleton batch",
+    "all_samples_exactly_once_per_epoch": true,
+    "base_batch_size_rule": "min(16, n_fit_samples)",
+    "batch_count_preserved": true,
+    "batchnorm_training_retained": true,
+    "drop_last_enabled": false,
+    "example_n49_after": [
+      16,
+      16,
+      15,
+      2
+    ],
+    "example_n49_before": [
+      16,
+      16,
+      16,
+      1
+    ],
+    "flattened_random_order_preserved": true,
+    "historical_final_lock_scope": "paper5/method_contract/05cmp4",
+    "new_execution": "recompute BOTH methods for all 360 datasets into a fresh namespace; never transplant old PASS records",
+    "new_result_lock_dir": "paper5/method_contract/05cmp4_v7_batch_rebalance",
+    "new_result_root": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v7_batch_rebalance",
+    "numerical_training_equivalence_claimed": false,
+    "old_result_root": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v1",
+    "outcome_based_policy_search": false,
+    "policy_id": "MOVE_TRAIN_SINGLETON_TAIL_REBALANCE_V1",
+    "prior_failure_policy": "v6 records remain immutable and disclosed; v7 is a distinct amended execution",
+    "projection_loader_changed": false,
+    "sampler_generator_stream_preserved": true,
+    "scientific_epochs": 300,
+    "scope": "all 360 datasets under the same rule; no per-dataset rescue",
+    "training_batch_boundaries_changed": true,
+    "trigger": "training only, final batch contains exactly one sample"
+  },
+  "cmp2_contract": {
+    "path": "paper5/method_contract/05cmp2/secondary_comparator_confirmatory_benchmark_contract.json",
+    "sha256": "8e0a4d95a1f554af8e9c5188ca683d32c336c6bd5b797b3a91426adbe4ee9fc2",
+    "size_bytes": 9406
+  },
+  "created_at_utc": "2026-10-09T00:25:32.496293+00:00",
+  "environment_evidence_from_v7_preflight": {
+    "cuda_build": "13.0",
+    "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "icluster_package_tree_sha256": "cad0c995150e778026fb227ac533a974d77106e431c65a3802aeda4254f6fd70",
+    "move_version": "1.5.0",
+    "rscript_sha256": "d829bcf7e9fa1d7e3e828c565c3cdbb1ed416f551f4fa6fd4dfcdf231e33e5e8",
+    "torch_version": "2.12.1+cu130"
+  },
+  "execution_scope": {
+    "expected_method_dataset_shards": 720,
+    "methods": [
+      "iCluster2b",
+      "MOVE"
+    ],
+    "n_datasets": 360,
+    "n_scenarios": 36,
+    "replicate_indices": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "simulation_npz_paths_followed": false
+  },
+  "frozen_upstream_files": {
+    "cmp1_adapter": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_scientific_adapter_registry.csv",
+      "sha256": "f30c73d19627d357073786b75f7b8141a757becf9d2413491518948cc099ea48",
+      "size_bytes": 714
+    },
+    "cmp1_contract": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_implementation_contract.json",
+      "sha256": "418259cedd36cbd1913a4ff1ae9874a3decfddbb7a75e9b3bca2e9623f0aca95",
+      "size_bytes": 12328
+    },
+    "cmp1_impl": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_implementation_registry.csv",
+      "sha256": "85dbc68289bae71b9cf4f8a01af34b09d50750fde97f0b57ef3b6c57ebf299b0",
+      "size_bytes": 955
+    },
+    "cmp1_lock": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_implementation_contract_lock.json",
+      "sha256": "37e0db502a88f7beab52f1457cb0c5367091314faa6b86c7796810d883f31648",
+      "size_bytes": 4937
+    },
+    "cmp1_metric": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_metric_eligibility_registry.csv",
+      "sha256": "8802d8d4bba20cfd4acc3263b12f0a119bcef4e4107164e6f944d0a01d9bef46",
+      "size_bytes": 1474
+    },
+    "cmp1_seed": {
+      "path": "paper5/method_contract/05cmp1/secondary_comparator_seed_registry.csv",
+      "sha256": "2c70c516ad07496a71fe513139b357b92f46fd746bea5258f1fb237028c4e87c",
+      "size_bytes": 978
+    },
+    "cmp2_contract": {
+      "path": "paper5/method_contract/05cmp2/secondary_comparator_confirmatory_benchmark_contract.json",
+      "sha256": "8e0a4d95a1f554af8e9c5188ca683d32c336c6bd5b797b3a91426adbe4ee9fc2",
+      "size_bytes": 9406
+    },
+    "cmp2_lock": {
+      "path": "paper5/method_contract/05cmp2/secondary_comparator_confirmatory_benchmark_contract_lock.json",
+      "sha256": "a55d3e3498d9cc6a4acaaab64e5098007b093071b60999c82cf8e124a0301b5b",
+      "size_bytes": 1329
+    },
+    "cmp2_registry": {
+      "path": "paper5/method_contract/05cmp2/secondary_comparator_confirmatory_dataset_registry.csv",
+      "sha256": "4b72b94c4df49dbbbd1a90d035855e628a4fa50eede0451dfe796227bda53314",
+      "size_bytes": 269402
+    },
+    "manifest05b": {
+      "path": "paper5/method_contract/05b_v2/architecture_screening_data_manifest.csv",
+      "sha256": "f3980e88aff408b65cbfce96aca50bad4fc08ecece2bc42bbc04f365c35d9c87",
+      "size_bytes": 507713
+    }
+  },
+  "historical_access_disclosure": {
+    "first_dataset_id": "A01_N62_STANDARD__R11__S1956851480",
+    "followup_diagnostic_decoded_array_values": false,
+    "followup_diagnostic_read_npy_headers": true,
+    "previous_authorized_v5_npz_bytes_hashed_and_container_opened": true,
+    "previous_v5_array_values_decoded_before_missing_key_error": false,
+    "scientific_fit_started_in_failed_v5_attempt": false,
+    "source": "reviewed schema evidence and v5 source/traceback; not new NPZ access here"
+  },
+  "linear_helper_source": {
+    "path": "paper5/scripts/05c1_fit_linear_simulation_baselines.py",
+    "sha256": "c2c91b4ad274f78ccc369e6fca765102285cf3d9c8191f3c33f4a450b7426367",
+    "size_bytes": 126641
+  },
+  "new_result_lock_dir": "paper5/method_contract/05cmp4_v7_batch_rebalance",
+  "new_result_root": "paper5/results/simulation_benchmark/05cmp_secondary_comparators/v7_batch_rebalance",
+  "post_failure_amendment_not_pre_first_fit_freeze": true,
+  "preauthorization_scientific_state": {
+    "TARGET_accessed": false,
+    "frozen_simulation_npz_opened": false,
+    "frozen_simulation_truth_opened": false,
+    "outcomes_clinical_biology_accessed": false,
+    "scientific_comparator_fit_performed": false
+  },
+  "rewrite_policy": "Do not overwrite/delete/rebind this lock. Changes require a separate versioned review and successful matching preflight before scientific use.",
+  "runner_source": {
+    "path": "paper5/scripts/05cmp3_run_secondary_comparator_confirmatory_benchmark_v7.py",
+    "script_version": "05cmp3-run-secondary-comparator-confirmatory-benchmark-v7-singleton-tail-rebalance-preserved-v6-history-isolated-results-no-cli",
+    "sha256": "7d434b5bb168ce2be62ae3c94d1ff93e48e5ed5e0aea21aae3238fdb4579c268",
+    "size_bytes": 228283
+  },
+  "scope_limits": {
+    "05e_final_gate_or_TARGET_selection_changes_authorized": false,
+    "TARGET_outcomes_clinical_biology_access_authorized": false,
+    "benchmark_started_by_authorizer": false,
+    "data_interface_and_truth_access_order_correction_authorized": true,
+    "fallback_authorized": false,
+    "full_scientific_success_guaranteed": false,
+    "full_uniform_two_method_rerun_in_new_scope_authorized": true,
+    "model_selection_or_metric_formula_changes_authorized": false,
+    "singleton_tail_batch_composition_amendment_authorized": true
+  },
+  "script_version": "05cmp3c-freeze-secondary-comparator-runner-v7-batch-amendment-v1-no-cli",
+  "source_history": {
+    "generator_source": {
+      "path": "paper5/scripts/05b_generate_small_n_multiomics_simulations_v2.py",
+      "sha256": "b4adb1fcb32b65a998ee70e1b72d52e13490194c7ad8e5ddd802b95bf05a28db",
+      "size_bytes": 109309
+    },
+    "historical_preflight_relabelled_as_v7": false,
+    "input_validation_and_truth_loading_code_changed": true,
+    "model_selection_and_metric_formula_function_bodies_changed": false,
+    "reviewed_evidence_zip_sha256": "0752c651b93a47505d3887f67630a421c31d279606472e3f018e7322ca5d9e1d",
+    "schema_changes_retained_from_v6": [
+      "strict generator-v2 NPZ observed-input loader; no legacy aliases",
+      "biological truth decoded only after fit/selection via frozen integrated_anchor_truth",
+      "synthetic serialized NPZ integration regression and guard cases",
+      "separate v6 preflight and additive 05cmp3b authorization gate",
+      "exact retained v5/generator/helper source bindings",
+      "retained schema interface; v7 final lock identifies cmp3c batch amendment explicitly"
+    ],
+    "training_batch_composition_changed": true,
+    "v5_authorization": {
+      "path": "paper5/method_contract/05cmp3a/secondary_comparator_runner_source_authorization_lock.json",
+      "sha256": "5dbb075b3467fa865cb2b0570a79c2419e952a2c8c001eb04287d8ade5fba319",
+      "size_bytes": 6616
+    },
+    "v5_authorizer": {
+      "path": "paper5/scripts/05cmp3a_freeze_secondary_comparator_runner_v5_source_authorization_v1.py",
+      "sha256": "526bf30c101dea38cb26d07c9acd625892febebcd697fb466be0c4c1fe653bfa",
+      "size_bytes": 23750
+    },
+    "v5_is_preserved_as_failed_schema_execution_not_a_scientific_method_failure": true,
+    "v5_original_successful_preflight": {
+      "path": "paper5/method_contract/05cmp3_preflight/secondary_comparator_runner_synthetic_preflight_v5.json",
+      "sha256": "7ec4e687151a4af67b718a1ee13e521109a0071be91de2e751e9d0bb02b96b94",
+      "size_bytes": 3062
+    },
+    "v5_source": {
+      "path": "paper5/scripts/05cmp3_run_secondary_comparator_confirmatory_benchmark_v5.py",
+      "sha256": "802c131dfda75effb4e60dd38ebf05512fa5da6c1b3eec97c0c499b3c4e869f5",
+      "size_bytes": 113760
+    }
+  },
+  "status": "05CMP3C_SECONDARY_COMPARATOR_RUNNER_V7_BATCH_AMENDMENT_AUTHORIZED",
+  "synthetic_preflight": {
+    "path": "paper5/method_contract/05cmp3_preflight/secondary_comparator_runner_synthetic_preflight_v7.json",
+    "sha256": "e6f2d2949bf77a708088ed242f9d6c53dbf17ab23020494bb4ef0d7f8dae6bc1",
+    "size_bytes": 109357
+  }
+}

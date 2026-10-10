@@ -1,0 +1,5171 @@
+{
+  "batch_amendment": {
+    "evidence_sha256": "b782b74dd0bfd1a58a2a6b999b303e75a42fb5c99bbdb50c510658e1d7536819",
+    "old_MOVE_singleton_failures": 41,
+    "old_iCluster2b_PASS": 41,
+    "old_metric_values_decoded": false,
+    "old_records_transplanted_into_new_results": false,
+    "old_shard_bytes_hashed": true,
+    "old_shard_count": 82,
+    "status": "PASS_EXACT_V6_HISTORY_PRESERVED"
+  },
+  "cmp2_contract_sha256": "8e0a4d95a1f554af8e9c5188ca683d32c336c6bd5b797b3a91426adbe4ee9fc2",
+  "cmp2_registry_sha256": "4b72b94c4df49dbbbd1a90d035855e628a4fa50eede0451dfe796227bda53314",
+  "created_at_utc": "2026-10-09T00:25:17.085389+00:00",
+  "environment": {
+    "cuda_build": "13.0",
+    "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "icluster_package_tree_sha256": "cad0c995150e778026fb227ac533a974d77106e431c65a3802aeda4254f6fd70",
+    "move_version": "1.5.0",
+    "rscript_sha256": "d829bcf7e9fa1d7e3e828c565c3cdbb1ed416f551f4fa6fd4dfcdf231e33e5e8",
+    "torch_version": "2.12.1+cu130"
+  },
+  "execution_mode": "SYNTHETIC_ONLY_PREAUTHORIZATION",
+  "linear_helper_source": {
+    "path": "paper5/scripts/05c1_fit_linear_simulation_baselines.py",
+    "sha256": "c2c91b4ad274f78ccc369e6fca765102285cf3d9c8191f3c33f4a450b7426367"
+  },
+  "runner_sha256": "7d434b5bb168ce2be62ae3c94d1ff93e48e5ed5e0aea21aae3238fdb4579c268",
+  "schema_amendment": {
+    "current_invocation_scientific_npz_values_decoded": false,
+    "historical_authorized_v5_preserved": true,
+    "history_bindings": {
+      "paper5/method_contract/05cmp3_preflight/secondary_comparator_runner_synthetic_preflight_v5.json": {
+        "sha256": "7ec4e687151a4af67b718a1ee13e521109a0071be91de2e751e9d0bb02b96b94",
+        "size_bytes": 3062
+      },
+      "paper5/method_contract/05cmp3a/secondary_comparator_runner_source_authorization_lock.json": {
+        "sha256": "5dbb075b3467fa865cb2b0570a79c2419e952a2c8c001eb04287d8ade5fba319",
+        "size_bytes": 6616
+      },
+      "paper5/scripts/05b_generate_small_n_multiomics_simulations_v2.py": {
+        "sha256": "b4adb1fcb32b65a998ee70e1b72d52e13490194c7ad8e5ddd802b95bf05a28db",
+        "size_bytes": 109309
+      },
+      "paper5/scripts/05c1_fit_linear_simulation_baselines.py": {
+        "sha256": "c2c91b4ad274f78ccc369e6fca765102285cf3d9c8191f3c33f4a450b7426367",
+        "size_bytes": 126641
+      },
+      "paper5/scripts/05cmp3_run_secondary_comparator_confirmatory_benchmark_v5.py": {
+        "sha256": "802c131dfda75effb4e60dd38ebf05512fa5da6c1b3eec97c0c499b3c4e869f5",
+        "size_bytes": 113760
+      },
+      "paper5/scripts/05cmp3a_freeze_secondary_comparator_runner_v5_source_authorization_v1.py": {
+        "sha256": "526bf30c101dea38cb26d07c9acd625892febebcd697fb466be0c4c1fe653bfa",
+        "size_bytes": 23750
+      }
+    },
+    "previous_v5_failure": "required Z_shared absent before array extraction or fitting",
+    "truth_key": "Z_biological_shared",
+    "truth_stage": "after each method fit/architecture selection completes"
+  },
+  "scientific_state": {
+    "TARGET_accessed": false,
+    "frozen_simulation_npz_opened": false,
+    "frozen_simulation_truth_opened": false,
+    "outcomes_clinical_biology_accessed": false,
+    "scientific_comparator_fit_performed": false
+  },
+  "script_version": "05cmp3-run-secondary-comparator-confirmatory-benchmark-v7-singleton-tail-rebalance-preserved-v6-history-isolated-results-no-cli",
+  "status": "05CMP3_SECONDARY_COMPARATOR_RUNNER_SYNTHETIC_PREAUTH_PASS",
+  "tests": {
+    "adapter_feature_and_whole_view_missing": "PASS",
+    "deterministic_seed_derivation": "PASS",
+    "frozen_upstream_metadata": "PASS",
+    "icluster2b_exact_tune_api_synthetic_fit": {
+      "finite": true,
+      "lambda": [
+        500.0,
+        500.0,
+        500.0
+      ],
+      "latent_shape": [
+        24,
+        5
+      ]
+    },
+    "move_exact_api_synthetic_fit": {
+      "finite": true,
+      "latent_shape": [
+        24,
+        5
+      ],
+      "synthetic_reconstruction_sse": 1347.213108024184
+    },
+    "move_selection_logic": {
+      "deterministic_folds": "PASS",
+      "one_se_retained": [
+        "A",
+        "B"
+      ],
+      "stage2_selected": "B"
+    },
+    "paper5_subspace_helper_replay": {
+      "factor_alignment": 1.0,
+      "factor_matches": [
+        {
+          "absolute_pearson": 1.0,
+          "estimated_factor_index": 0,
+          "signed_pearson": -1.0,
+          "truth_factor_index": 2
+        },
+        {
+          "absolute_pearson": 1.0,
+          "estimated_factor_index": 1,
+          "signed_pearson": 1.0,
+          "truth_factor_index": 0
+        },
+        {
+          "absolute_pearson": 1.0,
+          "estimated_factor_index": 2,
+          "signed_pearson": -1.0,
+          "truth_factor_index": 1
+        }
+      ],
+      "subspace_helper_replay": {
+        "helper_scalar_path": "mean_canonical_correlation",
+        "status": "PASS_FROZEN_HELPER_NAMED_SCALAR"
+      },
+      "subspace_recovery": 1.0
+    },
+    "serialized_v2_npz_schema_and_truth": {
+      "RNA_anchor_helper": "05c1.integrated_anchor_truth(arrays, 'biological')",
+      "biological_columns_filtered_by_view_support": false,
+      "frozen_scientific_NPZ_opened": false,
+      "negative_cases": [
+        "legacy_Z_shared_only_rejected",
+        "dual_truth_keys_rejected",
+        "missing_biological_truth_rejected",
+        "sample_index_reordering_rejected",
+        "view_shape_mismatch_rejected",
+        "RNA_anchor_repair_forbidden",
+        "biological_column_count_mismatch_rejected",
+        "size_mismatch_rejected",
+        "SHA_mismatch_rejected"
+      ],
+      "observed_input_payloads_only": true,
+      "positive_cases": [
+        "all3",
+        "partial_RNA_METH",
+        "partial_RNA_CNV",
+        "partial_METH_CNV",
+        "mixed_support_and_pair_corruption",
+        "rotational_subspace_only",
+        "technical_only_biological_null"
+      ],
+      "status": "PASS_SERIALIZED_V2_NPZ_LOADERS_AND_TRUTH_SEMANTICS",
+      "technical_and_private_truth_payloads_decoded": false,
+      "tracked_payload_reads": 49,
+      "truth_payload_read_only_in_explicit_truth_stage": true
+    },
+    "singleton_batch_training_regression": {
+      "all_latents_finite": true,
+      "baseline_error": "Expected more than 1 value per channel when training, got input size torch.Size([1, 64])",
+      "baseline_singleton_error_reproduced": true,
+      "batch_order_tests": {
+        "case_count": 206,
+        "cases": [
+          {
+            "candidate_sizes": [
+              2
+            ],
+            "epochs": 2,
+            "n": 2,
+            "original_sizes": [
+              2
+            ],
+            "projection_sizes": [
+              2
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              2
+            ],
+            "epochs": 2,
+            "n": 2,
+            "original_sizes": [
+              2
+            ],
+            "projection_sizes": [
+              2
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              3
+            ],
+            "epochs": 2,
+            "n": 3,
+            "original_sizes": [
+              3
+            ],
+            "projection_sizes": [
+              3
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              3
+            ],
+            "epochs": 2,
+            "n": 3,
+            "original_sizes": [
+              3
+            ],
+            "projection_sizes": [
+              3
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              4
+            ],
+            "epochs": 2,
+            "n": 4,
+            "original_sizes": [
+              4
+            ],
+            "projection_sizes": [
+              4
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              4
+            ],
+            "epochs": 2,
+            "n": 4,
+            "original_sizes": [
+              4
+            ],
+            "projection_sizes": [
+              4
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              5
+            ],
+            "epochs": 2,
+            "n": 5,
+            "original_sizes": [
+              5
+            ],
+            "projection_sizes": [
+              5
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              5
+            ],
+            "epochs": 2,
+            "n": 5,
+            "original_sizes": [
+              5
+            ],
+            "projection_sizes": [
+              5
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              6
+            ],
+            "epochs": 2,
+            "n": 6,
+            "original_sizes": [
+              6
+            ],
+            "projection_sizes": [
+              6
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              6
+            ],
+            "epochs": 2,
+            "n": 6,
+            "original_sizes": [
+              6
+            ],
+            "projection_sizes": [
+              6
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              7
+            ],
+            "epochs": 2,
+            "n": 7,
+            "original_sizes": [
+              7
+            ],
+            "projection_sizes": [
+              7
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              7
+            ],
+            "epochs": 2,
+            "n": 7,
+            "original_sizes": [
+              7
+            ],
+            "projection_sizes": [
+              7
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              8
+            ],
+            "epochs": 2,
+            "n": 8,
+            "original_sizes": [
+              8
+            ],
+            "projection_sizes": [
+              8
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              8
+            ],
+            "epochs": 2,
+            "n": 8,
+            "original_sizes": [
+              8
+            ],
+            "projection_sizes": [
+              8
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              9
+            ],
+            "epochs": 2,
+            "n": 9,
+            "original_sizes": [
+              9
+            ],
+            "projection_sizes": [
+              9
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              9
+            ],
+            "epochs": 2,
+            "n": 9,
+            "original_sizes": [
+              9
+            ],
+            "projection_sizes": [
+              9
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              10
+            ],
+            "epochs": 2,
+            "n": 10,
+            "original_sizes": [
+              10
+            ],
+            "projection_sizes": [
+              10
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              10
+            ],
+            "epochs": 2,
+            "n": 10,
+            "original_sizes": [
+              10
+            ],
+            "projection_sizes": [
+              10
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              11
+            ],
+            "epochs": 2,
+            "n": 11,
+            "original_sizes": [
+              11
+            ],
+            "projection_sizes": [
+              11
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              11
+            ],
+            "epochs": 2,
+            "n": 11,
+            "original_sizes": [
+              11
+            ],
+            "projection_sizes": [
+              11
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              12
+            ],
+            "epochs": 2,
+            "n": 12,
+            "original_sizes": [
+              12
+            ],
+            "projection_sizes": [
+              12
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              12
+            ],
+            "epochs": 2,
+            "n": 12,
+            "original_sizes": [
+              12
+            ],
+            "projection_sizes": [
+              12
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              13
+            ],
+            "epochs": 2,
+            "n": 13,
+            "original_sizes": [
+              13
+            ],
+            "projection_sizes": [
+              13
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              13
+            ],
+            "epochs": 2,
+            "n": 13,
+            "original_sizes": [
+              13
+            ],
+            "projection_sizes": [
+              13
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              14
+            ],
+            "epochs": 2,
+            "n": 14,
+            "original_sizes": [
+              14
+            ],
+            "projection_sizes": [
+              14
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              14
+            ],
+            "epochs": 2,
+            "n": 14,
+            "original_sizes": [
+              14
+            ],
+            "projection_sizes": [
+              14
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              15
+            ],
+            "epochs": 2,
+            "n": 15,
+            "original_sizes": [
+              15
+            ],
+            "projection_sizes": [
+              15
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              15
+            ],
+            "epochs": 2,
+            "n": 15,
+            "original_sizes": [
+              15
+            ],
+            "projection_sizes": [
+              15
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16
+            ],
+            "epochs": 2,
+            "n": 16,
+            "original_sizes": [
+              16
+            ],
+            "projection_sizes": [
+              16
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16
+            ],
+            "epochs": 2,
+            "n": 16,
+            "original_sizes": [
+              16
+            ],
+            "projection_sizes": [
+              16
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              15,
+              2
+            ],
+            "epochs": 2,
+            "n": 17,
+            "original_sizes": [
+              16,
+              1
+            ],
+            "projection_sizes": [
+              16,
+              1
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              15,
+              2
+            ],
+            "epochs": 2,
+            "n": 17,
+            "original_sizes": [
+              16,
+              1
+            ],
+            "projection_sizes": [
+              16,
+              1
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              2
+            ],
+            "epochs": 2,
+            "n": 18,
+            "original_sizes": [
+              16,
+              2
+            ],
+            "projection_sizes": [
+              16,
+              2
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              2
+            ],
+            "epochs": 2,
+            "n": 18,
+            "original_sizes": [
+              16,
+              2
+            ],
+            "projection_sizes": [
+              16,
+              2
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              3
+            ],
+            "epochs": 2,
+            "n": 19,
+            "original_sizes": [
+              16,
+              3
+            ],
+            "projection_sizes": [
+              16,
+              3
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              3
+            ],
+            "epochs": 2,
+            "n": 19,
+            "original_sizes": [
+              16,
+              3
+            ],
+            "projection_sizes": [
+              16,
+              3
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              4
+            ],
+            "epochs": 2,
+            "n": 20,
+            "original_sizes": [
+              16,
+              4
+            ],
+            "projection_sizes": [
+              16,
+              4
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              4
+            ],
+            "epochs": 2,
+            "n": 20,
+            "original_sizes": [
+              16,
+              4
+            ],
+            "projection_sizes": [
+              16,
+              4
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              5
+            ],
+            "epochs": 2,
+            "n": 21,
+            "original_sizes": [
+              16,
+              5
+            ],
+            "projection_sizes": [
+              16,
+              5
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              5
+            ],
+            "epochs": 2,
+            "n": 21,
+            "original_sizes": [
+              16,
+              5
+            ],
+            "projection_sizes": [
+              16,
+              5
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              6
+            ],
+            "epochs": 2,
+            "n": 22,
+            "original_sizes": [
+              16,
+              6
+            ],
+            "projection_sizes": [
+              16,
+              6
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              6
+            ],
+            "epochs": 2,
+            "n": 22,
+            "original_sizes": [
+              16,
+              6
+            ],
+            "projection_sizes": [
+              16,
+              6
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              7
+            ],
+            "epochs": 2,
+            "n": 23,
+            "original_sizes": [
+              16,
+              7
+            ],
+            "projection_sizes": [
+              16,
+              7
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              7
+            ],
+            "epochs": 2,
+            "n": 23,
+            "original_sizes": [
+              16,
+              7
+            ],
+            "projection_sizes": [
+              16,
+              7
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              8
+            ],
+            "epochs": 2,
+            "n": 24,
+            "original_sizes": [
+              16,
+              8
+            ],
+            "projection_sizes": [
+              16,
+              8
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              8
+            ],
+            "epochs": 2,
+            "n": 24,
+            "original_sizes": [
+              16,
+              8
+            ],
+            "projection_sizes": [
+              16,
+              8
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              9
+            ],
+            "epochs": 2,
+            "n": 25,
+            "original_sizes": [
+              16,
+              9
+            ],
+            "projection_sizes": [
+              16,
+              9
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              9
+            ],
+            "epochs": 2,
+            "n": 25,
+            "original_sizes": [
+              16,
+              9
+            ],
+            "projection_sizes": [
+              16,
+              9
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              10
+            ],
+            "epochs": 2,
+            "n": 26,
+            "original_sizes": [
+              16,
+              10
+            ],
+            "projection_sizes": [
+              16,
+              10
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              10
+            ],
+            "epochs": 2,
+            "n": 26,
+            "original_sizes": [
+              16,
+              10
+            ],
+            "projection_sizes": [
+              16,
+              10
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              11
+            ],
+            "epochs": 2,
+            "n": 27,
+            "original_sizes": [
+              16,
+              11
+            ],
+            "projection_sizes": [
+              16,
+              11
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              11
+            ],
+            "epochs": 2,
+            "n": 27,
+            "original_sizes": [
+              16,
+              11
+            ],
+            "projection_sizes": [
+              16,
+              11
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              12
+            ],
+            "epochs": 2,
+            "n": 28,
+            "original_sizes": [
+              16,
+              12
+            ],
+            "projection_sizes": [
+              16,
+              12
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              12
+            ],
+            "epochs": 2,
+            "n": 28,
+            "original_sizes": [
+              16,
+              12
+            ],
+            "projection_sizes": [
+              16,
+              12
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              13
+            ],
+            "epochs": 2,
+            "n": 29,
+            "original_sizes": [
+              16,
+              13
+            ],
+            "projection_sizes": [
+              16,
+              13
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              13
+            ],
+            "epochs": 2,
+            "n": 29,
+            "original_sizes": [
+              16,
+              13
+            ],
+            "projection_sizes": [
+              16,
+              13
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              14
+            ],
+            "epochs": 2,
+            "n": 30,
+            "original_sizes": [
+              16,
+              14
+            ],
+            "projection_sizes": [
+              16,
+              14
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              14
+            ],
+            "epochs": 2,
+            "n": 30,
+            "original_sizes": [
+              16,
+              14
+            ],
+            "projection_sizes": [
+              16,
+              14
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              15
+            ],
+            "epochs": 2,
+            "n": 31,
+            "original_sizes": [
+              16,
+              15
+            ],
+            "projection_sizes": [
+              16,
+              15
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              15
+            ],
+            "epochs": 2,
+            "n": 31,
+            "original_sizes": [
+              16,
+              15
+            ],
+            "projection_sizes": [
+              16,
+              15
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16
+            ],
+            "epochs": 2,
+            "n": 32,
+            "original_sizes": [
+              16,
+              16
+            ],
+            "projection_sizes": [
+              16,
+              16
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16
+            ],
+            "epochs": 2,
+            "n": 32,
+            "original_sizes": [
+              16,
+              16
+            ],
+            "projection_sizes": [
+              16,
+              16
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              15,
+              2
+            ],
+            "epochs": 2,
+            "n": 33,
+            "original_sizes": [
+              16,
+              16,
+              1
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              1
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              15,
+              2
+            ],
+            "epochs": 2,
+            "n": 33,
+            "original_sizes": [
+              16,
+              16,
+              1
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              1
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              2
+            ],
+            "epochs": 2,
+            "n": 34,
+            "original_sizes": [
+              16,
+              16,
+              2
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              2
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              2
+            ],
+            "epochs": 2,
+            "n": 34,
+            "original_sizes": [
+              16,
+              16,
+              2
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              2
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              3
+            ],
+            "epochs": 2,
+            "n": 35,
+            "original_sizes": [
+              16,
+              16,
+              3
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              3
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              3
+            ],
+            "epochs": 2,
+            "n": 35,
+            "original_sizes": [
+              16,
+              16,
+              3
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              3
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              4
+            ],
+            "epochs": 2,
+            "n": 36,
+            "original_sizes": [
+              16,
+              16,
+              4
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              4
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              4
+            ],
+            "epochs": 2,
+            "n": 36,
+            "original_sizes": [
+              16,
+              16,
+              4
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              4
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              5
+            ],
+            "epochs": 2,
+            "n": 37,
+            "original_sizes": [
+              16,
+              16,
+              5
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              5
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              5
+            ],
+            "epochs": 2,
+            "n": 37,
+            "original_sizes": [
+              16,
+              16,
+              5
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              5
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              6
+            ],
+            "epochs": 2,
+            "n": 38,
+            "original_sizes": [
+              16,
+              16,
+              6
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              6
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              6
+            ],
+            "epochs": 2,
+            "n": 38,
+            "original_sizes": [
+              16,
+              16,
+              6
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              6
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              7
+            ],
+            "epochs": 2,
+            "n": 39,
+            "original_sizes": [
+              16,
+              16,
+              7
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              7
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              7
+            ],
+            "epochs": 2,
+            "n": 39,
+            "original_sizes": [
+              16,
+              16,
+              7
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              7
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              8
+            ],
+            "epochs": 2,
+            "n": 40,
+            "original_sizes": [
+              16,
+              16,
+              8
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              8
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              8
+            ],
+            "epochs": 2,
+            "n": 40,
+            "original_sizes": [
+              16,
+              16,
+              8
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              8
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              9
+            ],
+            "epochs": 2,
+            "n": 41,
+            "original_sizes": [
+              16,
+              16,
+              9
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              9
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              9
+            ],
+            "epochs": 2,
+            "n": 41,
+            "original_sizes": [
+              16,
+              16,
+              9
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              9
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              10
+            ],
+            "epochs": 2,
+            "n": 42,
+            "original_sizes": [
+              16,
+              16,
+              10
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              10
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              10
+            ],
+            "epochs": 2,
+            "n": 42,
+            "original_sizes": [
+              16,
+              16,
+              10
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              10
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              11
+            ],
+            "epochs": 2,
+            "n": 43,
+            "original_sizes": [
+              16,
+              16,
+              11
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              11
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              11
+            ],
+            "epochs": 2,
+            "n": 43,
+            "original_sizes": [
+              16,
+              16,
+              11
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              11
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              12
+            ],
+            "epochs": 2,
+            "n": 44,
+            "original_sizes": [
+              16,
+              16,
+              12
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              12
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              12
+            ],
+            "epochs": 2,
+            "n": 44,
+            "original_sizes": [
+              16,
+              16,
+              12
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              12
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              13
+            ],
+            "epochs": 2,
+            "n": 45,
+            "original_sizes": [
+              16,
+              16,
+              13
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              13
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              13
+            ],
+            "epochs": 2,
+            "n": 45,
+            "original_sizes": [
+              16,
+              16,
+              13
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              13
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              14
+            ],
+            "epochs": 2,
+            "n": 46,
+            "original_sizes": [
+              16,
+              16,
+              14
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              14
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              14
+            ],
+            "epochs": 2,
+            "n": 46,
+            "original_sizes": [
+              16,
+              16,
+              14
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              14
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              15
+            ],
+            "epochs": 2,
+            "n": 47,
+            "original_sizes": [
+              16,
+              16,
+              15
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              15
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              15
+            ],
+            "epochs": 2,
+            "n": 47,
+            "original_sizes": [
+              16,
+              16,
+              15
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              15
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16
+            ],
+            "epochs": 2,
+            "n": 48,
+            "original_sizes": [
+              16,
+              16,
+              16
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16
+            ],
+            "epochs": 2,
+            "n": 48,
+            "original_sizes": [
+              16,
+              16,
+              16
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              15,
+              2
+            ],
+            "epochs": 2,
+            "n": 49,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              1
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              1
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              15,
+              2
+            ],
+            "epochs": 2,
+            "n": 49,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              1
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              1
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              2
+            ],
+            "epochs": 2,
+            "n": 50,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              2
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              2
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              2
+            ],
+            "epochs": 2,
+            "n": 50,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              2
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              2
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              3
+            ],
+            "epochs": 2,
+            "n": 51,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              3
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              3
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              3
+            ],
+            "epochs": 2,
+            "n": 51,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              3
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              3
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              4
+            ],
+            "epochs": 2,
+            "n": 52,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              4
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              4
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              4
+            ],
+            "epochs": 2,
+            "n": 52,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              4
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              4
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              5
+            ],
+            "epochs": 2,
+            "n": 53,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              5
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              5
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              5
+            ],
+            "epochs": 2,
+            "n": 53,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              5
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              5
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              6
+            ],
+            "epochs": 2,
+            "n": 54,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              6
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              6
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              6
+            ],
+            "epochs": 2,
+            "n": 54,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              6
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              6
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              7
+            ],
+            "epochs": 2,
+            "n": 55,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              7
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              7
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              7
+            ],
+            "epochs": 2,
+            "n": 55,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              7
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              7
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              8
+            ],
+            "epochs": 2,
+            "n": 56,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              8
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              8
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              8
+            ],
+            "epochs": 2,
+            "n": 56,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              8
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              8
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              9
+            ],
+            "epochs": 2,
+            "n": 57,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              9
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              9
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              9
+            ],
+            "epochs": 2,
+            "n": 57,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              9
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              9
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              10
+            ],
+            "epochs": 2,
+            "n": 58,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              10
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              10
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              10
+            ],
+            "epochs": 2,
+            "n": 58,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              10
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              10
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              11
+            ],
+            "epochs": 2,
+            "n": 59,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              11
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              11
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              11
+            ],
+            "epochs": 2,
+            "n": 59,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              11
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              11
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              12
+            ],
+            "epochs": 2,
+            "n": 60,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              12
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              12
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              12
+            ],
+            "epochs": 2,
+            "n": 60,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              12
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              12
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              13
+            ],
+            "epochs": 2,
+            "n": 61,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              13
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              13
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              13
+            ],
+            "epochs": 2,
+            "n": 61,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              13
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              13
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              14
+            ],
+            "epochs": 2,
+            "n": 62,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              14
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              14
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              14
+            ],
+            "epochs": 2,
+            "n": 62,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              14
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              14
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              15
+            ],
+            "epochs": 2,
+            "n": 63,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              15
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              15
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              15
+            ],
+            "epochs": 2,
+            "n": 63,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              15
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              15
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16
+            ],
+            "epochs": 2,
+            "n": 64,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16
+            ],
+            "epochs": 2,
+            "n": 64,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              15,
+              2
+            ],
+            "epochs": 2,
+            "n": 65,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              15,
+              2
+            ],
+            "epochs": 2,
+            "n": 65,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              2
+            ],
+            "epochs": 2,
+            "n": 66,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              2
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              2
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              2
+            ],
+            "epochs": 2,
+            "n": 66,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              2
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              2
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              3
+            ],
+            "epochs": 2,
+            "n": 67,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              3
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              3
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              3
+            ],
+            "epochs": 2,
+            "n": 67,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              3
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              3
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              4
+            ],
+            "epochs": 2,
+            "n": 68,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              4
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              4
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              4
+            ],
+            "epochs": 2,
+            "n": 68,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              4
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              4
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              5
+            ],
+            "epochs": 2,
+            "n": 69,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              5
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              5
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              5
+            ],
+            "epochs": 2,
+            "n": 69,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              5
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              5
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              6
+            ],
+            "epochs": 2,
+            "n": 70,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              6
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              6
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              6
+            ],
+            "epochs": 2,
+            "n": 70,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              6
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              6
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              7
+            ],
+            "epochs": 2,
+            "n": 71,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              7
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              7
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              7
+            ],
+            "epochs": 2,
+            "n": 71,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              7
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              7
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              8
+            ],
+            "epochs": 2,
+            "n": 72,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              8
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              8
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              8
+            ],
+            "epochs": 2,
+            "n": 72,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              8
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              8
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              9
+            ],
+            "epochs": 2,
+            "n": 73,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              9
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              9
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              9
+            ],
+            "epochs": 2,
+            "n": 73,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              9
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              9
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              10
+            ],
+            "epochs": 2,
+            "n": 74,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              10
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              10
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              10
+            ],
+            "epochs": 2,
+            "n": 74,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              10
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              10
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              11
+            ],
+            "epochs": 2,
+            "n": 75,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              11
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              11
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              11
+            ],
+            "epochs": 2,
+            "n": 75,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              11
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              11
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              12
+            ],
+            "epochs": 2,
+            "n": 76,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              12
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              12
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              12
+            ],
+            "epochs": 2,
+            "n": 76,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              12
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              12
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              13
+            ],
+            "epochs": 2,
+            "n": 77,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              13
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              13
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              13
+            ],
+            "epochs": 2,
+            "n": 77,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              13
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              13
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              14
+            ],
+            "epochs": 2,
+            "n": 78,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              14
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              14
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              14
+            ],
+            "epochs": 2,
+            "n": 78,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              14
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              14
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              15
+            ],
+            "epochs": 2,
+            "n": 79,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              15
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              15
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              15
+            ],
+            "epochs": 2,
+            "n": 79,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              15
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              15
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16
+            ],
+            "epochs": 2,
+            "n": 80,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16
+            ],
+            "epochs": 2,
+            "n": 80,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              15,
+              2
+            ],
+            "epochs": 2,
+            "n": 81,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              15,
+              2
+            ],
+            "epochs": 2,
+            "n": 81,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              2
+            ],
+            "epochs": 2,
+            "n": 82,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              2
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              2
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              2
+            ],
+            "epochs": 2,
+            "n": 82,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              2
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              2
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              3
+            ],
+            "epochs": 2,
+            "n": 83,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              3
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              3
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              3
+            ],
+            "epochs": 2,
+            "n": 83,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              3
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              3
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              4
+            ],
+            "epochs": 2,
+            "n": 84,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              4
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              4
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              4
+            ],
+            "epochs": 2,
+            "n": 84,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              4
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              4
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              5
+            ],
+            "epochs": 2,
+            "n": 85,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              5
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              5
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              5
+            ],
+            "epochs": 2,
+            "n": 85,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              5
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              5
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              6
+            ],
+            "epochs": 2,
+            "n": 86,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              6
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              6
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              6
+            ],
+            "epochs": 2,
+            "n": 86,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              6
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              6
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              7
+            ],
+            "epochs": 2,
+            "n": 87,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              7
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              7
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              7
+            ],
+            "epochs": 2,
+            "n": 87,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              7
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              7
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              8
+            ],
+            "epochs": 2,
+            "n": 88,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              8
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              8
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              8
+            ],
+            "epochs": 2,
+            "n": 88,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              8
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              8
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              9
+            ],
+            "epochs": 2,
+            "n": 89,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              9
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              9
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              9
+            ],
+            "epochs": 2,
+            "n": 89,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              9
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              9
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              10
+            ],
+            "epochs": 2,
+            "n": 90,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              10
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              10
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              10
+            ],
+            "epochs": 2,
+            "n": 90,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              10
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              10
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              11
+            ],
+            "epochs": 2,
+            "n": 91,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              11
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              11
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              11
+            ],
+            "epochs": 2,
+            "n": 91,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              11
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              11
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              12
+            ],
+            "epochs": 2,
+            "n": 92,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              12
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              12
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              12
+            ],
+            "epochs": 2,
+            "n": 92,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              12
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              12
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              13
+            ],
+            "epochs": 2,
+            "n": 93,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              13
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              13
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              13
+            ],
+            "epochs": 2,
+            "n": 93,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              13
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              13
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              14
+            ],
+            "epochs": 2,
+            "n": 94,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              14
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              14
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              14
+            ],
+            "epochs": 2,
+            "n": 94,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              14
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              14
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              15
+            ],
+            "epochs": 2,
+            "n": 95,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              15
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              15
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              15
+            ],
+            "epochs": 2,
+            "n": 95,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              15
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              15
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16
+            ],
+            "epochs": 2,
+            "n": 96,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16
+            ],
+            "epochs": 2,
+            "n": 96,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              15,
+              2
+            ],
+            "epochs": 2,
+            "n": 97,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              15,
+              2
+            ],
+            "epochs": 2,
+            "n": 97,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              2
+            ],
+            "epochs": 2,
+            "n": 98,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              2
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              2
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              2
+            ],
+            "epochs": 2,
+            "n": 98,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              2
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              2
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              3
+            ],
+            "epochs": 2,
+            "n": 99,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              3
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              3
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              3
+            ],
+            "epochs": 2,
+            "n": 99,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              3
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              3
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              4
+            ],
+            "epochs": 2,
+            "n": 100,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              4
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              4
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              4
+            ],
+            "epochs": 2,
+            "n": 100,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              4
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              4
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              15,
+              2
+            ],
+            "epochs": 2,
+            "n": 113,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              15,
+              2
+            ],
+            "epochs": 2,
+            "n": 113,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              15,
+              2
+            ],
+            "epochs": 2,
+            "n": 129,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              15,
+              2
+            ],
+            "epochs": 2,
+            "n": 129,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              15,
+              2
+            ],
+            "epochs": 2,
+            "n": 145,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              15,
+              2
+            ],
+            "epochs": 2,
+            "n": 145,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "seed": 2701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              15,
+              2
+            ],
+            "epochs": 2,
+            "n": 161,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "seed": 1701
+          },
+          {
+            "candidate_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              15,
+              2
+            ],
+            "epochs": 2,
+            "n": 161,
+            "original_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "projection_sizes": [
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              1
+            ],
+            "seed": 2701
+          }
+        ],
+        "status": "PASS"
+      },
+      "canonical_latent_shape": [
+        62,
+        5
+      ],
+      "cv_fit_count": 15,
+      "fit_calls": [
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            64,
+            32
+          ],
+          "latent_shape": [
+            49,
+            5
+          ],
+          "n_fit": 49
+        },
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            64,
+            32
+          ],
+          "latent_shape": [
+            49,
+            5
+          ],
+          "n_fit": 49
+        },
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            64,
+            32
+          ],
+          "latent_shape": [
+            50,
+            5
+          ],
+          "n_fit": 50
+        },
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            64,
+            32
+          ],
+          "latent_shape": [
+            50,
+            5
+          ],
+          "n_fit": 50
+        },
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            64,
+            32
+          ],
+          "latent_shape": [
+            50,
+            5
+          ],
+          "n_fit": 50
+        },
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            128,
+            64
+          ],
+          "latent_shape": [
+            49,
+            5
+          ],
+          "n_fit": 49
+        },
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            128,
+            64
+          ],
+          "latent_shape": [
+            49,
+            5
+          ],
+          "n_fit": 49
+        },
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            128,
+            64
+          ],
+          "latent_shape": [
+            50,
+            5
+          ],
+          "n_fit": 50
+        },
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            128,
+            64
+          ],
+          "latent_shape": [
+            50,
+            5
+          ],
+          "n_fit": 50
+        },
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            128,
+            64
+          ],
+          "latent_shape": [
+            50,
+            5
+          ],
+          "n_fit": 50
+        },
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            256,
+            128
+          ],
+          "latent_shape": [
+            49,
+            5
+          ],
+          "n_fit": 49
+        },
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            256,
+            128
+          ],
+          "latent_shape": [
+            49,
+            5
+          ],
+          "n_fit": 49
+        },
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            256,
+            128
+          ],
+          "latent_shape": [
+            50,
+            5
+          ],
+          "n_fit": 50
+        },
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            256,
+            128
+          ],
+          "latent_shape": [
+            50,
+            5
+          ],
+          "n_fit": 50
+        },
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            256,
+            128
+          ],
+          "latent_shape": [
+            50,
+            5
+          ],
+          "n_fit": 50
+        },
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            64,
+            32
+          ],
+          "latent_shape": [
+            62,
+            5
+          ],
+          "n_fit": 62
+        },
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            64,
+            32
+          ],
+          "latent_shape": [
+            62,
+            5
+          ],
+          "n_fit": 62
+        },
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            64,
+            32
+          ],
+          "latent_shape": [
+            62,
+            5
+          ],
+          "n_fit": 62
+        },
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            128,
+            64
+          ],
+          "latent_shape": [
+            62,
+            5
+          ],
+          "n_fit": 62
+        },
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            128,
+            64
+          ],
+          "latent_shape": [
+            62,
+            5
+          ],
+          "n_fit": 62
+        },
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            128,
+            64
+          ],
+          "latent_shape": [
+            62,
+            5
+          ],
+          "n_fit": 62
+        },
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            256,
+            128
+          ],
+          "latent_shape": [
+            62,
+            5
+          ],
+          "n_fit": 62
+        },
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            256,
+            128
+          ],
+          "latent_shape": [
+            62,
+            5
+          ],
+          "n_fit": 62
+        },
+        {
+          "epochs": 2,
+          "finite": true,
+          "hidden": [
+            256,
+            128
+          ],
+          "latent_shape": [
+            62,
+            5
+          ],
+          "n_fit": 62
+        }
+      ],
+      "frozen_scientific_npz_opened": false,
+      "policy_id": "MOVE_TRAIN_SINGLETON_TAIL_REBALANCE_V1",
+      "scientific_epochs_unchanged": 300,
+      "scientific_module_globals_modified": false,
+      "stability_fit_count": 9,
+      "status": "PASS_V7_ACTUAL_MOVE_SYNTHETIC_BATCHING",
+      "synthetic_epochs": 2
+    }
+  }
+}

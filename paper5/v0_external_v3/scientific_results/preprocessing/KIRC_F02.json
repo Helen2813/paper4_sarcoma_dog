@@ -1,0 +1,307 @@
+{
+  "bindings": {
+    "adapter_sha256": "f47c19a6e99423d4dd1ab91e19e26cb55216d34c7a3c52f50521aaa31b7bf8c2",
+    "authorization_sha256": "c1e33f3c82fb3c4796a86612ea3d853bb8e273e2caf4dd2b3d38e6e39224a546",
+    "executor_sha256": "a5c2251e4cc2a892ece42941b4ffa7c99441ea19491247285e90766a6e6c3a26",
+    "executor_version": "p5-v0-authorized-sarc-kirc-fixed-addendum-v1-no-cli",
+    "preflight_lock_sha256": "55dbd2298ce7475c6278b702248ae5c6db1b5a402388327c1e90dae02684f32b",
+    "protocol_sha256": "9d8f2eadc23165e2dbd2c744974b033d9b72a1b37187774cb730ed65d3d54709"
+  },
+  "both_preprocessing_stages_match": true,
+  "cohort": "KIRC",
+  "fold": 2,
+  "historical_preprocessing": {
+    "path": "paper5_parallel_kirc/limited_model_v1/scientific_results/preprocessing/fold_02.json",
+    "sha256": "f8c423d3e0e170c974f8082ad4fe918106da1ad4b9af02bc6f3a05b2788521f9",
+    "size_bytes": 14402
+  },
+  "stages": {
+    "prelim": {
+      "combined_digest": "81819cb5c9a9795e435ba2ccf6b7af11b5f316e563a3def37dd7e9b32a5a2bc0",
+      "views": {
+        "CNV": {
+          "PCA_components": {
+            "dtype": "float64",
+            "sha256": "4683172ec5dcf2e78f2a82c75778984a88166fa718bbeb3ba549d08e9828ea28",
+            "shape": [
+              10,
+              5000
+            ]
+          },
+          "PCA_mean": {
+            "dtype": "float64",
+            "sha256": "cb2cf21b5ad6d1e4fa2c26a6c7bad13d4b05c64d1737d3d4511cfc822a087599",
+            "shape": [
+              5000
+            ]
+          },
+          "means": {
+            "dtype": "float64",
+            "sha256": "b3e00f96f08a1edff10182a1ca09056892ac281457623c18287cc699b28d6aff",
+            "shape": [
+              5000
+            ]
+          },
+          "medians": {
+            "dtype": "float64",
+            "sha256": "f166b70e0660bdf1e490568505340cffec413fb6cca474ab72dd4a5633cf1878",
+            "shape": [
+              5000
+            ]
+          },
+          "scales": {
+            "dtype": "float64",
+            "sha256": "e713895ea3dbc8bca191c2448a65eb2646e3a69c94dc5584fecb8eb6472ef965",
+            "shape": [
+              5000
+            ]
+          },
+          "selected_count": 5000,
+          "selected_indices": {
+            "dtype": "int64",
+            "sha256": "729a1cedc789da241ac7a8f40fddf9b74d3b66461be6528150d7bacffcc0dfae",
+            "shape": [
+              5000
+            ]
+          }
+        },
+        "METHYLATION": {
+          "PCA_components": {
+            "dtype": "float64",
+            "sha256": "e992e786ad4b7904bb8f73085b2599b39ac26853d86a02ef295fea0882528225",
+            "shape": [
+              10,
+              10000
+            ]
+          },
+          "PCA_mean": {
+            "dtype": "float64",
+            "sha256": "a42fccd147d345c3eaafe184123a8e7e5e27fbdef62b7d5ae0490d488d5bb2b3",
+            "shape": [
+              10000
+            ]
+          },
+          "means": {
+            "dtype": "float64",
+            "sha256": "f26b8c7615f306869188bb3535aa22755a86fdf66795e8d8ad1efa9b36eb70f6",
+            "shape": [
+              10000
+            ]
+          },
+          "medians": {
+            "dtype": "float64",
+            "sha256": "d15b44ea485f383ceaac5416b1399023f8da7da0b99f4d781b530152f4cadc37",
+            "shape": [
+              10000
+            ]
+          },
+          "scales": {
+            "dtype": "float64",
+            "sha256": "d87597315f92aaeedabac505dcbe1aec83df202bd7eb76f3806b3a81b7eead9a",
+            "shape": [
+              10000
+            ]
+          },
+          "selected_count": 10000,
+          "selected_indices": {
+            "dtype": "int64",
+            "sha256": "6c2313073d20b7411393f3de5a79783e264ec98a4d34ad2087f2c86c2d825117",
+            "shape": [
+              10000
+            ]
+          }
+        },
+        "RNA": {
+          "PCA_components": {
+            "dtype": "float64",
+            "sha256": "702b861a67dc75411ada1931a1b1815250041e4666a53e16283bee96057971cb",
+            "shape": [
+              10,
+              5000
+            ]
+          },
+          "PCA_mean": {
+            "dtype": "float64",
+            "sha256": "73bfc33279709467133807c33fc6de3761c0b2318e946adb8102632e1e9bfe57",
+            "shape": [
+              5000
+            ]
+          },
+          "means": {
+            "dtype": "float64",
+            "sha256": "bfff4b7b18df00d790df144da9ea734d5868cec8bb8efbcddd46d68750459bce",
+            "shape": [
+              5000
+            ]
+          },
+          "medians": {
+            "dtype": "float64",
+            "sha256": "6d0e31d43b39cde387ce49c3d82bdcc62e664757c362641dadd803adeeedac36",
+            "shape": [
+              5000
+            ]
+          },
+          "scales": {
+            "dtype": "float64",
+            "sha256": "6c91a82c233c422d00f12098a6e4496e9c3c7d338a37079116aaa8602cf6e760",
+            "shape": [
+              5000
+            ]
+          },
+          "selected_count": 5000,
+          "selected_indices": {
+            "dtype": "int64",
+            "sha256": "0d5c7f09bbfaca55636e2918bf43efbae9c590fa459c5db6bcc69944fbc03d09",
+            "shape": [
+              5000
+            ]
+          }
+        }
+      }
+    },
+    "refit": {
+      "combined_digest": "a424ccfa73aa7b1270e25d5a93255b834c2c735c033335652fa9955bc938b235",
+      "views": {
+        "CNV": {
+          "PCA_components": {
+            "dtype": "float64",
+            "sha256": "3ceac777fd626b623fd13ee4ccb7642e157489ea820d003e7254a585ac74bd27",
+            "shape": [
+              10,
+              5000
+            ]
+          },
+          "PCA_mean": {
+            "dtype": "float64",
+            "sha256": "2db86e20eb624a2ce829c8f8fb2f585bb5cf383982df135253935751a3394e45",
+            "shape": [
+              5000
+            ]
+          },
+          "means": {
+            "dtype": "float64",
+            "sha256": "aed5aa3faafde0f6fbb83493595687037d7ea2819c91b33046b808d618b6fbe8",
+            "shape": [
+              5000
+            ]
+          },
+          "medians": {
+            "dtype": "float64",
+            "sha256": "048052d752f45dd900752c18217101050ad77c4d82285017eb4141cb473e43bc",
+            "shape": [
+              5000
+            ]
+          },
+          "scales": {
+            "dtype": "float64",
+            "sha256": "3ee4d35a88324b89233a3efc28f3916a41d0c01a02b0bc638bf1d3fcbe3ac011",
+            "shape": [
+              5000
+            ]
+          },
+          "selected_count": 5000,
+          "selected_indices": {
+            "dtype": "int64",
+            "sha256": "205717a36ed0b8d796943b824c4f120ef937f8037e7bd22813fe33c3dabc7e79",
+            "shape": [
+              5000
+            ]
+          }
+        },
+        "METHYLATION": {
+          "PCA_components": {
+            "dtype": "float64",
+            "sha256": "f7c881829c1d93217d78c77674fa31c854b158b5a686fccaf6b8e12556d3bf5e",
+            "shape": [
+              10,
+              10000
+            ]
+          },
+          "PCA_mean": {
+            "dtype": "float64",
+            "sha256": "b258942e62b6809cedcd48f15b8acb23d7b9368fee30016a49380c5fa9567a29",
+            "shape": [
+              10000
+            ]
+          },
+          "means": {
+            "dtype": "float64",
+            "sha256": "35bef1be86614f7d68e4393c1ca239c372a04322957815025ec4d9369865e5a1",
+            "shape": [
+              10000
+            ]
+          },
+          "medians": {
+            "dtype": "float64",
+            "sha256": "257b2f48d1c66316a59c40f9cdd2896ba3adebc8e9b37c87112fa77456d9f015",
+            "shape": [
+              10000
+            ]
+          },
+          "scales": {
+            "dtype": "float64",
+            "sha256": "d5fd0eb3ac054c52c0e97a3fb8173b4f2f38066b6656037d93597164ab1c8559",
+            "shape": [
+              10000
+            ]
+          },
+          "selected_count": 10000,
+          "selected_indices": {
+            "dtype": "int64",
+            "sha256": "32995309ffc4b644c16f2a2d178ff41d7f8f8a0d4e04cfc34e2501b689552468",
+            "shape": [
+              10000
+            ]
+          }
+        },
+        "RNA": {
+          "PCA_components": {
+            "dtype": "float64",
+            "sha256": "5208112cbf002f91f5ab03ad5024b1b3fcde7b08f0b942e69c9f735b5964556e",
+            "shape": [
+              10,
+              5000
+            ]
+          },
+          "PCA_mean": {
+            "dtype": "float64",
+            "sha256": "33a09e955e7b8c1888528edef8255ee0b42b5274c2f02826cc90d7db8c95953f",
+            "shape": [
+              5000
+            ]
+          },
+          "means": {
+            "dtype": "float64",
+            "sha256": "6386628de5047866ffac219115a05c4dd8d184ce736ac157ae88fb69a73409e3",
+            "shape": [
+              5000
+            ]
+          },
+          "medians": {
+            "dtype": "float64",
+            "sha256": "1ffcd6379b009156fd66004ea90375f3469e1e7de810c2186ba071e9eb9722c2",
+            "shape": [
+              5000
+            ]
+          },
+          "scales": {
+            "dtype": "float64",
+            "sha256": "ebfda7f30376851af3d9c41541df5ff30568bf441ba434257598e069dae91629",
+            "shape": [
+              5000
+            ]
+          },
+          "selected_count": 5000,
+          "selected_indices": {
+            "dtype": "int64",
+            "sha256": "27dd7d7e7fed47ecd7ac82c1465f067305b8a8ee980039d78a2dec83c4d1edfd",
+            "shape": [
+              5000
+            ]
+          }
+        }
+      }
+    }
+  },
+  "test_used_for_preprocessing": false
+}

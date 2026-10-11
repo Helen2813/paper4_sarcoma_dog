@@ -1,0 +1,359 @@
+{
+  "bindings": {
+    "adapter_sha256": "f47c19a6e99423d4dd1ab91e19e26cb55216d34c7a3c52f50521aaa31b7bf8c2",
+    "authorization_sha256": "c1e33f3c82fb3c4796a86612ea3d853bb8e273e2caf4dd2b3d38e6e39224a546",
+    "executor_sha256": "a5c2251e4cc2a892ece42941b4ffa7c99441ea19491247285e90766a6e6c3a26",
+    "executor_version": "p5-v0-authorized-sarc-kirc-fixed-addendum-v1-no-cli",
+    "preflight_lock_sha256": "55dbd2298ce7475c6278b702248ae5c6db1b5a402388327c1e90dae02684f32b",
+    "protocol_sha256": "9d8f2eadc23165e2dbd2c744974b033d9b72a1b37187774cb730ed65d3d54709"
+  },
+  "environment": {
+    "AMP": false,
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "GPU": "NVIDIA GeForce RTX 4080 Laptop GPU",
+    "TF32": false,
+    "cpu_threads": 2,
+    "cuda": "13.0",
+    "executable": "C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\comparator_envs\\move_1_5_0\\Scripts\\python.exe",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]",
+    "torch": "2.12.1+cu130",
+    "torch_compile": false
+  },
+  "evidence": {
+    "path": "v0r_20261011T163401Z_3a9ccccc.json",
+    "sha256": "4618ce35832d08e418ef57cee3d7c8694ed59a44ba23339d432730471ebc2811",
+    "size_bytes": 2494265
+  },
+  "files": [
+    {
+      "path": "execution_start.json",
+      "sha256": "7a8f76fbe85f2d5f46aeccca1e182bb918e6fa6077b663d847a92dda34a1e989",
+      "size_bytes": 1674
+    },
+    {
+      "path": "preprocessing/KIRC_F01.json",
+      "sha256": "1e0d1749c6386056254359cb6aa4d723e4e474384e1027cf78c167c6f1a90395",
+      "size_bytes": 9502
+    },
+    {
+      "path": "preprocessing/KIRC_F02.json",
+      "sha256": "3c48764f9c8073bc2697a81f2c645172e6e5cbf2f3fdc0954aa0deb08e663941",
+      "size_bytes": 9502
+    },
+    {
+      "path": "preprocessing/KIRC_F03.json",
+      "sha256": "192b650fe7167d192e6c4e68ea87ffb88cc7a3295797ee8385b57b350d5499f6",
+      "size_bytes": 9502
+    },
+    {
+      "path": "preprocessing/KIRC_F04.json",
+      "sha256": "57518d8497008539c0ff8a1b77aa20920d30b63b5f8be2128eeb47f33ca1d0bf",
+      "size_bytes": 9502
+    },
+    {
+      "path": "preprocessing/KIRC_F05.json",
+      "sha256": "3675a2cf65d78fc15eb1f1e1a85dd58d7e3b4448f835d0171990384131634bcc",
+      "size_bytes": 9502
+    },
+    {
+      "path": "preprocessing/SARC_F01.json",
+      "sha256": "d03f80a4a26eb30b53bab3486b6462dc931080519d5b74ec52df8d5d55d14128",
+      "size_bytes": 9502
+    },
+    {
+      "path": "preprocessing/SARC_F02.json",
+      "sha256": "c72e35ae05ad9670777273ea7c6bf152ea527c5683b045c4107fd29cd1849ab3",
+      "size_bytes": 9502
+    },
+    {
+      "path": "preprocessing/SARC_F03.json",
+      "sha256": "f68b66e886b42b4e76fec2040881595e58150eeae08e427cf6ef4a1421be32a2",
+      "size_bytes": 9502
+    },
+    {
+      "path": "preprocessing/SARC_F04.json",
+      "sha256": "504ab1690b8ace7bde310b298e4ee17c88cf7c2d612b1a34e1f8f0a85a98304c",
+      "size_bytes": 9502
+    },
+    {
+      "path": "preprocessing/SARC_F05.json",
+      "sha256": "fddff9f616c394611ec3d149447854243d1da84e06e76b293e04c53c2e54de12",
+      "size_bytes": 9502
+    },
+    {
+      "path": "shards/SARC_F01_S1103/result.json",
+      "sha256": "813bf6320fb0b48aca9151fd9ba1e13425481c0fcb033e18987c713417775bda",
+      "size_bytes": 28146
+    },
+    {
+      "path": "shards/SARC_F01_S1103/receipt.json",
+      "sha256": "78f0e24fdedc5b12cd7d20f26a68f713c00d69eb0aadadbe44700a95e39b61e0",
+      "size_bytes": 719
+    },
+    {
+      "path": "shards/SARC_F01_S2207/result.json",
+      "sha256": "af05ad8d3774fba11736efbef52dca4016fad1d0aa81a5f3ad908dc01cab09fb",
+      "size_bytes": 28148
+    },
+    {
+      "path": "shards/SARC_F01_S2207/receipt.json",
+      "sha256": "4e5d1cd03f0d7ed70e1d260a2365e66d5616d3fe567b266a8a657a4dfebccbe8",
+      "size_bytes": 719
+    },
+    {
+      "path": "shards/SARC_F02_S1103/result.json",
+      "sha256": "97d581663de09db5e77de417dbf3300a4c759406df19aa021b9be6381907a5ad",
+      "size_bytes": 28160
+    },
+    {
+      "path": "shards/SARC_F02_S1103/receipt.json",
+      "sha256": "c306639855b9acaf16ac674bff57cb3baa848fa5f00e775aaec3e9293403db57",
+      "size_bytes": 719
+    },
+    {
+      "path": "shards/SARC_F02_S2207/result.json",
+      "sha256": "f040dbb4a361068a86837c0490565edf9c8c6df2b59b3e098439e17a21849733",
+      "size_bytes": 28169
+    },
+    {
+      "path": "shards/SARC_F02_S2207/receipt.json",
+      "sha256": "9aaf311d6e3e1c5198e564acd9922515b7a0005bc76b4e5de7189c639a6be703",
+      "size_bytes": 719
+    },
+    {
+      "path": "shards/SARC_F03_S1103/result.json",
+      "sha256": "54e100ac6a120212768bb8f45b111d0181a1587be9bec5f2fcaa4e7c5afc3337",
+      "size_bytes": 28158
+    },
+    {
+      "path": "shards/SARC_F03_S1103/receipt.json",
+      "sha256": "d3ee57a77e8142367b10449f379ec74f95b907cdd3df3c23bd4a1b13e9b9d9f5",
+      "size_bytes": 719
+    },
+    {
+      "path": "shards/SARC_F03_S2207/result.json",
+      "sha256": "be9325c2212555c1254d91ce8e9e563d560127273439c4f4d26eff2d849aee8f",
+      "size_bytes": 28193
+    },
+    {
+      "path": "shards/SARC_F03_S2207/receipt.json",
+      "sha256": "b09eb4b1a5d3d345ce66f9c4904c786fd7aef167024068cd25d92d3867d55ccc",
+      "size_bytes": 719
+    },
+    {
+      "path": "shards/SARC_F04_S1103/result.json",
+      "sha256": "36558513ecc2c468106026af553c203a33999a1485708df1ef3ef225f8f5bcba",
+      "size_bytes": 28187
+    },
+    {
+      "path": "shards/SARC_F04_S1103/receipt.json",
+      "sha256": "8dc539c7017733265edaac484bef96c6fa32b7a6a185580727dd7893abb2f04c",
+      "size_bytes": 719
+    },
+    {
+      "path": "shards/SARC_F04_S2207/result.json",
+      "sha256": "b417a0193298eaa9c14697b5a4becfb513715cd93a0410c92c338f4cdb43c88c",
+      "size_bytes": 28199
+    },
+    {
+      "path": "shards/SARC_F04_S2207/receipt.json",
+      "sha256": "634a60edb7624b83f7fb62b8e0bcc3a4d92e01e7663763fe9121612ca6687a53",
+      "size_bytes": 719
+    },
+    {
+      "path": "shards/SARC_F05_S1103/result.json",
+      "sha256": "4e2d48c0ab482c29ed61b6d8fecdac76226efbac02aa8e0443364e7037798d6d",
+      "size_bytes": 28186
+    },
+    {
+      "path": "shards/SARC_F05_S1103/receipt.json",
+      "sha256": "81f28b7152657675c08619097f03b11ffa9e3da9651b3dc04c53efaea75da343",
+      "size_bytes": 719
+    },
+    {
+      "path": "shards/SARC_F05_S2207/result.json",
+      "sha256": "926c43edc9adb1e8b9ba44be4bafa0769b1d817011f9ae93529265bfdc9cf0c1",
+      "size_bytes": 28132
+    },
+    {
+      "path": "shards/SARC_F05_S2207/receipt.json",
+      "sha256": "57aa3dae50e9cc4adde520e6c85289ba8efdec882ae878d32a11302ef6582f1b",
+      "size_bytes": 719
+    },
+    {
+      "path": "shards/KIRC_F01_S1103/result.json",
+      "sha256": "4d99f29316554d6087f4575a734c20e94b2390b8cfe43dee5f221ab962f707f3",
+      "size_bytes": 33228
+    },
+    {
+      "path": "shards/KIRC_F01_S1103/receipt.json",
+      "sha256": "998663a7c898be7c938375cf5d7c24702dbdf4f05f42ebeea6499d2992ca6b53",
+      "size_bytes": 719
+    },
+    {
+      "path": "shards/KIRC_F01_S2207/result.json",
+      "sha256": "a02d697c1a608fb4a917cfdf41af00ab16d7513327ccb044ee59181b2677978c",
+      "size_bytes": 33230
+    },
+    {
+      "path": "shards/KIRC_F01_S2207/receipt.json",
+      "sha256": "0797503510113efeb6b0151b904fad472ddba85b7bed93ac2f53b57a72701029",
+      "size_bytes": 719
+    },
+    {
+      "path": "shards/KIRC_F02_S1103/result.json",
+      "sha256": "efcc00abaf676e517a6de406767fea319294eeff8fe4a0e80e550abdf2cddd74",
+      "size_bytes": 33287
+    },
+    {
+      "path": "shards/KIRC_F02_S1103/receipt.json",
+      "sha256": "a42ac4a4a09dc946b83b81742ff65352d43a9feb2acef0e0c7f51cf8f889dd5d",
+      "size_bytes": 719
+    },
+    {
+      "path": "shards/KIRC_F02_S2207/result.json",
+      "sha256": "a7a836b7a30828286ead59671629838c8dc1647b2fc1ba13e72059b1370d39a5",
+      "size_bytes": 33293
+    },
+    {
+      "path": "shards/KIRC_F02_S2207/receipt.json",
+      "sha256": "6589b5bb5b3263e95b3a317f13f69a40acecc8dacbbb5ef3848b9314e6485098",
+      "size_bytes": 719
+    },
+    {
+      "path": "shards/KIRC_F03_S1103/result.json",
+      "sha256": "6f32a5d9ca23286677aa4b7198483820122907b758eb745a011c3771b170061a",
+      "size_bytes": 33199
+    },
+    {
+      "path": "shards/KIRC_F03_S1103/receipt.json",
+      "sha256": "31e05b48e7388e90cfccb49a20b007a27d1984ed66037e71fcb167dfeabe833e",
+      "size_bytes": 719
+    },
+    {
+      "path": "shards/KIRC_F03_S2207/result.json",
+      "sha256": "4f5d79dfcb4c669cde22a06eb360b62a243613541d47b59aeb3408b336d6d360",
+      "size_bytes": 33267
+    },
+    {
+      "path": "shards/KIRC_F03_S2207/receipt.json",
+      "sha256": "72b74ea10a28fbb8aad49dd174a57777ca341f04c7e6aff3641060d5e35a60c9",
+      "size_bytes": 719
+    },
+    {
+      "path": "shards/KIRC_F04_S1103/result.json",
+      "sha256": "609ec0cf8e87c1723058fdac58e64746c8414ad1b4805cb88d00b7f31706926d",
+      "size_bytes": 33251
+    },
+    {
+      "path": "shards/KIRC_F04_S1103/receipt.json",
+      "sha256": "f643364199d37c8c2f1505e4a84d4a63232a3112136b8f1fb8e0731e992a8b1b",
+      "size_bytes": 719
+    },
+    {
+      "path": "shards/KIRC_F04_S2207/result.json",
+      "sha256": "b01813c148d999ad463b6a99b3b65a544f07b7f0daf9d4874d98c006511eac53",
+      "size_bytes": 33224
+    },
+    {
+      "path": "shards/KIRC_F04_S2207/receipt.json",
+      "sha256": "b832eb04ad56951e6e7793c7535eddea33927f02a3ef4b6c7f8edc6178159cd5",
+      "size_bytes": 719
+    },
+    {
+      "path": "shards/KIRC_F05_S1103/result.json",
+      "sha256": "131c216bbcbffe33687ea7f9d570c7c3379a7dd341b43309a15cb1f431e1abba",
+      "size_bytes": 32777
+    },
+    {
+      "path": "shards/KIRC_F05_S1103/receipt.json",
+      "sha256": "3f3cf2d15e17da3bdbda40f82f4425b091d8f794c3be7bf309317a287cf0759c",
+      "size_bytes": 719
+    },
+    {
+      "path": "shards/KIRC_F05_S2207/result.json",
+      "sha256": "501abd4aa406f5f5c6b8d5a5e233459d19845961fe976ae733fbd1a8688661fe",
+      "size_bytes": 32793
+    },
+    {
+      "path": "shards/KIRC_F05_S2207/receipt.json",
+      "sha256": "0f14a93cd02effdb5cd5e66bf9e3efc5bf162802b71542d0d76459cf019d4579",
+      "size_bytes": 719
+    },
+    {
+      "path": "summaries/MANUSCRIPT_RESULTS_EN.md",
+      "sha256": "762dd1bcea72b1d0c78fff369673bbcecff30acda63034c061f416e5229c34a7",
+      "size_bytes": 1337
+    },
+    {
+      "path": "summaries/paired_by_fold.csv",
+      "sha256": "5ca8bd0615f812758f2c41c04fdd1146b5c113e5af912c6e24a80a46dd6baa73",
+      "size_bytes": 3522
+    },
+    {
+      "path": "summaries/paired_by_seed.csv",
+      "sha256": "04868bb20768de9bd749ac559df6a7a1738db657ada7654bc7be845b35938c52",
+      "size_bytes": 7402
+    },
+    {
+      "path": "summaries/per_view_by_seed.csv",
+      "sha256": "68ae6e8bde99db177bb527eb20d08978ea12df968dd820f8f8801049fd975764",
+      "size_bytes": 11023
+    },
+    {
+      "path": "summaries/seed_only_agreement.csv",
+      "sha256": "5011ccea43dfc82a6f8b795b429a14e1632a8766aa2460139a83cbd58a813740",
+      "size_bytes": 1662
+    },
+    {
+      "path": "summaries/summary.json",
+      "sha256": "acb512ddffcf5bea2d441627d556186c2864c2eba9c9afc19fe0cd2fb9fc7d5c",
+      "size_bytes": 16525
+    },
+    {
+      "path": "summaries/V0_epoch_audit.csv",
+      "sha256": "a04f17066543853b440780420a19c5900ba534b2d6d487e5c9b0e504d05e4c7a",
+      "size_bytes": 1132
+    },
+    {
+      "path": "summaries/V1_minus_V0_summary.csv",
+      "sha256": "4ea1eea42df2ca0bb7f23ea298181a8144a540b93f45fcab051dc59d6f02a001",
+      "size_bytes": 1728
+    }
+  ],
+  "historical_files_modified": false,
+  "new_V0_evaluations": 20,
+  "new_V0_training_stages": 40,
+  "old_model_refits": 0,
+  "runtime_access_audit": {
+    "allowed_windows_ver_queries": [
+      {
+        "command_line": "C:\\WINDOWS\\system32\\cmd.exe /c \"ver\"",
+        "event": "subprocess.Popen",
+        "executable": null,
+        "purpose": "CPython platform._syscmd_ver: local Windows version metadata only"
+      },
+      {
+        "command_line": "C:\\WINDOWS\\system32\\cmd.exe /c \"ver\"",
+        "event": "subprocess.Popen",
+        "executable": null,
+        "purpose": "CPython platform._syscmd_ver: local Windows version metadata only"
+      }
+    ],
+    "blocked_attempts": [],
+    "matrix_paths": [
+      "c:\\users\\olegk\\desktop\\paper4_sarcoma_dog\\paper5_parallel_kirc\\pointwise_inputs_v1\\kirc3_20261010t232651z_5cc5b59c\\matrices\\cnv.npy",
+      "c:\\users\\olegk\\desktop\\paper4_sarcoma_dog\\paper5_parallel_kirc\\pointwise_inputs_v1\\kirc3_20261010t232651z_5cc5b59c\\matrices\\methylation.npy",
+      "c:\\users\\olegk\\desktop\\paper4_sarcoma_dog\\paper5_parallel_kirc\\pointwise_inputs_v1\\kirc3_20261010t232651z_5cc5b59c\\matrices\\rna.npy",
+      "c:\\users\\olegk\\desktop\\paper4_sarcoma_dog\\paper5_parallel_sarc\\pointwise_inputs_v1\\sarc4_20261010t015241z_dbf619ed\\matrices\\cnv_log2ratio.npy",
+      "c:\\users\\olegk\\desktop\\paper4_sarcoma_dog\\paper5_parallel_sarc\\pointwise_inputs_v1\\sarc4_20261010t015241z_dbf619ed\\matrices\\methylation_mvalue.npy",
+      "c:\\users\\olegk\\desktop\\paper4_sarcoma_dog\\paper5_parallel_sarc\\pointwise_inputs_v1\\sarc4_20261010t015241z_dbf619ed\\matrices\\rna_log2tpm.npy"
+    ],
+    "not_OS_security_sandbox": true
+  },
+  "sources_inputs_rechecked": true,
+  "status": "P5_V0_EXTERNAL_ADDENDUM_COMPLETE_FROZEN"
+}

@@ -1,0 +1,7 @@
+item,TARGET,SARC_KIRC,comparison
+ordinary reconstruction,"clipped [0,1] score; neural PCA coordinates; per-view training-null normalization",observed molecular targets after inverse PCA; un-clipped NMSE; training-null normalization,not a common numeric endpoint; do not convert TARGET score to external NMSE
+omitted-view reconstruction,"mean clipped [0,1] test-centered R2-style score in neural PCA coordinates",observed molecular targets; training-normalized omitted-view NMSE,"target space, normalization and clipping differ; no direct numerical cross-cohort scale"
+retrieval,six ordered pairs; harmonic-null adjusted MRR; actual test n,same basic retrieval definition; actual 50 or 60/61 candidates,candidate counts differ; comparable definition does not isolate an n effect
+decision,inner-CV utility plus one-SE/complexity rule; outer scores excluded from selection,report all three fixed procedures; no cohort-specific model selection,outer decomposition cannot alone explain the historical inner selection
+initialization reproducibility,06e4 source and fit/assessment scope must be reviewed; no substitution of full-data for held-out,same-training-fold two-seed agreement of held-out test representations,no common three-cohort stability curve or q10 validation is claimed
+sample size,"78 matched cases, different cohort and nested design","250/304 cases, different diseases and fixed-procedure folds",cohort-context comparison; no isolated causal/sample-size effect

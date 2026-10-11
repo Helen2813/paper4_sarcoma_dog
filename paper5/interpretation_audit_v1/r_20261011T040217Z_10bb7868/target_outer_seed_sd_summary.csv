@@ -1,0 +1,11 @@
+model_id,metric,mean_within_split_seed_sd,scope
+V1_SHARED_PRIVATE_AE,heldout_reconstruction_score,0.0145502934648051,"descriptive numerical initialization dispersion, not uncertainty of a population mean"
+V1_SHARED_PRIVATE_AE,random_adjusted_cross_view_mrr,0.038555253155475845,"descriptive numerical initialization dispersion, not uncertainty of a population mean"
+V1_SHARED_PRIVATE_AE,missing_view_reconstruction_score,0.005396638021863624,"descriptive numerical initialization dispersion, not uncertainty of a population mean"
+V1_SHARED_PRIVATE_AE,modality_balance_score,0.032178111330263215,"descriptive numerical initialization dispersion, not uncertainty of a population mean"
+V1_SHARED_PRIVATE_AE,utility,0.013743960093895152,"descriptive numerical initialization dispersion, not uncertainty of a population mean"
+V4_SABLE_MO,heldout_reconstruction_score,0.0578809456915542,"descriptive numerical initialization dispersion, not uncertainty of a population mean"
+V4_SABLE_MO,random_adjusted_cross_view_mrr,0.04073619965978816,"descriptive numerical initialization dispersion, not uncertainty of a population mean"
+V4_SABLE_MO,missing_view_reconstruction_score,0.015052011354022385,"descriptive numerical initialization dispersion, not uncertainty of a population mean"
+V4_SABLE_MO,modality_balance_score,0.01324817237925642,"descriptive numerical initialization dispersion, not uncertainty of a population mean"
+V4_SABLE_MO,utility,0.02844394542456321,"descriptive numerical initialization dispersion, not uncertainty of a population mean"

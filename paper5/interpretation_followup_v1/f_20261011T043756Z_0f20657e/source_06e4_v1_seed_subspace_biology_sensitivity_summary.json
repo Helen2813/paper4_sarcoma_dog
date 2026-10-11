@@ -1,0 +1,118 @@
+{
+  "status": "06E4_V1_SEED_SUBSPACE_BIOLOGY_SENSITIVITY_COMPLETE",
+  "script_version": "06e4-run-v1-seed-subspace-biology-sensitivity-v1-two-stage-source-authorized-readonly-no-cli",
+  "runner_sha256": "97a8af048e38c16000f27a078ea976af1c894a21850ac2924a05e3b8c16cee86",
+  "created_at_utc": "2026-10-08T01:42:35.448130+00:00",
+  "analysis_role": "POST_RESULT_SENSITIVITY_USING_PROSPECTIVELY_FROZEN_REPRODUCIBILITY_SEEDS",
+  "primary_seed": 1103,
+  "reproducibility_only_seeds": [
+    2207,
+    3301
+  ],
+  "programs": [
+    "M34",
+    "M40",
+    "M11",
+    "M24"
+  ],
+  "n_cases": 78,
+  "shared_dim": 5,
+  "primary_seed_replay": "PASS_20_OF_20",
+  "05a_compatible_seed_aligned_subspace_similarity": 0.5565429909856817,
+  "pairwise_subspace_summary": [
+    {
+      "reference_seed": 1103,
+      "moving_seed": 2207,
+      "mean_canonical_correlation": 0.5565429909856817,
+      "median_canonical_correlation": 0.5329337282215113,
+      "minimum_canonical_correlation": 0.26545095164086235,
+      "maximum_principal_angle_degrees": 74.60624986758259,
+      "normalized_procrustes_residual": 0.8497618658045922,
+      "mean_abs_hungarian_matched_correlation": 0.6119526809946028,
+      "minimum_abs_hungarian_matched_correlation": 0.4831290538016111,
+      "analysis_role": "POST_RESULT_REPRODUCIBILITY_SUBSPACE_DIAGNOSTIC"
+    },
+    {
+      "reference_seed": 1103,
+      "moving_seed": 3301,
+      "mean_canonical_correlation": 0.4965330885869562,
+      "median_canonical_correlation": 0.5359850004826879,
+      "minimum_canonical_correlation": 0.08045780620869486,
+      "maximum_principal_angle_degrees": 85.38511907246988,
+      "normalized_procrustes_residual": 0.9448320213141351,
+      "mean_abs_hungarian_matched_correlation": 0.5196732576339281,
+      "minimum_abs_hungarian_matched_correlation": 0.31749130800335457,
+      "analysis_role": "POST_RESULT_REPRODUCIBILITY_SUBSPACE_DIAGNOSTIC"
+    },
+    {
+      "reference_seed": 2207,
+      "moving_seed": 3301,
+      "mean_canonical_correlation": 0.6184876395974929,
+      "median_canonical_correlation": 0.5581111722065686,
+      "minimum_canonical_correlation": 0.3186159303503242,
+      "maximum_principal_angle_degrees": 71.42075714428714,
+      "normalized_procrustes_residual": 0.8394215867573015,
+      "mean_abs_hungarian_matched_correlation": 0.6345673884572504,
+      "minimum_abs_hungarian_matched_correlation": 0.4469712163746202,
+      "analysis_role": "POST_RESULT_REPRODUCIBILITY_SUBSPACE_DIAGNOSTIC"
+    }
+  ],
+  "program_raw_seed_sensitivity": [
+    {
+      "program_id": "M34",
+      "primary_seed_1103_max_abs_spearman": 0.5106665486412322,
+      "seed2207_max_abs_spearman": 0.4531038581671493,
+      "seed3301_max_abs_spearman": 0.4488296513612969,
+      "min_raw_max_abs_spearman": 0.4488296513612969,
+      "median_raw_max_abs_spearman": 0.4531038581671493,
+      "max_raw_max_abs_spearman": 0.5106665486412322,
+      "range_raw_max_abs_spearman": 0.0618368972799353,
+      "analysis_role": "POST_RESULT_REPRODUCIBILITY_SENSITIVITY_NO_THRESHOLD"
+    },
+    {
+      "program_id": "M40",
+      "primary_seed_1103_max_abs_spearman": 0.3946053946053946,
+      "seed2207_max_abs_spearman": 0.29447767422450966,
+      "seed3301_max_abs_spearman": 0.49093944030652886,
+      "min_raw_max_abs_spearman": 0.29447767422450966,
+      "median_raw_max_abs_spearman": 0.3946053946053946,
+      "max_raw_max_abs_spearman": 0.49093944030652886,
+      "range_raw_max_abs_spearman": 0.1964617660820192,
+      "analysis_role": "POST_RESULT_REPRODUCIBILITY_SENSITIVITY_NO_THRESHOLD"
+    },
+    {
+      "program_id": "M11",
+      "primary_seed_1103_max_abs_spearman": 0.1509756066718092,
+      "seed2207_max_abs_spearman": 0.2036571023912796,
+      "seed3301_max_abs_spearman": 0.1340558176001214,
+      "min_raw_max_abs_spearman": 0.1340558176001214,
+      "median_raw_max_abs_spearman": 0.1509756066718092,
+      "max_raw_max_abs_spearman": 0.2036571023912796,
+      "range_raw_max_abs_spearman": 0.06960128479115821,
+      "analysis_role": "POST_RESULT_REPRODUCIBILITY_SENSITIVITY_NO_THRESHOLD"
+    },
+    {
+      "program_id": "M24",
+      "primary_seed_1103_max_abs_spearman": 0.3293036077846204,
+      "seed2207_max_abs_spearman": 0.192250787187496,
+      "seed3301_max_abs_spearman": 0.24627271462714498,
+      "min_raw_max_abs_spearman": 0.192250787187496,
+      "median_raw_max_abs_spearman": 0.24627271462714498,
+      "max_raw_max_abs_spearman": 0.3293036077846204,
+      "range_raw_max_abs_spearman": 0.13705282059712443,
+      "analysis_role": "POST_RESULT_REPRODUCIBILITY_SENSITIVITY_NO_THRESHOLD"
+    }
+  ],
+  "firewalls": {
+    "primary_result_changed": false,
+    "seed_selected_by_biology": false,
+    "seed_ensemble_or_averaging": false,
+    "new_seed_specific_p_or_q": false,
+    "matched_random_panels_recomputed": false,
+    "rotation_invariant_program_to_subspace_statistic_computed": false,
+    "SABLE_q10_or_stability_gate_applied_to_V1": false,
+    "target_outcomes_or_clinical_read": false,
+    "model_fit_or_refit": false,
+    "technical_UNKNOWN_reinterpreted_as_clean": false
+  }
+}

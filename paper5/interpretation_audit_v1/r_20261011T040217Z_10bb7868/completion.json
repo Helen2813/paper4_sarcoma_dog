@@ -1,0 +1,154 @@
+{
+  "files": {
+    "README_RU.md": {
+      "sha256": "c51c5b86bf307db38e2d73420a4f970fa433cf5bd1e21383ba44c23ae401f1de",
+      "size_bytes": 1576
+    },
+    "TARGET_06e4_source_01.txt": {
+      "sha256": "97a8af048e38c16000f27a078ea976af1c894a21850ac2924a05e3b8c16cee86",
+      "size_bytes": 42265
+    },
+    "TARGET_06e4_source_02.txt": {
+      "sha256": "b73871417541b60eb3fae95e9e15ac905d6331f949260031a85ae685dfa91f63",
+      "size_bytes": 19431
+    },
+    "analysis_plan.json": {
+      "sha256": "e8e0648bb7ee4449b60e568ae8ac7578912b2693d93c93b6dec22c2b12af1330",
+      "size_bytes": 1546
+    },
+    "audit.json": {
+      "sha256": "48951c3c385608b0f9a70696d168f6493beff970e80d2230ec3f012c3c7503eb",
+      "size_bytes": 641365
+    },
+    "external_epoch_cap_audit.csv": {
+      "sha256": "d1262450c7899f61115e506fbf2ec607182366027bc713272cbf50d396e9e773",
+      "size_bytes": 6202
+    },
+    "external_seed_agreement_by_fold.csv": {
+      "sha256": "89f9fb7b0ca0d34f46f8394a817672eff26d375e5f334602d4a340c562ebc390",
+      "size_bytes": 4586
+    },
+    "external_seed_agreement_summary.csv": {
+      "sha256": "498b579083b81ed88648fbb35f033374e2e0308fa4523a2213dc03f576be6da2",
+      "size_bytes": 352
+    },
+    "external_split_geometries.csv": {
+      "sha256": "4f535c173104eff209281a9363d91a7d07d93bcba260194ef7d4a26dfec3cf26",
+      "size_bytes": 577
+    },
+    "manuscript_edits_EN.md": {
+      "sha256": "57271e7e7017fdb1a80450e5019543f39b1d4bfe7b9877a11c857475b7afeeb4",
+      "size_bytes": 5776
+    },
+    "metric_comparability.csv": {
+      "sha256": "e1c3812934dacfaca7f065c31fd9f4181bdc452747c56741f619fb7a10ccadb9",
+      "size_bytes": 1473
+    },
+    "p5refine_source.py": {
+      "sha256": "550ed904b6a6f964202145eb4a10929d91a2c90bbd6e49abb6a4191fe0d4e049",
+      "size_bytes": 58629
+    },
+    "source_06b_run_target_outcome_blind_representation_benchmark_gpu_v4.py": {
+      "sha256": "4f69680a2d26d6c8e4bd5b337a5e94e6cdc36d149ea6a4b9af547b3855a93eab",
+      "size_bytes": 114783
+    },
+    "source_metric_spec.json": {
+      "sha256": "464ccb2070fc2ee069fbc2794277b72a2200b2b9ffe620ce48ed1023300c39fa",
+      "size_bytes": 8327
+    },
+    "source_neural_loss_and_architecture_contract.json": {
+      "sha256": "b90ded1d011ee3210154c2102389df0b4e0c8fcf668b70d7e2b8e14184e3f6b1",
+      "size_bytes": 10722
+    },
+    "source_target_inner_one_se_selection_by_outer_split.csv": {
+      "sha256": "8d6f17311cc98c3312619d3410f804e6581f152ce7811616b87ab9774a3e68c1",
+      "size_bytes": 4350
+    },
+    "source_target_outcome_blind_benchmark_results_lock.json": {
+      "sha256": "2730c783f1a74f7aa58030d1ee03f324f1d50c4830c72e4229a15e41b60dc121",
+      "size_bytes": 1397
+    },
+    "source_target_outcome_blind_benchmark_summary.json": {
+      "sha256": "c2b350f8d0e957cf1a1005d0aa5f490d631a30d9e6607c12a90659c8037ca2e5",
+      "size_bytes": 5697
+    },
+    "source_target_outer_fixed_model_benchmark.csv": {
+      "sha256": "b3c04b163392df043f78c8d377ff9f802afea2d7e95dcbff21fc5c87e504f2c5",
+      "size_bytes": 287687
+    },
+    "target_inner_best_and_selected_counts.csv": {
+      "sha256": "65a4cd70ce5d222a99413d1d3ac542d04c27759c92fc857be3453285674a29c4",
+      "size_bytes": 882
+    },
+    "target_inner_component_summary.csv": {
+      "sha256": "8562705201a20a88ed8d925e83db52852703e13af95a96e2c2f5253f265ef108",
+      "size_bytes": 1616
+    },
+    "target_inner_model_split_means.csv": {
+      "sha256": "e664f552e8662411425bd8d138b215fb85c90925c1a3e36ee45cfa58e93813be",
+      "size_bytes": 35641
+    },
+    "target_inner_normalized_metrics.json": {
+      "sha256": "49446616dfdee6e13be65c32d5d9995555e79afd752ce5ea2d24e377914392cc",
+      "size_bytes": 722430
+    },
+    "target_inner_selection_replay.csv": {
+      "sha256": "463ddb83c1bfb5499405eefdf87a9e3911833906be6b0b3b7b726323cef905a3",
+      "size_bytes": 5414
+    },
+    "target_inner_v4_v1_by_outer_split.csv": {
+      "sha256": "caf09e43d8c7663df2434c63581c8c340ce40ba7e205db3985b43377be112bcc",
+      "size_bytes": 7515
+    },
+    "target_inner_v4_v1_by_seed_fold.csv": {
+      "sha256": "7510d0b02cae1cd8e87629b4a560e8edd4ed991e8cd17d22b3e6b98cf5359f07",
+      "size_bytes": 54005
+    },
+    "target_outer_common_two_seed_sensitivity.csv": {
+      "sha256": "56fea94c03a8886b287e152c628825782977c4d713d85893da8118e3878ca208",
+      "size_bytes": 7231
+    },
+    "target_outer_component_summary.csv": {
+      "sha256": "6f464516a2d9cdb541234c8bbcdfd646054bf4f78d404a40641832c3efc0daff",
+      "size_bytes": 1615
+    },
+    "target_outer_model_split_means.csv": {
+      "sha256": "311ea45232f1cb60ca1b21166a7d62e4cc7710ed7e2a3aad347106677edbd01c",
+      "size_bytes": 33547
+    },
+    "target_outer_seed_sd_summary.csv": {
+      "sha256": "02087a97426654dd2dbc268ac1fa4a873ab0183e24fd3c081fb85e536bc4a18c",
+      "size_bytes": 1546
+    },
+    "target_outer_v4_v1_by_repeat.csv": {
+      "sha256": "335e58276761865f075f24ab9da10526a4039088da0076169dcdd59e2d6910bc",
+      "size_bytes": 1758
+    },
+    "target_outer_v4_v1_by_seed.csv": {
+      "sha256": "a69030cb9b43060b254d6e6757bd2cf0ffd1825849b23c7b400b5a638784f41a",
+      "size_bytes": 20515
+    },
+    "target_outer_v4_v1_by_split.csv": {
+      "sha256": "9cb3a1df40d028dccbf2c6792ac4e6c58e74108c735d294be3ca7badd934629a",
+      "size_bytes": 7301
+    },
+    "target_outer_within_split_seed_sd.csv": {
+      "sha256": "aace1089621479fb78ac71221ce7cee482771c5268e73a0ef989e858ad28abf4",
+      "size_bytes": 6331
+    },
+    "target_v3_v4_equality.csv": {
+      "sha256": "cde5ee5260841c7b0fae3761c5ac1bc16023cf22b1033eabf140952028d57822",
+      "size_bytes": 36776
+    }
+  },
+  "historical_files_changed": false,
+  "new_fits": 0,
+  "scope_items_remaining": [
+    "TARGET 06e4 mathematical/schema/fit-scope review: no cross-cohort latent recomputation is claimed.",
+    "Actual manuscript edits and repository/deposition URL: proposed text supplied, no manuscript overwritten.",
+    "No component scale conversion, sample-size causal claim, or new model/weight selection."
+  ],
+  "source_sha256": "550ed904b6a6f964202145eb4a10929d91a2c90bbd6e49abb6a4191fe0d4e049",
+  "status": "P5_READONLY_REFINEMENTS_COMPLETE_NO_NEW_FIT",
+  "version": "p5-refine-postresult-target-components-selection-ties-external-seed-audit-v1-no-fit"
+}

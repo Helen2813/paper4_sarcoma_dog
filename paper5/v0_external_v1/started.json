@@ -1,0 +1,14 @@
+{
+  "identity": {
+    "KIRC_historical_protocol.json": "6ac98e5fe49065ba450a54a744b33fbc45197a382dd4a522ec784e494fc232e1",
+    "KIRC_split_registry.json": "f7b73461fe420d3ded1f5450aef3402e0c48ac07c1ef570aa0eddff1e3c7661b",
+    "SARC_historical_protocol.json": "f3a63188ecbaff4a5164d999d933a5f6481ff7d0560b999022faa38f7a0cfff8",
+    "SARC_split_registry.json": "78a702ac43d55dd37f8b194b7b7933fb547f09e04cf6333662b57221160377f0",
+    "fixed_protocol.json": "fc6519dba18ce55474e6accd14d9677c2e4e6875d1354c8db0b6b3b11deaaf5f",
+    "input_snapshot.json": "55d68de4041ff324acfd65539a2b4c65239782e04af1bb68afc5aa2f2bfe00a5",
+    "p5v0prep_source.py": "d590287d3cf95f8e0ab7c5371cfcc39e2483c0913d223c88c175fae875aa7383"
+  },
+  "real_cohort_fits": 0,
+  "stage": "protocol committed before artificial models",
+  "started_at_utc": "2026-10-11T05:14:08.517434+00:00"
+}

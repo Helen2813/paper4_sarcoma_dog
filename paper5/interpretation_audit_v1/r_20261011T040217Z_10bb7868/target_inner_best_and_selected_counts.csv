@@ -1,0 +1,11 @@
+model_id,tied_numerical_maximum_splits,historical_best_label_splits,historical_selected_splits,n_splits,scope
+BLOCK_PCA,0,0,0,25,ties counted separately from complexity-resolved label
+MOFA_K5,0,0,0,25,ties counted separately from complexity-resolved label
+MOFA_K10,0,0,0,25,ties counted separately from complexity-resolved label
+MOFA_K15,0,0,0,25,ties counted separately from complexity-resolved label
+MOFA_K20,0,0,0,25,ties counted separately from complexity-resolved label
+V0_BALANCED_AE,0,0,8,25,ties counted separately from complexity-resolved label
+V1_SHARED_PRIVATE_AE,23,23,17,25,ties counted separately from complexity-resolved label
+V2_CONTRASTIVE_SPAE,1,1,0,25,ties counted separately from complexity-resolved label
+V3_DROPOUT_SPAE,1,1,0,25,ties counted separately from complexity-resolved label
+V4_SABLE_MO,1,0,0,25,ties counted separately from complexity-resolved label

@@ -1,0 +1,5 @@
+cohort,model_id,planned_folds,defined_folds,mean_only_if_all_folds_defined,pooled_across_cohorts,sample_size_effect_established
+SARC,V1_SHARED_PRIVATE_AE,5,5,0.6919758130102223,False,False
+SARC,V4_SABLE_MO,5,5,0.752338223874568,False,False
+KIRC,V1_SHARED_PRIVATE_AE,5,5,0.5652933133535338,False,False
+KIRC,V4_SABLE_MO,5,5,0.790891090988495,False,False

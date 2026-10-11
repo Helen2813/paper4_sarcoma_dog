@@ -1,0 +1,16 @@
+{
+  "identity": {
+    "KIRC_historical_protocol.json": "6ac98e5fe49065ba450a54a744b33fbc45197a382dd4a522ec784e494fc232e1",
+    "KIRC_split_registry.json": "f7b73461fe420d3ded1f5450aef3402e0c48ac07c1ef570aa0eddff1e3c7661b",
+    "SARC_historical_protocol.json": "f3a63188ecbaff4a5164d999d933a5f6481ff7d0560b999022faa38f7a0cfff8",
+    "SARC_split_registry.json": "78a702ac43d55dd37f8b194b7b7933fb547f09e04cf6333662b57221160377f0",
+    "fixed_protocol.json": "9d8f2eadc23165e2dbd2c744974b033d9b72a1b37187774cb730ed65d3d54709",
+    "input_snapshot.json": "55d68de4041ff324acfd65539a2b4c65239782e04af1bb68afc5aa2f2bfe00a5",
+    "p5v0prep3_source.py": "f47c19a6e99423d4dd1ab91e19e26cb55216d34c7a3c52f50521aaa31b7bf8c2",
+    "v1_failure_review.json": "cd59eac50b7226f6263dc13406045639cb5f1ae6b2ca3921894a0bfbdd38cf0f",
+    "v2_startup_review.json": "665cb493b95c5287fe1e3d233fb8b749ee9b90649621616c00c0fbcfdce79c83"
+  },
+  "real_cohort_fits": 0,
+  "stage": "protocol committed before artificial models",
+  "started_at_utc": "2026-10-11T16:09:57.940871+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "Hungarian_cells_checked": 15,
+  "aligned_correlations_replayed": 40,
+  "canonical_correlations_replayed": 15,
+  "cross_cohort_stability_curve": false,
+  "full_data_not_heldout": true,
+  "molecular_matrices_read": false,
+  "new_p_values": false,
+  "new_program_subspace_statistic": false,
+  "primary_correlations_replayed": 20,
+  "primary_null_results_recomputed": false,
+  "primary_seed_changed": false,
+  "programs": 4,
+  "raw_correlations_replayed": 60,
+  "results_lock_provenance": "First received now; internal chain and pinned source/latent identities checked; not falsely described as a previously externally pinned result lock.",
+  "results_lock_sha256": "09ca92ad9ab5dd712615889157815720c896142cd7ae1af58459f5f38b193db9",
+  "seed_pairs": 3,
+  "seeds": 3,
+  "status": "COMPLETED_06E4_STATISTICS_REPLAYED_NO_NEW_ENDPOINT",
+  "three_frozen_78_by_5_latents_read": true
+}

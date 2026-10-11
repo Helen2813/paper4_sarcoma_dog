@@ -1,0 +1,63 @@
+{
+  "evidence": {
+    "path": "v0p3_20261011T161021Z_d4524ab9.json",
+    "sha256": "be03334aad6029194fd4d80b8e37e35692164fa29a1e900e2ff6eb4a6a00e21a",
+    "size_bytes": 909465
+  },
+  "files": {
+    "KIRC_historical_protocol.json": {
+      "sha256": "6ac98e5fe49065ba450a54a744b33fbc45197a382dd4a522ec784e494fc232e1",
+      "size_bytes": 11973
+    },
+    "KIRC_split_registry.json": {
+      "sha256": "f7b73461fe420d3ded1f5450aef3402e0c48ac07c1ef570aa0eddff1e3c7661b",
+      "size_bytes": 41383
+    },
+    "SARC_historical_protocol.json": {
+      "sha256": "f3a63188ecbaff4a5164d999d933a5f6481ff7d0560b999022faa38f7a0cfff8",
+      "size_bytes": 8066
+    },
+    "SARC_split_registry.json": {
+      "sha256": "78a702ac43d55dd37f8b194b7b7933fb547f09e04cf6333662b57221160377f0",
+      "size_bytes": 33985
+    },
+    "fixed_protocol.json": {
+      "sha256": "9d8f2eadc23165e2dbd2c744974b033d9b72a1b37187774cb730ed65d3d54709",
+      "size_bytes": 12924
+    },
+    "input_snapshot.json": {
+      "sha256": "55d68de4041ff324acfd65539a2b4c65239782e04af1bb68afc5aa2f2bfe00a5",
+      "size_bytes": 32941
+    },
+    "p5v0prep3_source.py": {
+      "sha256": "f47c19a6e99423d4dd1ab91e19e26cb55216d34c7a3c52f50521aaa31b7bf8c2",
+      "size_bytes": 62656
+    },
+    "report.json": {
+      "sha256": "753a4a694590cef75883a2fbd24c1be34ba8e6b94c86364826b8a715cbad8934",
+      "size_bytes": 653224
+    },
+    "v1_failure_review.json": {
+      "sha256": "cd59eac50b7226f6263dc13406045639cb5f1ae6b2ca3921894a0bfbdd38cf0f",
+      "size_bytes": 7079
+    },
+    "v2_startup_review.json": {
+      "sha256": "665cb493b95c5287fe1e3d233fb8b749ee9b90649621616c00c0fbcfdce79c83",
+      "size_bytes": 772
+    }
+  },
+  "identity": {
+    "KIRC_historical_protocol.json": "6ac98e5fe49065ba450a54a744b33fbc45197a382dd4a522ec784e494fc232e1",
+    "KIRC_split_registry.json": "f7b73461fe420d3ded1f5450aef3402e0c48ac07c1ef570aa0eddff1e3c7661b",
+    "SARC_historical_protocol.json": "f3a63188ecbaff4a5164d999d933a5f6481ff7d0560b999022faa38f7a0cfff8",
+    "SARC_split_registry.json": "78a702ac43d55dd37f8b194b7b7933fb547f09e04cf6333662b57221160377f0",
+    "fixed_protocol.json": "9d8f2eadc23165e2dbd2c744974b033d9b72a1b37187774cb730ed65d3d54709",
+    "input_snapshot.json": "55d68de4041ff324acfd65539a2b4c65239782e04af1bb68afc5aa2f2bfe00a5",
+    "p5v0prep3_source.py": "f47c19a6e99423d4dd1ab91e19e26cb55216d34c7a3c52f50521aaa31b7bf8c2",
+    "v1_failure_review.json": "cd59eac50b7226f6263dc13406045639cb5f1ae6b2ca3921894a0bfbdd38cf0f",
+    "v2_startup_review.json": "665cb493b95c5287fe1e3d233fb8b749ee9b90649621616c00c0fbcfdce79c83"
+  },
+  "real_cohort_fits": 0,
+  "real_fit_authorization_created": false,
+  "status": "P5_V0_PROTOCOL_AND_SYNTHETIC_PREFLIGHT_PASS_NOT_AUTHORIZED"
+}

@@ -1,0 +1,315 @@
+{
+  "adapter": {
+    "implementation": "new evaluate_extension_model wrapper calling unchanged 05d4 train/encode/predict and sarc5 observed_nmse/prepared_views; synthetic V1 parity control",
+    "old_module_monkeypatched": false,
+    "old_sarc5_evaluator_accepts_V0": false,
+    "scientific_allowlist": [
+      "V0_BALANCED_AE"
+    ],
+    "synthetic_parity_control_only": [
+      "V1_SHARED_PRIVATE_AE"
+    ]
+  },
+  "cohorts": {
+    "KIRC": {
+      "completed_results_sha256": "09679c7f6ad778631f7b5173b4cae11cdbaea181d12aa1f557ef2f821470d54a",
+      "endpoints_copied_without_changes": {
+        "cross_view_MRR": "exact 06b cross_view_mrr: train-scaled per-view embeddings, cosine test-to-test retrieval, six ordered directions, stable sample-index ties; raw and harmonic-null-adjusted clipped MRR",
+        "neural_heldout_collapse": "effective_rank(TEST patient_shared)<2 OR median(sample variance)<1e-4; flag not exclusion",
+        "omitted_view_nmse": "same molecular space/mask/null; target view unavailable to shared representation and private input set to zero; per-view then equal-view mean (lower better)",
+        "reconstruction_nmse": "per-view observed TEST entries in selected molecular-feature space standardized with TRAIN parameters; neural predictions inverse-projected from per-view PCA. MSE divided by TRAIN observed-feature-centered null MSE; floor 1e-12. Report raw NMSE and mean across views (lower better), not imputed targets.",
+        "seed_only_subspace_agreement": "canonical subspace agreement between the two same-fold neural TEST representations; five descriptive fold values. No resampling, no truth, no retention decision."
+      },
+      "fold_geometry_fit_early_refit_test": [
+        [
+          194,
+          49,
+          243,
+          61
+        ],
+        [
+          194,
+          49,
+          243,
+          61
+        ],
+        [
+          194,
+          49,
+          243,
+          61
+        ],
+        [
+          194,
+          49,
+          243,
+          61
+        ],
+        [
+          195,
+          49,
+          244,
+          60
+        ]
+      ],
+      "historical_protocol": "paper5_parallel_kirc/limited_model_v1/fixed_protocol.json",
+      "historical_protocol_sha256": "6ac98e5fe49065ba450a54a744b33fbc45197a382dd4a522ec784e494fc232e1",
+      "input_complete_sha256": "d00cc7ce1714658b9c8d5b5e8b7e47d251c69a4ae9d02c06605405025726f9e4",
+      "input_matrices": {
+        "CNV": [
+          "matrices/CNV.npy",
+          "966b3c009cd0acc83abe94405c1dc083cb10d243d50a6ba49425366b2a424ad4",
+          60623
+        ],
+        "METHYLATION": [
+          "matrices/METHYLATION.npy",
+          "d8d75d2ded3847b0c65b1f9b10992ff26a58b7edcff5e7bdf8dd0d386a386e2c",
+          482421
+        ],
+        "RNA": [
+          "matrices/RNA.npy",
+          "13679b45b74626fcd2e78cfbb975bb7618c1c292846b938b63346286725d3186",
+          60660
+        ]
+      },
+      "input_root": "paper5_parallel_kirc/pointwise_inputs_v1/kirc3_20261010T232651Z_5cc5b59c",
+      "n": 304,
+      "split_path": "paper5_parallel_kirc/limited_model_v1/split_registry.json",
+      "split_sha256": "f7b73461fe420d3ded1f5450aef3402e0c48ac07c1ef570aa0eddff1e3c7661b"
+    },
+    "SARC": {
+      "completed_results_sha256": "ca6f6931de8ef223792488b0dd43b8b66b3a29e010be395466973da080698fc1",
+      "endpoints_copied_without_changes": {
+        "cross_view_MRR": "exact 06b cross_view_mrr: train-scaled per-view embeddings, cosine test-to-test retrieval, six ordered directions, stable sample-index ties; raw and harmonic-null-adjusted clipped MRR",
+        "neural_heldout_collapse": "effective_rank(TEST patient_shared)<2 OR median(sample variance)<1e-4; flag not exclusion",
+        "omitted_view_nmse": "same molecular space/mask/null; target view unavailable to shared representation and private input set to zero; per-view then equal-view mean (lower better)",
+        "reconstruction_nmse": "per-view observed TEST entries in selected molecular-feature space standardized with TRAIN parameters; neural predictions inverse-projected from per-view PCA. MSE divided by TRAIN observed-feature-centered null MSE; floor 1e-12. Report raw NMSE and mean across views (lower better), not imputed targets.",
+        "seed_only_subspace_agreement": "canonical subspace agreement between the two same-fold neural TEST representations; five descriptive fold values. No resampling, no truth, no retention decision."
+      },
+      "fold_geometry_fit_early_refit_test": [
+        [
+          160,
+          40,
+          200,
+          50
+        ],
+        [
+          160,
+          40,
+          200,
+          50
+        ],
+        [
+          160,
+          40,
+          200,
+          50
+        ],
+        [
+          160,
+          40,
+          200,
+          50
+        ],
+        [
+          160,
+          40,
+          200,
+          50
+        ]
+      ],
+      "historical_protocol": "paper5_parallel_sarc/limited_model_v1/fixed_protocol.json",
+      "historical_protocol_sha256": "f3a63188ecbaff4a5164d999d933a5f6481ff7d0560b999022faa38f7a0cfff8",
+      "input_complete_sha256": "81a0c365e9b7d62af957161350f7fabc4de700785285aab16d8436d89e863265",
+      "input_matrices": {
+        "CNV": [
+          "matrices/CNV_log2ratio.npy",
+          "b51893efc3bb03564658bcdb67f4025d48d9d5ddf9fb0e94116bf5be644a6395",
+          60623
+        ],
+        "METHYLATION": [
+          "matrices/METHYLATION_Mvalue.npy",
+          "07dffebcf534829eec833749c65b8f679d0c0246702bb884e817b8727e18b9c3",
+          482421
+        ],
+        "RNA": [
+          "matrices/RNA_log2tpm.npy",
+          "1d02f9af9c529858546fe38f8283560fd5ec49d54311460ce5acf83bfcfd6c71",
+          60660
+        ]
+      },
+      "input_root": "paper5_parallel_sarc/pointwise_inputs_v1/sarc4_20261010T015241Z_dbf619ed",
+      "n": 250,
+      "split_path": "paper5_parallel_sarc/limited_model_v1/split_registry.json",
+      "split_sha256": "78a702ac43d55dd37f8b194b7b7933fb547f09e04cf6333662b57221160377f0"
+    }
+  },
+  "diagnostics": "unchanged test-latent collapse and within-fold two-seed agreement, not q10/resampling/biological validation",
+  "five_folds_one_repeat": true,
+  "future_real_output": "paper5/v0_external_v1/scientific_results",
+  "geometry": {
+    "V0_actual_private_dim": 0,
+    "V1_actual_private_dim": 2,
+    "hidden_dim": 32,
+    "nominal_profile_private_dim": 2,
+    "per_view_input_PCs": 10,
+    "shared_dim": 5
+  },
+  "historical_comparison_model": "V1_SHARED_PRIVATE_AE",
+  "interpretation_precommit": {
+    "aggregation": "paired same-fold/same-seed deltas; average the two seeds within fold, then five equally weighted folds; show all seed and fold values",
+    "all_three_endpoints_reported": true,
+    "collapse_flags": "retain every completed evaluation and flag; no exclusion/rescue",
+    "contrast": "V1 minus V0, each endpoint and each cohort separately",
+    "directions": {
+      "adjusted_cross_view_mrr": "higher",
+      "omitted_view_nmse": "lower",
+      "reconstruction_nmse": "lower"
+    },
+    "discordant_cohorts": "report cohort-specific results; no general architectural superiority",
+    "discordant_tasks": "report task-dependent trade-off; no universal winner",
+    "five_of_five": "descriptively consistent direction in this cohort, not significance or independent replication",
+    "mixed_fold_signs": "show the mean, median, range and all five deltas; describe heterogeneous fold-level differences",
+    "no_cross_cohort_pooling": true,
+    "no_new_model_selection": true,
+    "no_new_p_values_or_inferential_CI": true,
+    "scope": "the complete frozen V0-to-V1 architecture/objective transition; private heads, decoder inputs and alignment/orthogonality/private-separation terms differ; not equal-capacity causal decomposition",
+    "sign_count": "count raw numerical signs; no 4/5 or 5/5 success gate; display zeros separately",
+    "small_differences": "report exact observed magnitudes; no equivalence/noninferiority claim or new practical margin",
+    "technical_failure": "stop and preserve error; no seed/parameter rescue and no successful-only primary average"
+  },
+  "neural_profile": {
+    "architecture_complexity_rank": 1,
+    "architecture_profile": "compact",
+    "combined_complexity_rank": 2,
+    "contrastive_temperature": 0.2,
+    "contrastive_weight": 0.1,
+    "cross_reconstruction_weight": 0.25,
+    "hidden_dim": 32,
+    "learning_rate": 0.001,
+    "maximum_epochs": 400,
+    "min_delta": 0.0001,
+    "modality_dropout_probability": 0.15,
+    "orthogonality_weight": 0.05,
+    "patience": 30,
+    "pca_components": {
+      "CNV": 10,
+      "METHYLATION": 10,
+      "RNA": 10
+    },
+    "private_dim": 2,
+    "private_separation_weight": 0.05,
+    "profile_id": "ARCH_COMPACT__REG_WEAK",
+    "reconstruction_weight": 1.0,
+    "regularization_complexity_rank": 1,
+    "regularization_profile": "weak",
+    "shared_alignment_weight": 0.5,
+    "shared_dim": 5,
+    "weight_decay": 0.0001
+  },
+  "new_real_evaluations": 20,
+  "new_real_neural_training_stages": 40,
+  "new_scientific_model": "V0_BALANCED_AE",
+  "numerical_sources": {
+    "paper5/method_contract/05d1/neural_architecture_regularization_profile_grid.csv": "118b2fd4c16751f0b83ac3053f726f9421db26949ab98a8a531ff584c194ee32",
+    "paper5/method_contract/05d1/neural_loss_and_architecture_contract.json": "b90ded1d011ee3210154c2102389df0b4e0c8fcf668b70d7e2b8e14184e3f6b1",
+    "paper5/scripts/05d2v2_screen_neural_profiles_gpu_syncfree_pathfix.py": "05ae6923ce588c137bc6f4aa934262181dd99f4ebe6bec3250e4b7cd54ed1ff3",
+    "paper5/scripts/05d4_fit_neural_ablation_benchmark_gpu_v1_2_verified.py": "8ab3b84f1d7bcd475b88b5f06d49e661c2d6230ea3598406e66970d792c74a5c",
+    "paper5/scripts/06b_run_target_outcome_blind_representation_benchmark_gpu_v4.py": "4f69680a2d26d6c8e4bd5b337a5e94e6cdc36d149ea6a4b9af547b3855a93eab",
+    "paper5_parallel_kirc/limited_model_v1/kirc4_source.py": "0d03eebd11e67325b319360e7ee4b9ee030bcdd2741b8d7b08e15204cdf33e41",
+    "paper5_parallel_sarc/sarc5.py": "dd16e547972d8d298491e2d3c5003dea16760e969e9ea846fda5b0f83020f96f"
+  },
+  "preprocessing": {
+    "PCs": {
+      "CNV": 10,
+      "METHYLATION": 10,
+      "RNA": 10
+    },
+    "budgets": {
+      "CNV": 5000,
+      "METHYLATION": 10000,
+      "RNA": 5000
+    },
+    "epoch_selection": "fit rows only; early rows select epoch only",
+    "future_real_digest_check": "both preliminary/refit preprocessing fingerprints must match the historical same-fold preprocessing record before V0 fitting",
+    "refit": "refit preprocessing on all outer-training rows; same-seed reinitialize; selected epoch count",
+    "rules": "unchanged sarc5.prepared_views; no case filtering"
+  },
+  "prohibited": [
+    "real V0 fit in this script entry point",
+    "any real V1/V4/PCA refit",
+    "changes to old results/locks",
+    "new cohorts",
+    "clinical/outcome access",
+    "new retention threshold",
+    "larger epoch cap",
+    "automatic paper edit"
+  ],
+  "provenance": {
+    "historical_TARGET_SARC_KIRC_results_seen": true,
+    "historical_contracts_rewritten": false,
+    "not_a_pre_original_study_registration": true,
+    "planned_after_external_V1_V4_results": true,
+    "prospective_only_with_respect_to_new_external_V0_fits": true
+  },
+  "real_V1_V4_PCA_refits": 0,
+  "real_execution_requires": "separate exact-source authorizer and a separate executor after this CUDA preflight report is reviewed",
+  "seeds": [
+    1103,
+    2207
+  ],
+  "source_sha256": "d590287d3cf95f8e0ab7c5371cfcc39e2483c0913d223c88c175fae875aa7383",
+  "status": "FIXED_V0_ADDENDUM_BEFORE_EXTERNAL_V0_FITS_NOT_AUTHORIZATION",
+  "synthetic": {
+    "V0_evaluations": 20,
+    "V0_optimization_stages": 40,
+    "V1_regression_evaluations": 6,
+    "V1_regression_optimization_stages": 12,
+    "budget_fixture_widths": {
+      "CNV": 5016,
+      "METHYLATION": 10016,
+      "RNA": 5016
+    },
+    "epochs_per_training_stage": 2,
+    "n_by_cohort": {
+      "KIRC": 304,
+      "SARC": 250
+    },
+    "parity_geometries": [
+      [
+        "SARC",
+        1
+      ],
+      [
+        "KIRC",
+        1
+      ],
+      [
+        "KIRC",
+        5
+      ]
+    ],
+    "parity_tolerance": {
+      "absolute": 2e-12,
+      "relative": 2e-10
+    },
+    "rows_use_existing_split_indices_not_real_values": true,
+    "widths": {
+      "CNV": 40,
+      "METHYLATION": 64,
+      "RNA": 48
+    }
+  },
+  "variant": {
+    "block_balanced_reconstruction": true,
+    "missing_view_reconstruction": false,
+    "modality_dropout": false,
+    "paired_contrastive_alignment": false,
+    "prespecified_component_hypothesis": "Block normalization prevents methylation dominance and improves held-out reconstruction fairness.",
+    "shared_private_decomposition": false,
+    "stability_gate": false,
+    "variant_id": "V0_BALANCED_AE",
+    "variational_latent": false
+  },
+  "version": "p5-v0-external-addendum-protocol-and-artificial-cuda-preflight-v1-no-real-fit"
+}

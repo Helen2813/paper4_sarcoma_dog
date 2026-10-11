@@ -1,0 +1,61 @@
+{
+  "functions": {
+    "cross_view_mrr": {
+      "end_line": 1016,
+      "source": "def cross_view_mrr(\n    train_embeddings: dict[str, np.ndarray],\n    test_embeddings: dict[str, np.ndarray],\n) -> tuple[float, float]:\n    n = next(iter(test_embeddings.values())).shape[0]\n    if n < 2:\n        return float(\"nan\"), float(\"nan\")\n\n    values: list[float] = []\n    for left in VIEWS:\n        for right in VIEWS:\n            if left == right:\n                continue\n            _, a = _z_by_training(\n                np.asarray(train_embeddings[left], dtype=np.float64),\n                np.asarray(test_embeddings[left], dtype=np.float64),\n            )\n            _, b = _z_by_training(\n                np.asarray(train_embeddings[right], dtype=np.float64),\n                np.asarray(test_embeddings[right], dtype=np.float64),\n            )\n            sim = _unit_rows(a) @ _unit_rows(b).T\n            for i in range(n):\n                # Stable descending similarity, then sample index.\n                order = np.lexsort((np.arange(n), -sim[i]))\n                rank = int(np.flatnonzero(order == i)[0]) + 1\n                values.append(1.0 / rank)\n\n    mrr = float(np.mean(values))\n    random = harmonic_random_mrr(n)\n    adjusted = float(np.clip((mrr - random) / max(1e-12, 1.0 - random), 0.0, 1.0))\n    return mrr, adjusted",
+      "start_line": 985
+    },
+    "one_se_select": {
+      "end_line": 1893,
+      "source": "def one_se_select(\n    rows: pd.DataFrame,\n    eligible_models: tuple[str, ...] = EXPECTED_ELIGIBLE_MODELS,\n) -> dict[str, Any]:\n    required = {\"model_id\", \"inner_fold\", \"utility\", \"failed\"}\n    missing = required - set(rows.columns)\n    if missing:\n        raise RuntimeError(f\"Inner selection rows missing columns: {sorted(missing)}\")\n\n    work = rows.copy()\n    work[\"utility\"] = pd.to_numeric(work[\"utility\"], errors=\"raise\")\n    work[\"failed\"] = work[\"failed\"].astype(bool)\n\n    summaries = []\n    for model_id in eligible_models:\n        part = work[work[\"model_id\"].astype(str).eq(model_id)].copy()\n        if part.empty:\n            summaries.append(\n                {\n                    \"model_id\": model_id,\n                    \"eligible\": False,\n                    \"mean\": float(\"nan\"),\n                    \"se\": float(\"nan\"),\n                    \"failure_reason\": \"no_inner_rows\",\n                }\n            )\n            continue\n        if part[\"failed\"].any() or not np.isfinite(part[\"utility\"]).all():\n            summaries.append(\n                {\n                    \"model_id\": model_id,\n                    \"eligible\": False,\n                    \"mean\": float(\"nan\"),\n                    \"se\": float(\"nan\"),\n                    \"failure_reason\": \"failed_or_nonfinite_inner_fit\",\n                }\n            )\n            continue\n\n        # Seeds are repeated numerical evaluations; the CV fold is the independent\n        # unit for the standard error used by the one-SE rule.\n        fold_means = (\n            part.groupby(\"inner_fold\", sort=True)[\"utility\"].mean().to_numpy(dtype=float)\n        )\n        mean = float(np.mean(fold_means))\n        se = (\n            float(np.std(fold_means, ddof=1) / math.sqrt(fold_means.size))\n            if fold_means.size > 1\n            else 0.0\n        )\n        summaries.append(\n            {\n                \"model_id\": model_id,\n                \"eligible\": True,\n                \"mean\": mean,\n                \"se\": se,\n                \"failure_reason\": \"\",\n            }\n        )\n\n    summary = pd.DataFrame(summaries)\n    good = summary[summary[\"eligible\"]].copy()\n    if good.empty:\n        raise RuntimeError(\"No eligible model survived inner-CV evaluation.\")\n\n    best_mean = float(good[\"mean\"].max())\n    best_candidates = good[np.isclose(good[\"mean\"], best_mean, rtol=0.0, atol=1e-12)]\n    best_candidates = best_candidates.assign(\n        complexity=best_candidates[\"model_id\"].map(EXPECTED_COMPLEXITY)\n    ).sort_values([\"complexity\", \"model_id\"], kind=\"mergesort\")\n    best_id = str(best_candidates.iloc[0][\"model_id\"])\n    best_se = float(good.loc[good[\"model_id\"].eq(best_id), \"se\"].iloc[0])\n    cutoff = best_mean - best_se\n\n    within = good[good[\"mean\"] >= cutoff - 1e-12].copy()\n    within[\"complexity\"] = within[\"model_id\"].map(EXPECTED_COMPLEXITY)\n    within = within.sort_values([\"complexity\", \"model_id\"], kind=\"mergesort\")\n    selected = str(within.iloc[0][\"model_id\"])\n\n    return {\n        \"selected_model_id\": selected,\n        \"best_model_id\": best_id,\n        \"best_mean\": best_mean,\n        \"best_se\": best_se,\n        \"one_se_cutoff\": cutoff,\n        \"within_one_se\": within[\"model_id\"].tolist(),\n        \"summary\": summary.to_dict(orient=\"records\"),\n    }",
+      "start_line": 1806
+    },
+    "r2_score": {
+      "end_line": 1038,
+      "source": "def r2_score(truth: np.ndarray, prediction: np.ndarray) -> float:\n    y = np.asarray(truth, dtype=np.float64)\n    p = np.asarray(prediction, dtype=np.float64)\n    if y.shape != p.shape:\n        raise RuntimeError(f\"R2 shape mismatch: truth={y.shape}, pred={p.shape}\")\n\n    finite = np.isfinite(y) & np.isfinite(p)\n    if not finite.any():\n        return 0.0\n\n    # Feature-wise centering using only observed truth values.\n    with np.errstate(invalid=\"ignore\"):\n        center = np.nanmean(np.where(np.isfinite(y), y, np.nan), axis=0, keepdims=True)\n    residual = np.where(finite, (y - p) ** 2, 0.0)\n    total = np.where(finite, (y - center) ** 2, 0.0)\n    ss_res = float(np.sum(residual))\n    ss_tot = float(np.sum(total))\n    if not np.isfinite(ss_tot) or ss_tot <= 1e-12:\n        return 0.0\n    return 1.0 - ss_res / ss_tot",
+      "start_line": 1019
+    },
+    "reconstruction_score": {
+      "end_line": 1072,
+      "source": "def reconstruction_score(\n    train_truth: dict[str, np.ndarray],\n    test_truth: dict[str, np.ndarray],\n    test_pred: dict[str, np.ndarray],\n) -> float:\n    scores: list[float] = []\n    for view in VIEWS:\n        train = np.asarray(train_truth[view], dtype=np.float64)\n        truth = np.asarray(test_truth[view], dtype=np.float64)\n        pred = np.asarray(test_pred[view], dtype=np.float64)\n        if truth.shape != pred.shape:\n            raise RuntimeError(\n                f\"{view} reconstruction shape mismatch: {truth.shape} vs {pred.shape}\"\n            )\n        with np.errstate(invalid=\"ignore\"):\n            null = np.nanmean(train, axis=0, keepdims=True)\n        train_finite = np.isfinite(train) & np.isfinite(null)\n        test_finite = np.isfinite(truth) & np.isfinite(pred)\n        if not train_finite.any() or not test_finite.any():\n            scores.append(0.0)\n            continue\n        null_mse = float(\n            np.sum(np.where(train_finite, (train - null) ** 2, 0.0))\n            / np.sum(train_finite)\n        )\n        mse = float(\n            np.sum(np.where(test_finite, (truth - pred) ** 2, 0.0))\n            / np.sum(test_finite)\n        )\n        normalized = mse / max(null_mse, 1e-12)\n        scores.append(float(np.clip(1.0 - normalized, 0.0, 1.0)))\n    return float(np.mean(scores))",
+      "start_line": 1041
+    },
+    "utility_from_components": {
+      "end_line": 1076,
+      "source": "def utility_from_components(metrics: dict[str, float]) -> float:\n    return float(sum(PRIMARY_WEIGHTS[k] * float(metrics[k]) for k in PRIMARY_WEIGHTS))",
+      "start_line": 1075
+    }
+  },
+  "historical_primary_models": [
+    "V1_SHARED_PRIVATE_AE"
+  ],
+  "literals": {
+    "EXPECTED_ELIGIBLE_MODELS": [
+      "BLOCK_PCA",
+      "MOFA_K5",
+      "MOFA_K10",
+      "MOFA_K15",
+      "MOFA_K20",
+      "V0_BALANCED_AE",
+      "V1_SHARED_PRIVATE_AE",
+      "V2_CONTRASTIVE_SPAE",
+      "V3_DROPOUT_SPAE",
+      "V4_SABLE_MO"
+    ],
+    "INNER_MODEL_SEEDS": [
+      1103,
+      2207
+    ],
+    "OUTER_MODEL_SEEDS": [
+      1103,
+      2207,
+      3301
+    ],
+    "PRIMARY_WEIGHTS": {
+      "heldout_reconstruction_score": 0.3,
+      "missing_view_reconstruction_score": 0.25,
+      "modality_balance_score": 0.15,
+      "random_adjusted_cross_view_mrr": 0.3
+    }
+  }
+}

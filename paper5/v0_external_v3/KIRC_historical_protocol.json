@@ -1,0 +1,301 @@
+{
+  "CV": {
+    "PCA_fits": 5,
+    "case_counts_by_fold": [
+      {
+        "early": 49,
+        "fit": 194,
+        "fold": 1,
+        "test": 61,
+        "train": 243
+      },
+      {
+        "early": 49,
+        "fit": 194,
+        "fold": 2,
+        "test": 61,
+        "train": 243
+      },
+      {
+        "early": 49,
+        "fit": 194,
+        "fold": 3,
+        "test": 61,
+        "train": 243
+      },
+      {
+        "early": 49,
+        "fit": 194,
+        "fold": 4,
+        "test": 61,
+        "train": 243
+      },
+      {
+        "early": 49,
+        "fit": 195,
+        "fold": 5,
+        "test": 60,
+        "train": 244
+      }
+    ],
+    "case_ids_used_only_for_splits": true,
+    "early_count_rule": "ceil(0.20 * outer-training n)",
+    "early_fraction_of_training": 0.2,
+    "folds": 5,
+    "namespace": "kirc_limited_v1",
+    "neural_epoch_policy": "source early stopping, maximum 400/patience 30/min_delta .0001, same-seed reinitialization and train-all refit for selected epoch",
+    "neural_evaluation_records": 20,
+    "neural_fit_seeds": [
+      1103,
+      2207
+    ],
+    "neural_optimization_runs": 40,
+    "outer_namespace": "outer_20261010",
+    "repeats": 1,
+    "stratification": "none; outcome/biology-blind SHA256 case-ID order"
+  },
+  "SARC_design_anchor": {
+    "path": "paper5_parallel_sarc/limited_model_v1/fixed_protocol.json",
+    "sha256": "f3a63188ecbaff4a5164d999d933a5f6481ff7d0560b999022faa38f7a0cfff8"
+  },
+  "aggregation": "average the two neural seeds within each fold; then five equally weighted folds (one test fold has 60 rather than 61 cases); do not pool/average across cohorts. SD is descriptive, not a confidence interval.",
+  "baseline_difference_from_historical": "BLOCK_PCA_BUDGETED_K10: original 06b block-scaling/PCA mechanics, but primary budgets 5000/10000/5000 for this external task instead of all eligible features. Not the unchanged historical BLOCK_PCA row.",
+  "cohort": "TCGA-KIRC; all 304 metadata-selected primary-tumor cases; no new case exclusions",
+  "contrasts": [
+    [
+      "V4_SABLE_MO",
+      "V1_SHARED_PRIVATE_AE"
+    ],
+    [
+      "V1_SHARED_PRIVATE_AE",
+      "BLOCK_PCA_BUDGETED_K10"
+    ],
+    [
+      "V4_SABLE_MO",
+      "BLOCK_PCA_BUDGETED_K10"
+    ]
+  ],
+  "endpoints": {
+    "cross_view_MRR": "exact 06b cross_view_mrr: train-scaled per-view embeddings, cosine test-to-test retrieval, six ordered directions, stable sample-index ties; raw and harmonic-null-adjusted clipped MRR",
+    "neural_heldout_collapse": "effective_rank(TEST patient_shared)<2 OR median(sample variance)<1e-4; flag not exclusion",
+    "omitted_view_nmse": "same molecular space/mask/null; target view unavailable to shared representation and private input set to zero; per-view then equal-view mean (lower better)",
+    "reconstruction_nmse": "per-view observed TEST entries in selected molecular-feature space standardized with TRAIN parameters; neural predictions inverse-projected from per-view PCA. MSE divided by TRAIN observed-feature-centered null MSE; floor 1e-12. Report raw NMSE and mean across views (lower better), not imputed targets.",
+    "seed_only_subspace_agreement": "canonical subspace agreement between the two same-fold neural TEST representations; five descriptive fold values. No resampling, no truth, no retention decision."
+  },
+  "excluded_scope": [
+    "no outcomes/survival",
+    "no subtype or pathway selection",
+    "no new cohort search",
+    "no new model/architecture tuning",
+    "no .60 retention validation or biological truth recovery on KIRC",
+    "no complete 80%-subsample stability or final full-cohort refit in this limited stage",
+    "no broad modern-method tournament",
+    "no historical-result replacement"
+  ],
+  "failure": "stop at first unexpected technical failure and preserve error; no seed/parameter rescue or successful-only primary average; previously completed records immutable",
+  "inference": "paired descriptive differences only; no p-values or inferential intervals; folds share training observations",
+  "input_complete_sha256": "d00cc7ce1714658b9c8d5b5e8b7e47d251c69a4ae9d02c06605405025726f9e4",
+  "input_matrices": {
+    "CNV": [
+      "matrices/CNV.npy",
+      "966b3c009cd0acc83abe94405c1dc083cb10d243d50a6ba49425366b2a424ad4",
+      60623
+    ],
+    "METHYLATION": [
+      "matrices/METHYLATION.npy",
+      "d8d75d2ded3847b0c65b1f9b10992ff26a58b7edcff5e7bdf8dd0d386a386e2c",
+      482421
+    ],
+    "RNA": [
+      "matrices/RNA.npy",
+      "13679b45b74626fcd2e78cfbb975bb7618c1c292846b938b63346286725d3186",
+      60660
+    ]
+  },
+  "input_run": "pointwise_inputs_v1/kirc3_20261010T232651Z_5cc5b59c",
+  "input_specs": {
+    "CNV": {
+      "dtype": "<f4",
+      "feature_order_sha256": "808be5ed77f3ce1cb5ce5c3ab9689741fc98449332189ad450ba7f0bafbbb84d",
+      "features_path": "features/CNV.features.tsv",
+      "path": "matrices/CNV.npy",
+      "raw_dtype": "<f8",
+      "raw_feature_order_sha256": "808be5ed77f3ce1cb5ce5c3ab9689741fc98449332189ad450ba7f0bafbbb84d",
+      "raw_features_path": "raw_channels/CNV.features.tsv",
+      "raw_path": "raw_channels/CNV.copy_number.npy",
+      "raw_shape": [
+        304,
+        60623
+      ],
+      "shape": [
+        304,
+        60623
+      ],
+      "source_column": "copy_number"
+    },
+    "METHYLATION": {
+      "dtype": "<f4",
+      "feature_order_sha256": "3dc369f386232d50996d09feb4370d6fa81ca5573bf7967331ad0627d8e1e4d4",
+      "features_path": "features/METHYLATION.features.tsv",
+      "path": "matrices/METHYLATION.npy",
+      "raw_dtype": "<f8",
+      "raw_feature_order_sha256": "df8a4e69d98212d44333c8d782c98c4613a1041d8582c29a22b1c68ace4ed491",
+      "raw_features_path": "raw_channels/METHYLATION.features.tsv",
+      "raw_path": "raw_channels/METHYLATION.beta_value.npy",
+      "raw_shape": [
+        304,
+        486427
+      ],
+      "shape": [
+        304,
+        482421
+      ],
+      "source_column": "beta_value"
+    },
+    "RNA": {
+      "dtype": "<f4",
+      "feature_order_sha256": "188f9e14f74c3a7a285f9a0221ea56e194f6bf217be11b562b36301a26220ff1",
+      "features_path": "features/RNA.features.tsv",
+      "path": "matrices/RNA.npy",
+      "raw_dtype": "<f8",
+      "raw_feature_order_sha256": "188f9e14f74c3a7a285f9a0221ea56e194f6bf217be11b562b36301a26220ff1",
+      "raw_features_path": "raw_channels/RNA.features.tsv",
+      "raw_path": "raw_channels/RNA.tpm_unstranded.npy",
+      "raw_shape": [
+        304,
+        60660
+      ],
+      "shape": [
+        304,
+        60660
+      ],
+      "source_column": "tpm_unstranded"
+    }
+  },
+  "interpretation": "independent-cohort fixed-procedure application, not zero-shot transfer of TARGET weights, not proof of general biological correctness. V4 denotes its representation engine BEFORE retention here.",
+  "kirc4_source_sha256": "0d03eebd11e67325b319360e7ee4b9ee030bcdd2741b8d7b08e15204cdf33e41",
+  "models": [
+    "BLOCK_PCA_BUDGETED_K10",
+    "V1_SHARED_PRIVATE_AE",
+    "V4_SABLE_MO"
+  ],
+  "neural_profile": {
+    "architecture_complexity_rank": 1,
+    "architecture_profile": "compact",
+    "combined_complexity_rank": 2,
+    "contrastive_temperature": 0.2,
+    "contrastive_weight": 0.1,
+    "cross_reconstruction_weight": 0.25,
+    "hidden_dim": 32,
+    "learning_rate": 0.001,
+    "maximum_epochs": 400,
+    "min_delta": 0.0001,
+    "modality_dropout_probability": 0.15,
+    "orthogonality_weight": 0.05,
+    "patience": 30,
+    "pca_components": {
+      "CNV": 10,
+      "METHYLATION": 10,
+      "RNA": 10
+    },
+    "private_dim": 2,
+    "private_separation_weight": 0.05,
+    "profile_id": "ARCH_COMPACT__REG_WEAK",
+    "reconstruction_weight": 1.0,
+    "regularization_complexity_rank": 1,
+    "regularization_profile": "weak",
+    "shared_alignment_weight": 0.5,
+    "shared_dim": 5,
+    "weight_decay": 0.0001
+  },
+  "neural_variants": {
+    "V1_SHARED_PRIVATE_AE": {
+      "block_balanced_reconstruction": true,
+      "missing_view_reconstruction": false,
+      "modality_dropout": false,
+      "paired_contrastive_alignment": false,
+      "prespecified_component_hypothesis": "Shared/private decomposition separates cross-view structure from assay-specific variation.",
+      "shared_private_decomposition": true,
+      "stability_gate": false,
+      "variant_id": "V1_SHARED_PRIVATE_AE",
+      "variational_latent": false
+    },
+    "V4_SABLE_MO": {
+      "block_balanced_reconstruction": true,
+      "missing_view_reconstruction": true,
+      "modality_dropout": true,
+      "paired_contrastive_alignment": true,
+      "prespecified_component_hypothesis": "The stability gate removes attractive but non-reproducible latent factors.",
+      "shared_private_decomposition": true,
+      "stability_gate": true,
+      "variant_id": "V4_SABLE_MO",
+      "variational_latent": false
+    }
+  },
+  "numerical_helper": {
+    "path": "paper5_parallel_sarc/sarc5.py",
+    "policy": "use unchanged prepared_views, evaluate_fixed_model, observed_nmse, loader and agreement functions",
+    "sha256": "dd16e547972d8d298491e2d3c5003dea16760e969e9ea846fda5b0f83020f96f"
+  },
+  "patient_sha256": "35be88d1a151449da976210a924f76cd1a3da20278d6c4774eb3a6d5b344dbea",
+  "preprocessing": {
+    "common_evaluation_features": "same train-selected primary-budget features for all three models",
+    "early_stop_preprocessing": "fit partition only; redo on outer train=fit+early for refit",
+    "feature_budgets": {
+      "CNV": 5000,
+      "METHYLATION": 10000,
+      "RNA": 5000
+    },
+    "fixed_input_transform": "completed kirc3, unchanged",
+    "imputation": "training median",
+    "missing_fraction_max": {
+      "CNV": 0.0,
+      "METHYLATION": 0.2,
+      "RNA": 0.0
+    },
+    "neural_PCA_per_view": {
+      "CNV": 10,
+      "METHYLATION": 10,
+      "RNA": 10
+    },
+    "scaling": "training mean/sample SD after imputation",
+    "variance": "ddof=1, before z-score, strictly positive, stable original-index tiebreak"
+  },
+  "provenance_boundary": {
+    "KIRC_model_performance_seen_before_protocol": false,
+    "KIRC_technical_QC_seen": true,
+    "design_scope": "fixed limited replication of SARC, not an untouched pre-SARC preregistration",
+    "historical_contracts_rewritten": false,
+    "historical_core_and_SARC_results_seen": true
+  },
+  "real_execution_requires": "separate exact-source authorization after this synthetic GPU report is reviewed",
+  "retrieval_candidate_count_policy": "actual held-out n in each fold: 61,61,61,61,60; harmonic null H_n/n computed per n, never the SARC n=50 constant",
+  "selection": "None. Report all three fixed models. Do not change TARGET V1 selection or 05e.",
+  "source_pins": {
+    "paper5/method_contract/05d1/neural_architecture_regularization_profile_grid.csv": "118b2fd4c16751f0b83ac3053f726f9421db26949ab98a8a531ff584c194ee32",
+    "paper5/method_contract/05d1/neural_loss_and_architecture_contract.json": "b90ded1d011ee3210154c2102389df0b4e0c8fcf668b70d7e2b8e14184e3f6b1",
+    "paper5/scripts/05d2v2_screen_neural_profiles_gpu_syncfree_pathfix.py": "05ae6923ce588c137bc6f4aa934262181dd99f4ebe6bec3250e4b7cd54ed1ff3",
+    "paper5/scripts/05d4_fit_neural_ablation_benchmark_gpu_v1_2_verified.py": "8ab3b84f1d7bcd475b88b5f06d49e661c2d6230ea3598406e66970d792c74a5c",
+    "paper5/scripts/06b_run_target_outcome_blind_representation_benchmark_gpu_v4.py": "4f69680a2d26d6c8e4bd5b337a5e94e6cdc36d149ea6a4b9af547b3855a93eab"
+  },
+  "status": "PROSPECTIVE_KIRC_PROTOCOL_NOT_EXECUTION_AUTHORIZATION",
+  "synthetic": {
+    "artificial_data_seed": 2026101004,
+    "budget_preprocessing_widths": {
+      "CNV": 5016,
+      "METHYLATION": 10016,
+      "RNA": 5016
+    },
+    "epochs_per_stage": 2,
+    "full_budget_model_fitting": false,
+    "n": 304,
+    "real_KIRC_values_used": false,
+    "small_widths": {
+      "CNV": 40,
+      "METHYLATION": 64,
+      "RNA": 48
+    }
+  },
+  "training_cap_boundary": "400 maximum epochs unchanged after SARC results; no claim of convergence; record every selected epoch/cap hit",
+  "version": "KIRC_LIMITED_FIXED_MODELS_V1"
+}

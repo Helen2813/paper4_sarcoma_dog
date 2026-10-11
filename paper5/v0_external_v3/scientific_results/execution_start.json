@@ -1,0 +1,115 @@
+{
+  "bindings": {
+    "adapter_sha256": "f47c19a6e99423d4dd1ab91e19e26cb55216d34c7a3c52f50521aaa31b7bf8c2",
+    "authorization_sha256": "c1e33f3c82fb3c4796a86612ea3d853bb8e273e2caf4dd2b3d38e6e39224a546",
+    "executor_sha256": "a5c2251e4cc2a892ece42941b4ffa7c99441ea19491247285e90766a6e6c3a26",
+    "executor_version": "p5-v0-authorized-sarc-kirc-fixed-addendum-v1-no-cli",
+    "preflight_lock_sha256": "55dbd2298ce7475c6278b702248ae5c6db1b5a402388327c1e90dae02684f32b",
+    "protocol_sha256": "9d8f2eadc23165e2dbd2c744974b033d9b72a1b37187774cb730ed65d3d54709"
+  },
+  "new_model": "V0_BALANCED_AE",
+  "old_model_refits": 0,
+  "protocol_sha256": "9d8f2eadc23165e2dbd2c744974b033d9b72a1b37187774cb730ed65d3d54709",
+  "schedule": [
+    [
+      "SARC",
+      1,
+      1103
+    ],
+    [
+      "SARC",
+      1,
+      2207
+    ],
+    [
+      "SARC",
+      2,
+      1103
+    ],
+    [
+      "SARC",
+      2,
+      2207
+    ],
+    [
+      "SARC",
+      3,
+      1103
+    ],
+    [
+      "SARC",
+      3,
+      2207
+    ],
+    [
+      "SARC",
+      4,
+      1103
+    ],
+    [
+      "SARC",
+      4,
+      2207
+    ],
+    [
+      "SARC",
+      5,
+      1103
+    ],
+    [
+      "SARC",
+      5,
+      2207
+    ],
+    [
+      "KIRC",
+      1,
+      1103
+    ],
+    [
+      "KIRC",
+      1,
+      2207
+    ],
+    [
+      "KIRC",
+      2,
+      1103
+    ],
+    [
+      "KIRC",
+      2,
+      2207
+    ],
+    [
+      "KIRC",
+      3,
+      1103
+    ],
+    [
+      "KIRC",
+      3,
+      2207
+    ],
+    [
+      "KIRC",
+      4,
+      1103
+    ],
+    [
+      "KIRC",
+      4,
+      2207
+    ],
+    [
+      "KIRC",
+      5,
+      1103
+    ],
+    [
+      "KIRC",
+      5,
+      2207
+    ]
+  ]
+}

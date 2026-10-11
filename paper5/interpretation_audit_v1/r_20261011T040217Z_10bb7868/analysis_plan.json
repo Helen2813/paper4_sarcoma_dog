@@ -1,0 +1,43 @@
+{
+  "TARGET06e4_policy": "bounded filename/size inventory and source copy only; unknown schemas not guessed",
+  "analysis_role": "POST_RESULT_DESCRIPTIVE_INTERPRETATION_REFINEMENT",
+  "arithmetic_tolerances": {
+    "absolute": 2e-12,
+    "relative": 2e-10
+  },
+  "comparison": "V4 minus V1, original scales",
+  "external_seed_metric": "frozen sarc5 centered mean principal-angle cosine, no q10 decision",
+  "failed_or_inconsistent_present_input_policy": "stop, retain evidence; do not drop rows",
+  "historical_weights": {
+    "heldout_reconstruction_score": 0.3,
+    "missing_view_reconstruction_score": 0.25,
+    "modality_balance_score": 0.15,
+    "random_adjusted_cross_view_mrr": 0.3
+  },
+  "inner_outer_separation": true,
+  "inner_seeds": [
+    1103,
+    2207
+  ],
+  "missing_inner_policy": "skip entire inner component/replay module; report every missing path",
+  "primary_outer_seeds": [
+    1103,
+    2207,
+    3301
+  ],
+  "prohibited": [
+    "model fitting",
+    "source edits",
+    "changes to weights/seeds/thresholds",
+    "clinical/outcome access",
+    "molecular/checkpoint loading",
+    "inferential p-values/CI",
+    "cross-cohort pooling",
+    "sample-size curve from different cohort protocols",
+    "automatic manuscript replacement"
+  ],
+  "replay_one_se_without_reselection": true,
+  "secondary_common_seed_table": "1103/2207, separate sensitivity, no replacement of three-seed primary",
+  "tie_absolute_tolerance": 1e-12,
+  "version": "p5-refine-postresult-target-components-selection-ties-external-seed-audit-v1-no-fit"
+}

@@ -1,0 +1,11 @@
+cohort,fold,fit_n,early_n,train_n,test_n,assessment_rows,seed_pair
+SARC,1,160,40,200,50,held-out outer-test,1103;2207
+SARC,2,160,40,200,50,held-out outer-test,1103;2207
+SARC,3,160,40,200,50,held-out outer-test,1103;2207
+SARC,4,160,40,200,50,held-out outer-test,1103;2207
+SARC,5,160,40,200,50,held-out outer-test,1103;2207
+KIRC,1,194,49,243,61,held-out outer-test,1103;2207
+KIRC,2,194,49,243,61,held-out outer-test,1103;2207
+KIRC,3,194,49,243,61,held-out outer-test,1103;2207
+KIRC,4,194,49,243,61,held-out outer-test,1103;2207
+KIRC,5,195,49,244,60,held-out outer-test,1103;2207

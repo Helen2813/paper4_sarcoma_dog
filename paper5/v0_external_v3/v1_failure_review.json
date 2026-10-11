@@ -1,0 +1,85 @@
+{
+  "failure_marker_deleted_or_overridden": false,
+  "old_models_or_sources_executed": false,
+  "previous_directory": "paper5/v0_external_v1",
+  "previous_failure": {
+    "blocked_attempts": [
+      "Network/subprocess not allowed: subprocess.Popen"
+    ],
+    "error": "V0 PREFLIGHT FIREWALL: Network/subprocess not allowed: subprocess.Popen",
+    "error_type": "RuntimeError",
+    "identity": {
+      "KIRC_historical_protocol.json": "6ac98e5fe49065ba450a54a744b33fbc45197a382dd4a522ec784e494fc232e1",
+      "KIRC_split_registry.json": "f7b73461fe420d3ded1f5450aef3402e0c48ac07c1ef570aa0eddff1e3c7661b",
+      "SARC_historical_protocol.json": "f3a63188ecbaff4a5164d999d933a5f6481ff7d0560b999022faa38f7a0cfff8",
+      "SARC_split_registry.json": "78a702ac43d55dd37f8b194b7b7933fb547f09e04cf6333662b57221160377f0",
+      "fixed_protocol.json": "fc6519dba18ce55474e6accd14d9677c2e4e6875d1354c8db0b6b3b11deaaf5f",
+      "input_snapshot.json": "55d68de4041ff324acfd65539a2b4c65239782e04af1bb68afc5aa2f2bfe00a5",
+      "p5v0prep_source.py": "d590287d3cf95f8e0ab7c5371cfcc39e2483c0913d223c88c175fae875aa7383"
+    },
+    "real_cohort_fits": 0,
+    "status": "V0_PREFLIGHT_INCOMPLETE_NOT_AUTHORIZED",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\olegk\\Downloads\\p5v0prep.py\", line 709, in run\n    s5,runtime=load_runtime(project)\n  File \"C:\\Users\\olegk\\Downloads\\p5v0prep.py\", line 432, in load_runtime\n    s5,runtime=m.load_runtime(project)\n  File \"C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5_parallel_kirc\\limited_model_v1\\kirc4_source.py\", line 317, in load_runtime\n    neural = source_module(child(project,rels[1]), 'kirc4_exact_05d2', SOURCE_PINS[rels[1]])\n  File \"C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5_parallel_kirc\\limited_model_v1\\kirc4_source.py\", line 247, in source_module\n    exec(compile(data, str(path), 'exec', dont_inherit=True), module.__dict__)\n  File \"C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\scripts\\05d2v2_screen_neural_profiles_gpu_syncfree_pathfix.py\", line 27, in <module>\n    import torch\n  File \"C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\comparator_envs\\move_1_5_0\\lib\\site-packages\\torch\\__init__.py\", line 287, in <module>\n    _load_dll_libraries()\n  File \"C:\\Users\\olegk\\Desktop\\paper4_sarcoma_dog\\paper5\\comparator_envs\\move_1_5_0\\lib\\site-packages\\torch\\__init__.py\", line 246, in _load_dll_libraries\n    if platform.machine() != \"ARM64\":\n  File \"C:\\Users\\olegk\\AppData\\Local\\Programs\\Python\\Python310\\lib\\platform.py\", line 945, in machine\n    return uname().machine\n  File \"C:\\Users\\olegk\\AppData\\Local\\Programs\\Python\\Python310\\lib\\platform.py\", line 843, in uname\n    release, version, csd, ptype = win32_ver()\n  File \"C:\\Users\\olegk\\AppData\\Local\\Programs\\Python\\Python310\\lib\\platform.py\", line 368, in win32_ver\n    major, minor, build = map(int, _syscmd_ver()[2].split('.'))\n  File \"C:\\Users\\olegk\\AppData\\Local\\Programs\\Python\\Python310\\lib\\platform.py\", line 282, in _syscmd_ver\n    info = subprocess.check_output(cmd,\n  File \"C:\\Users\\olegk\\AppData\\Local\\Programs\\Python\\Python310\\lib\\subprocess.py\", line 420, in check_output\n    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,\n  File \"C:\\Users\\olegk\\AppData\\Local\\Programs\\Python\\Python310\\lib\\subprocess.py\", line 501, in run\n    with Popen(*popenargs, **kwargs) as process:\n  File \"C:\\Users\\olegk\\AppData\\Local\\Programs\\Python\\Python310\\lib\\subprocess.py\", line 966, in __init__\n    self._execute_child(args, executable, preexec_fn, close_fds,\n  File \"C:\\Users\\olegk\\AppData\\Local\\Programs\\Python\\Python310\\lib\\subprocess.py\", line 1431, in _execute_child\n    sys.audit(\"subprocess.Popen\", executable, args, cwd, env)\n  File \"C:\\Users\\olegk\\Downloads\\p5v0prep.py\", line 241, in hook\n    self.stop('Network/subprocess not allowed: ' + event)\n  File \"C:\\Users\\olegk\\Downloads\\p5v0prep.py\", line 236, in stop\n    raise RuntimeError('V0 PREFLIGHT FIREWALL: ' + message)\nRuntimeError: V0 PREFLIGHT FIREWALL: Network/subprocess not allowed: subprocess.Popen\n"
+  },
+  "previous_files": [
+    {
+      "path": "paper5/v0_external_v1/p5v0prep_source.py",
+      "sha256": "d590287d3cf95f8e0ab7c5371cfcc39e2483c0913d223c88c175fae875aa7383",
+      "size_bytes": 46643
+    },
+    {
+      "path": "paper5/v0_external_v1/fixed_protocol.json",
+      "sha256": "fc6519dba18ce55474e6accd14d9677c2e4e6875d1354c8db0b6b3b11deaaf5f",
+      "size_bytes": 12902
+    },
+    {
+      "path": "paper5/v0_external_v1/input_snapshot.json",
+      "sha256": "55d68de4041ff324acfd65539a2b4c65239782e04af1bb68afc5aa2f2bfe00a5",
+      "size_bytes": 32941
+    },
+    {
+      "path": "paper5/v0_external_v1/SARC_split_registry.json",
+      "sha256": "78a702ac43d55dd37f8b194b7b7933fb547f09e04cf6333662b57221160377f0",
+      "size_bytes": 33985
+    },
+    {
+      "path": "paper5/v0_external_v1/SARC_historical_protocol.json",
+      "sha256": "f3a63188ecbaff4a5164d999d933a5f6481ff7d0560b999022faa38f7a0cfff8",
+      "size_bytes": 8066
+    },
+    {
+      "path": "paper5/v0_external_v1/KIRC_split_registry.json",
+      "sha256": "f7b73461fe420d3ded1f5450aef3402e0c48ac07c1ef570aa0eddff1e3c7661b",
+      "size_bytes": 41383
+    },
+    {
+      "path": "paper5/v0_external_v1/KIRC_historical_protocol.json",
+      "sha256": "6ac98e5fe49065ba450a54a744b33fbc45197a382dd4a522ec784e494fc232e1",
+      "size_bytes": 11973
+    },
+    {
+      "path": "paper5/v0_external_v1/failure.json",
+      "sha256": "42d0d64c6430830787a24f94d7f3b59b1e96ddea74ce8e3a5e89acf24dc671a7",
+      "size_bytes": 4024
+    },
+    {
+      "path": "paper5/v0_external_v1/started.json",
+      "sha256": "27cfe39b3eaa7b5d4c1e3f8772f0802b348c795f968b42a49c041f601b52c3ab",
+      "size_bytes": 856
+    }
+  ],
+  "previous_identity": {
+    "KIRC_historical_protocol.json": "6ac98e5fe49065ba450a54a744b33fbc45197a382dd4a522ec784e494fc232e1",
+    "KIRC_split_registry.json": "f7b73461fe420d3ded1f5450aef3402e0c48ac07c1ef570aa0eddff1e3c7661b",
+    "SARC_historical_protocol.json": "f3a63188ecbaff4a5164d999d933a5f6481ff7d0560b999022faa38f7a0cfff8",
+    "SARC_split_registry.json": "78a702ac43d55dd37f8b194b7b7933fb547f09e04cf6333662b57221160377f0",
+    "fixed_protocol.json": "fc6519dba18ce55474e6accd14d9677c2e4e6875d1354c8db0b6b3b11deaaf5f",
+    "input_snapshot.json": "55d68de4041ff324acfd65539a2b4c65239782e04af1bb68afc5aa2f2bfe00a5",
+    "p5v0prep_source.py": "d590287d3cf95f8e0ab7c5371cfcc39e2483c0913d223c88c175fae875aa7383"
+  },
+  "previous_source_sha256": "d590287d3cf95f8e0ab7c5371cfcc39e2483c0913d223c88c175fae875aa7383",
+  "process_lock_bytes_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+  "scientific_plan_change": "none; only source/version/output identities differ",
+  "scope": "Checks recorded bytes and reported failure stage, not operating-system access history",
+  "status": "EXACT_V1_PRECOMMIT_AND_KNOWN_WINDOWS_IMPORT_FAILURE_PRESERVED"
+}

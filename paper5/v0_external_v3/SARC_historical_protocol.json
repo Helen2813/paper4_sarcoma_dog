@@ -1,0 +1,180 @@
+{
+  "CV": {
+    "PCA_fits": 5,
+    "case_counts_per_fold": {
+      "early": 40,
+      "fit": 160,
+      "refit": 200,
+      "test": 50
+    },
+    "early_fraction_of_training": 0.2,
+    "folds": 5,
+    "neural_epoch_policy": "source early stopping, maximum 400/patience 30/min_delta .0001, same-seed reinitialization and train-all refit for selected epoch",
+    "neural_evaluation_records": 20,
+    "neural_fit_seeds": [
+      1103,
+      2207
+    ],
+    "neural_optimization_runs": 40,
+    "repeats": 1,
+    "stratification": "none; outcome/biology-blind SHA256 case-ID order"
+  },
+  "aggregation": "average two neural seeds within each test fold, then five equal-sized folds; paired descriptive contrasts, no p-values or inferential confidence intervals; do not treat seeds/folds as independent cohorts",
+  "baseline_difference_from_historical": "BLOCK_PCA_BUDGETED_K10: original 06b block-scaling/PCA mechanics, but primary budgets 5000/10000/5000 for this external task instead of all eligible features. Not the unchanged historical BLOCK_PCA row.",
+  "cohort": "TCGA-SARC; all 250 metadata-selected primary-tumor cases; no new case exclusions",
+  "endpoints": {
+    "cross_view_MRR": "exact 06b cross_view_mrr: train-scaled per-view embeddings, cosine test-to-test retrieval, six ordered directions, stable sample-index ties; raw and harmonic-null-adjusted clipped MRR",
+    "neural_heldout_collapse": "effective_rank(TEST patient_shared)<2 OR median(sample variance)<1e-4; flag not exclusion",
+    "omitted_view_nmse": "same molecular space/mask/null; target view unavailable to shared representation and private input set to zero; per-view then equal-view mean (lower better)",
+    "reconstruction_nmse": "per-view observed TEST entries in selected molecular-feature space standardized with TRAIN parameters; neural predictions inverse-projected from per-view PCA. MSE divided by TRAIN observed-feature-centered null MSE; floor 1e-12. Report raw NMSE and mean across views (lower better), not imputed targets.",
+    "seed_only_subspace_agreement": "canonical subspace agreement between the two same-fold neural TEST representations; five descriptive fold values. No resampling, no truth, no retention decision."
+  },
+  "excluded_scope": [
+    "no outcomes/survival",
+    "no subtype or pathway selection",
+    "no new cohort search",
+    "no new model/architecture tuning",
+    "no .60 retention validation or biological truth recovery on SARC",
+    "no complete 80%-subsample stability or final full-cohort refit in this limited stage",
+    "no broad modern-method tournament",
+    "no historical-result replacement"
+  ],
+  "failure": "stop at first unexpected technical failure and preserve error; no seed/parameter rescue or successful-only primary average; previously completed records immutable",
+  "input_complete_sha256": "81a0c365e9b7d62af957161350f7fabc4de700785285aab16d8436d89e863265",
+  "input_matrices": {
+    "CNV": [
+      "matrices/CNV_log2ratio.npy",
+      "b51893efc3bb03564658bcdb67f4025d48d9d5ddf9fb0e94116bf5be644a6395",
+      60623
+    ],
+    "METHYLATION": [
+      "matrices/METHYLATION_Mvalue.npy",
+      "07dffebcf534829eec833749c65b8f679d0c0246702bb884e817b8727e18b9c3",
+      482421
+    ],
+    "RNA": [
+      "matrices/RNA_log2tpm.npy",
+      "1d02f9af9c529858546fe38f8283560fd5ec49d54311460ce5acf83bfcfd6c71",
+      60660
+    ]
+  },
+  "interpretation": "independent-cohort fixed-procedure application, not zero-shot transfer of TARGET weights, not proof of general biological correctness. V4 denotes its representation engine BEFORE retention here.",
+  "models": [
+    "BLOCK_PCA_BUDGETED_K10",
+    "V1_SHARED_PRIVATE_AE",
+    "V4_SABLE_MO"
+  ],
+  "neural_profile": {
+    "architecture_complexity_rank": 1,
+    "architecture_profile": "compact",
+    "combined_complexity_rank": 2,
+    "contrastive_temperature": 0.2,
+    "contrastive_weight": 0.1,
+    "cross_reconstruction_weight": 0.25,
+    "hidden_dim": 32,
+    "learning_rate": 0.001,
+    "maximum_epochs": 400,
+    "min_delta": 0.0001,
+    "modality_dropout_probability": 0.15,
+    "orthogonality_weight": 0.05,
+    "patience": 30,
+    "pca_components": {
+      "CNV": 10,
+      "METHYLATION": 10,
+      "RNA": 10
+    },
+    "private_dim": 2,
+    "private_separation_weight": 0.05,
+    "profile_id": "ARCH_COMPACT__REG_WEAK",
+    "reconstruction_weight": 1.0,
+    "regularization_complexity_rank": 1,
+    "regularization_profile": "weak",
+    "shared_alignment_weight": 0.5,
+    "shared_dim": 5,
+    "weight_decay": 0.0001
+  },
+  "neural_variants": {
+    "V1_SHARED_PRIVATE_AE": {
+      "block_balanced_reconstruction": true,
+      "missing_view_reconstruction": false,
+      "modality_dropout": false,
+      "paired_contrastive_alignment": false,
+      "prespecified_component_hypothesis": "Shared/private decomposition separates cross-view structure from assay-specific variation.",
+      "shared_private_decomposition": true,
+      "stability_gate": false,
+      "variant_id": "V1_SHARED_PRIVATE_AE",
+      "variational_latent": false
+    },
+    "V4_SABLE_MO": {
+      "block_balanced_reconstruction": true,
+      "missing_view_reconstruction": true,
+      "modality_dropout": true,
+      "paired_contrastive_alignment": true,
+      "prespecified_component_hypothesis": "The stability gate removes attractive but non-reproducible latent factors.",
+      "shared_private_decomposition": true,
+      "stability_gate": true,
+      "variant_id": "V4_SABLE_MO",
+      "variational_latent": false
+    }
+  },
+  "patient_sha256": "e279425a714649c30a409d091fd9c819b86e2912784e9413a53e21d7ccfdde3f",
+  "preprocessing": {
+    "common_evaluation_features": "same train-selected primary-budget features for all three models",
+    "early_stop_preprocessing": "fit partition only; redo on train=fit+early for final fold refit",
+    "feature_budgets": {
+      "CNV": 5000,
+      "METHYLATION": 10000,
+      "RNA": 5000
+    },
+    "fixed_input_transform": "sarc4, unchanged",
+    "imputation": "training median",
+    "missing_fraction_max": {
+      "CNV": 0.0,
+      "METHYLATION": 0.2,
+      "RNA": 0.0
+    },
+    "neural_PCA_per_view": {
+      "CNV": 10,
+      "METHYLATION": 10,
+      "RNA": 10
+    },
+    "scaling": "training mean/sample SD after imputation",
+    "variance": "ddof=1, before z-score, strictly positive, stable original-index tiebreak"
+  },
+  "provenance_boundary": {
+    "SARC_model_performance_seen_before_protocol": false,
+    "historical_core_contracts_rewritten": false,
+    "historical_core_results_seen": true,
+    "technical_QC_seen": true
+  },
+  "real_execution_requires": "separate exact-source authorizer after review of this synthetic GPU report",
+  "sarc5_source_sha256": "dd16e547972d8d298491e2d3c5003dea16760e969e9ea846fda5b0f83020f96f",
+  "selection": "None. Report all three fixed models. Do not change TARGET V1 selection or 05e.",
+  "source_pins": {
+    "paper5/method_contract/05d1/neural_architecture_regularization_profile_grid.csv": "118b2fd4c16751f0b83ac3053f726f9421db26949ab98a8a531ff584c194ee32",
+    "paper5/method_contract/05d1/neural_loss_and_architecture_contract.json": "b90ded1d011ee3210154c2102389df0b4e0c8fcf668b70d7e2b8e14184e3f6b1",
+    "paper5/scripts/05d2v2_screen_neural_profiles_gpu_syncfree_pathfix.py": "05ae6923ce588c137bc6f4aa934262181dd99f4ebe6bec3250e4b7cd54ed1ff3",
+    "paper5/scripts/05d4_fit_neural_ablation_benchmark_gpu_v1_2_verified.py": "8ab3b84f1d7bcd475b88b5f06d49e661c2d6230ea3598406e66970d792c74a5c",
+    "paper5/scripts/06b_run_target_outcome_blind_representation_benchmark_gpu_v4.py": "4f69680a2d26d6c8e4bd5b337a5e94e6cdc36d149ea6a4b9af547b3855a93eab"
+  },
+  "status": "PROSPECTIVE_EXTERNAL_PROTOCOL_NOT_EXECUTION_AUTHORIZATION",
+  "synthetic": {
+    "budget_sized_preprocessing_fixture": {
+      "n": 250,
+      "widths": [
+        5016,
+        10016,
+        5016
+      ]
+    },
+    "empirical_SARC_values_used": false,
+    "epochs_per_training_stage": 2,
+    "n": 250,
+    "small_widths": {
+      "CNV": 40,
+      "METHYLATION": 64,
+      "RNA": 48
+    }
+  },
+  "version": "SARC_LIMITED_FIXED_MODELS_V1"
+}

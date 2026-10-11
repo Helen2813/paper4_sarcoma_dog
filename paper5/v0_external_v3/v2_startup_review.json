@@ -1,0 +1,21 @@
+{
+  "directory": "paper5/v0_external_v2",
+  "failure_json_expected": false,
+  "files_present": [
+    ".preflight.lock"
+  ],
+  "historical_files_modified": false,
+  "marker_read": "same owning handle; no second open",
+  "model_authorization_created": false,
+  "previous_source": {
+    "sha256": "ab552a236465b9ede78ab9a9e0f465ccf0a185133f5ae1b5fa3541c74b79d3d1",
+    "size_bytes": 56864
+  },
+  "process_lock_marker": {
+    "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "size_bytes": 1
+  },
+  "reason": "reported v2 error preceded its protocol/start/failure-writing section",
+  "scope": "current directory and supplied source verified; console failure not reconstructed",
+  "status": "V2_LOCK_ONLY_STARTUP_STATE_VERIFIED_AND_PRESERVED"
+}

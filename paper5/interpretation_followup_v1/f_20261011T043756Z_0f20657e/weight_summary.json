@@ -1,0 +1,107 @@
+{
+  "aggregate_pairwise_mean_boundaries": [
+    {
+      "boundary_B": 0.15,
+      "boundary_M": 0.25,
+      "boundary_Q": 0.4393609307664742,
+      "boundary_R": 0.16063906923352578,
+      "delta_B": 0.020207610286494253,
+      "delta_M": 0.0014898621301547466,
+      "delta_Q": 0.026185429352744694,
+      "delta_R": -0.09280719665265,
+      "historical_delta_utility": -0.01658292311445877,
+      "min_global_L1_to_pairwise_mean_equality": 0.2787218615329484,
+      "not_a_one_SE_selection_margin": true,
+      "pairwise_mean_equality_reachable": true,
+      "scope": "inner",
+      "split": "MEAN_OF_25_SPLITS",
+      "strict_opposite_sign_possible": true
+    },
+    {
+      "boundary_B": 0.3037257572179332,
+      "boundary_M": 0.25,
+      "boundary_Q": 0.3,
+      "boundary_R": 0.14627424278206677,
+      "delta_B": 0.024146671164048384,
+      "delta_M": 0.007545393569026182,
+      "delta_Q": 0.022467775201472473,
+      "delta_R": -0.10911454151275973,
+      "historical_delta_utility": -0.02048568082652237,
+      "min_global_L1_to_pairwise_mean_equality": 0.30745151443586644,
+      "not_a_one_SE_selection_margin": true,
+      "pairwise_mean_equality_reachable": true,
+      "scope": "outer",
+      "split": "MEAN_OF_25_SPLITS",
+      "strict_opposite_sign_possible": true
+    }
+  ],
+  "domains": {
+    "global_step_005": {
+      "V1_selected_split_count_range": [
+        0,
+        20
+      ],
+      "grid_points": 1771,
+      "grid_points_all_25_historical_choices_unchanged": 4,
+      "inner_pair_mean_V4_higher_grid_points": 690,
+      "minimum_grid_L1_any_split_selection_change": 0.09999999999999998,
+      "modal_hypothetical_selected_model_counts": {
+        "BLOCK_PCA": 359,
+        "MOFA_K10": 52,
+        "MOFA_K15": 102,
+        "V0_BALANCED_AE": 473,
+        "V1_SHARED_PRIVATE_AE": 638,
+        "V2_CONTRASTIVE_SPAE": 133,
+        "V3_DROPOUT_SPAE": 14
+      },
+      "no_probability_interpretation": true,
+      "outer_pair_mean_V4_higher_grid_points": 688,
+      "selected_split_grid_counts": {
+        "BLOCK_PCA": 7402,
+        "MOFA_K10": 1728,
+        "MOFA_K15": 2098,
+        "MOFA_K20": 1086,
+        "MOFA_K5": 203,
+        "V0_BALANCED_AE": 12769,
+        "V1_SHARED_PRIVATE_AE": 14467,
+        "V2_CONTRASTIVE_SPAE": 3232,
+        "V3_DROPOUT_SPAE": 1290,
+        "V4_SABLE_MO": 0
+      }
+    },
+    "local_pm005_step001": {
+      "V1_selected_split_count_range": [
+        13,
+        19
+      ],
+      "grid_points": 891,
+      "grid_points_all_25_historical_choices_unchanged": 126,
+      "inner_pair_mean_V4_higher_grid_points": 0,
+      "minimum_grid_L1_any_split_selection_change": 0.020000000000000018,
+      "modal_hypothetical_selected_model_counts": {
+        "V1_SHARED_PRIVATE_AE": 891
+      },
+      "no_probability_interpretation": true,
+      "outer_pair_mean_V4_higher_grid_points": 0,
+      "selected_split_grid_counts": {
+        "BLOCK_PCA": 0,
+        "MOFA_K10": 7,
+        "MOFA_K15": 0,
+        "MOFA_K20": 19,
+        "MOFA_K5": 0,
+        "V0_BALANCED_AE": 7787,
+        "V1_SHARED_PRIVATE_AE": 14376,
+        "V2_CONTRASTIVE_SPAE": 86,
+        "V3_DROPOUT_SPAE": 0,
+        "V4_SABLE_MO": 0
+      }
+    }
+  },
+  "interpretation": "Counterfactual arithmetic of frozen scalar components; no historical reselection or new fits.",
+  "mean_comparison_not_selection": true,
+  "original_selected_counts": {
+    "V0_BALANCED_AE": 8,
+    "V1_SHARED_PRIVATE_AE": 17
+  },
+  "outer_used_for_hypothetical_selection": false
+}

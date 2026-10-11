@@ -1,0 +1,40 @@
+{
+  "bindings": {
+    "adapter_sha256": "f47c19a6e99423d4dd1ab91e19e26cb55216d34c7a3c52f50521aaa31b7bf8c2",
+    "authorization_sha256": "c1e33f3c82fb3c4796a86612ea3d853bb8e273e2caf4dd2b3d38e6e39224a546",
+    "executor_sha256": "a5c2251e4cc2a892ece42941b4ffa7c99441ea19491247285e90766a6e6c3a26",
+    "executor_version": "p5-v0-authorized-sarc-kirc-fixed-addendum-v1-no-cli",
+    "preflight_lock_sha256": "55dbd2298ce7475c6278b702248ae5c6db1b5a402388327c1e90dae02684f32b",
+    "protocol_sha256": "9d8f2eadc23165e2dbd2c744974b033d9b72a1b37187774cb730ed65d3d54709"
+  },
+  "current_job": {
+    "stage": "final_input_and_source_recheck"
+  },
+  "finished_at_utc": "2026-10-11T16:34:01.233148+00:00",
+  "new_jobs": [
+    "SARC_F01_S1103",
+    "SARC_F01_S2207",
+    "SARC_F02_S1103",
+    "SARC_F02_S2207",
+    "SARC_F03_S1103",
+    "SARC_F03_S2207",
+    "SARC_F04_S1103",
+    "SARC_F04_S2207",
+    "SARC_F05_S1103",
+    "SARC_F05_S2207",
+    "KIRC_F01_S1103",
+    "KIRC_F01_S2207",
+    "KIRC_F02_S1103",
+    "KIRC_F02_S2207",
+    "KIRC_F03_S1103",
+    "KIRC_F03_S2207",
+    "KIRC_F04_S1103",
+    "KIRC_F04_S2207",
+    "KIRC_F05_S1103",
+    "KIRC_F05_S2207"
+  ],
+  "real_matrix_values_opened": true,
+  "started_at_utc": "2026-10-11T16:30:58.973599+00:00",
+  "status": "P5_V0_EXTERNAL_ADDENDUM_COMPLETE_FROZEN",
+  "verified_existing_jobs": []
+}

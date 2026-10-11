@@ -1,0 +1,126 @@
+{
+  "created_at_utc": "2026-10-07T02:22:22+00:00",
+  "eligible_models": [
+    "BLOCK_PCA",
+    "MOFA_K5",
+    "MOFA_K10",
+    "MOFA_K15",
+    "MOFA_K20",
+    "V0_BALANCED_AE",
+    "V1_SHARED_PRIVATE_AE",
+    "V2_CONTRASTIVE_SPAE",
+    "V3_DROPOUT_SPAE",
+    "V4_SABLE_MO"
+  ],
+  "final_full_data_method_freeze": {
+    "minimum_single_method_selection_frequency": 0.4,
+    "primary_model_ids": [
+      "V1_SHARED_PRIVATE_AE"
+    ],
+    "selection_counts": {
+      "BLOCK_PCA": 0,
+      "MOFA_K10": 0,
+      "MOFA_K15": 0,
+      "MOFA_K20": 0,
+      "MOFA_K5": 0,
+      "V0_BALANCED_AE": 8,
+      "V1_SHARED_PRIVATE_AE": 17,
+      "V2_CONTRASTIVE_SPAE": 0,
+      "V3_DROPOUT_SPAE": 0,
+      "V4_SABLE_MO": 0
+    },
+    "status": "UNIQUE_PRIMARY_REPRESENTATION",
+    "top_selection_frequency": 0.68
+  },
+  "guardrails": {
+    "biology_accessed": false,
+    "clinical_values_accessed": false,
+    "outcomes_accessed": false,
+    "q10_040_used_for_cross_family_selection": false,
+    "q10_060_used_for_cross_family_selection": false,
+    "secondary_comparators_used_for_primary_selection": false,
+    "technical_covariates_used_for_selection": false
+  },
+  "mofa_protocol": {
+    "path": "paper5/method_contract/05c2a/mofa_out_of_sample_projection_protocol.json",
+    "sha256": "826ee4c64deae4f623889c3388cf2b0f46b4fe0ffa1a2c2e97319beca95f80eb"
+  },
+  "n_cases": 78,
+  "nested_cv": {
+    "inner_folds": 4,
+    "outer_folds": 5,
+    "outer_repeats": 5
+  },
+  "one_se_rule": "lowest-complexity eligible model with mean inner-CV utility >= best_mean - standard_error_of_best",
+  "outputs": {
+    "inner_selection": "paper5/results/target_representation/06b_primary_benchmark/target_inner_one_se_selection_by_outer_split.csv",
+    "outer_benchmark": "paper5/results/target_representation/06b_primary_benchmark/target_outer_fixed_model_benchmark.csv"
+  },
+  "primary_utility_weights": {
+    "heldout_reconstruction_score": 0.3,
+    "missing_view_reconstruction_score": 0.25,
+    "modality_balance_score": 0.15,
+    "random_adjusted_cross_view_mrr": 0.3
+  },
+  "script_sha256": "4f69680a2d26d6c8e4bd5b337a5e94e6cdc36d149ea6a4b9af547b3855a93eab",
+  "script_version": "06b-run-target-outcome-blind-representation-benchmark-gpu-v4-frozen-04c-raw-input-fold-local-preprocessing-recovery-preauthorization-synthetic-gated-no-cli",
+  "status": "06B_TARGET_OUTCOME_BLIND_REPRESENTATION_BENCHMARK_COMPLETE",
+  "target_input_provenance": {
+    "CNV": {
+      "fixed_feature_type_filter": "none",
+      "global_harmonized_zscore_matrix_used_for_heldout_CV": false,
+      "maximum_missing_fraction_fold_local": 0.0,
+      "model_scale_transform": "log2_copy_number_over_2",
+      "n_features_after_fixed_type_filter_before_fold_local_QC": 50385,
+      "raw_features": "paper5/model_inputs/TARGET_OS_primary78/TARGET_OS_primary_cnv_features.csv",
+      "raw_features_sha256": "0541698063f1d71e7f857d6d4d3c9c541a33d7cb273043cf7f38d13ee5831aa1",
+      "raw_matrix": "paper5/model_inputs/TARGET_OS_primary78/TARGET_OS_primary_cnv_gene_copy_number.npy",
+      "raw_matrix_sha256": "26e13d3f3b9c056c8229c29b5ebac88127b3f0a491fcbe3eb563101dfe577792",
+      "raw_shape": [
+        78,
+        50385
+      ]
+    },
+    "METHYLATION": {
+      "fixed_feature_type_filter": "cg_only",
+      "global_harmonized_zscore_matrix_used_for_heldout_CV": false,
+      "maximum_missing_fraction_fold_local": 0.2,
+      "model_scale_transform": "beta_to_M_value",
+      "n_features_after_fixed_type_filter_before_fold_local_QC": 482421,
+      "raw_features": "paper5/model_inputs/TARGET_OS_primary78/TARGET_OS_primary_methylation_features_corrected.csv",
+      "raw_features_sha256": "b3dea676c62616804ed90f34098085a42c895d228969665a8499e78a063bf1a5",
+      "raw_matrix": "paper5/model_inputs/TARGET_OS_primary78/TARGET_OS_primary_methylation_beta_corrected.npy",
+      "raw_matrix_sha256": "f7097256240b99e99e2ef0c8ed4725c954bb56cf0c22a9048436e77d54112d42",
+      "raw_shape": [
+        78,
+        486427
+      ]
+    },
+    "RNA": {
+      "fixed_feature_type_filter": "none",
+      "global_harmonized_zscore_matrix_used_for_heldout_CV": false,
+      "maximum_missing_fraction_fold_local": 0.0,
+      "model_scale_transform": "identity",
+      "n_features_after_fixed_type_filter_before_fold_local_QC": 50422,
+      "raw_features": "paper5/model_inputs/TARGET_OS_primary78/TARGET_OS_primary_rna_features.csv",
+      "raw_features_sha256": "202ce959bbcb512692caa6236bbbfab2719abbbbeafb2c53fa1d569f6b8b5ac8",
+      "raw_matrix": "paper5/model_inputs/TARGET_OS_primary78/TARGET_OS_primary_rna_log2tpm.npy",
+      "raw_matrix_sha256": "e9f40209336b0bc982b19852b19be10570c9a036e38e072a25b52217520c2074",
+      "raw_shape": [
+        78,
+        50422
+      ]
+    },
+    "_contract": {
+      "04c_manifest": "paper5/model_inputs/TARGET_OS_primary78/premodel_qc/prestandardization_variance_audit_manifest.json",
+      "04c_manifest_sha256": "e4c0d637e179ed76ba934ce67c9ef5542a1d144699a48da9c7f14226915aeb95",
+      "04c_script_version": "04c-prestandardization-feature-variance-audit-v1",
+      "04c_source": "paper5/scripts/04c_prestandardization_feature_variance_audit.py",
+      "04c_source_sha256": "2d3cff519cbb0844e12bd2842d46d4487f5a0d1bf071b4d7dd1a967872170054",
+      "data_dependent_preprocessing_begins_after_split": true,
+      "fixed_transform_is_data_independent": true,
+      "fold_local_contract": "paper5/model_inputs/TARGET_OS_primary78/premodel_qc/fold_local_preprocessing_contract.json",
+      "fold_local_contract_sha256": "fbaba8fbf4370f780a8f0d85fc5af9fd86e803b5646f728e79593c6ce30cd3d2"
+    }
+  }
+}

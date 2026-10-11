@@ -1,0 +1,40 @@
+{
+  "analysis_role": "POST_RESULT_DESCRIPTIVE_SENSITIVITY_NO_RESELECTION",
+  "bio_policy": "replay completed 06e4/06e5 statistics on exact three full-data V1 latents and four frozen program scores",
+  "bioscope": "same 78 training cases, three initializations, not independent cohorts or held-out validation",
+  "global_domain": {
+    "definition": "all nonnegative weights summing to one",
+    "grid_points": 1771,
+    "step": 0.05
+  },
+  "historical_sources_results_and_decisions_modified": false,
+  "historical_weights": [
+    0.3,
+    0.3,
+    0.25,
+    0.15
+  ],
+  "inner_policy": "two seeds averaged within inner fold; four fold values reproduce historical one-SE heuristic",
+  "local_domain": {
+    "definition": "each weight within +/-0.05 of historical value; sum one",
+    "label": "arithmetic neighborhood, NOT asserted scientifically plausible prior",
+    "step": 0.01
+  },
+  "metric_order": [
+    "heldout_reconstruction_score",
+    "random_adjusted_cross_view_mrr",
+    "missing_view_reconstruction_score",
+    "modality_balance_score"
+  ],
+  "models_fitted": 0,
+  "no_new_p_or_q": true,
+  "no_rotation_invariant_program_biology_endpoint": true,
+  "no_true_weight_probability": "grid counts depend on grid measure and are not probabilities of scientific superiority",
+  "outer_policy": "three seeds averaged within split; 25 split means; NOT used for hypothetical selection",
+  "paired_boundary": "minimum global-simplex L1 distance to equality of V4/V1 mean; not distance to one-SE selection boundary",
+  "primary_seed": 1103,
+  "selection_sensitivity": "all ten frozen candidates; recalculate fold utility, mean, SE, best-label ties and one-SE at every weight",
+  "source_components_already_seen": true,
+  "version": "p5-follow-weight-sensitivity-completed-06e4-replay-v1-no-fit",
+  "weight_grid_outputs_not_used_to_modify_domain": true
+}
